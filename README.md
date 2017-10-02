@@ -24,5 +24,5 @@ Nakon kloniranja bilježnice se nalaze u direktoriju `Numericka_analiza/src` pa 
     * provjerite da je __JuliaBox Folder__ postavljen na _Numericka_analiza_
     * pritisnite __+__ za dodvanje repozitorija
     * pritisnite strelicu dole za sinhronizaciju repozitorija
-    * idite na `IJulia`
+    * idite na `Jupyter`
 Sada imate naveden direktorij  `Numericka_analiza`. Bilježnice su u poddirektoriju`src/`.
