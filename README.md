@@ -1,6 +1,6 @@
 # Numerička analiza
 
-Jupyter bilježnice kolegija _[Numerička analiza](https://nastava.fesb.unist.hr/nastava/predmeti/8183)_ koji se predaje na diplomskom studiju Računarstva (250) na [FESB-u](https://www.fesb.unist.hr/).
+Jupyter bilježnice predmeta _[Numerička analiza](https://nastava.fesb.unist.hr/nastava/predmeti/8183)_ koji se predaje na diplomskom studiju Računarstva (250) na [FESB-u](https://www.fesb.unist.hr/).
 
 ## Korištenje
 
@@ -10,7 +10,7 @@ Materijali su pisani kao [Jupyter](http://jupyter.org/) ([IJulia](https://github
 Unutar svojeg preglednika bilježnice možete pregledati pomoću [Jupyter notebook viewera](http://nbviewer.jupyter.org/) na sljedećoj [poveznici](http://nbviewer.ipython.org/url/github.com/ivanslapnicar/Numericka_analiza/tree/master/src/).
 
 ###  Lokalno preuzimanje i pregled na vlastitom računalu
-* Instalirajte [Juliu](https://julialang.org/downloads/) i [Jupyter](http://jupyter.org/install.html).
+* Instalirajte [Julia-u](https://julialang.org/downloads/) i [Jupyter](http://jupyter.org/install.html).
 * Preuzmite bilježnice (repozitorij) korištenjem `git` naredbe:
 ```
 git clone https://github.com/ivanslapnicar/Numericka_analiza.git
@@ -18,7 +18,7 @@ git clone https://github.com/ivanslapnicar/Numericka_analiza.git
 Ako niste upoznati s `git` alatom možete pogledati GitHubove [stranice za pomoć](https://help.github.com/articles/set-up-git/) ili direktno preuzeti bilježnice (repozitorij) na sljedećoj [poveznici](https://github.com/ivanslapnicar/Numericka_analiza/archive/master.zip).    
 * Nakon izvršavanja naredbe (kloniranja) ili direktnog preuzimanja bilježnice se nalaze u direktoriju `Numericka_analiza/src` pa ih možete pregledavati na Vašem računalu.
 
-### Korištenjem JuliaBoxa
+### Korištenjem JuliaBox-a
 Bilježnice možete izvršavati na Amazon Cloudu koristeći [JuliaBox](https://juliabox.com/).
 * Idite na https://juliabox.com i prijavite se sa svojim LinkedIn, GitHub ili Google računom.
 * Na izbornoj traci odaberite opciju `Sync`.
