@@ -19,16 +19,14 @@ Ako niste upoznati s `git` alatom možete pogledati GitHubove [stranice za pomo�
 * Nakon izvršavanja naredbe (kloniranja) ili direktnog preuzimanja bilježnice se nalaze u direktoriju `Numericka_analiza/src` pa ih možete pregledavati na Vašem računalu.
 
 ### Korištenjem JuliaBox-a
-Bilježnice možete izvršavati na Amazon Cloudu koristeći [JuliaBox](https://juliabox.com/).
-* Idite na https://juliabox.com i prijavite se sa svojim LinkedIn, GitHub ili Google računom.
-* Na izbornoj traci odaberite opciju `Sync`.
-* U sekciji _Git Repositories_ u polje __Git Clone URL__ unesite adresu `https://github.com/ivanslapnicar/Numericka_analiza`.
-* Provjerite da je polje __Branch__ postavljeno na _master_ (to je vjerojatno već automatski učinjeno).
-* Provjerite da je __JuliaBox Folder__ postavljen na _Numericka_analiza_.
-* Pritisnite __+__ iz retka akcija uz unesene podatke za dodavanje repozitorija.
-* Pritisnite zaokruženu strelicu okrenutu prema dolje za sinkronizaciju s repozitorijem.
-* Na izbornoj traci odaberite opciju `Jupyter`.
-* Po potrebi osvježite listu pritiskom na pripadajuću ikonu iznad popisa datoteka.   
-Sada imate naveden direktorij `Numericka_analiza` u čijem se poddirektoriju`src` nalaze same bilježnice.
+Bilježnice možete izvršavati na cloudu koristeći [JuliaBox](https://juliabox.com/).
 
-Konfiguriranje ovog pristupa je prikazano i YouTube [videom](https://www.youtube.com/watch?v=2gzctyr4pPk).
+* Idite na https://juliabox.com i prijavite se svojim LinkedIn, GitHub ili Google računom.
+* Idite na __Git__
+* Upišite adresu `https://github.com/ivanslapnicar/Numericka_analiza.git` u
+__Git Clone URL__ polje.
+* Provjerite da je __Branch__ postavljen na _master_
+* Pritisnite _+_ za dodavanje repozitorija.
+* Zatvorite  __Git__ prozor.
+
+Sada imate naveden direktorij `Numericka_analiza` u čijem se poddirektoriju`src` nalaze bilježnice.
