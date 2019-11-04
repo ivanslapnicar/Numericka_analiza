@@ -1,6 +1,6 @@
 import Base.getindex, Base.size
 struct Vandermonde{T} <: AbstractMatrix{T}
-	c :: Vector{T}
+	c :: AbstractVector{T}
 end
 
 getindex(V::Vandermonde, i::Int, j::Int) = V.c[i]^(j-1)
