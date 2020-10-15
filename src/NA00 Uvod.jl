@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.12.3
+# v0.12.4
 
 using Markdown
 using InteractiveUtils
@@ -79,24 +79,21 @@ Ova metoda je spora, ali "sigurna".
 """
 
 # ╔═╡ 3dea5041-85b9-4d8b-9dcf-2d39c8481314
-steps=5
-
-# ╔═╡ 4d59b60e-027b-11eb-02bd-5d1574308999
-s=1.0
-
-# ╔═╡ 4d66d570-027b-11eb-38a6-5d4f8eff3322
-c=0.0
+steps=10
 
 # ╔═╡ a47b53a0-027f-11eb-256d-f7d5ce0f97e3
-for n=1:steps
+let
 	c=0.0
-    s=sqrt((1-c)/2)
-    c=sqrt(1-s^2)
-	println("2n = ", 2^(n+1), ", približna vrijednost od π = ",2^(n+1)*s)
+	for n=1:steps
+    	s=sqrt((1-c)/2)
+    	c=sqrt(1-s^2)
+    	println("2n = ", 2^(n+1), ", približna vrijednost od π = ",2^(n+1)*s)
+	end
 end
 
 # ╔═╡ 4d68f850-027b-11eb-14a1-1741ea4ce7c2
-"točan π", π
+# Točan π
+π
 
 # ╔═╡ 6ac49527-05f0-4a0a-ad99-aba5d4b07c17
 md"""
@@ -108,11 +105,9 @@ md"""
 Kasnije ćemo opisati modernije poboljšanje koje je i brže.
 Uz $h=1/(2n)$ vrijedi
 
-$$
-p(n) = \frac{\sin \: \pi h}{h} = \pi -a_2 h^2 + a_4 h^4 - \cdots,
-$$
+$$p(n) = \frac{\sin \: \pi h}{h} = \pi -a_2 h^2 + a_4 h^4 - \cdots,$$
 
-gdje je $a_k = \displaystyle\frac{\pi^{k+1}}{(k+1)!}$. Rakle, ova formula teži k $\pi$ po stopi približno jednakoj
+gdje je $a_k = \displaystyle\frac{\pi^{k+1}}{(k+1)!}$. Dakle, ova formula teži k $\pi$ po stopi približno jednakoj
 $O(h^2)$. To je _aproksimacijski problem_. Ne postoji konačan algoritam za računanje broja $\pi$, jer se radi o transcedentnom broju (iracionalan i nije korijen niti jednog polinoma s cjelobrojnim koeficijentima). 
 Međutim, možemo ga aproksimirati po volji točno.
 """
@@ -128,8 +123,7 @@ Izračunajmo korijene $p(x) = ax^2 + bx +c =0$ za realne konstante $a$, $b$ i $c
 Rješenja su
 
 $$
-x_{1,2} = \frac{ -b \pm \sqrt{b^2 - 4ac}}{2a}. \tag{1}
-$$
+x_{1,2} = \frac{ -b \pm \sqrt{b^2 - 4ac}}{2a}. \tag{1}$$
 
 Kako ćemo pristupiti izradi programa za računanje ovih korijena?
 
@@ -140,8 +134,7 @@ __Slučaj I.__ $a=0, b \neq 0$.
 Ovo više nije kvadratna jednadžba, nego linearna. Jedino rješenje je
 
 $$
-x_1 = -c/b.
-$$
+x_1 = -c/b.$$
 
 __Slučaj II.__ $a=b=0$
 
@@ -153,56 +146,52 @@ $b^2 - 4ac$.
 __Slučaj III.__ $b^2 -4ac < 0$. Dva kompleksna rješenje (nisu realna).
 
 $$
-x_{1,2} = -\frac{b}{2a} \pm \mathbf{i} \frac{\sqrt{4ac-b^2}}{2a}, \quad \mathbf{i}^2 = -1.
-$$
+x_{1,2} = -\frac{b}{2a} \pm \mathbf{i} \frac{\sqrt{4ac-b^2}}{2a}, \quad \mathbf{i}^2 = -1.$$
 
 __Slučaj IV.__ $b^2 - 4ac =0$. Jedan dvostruki korijen (realni)
 
 $$
-x_1 = x_2 = -\frac{b}{2a}.
-$$
+x_1 = x_2 = -\frac{b}{2a}.$$
 
 __Slučaj V.__ $b^2 -4ac > 0$. Dva različita realna rješenje.
 Koristimo formulu (1)?
 """
 
 # ╔═╡ b5fe78a7-5258-41ba-9544-c0cd64496ef5
-a=1
-b=2
-c=10.0^(-17)
-x₁=(-b-sqrt(b*b-4*a*c))/(2*a)
-x₂=(-b+sqrt(b*b-4*a*c))/(2*a)
-
-x₁,x₂
+begin
+	a=1
+	b=2
+	c=10.0^(-17)
+	x₁=(-b-sqrt(b*b-4*a*c))/(2*a)
+	x₂=(-b+sqrt(b*b-4*a*c))/(2*a)
+	
+	x₁,x₂
+end
 
 # ╔═╡ bca1eb35-dd3d-41af-8130-a8035551ec49
 md"""
 Dva realna rješenja su (prvih 17 znamenki)
 
 $$
-x_1 = -2, \quad x_2 = -5 \cdot 10^{-18}.
-$$
+x_1 = -2, \quad x_2 = -5 \cdot 10^{-18}.$$
 
 Gornji algoritam izračuna $x_1$ točno, ali $x_2 = 0$. Standardni brojevi s plivajućim zarezom (floating-point) u dvostrukoj točnosti, `Float64`, spremaju približno $15$ decimalnih znamenki (54 binarne znamenke) i u tih 15 znamenki je $\sqrt{b^2 -4ac}-b =0$. To je zato što oduzimamo dva bliska broja, a jedan od njih je približno točan, pa je razlika isključivo "greške zaokruživanja". Jednostavno zapažanje rješava ovaj problem.
 
 "Veliki" korijen kvadratne jednadžbe u __slučaju V__ je
 
 $$
-x_1 = \frac{ -b - \mathrm{sign}(b) \sqrt{b^2 - 4ac}}{2a},
-$$
+x_1 = \frac{ -b - \mathrm{sign}(b) \sqrt{b^2 - 4ac}}{2a},$$
 
 a dva korijena zadovoljavaju 
 
 $$
-x_1 x_2 = \frac{c}{a}.
-$$
+x_1 x_2 = \frac{c}{a}.$$
 
 Primjetite da, osim unutar kvadratnog korijena, zbrajamo brojeve istog predznaka!
 Nakon nekoliko transformacija imamo formulu za sitni korijen
 
 $$
-x_2 = \frac{c}{a x_1} = \frac{-2c}{ b + \mathrm{sign}(b) \sqrt{b^2 - 4ac}}.
-$$
+x_2 = \frac{c}{a x_1} = \frac{-2c}{ b + \mathrm{sign}(b) \sqrt{b^2 - 4ac}}.$$
 
 Koristeći ovu formulu oba korijena računamo blizu točnosti stroja.
 
@@ -210,9 +199,11 @@ U ovom primjeru imali smo egzaktnu formulu, ali u aritmetici plivajućeg zareza 
 """
 
 # ╔═╡ 2f084ae2-1e38-4c0b-83b6-da9f025565b1
-x₁=(-b-sign(b)*sqrt(b*b-4*a*c))/(2*a)
-x₂=-2*c/(b+sign(b)*sqrt(b*b-4*a*c))
-x₁,x₂
+begin
+	x₃=(-b-sign(b)*sqrt(b*b-4*a*c))/(2*a)
+	x₄=-2*c/(b+sign(b)*sqrt(b*b-4*a*c))
+	x₃,x₄
+end
 
 # ╔═╡ f8cf034f-b149-4ff9-8a7e-bc8143581d51
 md"""
@@ -268,7 +259,7 @@ end
 korijeni(1,0,9)
 
 # ╔═╡ af57717b-4dca-4b54-8272-e98fe76fd845
-
+korijeni(a,b,c)
 
 # ╔═╡ Cell order:
 # ╟─a481f540-027d-11eb-10b5-5bd4e827e274
@@ -276,8 +267,6 @@ korijeni(1,0,9)
 # ╟─eab6ace0-027d-11eb-0f82-db588f0a253b
 # ╟─3d725c70-027b-11eb-10cb-5b6e56311aa1
 # ╠═3dea5041-85b9-4d8b-9dcf-2d39c8481314
-# ╠═4d59b60e-027b-11eb-02bd-5d1574308999
-# ╠═4d66d570-027b-11eb-38a6-5d4f8eff3322
 # ╠═a47b53a0-027f-11eb-256d-f7d5ce0f97e3
 # ╠═4d68f850-027b-11eb-14a1-1741ea4ce7c2
 # ╟─6ac49527-05f0-4a0a-ad99-aba5d4b07c17
