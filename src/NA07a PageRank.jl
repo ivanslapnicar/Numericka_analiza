@@ -5,24 +5,7 @@ using Markdown
 using InteractiveUtils
 
 # ╔═╡ aa7480bd-e15a-4f07-bcea-f3f2c9f3f5fb
-begin
-	using LinearAlgebra
-	function myPageRank(G::SparseMatrixCSC{Float64,Int64},steps::Int)
-	    p=0.85
-	    c=sum(G,dims=1)/p
-	    n=size(G,1)
-	    for i=1:n
-	        G.nzval[G.colptr[i]:G.colptr[i+1]-1]./=c[i]
-	    end
-	    e=ones(n)
-	    x=e/n
-	    z = vec(((1-p)*(c.!=0) + (c.==0))/n)
-	    for j=1:steps
-	        x=G*x.+(z⋅x)
-	    end
-	    return x
-	end
-end
+using LinearAlgebra
 
 # ╔═╡ 6075a4cb-5931-49d1-987c-ffc0f40ebb12
 using DelimitedFiles
@@ -75,17 +58,18 @@ Matrix(G)
 
 # ╔═╡ f9abf219-8880-4d45-a556-ba20ba114a56
 begin
+	G₁=similar(G)
 	c=sum(G,dims=1)
 	n=size(G,1)
 	for j=1:n
 	    if c[j]>0
-	        G[:,j]=G[:,j]/c[j]
+	        G₁[:,j]=G[:,j]/c[j]
 	    end
 	end
 end
 
 # ╔═╡ 726e69a4-1606-466f-a927-2effba6bcaf2
-Matrix(G)
+Matrix(G₁)
 
 # ╔═╡ 7c96e1d5-c076-4638-8c95-fe5bc8ab8936
 md"""
@@ -104,7 +88,7 @@ end
 z = ((1-p)*(c.!=0) + (c.==0))/n
 
 # ╔═╡ 420af1cd-becc-4005-8534-96a6aaddbde5
-A=p*G+ones(n)*z
+A=p*G₁+ones(n)*z
 
 # ╔═╡ 9d3b7528-4035-4304-bee9-a9407bced36f
 sum(A,dims=1)
@@ -134,11 +118,32 @@ A\cdot x\approx x,$$
 tada je $x[i]$ _rang stranice_ $i$.
 """
 
+# ╔═╡ fece3020-0f09-11eb-0f69-237286bd58af
+function myPageRank(G₁::SparseMatrixCSC{Float64,Int64},steps::Int)
+	G=copy(G₁)
+	p=0.85
+	c=sum(G,dims=1)/p
+	n=size(G,1)
+	for i=1:n
+	    G.nzval[G.colptr[i]:G.colptr[i+1]-1]./=c[i]
+	end
+	e=ones(n)
+	x=e/n
+	z = vec(((1-p)*(c.!=0) + (c.==0))/n)
+	for j=1:steps
+	    x=G*x.+(z⋅x)
+	end
+	return x
+end
+
 # ╔═╡ 739c238c-03db-4ee6-9fb7-f8e5b93282f8
 fieldnames(typeof(G))
 
 # ╔═╡ 6c6a8ce2-5483-45ed-b5c8-61e924b3eb1c
 G
+
+# ╔═╡ cb04da5e-0f08-11eb-21b9-8fdaea539145
+Matrix(G)
 
 # ╔═╡ 870c8ccd-7e2c-489c-957f-fc34651bb65f
 G.colptr
@@ -207,8 +212,10 @@ sortperm(x100,rev=true)
 # ╠═9d3b7528-4035-4304-bee9-a9407bced36f
 # ╟─90edb7b5-c882-41a6-a48b-ba15373f2283
 # ╠═aa7480bd-e15a-4f07-bcea-f3f2c9f3f5fb
+# ╠═fece3020-0f09-11eb-0f69-237286bd58af
 # ╠═739c238c-03db-4ee6-9fb7-f8e5b93282f8
 # ╠═6c6a8ce2-5483-45ed-b5c8-61e924b3eb1c
+# ╠═cb04da5e-0f08-11eb-21b9-8fdaea539145
 # ╠═870c8ccd-7e2c-489c-957f-fc34651bb65f
 # ╠═738462b0-62a9-4aed-8ca7-687fb51d52e2
 # ╠═2e73e3d1-cc59-4977-a89e-bb9d1c2eb89f
