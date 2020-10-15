@@ -1,6 +1,11 @@
 # Numerička analiza
 
-Jupyter bilježnice predmeta _[Numerička analiza](https://nastava.fesb.unist.hr/nastava/predmeti/8183)_ koji se predaje na diplomskom studiju Računarstva (250) na [FESB-u](https://www.fesb.unist.hr/).
+Bilježnice za predmet _Numerička analiza_ ili _Numerička matematika_ kao prvi (uvodni) jednosemestralni predmet kakav standardno slušaju studenti STEM studija.
+
+Bilježnice se koriste na predmetu
+  _[Numerička analiza](https://nastava.fesb.unist.hr/nastava/predmeti/8183)_ koji se predaje na diplomskom studiju Računarstva (250) na [FESBu](https://www.fesb.unist.hr/).
+
+Bilježnice su posebno prilagođene on-line nastavi. Bilježnice su pisane u programskom jeziku [Julia](https://julialang.org).
 
 ## Korištenje
 
