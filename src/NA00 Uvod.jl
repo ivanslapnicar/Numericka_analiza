@@ -4,6 +4,10 @@
 using Markdown
 using InteractiveUtils
 
+# ╔═╡ b9fe89c0-0ee8-11eb-04f5-3529b776cfbb
+# Još jedan paket, pratite upute ako nije već instaliran.
+using Polynomials
+
 # ╔═╡ a481f540-027d-11eb-10b5-5bd4e827e274
 md"""
 # Uvod
@@ -261,6 +265,48 @@ korijeni(1,0,9)
 # ╔═╡ af57717b-4dca-4b54-8272-e98fe76fd845
 korijeni(a,b,c)
 
+# ╔═╡ 9315e7e0-0ee8-11eb-2eeb-4160ebee122d
+md"""
+## Julia je brza i otvorena
+
+`Julia` je __brza__ i prva je rješila problem dva jezika, npr. Matlab ili Python za razvoj, C ili C++ ili FORTRAN za brzinu. Svaka funkcija se nakon prvog poziva kompajlira pomoću [JIT kompajlera](https://en.wikipedia.org/wiki/Just-in-time_compilation), u ovom slučaju [LLVM](https://en.wikipedia.org/wiki/LLVM). 
+
+`Julia` je __otvorena__ jer
+* Kompletan izvorni kod je uvijek dostupan na GitHub-u.
+* MIT licenca
+* Makro `@which` olakšava snalaženje.
+* Može se pogledati LLVM kod i asemblerski kod.
+"""
+
+# ╔═╡ cb1cb5b0-0ee8-11eb-10c2-59d499c44695
+# Sadržaj paketa
+varinfo(Polynomials)
+
+# ╔═╡ d63410b0-0ee8-11eb-31a3-e71de384fadb
+?Polynomial
+
+# ╔═╡ db5f4eb0-0ee8-11eb-3e4f-670b968e851d
+p=Polynomial([c,b,a])
+
+# ╔═╡ 21ed22d0-0ee9-11eb-2407-3b2f0eb6ab8b
+roots(p)
+
+# ╔═╡ 298912b0-0ee9-11eb-2c06-11cd5e89feed
+@which roots(p)
+
+# ╔═╡ 32961ec2-0ee9-11eb-2a47-1568df8b95d7
+md"
+Može se pogledati i datoteku na GitHub-u za najnoviju verziju.
+"
+
+# ╔═╡ 3e6d474e-0ee9-11eb-278f-4d620b298db3
+# Ispis je u Julia terminalu
+@code_llvm korijeni(1,0,7)
+
+# ╔═╡ 4b09e2c0-0ee9-11eb-38c6-db7ffd4c00b3
+# ispis je u Julia terminalu
+@code_native korijeni(1,0,7)
+
 # ╔═╡ Cell order:
 # ╟─a481f540-027d-11eb-10b5-5bd4e827e274
 # ╟─c2a8c4e0-027d-11eb-26fe-1f7bf12091f4
@@ -279,3 +325,13 @@ korijeni(a,b,c)
 # ╠═0738969f-7c4f-4f8e-92de-62cb0cd6510c
 # ╠═cd29c4bc-9cfa-40bc-bc80-74ee5a635a94
 # ╠═af57717b-4dca-4b54-8272-e98fe76fd845
+# ╟─9315e7e0-0ee8-11eb-2eeb-4160ebee122d
+# ╠═b9fe89c0-0ee8-11eb-04f5-3529b776cfbb
+# ╠═cb1cb5b0-0ee8-11eb-10c2-59d499c44695
+# ╠═d63410b0-0ee8-11eb-31a3-e71de384fadb
+# ╠═db5f4eb0-0ee8-11eb-3e4f-670b968e851d
+# ╠═21ed22d0-0ee9-11eb-2407-3b2f0eb6ab8b
+# ╠═298912b0-0ee9-11eb-2c06-11cd5e89feed
+# ╟─32961ec2-0ee9-11eb-2a47-1568df8b95d7
+# ╠═3e6d474e-0ee9-11eb-278f-4d620b298db3
+# ╠═4b09e2c0-0ee9-11eb-38c6-db7ffd4c00b3
