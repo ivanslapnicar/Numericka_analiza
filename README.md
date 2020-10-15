@@ -9,7 +9,7 @@ Materijali su pisani kao [Jupyter](http://jupyter.org/) bilježnice (engl. _note
 ### Korištenjem preglednika
 Unutar svojeg preglednika, bilježnice možete pregledati na sljedećim poveznicama:
 * [Jupyter notebook viewer](http://nbviewer.ipython.org/url/github.com/ivanslapnicar/Numericka_analiza/tree/master/src/)
-* [Pluto](http://htmlpreview.github.io/?https://github.com/ivanslapnicar/Numericka_analiza/blob/master/html/index.html)
+* [Pluto](http://htmlpreview.github.io/?https://github.com/ivanslapnicar/Numericka_analiza/blob/master/docs/index.html)
 
 ###  Lokalno preuzimanje i izvršavanje na vlastitom računalu
 * Preuzmite bilježnice (repozitorij) korištenjem `git` naredbe:
