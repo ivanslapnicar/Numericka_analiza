@@ -8,13 +8,13 @@ using InteractiveUtils
 begin
 	using LinearAlgebra
 	function myjacobi(A::Array,b::Array,x::Array)
-	    D=diag(A)
-	    L=tril(A,-1)./D
-	    U=triu(A,1)./D
+	    D=Diagonal(A)
+	    L=inv(D)*tril(A,-1)
+	    U=inv(D)*triu(A,1)
 	    tol=1000*eps()
 	    d=1.0
 	    B=-(L+U)
-	    c=b./D
+	    c=inv(D)*b
 	    q=norm(B,Inf)
 	    # @show q
 	    while d>tol
@@ -134,6 +134,11 @@ x_{k+1}=-Lx_{k+1}-Ux_k+D^{-1}b,$$
 konvergira prema rješenju sustava $x$.
 """
 
+# ╔═╡ b2ed8cb0-1386-11eb-364f-ab9a25428f4b
+md"
+Pogledajmo kako izgleda rastav na faktore $A=D(L+I+U)$: 
+"
+
 # ╔═╡ 583e17b2-e189-49ae-8c80-0014d53c40c2
 begin
 	import Random
@@ -144,6 +149,21 @@ begin
 	A=A+n*I
 	b=rand(n)
 end
+
+# ╔═╡ f1da40d0-1386-11eb-1102-698c5a0ac84a
+A
+
+# ╔═╡ 0489e230-1387-11eb-152e-2b64f289cfd7
+D=Diagonal(A)
+
+# ╔═╡ 69d74380-1387-11eb-127b-c5fcad190c08
+inv(D)*A
+
+# ╔═╡ 402ac6b0-1387-11eb-0672-337698b01aa9
+L=inv(D)*tril(A,-1)
+
+# ╔═╡ 664c0240-1379-11eb-2f93-1f3bb9532c19
+U=inv(D)*triu(A,1)
 
 # ╔═╡ 213d2b7b-b742-4274-9bb0-e029aec6f892
 # Početni vektor
@@ -163,19 +183,20 @@ norm(r)/(norm(A)*norm(x))
 
 # ╔═╡ adbd72cb-4dcf-490b-bbcb-1d681358c455
 function mygaussseidel(A::Array,b::Array,x::Array)
-    D=diag(A)
-    L=tril(A,-1)./D
-    U=triu(A,1)./D
+    D=Diagonal(A)
+    L=inv(D)*tril(A,-1)
+    U=inv(D)*triu(A,1)
     tol=1000*eps()
     d=1.0
     # B=-inv(I+L)*U
     B=-(I+L)\U
-    c=(I+L)\(b./D)
+    c=(I+L)\(inv(D)*b)
     # @show norm(U,Inf)
     y=Vector{Float64}(undef,n)
     while d>tol
         y=B*x+c
         d=norm(x-y)
+		# @show d
         x=y
     end
     x,d
@@ -219,8 +240,14 @@ __Zadatak.__ Probajte preraditi programe tako da alociraju manje memorije.
 # ╔═╡ Cell order:
 # ╟─1a406352-1739-4709-85bc-6ca3ecb19253
 # ╟─610ef7a4-f0a6-42c8-a2cc-1a03cb155a22
-# ╠═5aba7e24-0424-45f2-9716-3b32a71fc610
+# ╟─b2ed8cb0-1386-11eb-364f-ab9a25428f4b
 # ╠═583e17b2-e189-49ae-8c80-0014d53c40c2
+# ╠═f1da40d0-1386-11eb-1102-698c5a0ac84a
+# ╠═0489e230-1387-11eb-152e-2b64f289cfd7
+# ╠═69d74380-1387-11eb-127b-c5fcad190c08
+# ╠═402ac6b0-1387-11eb-0672-337698b01aa9
+# ╠═664c0240-1379-11eb-2f93-1f3bb9532c19
+# ╠═5aba7e24-0424-45f2-9716-3b32a71fc610
 # ╠═213d2b7b-b742-4274-9bb0-e029aec6f892
 # ╠═91b52c67-de20-4bfc-9da6-3e04ed73b990
 # ╠═0d07f057-9012-42ad-bf52-31a0f14614df

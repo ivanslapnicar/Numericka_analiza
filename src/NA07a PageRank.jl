@@ -171,14 +171,14 @@ Nešto veći testni problem.
 # ╔═╡ 47394960-0f02-11eb-1ddf-cb6b81f096b4
 W=readdlm("web-Stanford.txt",Int,comments=true)
 
-# ╔═╡ fb14f5c1-2b83-4534-95a3-4647d8e50738
+# ╔═╡ 86ca6760-1382-11eb-1e44-0ff4051234a0
 ?sparse
 
 # ╔═╡ 573a625a-ad1c-4133-bae3-342a7501b492
 S=sparse(W[:,2],W[:,1],1.0)
 
 # ╔═╡ 83fdc63f-4aac-45c0-a226-87a4830f697e
-@time x100=myPageRank(S,100);
+@time x100=myPageRank(S,100)
 
 # ╔═╡ b473be54-b1a2-4f34-80d8-742386c9535b
 x101=myPageRank(S,101);
@@ -224,7 +224,7 @@ sortperm(x100,rev=true)
 # ╟─5a02f8ad-3f97-4201-b903-9ed789721f81
 # ╠═6075a4cb-5931-49d1-987c-ffc0f40ebb12
 # ╠═47394960-0f02-11eb-1ddf-cb6b81f096b4
-# ╠═fb14f5c1-2b83-4534-95a3-4647d8e50738
+# ╠═86ca6760-1382-11eb-1e44-0ff4051234a0
 # ╠═573a625a-ad1c-4133-bae3-342a7501b492
 # ╠═83fdc63f-4aac-45c0-a226-87a4830f697e
 # ╠═b473be54-b1a2-4f34-80d8-742386c9535b
