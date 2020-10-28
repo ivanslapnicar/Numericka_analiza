@@ -18,8 +18,8 @@ begin
 	n=6
 	x=rand(n)
 	y=rand(n)
-	a=minimum(x)
-	b=maximum(x)
+	x₀=minimum(x)
+	xₙ=maximum(x)
 end
 
 # ╔═╡ 724b6f69-0f5c-4bcf-8363-42f308897070
@@ -32,8 +32,20 @@ $$T_i=(x_i,y_i), \quad i=0,1,\ldots,n,\quad x_i\neq x_j.$$
 
 ## Standardna baza
 
-Kroz zadane točke prolazi __interpolacijski polinom__ $p_n(x)$. Koeficijenti polinoma zadovoljavaju 
-sustav linearnih jednadžbi $p_n(x_i)=y_i$, $i=0,\ldots,n$, odnosno
+U bazi 
+
+$$1,x,x^2,x^3\ldots,x^n$$
+
+kroz zadane točke prolazi __interpolacijski polinom__ $p_n(x)$,
+
+$$p_n(x)={\displaystyle {\begin{aligned}a_{0}&+a_{1}x+a_{2}x^{2}+a_{3}x^{3}+\cdots +a_{n}x^{n}.\end{aligned}}}$$
+
+Koeficijenti polinoma zadovoljavaju 
+sustav linearnih jednadžbi 
+
+$$p_n(x_i)=y_i, \quad i=0,\ldots,n,$$
+
+odnosno
 
 $$\begin{pmatrix} 
 1 & x_0 & x_0^2 & x_0^3 & \cdots & x_0^n \cr
@@ -91,10 +103,10 @@ begin
 end
 
 # ╔═╡ 99d7f5e3-01c6-46e7-b16f-d42b46214738
-c=A\y
+a=A\y
 
 # ╔═╡ 366d7a3e-ff6e-4bd4-a92d-935bd0d30c35
-p=Polynomial(c)
+p=Polynomial(a)
 
 # ╔═╡ f719cad8-cd2c-4013-9014-1caef03cc575
 # Točke polinoma
@@ -102,16 +114,19 @@ scatter(x,y,label="Tocke")
 
 # ╔═╡ f57091bd-a669-461f-ba5f-9ab7539a3c37
 # Nacrtajmo polinom 
-plot!(p,label=["Polinom"],xlims=(0,1),ylims=(-20,20))
+plot!(p,label="Polinom",xlims=(0,1),ylims=(-20,20))
 
 # ╔═╡ 51668880-461a-45ce-82fe-204543677c75
 begin
 	# Nacrtajmo polinom s našom funkcijom
-	xx=range(a,stop=b,length=100)
+	xx=range(x₀,stop=xₙ,length=100)
 	pS=p.(xx)
 	plot(xx,pS)
 	scatter!(x,y)
 end
+
+# ╔═╡ 6d1668b0-1908-11eb-3269-f79084c40164
+pS
 
 # ╔═╡ ea329cb4-5b4b-49e3-825a-eb19d54a4e91
 md"""
@@ -216,7 +231,7 @@ function mynewton(x,y)
 end  
 
 # ╔═╡ 4976320f-d288-49a3-a1cf-44d2d223b488
-cₙ=mynewton(x,y)
+c=mynewton(x,y)
 
 # ╔═╡ b85666e1-49c3-4f2d-b55b-9c48df27159a
 # Računanje vrijednosti Newtonovog polinoma zadanog s točkama x i 
@@ -233,7 +248,7 @@ end
 begin
 	pN=Array{Float64}(undef,length(xx))
 	for i=1:length(xx)
-	    pN[i]=evalnewton(cₙ,x,xx[i])
+	    pN[i]=evalnewton(c,x,xx[i])
 	end
 end
 
@@ -268,6 +283,7 @@ Vidimo da su `pN` i `pL` bliže jedan drugome nego `pS` pa zaključujemo da su z
 # ╠═f719cad8-cd2c-4013-9014-1caef03cc575
 # ╠═f57091bd-a669-461f-ba5f-9ab7539a3c37
 # ╠═51668880-461a-45ce-82fe-204543677c75
+# ╠═6d1668b0-1908-11eb-3269-f79084c40164
 # ╠═d29a09b2-7cc6-477b-82fd-0591f1f0ec8f
 # ╟─ea329cb4-5b4b-49e3-825a-eb19d54a4e91
 # ╠═4195f039-de9e-4046-89c2-45e328b30478
