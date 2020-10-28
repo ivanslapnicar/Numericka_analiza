@@ -53,6 +53,9 @@ mypolyval(p,3)
 # ╔═╡ 834e9612-5b50-4924-a158-1effe9046a74
 mypolyval(p,π)
 
+# ╔═╡ fda3e34e-1901-11eb-126a-795d469edfcc
+p(3)
+
 # ╔═╡ 2b402caa-7cbb-4402-8307-0a36af1410c5
 md"""
 Funkcija `mypolyval()` koristi $2n$ množenja i $n$ zbrajanja.
@@ -69,7 +72,10 @@ pbig=Polynomial(rand(1000));
 
 # ╔═╡ e3c1f285-fd03-47f5-b705-914e4cb35170
 md"""
-__Hornerova shema__ (Horner, 1819, Newton 1669) treba $n$ množenja i $n$ zbrajanja:
+__Hornerova shema__ (Horner 1819, Newton 1669) treba $n$ množenja i $n$ zbrajanja:
+
+$${\displaystyle {\begin{aligned}a_{0}&+a_{1}x+a_{2}x^{2}+a_{3}x^{3}+\cdots +a_{n}x^{n}\\&=a_{0}+x{\bigg (}a_{1}+x{\Big (}a_{2}+x{\big (}a_{3}+\cdots +x(a_{n-1}+x\,a_{n})\cdots {\big )}{\Big )}{\bigg )}\,,\end{aligned}}}$$
+
 """
 
 # ╔═╡ b3718874-ea9f-4f5d-ad83-d22cb272b489
@@ -93,15 +99,18 @@ myhorner(p,3)
 md"""
 Hornerova shema je __optimalna__ u smislu da je općenito za izvrednjavanje polinoma $p_n(x)$ potrebno barem $n$ množenja. 
 
-(Mogući su, naravno, posebni slučajevi, kao $x^{100}$.) 
+Mogući su, naravno, posebni slučajevi, kao $x^{100}$. 
 """
+
+# ╔═╡ eb155720-1904-11eb-0006-a31743a0a7f2
+log2(100)
 
 # ╔═╡ a7ab8371-c193-431d-9b1d-d3269a44459d
 md"""
 ## Točnost
 
 Neka je $\hat q$ vrijednost $p_n(x)$ izračunata u aritmetici s točnošću stroja $\varepsilon$. Tada vrijedi ocjena
-(vidi [Accuracy and Stability of Numerical Algorithms, str. 105](https://books.google.hr/books?id=5tv3HdF-0N8C&printsec=frontcover&hl=hr#v=onepage&q&f=false)):
+(vidi [Accuracy and Stability of Numerical Algorithms, str. 95](https://books.google.hr/books?id=5tv3HdF-0N8C&printsec=frontcover&hl=hr#v=onepage&q&f=false)):
 
 $$
 \big|\, p_n(x)-\hat q\,\big| \leq \frac{2n\varepsilon}{1-2n\varepsilon} \sum_{i=0}^n |a_i||x|^i.$$
@@ -156,6 +165,7 @@ myhorner(pb₂,-sqrt(map(BigFloat,10000)))
 # ╠═d40a5115-1f38-4e4a-9bde-37408f90a5f5
 # ╠═58d8436a-740c-4801-aba3-92d01070a4e6
 # ╠═834e9612-5b50-4924-a158-1effe9046a74
+# ╠═fda3e34e-1901-11eb-126a-795d469edfcc
 # ╟─2b402caa-7cbb-4402-8307-0a36af1410c5
 # ╠═5c6e1617-6682-43ec-bec5-8245f1a55d34
 # ╠═6da79660-153d-11eb-10f7-b9e079919759
@@ -166,6 +176,7 @@ myhorner(pb₂,-sqrt(map(BigFloat,10000)))
 # ╠═24d7653c-c02b-4239-ace6-b6b99ffea022
 # ╠═e3382c91-e26f-4636-b068-483dab80a3bc
 # ╟─cce27db4-32cd-4ff1-8531-880985527ff2
+# ╠═eb155720-1904-11eb-0006-a31743a0a7f2
 # ╟─a7ab8371-c193-431d-9b1d-d3269a44459d
 # ╠═b5ffd702-3c09-4b37-a58f-b376826fbbdb
 # ╠═4700a424-1f5e-4124-b851-c196d45dd8cc
