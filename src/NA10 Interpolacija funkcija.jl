@@ -99,19 +99,19 @@ c=A\y
 p=Polynomial(c)
 
 # ╔═╡ af46e285-715a-4b5c-8745-d17d61806dbf
-scatter(x,y)
+scatter(x,y,label="Točke")
 
 # ╔═╡ 6a1c5393-f4c9-4a45-8a11-0b4c884406b7
 begin
 	x₀=range(a,stop=b,length=100)
 	p₀=p.(x₀)
 	F₀=f.(x₀)
-	plot!(x₀,[p₀ F₀])
+	plot!(x₀,[p₀ F₀],label=["Polinom" "Funkcija"])
 end
 
 # ╔═╡ 9e80a29c-ea79-489f-8383-60fab341f5be
 begin
-	# maksimalne apsolutna i relativna pogreška
+	# Maksimalne apsolutna i relativna pogreška
 	using LinearAlgebra
 	norm(p₀[2:end-1]-F₀[2:end-1],Inf), 
 	norm((p₀[2:end-1]-F₀[2:end-1])./F₀[2:end-1],Inf)
@@ -126,7 +126,12 @@ __Čebiševljevi polinomi__ su polinomi stupnja $n$ dani formulom
 $$
 T_n(x)=\cos(n\, \arccos x), \quad n=0,1,2,\ldots$$
 
-Vrijedi rekurzivna formula:
+Adiciona formula
+
+$$
+\cos(n+1)\varphi+\cos(n-1)\varphi=2\cos\varphi \cos n\varphi$$
+
+uz $\varphi=\arccos x$ daje rekurzivnu formulu:
 
 $$
 \begin{aligned}
@@ -145,16 +150,16 @@ Nul-točke polinoma $T_n(x)$ su
 $$
 x_k=\cos \bigg(\frac{2k-1}{2n}\pi\bigg), \quad k=1,2,\ldots,n.$$
 
-Sve nul-točke leže unutar intervala $[-1,1]$.
-
-Na intervalu $[-1,1]$ polinom $T_n(x)$ poprima vrijednosti u intervalu $[-1,1]$.
-
-__Napomena.__ Rekurzivna formula slijedi iz adicione formule
+Sve nul-točke leže unutar intervala $[-1,1]$. U točkama
 
 $$
-\cos(n+1)\varphi+\cos(n-1)\varphi=2\cos\varphi \cos n\varphi$$
+\xi_k=\cos \bigg(\frac{k\pi}{n}\bigg), \quad k=0,1,2,\ldots,n,$$
 
-uz $\varphi=\arccos x$.
+$T_n(x)$ naizmjenično dostiže lokalne minimume i maksimume, $1$ i $-1$, na intervalu $[-1,1]$.
+
+Na intervalu $[-1,1]$ polinom $T_n(x)$ poprima vrijednosti u intervalu $[-1,1]$. 
+
+
 
 ### Primjer
 """
@@ -288,11 +293,11 @@ begin
 	# x₂=range(a,stop=b,length=100)
 	p₂=pₜ.(x₀)
 	F₂=f.(x₀)
-	plot(x₀,[p₂ F₂])
+	plot(x₀,[p₂ F₂],label=["Polinom" "Funkcija"])
 end
 
 # ╔═╡ e147f5fa-6826-4b21-80a4-1fbd14593c8c
-# maksimalne apsolutna i relativna pogreška
+# Maksimalne apsolutna i relativna pogreška
 norm(p₂[2:end-1]-F₂[2:end-1],Inf), 
 norm((p₂[2:end-1]-F₂[2:end-1])./F₂[2:end-1],Inf)
 
@@ -341,8 +346,8 @@ begin
 	xp₃=range(a₃,stop=b₃,length=100)
 	pf₃=p₃.(xp₃)
 	F₃=f₃(xp₃)
-	scatter(x₃,y₃)
-	plot!(xp₃, [pf₃ F₃])
+	scatter(x₃,y₃,label="Točke")
+	plot!(xp₃, [pf₃ F₃],label=["Polinom" "Funkcija"])
 end
 
 # ╔═╡ bcf8a882-eca1-4739-9789-43a9de96cb94
@@ -354,8 +359,8 @@ begin
 	ct₃=At₃\yt₃
 	pc₃=Polynomial(ct₃)
 	pCheb=pc₃.(xp₃)
-	scatter(xt₃,yt₃)
-	plot!(xp₃,[pCheb F₃])
+	scatter(xt₃,yt₃,label="Točke")
+	plot!(xp₃,[pCheb F₃],label=["Polinom" "Funkcija"])
 end
 
 # ╔═╡ 3760da30-1560-11eb-083e-575c20a74101
