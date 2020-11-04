@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.12.4
+# v0.12.6
 
 using Markdown
 using InteractiveUtils
@@ -37,7 +37,7 @@ $$g(y)= f(y)-p_n(y)-k\omega(y),$$
 pri čemu je konstanta $k$ odabrana tako da je $g(x)=0$.
 Na taj način funkcija $g$ ima barem $n+2$ nultočke, 
 $x,x_0,x_1,\ldots,x_n$. 
-Prema Rolleovom teoremu, derivacija $g'$ ima barem $n+1$ nultočku, $g''$ ima barem $n$ nultočaka, itd. Funkcija $g^{(n+1)}$ ima barem jednu nultočku $\xi\in(a,b)$.
+Prema Fermatovom teoremu, derivacija $g'$ ima barem $n+1$ nultočku, $g''$ ima barem $n$ nultočaka, itd. Funkcija $g^{(n+1)}$ ima barem jednu nultočku $\xi\in(a,b)$.
 
 Vrijedi $p_n^{(n+1)}(y)=0$ i $\omega^{(n+1)}(y)=(n+1)!$ (vodeći koeficijent od $\omega$ je $1$). Uvrštavanje daje 
 
@@ -81,13 +81,16 @@ end
 
 # ╔═╡ 3a599b53-077b-47e7-a1cf-17e15da6aa1f
 begin
-	n=6
+	n=7
 	a=0
 	b=pi
 	x=range(a,stop=b,length=n)
 	f(x)=sin(x)
 	y=f.(x)
 end
+
+# ╔═╡ af46e285-715a-4b5c-8745-d17d61806dbf
+scatter(x,y,label="Točke")
 
 # ╔═╡ de651f77-3953-4ada-ac74-48bd58d147c1
 A=Vandermonde(x)
@@ -98,12 +101,9 @@ c=A\y
 # ╔═╡ 7c1650eb-bf62-40af-b085-1b81da0f47bf
 p=Polynomial(c)
 
-# ╔═╡ af46e285-715a-4b5c-8745-d17d61806dbf
-scatter(x,y,label="Točke")
-
 # ╔═╡ 6a1c5393-f4c9-4a45-8a11-0b4c884406b7
 begin
-	x₀=range(a,stop=b,length=100)
+	x₀=range(a,stop=b,length=101)
 	p₀=p.(x₀)
 	F₀=f.(x₀)
 	plot!(x₀,[p₀ F₀],label=["Polinom" "Funkcija"])
@@ -155,7 +155,7 @@ Sve nul-točke leže unutar intervala $[-1,1]$. U točkama
 $$
 \xi_k=\cos \bigg(\frac{k\pi}{n}\bigg), \quad k=0,1,2,\ldots,n,$$
 
-$T_n(x)$ naizmjenično dostiže lokalne minimume i maksimume, $1$ i $-1$, na intervalu $[-1,1]$.
+ $T_n(x)$ naizmjenično dostiže lokalne minimume i maksimume, $1$ i $-1$, na intervalu $[-1,1]$.
 
 Na intervalu $[-1,1]$ polinom $T_n(x)$ poprima vrijednosti u intervalu $[-1,1]$. 
 
@@ -281,6 +281,12 @@ xₜ=(a+b)/2 .+(b-a)/2*[cos((2*k-1)*pi/(2*n)) for k=n:-1:1]
 # ╔═╡ 79d7ee5b-4dcc-47c4-b858-f6b6afb8b66a
 yₜ=f.(xₜ)
 
+# ╔═╡ 0fd0ca70-1e84-11eb-05ce-e1cde3431a68
+begin
+	scatter(xₜ,yₜ,label="Točke")
+	plot!(x₀,F₀,label="Funkcija")
+end
+
 # ╔═╡ e6ea8fd8-6fbf-4fc7-ac6a-7354b1e0be85
 begin
 	Aₜ=Vandermonde(xₜ)
@@ -328,7 +334,7 @@ interpolirajmo funkciju
 $$
 f(x)=1-|x-1|,\quad x\in[0,2]$$
 
-polinomom stupnja 10.
+polinomom stupnja 10. Velika odstupnanja interpolacijskog polinoma u rubovima zovu se __Rungeov fenomen__. Fenomen nestaje kada se funkcija interpolira u Čebiševljevim točkama.
 """
 
 # ╔═╡ c6b0381f-dd60-42f3-8f6a-df8771bbf3c6
@@ -371,10 +377,10 @@ xt₃
 # ╠═6a0417bf-00aa-47db-bf22-5842f1cc736e
 # ╠═c88bd3a2-a46d-4931-b4cf-0b940696aa89
 # ╠═3a599b53-077b-47e7-a1cf-17e15da6aa1f
+# ╠═af46e285-715a-4b5c-8745-d17d61806dbf
 # ╠═de651f77-3953-4ada-ac74-48bd58d147c1
 # ╠═7f63d94f-3792-4369-b8f4-edd3a5b0cd78
 # ╠═7c1650eb-bf62-40af-b085-1b81da0f47bf
-# ╠═af46e285-715a-4b5c-8745-d17d61806dbf
 # ╠═6a1c5393-f4c9-4a45-8a11-0b4c884406b7
 # ╠═9e80a29c-ea79-489f-8383-60fab341f5be
 # ╟─58277216-ffc5-47e7-a8c6-b181e54ec870
@@ -388,6 +394,7 @@ xt₃
 # ╟─2ee3a5fe-8da3-4a37-b61b-63fa0282d287
 # ╠═9bc340ed-75a2-4e50-b209-8075508d0611
 # ╠═79d7ee5b-4dcc-47c4-b858-f6b6afb8b66a
+# ╠═0fd0ca70-1e84-11eb-05ce-e1cde3431a68
 # ╠═e6ea8fd8-6fbf-4fc7-ac6a-7354b1e0be85
 # ╠═b2c12a8c-374a-4222-8e37-83998743988a
 # ╠═e147f5fa-6826-4b21-80a4-1fbd14593c8c

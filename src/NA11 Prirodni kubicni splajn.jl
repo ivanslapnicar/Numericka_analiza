@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.12.4
+# v0.12.6
 
 using Markdown
 using InteractiveUtils
@@ -56,7 +56,7 @@ $$\begin{aligned}
 C_i(x_{i-1})&=y_{i-1}, \quad &i=1,\ldots,n, \\
 C_i(x_{i})&=y_{i} \quad &i=1,\ldots, n,\\
 C'_i(x_i)&=C'_{i+1}(x_i), \quad &i=1,\ldots,n-1, \\
-C'_i(x_i)&=C'_{i+1}(x_i), \quad &i=1,\ldots,n-1,
+C''_i(x_i)&=C''_{i+1}(x_i), \quad &i=1,\ldots,n-1,
 \end{aligned}$$
 
 pa imamo sustav od $4n-2$ jednadžbe i $4n$ nepoznanica (svaki od $n$ polinoma ima 4 koeficijenta).
@@ -175,10 +175,13 @@ end
 # ╔═╡ 1e6ed7c3-a1bb-4d85-8c48-18410365aa47
 C=myspline(x,y)
 
+# ╔═╡ 99c7a450-1e8a-11eb-0de9-573288ac496c
+C[2](0.6)
+
 # ╔═╡ bca31410-9afb-4b45-bc46-d4a98d926301
 begin
 	# Crtanje
-	lsize=200
+	lsize=201
 	xx=range(x[1],x[end],length=lsize)
 	scatter(x,y,label="Točke")
 	ySpline=plotspline(C,x,xx)
@@ -215,8 +218,8 @@ $$f(x)=1-|x-1|,\quad  x\in[0,2].$$
 
 # ╔═╡ 20f11b0f-110e-465a-84d5-0f78e99b14ff
 begin
-	# n₁=5; a=0; b=pi; f(x)=sin.(x)
-	n₁=10; a=0; b=2; f(x)=1 .-abs.(x .-1)
+	n₁=6; a=0; b=pi; f(x)=sin.(x)
+	# n₁=10; a=0; b=2; f(x)=1 .-abs.(x .-1)
 	
 	x₁=collect(range(a,stop=b,length=n₁+1))
 	y₁=f(x₁)
@@ -248,6 +251,7 @@ end
 # ╠═a990adad-3abe-4dc3-be83-02e3ce5c46d4
 # ╠═e0f49f72-b3c9-40e8-94ba-6646edb0966d
 # ╠═1e6ed7c3-a1bb-4d85-8c48-18410365aa47
+# ╠═99c7a450-1e8a-11eb-0de9-573288ac496c
 # ╠═bca31410-9afb-4b45-bc46-d4a98d926301
 # ╟─4afd29e7-8e7c-44b6-8897-62dd7317b983
 # ╠═e667e8e4-79ca-43cb-b0c1-2e673e13cfe3

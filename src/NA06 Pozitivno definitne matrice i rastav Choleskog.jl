@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.12.4
+# v0.12.6
 
 using Markdown
 using InteractiveUtils
@@ -33,7 +33,7 @@ slijedi
 
 $$\beta=\sqrt{\alpha},\quad l=a\beta^{-1}=a\alpha^{-1/2},\quad C=B-ll^T=B-a\alpha^{-1}a^T.$$
 
-Vidimo da treba vrijediti $\alpha>0$. Tekođer, matrica $B$ je simetrična pa je takve i matrica $C$.
+Vidimo da treba vrijediti $\alpha>0$. Također, matrica $B$ je simetrična pa je takva i matrica $C$.
 
 Indukcija daje sljedeći algoritam:
 
