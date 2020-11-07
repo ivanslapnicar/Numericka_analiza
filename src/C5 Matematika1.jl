@@ -9,6 +9,8 @@ begin
 	using TextAnalysis
 	using Arpack
 	using Clustering
+	using Languages
+	using Plots
 end
 
 # ╔═╡ 2abb6d30-2079-11eb-2d32-47713a476605
@@ -31,18 +33,44 @@ end
 # Number of documents / nodes
 n=144
 
+# ╔═╡ b59d17a0-2100-11eb-27de-c3196ecc1268
+md"
+__N.B.__ Added `ii,iii,iv,v,nbsp,times,home` to `Languages/.../data/stopwords/Croatian.txt`.
+"
+
+# ╔═╡ 08057a10-20dd-11eb-300e-f52ff0eaf35f
+begin
+	# Test on one file
+	f=open("files/node10.html","r")
+	fr=readlines(f)
+	close(f)
+	frjoin=join(fr,"  ")
+	sdf=StringDocument(frjoin)
+	language!(sdf,Languages.Croatian())
+	remove_corrupt_utf8!(sdf)
+	prepare!(sdf, strip_html_tags | strip_case | strip_numbers | strip_whitespace |  strip_punctuation | strip_stopwords)
+end
+
+# ╔═╡ 6c615a00-20de-11eb-0841-c30b5cf7d68a
+language(sdf)
+
+# ╔═╡ 1c2c2b0e-20dd-11eb-39b6-a7a56b61391c
+text(sdf)
+
 # ╔═╡ 022dae30-2076-11eb-225e-233a63507457
 a=Array{StringDocument{String}}(undef,n)
 
 # ╔═╡ 2f61f232-2076-11eb-0606-351e586f37f1
+# Process all files
 for i=1:n
 	f=open("files/node$i.html","r")
 	fr=readlines(f)
 	close(f)
 	frjoin=join(fr,"  ")
 	sdf=StringDocument(frjoin)
+	language!(sdf,Languages.Croatian())
 	remove_corrupt_utf8!(sdf)
-	prepare!(sdf, strip_html_tags | strip_articles | strip_case | strip_pronouns | strip_stopwords | strip_numbers | strip_non_letters )
+	prepare!(sdf, strip_html_tags | strip_case | strip_numbers | strip_whitespace |  strip_punctuation | strip_stopwords)
 	a[i]=sdf
 end
 
@@ -99,11 +127,18 @@ outU=kmeans(Matrix(transpose(S.U)),6)
 # ╔═╡ c7a41b32-2077-11eb-3702-c728d684fcfc
 outU.assignments
 
+# ╔═╡ 3fb27600-2107-11eb-2a03-ed723e052828
+scatter(outU.assignments,xlabel="Documents",ylabel="Clusters",legend=false)
+
 # ╔═╡ Cell order:
 # ╟─2abb6d30-2079-11eb-2d32-47713a476605
 # ╠═a4028042-2072-11eb-0aa6-77e29a756648
 # ╠═30498550-2071-11eb-0f6b-33372a37909e
 # ╠═621ed340-2072-11eb-1742-3b4d0b042fb9
+# ╟─b59d17a0-2100-11eb-27de-c3196ecc1268
+# ╠═08057a10-20dd-11eb-300e-f52ff0eaf35f
+# ╠═6c615a00-20de-11eb-0841-c30b5cf7d68a
+# ╠═1c2c2b0e-20dd-11eb-39b6-a7a56b61391c
 # ╠═022dae30-2076-11eb-225e-233a63507457
 # ╠═2f61f232-2076-11eb-0606-351e586f37f1
 # ╠═0b67ef4e-2077-11eb-2716-5fed149d4e28
@@ -123,3 +158,4 @@ outU.assignments
 # ╠═a70064ae-2077-11eb-2b51-3d76c0e7e933
 # ╠═b34b84be-2077-11eb-3a72-91c2fc5739dd
 # ╠═c7a41b32-2077-11eb-3702-c728d684fcfc
+# ╠═3fb27600-2107-11eb-2a03-ed723e052828
