@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.12.6
+# v0.12.7
 
 using Markdown
 using InteractiveUtils
@@ -7,7 +7,7 @@ using InteractiveUtils
 # ╔═╡ 24c9f0ba-6e18-4362-840b-1a3581032ff5
 begin
 	using LinearAlgebra
-	function myGramSchmidtQR(A::Array)
+	function GramSchmidtQR(A::Array)
 	    m,n=size(A)
 	    R=zeros(n,n)
 	    Q=Array{Float64}(undef,m,n)
@@ -123,7 +123,7 @@ begin
 end
 
 # ╔═╡ b8994eec-d651-4921-b1a3-184a029e83b7
-Q,R=myGramSchmidtQR(A)
+Q,R=GramSchmidtQR(A)
 
 # ╔═╡ 19a0f0b8-dbab-4609-9f7f-17339af6bf63
 Q
@@ -140,7 +140,7 @@ A-Q*R
 
 # ╔═╡ b9bf7235-dcb8-47bf-8c3f-1179ba9e08e0
 md"""
-Algoritam `myGramSchmidtQR()` je numerički nestabilan pa je bolje koristiti __modificirani Gram-Schmidtov algoritam__ ili __Householderove reflektore__ ili __Givensove rotacije__ (vidi [Matrix Computations, poglavlje 5](https://books.google.hr/books?id=X5YfsuCWpxMC&printsec=frontcover&hl=hr#v=onepage&q&f=false)).
+Algoritam `GramSchmidtQR()` je numerički nestabilan pa je bolje koristiti __modificirani Gram-Schmidtov algoritam__ ili __Householderove reflektore__ ili __Givensove rotacije__ (vidi [Matrix Computations, poglavlje 5](https://books.google.hr/books?id=X5YfsuCWpxMC&printsec=frontcover&hl=hr#v=onepage&q&f=false)).
 """
 
 # ╔═╡ 3fd60d80-25d7-45e2-9776-7250841e8f74
@@ -181,7 +181,7 @@ za koju je potrebno $O(6m)$ operacija.
 """
 
 # ╔═╡ 4a371793-1d5c-413f-8e89-dce986c972ef
-function myHouseholderVector(x::Array)
+function HouseholderVector(x::Array)
     # Računa v
     v=copy(x)
     v[1]=x[1]+sign(x[1])*norm(x)
@@ -191,7 +191,7 @@ end
 # ╔═╡ 814c6dd6-faa1-4211-8f64-bf349624dc37
 begin
 	x=rand(8)
-	v=myHouseholderVector(x)
+	v=HouseholderVector(x)
 	β=(2/(v⋅v))*(v⋅x)
 	x-β*v
 end
@@ -208,13 +208,13 @@ QR rastav matrice se računa rekurzivnim QR rastavom vektora pomoću Householder
 """
 
 # ╔═╡ 3bb4d086-a79a-44b1-92c3-5e29be4c36de
-function myHouseholderQR(A₁::Array)
+function HouseholderQR(A₁::Array)
     # Računa Q i R
     A=copy(A₁)
     m,n=size(A)
     Q=Matrix{Float64}(I,m,m) # eye
     for k=1:n
-        v=myHouseholderVector(A[k:m,k])
+        v=HouseholderVector(A[k:m,k])
         β=(2/(v⋅v))*v
         A[k:m,k:n]=A[k:m,k:n]-β*(v'*A[k:m,k:n])
         Q[k:m,:]=Q[k:m,:]-β*(v'*Q[k:m,:])
@@ -228,13 +228,13 @@ end
 A
 
 # ╔═╡ cb302477-773e-4fd9-a9d6-a9df50e45b18
-# Q,R=myHouseholderQR(A)
+Qₕ,Rₕ=HouseholderQR(A)
 
 # ╔═╡ 12069de5-8064-437b-b96c-222baa7b4c7d
-Q'*A
+Qₕ'*A
 
 # ╔═╡ 3ceae442-3a07-4400-933c-a04bdc8ee742
-R
+Rₕ
 
 # ╔═╡ ef4702ee-44cc-49d8-85bb-39249c431036
 md"""
@@ -252,9 +252,10 @@ pa se može utvrditi i __numerički rang__ matrice.
 """
 
 # ╔═╡ 4587b182-80fd-4bd7-87af-17074ea7c9d9
-# ?qr
+# ?qr # Pogledajmo upute
 
 # ╔═╡ f944cdbe-794c-405e-a215-687cbb12b22b
+# Izračunajmo QR objekt
 F=qr(A)
 
 # ╔═╡ 64e052c2-b798-4fb8-80fd-c018df2c8625
@@ -304,7 +305,7 @@ end
 @time qr(A₁,Val(true));
 
 # ╔═╡ f6b568ec-20e5-4575-a62c-70d470589ef1
-@time myHouseholderQR(A₁);
+@time HouseholderQR(A₁);
 
 # ╔═╡ 7e40ad34-0497-410d-9669-20ad8a9ca74b
 md"""
