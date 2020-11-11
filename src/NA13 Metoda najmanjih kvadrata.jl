@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.12.6
+# v0.12.8
 
 using Markdown
 using InteractiveUtils
@@ -53,7 +53,7 @@ Q(x+h)&=(x^T+h^T)A^TA(x+h)-2(x^T+h^T)A^Tb+b^Tb \\
 
 pa se minimum zaista postiže u $x$.
 
-Rješenje je jedinstveno jer $Q(x)=Q(y)$ povlači $\|Ax\|_2=0$ pa je ili $h=0$ ili $\mathop{\mathrm{rang}} A<n$ što je kontradikcija i teorem je dokazan.
+Rješenje je jedinstveno jer $Q(x)=Q(y)$ povlači $\|Ah\|_2=0$ pa je ili $h=0$ ili $\mathop{\mathrm{rang}} A<n$ što je kontradikcija i teorem je dokazan.
 "
 
 # ╔═╡ b4ddcb00-1eaa-11eb-23c6-d15643cd207a
@@ -95,6 +95,12 @@ A=[1//1 1 0;0 1 1;1 0 1;-1 1 1;-1 0 -1]
 
 # ╔═╡ dea071d2-66b7-44f0-a75c-e0c67e574561
 b=[0//1,1,0,1,0]
+
+# ╔═╡ e6753e70-2402-11eb-3055-594fe9e7c50c
+A'*A
+
+# ╔═╡ eedd09d0-2402-11eb-219e-2dfe890d6b22
+A'*b
 
 # ╔═╡ d6e05d5d-6878-4865-934a-6d8846f1d157
 x=(A'*A)\(A'*b)
@@ -145,7 +151,7 @@ __Osjetljivost problema najmanjih kvadarata__ dana je sljedećim ocjenama (vidi 
 Za matricu $A$ __kondiciju__ definiramo na sljedeći način:
 
 $$
-\kappa_2(A)=\sqrt{\kappa(A^TA)}=\|A\|_2 \|(A^TA)^{-1} A^T\|_2.$$
+\kappa_2(A)=\sqrt{\kappa_2(A^TA)}=\|A\|_2 \|(A^TA)^{-1} A^T\|_2.$$
 
 Neka su $x$ i $\hat x$, kvadratične prilagodbe sustava $Ax=b$ i 
 $(A+\delta A)\hat x=b+\delta b$. __Reziduali__ su definirani s
@@ -228,6 +234,8 @@ Dakle, relativna pogreška rješenja dobivenog pomoću metode normalnih jednadž
 # ╟─5c65704d-666f-4f15-bc8f-7741457f9af0
 # ╠═365fc919-988d-4a1b-b42c-b8ab6931f860
 # ╠═dea071d2-66b7-44f0-a75c-e0c67e574561
+# ╠═e6753e70-2402-11eb-3055-594fe9e7c50c
+# ╠═eedd09d0-2402-11eb-219e-2dfe890d6b22
 # ╠═d6e05d5d-6878-4865-934a-6d8846f1d157
 # ╠═49874317-1bb6-4882-ae83-4644094bf87e
 # ╟─1052a0b7-748d-46d5-a5fb-9d3b1ba2b65e
