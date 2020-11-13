@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.12.9
+# v0.12.10
 
 using Markdown
 using InteractiveUtils
@@ -149,23 +149,24 @@ begin
 end
 
 # ╔═╡ 9006213a-325f-4296-a0ec-d5c02b4ec5e8
-plot(xₒ,V,title="Standardna baza",legend=:bottomright)
+plot(xₒ,V,title="Standardna baza",legend=:bottomright,
+	label=["1" "x" "x^2" "x^3" "x^4" "x^5"])
 
 # ╔═╡ f157bb76-8445-4994-b08e-260b2a51ad51
 begin
-	# Ortogonalizacija s težinskom funkcijom ω=1 daje normirane Legendreove polinome.
+	# Ortogonalizacija s težinskom funkcijom ω(x)=1 daje normirane Legendreove polinome.
 	Fₒ=qr(V)
 	Qₒ=Matrix(Fₒ.Q)*sign.(Diagonal(Fₒ.R))
 end
 
 # ╔═╡ 68d56539-22ab-4a89-ad51-fb3c2f37ee8d
-plot(xₒ,Qₒ,title="Legendreovi polinomi")
+plot(xₒ,Qₒ,title="Legendreovi polinomi",label=["L₀" "L₁" "L₂" "L₃" "L₄" "L₅"])
 
 # ╔═╡ 4b343213-f8d2-45d3-bae8-999dee675089
 md"""
-Dobiveni vektori su vrijednosti normiranih Legendreovih polinoma iz blježnice [NA12 Ortogonalni polinomi.ipynb](NA12%20Ortogonalni%20polinomi.ipynb).
+Dobiveni normirani vektori su vrijednosti skaliranih Legendreovih polinoma iz blježnice [NA12 Ortogonalni polinomi.ipynb](NA12%20Ortogonalni%20polinomi.ipynb).
 
-Da bi dobili Čebiševljeve polinome, trebamo dodati težinsku funkciju $\omega$ i preraditi funkciju `myGramSchmidtQR()` iz bilježnice [NA15 QR rastav.ipynb](NA15%20QR%20rastav.ipynb) tako da računa _težinske skalarne produkte_. Dobiveni vektori su vrijednosti normiranih Čebiševljevih polinoma.
+Da bi dobili Čebiševljeve polinome, trebamo dodati težinsku funkciju $\omega(x)=\displaystyle\frac{1}{\sqrt{1-x^2}}$ i preraditi funkciju `GramSchmidtQR()` iz bilježnice [NA15 QR rastav.ipynb](NA15%20QR%20rastav.ipynb) tako da računa __težinske skalarne produkte__. Dobiveni normirani vektori su vrijednosti skaliranih Čebiševljevih polinoma.
 """
 
 # ╔═╡ 830acec9-74f1-4b02-a5f7-b65b05f457ef
@@ -196,21 +197,18 @@ end
 
 # ╔═╡ be2197e5-565e-4b13-acb9-a245f2f3780e
 begin
-	Q₃,R₃=WeightedGramSchmidtQR(V,ω)
+	Q₃,R₃=WeightedGramSchmidtQR(V₃,ω)
 	Q₃=Q₃*sign.(Diagonal(R₃))
 end
 
 # ╔═╡ 957a675e-a12a-47bf-b196-bd4f3431849a
-plot(x₃,Q₃,title="Čebiševljevi polinomi")
+plot(x₃,Q₃,title="Čebiševljevi polinomi",label=["T₀" "T₁" "T₂" "T₃" "T₄" "T₅"])
 
 # ╔═╡ 656aa3d6-0ebc-4ca5-95d5-071af0f5c2c0
 md"""
-__Zadatak.__ Normirajte stupce matrice $Q₃$ tako da polinomi 
+__Zadatak.__ Normirajte stupce matrice $Q₃$ tako da vektori
 poprimaju sve vrijednosti u intervalu $[-1,1]$. 
 """
-
-# ╔═╡ 251721ca-a0c8-4346-ac31-fed3b1deff5d
-
 
 # ╔═╡ Cell order:
 # ╟─e0f03ec0-f136-411f-a270-bcc85fde0579
@@ -239,4 +237,3 @@ poprimaju sve vrijednosti u intervalu $[-1,1]$.
 # ╠═be2197e5-565e-4b13-acb9-a245f2f3780e
 # ╠═957a675e-a12a-47bf-b196-bd4f3431849a
 # ╟─656aa3d6-0ebc-4ca5-95d5-071af0f5c2c0
-# ╠═251721ca-a0c8-4346-ac31-fed3b1deff5d
