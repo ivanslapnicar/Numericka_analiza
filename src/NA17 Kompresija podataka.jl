@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.12.9
+# v0.12.10
 
 using Markdown
 using InteractiveUtils
@@ -18,6 +18,7 @@ begin
 	using Images
 	using LinearAlgebra
 	using Plots
+	using PlutoUI
 end
 
 # ╔═╡ c94e89d0-1049-4b0d-aa26-d5a1eda436b9
@@ -74,8 +75,8 @@ norm(R.Q*R.R[:,invperm(R.p)]-float(Red))
 scatter(1:length(diag(R.R,1)),abs.(diag(R.R)),
     title="Diagonal elements of matrix R",legend=false)
 
-# ╔═╡ c26c9e80-2464-11eb-2866-9153dc112b78
-@bind k  html"<input type='range' min='10' max='200'"
+# ╔═╡ d7fd21c0-25ae-11eb-217c-51b165642c9b
+@bind k Slider(10:10:200)
 
 # ╔═╡ feebc2d6-e495-4145-8e90-3b0d7d073d04
 begin
@@ -112,5 +113,5 @@ k, norm(Red-RedC)/norm(Red)
 # ╠═feebc2d6-e495-4145-8e90-3b0d7d073d04
 # ╠═5bb5fe50-2466-11eb-175c-e1ff94b7840c
 # ╠═955201fd-cb90-4c0f-bf50-ac1ca1850d26
-# ╠═c26c9e80-2464-11eb-2866-9153dc112b78
+# ╠═d7fd21c0-25ae-11eb-217c-51b165642c9b
 # ╠═b1c18ee7-4b8f-4b44-a960-d759040a29cd
