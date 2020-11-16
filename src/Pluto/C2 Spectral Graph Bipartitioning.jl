@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.12.7
+# v0.12.10
 
 using Markdown
 using InteractiveUtils
@@ -270,7 +270,7 @@ md"""
 
 Consider the following partitions (all edges have unit weights):
 
- $(load(\"cut2.png\"))
+ $(load(\"../files/cut2.png\"))
 
 Left partition is $\pi$, right partition is $\pi'$.
 
@@ -431,7 +431,8 @@ begin
 	k=2
 	# Center
 	Random.seed!(541)
-	center=[rand(-5:5);rand(-5:5)]
+	# center=[rand(-5:5),rand(-5:5)]
+	center=[0,0]
 	# Radii
 	radii=randperm(10)[1:k]
 	# Number of points in circles

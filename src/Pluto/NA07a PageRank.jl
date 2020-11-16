@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.12.4
+# v0.12.10
 
 using Markdown
 using InteractiveUtils
@@ -119,7 +119,7 @@ tada je $x[i]$ _rang stranice_ $i$.
 """
 
 # ╔═╡ fece3020-0f09-11eb-0f69-237286bd58af
-function myPageRank(G₁::SparseMatrixCSC{Float64,Int64},steps::Int)
+function PageRank(G₁::SparseMatrixCSC{Float64,Int64},steps::Int)
 	G=copy(G₁)
 	p=0.85
 	c=sum(G,dims=1)/p
@@ -159,7 +159,7 @@ G.rowval
 x=ones(n)/n
 
 # ╔═╡ fae1bfcb-ef52-4cd8-a066-cf138c8697f8
-myPageRank(G,15)
+PageRank(G,15)
 
 # ╔═╡ 5a02f8ad-3f97-4201-b903-9ed789721f81
 md"""
@@ -169,19 +169,19 @@ Nešto veći testni problem.
 """
 
 # ╔═╡ 47394960-0f02-11eb-1ddf-cb6b81f096b4
-W=readdlm("web-Stanford.txt",Int,comments=true)
+W=readdlm("../files/web-Stanford.txt",Int,comments=true)
 
 # ╔═╡ 86ca6760-1382-11eb-1e44-0ff4051234a0
-?sparse
+#?sparse
 
 # ╔═╡ 573a625a-ad1c-4133-bae3-342a7501b492
 S=sparse(W[:,2],W[:,1],1.0)
 
 # ╔═╡ 83fdc63f-4aac-45c0-a226-87a4830f697e
-@time x100=myPageRank(S,100)
+@time x100=PageRank(S,100)
 
 # ╔═╡ b473be54-b1a2-4f34-80d8-742386c9535b
-x101=myPageRank(S,101);
+x101=PageRank(S,101);
 
 # ╔═╡ d94eacf3-0008-4e8c-a5cd-a92fa1fd76d4
 maximum(abs,(x101-x100)./x101)

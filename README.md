@@ -41,4 +41,4 @@ a server Pluto bilježnica se pokreće pomoću naredbi
 > Pluto.run()
 ```
 
-Sada možete izvršavati bilježnice koje se nalaze u direktoriju `Numericka_analiza/src`
+Sada možete izvršavati bilježnice koje se nalaze u direktorijima `Numericka_analiza/src/Jupyter/` i `Numericka_analiza/src/Pluto/`.

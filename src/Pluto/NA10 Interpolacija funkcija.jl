@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.12.6
+# v0.12.10
 
 using Markdown
 using InteractiveUtils
@@ -168,13 +168,13 @@ Na intervalu $[-1,1]$ polinom $T_n(x)$ poprima vrijednosti u intervalu $[-1,1]$.
 T(n,x)=cos.(n*acos.(x))
 
 # ╔═╡ 79a264ae-3635-466a-9a2c-4ffe612f417d
-x₁=range(-1,stop=1,length=100)
+x₁=range(-1,stop=1,length=201)
 
 # ╔═╡ 89136037-71ac-4dbe-9621-90f36c7b2702
 y₁=T(10,x₁)
 
 # ╔═╡ 62239acf-92c3-4b68-ae54-5e6a1dd4fb53
-plot(x₁,y₁)
+plot(x₁,y₁,label="Čebiševljev polinom")
 
 # ╔═╡ 4f65fc49-4d4e-43d7-9775-d53e1e766805
 xₙ=[cos((2*k-1)*pi/(2*10)) for k=10:-1:1]
@@ -183,7 +183,7 @@ xₙ=[cos((2*k-1)*pi/(2*10)) for k=10:-1:1]
 yₙ=T(10,xₙ)
 
 # ╔═╡ f2a33009-575a-4912-9c68-223e6862407e
-scatter!(xₙ,yₙ)
+scatter!(xₙ,yₙ,label="Nul-točke")
 
 # ╔═╡ 2ee3a5fe-8da3-4a37-b61b-63fa0282d287
 md"""

@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.12.4
+# v0.12.10
 
 using Markdown
 using InteractiveUtils
@@ -110,7 +110,7 @@ p=Polynomial(a)
 
 # ╔═╡ f719cad8-cd2c-4013-9014-1caef03cc575
 # Točke polinoma
-scatter(x,y,label="Tocke")
+scatter(x,y,label="Točke")
 
 # ╔═╡ f57091bd-a669-461f-ba5f-9ab7539a3c37
 # Nacrtajmo polinom 
@@ -121,8 +121,8 @@ begin
 	# Nacrtajmo polinom s našom funkcijom
 	xx=range(x₀,stop=xₙ,length=100)
 	pS=p.(xx)
-	plot(xx,pS)
-	scatter!(x,y)
+	plot(xx,pS,label="Polinom")
+	scatter!(x,y,label="Točke")
 end
 
 # ╔═╡ 6d1668b0-1908-11eb-3269-f79084c40164
@@ -174,8 +174,8 @@ end
 
 # ╔═╡ 70cadf28-cb7c-4f44-836d-df7d7af666c2
 begin
-	plot(xx,pL)
-	scatter!(x,y)
+	plot(xx,pL,label="Polinom")
+	scatter!(x,y,label="Točke")
 end
 
 # ╔═╡ 0d08175e-43ab-41d4-b278-697154aa1966
@@ -218,7 +218,7 @@ Za računanje $p_n(x)$ koristi se postupak koji je sličan Hornerovoj shemi.
 
 # ╔═╡ d5755a6e-a155-4090-af0e-1076501397fa
 # Računanje koeficijenata c
-function mynewton(x,y)
+function Newton(x,y)
     n=length(x)
     L=zeros(n,n)
     L[:,1]=ones(n)
@@ -231,7 +231,7 @@ function mynewton(x,y)
 end  
 
 # ╔═╡ 4976320f-d288-49a3-a1cf-44d2d223b488
-c=mynewton(x,y)
+c=Newton(x,y)
 
 # ╔═╡ b85666e1-49c3-4f2d-b55b-9c48df27159a
 # Računanje vrijednosti Newtonovog polinoma zadanog s točkama x i 
@@ -254,8 +254,8 @@ end
 
 # ╔═╡ 2060e3ad-c95f-4cd6-99c6-673da7dd64ac
 begin
-	plot(xx,pN)
-	scatter!(x,y)
+	plot(xx,pN,label="Polinom")
+	scatter!(x,y,label="Točke")
 end
 
 # ╔═╡ 0e0637af-4d77-442b-af67-ae3b7fe9075a

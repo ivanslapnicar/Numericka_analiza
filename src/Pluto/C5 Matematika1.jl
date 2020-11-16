@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.12.7
+# v0.12.10
 
 using Markdown
 using InteractiveUtils
@@ -25,7 +25,7 @@ Package `TextAnalysis.jl` has some needed functionality.
 # ╔═╡ 30498550-2071-11eb-0f6b-33372a37909e
 #=
 for i=1:144
-	download("http://www.mathematics.digital/matematika1/predavanja/node$i.html","./files/node$i.html")
+	download("http://www.mathematics.digital/matematika1/predavanja/node$i.html","../files/Mat1/node$i.html")
 end
 =#
 
@@ -41,7 +41,7 @@ __N.B.__ Added `ii,iii,iv,v,nbsp,times,home` to `Languages/.../data/stopwords/Cr
 # ╔═╡ 08057a10-20dd-11eb-300e-f52ff0eaf35f
 begin
 	# Test on one file
-	f=open("files/node10.html","r")
+	f=open("../files/Mat1/node10.html","r")
 	fr=readlines(f)
 	close(f)
 	frjoin=join(fr,"  ")
@@ -55,7 +55,7 @@ end
 language(sdf)
 
 # ╔═╡ 1c2c2b0e-20dd-11eb-39b6-a7a56b61391c
-text(sdf)
+TextAnalysis.text(sdf)
 
 # ╔═╡ 022dae30-2076-11eb-225e-233a63507457
 a=Array{StringDocument{String}}(undef,n)
@@ -63,7 +63,7 @@ a=Array{StringDocument{String}}(undef,n)
 # ╔═╡ 2f61f232-2076-11eb-0606-351e586f37f1
 # Process all files
 for i=1:n
-	f=open("files/node$i.html","r")
+	f=open("../files/Mat1/node$i.html","r")
 	fr=readlines(f)
 	close(f)
 	frjoin=join(fr,"  ")

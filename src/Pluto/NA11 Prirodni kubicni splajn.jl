@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.12.6
+# v0.12.10
 
 using Markdown
 using InteractiveUtils
@@ -140,7 +140,7 @@ md"""
 # include("Vandermonde.jl")
 
 # ╔═╡ a990adad-3abe-4dc3-be83-02e3ce5c46d4
-function myspline(x,y)
+function Spline(x,y)
     h=x[2:end]-x[1:end-1]
     d=(y[2:end]-y[1:end-1])./h
     H=SymTridiagonal(2*(h[1:end-1]+h[2:end]),h[2:end-1])
@@ -173,7 +173,7 @@ function plotspline(C,x,xx)
 end
 
 # ╔═╡ 1e6ed7c3-a1bb-4d85-8c48-18410365aa47
-C=myspline(x,y)
+C=Spline(x,y)
 
 # ╔═╡ 99c7a450-1e8a-11eb-0de9-573288ac496c
 C[2](0.6)
@@ -231,7 +231,7 @@ begin
 	yPoly₁=p₁.(xx₁)
 	
 	# Splajn
-	C₁=myspline(collect(x₁),y₁)
+	C₁=Spline(collect(x₁),y₁)
 	ySpline₁=plotspline(C₁,x₁,xx₁)
 	
 	# Funkcija 
