@@ -12,8 +12,9 @@ Bilježnice su posebno prilagođene on-line nastavi. Bilježnice su pisane u pro
 Materijali su pisani kao [Jupyter](http://jupyter.org/) bilježnice (engl. _notebooks_) i/ili kao [Pluto](https://github.com/fonsp/Pluto.jl) bilježnice. Bilježnice možete koristiti na sljedeće načine:
 
 ### Korištenjem preglednika
+
 Unutar svojeg preglednika, bilježnice možete pregledati na sljedećim poveznicama:
-* [Jupyter notebook viewer](http://nbviewer.ipython.org/url/github.com/ivanslapnicar/Numericka_analiza/tree/master/src/)
+* [Jupyter notebook viewer](http://nbviewer.ipython.org/url/github.com/ivanslapnicar/Numericka_analiza/tree/master/src/Jupyter/)
 * [Pluto](https://ivanslapnicar.github.io/Numericka_analiza/)
 
 ###  Lokalno preuzimanje i izvršavanje na vlastitom računalu
