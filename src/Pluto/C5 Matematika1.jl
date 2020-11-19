@@ -112,7 +112,7 @@ T = tf_idf(D)
 
 # ╔═╡ 88b8c6a0-2077-11eb-3f48-2f453e82c0cb
 md"
-We are ready for spectral clustering. We try to find 16 clusters.
+We are ready for spectral clustering. We try to find 6 clusters.
 "
 
 # ╔═╡ 8cb43730-2077-11eb-08ac-451458efac8d
