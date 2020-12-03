@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.12.10
+# v0.12.12
 
 using Markdown
 using InteractiveUtils
@@ -91,9 +91,6 @@ end
 # ╔═╡ 743b75c7-d6a0-4fa0-bd99-6412378453e2
 #?qr  # Pogledajmo strukturu rješenja
 
-# ╔═╡ 09427c50-245e-11eb-0ee8-d54d6613381e
-Q₁
-
 # ╔═╡ 04bb12df-5d6a-460f-a381-23058dcfe0b7
 begin
 	F₁=qr(A₁)
@@ -116,7 +113,7 @@ begin
 end
 
 # ╔═╡ 16461985-6cb3-4ddb-9eab-bd13917b8b69
-F₂.Q
+F₂.R
 
 # ╔═╡ d01748e8-169d-4d39-bf79-90c0c0d2df56
 # Spremanje generatora
@@ -218,7 +215,6 @@ poprimaju sve vrijednosti u intervalu $[-1,1]$.
 # ╟─45923270-4d63-4eaf-8d99-f9e9baab558e
 # ╠═2e4f479e-9a3a-4495-abb9-52a3203a35c4
 # ╠═743b75c7-d6a0-4fa0-bd99-6412378453e2
-# ╠═09427c50-245e-11eb-0ee8-d54d6613381e
 # ╠═04bb12df-5d6a-460f-a381-23058dcfe0b7
 # ╠═c4762bb2-56fd-4e2a-9255-4922f41addfe
 # ╠═881daa94-e922-4b76-bca3-6b255049ba67

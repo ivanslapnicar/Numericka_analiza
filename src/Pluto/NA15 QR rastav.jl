@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.12.7
+# v0.12.12
 
 using Markdown
 using InteractiveUtils
@@ -299,7 +299,7 @@ end
 
 # ╔═╡ c7f654da-3ad0-4781-a1b0-f7f31a19bf74
 # Ispis je u Julia terminalu
-@time qr(A₁);
+@time F₁=qr(A₁);
 
 # ╔═╡ c0eaba40-c919-49af-96f8-700173e3a72a
 @time qr(A₁,Val(true));
@@ -324,6 +324,18 @@ Također, postoji egzaktna ortogonalna matrica $Q$ za koju je
 $$
 \| A- Q\hat R\|_2\approx \varepsilon\|A\|_2.$$
 """
+
+# ╔═╡ 652da960-3488-11eb-0414-0b6f313755a5
+Q₁=Matrix(F₁.Q)
+
+# ╔═╡ e6c3a470-3488-11eb-0387-053b5428d074
+Q₁'*Q₁
+
+# ╔═╡ 03251d60-3489-11eb-2754-57656ea9b972
+norm(A₁)
+
+# ╔═╡ 0cd0b360-3489-11eb-3cd8-b9f2d4831da2
+norm(A₁-F₁.Q*F₁.R)
 
 # ╔═╡ Cell order:
 # ╟─fb66b990-4511-476f-8e77-87aa9c265041
@@ -362,3 +374,7 @@ $$
 # ╠═c0eaba40-c919-49af-96f8-700173e3a72a
 # ╠═f6b568ec-20e5-4575-a62c-70d470589ef1
 # ╟─7e40ad34-0497-410d-9669-20ad8a9ca74b
+# ╠═652da960-3488-11eb-0414-0b6f313755a5
+# ╠═e6c3a470-3488-11eb-0387-053b5428d074
+# ╠═03251d60-3489-11eb-2754-57656ea9b972
+# ╠═0cd0b360-3489-11eb-3cd8-b9f2d4831da2

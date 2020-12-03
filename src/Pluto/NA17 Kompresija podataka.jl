@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.12.10
+# v0.12.12
 
 using Markdown
 using InteractiveUtils
@@ -57,7 +57,7 @@ begin
 end
 
 # ╔═╡ c1cbc1a9-0a1e-4ac2-90fb-e9ce3c20be62
-colorview(Gray,Blue)
+colorview(Gray,Red)
 
 # ╔═╡ c0cd1d7e-1fb9-4ae8-aa8d-794c36b85837
 begin
@@ -66,6 +66,12 @@ begin
 	G=qr(Green,Val(true))
 	B=qr(Blue,Val(true));
 end
+
+# ╔═╡ 824b17f0-348b-11eb-30e2-9b12415490a3
+R.R
+
+# ╔═╡ ec0c9c42-348b-11eb-204c-8578725eba1d
+R.R[570:576,570:590]
 
 # ╔═╡ 32420d34-f066-4fdc-a488-15c4482640d8
 norm(R.Q*R.R[:,invperm(R.p)]-float(Red))
@@ -108,6 +114,8 @@ k, norm(Red-RedC)/norm(Red)
 # ╠═c3ae4d9d-aa93-4ad8-af1d-fad775d9c9bd
 # ╠═c1cbc1a9-0a1e-4ac2-90fb-e9ce3c20be62
 # ╠═c0cd1d7e-1fb9-4ae8-aa8d-794c36b85837
+# ╠═824b17f0-348b-11eb-30e2-9b12415490a3
+# ╠═ec0c9c42-348b-11eb-204c-8578725eba1d
 # ╠═32420d34-f066-4fdc-a488-15c4482640d8
 # ╠═c16bd7ca-a403-4f1b-adba-f0e9a028b14b
 # ╠═feebc2d6-e495-4145-8e90-3b0d7d073d04
