@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.12.10
+# v0.12.16
 
 using Markdown
 using InteractiveUtils
@@ -161,6 +161,10 @@ Intervali₁=((-1,0),(0,1))
 # ╔═╡ e7e92425-287a-482b-bb1e-8168b2b130f1
 NulTočke(f₁,a₁,b₁,Intervali₁)
 
+# ╔═╡ b00698a0-3a02-11eb-11fe-c70ec5102e23
+# Računanje jedne nul-točke
+x,fx,iter=Bisection(f₁,-1,0,1e-15)
+
 # ╔═╡ 56a6bc1f-7ff8-464d-a864-ec7a19e3f9c3
 # Funkcija f₂(x)
 plot(f₂,a₂,b₂,label="f(x)")
@@ -219,8 +223,8 @@ $$\varphi:[a,b]\to \mathbb{R}$$
 __neprekidno derivabilna funkcija__ i neka vrijedi
 
 $$\begin{aligned}
-\varphi(x) &\in [a,b] \quad  \forall x\in [a,b], \\
-|\varphi'(x)|&\leq q<1 \quad \forall x\in(a,b).
+\varphi(x) &\in [a,b], \quad  \forall x\in [a,b], \\
+|\varphi'(x)|&\leq q<1, \quad \forall x\in(a,b).
 \end{aligned}\qquad\qquad (3)$$
 
 Tada postoji jedinstvena __fiksna točka__ $\xi \in [a,b]$ za koju vrijedi
@@ -275,7 +279,7 @@ md"""
 Potražimo nul-točke funkcije $f_1(x)=e^x-x-\frac{5}{4}$. Iz oblika
 
 $$
-x=e^x-\frac{5}{4}\equiv \Phi(x)$$
+x=e^x-\frac{5}{4}\equiv \varphi(x)$$
 
 možemo izračunati samo negativnu nul-točku, jer je u okolini pozitivne nul-točke $|\varphi'(x)|>1$.
 Za $x_0=1$, niz divergira vrlo brzo, a za $x_0=0.6$, što je blizu pozitivne nul-točke, 
@@ -289,7 +293,7 @@ begin
 end
 
 # ╔═╡ 1e5be7af-8236-4a8c-ab10-4f988350bd6a
-Iteration(φ,0.5)
+Iteration(φ,-0.5)
 
 # ╔═╡ ed701b40-1ca7-4eba-8ea4-7c2beef3e58d
 Iteration(φ,1.0)
@@ -297,29 +301,21 @@ Iteration(φ,1.0)
 # ╔═╡ 8eb3ad86-6d79-4016-9f65-5797f51d779e
 Iteration(φ,0.6)
 
-# ╔═╡ 54214d6b-b630-43d7-afdc-96ebfd4800a1
-md"""
-Pozitivnu nul-točku možemo izračunati iz prikaza
-
-$$
-x=\ln\big(x+\frac{5}{4}\big)\equiv \Psi(x).$$
-"""
-
 # ╔═╡ 70f9b3bc-ef11-4d7c-af8c-0abc262b92fa
 begin
-	Ψ(x)=log(x+5.0/4)
-	plot([f₁,x->ForwardDiff.derivative(φ,x), x->ForwardDiff.derivative(Ψ,x)],
-	    -1.0,1.0,label=["f(x)" "φ'(x)" "Ψ'(x)"])
+	ψ(x)=log(x+5.0/4)
+	plot([f₁,x->ForwardDiff.derivative(φ,x), x->ForwardDiff.derivative(ψ,x)],
+	    -1.0,1.0,label=["f(x)" "φ'(x)" "ψ'(x)"])
 end
 
 # ╔═╡ 3ccbe741-478e-4b23-8a64-d6f3380d8b1b
-scatter!([Iteration(φ,-0.5)[1],Iteration(Ψ,1.0)[1]],[0,0],label="Nul-točke")
+scatter!([Iteration(φ,-0.5)[1],Iteration(ψ,1.0)[1]],[0,0],label="Nul-točke")
 
 # ╔═╡ 5dee83f3-2171-478a-b811-04c3ccef1a0e
 md"""
 ### Korijen iz 2
 
-Izračunajmo približno $\sqrt(2)$, odnosno izračunajmo pozitivno rješenje jednadžbe 
+Izračunajmo približno $\sqrt{2}$, odnosno izračunajmo pozitivno rješenje jednadžbe 
 
 $$
 x^2-2=0.$$
@@ -350,6 +346,20 @@ end
 
 # ╔═╡ 25640f91-4b47-4bcf-b360-499541077c80
 Iteration(φ₁,1.0,1e-15), sqrt(2)
+
+# ╔═╡ 18d4d7c0-3a0d-11eb-087d-5db48ab8a323
+# Ručni račun s racionalnim brojevima
+begin
+	y=1//1
+	y1=(y+2//y)//2
+	y2=(y1+2//y1)//2
+	y3=(y2+2//y2)//2
+	y4=(y3+2//y3)//2
+	y5=(y4+2//y4)//2
+end
+
+# ╔═╡ 4a7aa6ae-3a0d-11eb-24b0-3f207580daa2
+886731088897/627013566048-sqrt(2)
 
 # ╔═╡ cf6ff8ea-2c1e-442a-bfc6-5eac4f7269dd
 begin
@@ -529,6 +539,7 @@ Sekanta(f₆,-1,0), Sekanta(f₆,1,2)
 # ╠═5d233a49-774b-479c-8c80-5de46817614e
 # ╠═aedcd7b9-8ef5-48a8-8ef8-d7dab4b733e0
 # ╠═e7e92425-287a-482b-bb1e-8168b2b130f1
+# ╠═b00698a0-3a02-11eb-11fe-c70ec5102e23
 # ╠═56a6bc1f-7ff8-464d-a864-ec7a19e3f9c3
 # ╠═7097ec9a-b556-4be7-a356-9c9d5003dd73
 # ╠═bdb9d5d9-861c-4fd1-89d5-e0622120f944
@@ -548,12 +559,13 @@ Sekanta(f₆,-1,0), Sekanta(f₆,1,2)
 # ╠═1e5be7af-8236-4a8c-ab10-4f988350bd6a
 # ╠═ed701b40-1ca7-4eba-8ea4-7c2beef3e58d
 # ╠═8eb3ad86-6d79-4016-9f65-5797f51d779e
-# ╟─54214d6b-b630-43d7-afdc-96ebfd4800a1
 # ╠═70f9b3bc-ef11-4d7c-af8c-0abc262b92fa
 # ╠═3ccbe741-478e-4b23-8a64-d6f3380d8b1b
 # ╟─5dee83f3-2171-478a-b811-04c3ccef1a0e
 # ╠═b27404ef-ac18-4dce-804c-07255ab001c2
 # ╠═25640f91-4b47-4bcf-b360-499541077c80
+# ╠═18d4d7c0-3a0d-11eb-087d-5db48ab8a323
+# ╠═4a7aa6ae-3a0d-11eb-24b0-3f207580daa2
 # ╠═cf6ff8ea-2c1e-442a-bfc6-5eac4f7269dd
 # ╠═4fa06267-97f2-409f-8025-c160362014a9
 # ╠═46bebd7f-69ba-402f-91aa-6ad864add60b
