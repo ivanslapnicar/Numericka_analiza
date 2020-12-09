@@ -642,7 +642,7 @@ optimize(f₅,[4.9,2.6,0.2],Optim.BFGS())
 # ╠═ab87421c-e498-44ff-af23-13ea14a0c5d3
 # ╠═d9df727c-a96f-4af4-ab5a-60715662adce
 # ╠═82fffd1c-9ec0-459c-b033-d926641268dc
-# ╠═e823348a-1ea3-45b7-b1ad-d51096f224dc
+# ╟─e823348a-1ea3-45b7-b1ad-d51096f224dc
 # ╠═73ad34ac-e4fc-4e35-9d96-25969b37a4d6
 # ╠═6059b96d-8ba0-475c-9929-8cc613355562
 # ╠═64d397ac-ed6f-426c-9139-af21222723da
