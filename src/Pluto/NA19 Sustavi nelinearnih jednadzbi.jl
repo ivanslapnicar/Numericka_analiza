@@ -191,7 +191,7 @@ md"""
 (Dennis i Schnabel, 1996) Zadan je problem $f(x)=0$, gdje je
 
 $$
-f(x)=\begin{bmatrix}x_1 \\ x_2^2-x_2 \\ e^{x_3}-1 \end{bmatrix}.$$
+f(x)=\begin{pmatrix}x_1 \\ x_2^2-x_2 \\ e^{x_3}-1 \end{pmatrix}.$$
 
 Točna rješenja su $T_1=(0,0,0)$ i $T_2=(0,-1,0)$. Izračunat ćemo nul-točke s nekoliko početnih aproksimacija.
 """
@@ -241,7 +241,7 @@ end
 md"""
 Iz kontura vidimo da je primjer numerički zahtjevan, dok analitički lako vidimo da je jedina nul-točka $x_1=(1,1)$.
 
-U ovom primjeru funkcija je zadana kao gradijent skalarne funkcije pa Jacobijevu matricu računamo korištenjem funkcije `FowardDiff.hessian()` koja računa aproksimaciju matrice drugih parcijalnih derivacija polazne funkcije. 
+U ovom primjeru je vektorska funkcija $f$ zadana kao gradijent skalarne funkcije pa Jacobijevu matricu računamo korištenjem funkcije `FowardDiff.hessian()` koja računa aproksimaciju matrice drugih parcijalnih derivacija polazne funkcije $f$. 
 """
 
 # ╔═╡ 34576988-89ce-431b-9e1c-78b1a98e002e
@@ -416,7 +416,7 @@ function Bisekcija(f::Function,a::T,b::T,ϵ::Float64=1e-10) where T
     x=T
     fx=T
     if fa*fb>zero(T)
-        # return "Incorrect interval"
+        # return "Netočan interval"
         if abs(fa)>abs(fb)
             return b,fb,0
         else
