@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.12.16
+# v0.12.17
 
 using Markdown
 using InteractiveUtils
@@ -173,8 +173,8 @@ su točke $T_1=(1,1)$ i $T_2\approx (-0.71,1.22)$ .
 # ╔═╡ 2a1b5d9b-672f-4e00-8620-daec0196d6b7
 begin
 	f₂(x)=[x[1]^2+x[2]^2-2,exp(x[1]-1)+x[2]^3-2]
-	contour(X,Y,(x,y)->f₁([x,y])[1],contour_labels=true)
-	contour!(X,Y,(x,y)->f₁([x,y])[2],contour_labels=true)
+	contour(X,Y,(x,y)->f₂([x,y])[1],contour_labels=true)
+	contour!(X,Y,(x,y)->f₂([x,y])[2],contour_labels=true)
 	contour!(clims=(0,0.01),xlabel="x",ylabel="y",colorbar=:none)
 end
 
@@ -191,7 +191,7 @@ md"""
 (Dennis i Schnabel, 1996) Zadan je problem $f(x)=0$, gdje je
 
 $$
-f(x)=\begin{pmatrix}x_1 \\ x_2^2-x_2 \\ e^{x_3}-1 \end{pmatrix}.$$
+f(x)=\begin{pmatrix}x_1 \\ x_2^2+x_2 \\ e^{x_3}-1 \end{pmatrix}.$$
 
 Točna rješenja su $T_1=(0,0,0)$ i $T_2=(0,-1,0)$. Izračunat ćemo nul-točke s nekoliko početnih aproksimacija.
 """

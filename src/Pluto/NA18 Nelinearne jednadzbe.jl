@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.12.16
+# v0.12.17
 
 using Markdown
 using InteractiveUtils
@@ -301,6 +301,14 @@ Iteration(φ,1.0)
 # ╔═╡ 8eb3ad86-6d79-4016-9f65-5797f51d779e
 Iteration(φ,0.6)
 
+# ╔═╡ f1079ba0-3f85-11eb-3762-c99121d890f9
+md"
+
+Pozitivnu nul-točku možemo izračunati iz oblika 
+
+$$x=\ln \left(x+\frac{5}{4}\right)\equiv\psi(x).$$
+"
+
 # ╔═╡ 70f9b3bc-ef11-4d7c-af8c-0abc262b92fa
 begin
 	ψ(x)=log(x+5.0/4)
@@ -369,7 +377,7 @@ begin
 end
 
 # ╔═╡ 4fa06267-97f2-409f-8025-c160362014a9
-Iteration(φ₂,3.0,1e-10), sqrt(10) # 1e-15
+Iteration(φ₂,3.0,1e-10),sqrt(10) # 1e-15
 
 # ╔═╡ 46bebd7f-69ba-402f-91aa-6ad864add60b
 begin
@@ -380,6 +388,11 @@ end
 
 # ╔═╡ 9b237357-f6dc-4054-bee8-1cac4a5aad07
 Iteration(φ₃,3.0,1e-10), sqrt(10) # 1e-15
+
+# ╔═╡ 629f59b0-3f86-11eb-1e5d-c181f17a6209
+md"
+__Zadatak.__ Izvedite gornje formule za računanje $\sqrt{10}$. Kako glasi općenita formula za računanje $\sqrt{n}$, $n\in\mathbb{N}$? 
+"
 
 # ╔═╡ 4f3b3c3a-0cf4-4bcd-a8ad-9061c7653386
 md"""
@@ -429,10 +442,19 @@ function Newton(f::Function,x::Number,ϵ::Float64=1e-10)
     while abs(x-ξ)>ϵ && iter<100
         x=ξ
         ξ=x-f(x)/(x->ForwardDiff.derivative(f,x))(x)
+		println(ξ)
         iter+=1
     end
     ξ,iter
 end
+
+# ╔═╡ b61f1530-3f86-11eb-3fd2-0be4beedaa3c
+md"
+
+Izračunajmo nul-točke funkcije
+
+$$f_6(x)=e^{-x}+x^2-2.$$
+"
 
 # ╔═╡ 6258bcb3-2682-47e5-8db5-0aaf03f32807
 begin
@@ -527,6 +549,11 @@ end
 # ╔═╡ 33402e76-139d-4062-b72d-57b45e1c3eec
 Sekanta(f₆,-1,0), Sekanta(f₆,1,2)
 
+# ╔═╡ 2d8b7b30-3f88-11eb-3add-f36e29cb5511
+md"
+__Zadatak.__ Nađite nul-točke funkcija $f_1,\ldots,f_5$ Newtonovom metodom i metodom sekante.
+"
+
 # ╔═╡ Cell order:
 # ╟─1198a836-bb14-4b8e-9f30-160097bc4507
 # ╟─7942e1ac-57f4-493c-9d09-de4154dcd7b9
@@ -559,6 +586,7 @@ Sekanta(f₆,-1,0), Sekanta(f₆,1,2)
 # ╠═1e5be7af-8236-4a8c-ab10-4f988350bd6a
 # ╠═ed701b40-1ca7-4eba-8ea4-7c2beef3e58d
 # ╠═8eb3ad86-6d79-4016-9f65-5797f51d779e
+# ╟─f1079ba0-3f85-11eb-3762-c99121d890f9
 # ╠═70f9b3bc-ef11-4d7c-af8c-0abc262b92fa
 # ╠═3ccbe741-478e-4b23-8a64-d6f3380d8b1b
 # ╟─5dee83f3-2171-478a-b811-04c3ccef1a0e
@@ -570,9 +598,11 @@ Sekanta(f₆,-1,0), Sekanta(f₆,1,2)
 # ╠═4fa06267-97f2-409f-8025-c160362014a9
 # ╠═46bebd7f-69ba-402f-91aa-6ad864add60b
 # ╠═9b237357-f6dc-4054-bee8-1cac4a5aad07
+# ╟─629f59b0-3f86-11eb-1e5d-c181f17a6209
 # ╟─4f3b3c3a-0cf4-4bcd-a8ad-9061c7653386
 # ╠═d8d1e5e8-13c6-43cd-b2ca-aa6e96c142e3
-# ╟─6258bcb3-2682-47e5-8db5-0aaf03f32807
+# ╟─b61f1530-3f86-11eb-3fd2-0be4beedaa3c
+# ╠═6258bcb3-2682-47e5-8db5-0aaf03f32807
 # ╟─f9376e6e-0595-4045-be73-c59c07e7be34
 # ╠═dca6feb2-e2e3-4c1e-a568-794c610cc611
 # ╠═0cf32332-f169-465a-9315-b9704a31badf
@@ -586,3 +616,4 @@ Sekanta(f₆,-1,0), Sekanta(f₆,1,2)
 # ╟─1db0ba3d-e82e-4e4d-8b5d-c1100d04fd2d
 # ╠═dce97964-5846-4642-859e-f041b8a72d76
 # ╠═33402e76-139d-4062-b72d-57b45e1c3eec
+# ╟─2d8b7b30-3f88-11eb-3add-f36e29cb5511
