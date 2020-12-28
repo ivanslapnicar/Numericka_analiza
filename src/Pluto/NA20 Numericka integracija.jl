@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.12.17
+# v0.12.18
 
 using Markdown
 using InteractiveUtils
@@ -17,7 +17,7 @@ md"""
 
 ## Newton-Cotesove formule
 
-Funkciju $f(x):[a,b]\to\mathbb{R}$ interpoliramo polinomom stupnja $n$ kroz $n+1$ ravnomjerno raspoređenih točaka te integral aproksimiramo integralom interpolacijskog polinoma. Polinom možemo računati u Lagrangeovom obliku  
+Funkciju $f(x):[a,b]\to\mathbb{R}$ interpoliramo polinomom stupnja $n$ kroz $n+1$ ravnomjerno raspoređenu točku te integral aproksimiramo integralom interpolacijskog polinoma. Polinom $P_n(x)$ možemo računati u Lagrangeovom obliku  
 (vidi bilježnicu [NA09 Interpolacijski polinomi.jl](https://ivanslapnicar.github.io/Numericka_analiza/NA09%20Interpolacijski%20polinomi.jl)):
 
 $$
@@ -119,7 +119,7 @@ $$
 Također, vrijedi 
 
 $$
-|E_n|\leq \frac{b-a}{12}(\Delta x)^2 \max_{x\in(a,b)} |f''(x)|.$$
+|E_n|\leq \frac{b-a}{12}(\Delta x)^2 \max_{x\in(a,b)} |f''(x)|. \tag{3}$$
 
 
 __Napomena__. Izvod trapezne formule i ocjene pogreške dan je u knjigama
@@ -130,6 +130,8 @@ __Napomena__. Izvod trapezne formule i ocjene pogreške dan je u knjigama
 # ╔═╡ 04f1b0f8-10bc-4aaf-bbf2-c411d740db0e
 md"""
 ### Simpsonova formula
+
+Za $n=2$ Newton-Cotesova formula (1) daje
 
 $$\omega_0=\frac{1}{6},\quad \omega_1=\frac{2}{3},\quad \omega_2=\frac{1}{6}.$$
 
@@ -147,10 +149,10 @@ Vrijedi
 $$
 \int_a^b f(x)\, dx =I_n+E_n,$$
 
-pri čemu je pogreška $E_n$ omeđena s
+pri čemu je __pogreška__ $E_n$ omeđena s
 
 $$
-|E_n|\leq \frac{b-a}{180}(\Delta x)^4 \max_{x\in(a,b)} |f^{(4)}(x)|.$$
+|E_n|\leq \frac{b-a}{180}(\Delta x)^4 \max_{x\in(a,b)} |f^{(4)}(x)|.\tag{4}$$
 
 Za detalje vidi knjige [Numerička matematika, poglavlje 7.3](http://www.mathos.unios.hr/pim/Materijali/Num.pdf) i [Matematika 2, poglavlje 2.7.3](http://lavica.fesb.hr/mat2/predavanja/node43.html).
 
@@ -179,13 +181,13 @@ $$
 Kod dokazivanja ovih formula pretpostavljamo da postoji broj $\omega$ takav da je 
 
 $$
-\displaystyle I=I_n+E_n, \qquad E_n=\omega\,  (\Delta x)^m \tag{3}$$
+\displaystyle I=I_n+E_n, \qquad E_n=\omega\,  (\Delta x)^m \tag{5}$$
 
 za svaki $\Delta x$. Ova pretpostavka nije uvijek točno ispunjena, no u velikom broju slučajeva možemo smatrati da ona vrijedi. Na primjer, kod trapezne formule možemo uzeti 
 
 $$\omega=-\frac{b-a}{12}\max_{x\in(a,b)}f''(x)$$
 
-pa pretpostavka (3) znači da možemo uzeti (približno) isti $\omega$ za različite vrijednosti od $\Delta x$. Koristeći pretpostavku imamo
+pa pretpostavka (5) znači da možemo uzeti (približno) isti $\omega$ za različite vrijednosti od $\Delta x$. Koristeći pretpostavku imamo
 
 $$
 \begin{aligned}
@@ -242,7 +244,7 @@ end
 md"""
 ### Eliptički integral
 
-Izračunajmo opseg elipse s polu-osima $2$ i $1$ (vidi  [Matematika 2, poglavlje 2.7.1](http://lavica.fesb.hr/mat2/predavanja/node41.html)). Elipsa je parametarski zadana s
+Izračunajmo opseg elipse s polu-osima $2$ i $1$ (vidi  [Matematika 2, poglavlje 2.7.1](http://lavica.fesb.hr/mat2/predavanja/node41.html)). Parametarske jednadžbe elipse glase
 
 $$
 x=2\cos t,\quad y=\sin t,\quad t\in[0,\pi/2],$$
@@ -255,7 +257,9 @@ $$
 
 Radi se o eliptičkom integralu druge vrste koji nije elementarno rješiv, ali se može naći u [tablicama](http://nvlpubs.nist.gov/nistpubs/jres/50/jresv50n1p43_A1b.pdf).
 
-Vidimo da je $O\approx 8\cdot 1.21125$.
+Vidimo da je 
+
+$$O=8\int\limits_0^{\pi/2} \sqrt{1-\frac{3}{4}(\cos t)^2}\, dt \approx 8\cdot 1.21125.$$
 
 """
 
@@ -337,7 +341,7 @@ $$
 
 gdje je $\omega(x)$ __težinska funkcija__.
 
-Točke $x_k$ su nul-točke odgovarajućeg ortogonalnog polinoma $P_{n}(x)$ reda $n+1$, na primjer, __Legendreovih polinoma__ za $[a,b]=[-1,1]$ i $\omega(x)=1$ i __Čebiševljevih polinoma__ za 
+Točke $x_k$ su nul-točke odgovarajućeg ortogonalnog polinoma $P_{n}(x)$ reda $n+1$, na primjer, __Legendreovog polinoma__ za $[a,b]=[-1,1]$ i $\omega(x)=1$ ili __Čebiševljevog polinoma__ za 
 $[a,b]=[-1,1]$ i $\omega(x)=\displaystyle\frac{1}{\sqrt{1-x^2}}$ (vidi bilježnicu [NA12 Ortogonalni polinomi.ipynb](https://nbviewer.jupyter.org/github/ivanslapnicar/Numericka_analiza/blob/master/src/Jupyter/NA12%20Ortogonalni%20polinomi.ipynb)).
 
 Težine su jednake
@@ -399,11 +403,11 @@ gausschebyshev(16)
 
 # ╔═╡ 4ae529de-6df8-4d38-917f-7b972904204d
 # Sada računajmo integrale. U našem slučaju je ω(x)=1 
-# pa nam trebaju Legendreovi polinomi
+# pa nam treba Legendreov polinom.
 ξ,ω=gausslegendre(32)
 
 # ╔═╡ 988b6a6c-7732-47cd-915d-a26f44e1b3f0
-# 1/8 opsega elipse, a =0, b=π/2
+# 1/8 opsega elipse, a=0, b=π/2
 (π/2-0)/2*dot(ω,map(f₁,mapnodes(ξ,0,π/2)))
 
 # ╔═╡ 5fa9e09b-569d-4ad4-8dd6-ffc93dc6cca9
