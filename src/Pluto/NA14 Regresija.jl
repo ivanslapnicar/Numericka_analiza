@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.12.8
+# v0.12.18
 
 using Markdown
 using InteractiveUtils
@@ -18,12 +18,13 @@ $$(x_i,y_i),\quad i=1,2,\ldots, m,$$
 pri čemu je $m>n$, tako da se __minimizira norma odstupanja__:
 
 $$
-\| f(x_i)-y_i\|_{1,2,\infty}\to \min.$$
+\| f(\mathbf{x})-\mathbf{y}\|_{1,2,\infty}\to \min,\quad f(\mathbf{x})=\begin{pmatrix}f(x_1) \\ f(x_2) \\ \vdots \\ f(x_m)\end{pmatrix},\quad
+\mathbf{y}=\begin{pmatrix}y_1 \\ y_2 \\ \vdots \\ y_m\end{pmatrix}.$$
 
 Regresija u __smislu najmanjih kvadrata__ je
 
 $$
-\| f(x_i)-y_i\|_{2}\to \min.$$
+\| f(\mathbf{x})-\mathbf{y}\|_{2}\to \min.$$
 
 Kada je funkcija $f$ pravac,
 
