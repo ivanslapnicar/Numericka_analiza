@@ -162,7 +162,7 @@ Za detalje vidi knjige [Numerička matematika, poglavlje 7.3](http://www.mathos.
 md"""
 ### Richardsonova ekstrapolacija
 
-Ocjena pogreške pomoću formula (2) i (3) može biti složena. __Richardsonova ekstrapolacija__ nam omogućava da, uz određene uvjete, pogrešku procijenimo koristeći aproksimaciju integrala s $n/2$ točaka.
+Ocjena pogreške pomoću formula (3) i (4) može biti složena. __Richardsonova ekstrapolacija__ nam omogućava da, uz određene uvjete, pogrešku procijenimo koristeći aproksimaciju integrala s $n/2$ točaka.
 Ako se u ocjeni pogreške javlja član $(\Delta x)^m$, onda je pogreška približno manja od broja (vidi [Matematika 2, poglavlje 2.7.4](http://lavica.fesb.hr/mat2/predavanja/node44.html))
 
 $$
@@ -341,7 +341,7 @@ $$
 
 gdje je $\omega(x)$ __težinska funkcija__.
 
-Točke $x_k$ su nul-točke odgovarajućeg ortogonalnog polinoma $P_{n}(x)$ reda $n+1$, na primjer, __Legendreovog polinoma__ za $[a,b]=[-1,1]$ i $\omega(x)=1$ ili __Čebiševljevog polinoma__ za 
+Točke $x_k$ su nul-točke odgovarajućeg ortogonalnog polinoma $P_{n}(x)$ reda $n$, na primjer, __Legendreovog polinoma__ za $[a,b]=[-1,1]$ i $\omega(x)=1$ ili __Čebiševljevog polinoma__ za 
 $[a,b]=[-1,1]$ i $\omega(x)=\displaystyle\frac{1}{\sqrt{1-x^2}}$ (vidi bilježnicu [NA12 Ortogonalni polinomi.ipynb](https://nbviewer.jupyter.org/github/ivanslapnicar/Numericka_analiza/blob/master/src/Jupyter/NA12%20Ortogonalni%20polinomi.ipynb)).
 
 Težine su jednake
