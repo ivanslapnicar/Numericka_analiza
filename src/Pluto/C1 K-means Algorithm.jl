@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.12.7
+# v0.12.18
 
 using Markdown
 using InteractiveUtils
@@ -261,6 +261,9 @@ begin
 	plotKmeansresult(C,c,X)
 end
 
+# ╔═╡ 4297e110-571d-11eb-38a4-9b0cd9c936ac
+C
+
 # ╔═╡ 406bb1b2-a8bb-4cd2-95c3-3975f99e3f32
 begin
 	out=kmeans(Xₘ,k,init=:kmpp)
@@ -330,6 +333,7 @@ end
 # ╠═fceab134-0921-459b-8d91-952a44abb07b
 # ╠═f559b870-608a-426e-a23b-b66ef6d4b47f
 # ╠═8e5b89ce-e6b5-4473-bd98-a2285331418c
+# ╠═4297e110-571d-11eb-38a4-9b0cd9c936ac
 # ╟─310a4957-cc58-424b-845c-3ebaf7db77f3
 # ╠═f9af8a75-48fd-4e82-b43e-61867bead6f9
 # ╠═7e869699-8eb1-4e38-905d-a9448d037841

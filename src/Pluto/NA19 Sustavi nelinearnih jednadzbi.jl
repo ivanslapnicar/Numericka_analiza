@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.12.17
+# v0.12.18
 
 using Markdown
 using InteractiveUtils
@@ -474,8 +474,14 @@ Funkcija ima minimum u točki $(1,3)$.
 # ╔═╡ 8f4fc906-99a7-4e06-8620-83cf427da8b9
 f₆(x) = (x[1] + 2*x[2]-7)^2 + (2*x[1] + x[2]-5)^2
 
+# ╔═╡ 7a61c7b0-5582-11eb-2359-05273b8b829f
+ForwardDiff.gradient(f₆,[1,2])
+
 # ╔═╡ b687e934-69d9-4608-b73f-0f3676c210ec
 f₆([1,2])
+
+# ╔═╡ 04b24200-5583-11eb-04bd-250c19ce9959
+ForwardDiff.hessian(f₆,[1,2])
 
 # ╔═╡ 7ebf3fb9-85c7-4ea0-a18a-a4617375082d
 g₆(x)=ForwardDiff.gradient(f₆,x)
@@ -599,7 +605,10 @@ end
 
 # ╔═╡ bc477197-2ac5-4798-a62b-62f89791fb94
 # Primjer 4
-optimize(f₄,[-1.0,2],Optim.BFGS())
+opt=optimize(f₄,[-1.0,2],Optim.BFGS())
+
+# ╔═╡ 8ff25700-5584-11eb-1f95-abf9735d479e
+opt.minimizer[1]
 
 # ╔═╡ 90043461-3f6a-45e6-a661-57c8df3a2a93
 # Primjer 5 - opet ne konvergira prema rješenju
@@ -656,7 +665,9 @@ optimize(f₅,[4.9,2.6,0.2],Optim.BFGS())
 # ╠═f29daf79-022a-4f7d-8616-6cac0e7ea9e8
 # ╟─7f7672da-787f-4628-83aa-e9297f7da322
 # ╠═8f4fc906-99a7-4e06-8620-83cf427da8b9
+# ╠═7a61c7b0-5582-11eb-2359-05273b8b829f
 # ╠═b687e934-69d9-4608-b73f-0f3676c210ec
+# ╠═04b24200-5583-11eb-04bd-250c19ce9959
 # ╠═7ebf3fb9-85c7-4ea0-a18a-a4617375082d
 # ╠═1f6187a2-41a2-43e0-9cd3-322a069222aa
 # ╠═d1e5bfe4-1ac9-4dbe-aafb-f81822a72d3a
@@ -675,5 +686,6 @@ optimize(f₅,[4.9,2.6,0.2],Optim.BFGS())
 # ╠═2a644f10-2683-4ea8-bd25-95343abb7e48
 # ╠═633106d1-4f49-467d-9acd-2ddc5b951c87
 # ╠═bc477197-2ac5-4798-a62b-62f89791fb94
+# ╠═8ff25700-5584-11eb-1f95-abf9735d479e
 # ╠═90043461-3f6a-45e6-a661-57c8df3a2a93
 # ╠═55953361-fc9b-42b9-9c5e-0f7ca2dcefa3

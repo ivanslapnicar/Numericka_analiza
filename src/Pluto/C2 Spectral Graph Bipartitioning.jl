@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.12.10
+# v0.12.18
 
 using Markdown
 using InteractiveUtils
@@ -246,7 +246,7 @@ edges between $V_1$ and $V_2$,
 
 $$\mathop{\mathrm{cut}}(\pi)\equiv \mathop{\mathrm{cut}}(V_1,V_2)=\sum\limits_{{\displaystyle i\in V_{1} \atop \displaystyle j\in V_{2}}}W_{ij}.$$
 
-__Weight__ of vertex $i\in V$ is the sum of the weights of all egdges emanating from $i$,
+__Weight__ of vertex $i\in V$ is the sum of the weights of all edges emanating from $i$,
 $\omega(i)=\sum\limits_{j=1}^{n}W_{ij}$.
 
 __Weight__ of a subset $\bar V\subset V$ is the sum of the weights of all vertices in $\bar V$, 
@@ -506,7 +506,7 @@ This is the same partitioning as obtained by `kmeans()`. Let us try Gaussian ker
 
 # ╔═╡ bb9d4d98-3aff-439e-b8a3-8347cf345839
 begin
-	σ=1.0 # 0.1
+	σ=1.0
 	W₂=exp.(-pairwise(SqEuclidean(),X)/σ^2)-I
 	L₂=Diagonal(vec(sum(W₂,dims=2)))-W₂
 	E₂=eigs(L₂,nev=2,which=:SM, v0=ones(m))
@@ -514,6 +514,9 @@ begin
 	C₂[findall(E₂[2][:,2].>0)].=2
 	plotKpartresult(C₂,X)
 end
+
+# ╔═╡ 83882c60-5728-11eb-1ba2-1dbc5c20eee4
+W₂
 
 # ╔═╡ 012fa54a-5171-4980-a0ba-474a22c25981
 md"""
@@ -613,5 +616,6 @@ _There is no guarantee for optimality of this algorithm. Clearly, the optimal $k
 # ╠═46de28bc-73ed-495c-a2e0-f565c1ce5651
 # ╟─e004e4bf-ca04-4b41-947b-9f1ecd058abb
 # ╠═bb9d4d98-3aff-439e-b8a3-8347cf345839
+# ╠═83882c60-5728-11eb-1ba2-1dbc5c20eee4
 # ╟─012fa54a-5171-4980-a0ba-474a22c25981
 # ╠═f3eb8ad4-55a8-4e76-a581-07f9a7cc75f7

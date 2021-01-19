@@ -213,7 +213,7 @@ $$
 """
 
 # ╔═╡ e9054e4d-0e5a-4b26-a323-895ec36ddf73
-function Trapez(f::Function,a::Number,b::Number,n::Int64)
+function Trapez(f::Function,a::Number,b::Number,n::Int64=16)
     # n je broj intervala
     m=2
     X=range(a,stop=b,length=n+1)
@@ -262,6 +262,10 @@ Vidimo da je
 $$O=8\int\limits_0^{\pi/2} \sqrt{1-\frac{3}{4}(\cos t)^2}\, dt \approx 8\cdot 1.21125.$$
 
 """
+
+# ╔═╡ 612d35a0-558b-11eb-1609-551b746ec5b4
+# 1/k iz tablice
+1/(sqrt(3/4))
 
 # ╔═╡ d0135ecd-9e39-4233-ab0d-74ac85ad4e2f
 begin
@@ -380,12 +384,12 @@ Profesionalne rutine za numeričku integraciju su složene, a većina programa i
 # ?quadgk
 
 # ╔═╡ 4feab23e-b51b-4818-8343-a73deb67c942
-# 1/8 opsega elipse
-quadgk(f₁,0,π/2)
+# 1/8 opsega elipse, default je order=7
+quadgk(f₁,0,π/2,order=10)
 
 # ╔═╡ fa5a8850-c845-4328-94ca-cef66b4b52dd
 # Broj π
-quadgk(f₂,0,1)
+quadgk(f₂,0,1,order=7)
 
 # ╔═╡ ac14acbb-5e64-44ca-9922-68bd3a45b0a2
 # Granice mogu biti i beskonačne
@@ -404,7 +408,7 @@ gausschebyshev(16)
 # ╔═╡ 4ae529de-6df8-4d38-917f-7b972904204d
 # Sada računajmo integrale. U našem slučaju je ω(x)=1 
 # pa nam treba Legendreov polinom.
-ξ,ω=gausslegendre(32)
+ξ,ω=gausslegendre(64)
 
 # ╔═╡ 988b6a6c-7732-47cd-915d-a26f44e1b3f0
 # 1/8 opsega elipse, a=0, b=π/2
@@ -497,6 +501,7 @@ ClenshawCurtisFFT(x->exp(-x),0,1000,18)
 # ╠═e9054e4d-0e5a-4b26-a323-895ec36ddf73
 # ╠═0283137b-539e-43c2-b2e4-34f1890d78b9
 # ╟─4baefc88-ba8b-43f7-8cec-48bf4d80c314
+# ╠═612d35a0-558b-11eb-1609-551b746ec5b4
 # ╠═d0135ecd-9e39-4233-ab0d-74ac85ad4e2f
 # ╠═c0ba2cf8-7751-4bf2-8fd0-c4bb69e95504
 # ╠═e370021d-2f28-4ec2-85c6-6bb094d242d1
