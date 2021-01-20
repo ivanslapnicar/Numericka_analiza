@@ -88,8 +88,8 @@ function Euler(f::Function,y₀::T,x::T1) where {T,T1}
     h=x[2]-x[1]
     y=Array{T}(undef,length(x))
     y[1]=y₀
-    for i=2:length(x)
-        y[i]=y[i-1]+h*f(x[i-1],y[i-1])
+    for k=2:length(x)
+        y[k]=y[k-1]+h*f(x[k-1],y[k-1])
     end
     y
 end
@@ -125,7 +125,7 @@ begin
 	solution₁(x)=2*exp(x)-x-1
 	plot(solution₁,0,1,xlabel="x",ylabel="y",
 	    label="Točno rješenje",legend=:topleft)
-	plot!(x₁,y₁,label="Izračunato rješenje")
+	plot!(x₁,y₁,label="Euler()")
 	scatter!(x₁,y₁,label="Izračunate točke")
 end
 
@@ -147,6 +147,8 @@ i ako je $Kh<1$, onda je pogreška omeđena s
 
 $$
 |y(x)-y_n|\leq \frac{M}{2K}\left(e^{Kx}−1\right)h. \tag{5}$$
+
+_Dokaz._ Vidi [Glenn Ledder, Error in Euler’s Method](http://www.math.unl.edu/~gledder1/Math447/EulerError).
 """
 
 # ╔═╡ 54c26825-46b9-44f6-ae65-31f4be69bf3b
@@ -156,19 +158,19 @@ __Zadatak.__ Odredimo broj koraka $n$ da bi u Primjeru 1  izračunata vrijednost
 Vrijedi $f_y(x,y)=1$ pa je $K=1$. Za pozitivne $x$ i $y$ je $y'>0$ pa je $y$ rastuća funkcija. Vrijednost $y(1)$ ćemo procijeniti na $4$ jer je u prethodnom računu s $10$ pod-intervala $y_{10}\approx 3.19$. Stoga je $M=5$. Uvrštavajući $K$, $M$ i $h=\displaystyle\frac{1-0}{n}$ u formulu (5), imamo
 
 $$
-\frac{5}{2}(7.3891-1)\frac{1}{n} \approx 15.97 \frac{1}{n} < 0.01,$$
+\frac{5}{2}(2.7183-1)\frac{1}{n} \approx 4.3 \frac{1}{n} < 0.01,$$
 
-pa možemo uzeti $n=1600$.
+pa možemo uzeti $n=500$.
 """
 
 # ╔═╡ 22f0b250-0b37-4593-bdea-4bd13c19f2bf
 begin
-	# 1600 podintervala na intervalu [0,1]
-	xx₁=range(0,stop=1,length=1601)
+	# 500 podintervala na intervalu [0,1]
+	xx₁=range(0,stop=1,length=501)
 	yy₁=Euler(f₁,1.0,xx₁)
 	plot(solution₁,0,1,xlabel="x",ylabel="y",
 	    label="Točno rješenje",legend=:topleft)
-	plot!(xx₁,yy₁,label="Izračunato rješenje")
+	plot!(xx₁,yy₁,label="Euler()")
 end
 
 # ╔═╡ bfc718ab-e392-4fb8-82c6-0c889b1977e9
@@ -201,7 +203,7 @@ begin
 	solution₂(x)=30(30*sin(x)-cos(x)+exp(-30x))/901
 	plot(solution₂,0,1,xlabel="x",ylabel="y",
 	    label="Točno rješenje",legend=:topleft)
-	plot!(x₂,y₂,label="Izračunato rješenje")
+	plot!(x₂,y₂,label="Euler()")
 end
 
 # ╔═╡ 8899d0fd-e0d9-424f-98e4-5547d029a36a
@@ -234,7 +236,7 @@ f(x,y(x))\, dx.$$
 Trapezna formula daje
 
 $$
-y(x_{k+1})= y(x_k) +\frac{1}{2}[f(x_k,y(x_k))+f(x_{k+1},y(x_{k+1}))].$$
+y(x_{k+1})= y(x_k) +\frac{h}{2}[f(x_k,y(x_k))+f(x_{k+1},y(x_{k+1}))].$$
 
 Uz oznake $y(x_k)=y_k$, $y(x_{k+1})=y_{k+1}$, primjena Eulerove formule (2) na desnoj strani daje Heunove formule. 
 
@@ -264,14 +266,14 @@ function RungeKutta4(f::Function,y₀::T,x::T1) where {T,T1}
     h=x[2]-x[1]
     y=Array{T}(undef,length(x))
     y[1]=y₀
-    for i=2:length(x)
-        ξ=x[i-1]
-        η=y[i-1]
-        k1=h*f(ξ,η)
-        k2=h*f(ξ+h/2,η+k1/2)
-        k3=h*f(ξ+h/2,η+k2/2)
-        k4=h*f(ξ+h,η+k3)
-        y[i]=η+(k1+2*k2+2*k3+k4)/6.0
+    for k=2:length(x)
+        ξ=x[k-1]
+        η=y[k-1]
+        k₁=h*f(ξ,η)
+        k₂=h*f(ξ+h/2,η+k₁/2)
+        k₃=h*f(ξ+h/2,η+k₂/2)
+        k₄=h*f(ξ+h,η+k₃)
+        y[k]=η+(k₁+2*k₂+2*k₃+k₄)/6.0
     end
     y
 end
@@ -289,7 +291,7 @@ begin
 	y₃=RungeKutta4(f₁,1.0,x₁)
 	plot(solution₁,0,1,xlabel="x",ylabel="y",
 	    label="Točno rješenje",legend=:topleft)
-	plot!(x₁,y₃,label="Izračunato rješenje")
+	plot!(x₁,y₃,label="RunkeKutta4()")
 end
 
 # ╔═╡ a262689c-74f3-46bb-bd55-1aa7eec5379f
@@ -299,7 +301,7 @@ begin
 	yRK4=RungeKutta4(f₂,0.0,x₄)
 	plot(solution₂,0,1,xlabel="x",ylabel="y",
 	    label="Točno rješenje",legend=:topleft)
-	plot!(x₄,[yEuler,yRK4],label=["Euler" "Runge-Kutta"])
+	plot!(x₄,[yEuler,yRK4],label=["Euler()" "RungeKutta4()"])
 end
 
 # ╔═╡ 481e7da8-95f2-4972-863c-fcd7a79cf417
@@ -312,10 +314,10 @@ md"""
 Većina programa ima ugrađene odgovarajuće rutine za numeričko rješavanje običnih diferencijalnih jednadžbi.
 Tako, na primjer, 
 
-* Ṁatlab ima rutine `ode*` (vidi [Matlab, Ordinary Defferential Equations](https://www.mathworks.com/help/matlab/ordinary-differential-equations.html?searchHighlight=ordinary%20differential&s_tid=srchtitle)), a 
+* Ṁatlab ima rutine `ode*` (vidi [Matlab, Ordinary Differential Equations](https://www.mathworks.com/help/matlab/ordinary-differential-equations.html?searchHighlight=ordinary%20differential&s_tid=srchtitle)), a 
 * Julia ima paket  [ODE.jl](https://github.com/JuliaODE/ODE.jl).
 
-Klasična RungeKutta4 metoda je implementirana u funkciji `ode4()`, a Heuneova metoda je implementirana u funkciji 
+Klasična RungeKutta4 metoda je implementirana u funkciji `ode4()`, a Heunova metoda je implementirana u funkciji 
 `ODE.ode2_heun()`. 
 
 __Napomena__ Funkcija `ODE.ode2_heun()` nije vidljiva pozivom naredbe `varinfo()` jer nije izvezena, ali se može vidjeti u datoteci `runge_kutta.jl`.
@@ -381,10 +383,10 @@ md"""
 ### Lhotka-Volterra jednadžbe
 
 Modeliranje sustava __lovac-plijen__ daje sustav __Lhotka-Volterra__ jednadžbi
-(vidi [Matematika 2, poglavlje 5.11](http://lavica.fesb.hr/mat2/predavanja/node46.html) i [Numerička matematika, primjer 8.7](http://www.mathos.unios.hr/pim/Materijali/Num.pdf)):
+(vidi [Matematika 2, poglavlje 5.11](http://lavica.fesb.hr/mat2/predavanja/node98.html) i [Numerička matematika, primjer 8.7](http://www.mathos.unios.hr/pim/Materijali/Num.pdf)):
 
 $$\begin{aligned}
-\frac{dZ}{dt}&=z\,Z-a\, Z\, V = Z\,(z-a\, V), \qquad(1)\\
+\frac{dZ}{dt}&=z\,Z-a\, Z\, V = Z\,(z-a\, V), \qquad(6)\\
 \frac{dV}{dt}&=-v\,V+b\, Z\, V = V\,(-v+b\, Z), \quad v,z,a,b>0,
 \end{aligned}$$
 
@@ -409,7 +411,7 @@ Ovo je jednadžba sa separiranim varijablama koja ima implicitno zadano rješenj
 
 $$
 V^z \, Z^v = C\,  e^{aV}\, e^{bZ},\qquad 
-C=\frac{V_0^{z}\, Z_0^{v}}{\displaystyle e^{a V_0}e^{b Z_0}}.$$
+C=\frac{V_0^{z}\, Z_0^{v}}{\displaystyle e^{a V_0}e^{b Z_0}}.  \tag{7} $$
 
 Riješimo sustav za populacije vukova $V$ i zečeva $Z$ uz
 
@@ -462,20 +464,20 @@ end
 
 # ╔═╡ 0b5ad338-3628-477e-bd0b-8cdda13d345d
 # Nacrtajmo rješenje u faznom prostoru
-plot(Z,V,xlabel="V",ylabel="Z", label=:none)
+plot(Z,V,xlabel="Z",ylabel="V", label=:none)
 
 # ╔═╡ 5308aa28-6da6-4943-b393-c08592b98c27
 md"""
 ### Skalirane Lhotka-Volterra jednadžbe
 
-Crtanje egzaktnog rješenja (3) u faznom prostoru nije moguće direktno, 
+Crtanje egzaktnog rješenja (7) u faznom prostoru nije moguće direktno, 
 jer crtanje implicitno zadanih funkcija na velikom području traje izuzetno dugo. Međutim, 
 pomoću transformacija (vidi [Modeling Complex Systems, poglavlje 2.1](http://www.springer.com/us/book/9781441965615))
 
 $$
 X=\frac{b}{v}Z,\quad Y=\frac{a}{z}V,\quad \tau=\sqrt{z\cdot v}\, t,\quad \rho=\sqrt{\displaystyle\frac{z}{v}},$$
 
-jednadžbu (1) je moguće prikazati u __bezdimenzionalnim varijablama__
+jednadžbu (6) je moguće prikazati u __bezdimenzionalnim varijablama__
 u __skaliranom vremenu__ $\tau$:
 
 $$\begin{aligned}
@@ -483,14 +485,14 @@ $$\begin{aligned}
 \frac{dY}{d\tau}&=-\frac{1}{\rho}\, Y\,(1-X). 
 \end{aligned}$$
 
-Ovaj sustav ovisi o samo __jednom__ parametru $\rho$. Sustav ima netrivijalno stabilno rješenje $X=Y=1$, a rješenje u faznom prostoru je
+Ovaj sustav ovisi o samo __jednom__ parametru $\rho$. Sustav ima netrivijalno stabilno rješenje $X=Y=1$, a rješenje (7) u faznom prostoru je
 
 $$
 Y \, X^{1/\rho^2} = C\,  e^{Y}\, e^{X/\rho^2},\qquad 
 C=\frac{Y_0\, X_0^{1/\rho^2}}{\displaystyle e^{Y_0}e^{X_0/\rho^2}}.$$
 
 
-Riješimo sustav iz Primjera 4 u bezdimenzionalnom obliku i grafički usporedimo rješenja:
+Riješimo zadani sustav u bezdimenzionalnom obliku i grafički usporedimo rješenja:
 
 """
 
@@ -516,7 +518,7 @@ end
 
 # ╔═╡ e580ec4b-73f9-4522-9cb3-4d24ebe1e027
 # Nacrtajmo bezdimenzionalno rješenje u faznom prostoru
-plot(X₁,Y₁,xlabel="V",ylabel="Z", label=:none)
+plot(X₁,Y₁,xlabel="Z",ylabel="V", label=:none)
 
 # ╔═╡ 3ada3bbf-cc3b-46b4-adbd-c3685568781a
 md"""
@@ -526,7 +528,7 @@ Diferencijalna jednadžba višeg reda supstitucijama se može svesti na sustav d
 
 ### Primjer 5
 
-Rješenje problema početnih vrijednosti (vidi [Matematika 2, primjer 5.28](http://lavica.fesb.hr/mat2/predavanja/node46.html))
+Rješenje problema početnih vrijednosti (vidi [Matematika 2, primjer 5.28](http://lavica.fesb.hr/mat2/predavanja/node97.html#pr:ld2khv))
 
 $$
 y'''+y''=x,\qquad y(0)=0,\quad y'(0)=0,\quad y''(0)=0$$
@@ -564,18 +566,21 @@ begin
 	# Izračunato rješenje je prvi element polja y
 	yEuler₅=Euler(f₅,y₅,x₅)
 	yRK4₅=RungeKutta4(f₅,y₅,x₅)
-	Y₅=[yRK4₅[i][1] for i=1:length(yEuler₅)]
+	yode4₅=ode4(f₅,y₅,x₅)
+	YEuler₅=[yEuler₅[i][1] for i=1:length(yEuler₅)]
+	YRK4₅=[yRK4₅[i][1] for i=1:length(yEuler₅)]
+	Yode4₅=[yode4₅[2][i][1] for i=1:length(yEuler₅)]
 	# Točno rješenje
 	solution₅(x)=-1+x+exp(-x)+x^3/6-x^2/2
 	# Crtanje
 	plot(solution₅,0,2,xlabel="x",ylabel="y",label="Točno rješenje",legend=:topleft)
-	plot!(x₅,Y₅,xlabel="x",ylabel="y",label="Izračunato rješenje")
+	plot!(x₅,[YEuler₅,YRK4₅,Yode4₅],xlabel="x",ylabel="y",label=["Euler()" "RungeKutta4()" "ode4()"])
 end
 
 # ╔═╡ 12c6cb02-6bc0-4558-bc10-9ca1d8cd029a
 # Norma pogreške u promatranim točkama
 # import LinearAlgebra; LinearAlgebra.norm(solution₅.(x)-Y)
-sqrt(sum((solution₅.(x₅)-Y₅).^2))
+sqrt(sum((solution₅.(x₅)-YRK4₅).^2))
 
 # ╔═╡ ae54d9f1-bed6-4f56-83a2-832e819b5068
 
