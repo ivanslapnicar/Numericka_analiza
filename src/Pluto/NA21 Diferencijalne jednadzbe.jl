@@ -113,7 +113,7 @@ y=2e^x-x-1$$
 
 # ╔═╡ 4f30e023-2c8d-42b7-a124-c240e5464769
 begin
-	# 10 podintervala na intervalu [0,1]
+	# 10 pod-intervala na intervalu [0,1]
 	x₁=range(0,stop=1,length=11)
 	f₁(x,y)=x+y
 	y₁=Euler(f₁,1.0,x₁)
@@ -134,7 +134,7 @@ md"""
 Uočimo da je zadani problem loše uvjetovan.
 Točnu ocjenu globalne pogreške daje nam sljedeći teorem:
 
-__Teorem.__ Neka funkcija $f(x,y)$ ima neprekidne prve parcijalne derivacije na području $D\subseteq \mathbb{R}^2$ i neka je 
+__Teorem.__ Neka funkcija $f(x,y)$ ima neprekidne prve parcijalne derivacije na pravokutniku $D\subseteq \mathbb{R}^2$ i neka je 
 
 $$
 K=\max_{(x,y)\in D}|f_y(x, y)|<\infty,\quad   M= \max_{(x,y)\in D}|(f_x+f\cdot f_y)(x,y)|<\infty.$$
@@ -165,7 +165,7 @@ pa možemo uzeti $n=500$.
 
 # ╔═╡ 22f0b250-0b37-4593-bdea-4bd13c19f2bf
 begin
-	# 500 podintervala na intervalu [0,1]
+	# 500 pod-intervala na intervalu [0,1]
 	xx₁=range(0,stop=1,length=501)
 	yy₁=Euler(f₁,1.0,xx₁)
 	plot(solution₁,0,1,xlabel="x",ylabel="y",
@@ -196,7 +196,7 @@ y(x)=\frac{30}{901}(30\sin x-\cos x+e^{-30x})$$
 
 # ╔═╡ 1e36310b-6f42-44a1-8b04-e82391cb33aa
 begin
-	# 100 podintervala na intervalu [0,1]
+	# 100 pod-intervala na intervalu [0,1]
 	f₂(x,y)=30(sin(x)-y)
 	x₂=range(0,stop=1,length=101)
 	y₂=Euler(f₂,0.0,x₂)
@@ -227,7 +227,7 @@ k_2&=hf(x_k+h,y_k+k_1),\\
 y_{k+1}&=y_k+\frac{1}{2}(k_1+k_2).
 \end{aligned}$$
 
-Heunovu metodu izvodimo na sljedeći način: integriranje zadane diferencijalne jednadžbe
+Heunovu metodu izvodimo na sljedeći način: integriranje zadane diferencijalne jednadžbe daje
 
 $$
 \int_{x_k}^{x_{k+1}} \frac{dy}{dx}\, dx = y(x_{k+1})-y(x_k)= \int_{x_k}^{x_{k+1}} 
@@ -258,7 +258,7 @@ y_{k+1}&=y_k+\frac{1}{6}(k_1+2k_2+2k_3+k_4).
 
 Standardna Runge-Kutta metoda je metoda reda 4 - globalna pogreška je reda veličine $O(h^4)$, a potrebne su četiri evaluacije funkcije $f(x,y)$ u svakom koraku.
 
-Lokalna pogreška klasične Runge-Kutta metode je $O(h^5)$.
+Lokalna pogreška standardne Runge-Kutta metode je $O(h^5)$.
 """
 
 # ╔═╡ cb8721aa-7f4b-4672-a802-da84d9c67b4a
@@ -314,10 +314,10 @@ md"""
 Većina programa ima ugrađene odgovarajuće rutine za numeričko rješavanje običnih diferencijalnih jednadžbi.
 Tako, na primjer, 
 
-* Ṁatlab ima rutine `ode*` (vidi [Matlab, Ordinary Differential Equations](https://www.mathworks.com/help/matlab/ordinary-differential-equations.html?searchHighlight=ordinary%20differential&s_tid=srchtitle)), a 
+* Ṁatlab ima naredbe `ode*` (vidi [Matlab, Ordinary Differential Equations](https://www.mathworks.com/help/matlab/ordinary-differential-equations.html?searchHighlight=ordinary%20differential&s_tid=srchtitle)), a 
 * Julia ima paket  [ODE.jl](https://github.com/JuliaODE/ODE.jl).
 
-Klasična RungeKutta4 metoda je implementirana u funkciji `ode4()`, a Heunova metoda je implementirana u funkciji 
+Standardna Runge-Kutta metoda je implementirana u funkciji `ode4()`, a Heunova metoda je implementirana u funkciji 
 `ODE.ode2_heun()`. 
 
 __Napomena__ Funkcija `ODE.ode2_heun()` nije vidljiva pozivom naredbe `varinfo()` jer nije izvezena, ali se može vidjeti u datoteci `runge_kutta.jl`.
@@ -335,7 +335,7 @@ methods(ODE.ode2_heun)
 
 # ╔═╡ e50cf9c2-972d-4916-a3ca-6c20a0c73519
 # Riješimo problem iz Primjera 2.
-# Vrijednosti tražene funkcije y su drugi element izlaza.
+# Tražene vrijednosti funkcije y su drugi element izlaza.
 yode4=ode4(f₂,0.0,range(0,stop=1,length=21))[2]
 
 # ╔═╡ f4d37a14-e6ef-4400-bb30-a3a4405bb675
@@ -395,19 +395,19 @@ uz početne uvjete
 $$
 V(t_0)=V_0,\qquad Z(t_0)=Z_0.$$
 
-__Stabilna stanja__ su stanja u kojima nema promjene, odnosno, stanja u kojima su obje derivacije jednake nuli. To su __trivijalno__ stabilno stanje, $V=Z=0$ i
+__Stabilna stanja__ su stanja u kojima nema promjene, odnosno, stanja u kojima su obje derivacije jednake nuli. To su __trivijalno__ stabilno stanje, $V=Z=0$, i
 
 $$
 V=\frac{z}{a},\qquad Z=\frac{b}{v}.$$
 
 
-U __faznom prostoru__, eliminacijom nezavisne varijable $t$, dobijemo jednu linearnu diferencijalnu jednadžbu:
+U __faznom prostoru__, eliminacijom nezavisne varijable $t$, dobijemo jednu diferencijalnu jednadžbu prvog reda:
 
 $$
 \frac{dV}{dZ}=\frac{\displaystyle\frac{dV}{dt}}{\displaystyle\frac{dZ}{dt}}=
 \frac{V\,(-v+b\, Z)}{Z\,(z-a\, V)}.$$
 
-Ovo je jednadžba sa separiranim varijablama koja ima implicitno zadano rješenje
+Ovo je jednadžba sa separiranim varijablama koja ima implicitno rješenje
 
 $$
 V^z \, Z^v = C\,  e^{aV}\, e^{bZ},\qquad 
@@ -416,9 +416,7 @@ C=\frac{V_0^{z}\, Z_0^{v}}{\displaystyle e^{a V_0}e^{b Z_0}}.  \tag{7} $$
 Riješimo sustav za populacije vukova $V$ i zečeva $Z$ uz
 
 $$
-v=0.02, \quad z=0.06,\quad a=0.001,\quad b=0.00002,\quad V(0)=30, \quad Z(0)=800,$$
-
-te riješenje u faznom prostoru usporedimo s egzaktnim rješenjem.
+v=0.02, \quad z=0.06,\quad a=0.001,\quad b=0.00002,\quad V(0)=30, \quad Z(0)=800.$$
 
 __Napomena.__ Funkcije `Euler()`, `RungeKutta4()` i funkcije iz paketa `ODE.jl` su već prilagođene i za rješavanje sustava.
 """
@@ -456,7 +454,7 @@ end
 
 # ╔═╡ 00796b0e-f2d5-4646-af33-06d81d13fc0c
 begin
-	# Usporedimo rješenja s metodoma RungeKutta4() i ode4() 
+	# Usporedimo rješenja pomoću metoda RungeKutta4() i ode4() 
 	yRK4ₗ=RungeKutta4(fVZ,y₀,t)
 	yode4ₗ=ode4(fVZ,y₀,t)[2]
 	[yₗ yRK4ₗ yode4ₗ]
@@ -470,14 +468,14 @@ plot(Z,V,xlabel="Z",ylabel="V", label=:none)
 md"""
 ### Skalirane Lhotka-Volterra jednadžbe
 
-Crtanje egzaktnog rješenja (7) u faznom prostoru nije moguće direktno, 
-jer crtanje implicitno zadanih funkcija na velikom području traje izuzetno dugo. Međutim, 
+Crtanje egzaktnog rješenja (7) u faznom prostoru nije praktično, 
+jer crtanje implicitno zadanih funkcija na velikom području traje dugo. Međutim, 
 pomoću transformacija (vidi [Modeling Complex Systems, poglavlje 2.1](http://www.springer.com/us/book/9781441965615))
 
 $$
 X=\frac{b}{v}Z,\quad Y=\frac{a}{z}V,\quad \tau=\sqrt{z\cdot v}\, t,\quad \rho=\sqrt{\displaystyle\frac{z}{v}},$$
 
-jednadžbu (6) je moguće prikazati u __bezdimenzionalnim varijablama__
+jednadžbu (6) je moguće prikazati s __bezdimenzionalnim varijablama__
 u __skaliranom vremenu__ $\tau$:
 
 $$\begin{aligned}
@@ -526,7 +524,7 @@ md"""
 
 Diferencijalna jednadžba višeg reda supstitucijama se može svesti na sustav diferencijalnih jednadžbi prvog reda.
 
-### Primjer 5
+### Primjer 4
 
 Rješenje problema početnih vrijednosti (vidi [Matematika 2, primjer 5.28](http://lavica.fesb.hr/mat2/predavanja/node97.html#pr:ld2khv))
 
@@ -561,14 +559,19 @@ y(0)=0,\quad u(0)=0,\quad v(0)=0.$$
 # ╔═╡ 39d0b178-70bd-4815-bee8-3738bdaea250
 begin
 	x₅=range(0,stop=2,length=201)
-	y₅=[0.0,0,0]
+	# Vektorska funkcija
 	f₅(x,y)=[y[2],y[3],-y[3]+x]
-	# Izračunato rješenje je prvi element polja y
+	# Početni uvjeti
+	y₅=[0.0,0,0]
+	# Riješimo sustav pomoću tri metode
 	yEuler₅=Euler(f₅,y₅,x₅)
 	yRK4₅=RungeKutta4(f₅,y₅,x₅)
 	yode4₅=ode4(f₅,y₅,x₅)
+	# Izračunate vrijednosti yₖ su prvi elementi izlaznih vektora
 	YEuler₅=[yEuler₅[i][1] for i=1:length(yEuler₅)]
 	YRK4₅=[yRK4₅[i][1] for i=1:length(yEuler₅)]
+	# Izračunate vrijednosti yₖ su prvi elementi vektora
+	# drugog izlaznog polja
 	Yode4₅=[yode4₅[2][i][1] for i=1:length(yEuler₅)]
 	# Točno rješenje
 	solution₅(x)=-1+x+exp(-x)+x^3/6-x^2/2
