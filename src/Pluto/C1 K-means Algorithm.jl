@@ -170,9 +170,6 @@ begin
 	centers, sizes
 end
 
-# ╔═╡ 573316a0-1f76-11eb-2865-bddb3aa2370a
-length(X[1])
-
 # ╔═╡ 99aba610-1f75-11eb-1b5e-2f2ee211ed7f
 X
 
@@ -233,6 +230,9 @@ begin
 	output=kmeans(Matrix(Xₘ),k,init=:kmpp)
 end
 
+# ╔═╡ 7c8817d0-5c8d-11eb-325c-3b2d7e83ed64
+Xₘ
+
 # ╔═╡ 4f8152ee-ce86-4df6-81d2-be2df33df980
 fieldnames(KmeansResult)
 
@@ -262,7 +262,7 @@ begin
 end
 
 # ╔═╡ 4297e110-571d-11eb-38a4-9b0cd9c936ac
-C
+scatter(C)
 
 # ╔═╡ 406bb1b2-a8bb-4cd2-95c3-3975f99e3f32
 begin
@@ -325,7 +325,6 @@ end
 # ╟─48914840-1f69-11eb-30a9-3943767bc261
 # ╟─2b76953c-edf2-41cf-9d75-7efb2d6a58f1
 # ╠═d0233ece-1f69-11eb-3da1-43b8ddc9fbe1
-# ╠═573316a0-1f76-11eb-2865-bddb3aa2370a
 # ╠═86d55833-ee5a-4f73-b0bf-e8b6e6d65617
 # ╟─e15fa4cf-930a-4065-b839-c2ec944afcfa
 # ╠═bacdc83d-1acd-46df-8d06-3e0279978a33
@@ -337,6 +336,7 @@ end
 # ╟─310a4957-cc58-424b-845c-3ebaf7db77f3
 # ╠═f9af8a75-48fd-4e82-b43e-61867bead6f9
 # ╠═7e869699-8eb1-4e38-905d-a9448d037841
+# ╠═7c8817d0-5c8d-11eb-325c-3b2d7e83ed64
 # ╠═4f8152ee-ce86-4df6-81d2-be2df33df980
 # ╠═95fb2e66-e811-47f4-a772-8270d0c5d83b
 # ╠═26b7bac0-1f72-11eb-16fc-c1d74920c462
