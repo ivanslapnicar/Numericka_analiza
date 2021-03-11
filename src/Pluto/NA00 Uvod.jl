@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.12.4
+# v0.12.21
 
 using Markdown
 using InteractiveUtils
@@ -83,7 +83,7 @@ Ova metoda je spora, ali "sigurna".
 """
 
 # ╔═╡ 3dea5041-85b9-4d8b-9dcf-2d39c8481314
-steps=10
+steps=30
 
 # ╔═╡ a47b53a0-027f-11eb-256d-f7d5ce0f97e3
 let
@@ -166,11 +166,17 @@ begin
 	a=1
 	b=2
 	c=10.0^(-17)
-	x₁=(-b-sqrt(b*b-4*a*c))/(2*a)
-	x₂=(-b+sqrt(b*b-4*a*c))/(2*a)
+	x₁=(-b-√(b*b-4*a*c))/(2*a)
+	x₂=(-b+√(b*b-4*a*c))/(2*a)
 	
 	x₁,x₂
 end
+
+# ╔═╡ d7a46520-824d-11eb-2090-ad945a312f56
+x₁
+
+# ╔═╡ dfabe810-824d-11eb-3659-cf6fd64c38af
+x₂
 
 # ╔═╡ bca1eb35-dd3d-41af-8130-a8035551ec49
 md"""
@@ -204,8 +210,8 @@ U ovom primjeru imali smo egzaktnu formulu, ali u aritmetici plivajućeg zareza 
 
 # ╔═╡ 2f084ae2-1e38-4c0b-83b6-da9f025565b1
 begin
-	x₃=(-b-sign(b)*sqrt(b*b-4*a*c))/(2*a)
-	x₄=-2*c/(b+sign(b)*sqrt(b*b-4*a*c))
+	x₃=(-b-sign(b)*√(b*b-4*a*c))/(2*a)
+	x₄=-2*c/(b+sign(b)*√(b*b-4*a*c))
 	x₃,x₄
 end
 
@@ -236,7 +242,7 @@ function korijeni(a,b,c)
         Δ= b*b-4*a*c
         if Δ < 0
             # Dva kompleksna rješenja izračunata pomoću realne aritmetike
-            ximaginarni=sqrt(-Δ)/(2*a)
+            ximaginarni=√(-Δ)/(2*a)
             xrealni=-b/(2*a)
             x₁=xrealni+im*ximaginarni
             # x₂ je kompleksno konjugirani x₁, 
@@ -246,12 +252,12 @@ function korijeni(a,b,c)
             if b==0
                 # Julia lako računa s kompleksnim brojevima,
                 # pa u ovom slučaju možemo koristiti formulu.
-                x₁=sqrt(-c)/a
+                x₁=√(-c)/a
                 x₂=-x₁
             else
                 # Slučaj s dva različita realna korijena.
-                x₁=(-b-sign(b)*sqrt(Δ))/(2*a)
-                x₂=-2*c/(b+sign(b)*sqrt(Δ))
+                x₁=(-b-sign(b)*√(Δ))/(2*a)
+                x₂=-2*c/(b+sign(b)*√(Δ))
             end
         end
         poruka="korijeni su dobri"
@@ -283,7 +289,7 @@ md"""
 varinfo(Polynomials)
 
 # ╔═╡ d63410b0-0ee8-11eb-31a3-e71de384fadb
-?Polynomial
+# ?Polynomial
 
 # ╔═╡ db5f4eb0-0ee8-11eb-3e4f-670b968e851d
 p=Polynomial([c,b,a])
@@ -319,6 +325,8 @@ Može se pogledati i datoteku na GitHub-u za najnoviju verziju.
 # ╟─8443676d-70db-4f63-8b8a-a7e96175f813
 # ╟─bd7a0ad8-8b31-42cf-94e9-881711a3c40e
 # ╠═b5fe78a7-5258-41ba-9544-c0cd64496ef5
+# ╠═d7a46520-824d-11eb-2090-ad945a312f56
+# ╠═dfabe810-824d-11eb-3659-cf6fd64c38af
 # ╟─bca1eb35-dd3d-41af-8130-a8035551ec49
 # ╠═2f084ae2-1e38-4c0b-83b6-da9f025565b1
 # ╟─f8cf034f-b149-4ff9-8a7e-bc8143581d51
