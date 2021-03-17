@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.12.4
+# v0.12.21
 
 using Markdown
 using InteractiveUtils
@@ -19,9 +19,9 @@ md"""
 
 Općenito, __norma__ na vektorskom prostoru $X$ je svaka funkcija $\| \phantom{x} \| : X\to \mathbb{R}$ sa sljedećim svojstvima:
 
-1. $\| x\|=0\| \Leftrightarrow x=0$
-2. $\| \lambda x\|=|\lambda| \|x\|$
-3. $\| x+y\| \leq \|x\|+\|y\|$ (nejednakost trokuta)
+1.  $\| x\|=0\| \Leftrightarrow x=0$
+2.  $\| \lambda x\|=|\lambda| \|x\|$
+3.  $\| x+y\| \leq \|x\|+\|y\|  \qquad$ (nejednakost trokuta)
 
 """
 
@@ -83,11 +83,11 @@ md"""
 __Skalarni produkt__ na vektorskom prostoru $X$ je svako preslikavanje 
 $\cdot : X\times X \to \mathbb{R}$ sa sljedećim svojstvima:
 
-1. $x\cdot x\geq 0$
-1. $x\cdot x=0 \Leftrightarrow x=0$
-2. $x\cdot y=y\cdot x$
-3. $(\alpha x)\cdot y =\alpha (x\cdot y)$
-3. $(x+y)\cdot z=x\cdot z+y \cdot z$
+1.  $x\cdot x\geq 0$
+1.  $x\cdot x=0 \Leftrightarrow x=0$
+2.  $x\cdot y=y\cdot x$
+3.  $(\alpha x)\cdot y =\alpha (x\cdot y)$
+3.  $(x+y)\cdot z=x\cdot z+y \cdot z$
 
 Ukoliko je na vektorskom prostoru definiran skalarni produkt, normu možemo definirati kao
 
@@ -128,5 +128,5 @@ $$f\perp g \Longleftrightarrow f\cdot g =0.$$
 # ╟─31a749ca-adb3-4e0e-9484-4506e1586a74
 # ╠═365a36f4-e332-40ea-9113-d322dc47d480
 # ╠═10bc88f1-3675-4446-b31a-033848b6160e
-# ╠═196d75ee-c304-4501-8ee3-b685d2fc2a65
+# ╟─196d75ee-c304-4501-8ee3-b685d2fc2a65
 # ╠═0b47171d-ff6e-4e85-acc0-7f5aec8c11f4

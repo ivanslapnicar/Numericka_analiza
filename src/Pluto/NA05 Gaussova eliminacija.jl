@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.12.4
+# v0.12.21
 
 using Markdown
 using InteractiveUtils
@@ -20,15 +20,15 @@ md"
 Sustav $Ax=b$
 se rješava u tri koraka (_bez pivotiranja_ ):
 
-1. $A=LU\quad$ (LU rastav, $O(\frac{2}{3}n^3)$ operacija),
-2. $Ly=b\quad$ (donje trokutrasti sustav, $n^2$ operacija),
-3. $Ux=y\quad$ (gornje torkutasti sustav, $n^2$ operacija).
+1.  $A=LU\quad$ (LU rastav, $O(\frac{2}{3}n^3)$ operacija),
+2.  $Ly=b\quad$ (donje trokutrasti sustav, $n^2$ operacija),
+3.  $Ux=y\quad$ (gornje torkutasti sustav, $n^2$ operacija).
 
 S pivotiranjem vrijedi
 
-1. $PA=LU$
-2. $Ly=P^T b$
-3. $Ux=y$ 
+1.  $PA=LU$
+2.  $Ly=P^T b$
+3.  $Ux=y$ 
 "
 
 # ╔═╡ 221d2474-de59-4042-918f-534305d8708f
@@ -258,7 +258,7 @@ x-x₁
 @which lu(A)
 
 # ╔═╡ 07fae3c0-0dfa-11eb-02a3-b7efa4490b1c
-?lu
+# ?lu
 
 # ╔═╡ 4225c750-b668-4331-b6b8-0509635e69c6
 md"""
@@ -419,7 +419,7 @@ Sada probajmo ugrađenu funkciju - koristimo je precizno.
 """
 
 # ╔═╡ bc8ce0a0-0d86-11eb-1342-413ee4eb89ef
-?lu
+# ?lu
 
 # ╔═╡ e86a4730-0d86-11eb-266b-5b41924f61a8
 F=lu(A₂)
@@ -753,7 +753,7 @@ Zaključujemo da je rješenje $x_v$ izračunato stabilno, odnosno s vrlo malom p
 """
 
 # ╔═╡ 8707357c-84c9-4d30-aa81-1172d7ac715e
-?LAPACK.trcon!
+# ?LAPACK.trcon!
 
 # ╔═╡ e38b8370-0df2-11eb-0ed5-ab750f73de17
 begin
