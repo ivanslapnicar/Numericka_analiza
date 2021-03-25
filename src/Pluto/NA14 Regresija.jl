@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.12.18
+# v0.12.21
 
 using Markdown
 using InteractiveUtils
@@ -69,7 +69,7 @@ begin
 	# Nacrtajmo točke i regresijski pravac
 	f(x)=k*x+l
 	scatter(x,y,label="Točke",legend=:bottomright)
-	plot!(x->x,f,x[1],x[end],label="Regresijski pravac")
+	plot!(f,x[1],x[end],label="Regresijski pravac")
 end
 
 # ╔═╡ 1b894260-f180-4407-8c68-ad93ad40c55b
@@ -111,7 +111,7 @@ g(x)=a*x^2+b*x+c
 # ╔═╡ 93fdb6ef-09d2-47b7-b5af-6561529f520f
 begin
 	scatter(x₁,y₁,label="Točke",legend=:topleft)
-	plot!(x->x,g,x₁[1],x₁[end],label="Regresijski polinom")
+	plot!(g,x₁[1],x₁[end],label="Regresijski polinom")
 end
 
 # ╔═╡ 65f7a8eb-df16-4a01-91ff-0214ac092e61
@@ -170,7 +170,7 @@ P₁(t)=exp(C)*exp(kₚ*t)
 begin
 	# Nacrtajmo točke i regresijsku krivulju
 	scatter(t,P,label="Populacija",legend=:topleft)
-	plot!(t->t,P₁,t[1],t[end],label="Regresijska krivulja")
+	plot!(P₁,t[1],t[end],label="Regresijska krivulja")
 end
 
 # ╔═╡ f48de770-1eb0-11eb-0d18-8f9690cd89c6
@@ -179,8 +179,8 @@ __Pitanje.__ Zbog čega stvarna krivulja populacije ima lom?
 "
 
 # ╔═╡ 1ac0491b-6cc9-4a14-af99-c6c6defc3074
-# Predvidimo populaciju 2050 godine
-P₁(2050)
+# Predvidimo populaciju 2021 godine
+P₁(2021)
 
 # ╔═╡ 23e34ea5-8dc6-4444-bcd6-94229abad290
 md"
@@ -197,7 +197,7 @@ begin
 end
 
 # ╔═╡ e8911abc-74bd-4daa-9336-5b10270616b1
-P₂(2050)
+P₂(2021)
 
 # ╔═╡ Cell order:
 # ╟─ec0b9159-1c36-4112-8ce7-ec69c6709861

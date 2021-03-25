@@ -7,8 +7,18 @@ using InteractiveUtils
 # ╔═╡ 63842a33-b596-4f3f-bde5-7953ec4dc840
 using Markdown
 
+# ╔═╡ 22dc4490-8d6b-11eb-20ce-ed84c7206167
+begin
+	using PlutoUI
+	PlutoUI.TableOfContents(aside=true)
+end
+
 # ╔═╡ 53d8d8e0-0d7f-11eb-358f-3f001e5e7d78
-using LinearAlgebra
+begin
+	using LinearAlgebra
+	import Random
+	Random.seed!(123);
+end
 
 # ╔═╡ 48167400-0d83-11eb-1c7d-359a2574c8b1
 md"
@@ -27,7 +37,7 @@ se rješava u tri koraka (_bez pivotiranja_ ):
 S pivotiranjem vrijedi
 
 1.  $PA=LU$
-2.  $Ly=P^T b$
+2.  $Ly=P b$
 3.  $Ux=y$ 
 "
 
@@ -60,13 +70,16 @@ Rješavanje zadnjeg trokutastog sustava daje $x_1 = 0$, $x_2 = 1$. Uvrštavanje 
 # ╔═╡ 89291e44-4ea6-4e74-99bd-a30e8ee4d895
 [eps()/10 1;0 1-10/eps()]\[1; 2-10/eps()]
 
+# ╔═╡ 7b998fd0-87d4-11eb-286a-fd35bcef317c
+2-10/eps()==-10/eps()
+
 # ╔═╡ ed629240-6b9a-4a85-b412-97a06565a9cf
 md"""
 I ovdje postoji "rješenje" koje se zove _parcijalno pivotiranje_. Stavimo apsolutno najveći element koji još nije poništen u promatranom stupcu na pivotnu odnosno dijagonalnu poziciju:
 
 \begin{align}
 &\left(\begin{array}{cc|c}     1 & 1 & 2 \cr \displaystyle\frac{\epsilon}{10} & 1 & 1 \end{array}\right) \sim
-\left(\begin{array}{cc|c}     1 & 1 & 2 \cr 0                   & 1-\displaystyle\frac{\epsilon}{10}&1-\displaystyle\frac{\epsilon}{10}\end{array}\right)
+\left(\begin{array}{cc|c}     1 & 1 & 2 \cr 0                   & 1-\displaystyle\frac{\epsilon}{10}&1-\displaystyle\frac{2\epsilon}{10}\end{array}\right)
 \approx   \left(\begin{array}{cc|c}     1 & 1 & 2 \cr 0                   & 1                    &1                    \end{array}\right)
 \end{align}
 """
@@ -178,12 +191,6 @@ function mylu(A₁::Array{T}) where T # Strang, str. 100
     end
     return L,U
 end
-
-# ╔═╡ 696152e0-0d76-11eb-02d2-8b2209417bc2
-import Random
-
-# ╔═╡ b62492f0-0d7f-11eb-0e42-d377410cec70
-Random.seed!(123);
 
 # ╔═╡ 19567c60-0d82-11eb-3405-8d0312a34b5f
 begin
@@ -355,15 +362,12 @@ begin
 	U₀=triu(A₀)
 	L₀=tril(A₀)
 	for i=1:maximum(size(L₀))
-		L₀[i,i]=Matrix{Float64}(I,size(L₀[1,1])) # eye(L[1,1])
+		L₀[i,i]=one(L₀[1,1])
 	end
 end
 
-# ╔═╡ 642b68b0-0d85-11eb-01d7-734195427bd9
+# ╔═╡ e68e0a50-87de-11eb-1348-5135365bc28f
 L₀
-
-# ╔═╡ 46ecd28e-0dfb-11eb-1e7a-2d55904f621e
-L₀[1,1]
 
 # ╔═╡ 9615e1c0-0d85-11eb-161d-39a7eff4046f
 Rezidual=L₀*U₀-Ab
@@ -372,8 +376,8 @@ Rezidual=L₀*U₀-Ab
 # Pretvaranje blok matrice u običnu
 unblock(A) = mapreduce(identity, hcat, [mapreduce(identity, vcat, A[:,i]) for i = 1:size(A,2)])
 
-# ╔═╡ b307b3d0-0d85-11eb-25dc-83e2d3fbcb4f
-norm(unblock(Rezidual))
+# ╔═╡ c64b1170-87de-11eb-1bf1-8f695cd2ac73
+norm(Rezidual)
 
 # ╔═╡ 86f3ce48-73ce-4626-914f-478cf3ad1154
 md"""
@@ -452,7 +456,7 @@ md"""
 ### Potpuno pivotiranje
 
 Sljedeći program računa Gaussovu eliminaciju koristeći __potpuno pivotiranje__ - u svakom koraku 
-se retci i stupci zamijene takoda se na pivotnu poziciju dovede element koji ima najveću 
+se retci i stupci zamijene tako da se na pivotnu poziciju dovede element koji ima najveću 
 apsolutnu vrijednost u trenutnoj podmatrici.
 
 Rast elemenata je teoretski ograničen, ali ograda je $O(2^n)$, što nije korisno.
@@ -621,6 +625,9 @@ begin
 	A₃\(b₃+δb₃)
 end
 
+# ╔═╡ b085eb50-87e1-11eb-32eb-59dd03302d32
+norm(δb₃)/norm(b₃)
+
 # ╔═╡ 5179d372-0df1-11eb-0183-8bcc73149584
 begin
 	δA₃=[-0.001 0;0 0]
@@ -742,16 +749,6 @@ Izračunajmo približnu kondiciju Vandermondeove matrice iz prethodnog primjera.
  
 """
 
-# ╔═╡ e0964d99-9170-427e-92b0-061a83362e85
-md"""
-Izračunajmo rezidual za Vandermondeov sustav:
-"""
-
-# ╔═╡ 79d7e431-4090-4834-8ae3-da04f5517285
-md"""
-Zaključujemo da je rješenje $x_v$ izračunato stabilno, odnosno s vrlo malom pogreškom unatrag u početnim podatcima. To još uvijek ne znači da je rješenje relativno vrlo točno.
-"""
-
 # ╔═╡ 8707357c-84c9-4d30-aa81-1172d7ac715e
 # ?LAPACK.trcon!
 
@@ -844,9 +841,11 @@ Zaključujemo da je rješenje $x_v$ izračunato stabilno, odnosno s vrlo malom p
 
 # ╔═╡ Cell order:
 # ╟─63842a33-b596-4f3f-bde5-7953ec4dc840
+# ╟─22dc4490-8d6b-11eb-20ce-ed84c7206167
 # ╟─48167400-0d83-11eb-1c7d-359a2574c8b1
 # ╟─221d2474-de59-4042-918f-534305d8708f
 # ╠═89291e44-4ea6-4e74-99bd-a30e8ee4d895
+# ╠═7b998fd0-87d4-11eb-286a-fd35bcef317c
 # ╟─ed629240-6b9a-4a85-b412-97a06565a9cf
 # ╠═b8b17cd3-c828-438d-a2c0-13b1965ed778
 # ╟─eb5aab00-0d73-11eb-2f45-771b2e23a5e3
@@ -856,8 +855,6 @@ Zaključujemo da je rješenje $x_v$ izračunato stabilno, odnosno s vrlo malom p
 # ╟─c9bc269a-a306-4a35-acd8-aad3de58f56a
 # ╠═66fcc372-4f27-4092-9552-8eb6e863bd4a
 # ╠═53d8d8e0-0d7f-11eb-358f-3f001e5e7d78
-# ╠═696152e0-0d76-11eb-02d2-8b2209417bc2
-# ╠═b62492f0-0d7f-11eb-0e42-d377410cec70
 # ╠═19567c60-0d82-11eb-3405-8d0312a34b5f
 # ╠═1e51f7d0-0d82-11eb-238b-f1179d7f9a30
 # ╠═251a1cf0-0d82-11eb-3747-cf84a824570f
@@ -888,11 +885,10 @@ Zaključujemo da je rješenje $x_v$ izračunato stabilno, odnosno s vrlo malom p
 # ╠═21e796b0-0dfb-11eb-2493-6fe0d3c70180
 # ╠═24c23190-0d85-11eb-382d-2536a040dfc8
 # ╠═3d486c20-0d85-11eb-2c81-a7d99c190907
-# ╠═642b68b0-0d85-11eb-01d7-734195427bd9
-# ╠═46ecd28e-0dfb-11eb-1e7a-2d55904f621e
+# ╠═e68e0a50-87de-11eb-1348-5135365bc28f
 # ╠═9615e1c0-0d85-11eb-161d-39a7eff4046f
 # ╠═aa933e40-0d85-11eb-2141-d36ff3fc471b
-# ╠═b307b3d0-0d85-11eb-25dc-83e2d3fbcb4f
+# ╠═c64b1170-87de-11eb-1bf1-8f695cd2ac73
 # ╟─86f3ce48-73ce-4626-914f-478cf3ad1154
 # ╟─83801210-b142-4d11-8eac-5eab72a181b3
 # ╟─9a2ef752-2231-4282-aa5c-275894c21de5
@@ -926,6 +922,7 @@ Zaključujemo da je rješenje $x_v$ izračunato stabilno, odnosno s vrlo malom p
 # ╠═fd0b7230-0df0-11eb-1443-67ea60bb2b7f
 # ╠═1e4c2c00-0df1-11eb-2ca2-3b4f08d92e9a
 # ╠═2bff8ea0-0df1-11eb-08a3-375007f3f276
+# ╠═b085eb50-87e1-11eb-32eb-59dd03302d32
 # ╠═5179d372-0df1-11eb-0183-8bcc73149584
 # ╠═69b8cbd0-0df1-11eb-3fcd-a9f0865efdce
 # ╟─a47802e0-0df1-11eb-3f9f-2fe1ebc781fd
@@ -946,8 +943,6 @@ Zaključujemo da je rješenje $x_v$ izračunato stabilno, odnosno s vrlo malom p
 # ╠═af2b7680-0df2-11eb-2ff2-6b188cbd6b7f
 # ╠═af2dc072-0df2-11eb-2958-19fc8d01e81d
 # ╟─bfc0ea15-556f-4109-b626-cb724ee14bfd
-# ╟─e0964d99-9170-427e-92b0-061a83362e85
-# ╟─79d7e431-4090-4834-8ae3-da04f5517285
 # ╠═8707357c-84c9-4d30-aa81-1172d7ac715e
 # ╠═e38b8370-0df2-11eb-0ed5-ab750f73de17
 # ╠═11add0f0-0df3-11eb-2f01-5b985574b265

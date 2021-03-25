@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.12.4
+# v0.12.21
 
 using Markdown
 using InteractiveUtils
@@ -39,18 +39,18 @@ $$
 \frac{\| f(x+\delta x)-f(x)\|}{\| f(x) \|}= \frac{\| f(x+\delta x)-f(x)\|\cdot  \|x\| }{\|\delta x\| \cdot\| f(x)\|}
 \cdot \frac{\|\delta x\|}{\|x\|} \equiv \kappa \frac{\|\delta x\|}{\|x\|}$$
 
-$\kappa$ nam kazuje koliko se najviše relativno uveća relativna smetnja u ulaznim podacima.
+ $\kappa$ nam kazuje koliko se najviše relativno uveća relativna smetnja u ulaznim podacima.
 """
 
 # ╔═╡ 95835e70-25e3-4dc7-bbf9-8d5f23ce3e44
 md"""
 ## Pogreška unatrag
 
-Neka vrijednost funkcije $f(x)$ računamo pomoću algoritma $\mathrm{alg(x)}$.
+Neka vrijednost funkcije $f(x)$ računamo pomoću algoritma $\mathrm{alg}(x)$.
 __Pogreška algoritma__ je 
 
 $$
-\|\mathrm{alg(x)}-f(x)\|,$$
+\|\mathrm{alg}(x)-f(x)\|,$$
 
 a __relativna pogreška algoritma__ je 
 
@@ -78,11 +78,7 @@ $$
 za neki mali $ \delta x$.
 """
 
-# ╔═╡ dde7545e-04fe-4714-89a7-b817c35bf03f
-
-
 # ╔═╡ Cell order:
 # ╟─98b7578d-1bdb-4be9-a4de-e5cfef2df4db
 # ╟─95835e70-25e3-4dc7-bbf9-8d5f23ce3e44
 # ╟─63a8eeef-913c-4b0c-8cbc-9db8a07892b3
-# ╠═dde7545e-04fe-4714-89a7-b817c35bf03f

@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.12.6
+# v0.12.21
 
 using Markdown
 using InteractiveUtils
@@ -44,14 +44,14 @@ function mychol(A₁::Matrix{T}) where T
     A=copy(A₁)
     n,m=size(A)
     for k=1:n
-        A[k,k]=sqrt(A[k,k])
+        A[k,k]=√A[k,k]
         for j=k+1:n
             A[k,j]=A[k,j]/A[k,k]
         end
         for j=k+1:n
-            for i=k+1:n
-                A[i,j]=A[i,j]-A[k,i]*A[k,j]
-            end
+            for i=k+1:j
+                A[i,j]-=A[k,i]*A[k,j]
+			end
         end
     end
     return triu(A)
@@ -59,10 +59,8 @@ end
 
 # ╔═╡ ea4f0c1f-55e7-4423-a8df-b9de1889e511
 begin
-	begin
-		A=rand(6,6)
-		A=A*A'
-	end
+	A=rand(6,6)
+	A=A*A'
 end
 
 # ╔═╡ 26ab5250-1377-11eb-2824-69646a3f5444
@@ -93,6 +91,31 @@ L₁'*L₁-A
 # ╔═╡ 7decf367-ee06-401c-b742-b910e4b647a9
 L-L₁
 
+# ╔═╡ af9b1080-8d4f-11eb-02e4-97071de47db5
+md"
+## Cholesky rastav s pivotiranjem
+"
+
+# ╔═╡ bf6f0930-8d4f-11eb-28ce-7d1216521e8a
+Cₚ=cholesky(A,Val(true))
+
+# ╔═╡ d04b4a20-8d4f-11eb-030a-75b2da4964ed
+Cₚ.P
+
+# ╔═╡ efc9e18e-8d4f-11eb-0731-a7e83ca2fa59
+Lₚ=Cₚ.L
+
+# ╔═╡ e1a8f00e-8d4f-11eb-2dfa-1f02d40baf55
+Lₚ*Lₚ'-Cₚ.P'*A*Cₚ.P
+
+# ╔═╡ 13cb690e-8d50-11eb-0af4-9f2eb9733164
+Lₚ*Lₚ'-A[Cₚ.p,Cₚ.p]
+
+# ╔═╡ 8fe33ce0-8cdc-11eb-0b6a-c3632016d982
+md"
+## Blok matrice
+"
+
 # ╔═╡ Cell order:
 # ╟─70942b12-0bd1-44e6-8e04-862d4948e8a0
 # ╠═a808c71a-97bb-4106-89fd-dcc0e902d2cb
@@ -106,3 +129,10 @@ L-L₁
 # ╠═286a74e5-6a3b-41ee-a227-cb5d88dd027e
 # ╠═2e54b52f-2ba0-4de0-a7bf-73bf1c0d5b6f
 # ╠═7decf367-ee06-401c-b742-b910e4b647a9
+# ╟─af9b1080-8d4f-11eb-02e4-97071de47db5
+# ╠═bf6f0930-8d4f-11eb-28ce-7d1216521e8a
+# ╠═d04b4a20-8d4f-11eb-030a-75b2da4964ed
+# ╠═efc9e18e-8d4f-11eb-0731-a7e83ca2fa59
+# ╠═e1a8f00e-8d4f-11eb-2dfa-1f02d40baf55
+# ╠═13cb690e-8d50-11eb-0af4-9f2eb9733164
+# ╟─8fe33ce0-8cdc-11eb-0b6a-c3632016d982

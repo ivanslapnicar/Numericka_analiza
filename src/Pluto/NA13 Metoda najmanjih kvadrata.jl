@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.12.8
+# v0.12.21
 
 using Markdown
 using InteractiveUtils
@@ -109,7 +109,7 @@ x=(A'*A)\(A'*b)
 begin
 	# Kvaliteta prilagodbe
 	using LinearAlgebra
-	q=sqrt(norm(A*x-b)/norm(b))
+	q=√(norm(A*x-b)/norm(b))
 end
 
 # ╔═╡ 1052a0b7-748d-46d5-a5fb-9d3b1ba2b65e
@@ -117,8 +117,8 @@ md"
 Ako je sustav predefiniran, standardna naredba `\` odmah računa kvadratičnu prilagodbu, pri čemu se koristi QR rastav.
 "
 
-# ╔═╡ de2b7ecb-df68-4280-a23b-d11bff24aa78
-float(A)\float(b)
+# ╔═╡ a0dbeff0-8d5f-11eb-0c1a-bb82ced59a92
+A\b
 
 # ╔═╡ d8458b22-f8b3-4fda-8351-3abe5af8dc46
 float(x)
@@ -140,13 +140,13 @@ end
 x₁=A₁\b₁
 
 # ╔═╡ 73d14810-4471-40ad-b1ca-f1d210ad2eb2
-q₁=sqrt(norm(A₁*x₁-b₁)/norm(b₁))
+q₁=√(norm(A₁*x₁-b₁)/norm(b₁))
 
 # ╔═╡ f7f6d6b8-44cc-4337-a601-3c4c5ef3fb77
 md"""
 ## Teorija smetnje
 
-__Osjetljivost problema najmanjih kvadarata__ dana je sljedećim ocjenama (vidi [Matrix Computations, poglavlje 5](https://books.google.hr/books?id=X5YfsuCWpxMC&printsec=frontcover&hl=hr#v=onepage&q&f=false)).
+__Osjetljivost problema najmanjih kvadarata__ dana je sljedećim ocjenama (vidi [Matrix Computations, poglavlje 5, str. 266](https://books.google.hr/books?id=X5YfsuCWpxMC&printsec=frontcover&hl=hr#v=onepage&q&f=false)).
 
 Za matricu $A$ __kondiciju__ definiramo na sljedeći način:
 
@@ -239,7 +239,7 @@ Dakle, relativna pogreška rješenja dobivenog pomoću metode normalnih jednadž
 # ╠═d6e05d5d-6878-4865-934a-6d8846f1d157
 # ╠═49874317-1bb6-4882-ae83-4644094bf87e
 # ╟─1052a0b7-748d-46d5-a5fb-9d3b1ba2b65e
-# ╠═de2b7ecb-df68-4280-a23b-d11bff24aa78
+# ╠═a0dbeff0-8d5f-11eb-0c1a-bb82ced59a92
 # ╠═d8458b22-f8b3-4fda-8351-3abe5af8dc46
 # ╟─c2f32713-6b34-4c34-9180-d759039891c5
 # ╠═d92d5bed-8689-481f-b56f-d46fa4f835c1

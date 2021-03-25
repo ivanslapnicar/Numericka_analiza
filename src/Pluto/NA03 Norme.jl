@@ -19,7 +19,7 @@ md"""
 
 Općenito, __norma__ na vektorskom prostoru $X$ je svaka funkcija $\| \phantom{x} \| : X\to \mathbb{R}$ sa sljedećim svojstvima:
 
-1.  $\| x\|=0\| \Leftrightarrow x=0$
+1.  $\| x\|=0 \Leftrightarrow x=0$
 2.  $\| \lambda x\|=|\lambda| \|x\|$
 3.  $\| x+y\| \leq \|x\|+\|y\|  \qquad$ (nejednakost trokuta)
 
@@ -35,9 +35,9 @@ $$\|x\|_p=\big(\sum_{i=1}^n |x_i|^p\big)^{1/p}$$
 
 Posebno:
 
-* $\|x\|_1=\sum_{i=1}^n |x_i|$
-* $\|x\|_2=\sqrt{\sum_{i=1}^n x_i^2}= \sqrt{x\cdot x}$
-* $\|x\|_\infty = \max\limits_{i=1,\ldots,n} |x_i|$
+*  $\|x\|_1=\sum_{i=1}^n |x_i|$
+*  $\|x\|_2=\sqrt{\sum_{i=1}^n x_i^2}= \sqrt{x\cdot x}$
+*  $\|x\|_\infty = \max\limits_{i=1,\ldots,n} |x_i|$
 """
 
 # ╔═╡ c1ffcca3-d537-4c4f-86b1-87215325c115
@@ -53,9 +53,9 @@ $$\|A\| = \max\limits_{x\neq 0} \frac{\|Ax\|}{\|x\|}=\max\limits_{\|x\|=1} \|Ax\
 
 Posebno:
 
-* $\|A\|_1=\max\limits_{j=1:n} \sum_{i=1}^n |a_{ij}|$  - najveća 1-norma stupca
-* $\|A\|_{\infty}=\max\limits_{i=1:n} \sum_{j=1}^n |a_{ij}|$ - najveća 1-norma retka
-* $\|A\|_2$ - najveća singularna vrijednost  matrice $A$
+*  $\|A\|_1=\max\limits_{j=1:n} \sum_{i=1}^n |a_{ij}|$  - najveća 1-norma stupca
+*  $\|A\|_{\infty}=\max\limits_{i=1:n} \sum_{j=1}^n |a_{ij}|$ - najveća 1-norma retka
+*  $\|A\|_2$ - najveća singularna vrijednost  matrice $A$
 
 __Frobeniusova__ ili __Euklidska__ norma
 
@@ -73,7 +73,8 @@ $$
 A=rand(-4:4,5,5)
 
 # ╔═╡ 10bc88f1-3675-4446-b31a-033848b6160e
-norm(A,1), norm(A), norm(A,2), norm(A,Inf), opnorm(A),maximum(svdvals(A))
+norm(A,1), norm(A), norm(A,2), norm(A,Inf), opnorm(A),
+maximum(svdvals(A)), opnorm(A,1), opnorm(A,Inf)
 
 # ╔═╡ 196d75ee-c304-4501-8ee3-b685d2fc2a65
 md"""

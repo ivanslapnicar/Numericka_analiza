@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.12.4
+# v0.12.21
 
 using Markdown
 using InteractiveUtils
@@ -7,7 +7,7 @@ using InteractiveUtils
 # ╔═╡ 5aba7e24-0424-45f2-9716-3b32a71fc610
 begin
 	using LinearAlgebra
-	function myjacobi(A::Array,b::Array,x::Array)
+	function Jacobi(A::Array,b::Array,x::Array)
 	    D=Diagonal(A)
 	    L=inv(D)*tril(A,-1)
 	    U=inv(D)*triu(A,1)
@@ -20,7 +20,7 @@ begin
 	    while d>tol
 	        y=B*x+c
 	        d=norm(x-y,Inf)
-	        # @show d
+	        @show d
 	        x=y
 	    end
 	    x,d
@@ -143,11 +143,11 @@ Pogledajmo kako izgleda rastav na faktore $A=D(L+I+U)$:
 begin
 	import Random
 	Random.seed!(123)
-	n=8
-	A=rand(n,n)
+	n=5
+	A=randn(n,n)
 	# Napravimo matricu dijagonalno dominantnom
 	A=A+n*I
-	b=rand(n)
+	b=randn(n)
 end
 
 # ╔═╡ f1da40d0-1386-11eb-1102-698c5a0ac84a
@@ -171,7 +171,7 @@ x₀=rand(n)
 
 # ╔═╡ 91b52c67-de20-4bfc-9da6-3e04ed73b990
 # x je rješenje, d je norma razlike dvije zadnje iteracije
-x,d=myjacobi(A,b,x₀)
+x,d=Jacobi(A,b,x₀)
 
 # ╔═╡ 0d07f057-9012-42ad-bf52-31a0f14614df
 # Rezidual
@@ -182,7 +182,7 @@ r=A*x-b
 norm(r)/(norm(A)*norm(x))
 
 # ╔═╡ adbd72cb-4dcf-490b-bbcb-1d681358c455
-function mygaussseidel(A::Array,b::Array,x::Array)
+function GaussSeidel(A::Array,b::Array,x::Array)
     D=Diagonal(A)
     L=inv(D)*tril(A,-1)
     U=inv(D)*triu(A,1)
@@ -192,18 +192,18 @@ function mygaussseidel(A::Array,b::Array,x::Array)
     B=-(I+L)\U
     c=(I+L)\(inv(D)*b)
     # @show norm(U,Inf)
-    y=Vector{Float64}(undef,n)
+    # y=Vector{Float64}(undef,n)
     while d>tol
         y=B*x+c
         d=norm(x-y)
-		# @show d
+		@show d
         x=y
     end
     x,d
 end
 
 # ╔═╡ 9ae4a166-f3ee-4850-89ff-4c0a41bae48c
-xᵧ,dᵧ=mygaussseidel(A,b,x₀)
+xᵧ,dᵧ=GaussSeidel(A,b,x₀)
 
 # ╔═╡ 4a832be5-26c0-46fa-bcbb-3afb4eb0cf2e
 # Rezidual
@@ -224,14 +224,14 @@ begin
 end
 
 # ╔═╡ 8794b613-ddab-4fa9-82e6-eec4192705dd
-@time mygaussseidel(A₁,b₁,x₁);
+@time GaussSeidel(A₁,b₁,x₁);
 
 # ╔═╡ 02d632a3-3ab8-4b02-ba94-709880df6313
 @time A\b;
 
 # ╔═╡ aba2f7f6-8690-4ede-8282-ad925e4aae8d
 md"""
-__Zadatak.__ Probajte preraditi programe tako da alociraju manje memorije.
+__Zadatak.__ Analizirajte korištenje memorije i probajte preraditi programe tako da alociraju manje memorije.
 """
 
 # ╔═╡ 76473de1-3b58-4162-a442-eb9f189d111a

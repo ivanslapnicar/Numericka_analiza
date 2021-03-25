@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.12.12
+# v0.12.21
 
 using Markdown
 using InteractiveUtils
@@ -82,7 +82,7 @@ scatter(1:length(diag(R.R,1)),abs.(diag(R.R)),
     title="Diagonal elements of matrix R",legend=false)
 
 # ╔═╡ d7fd21c0-25ae-11eb-217c-51b165642c9b
-@bind k Slider(10:10:200)
+@bind k Slider(10:10:200,show_value=true)
 
 # ╔═╡ feebc2d6-e495-4145-8e90-3b0d7d073d04
 begin

@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.12.10
+# v0.12.21
 
 using Markdown
 using InteractiveUtils
@@ -19,7 +19,7 @@ md"""
 md"""
 ## Doba pretraživanja
 
-google (and others)
+google (i ostali)
 
 
 * [50 milijardi stranica](http://www.worldwidewebsize.com/), [3.5 milijardi pretraga dnevno](http://www.internetlivestats.com/google-search-statistics/)
@@ -177,6 +177,9 @@ W=readdlm("../files/web-Stanford.txt",Int,comments=true)
 # ╔═╡ 573a625a-ad1c-4133-bae3-342a7501b492
 S=sparse(W[:,2],W[:,1],1.0)
 
+# ╔═╡ 0b9a7940-8d5d-11eb-372b-b7a6c4fc2596
+length(S.nzval)
+
 # ╔═╡ 83fdc63f-4aac-45c0-a226-87a4830f697e
 @time x100=PageRank(S,100)
 
@@ -226,6 +229,7 @@ sortperm(x100,rev=true)
 # ╠═47394960-0f02-11eb-1ddf-cb6b81f096b4
 # ╠═86ca6760-1382-11eb-1e44-0ff4051234a0
 # ╠═573a625a-ad1c-4133-bae3-342a7501b492
+# ╠═0b9a7940-8d5d-11eb-372b-b7a6c4fc2596
 # ╠═83fdc63f-4aac-45c0-a226-87a4830f697e
 # ╠═b473be54-b1a2-4f34-80d8-742386c9535b
 # ╠═d94eacf3-0008-4e8c-a5cd-a92fa1fd76d4
