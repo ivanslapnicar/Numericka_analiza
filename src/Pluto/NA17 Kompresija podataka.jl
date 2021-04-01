@@ -64,7 +64,7 @@ begin
 	# Izračunajmo QR rastav s pivotiranjem matrice svakog kanala
 	R=qr(Red,Val(true))
 	G=qr(Green,Val(true))
-	B=qr(Blue,Val(true));
+	B=qr(Blue,Val(true))
 end
 
 # ╔═╡ 824b17f0-348b-11eb-30e2-9b12415490a3
@@ -74,12 +74,13 @@ R.R
 R.R[570:576,570:590]
 
 # ╔═╡ 32420d34-f066-4fdc-a488-15c4482640d8
-norm(R.Q*R.R[:,invperm(R.p)]-float(Red))
+# Rezidual
+norm(R.Q*R.R[:,invperm(R.p)]-Red)
 
 # ╔═╡ c16bd7ca-a403-4f1b-adba-f0e9a028b14b
 # Nacrtajmo dijagonalne elemente
 scatter(1:length(diag(R.R,1)),abs.(diag(R.R)),
-    title="Diagonal elements of matrix R",legend=false)
+    title="Diagonal elements of matrix R",legend=false,ms=2)
 
 # ╔═╡ d7fd21c0-25ae-11eb-217c-51b165642c9b
 @bind k Slider(10:10:200,show_value=true)

@@ -9,7 +9,6 @@ begin
 	using LinearAlgebra
 	using Plots
 	import Random
-	Random.seed!(123)
 end
 
 # ╔═╡ e0f03ec0-f136-411f-a270-bcc85fde0579
@@ -42,9 +41,10 @@ U odnosu na rješenje pomoću Gaussove eliminacije vrijedi:
 
 # ╔═╡ d0aa1de2-f2e5-4c59-b7ce-a0022bf6dbef
 begin
+	Random.seed!(123)
 	n=10
-	A=rand(n,n)
-	b=rand(n)
+	A=randn(n,n)
+	b=randn(n)
 	Q,R=qr(A)
 	c=transpose(Q)*b
 	# Trokutasti sustav
@@ -53,7 +53,7 @@ end
 
 # ╔═╡ fbfa49ba-8c53-4fdf-ae26-d9b678fcce2e
 # Rezidual
-A*x-b
+norm(A*x-b)
 
 # ╔═╡ 45923270-4d63-4eaf-8d99-f9e9baab558e
 md"""
@@ -107,8 +107,8 @@ begin
 	# Veći primjer
 	m₂=8
 	n₂=5
-	A₂=rand(m₂,n₂)
-	b₂=rand(m₂)
+	A₂=randn(m₂,n₂)
+	b₂=randn(m₂)
 	F₂=qr(A₂)
 end
 
@@ -118,6 +118,17 @@ F₂.R
 # ╔═╡ d01748e8-169d-4d39-bf79-90c0c0d2df56
 # Spremanje generatora
 F₂.factors
+
+# ╔═╡ 0a0e0ea0-92c8-11eb-21d5-f3bb0e0946f0
+A₂
+
+# ╔═╡ f4b9b30e-92c7-11eb-0c68-a91a2bd974ff
+begin
+	a=A₂[:,1]
+	v=copy(a)
+	v[1]+=norm(a)
+	v./=v[1]
+end
 
 # ╔═╡ ab0d603e-4e1f-4ec9-a247-c9c78c9e6488
 begin
@@ -156,7 +167,7 @@ begin
 	Qₒ=Matrix(Fₒ.Q)*sign.(Diagonal(Fₒ.R))
 end
 
-# ╔═╡ 68d56539-22ab-4a89-ad51-fb3c2f37ee8d
+# ╔═╡ 31fb59d0-92c9-11eb-2aef-19e75eab1844
 plot(xₒ,Qₒ,title="Legendreovi polinomi",label=["L₀" "L₁" "L₂" "L₃" "L₄" "L₅"])
 
 # ╔═╡ 4b343213-f8d2-45d3-bae8-999dee675089
@@ -186,7 +197,7 @@ end
 
 # ╔═╡ e0bf68c5-1e30-4621-871b-47eb71bfd2bb
 begin
-	x₃=range(-0.99,stop=0.99,length=101)
+	x₃=range(-0.99,stop=0.99,length=199)
 	ω=1 ./(sqrt.(1.0.-x₃.^2))
 	# Kvazi Vandermonde-ova matrica
 	V₃=[x₃.^0 x₃.^1 x₃.^2 x₃.^3 x₃.^4 x₃.^5]
@@ -220,13 +231,15 @@ poprimaju sve vrijednosti u intervalu $[-1,1]$.
 # ╠═881daa94-e922-4b76-bca3-6b255049ba67
 # ╠═16461985-6cb3-4ddb-9eab-bd13917b8b69
 # ╠═d01748e8-169d-4d39-bf79-90c0c0d2df56
+# ╠═0a0e0ea0-92c8-11eb-21d5-f3bb0e0946f0
+# ╠═f4b9b30e-92c7-11eb-0c68-a91a2bd974ff
 # ╠═ab0d603e-4e1f-4ec9-a247-c9c78c9e6488
 # ╠═f97a14a2-1e13-4a2d-81a6-c848666dbbfe
 # ╟─0ad1e3dc-e5d4-416a-b3e0-21fd710ed241
 # ╠═24ac4e43-b99d-439e-aa6b-ba3bc494b8dd
 # ╠═9006213a-325f-4296-a0ec-d5c02b4ec5e8
 # ╠═f157bb76-8445-4994-b08e-260b2a51ad51
-# ╠═68d56539-22ab-4a89-ad51-fb3c2f37ee8d
+# ╠═31fb59d0-92c9-11eb-2aef-19e75eab1844
 # ╟─4b343213-f8d2-45d3-bae8-999dee675089
 # ╠═830acec9-74f1-4b02-a5f7-b65b05f457ef
 # ╠═e0bf68c5-1e30-4621-871b-47eb71bfd2bb

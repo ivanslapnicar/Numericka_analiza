@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.12.8
+# v0.12.21
 
 using Markdown
 using InteractiveUtils
@@ -90,8 +90,7 @@ begin
 	for k=2:n
 	    P[k]=x^(k-1)
 	    for j=1:k-1
-	        P[k]=P[k]-SymPy.integrate(x->x^(k-
-					1)*P[j]*ω(x),a,b)*P[j]/SymPy.integrate(x->P[j]*P[j]*ω(x),a,b)
+	        P[k]=P[k]-SymPy.integrate(x->x^(k-1)*P[j]*ω(x),a,b)* P[j]/SymPy.integrate(x->P[j]*P[j]*ω(x),a,b)
 	    end
 	end
 end
@@ -166,6 +165,12 @@ $$L_{n+1}(x)=\frac{2n+1}{n+1}\,x\, L_n(x)-\frac{n}{n+1} L_{n-1}(x).$$
 Izračunajmo polinome numerički i nacrtajmo ih:
 """
 
+# ╔═╡ dff87720-92c4-11eb-3dfb-932ee0cc1851
+Polynomial([1])
+
+# ╔═╡ e99e40be-92c4-11eb-1982-c327e938c76d
+Polynomial([0,1,1,1,1])
+
 # ╔═╡ 83b09ece-0e8c-40c9-83a0-2204bba04323
 begin
 	n₁=40
@@ -181,14 +186,9 @@ end
 # ╔═╡ dfb312e7-4c8d-456b-aa91-8813781070bd
 Lₙ[7]
 
-# ╔═╡ 650903cb-3ec5-461c-8a84-6f431721d73f
-begin
-	xx=range(-1,stop=1,length=301)
-	# Probajte razne vrijednosti k od 1 do 40
-	kk=20
-	yy=Lₙ[kk].(xx)
-	Plots.plot(xx,yy)
-end
+# ╔═╡ 228bec1e-92c5-11eb-0843-d35d6247ccb1
+# Samo za mali n
+plot(Lₙ[7],-1,1)
 
 # ╔═╡ 1ddfa099-4b1f-4be4-9954-8616d4d7d59a
 md"""
@@ -206,7 +206,7 @@ $$
 $$
 T_n(x)=\cos(n\arccos x),\quad n=0,1,2,3,\ldots,$$
 
-* $T_n(x)$  ima $n$ različitih nul-točaka na intervalu $[-1,1]$, 
+*  $T_n(x)$  ima $n$ različitih nul-točaka na intervalu $[-1,1]$, 
 
 $$
 x_k=\cos \bigg(\frac{2k-1}{n}\frac{\pi}{2} \bigg), \quad k=1,\ldots,n,$$
@@ -267,7 +267,7 @@ end
 
 # ╔═╡ c9a60766-b6a8-494a-886f-a3452d92a6d6
 begin
-	xx₁=range(-1,stop=1,length=300)
+	xx₁=range(-1,stop=1,length=201)
 	# Probajte razne vrijednosti k od 1 do 50
 	k=27
 	yy₁=Tₙ[k].(xx₁)
@@ -287,25 +287,27 @@ prelazi u ortogonalni sustav funkcija na intervalu $[a,b]$
 
 $$
 \Psi_i(x)=\Phi_i(\gamma(x)).$$
+
+Nama je potrebna inverzna transformacija:
+
+$$
+x=\frac{a+b}{2}+\frac{b-a}{2}\gamma(x).$$
 """
 
 # ╔═╡ 3665633e-4cea-423b-81bb-b7697c75ffd0
 begin
 	a₁=1
 	b₁=4
-	xx₂=collect(range(a,stop=b,length=300))
-	γ=2*xx₂/(b₁-a₁).-(b₁+a₁)/(b₁-a₁)
+	γ=copy(xx₁)
+	xx₂=(b₁+a₁)/2 .+(b₁-a₁)/2*γ
 	# Probajte razne vrijednosti k od 1 do 50
 	k₂=17
 	yy₂=Tₙ[17].(γ)
-	# plot(xx₂,yy₂)
+	plot(xx₂,yy₂)
 end
 
 # ╔═╡ 57b29a00-1e7d-11eb-2846-03fb58c68173
 Tₙ[8].(γ)
-
-# ╔═╡ 20f09792-7e03-4003-8261-a34d3ed1b3a5
-γ
 
 # ╔═╡ Cell order:
 # ╟─fdd0be01-c2a2-42c2-9a9b-1fcca24303f9
@@ -327,9 +329,11 @@ Tₙ[8].(γ)
 # ╠═2ac8adab-18a5-4b4e-bcb3-d4e777fd9c55
 # ╠═11f09cbf-a386-43fb-9b02-1a0303ee4e0f
 # ╟─2e40d6a7-a59c-4342-9246-1c347e715795
+# ╠═dff87720-92c4-11eb-3dfb-932ee0cc1851
+# ╠═e99e40be-92c4-11eb-1982-c327e938c76d
 # ╠═83b09ece-0e8c-40c9-83a0-2204bba04323
 # ╠═dfb312e7-4c8d-456b-aa91-8813781070bd
-# ╠═650903cb-3ec5-461c-8a84-6f431721d73f
+# ╠═228bec1e-92c5-11eb-0843-d35d6247ccb1
 # ╟─1ddfa099-4b1f-4be4-9954-8616d4d7d59a
 # ╠═9f7e3056-817e-4469-9807-db2c813b9f9e
 # ╠═46efd454-fe33-4ae2-a354-125538158172
@@ -340,4 +344,3 @@ Tₙ[8].(γ)
 # ╟─a2eda751-ca8f-48bc-ae2a-cfab8d24c2f0
 # ╠═57b29a00-1e7d-11eb-2846-03fb58c68173
 # ╠═3665633e-4cea-423b-81bb-b7697c75ffd0
-# ╠═20f09792-7e03-4003-8261-a34d3ed1b3a5
