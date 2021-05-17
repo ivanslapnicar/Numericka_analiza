@@ -1,8 +1,14 @@
 ### A Pluto.jl notebook ###
-# v0.12.18
+# v0.14.4
 
 using Markdown
 using InteractiveUtils
+
+# ╔═╡ 0f6cd296-6cb8-4a9d-a21f-02b689dfe4e9
+begin
+	using PlutoUI
+	PlutoUI.TableOfContents(aside=true)
+end
 
 # ╔═╡ 646a9fc2-3a73-4f8d-a952-2cdcf0e6287a
 begin
@@ -44,11 +50,11 @@ md"""
 
 Typical example of bipartite graph is a graph obtained from a collection of documents presented as a _term $\times$ document_  matrix.
 
-## Prerequisites
+__Prerequisites__
 
 The reader should be familiar with k-means algorithm and spectral graph partitioning theory and algorithms.
  
-## Competences 
+__Competences__
 
 The reader should be able to apply spectral partitioning of bipartite graphs to data clustering problems.
 
@@ -59,29 +65,20 @@ __Credits.__ The notebook was initially derived from M.Sc. Thesis of Ivančica M
 md"""
 ## Definitions
 
-__Undirected bipartite graph__ $G$ is a triplet 
-$G=(T,D,E)$, where $T=\{t_{1},\cdots ,t_{m}\}$ and 
-$D=\{d_{1},...,d_{n}\}$ are two sets of vertices and
-$E=\{(t_{i},d_{j}):t_{i}\in R,d_{j}\in D\}$, 
-is a set of edges.
+__Undirected bipartite graph__ $G$ is a triplet $G=(T,D,E)$, where $T=\{t_{1},\cdots ,t_{m}\}$ and $D=\{d_{1},...,d_{n}\}$ are two sets of vertices and $E=\{(t_{i},d_{j}):t_{i}\in R,d_{j}\in D\}$, is a set of edges.
 
-$G$ is __weighted__ if there is weight $\omega(e)$ associated with each edge $e\in E$.
+ $G$ is __weighted__ if there is weight $\omega(e)$ associated with each edge $e\in E$.
 
-For example, $D$ is a set of documents, 
-$T$ is a set of terms (words) and  edge $e=(t_{i},d_{j})$ exists if
-document $d_{j}$ contains term $t_{i}$. Weight $\omega(e)$ can be number of appearances 
-of the term $t_i$ in the document $d_j$.
+For example, $D$ is a set of documents, $T$ is a set of terms (words) and  edge $e=(t_{i},d_{j})$ exists if document $d_{j}$ contains term $t_{i}$. Weight $\omega(e)$ can be number of appearances of the term $t_i$ in the document $d_j$.
 
-A __term-by-document-matrix__ is a matrix $A\in\mathbb{R}^{m\times n}$ with 
-$A_{ij}=\omega((t_i,d_j))$.
+A __term-by-document-matrix__ is a matrix $A\in\mathbb{R}^{m\times n}$ with $A_{ij}=\omega((t_i,d_j))$.
 """
 
 # ╔═╡ fddcc2a7-f718-4900-a135-764eb36496a7
 md"""
 ## Facts
 
-1. The weight matrix of $G$ is 
-$W=\begin{bmatrix}0 & A \\ A^{T} & 0 \end{bmatrix}$.
+1. The weight matrix of $G$ is $W=\begin{bmatrix}0 & A \\ A^{T} & 0 \end{bmatrix}$.
 
 2. The Laplacian matrix of $G$ is
 
@@ -104,15 +101,16 @@ I & -\Delta_{1}^{-\frac{1}{2}}A\Delta_{2}^{-\frac{1}{2}} \\
 
 # ╔═╡ b3b44560-203a-11eb-2782-170e4c12627a
 md"""
-4. Let $\lambda$ be an eigenvalue of $L_n$ with an eigenvector $w=\begin{bmatrix} u \\ v\end{bmatrix}$, where $u\in \mathbb{R}^{m}$ $v\in\mathbb{R}^{n}$.
-Then $L_n w=\lambda w$ implies
-$A_n v =(1-\lambda)u$ and $A_n^T u=(1-\lambda)v$. Vice versa, if $(u,\sigma,v)$ is a singular triplet of $A_n$, then $1-\sigma$ is an eigenvalue of $L_n$ with (non-unit) eigenvector $w=\begin{bmatrix} u \\ v\end{bmatrix}$. 
+4. Let $\lambda$ be an eigenvalue of $L_n$ with an eigenvector $w=\begin{bmatrix} u \\ v\end{bmatrix}$, where $u\in \mathbb{R}^{m}$ $v\in\mathbb{R}^{n}$. Then $L_n w=\lambda w$ implies $A_n v =(1-\lambda)u$ and $A_n^T u=(1-\lambda)v$. Vice versa, if $(u,\sigma,v)$ is a singular triplet of $A_n$, then $1-\sigma$ is an eigenvalue of $L_n$ with (non-unit) eigenvector $w=\begin{bmatrix} u \\ v\end{bmatrix}$. 
 
 5. The second largest singular value of $A_n$ corresponds to the second smallest eigenvalue of $L_n$, and computing the former is numerically more stable. 
 """
 
 # ╔═╡ 1be90f30-203b-11eb-34da-c3116523ec3a
 md"
+
+## Algorithms
+
 ### Bipartitioning algorithm
 
 1. For given $A$ compute $A_{n}$.
@@ -129,7 +127,7 @@ md"
 2. While $c<k$ repeat
 
    - compute bipartitions of each of the subpartitions of $(T,D)$,
-   - among all $(c+1)$-subpartitions, choose the one with the smallest $pcut(\pi_{c+1})$ or $ncut(\pi_{c+1})$, respectively.
+   - among all $(c+1)$-subpartitions, choose the one with the smallest $\mathop{\mathrm{pcut}}(\pi_{c+1})$ or $\mathop{\mathrm{ncut}}(\pi_{c+1})$, respectively.
    - Set $c=c+1$
 
 3. Stop
@@ -145,7 +143,9 @@ md"
 
 # ╔═╡ 1bc20329-3a6e-435d-a25c-8cce79fb7d9d
 md"
-## Small term-by- document matrix
+## Examples
+
+### Small term-by- document matrix
 "
 
 # ╔═╡ b9d0830a-0a33-40c1-a08a-49538cf7a879
@@ -297,6 +297,7 @@ begin
 end
 
 # ╔═╡ Cell order:
+# ╟─0f6cd296-6cb8-4a9d-a21f-02b689dfe4e9
 # ╟─89299cb7-a4eb-48f3-b3f1-ab2b5c6cfa2e
 # ╟─a92d0e70-479d-444e-b06d-e47d2e385b10
 # ╟─fddcc2a7-f718-4900-a135-764eb36496a7

@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.12.18
+# v0.14.4
 
 using Markdown
 using InteractiveUtils
@@ -23,10 +23,12 @@ Package `TextAnalysis.jl` has some needed functionality.
 " 
 
 # ╔═╡ 30498550-2071-11eb-0f6b-33372a37909e
+# Uncoment this block to download files. You may need to crete directory 
+# "../files/Mat1/node$i.html" manually.
 #=
 for i=1:144
 	download("http://www.mathematics.digital/matematika1/predavanja/node$i.html","../files/Mat1/node$i.html")
-end
+end 
 =#
 
 # ╔═╡ 621ed340-2072-11eb-1742-3b4d0b042fb9
@@ -35,7 +37,7 @@ n=144
 
 # ╔═╡ b59d17a0-2100-11eb-27de-c3196ecc1268
 md"
-__N.B.__ Added `ii,iii,iv,v,nbsp,times,home` to `Languages/.../data/stopwords/Croatian.txt`.
+__N.B.__ Added `ii,iii,iv,v,nbsp,times,home` to `Languages/.../data/stopwords/Croatian.txt`. Correct the filename if it is `Croation.txt`.
 "
 
 # ╔═╡ 08057a10-20dd-11eb-300e-f52ff0eaf35f

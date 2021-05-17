@@ -1,8 +1,14 @@
 ### A Pluto.jl notebook ###
-# v0.12.18
+# v0.14.4
 
 using Markdown
 using InteractiveUtils
+
+# ╔═╡ 7ef4b0b3-9d0a-4356-bd16-14487f14e0ab
+begin
+	using PlutoUI
+	PlutoUI.TableOfContents(aside=true)
+end
 
 # ╔═╡ 0cd92d78-1da6-435b-ad8e-60af29502e1d
 begin
@@ -23,16 +29,15 @@ end
 md"""
 # Spectral Graph Bipartitioning
 
-Many data clustering problems can be interpreted as clustering of vertices of graphs.
-__Graph bipartitioning problem__ is to partition vertices into subsets such that the connections within subsets are stronger than the connections between different subsets.
+Many data clustering problems can be interpreted as clustering of vertices of graphs. __Graph bipartitioning problem__ is to partition vertices into subsets such that the connections within subsets are stronger than the connections between different subsets.
 
 Partition of the vertices into two subsetts is done according to signs of the eigenvectors of the second smallest eigenvalue of the Laplacian matrix. 
 
-## Prerequisites
+__Prerequisites__
 
 The reader should be familiar with the basic graph theory, linear algebra and, in particular,  eigenvalues and eigenvectors.
  
-## Competences 
+__Competences__
 
 The reader should be able to apply graph spectral bipartitioning and recursive bipartitioning to data clustering problems.
 
@@ -41,14 +46,11 @@ __Credits.__ The notebook was initially derived from M.Sc. Thesis of Ivančica M
 
 # ╔═╡ 5926c79a-6038-4dbc-b49a-5b05d02250a0
 md"""
-## Graphs
+# Graphs
 
-For more details, see 
-[W. H. Haemers, Matrices and Graphs, in L. Hogben, Ed., 'Handbook of Linear Algebra', pp. 39.1-39.14, CRC Press, Boca Raton, 2014.](https://www.routledge.com/Handbook-of-Linear-Algebra/Hogben/p/book/9781138199897)
-and [S. Butler and F. Chung, Spectral Graph Theory, ibid., pp. 47.1-47.6](https://www.routledge.com/Handbook-of-Linear-Algebra/Hogben/p/book/9781138199897)
-and the references therein.
+For more details, see [W. H. Haemers, Matrices and Graphs, in L. Hogben, Ed., 'Handbook of Linear Algebra', pp. 39.1-39.14, CRC Press, Boca Raton, 2014.](https://www.routledge.com/Handbook-of-Linear-Algebra/Hogben/p/book/9781138199897) and [S. Butler and F. Chung, Spectral Graph Theory, ibid., pp. 47.1-47.6](https://www.routledge.com/Handbook-of-Linear-Algebra/Hogben/p/book/9781138199897) and the references therein.
 
-### Definitions
+## Definitions
 
 A __weighted graph__ is an ordered triplet $G=(V,E,\omega)$, where $V=\{1,2,3,...,n\}$ is the set of __vertices__ , $E=\{(i,j)\}$ is a set of __edges__ connecting vertices, and $\omega$ is a set of __weights__ of edges. We assume $G$ is undirected.
 """
@@ -171,14 +173,13 @@ Iᵧ=IncidenceMatrix(G,wn)
 
 # ╔═╡ 6529324b-49f7-4f01-b5cd-33668979b56b
 md"""
-### Facts
+## Facts
 
 1.  $L=I_{G}I_{G}^{T}$.
 
 2.  $L$ is symmetric PSD matrix.
 
-3.  $L\mathbf{1}=0$ for $\mathbf{1}=[1,...,1]^{T}$, thus $0$ is an eigenvalue of $L$ 
-and $\mathbf{1}$ is the corresponding eigenvector.
+3.  $L\mathbf{1}=0$ for $\mathbf{1}=[1,...,1]^{T}$, thus $0$ is an eigenvalue of $L$  and $\mathbf{1}$ is the corresponding eigenvector.
 
 4. If $G$ has $c$ connected components, then $L$ has $c$ eigenvalues equal to $0$.
 
@@ -211,6 +212,9 @@ norm(L-Iᵧ*Iᵧ')
 # Facts 2 and 7
 issymmetric(L), eigs(L)[1], 2*maximum(diag(L))
 
+# ╔═╡ 7192f7d0-28b9-11eb-28dd-8db0019504ca
+eigen(Matrix(L))
+
 # ╔═╡ e5890dca-368f-437e-bc45-6a395714dae2
 # Fact 3
 L*ones(n)
@@ -235,9 +239,9 @@ eigvals(Lₙ)
 
 # ╔═╡ 9f31928e-c933-43bb-9a5c-bf55f29737cd
 md"""
-## Bipartitioning
+# Bipartitioning
 
-### Definitions
+## Definitions
 
 Let $\pi=\{V_{1},V_{2}\}$ be a partition of $V$ with $V_1,V_2\neq \emptyset$.
 
@@ -246,7 +250,7 @@ edges between $V_1$ and $V_2$,
 
 $$\mathop{\mathrm{cut}}(\pi)\equiv \mathop{\mathrm{cut}}(V_1,V_2)=\sum\limits_{{\displaystyle i\in V_{1} \atop \displaystyle j\in V_{2}}}W_{ij}.$$
 
-__Weight__ of vertex $i\in V$ is the sum of the weights of all edges emanating from $i$,
+__Weight__ of vertex $i\in V$ is the sum of the weights of all egdges emanating from $i$,
 $\omega(i)=\sum\limits_{j=1}^{n}W_{ij}$.
 
 __Weight__ of a subset $\bar V\subset V$ is the sum of the weights of all vertices in $\bar V$, 
@@ -283,10 +287,9 @@ Left partition is $\pi$, right partition is $\pi'$.
 
 # ╔═╡ 02035eed-6d49-4253-a755-68a999e7e90e
 md"""
-### Facts
+## Facts
 
-1. The informal description of the bipartitioning problem can be formulated as
-two problems,
+1. The informal description of the bipartitioning problem can be formulated as two problems,
 
 $$
 \mathop{\textrm{arg min}}\limits_{\pi} \mathop{\mathrm{pcut}}(\pi) \quad \textrm{or} \quad 
@@ -316,7 +319,7 @@ $$
 
 Parameter $\beta$ controls the number of vertices in each subset.
 
-3. The normalized cut problem can be formulated as the __discrete normalized cut__ problem
+5. The normalized cut problem can be formulated as the __discrete normalized cut__ problem
 
 $$
 \underset{\displaystyle \big|y^{T}D\mathbf{1} \big|\leq \beta}
@@ -325,27 +328,21 @@ $$
 
 Parameter $\beta$ controls the weights of each subset.
 
-4. Using the Fact 5 above, the discrete proportional cut problem can be 
-formulated as the __relaxed proportional cut__ problem
+6. Using the Fact 5 above, the discrete proportional cut problem can be formulated as the __relaxed proportional cut__ problem
 
 $$
 \underset{\displaystyle y^{T}y=1}{\underset{\displaystyle \big| y^{T}\mathbf{1} \big|
 \leq 2\frac{\beta}{\sqrt{n}}}
 {\min\limits_{\displaystyle y\in \mathbb{R}^{n}}}} y^{T}L y.$$
 
-Similarly, the discrete normalized cut problem can be formulated as the 
-__relaxed normalized cut__ problem
+Similarly, the discrete normalized cut problem can be formulated as the __relaxed normalized cut__ problem
 
 $$
 \underset{\displaystyle y^{T}Dy=1}{\underset{\displaystyle \big| y^{T}D\mathbf{1}\big|
 \leq \displaystyle \frac{\beta}{\sqrt{\theta n}}}{\min\limits_{\displaystyle y\in
 \mathbb{R}^{n}}}}y^{T}L_n y.$$
 
-5. __The Main Theorem.__
-Let $A\in \mathbb{R}^{n\times n}$ be a symmetric matrix with eigenvalues
-$\lambda _{1}<\lambda _{2}<\lambda_{3}\leq \cdots \leq \lambda _{n}$ and let 
-$v^{[1]},v^{[2]},\ldots,v^{[n]}$ be the corresponding eigenvectors. 
-For the fixed $0\leq \alpha <1$, the solution of the problem
+7. __The Main Theorem.__ Let $A\in \mathbb{R}^{n\times n}$ be a symmetric matrix with eigenvalues $\lambda _{1}<\lambda _{2}<\lambda_{3}\leq \cdots \leq \lambda _{n}$ and let $v^{[1]},v^{[2]},\ldots,v^{[n]}$ be the corresponding eigenvectors. For the fixed $0\leq \alpha <1$, the solution of the problem
 
 $$
 \underset{\displaystyle y^{T}y=1}{\underset{\displaystyle \left|y^{T}v^{[1]}\right|\leq \alpha}
@@ -355,30 +352,20 @@ is $y=\pm \alpha v^{[1]}\pm \sqrt{1-\alpha^{2}}v^{[2]}$.
 
 For the proof see [D. J. Higham and M. Kibble, A Unified View of Spectral Clustering, Theorem 3.1, p. 7](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.115.1591&rep=rep1&type=pdf).
 
-6. For $0\leq \beta <\frac{n}{2}$, the solution of the relaxed proportional cut problem is
+8. For $0\leq \beta <\frac{n}{2}$, the solution of the relaxed proportional cut problem is
 
 $$
 y=\pm \frac{2\beta}{n\sqrt{n}}\mathbf{1}\pm
 \sqrt{1-4\frac{\beta ^{2}}{n^{2}}}v^{[2]},$$
 
-where $v^{[2]}$ is an eigenvector corresponding to $\lambda_2(L)$.
-$v^{[2]}$ the __Fiedler vector__. 
-
-Since the first summand carries no information, 
-$V$ is partitioned according to the signs of the components of $v^{[2]}$:
+where $v^{[2]}$ is an eigenvector corresponding to $\lambda_2(L)$. $v^{[2]}$ the __Fiedler vector__. Since the first summand carries no information, $V$ is partitioned according to the signs of the components of $v^{[2]}$:
 
 $$
 V_{1}=\{i:v^{[2]}_i <0\}, \quad V_{2}=\{i:v^{[2]}_i \geq 0\}.$$
 
 _Notice that the value of $\beta$ is irrelevant for the solution._
 
-7. For 
-
-$0\leq \beta <\sqrt{\theta n}\left\Vert
-D^{\frac{1}{2}}\mathbf{1} \right\Vert _{2},$
-
-
-the solution of the relaxed normalized cut problem is
+9. For $0\leq \beta <\sqrt{\theta n}\left\Vert D^{\frac{1}{2}}\mathbf{1} \right\Vert _{2},$ the solution of the relaxed normalized cut problem is
 
 $$
 y=\pm \frac{\beta }{\sqrt{\theta n}\left\Vert
@@ -387,11 +374,9 @@ D^{\frac{1}{2}} \mathbf{1}\right\Vert _{2}^{2}}\mathbf{1}\pm
 D^{\frac{1}{2}}\mathbf{1}\right\Vert _{2}^{2}}}D^{-\frac{1
 }{2}} v_n^{[2]},$$
 
-where $v_n^{[2]}$ is an eigenvector corresponding to $\lambda_2(L_n)$.
-$V_n$ is partitioned according to the signs of the components of $v_n^{[2]}$, as above.
+where $v_n^{[2]}$ is an eigenvector corresponding to $\lambda_2(L_n)$. $V_n$ is partitioned according to the signs of the components of $v_n^{[2]}$, as above.
 
-9. Neither of the relaxed algorithms is guaranteed to solve exactly the true proportional / normalized cut problem. However, the computed solutions are in the right direction. 
-Whether to use proportional or normalized cut formulation, depends upon the specific problem.  
+10. Neither of the relaxed algorithms is guaranteed to solve exactly the true proportional / normalized cut problem. However, the computed solutions are in the right direction. Whether to use proportional or normalized cut formulation, depends upon the specific problem.  
 """
 
 # ╔═╡ c188b7cf-03e7-40b3-bf90-773978c7b410
@@ -419,8 +404,7 @@ $$
 
 where the choice of $\sigma$ is based on experience.
 
-The computation of various distances is implemented in the package 
-[Distances.jl](https://github.com/JuliaStats/Distances.jl).
+The computation of various distances is implemented in the package [Distances.jl](https://github.com/JuliaStats/Distances.jl).
 
 We will construct the Laplace matrix directly.
 """
@@ -483,17 +467,18 @@ begin
 	# Define clusters
 	C=ones(Int64,m)
 	C[findall(E[2][:,2].>0)].=2
+	C
 end
 
 # ╔═╡ ba164ff3-5ef4-4480-8af2-9dd9a99b1e8d
 # Yet another plotting function
 function plotKpartresult(C::Vector,X::Array)
+	scatter(aspect_ratio=1)
     k=maximum(C)
-    scatter(aspect_ratio=1)
     for j=1:k
         scatter!(X[1,findall(C.==j)],X[2,findall(C.==j)],label="Cluster $j")
     end
-	scatter!()
+	scatter!(aspect_ratio=1)
 end
 
 # ╔═╡ 46de28bc-73ed-495c-a2e0-f565c1ce5651
@@ -506,7 +491,7 @@ This is the same partitioning as obtained by `kmeans()`. Let us try Gaussian ker
 
 # ╔═╡ bb9d4d98-3aff-439e-b8a3-8347cf345839
 begin
-	σ=1.0
+	σ=0.7 # 0.1
 	W₂=exp.(-pairwise(SqEuclidean(),X)/σ^2)-I
 	L₂=Diagonal(vec(sum(W₂,dims=2)))-W₂
 	E₂=eigs(L₂,nev=2,which=:SM, v0=ones(m))
@@ -515,19 +500,15 @@ begin
 	plotKpartresult(C₂,X)
 end
 
-# ╔═╡ 83882c60-5728-11eb-1ba2-1dbc5c20eee4
-W₂
-
 # ╔═╡ 012fa54a-5171-4980-a0ba-474a22c25981
 md"""
-## Recursive bipartitioning
+# Recursive bipartitioning
 
-### Definitions
+## Definitions
 
 Let $G=(V,E)$ be a weighted graph with weights $\omega$.
 
-Let $\pi_k =\{V_{1},V_{2},...,V_{k}\}$ be a $k$-partition of $V$, with 
-$V_i\neq \emptyset$ for $i=1,\ldots,k$.
+Let $\pi_k =\{V_{1},V_{2},...,V_{k}\}$ be a $k$-partition of $V$, with $V_i\neq \emptyset$ for $i=1,\ldots,k$.
 
 The previous definition of $cut(\pi)\equiv cut(\pi_2)$ extends naturally to $k$-partition.
 
@@ -552,7 +533,7 @@ $$
 \frac{\mathop{\mathrm{cut}}(V_{i},V_{j})}{\omega(V_{i})}+\frac{\mathop{\mathrm{cut}}(V_{i},V_{j})}{\omega(V_{j})}\right) =
 \sum_{i=1}^{k}\frac{\mathop{\mathrm{cut}}(V_{i},V\backslash V_{i})}{ \omega(V_{i})}.$$
 
-### Facts
+## Facts
 
 If we want to cluster vertices of graph $G=(V,E)$ into $k$ clusters, we can apply the following recursive algorithm:
 
@@ -562,20 +543,20 @@ If we want to cluster vertices of graph $G=(V,E)$ into $k$ clusters, we can appl
 
     1. Compute the bipartition of each subset of $V$.
     
-    2. Among all $(c+1)$-partitions, choose the one with the smallest $\mathop{\mathrm{pcut}}(\pi_{c+1})$ or
-    $\mathop{\mathrm{ncut}}(\pi_{c+1})$, respectively.
+    2. Among all $(c+1)$-partitions, choose the one with the smallest $\mathop{\mathrm{pcut}}(\pi_{c+1})$ or $\mathop{\mathrm{ncut}}(\pi_{c+1})$, respectively.
     
     3. Set $c=c+1$.
 
 3. __Stop.__
 
-_There is no guarantee for optimality of this algorithm. Clearly, the optimal $k$-partiton may be a subpartition of one of the discarded partitions._
+There is no guarantee for optimality of this algorithm. Clearly, the optimal $k$-partiton may be a subpartition of one of the discarded partitions.
 """
 
 # ╔═╡ f3eb8ad4-55a8-4e76-a581-07f9a7cc75f7
 
 
 # ╔═╡ Cell order:
+# ╟─7ef4b0b3-9d0a-4356-bd16-14487f14e0ab
 # ╟─cb61f761-b2ee-4818-9149-f85d95b76a1e
 # ╟─5926c79a-6038-4dbc-b49a-5b05d02250a0
 # ╟─a66a6e80-1f80-11eb-15f8-71ffaa5050e7
@@ -596,6 +577,7 @@ _There is no guarantee for optimality of this algorithm. Clearly, the optimal $k
 # ╟─a9ba64a6-bd17-4b86-acb4-e7c7d8f87dc1
 # ╠═6a6f5db5-7dd4-4a26-ac1a-ef3ca3a5d6be
 # ╠═e11bc23d-03e2-4780-9488-93f0adfc2fcb
+# ╠═7192f7d0-28b9-11eb-28dd-8db0019504ca
 # ╠═e5890dca-368f-437e-bc45-6a395714dae2
 # ╠═61a978a7-b2d2-43e7-b3f7-95bf4c4f54b9
 # ╠═da7f85ed-73b0-44b9-a97f-4a8ed5e9a1d1
@@ -616,6 +598,5 @@ _There is no guarantee for optimality of this algorithm. Clearly, the optimal $k
 # ╠═46de28bc-73ed-495c-a2e0-f565c1ce5651
 # ╟─e004e4bf-ca04-4b41-947b-9f1ecd058abb
 # ╠═bb9d4d98-3aff-439e-b8a3-8347cf345839
-# ╠═83882c60-5728-11eb-1ba2-1dbc5c20eee4
 # ╟─012fa54a-5171-4980-a0ba-474a22c25981
 # ╠═f3eb8ad4-55a8-4e76-a581-07f9a7cc75f7

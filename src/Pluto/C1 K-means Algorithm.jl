@@ -1,8 +1,14 @@
 ### A Pluto.jl notebook ###
-# v0.12.18
+# v0.14.4
 
 using Markdown
 using InteractiveUtils
+
+# ╔═╡ c7e41465-41ad-4f11-baec-bfaae9edbf59
+begin
+	using PlutoUI
+	PlutoUI.TableOfContents(aside=true)
+end
 
 # ╔═╡ d0233ece-1f69-11eb-3da1-43b8ddc9fbe1
 begin
@@ -21,11 +27,11 @@ md"""
 
 Data clustering is one of the main mathematical applications variety of algorithms have been developed to tackle the problem. K-means is one of the basic algorithms for data clustering.
 
-## Prerequisites
+__Prerequisites__
 
 The reader should be familiar with basic linear algebra. 
  
-## Competences 
+__Competences__
 
 The reader should be able to recognise applications where K-means algorithm can be efficiently used and use it.
 
@@ -38,15 +44,13 @@ md"""
 
 __Data clustering problem__ is the following: partition the given set of $m$ objects of the same type into $k$ subsets according to some criterion. Additional request may be to find the optimal $k$.
 
-__K-means clustering problem__ is the following: 
-partition the set  $X=\{x_{1},x_{2},\cdots ,x_{m}\}$ , where $x_{i}\in\mathbb{R}^{n}$, into $k$ _clusters_ $\pi=\{C_{1},C_{2},...,C_{k}\}$ such that
+__K-means clustering problem__ is the following: partition the set  $X=\{x_{1},x_{2},\cdots ,x_{m}\}$ , where $x_{i}\in\mathbb{R}^{n}$, into $k$ _clusters_ $\pi=\{C_{1},C_{2},...,C_{k}\}$ such that
 
 $$
 J(\pi)=\sum_{i=1}^{k}\sum_{x\in
 C_{i}}\| x-c_{i}\|_{2}^{2} \to \min$$
 
-over all possible partitions. Here
-$c_{i}=\displaystyle\frac{1}{|C_{i}|}\sum_{x\in C_{i}} x$ is the mean of points in $C_i$ and $|C_i|$ is the cardinality of $C_i$.
+over all possible partitions. Here $c_{i}=\displaystyle\frac{1}{|C_{i}|}\sum_{x\in C_{i}} x$ is the mean of points in $C_i$ and $|C_i|$ is the cardinality of $C_i$.
 """
 
 # ╔═╡ 26640b90-1f69-11eb-029e-4dc3a825f639
@@ -147,6 +151,9 @@ end
 
 # ╔═╡ e15fa4cf-930a-4065-b839-c2ec944afcfa
 md"""
+
+## Examples
+
 ### Random clusters
 
 We generate $k$ random clusters around points with integer coordinates.
@@ -230,9 +237,6 @@ begin
 	output=kmeans(Matrix(Xₘ),k,init=:kmpp)
 end
 
-# ╔═╡ 7c8817d0-5c8d-11eb-325c-3b2d7e83ed64
-Xₘ
-
 # ╔═╡ 4f8152ee-ce86-4df6-81d2-be2df33df980
 fieldnames(KmeansResult)
 
@@ -260,9 +264,6 @@ begin
 	C,c,iterations=myKmeans(X,k)
 	plotKmeansresult(C,c,X)
 end
-
-# ╔═╡ 4297e110-571d-11eb-38a4-9b0cd9c936ac
-scatter(C)
 
 # ╔═╡ 406bb1b2-a8bb-4cd2-95c3-3975f99e3f32
 begin
@@ -319,6 +320,7 @@ end
 
 
 # ╔═╡ Cell order:
+# ╟─c7e41465-41ad-4f11-baec-bfaae9edbf59
 # ╟─00d72ad7-ea80-4954-8c75-590d4e9ccdc4
 # ╟─235e1901-eed3-4934-9214-ffdd82cf21d6
 # ╟─26640b90-1f69-11eb-029e-4dc3a825f639
@@ -332,11 +334,9 @@ end
 # ╠═fceab134-0921-459b-8d91-952a44abb07b
 # ╠═f559b870-608a-426e-a23b-b66ef6d4b47f
 # ╠═8e5b89ce-e6b5-4473-bd98-a2285331418c
-# ╠═4297e110-571d-11eb-38a4-9b0cd9c936ac
 # ╟─310a4957-cc58-424b-845c-3ebaf7db77f3
 # ╠═f9af8a75-48fd-4e82-b43e-61867bead6f9
 # ╠═7e869699-8eb1-4e38-905d-a9448d037841
-# ╠═7c8817d0-5c8d-11eb-325c-3b2d7e83ed64
 # ╠═4f8152ee-ce86-4df6-81d2-be2df33df980
 # ╠═95fb2e66-e811-47f4-a772-8270d0c5d83b
 # ╠═26b7bac0-1f72-11eb-16fc-c1d74920c462

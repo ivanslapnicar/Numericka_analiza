@@ -1,8 +1,14 @@
 ### A Pluto.jl notebook ###
-# v0.12.7
+# v0.14.4
 
 using Markdown
 using InteractiveUtils
+
+# ╔═╡ c9cf879e-0b01-4e0a-b31c-2ca5c6f03e63
+begin
+	using PlutoUI
+	PlutoUI.TableOfContents(aside=true)
+end
 
 # ╔═╡ 94dde840-54f6-4fe4-846b-bc15f8fca9fa
 begin
@@ -25,15 +31,14 @@ Instead of using recursive spectral bipartitioning, the graph $k$-partitioning p
 
 Suggested reading is [U. von Luxburg, A Tutorial on Spectral Clustering](http://www.kyb.mpg.de/fileadmin/user_upload/files/publications/attachments/luxburg06_TR_v2_4139%5b1%5d.pdf), which includes the quote 
 
-_"spectral clustering cannot serve as a “black box algorithm” which automatically detects the correct clusters in any
-given data set. But it can be considered as a powerful tool which can produce good results if applied with care."_
+_"Spectral clustering cannot serve as a “black box algorithm” which automatically detects the correct clusters in any given data set. But it can be considered as a powerful tool which can produce good results if applied with care."_
 
 
-## Prerequisites
+__Prerequisites__
 
 The reader should be familiar with k-means algorithm, spectral graph bipartitioning and recursive bipartitioning.
  
-## Competences 
+__Competences__
 
 The reader should be able to apply graph spectral k-partitioning to data clustering problems.
 
@@ -42,16 +47,14 @@ __Credits.__ The notebook was initially derived from M.Sc. Thesis of Ivančica M
 
 # ╔═╡ 75cd6187-4c51-426c-8a3c-d7b6c922ae0b
 md"""
-## The relaxed problem
+
+## Definitions
 
 Let $G=(V,E)$ be a weighted graph with weights $\omega$, with weights matrix $W$, Laplacian matrix $L=D-W$, and normalized Laplacian matrix $L_n=D^{-1/2}(D-W)D^{-1/2}$. 
 
-Let the $k$-partition $\pi_k =\{V_{1},V_{2},...,V_{k}\}$, the cut $\mathop{\mathrm{cut}}(\pi_k)$, 
-the proportional cut $\mathop{\mathrm{pcut}}(\pi_k)$ and 
-the normalized cut $\mathop{\mathrm{ncut}}(\pi_k)$ be defined as in the
-[Spectral Graph Bipartitioning](C3 Spectral Graph K-partitioning.jl) notebook.
+Let the $k$-partition $\pi_k =\{V_{1},V_{2},...,V_{k}\}$, the cut $\mathop{\mathrm{cut}}(\pi_k)$, the proportional cut $\mathop{\mathrm{pcut}}(\pi_k)$ and the normalized cut $\mathop{\mathrm{ncut}}(\pi_k)$ be defined as in the
+[Spectral Graph Bipartitioning](https://ivanslapnicar.github.io/NumericalMathematics/C2%20Spectral%20Graph%20Bipartitioning.jl.html) notebook.
 
-### Definition
 
 __Partition vectors__ of a $k$-partition $\pi_k$ are
 
@@ -68,7 +71,7 @@ h_{k} &=[0,\cdots ,0,0,\cdots ,0,\cdots
 ,\overset{\displaystyle |V_{k}|}{ \overbrace{1,\cdots ,1}}]^{T}.
 \end{aligned}$$
 
-### Facts
+## Facts
 
 1. Set
 
@@ -126,7 +129,10 @@ $\min\limits_{\displaystyle \pi_k} \mathop{\mathrm{ncut}}(\pi_k)\geq \sum\limits
 
 # ╔═╡ 639758a5-413d-408a-ace9-3741322c3dc2
 md"""
-### Example - Graph with three clusters
+
+## Examples
+
+### Graph with three clusters
 """
 
 # ╔═╡ d367f447-16e1-4cbc-b05f-b807d4ef955b
@@ -200,7 +206,7 @@ end
 
 # ╔═╡ 662b7b01-883f-4d51-b696-26f7559e0211
 md"""
-### Example - Concentric rings
+### Concentric rings
 """
 
 # ╔═╡ 55d217d5-c31a-431d-bd46-f9f09280cf5b
@@ -219,10 +225,10 @@ begin
 	k=4
 	Random.seed!(541)
 	# Center
-	center=[0;0]
+	center=[0,0]
 	# Radii
 	radii=Random.randperm(10)[1:k]
-	# Number of points in circles
+	# Number of points in rings
 	sizes=rand(300:500,k)
 	center,radii,sizes
 end
@@ -242,14 +248,14 @@ begin
 			X[:,i]=center+radii[j]*[cos(ϕ[i]);sin(ϕ[i])] + (rand(2).-0.5)/50
 		end
 	end
-	scatter(X[1,:],X[2,:],title="Concentric Circles", aspect_ratio=1,label="Points")
+	scatter(X[1,:],X[2,:],title="Concentric rings", aspect_ratio=1,label="Points")
 end
 
 # ╔═╡ 708a16c5-f755-490b-abcb-89788813b7d0
 begin
 	S=pairwise(SqEuclidean(),X,dims=2)
 	# S=pairwise(Cityblock(),X)
-	β=100
+	β=60
 	W₁=exp.(-β*S);
 end
 
@@ -286,6 +292,7 @@ end
 L₁[3,1]
 
 # ╔═╡ Cell order:
+# ╟─c9cf879e-0b01-4e0a-b31c-2ca5c6f03e63
 # ╟─81efb137-7e14-4091-a7f0-c6b72e2d77f7
 # ╟─75cd6187-4c51-426c-8a3c-d7b6c922ae0b
 # ╟─639758a5-413d-408a-ace9-3741322c3dc2
