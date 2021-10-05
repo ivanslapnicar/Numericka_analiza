@@ -63,7 +63,7 @@ $$\|A\|_F =\sqrt{\sum_{i,j=1}^n a_{ij}^2}$$
 
 nije inducirana norma.
 
-Matrične norme još imaju i svojstvo 
+Matrične norme još imaju i svojstvo
 
 $$
 \|A\cdot B\|\leq \|A\| \cdot \| B\|.$$
@@ -81,7 +81,7 @@ md"""
 ## Skalarni produkt, norma i ortogonalnost funkcija
 
 
-__Skalarni produkt__ na vektorskom prostoru $X$ je svako preslikavanje 
+__Skalarni produkt__ na vektorskom prostoru $X$ je svako preslikavanje
 $\cdot : X\times X \to \mathbb{R}$ sa sljedećim svojstvima:
 
 1.  $x\cdot x\geq 0$
@@ -94,17 +94,17 @@ Ukoliko je na vektorskom prostoru definiran skalarni produkt, normu možemo defi
 
 $$\|x\|=\sqrt{x\cdot x}.$$
 
-Također, ako je $x \cdot y=0$ kažemo da su vektori $x$ i $y$ __međusobno ortogonalni (okomiti)__.  
+Također, ako je $x \cdot y=0$ kažemo da su vektori $x$ i $y$ __međusobno ortogonalni (okomiti)__.
 
 Na primjer, standardna vektorska norma
 
 $$\|x\|_2=\sqrt{\sum_{i=1}^n x_i^2}= \sqrt{x\cdot x}$$
 
-je definirana pomoću skalarnog produkta vektora, 
+je definirana pomoću skalarnog produkta vektora,
 
 $$x\cdot y=\sum_{i=1}^n  x_i y_i,$$
 
-a vektori $x$ i $y$ su ortogonalni, odnosno $x\perp y$, ako je 
+a vektori $x$ i $y$ su ortogonalni, odnosno $x\perp y$, ako je
 $x\cdot y=0$.
 
 Skalarni produkt funkcija definiramo pomoću određenog integrala:
