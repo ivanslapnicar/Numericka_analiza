@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.12.21
+# v0.16.0
 
 using Markdown
 using InteractiveUtils
@@ -8,7 +8,7 @@ using InteractiveUtils
 md"""
 # Teorija smetnje, pogreška unatrag i stabilni algoritmi
 
-## Teorija smetnje
+# Teorija smetnje
 
 Odgovorimo na sljedeće pitanje:
 
@@ -44,7 +44,7 @@ $$
 
 # ╔═╡ 95835e70-25e3-4dc7-bbf9-8d5f23ce3e44
 md"""
-## Pogreška unatrag
+# Pogreška unatrag
 
 Neka vrijednost funkcije $f(x)$ računamo pomoću algoritma $\mathrm{alg}(x)$.
 __Pogreška algoritma__ je 
@@ -68,7 +68,7 @@ odnosno
 
 # ╔═╡ 63a8eeef-913c-4b0c-8cbc-9db8a07892b3
 md"""
-## Stabilni algoritmi
+# Stabilni algoritmi
 
 Algoritam je __stabilan__ ako uvijek vrijedi 
 

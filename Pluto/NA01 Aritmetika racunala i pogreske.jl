@@ -21,13 +21,15 @@ TableOfContents(title="📚 Table of Contents", aside=true)
 
 # ╔═╡ 76d37869-e20b-4211-8227-1f0616e3d8f2
 md"""
-# Floating Point Arithmetic and Errors
+# Aritmetika računala i pogreške
 
-## Absolute and relative error
+# Apsolutna i relativna pogreška
 
-Let $\alpha$ approximate $a$. Then
+Neka $\alpha$ aproksimira $a$. Onda je
 
-$$err=|a-\alpha| \\  relerr=\frac{err}{|a|}=\frac{|a-\alpha|}{|a|}.$$
+$$
+\begin{aligned}
+err&=|a-\alpha| \\ \\ relerr&=\frac{err}{|a|}=\frac{|a-\alpha|}{|a|}.\end{aligned}$$
 """
 
 # ╔═╡ 5c635357-8163-4954-949a-999dc48998f0
@@ -37,7 +39,7 @@ md"
 
 # ╔═╡ 9ccbb154-8618-4190-bfce-985ba66c8380
 begin
-	# Try α=a:0.01:2a
+	# Probajte α=a:0.01:2a
 	a=5.0
 	err=abs(a-α)
 	relerr=err/abs(a)
@@ -46,31 +48,31 @@ end
 
 # ╔═╡ 91448849-f9f0-459b-87c0-b9fc5a386770
 md"""
-## Floating Point Arithmetic
+# Aritmetika plivajućeg zareza
 
-Useful book on IEEE Floating Point standard:
+Korisna knjiga o IEEE standardu za aritmetiku plivajućeg zareza:
 
 M. Overton, Numerical Computing with IEEE Floating Point Arithmetic, SIAM Publications, Philadephia, 2001.
 
-Useful article: 
+Koristan članak:
 
 [David Goldberg, What Every Computer Scientist Should Know About Floating-Point Arithmetic](https://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html).
 
-## Floating Point Number System
+## Sustav brojeva s plivajućim zarezom
 
- $x$ is a __floating point number__ if it has the form
+ $x$ je __broj s plivajućim zarezom__ (_floating point number_) ako je oblika
 
-$$x = \pm d \cdot \beta^e \quad \beta \in \{ 2,10 \}$$
+$$x = \pm d \cdot \beta^e, \quad \beta \in \{ 2,10 \}$$
 
-__Base__ 2 is for general purpose computers, __base__ 10 is for pocket calculators.
+__Baza__ 2 je za standardna računala opće namjene, __baza__ 10 je za džepne kalkupatore.
 
- $e$ is the __exponent__ and satisfies
+ $e$ je __eksponent__ i zadovoljava
 
 $$e_{\min} \leq e \leq e_{\max},\quad e_{\min} < 0 < e_{\max}$$
 
-We will assume that arithmetic is in base 2, but will usually give examples in base 10.
+Pretpostavit ćemo da koristimo aritmetiku s bazom 2, ali ćemo primjere uglavnom davati u bazi 10.
 
-__Mantissa__ $d$ has the form
+__Mantisa__ $d$ je oblika
 
 $$
 \begin{aligned}
@@ -81,35 +83,35 @@ d  &\in \{ 0,1\}\\
 	d_1 &= 0 \qquad \mbox{ unnormalized }   \\
 \end{aligned}$$
 
-Standard form for floating point numbers is normalized except at the bottom of the exponent range.
+Standardni oblik brojeva s plivajućim zarezom je normalizirani oblik osim pri dnu raspona eksponenata.
 
-During input and output numbers are converted from binary to decimal and back.
+Tijekom ulaza  / izlaza (_input/output_) brojevi se konvertiraju iz binarnog oblika u dekadski i natrag.
 
-Computer arithmetic is standardized, by the IEEE 754 standard for binary arithmetic.  All but a few modern computers follow this standard.
+Aritmetika računala je standardizirana pomoću IEEE 754 standard for binary arithmetic.  Gotovo sva računala (procesori) rade po tom standardu (➡ `paranoia`).
 """
 
 # ╔═╡ 1f8858f4-104d-4dd8-99de-b4bbf278e720
 md"""
-## Machine unit and machine precision
+## Strojna jedinica i točnost stroja
 
-The set
+Skup
 
 $$
 \{x \colon \lfloor \log_2 \: |x| \rfloor \in [e_{min},e_{max}] \}$$
 
-is the set of real numbers that are in the normalized range of floating point numbers. $fl(x)$ is the floating point round of $x$.
+je podskup skupa realnih brojeva koji se nalaze u normaliziranom rasponu brojeva s plivajućim zarezom. $fl(x)$ je realan broj $x$ zaokružen na najbliži broj s plivajućim zarezom.
 
-__Machine unit__ is the maximum relative distance
-between a real number in the floating point range and the nearest floating point number,
+__Strojna jedinica__ (_machine unit_) je najveća relativna udaljenost između realnog broja koji se nalazi u rasponu brojeva s plivajućim zarezom i najbližeg broja s plivajućim zarezom,
 
 $$
-\epsilon = \max_{\lfloor \log_2 
+\epsilon_M = \max_{\lfloor \log_2
 \:|x|\rfloor \in
 [e_{\min},e_{\max}]} \frac{|x - fl(x)|}{|x|}  = 2^{-t}$$
 
-__Machine precision__ is the relative distance between two neighbouring floating point numbers. For $\beta=2$ obviously $\epsilon=2\epsilon_M$.
+__Točnost stroja__ (_machine precision_) je relativna udaljenost između dva susjedna broja s plivajućim zarezom. Za $\beta=2$ očito vrijedi $\epsilon=2\epsilon_M$.
 
-Important examples include
+Važni primjeri su __jednostruka točnost__ (_single precision_) i 
+__dvostruka točnost__ (_double precision_):
 
 __IEEE Standard Single Precision (Float32)__  $\beta = 2$, $t = 24$
 
@@ -125,12 +127,12 @@ __IEEE Standard Double Precision (Float 64)__ $\beta =2$,$t = 53$
 
 $$
 \begin{aligned}
-\epsilon &= 2^{-53} \approx 1.1102 \times 10^{-16}\\
+\epsilon_M &= 2^{-53} \approx 1.1102 \times 10^{-16}\\
 \epsilon &=2^{-52} \approx 2.2204 \times 10^{-16}\\
 e_{\min} &= -1022,\quad e_{\max} = 1023.
 \end{aligned}$$
 
-Let us compute $\epsilon$ as the smallest positive floating point number such that $1+\epsilon\neq 1$.
+Izračunajmo $\epsilon$ kao najmanji pozitivni broj s plivajućim zarezom takav da je $1+\epsilon\neq 1$.
 """
 
 # ╔═╡ 030a0e5f-f9e1-4696-af85-b890eaa129d7
@@ -146,20 +148,20 @@ end
 
 # ╔═╡ 82a6d40f-4c81-4ff1-8e02-3f427c413f61
 md"""
-The MATLAB command `eps` and the Julia function `eps()` return $\epsilon = 2.2204 \times 10^{-16}$.
+MATLAB naredba `eps` i Julia funkcija `eps()` daju $\epsilon = 2.2204 \times 10^{-16}$.
 """
 
 # ╔═╡ 7c28c479-912d-4a12-bc38-d15c6a3f0501
 eps()
 
 # ╔═╡ f5a5a27d-27bc-49b5-b245-c32a1f3fe13c
-# What is this?
+# Što jer ovo?
 eps(64.0)
 
 # ╔═╡ aa042b72-246d-432a-9a1c-d014da8ef957
 md"""
-Julia, in particular, has a type system where `Float64` type is a sub-type of `AbstractFloat`, which has four sub-types. 
-In addition to types `Float64` and `Float32`, there is a type `Float16` which uses only two bytes of computer memory and type `BigFloat` which has a 256-bit mantissa.  
+Julia ima sustav vrsta podataka (_type system_) u kojem je tip `Float64` pod-tip tipa `AbstractFloat`, koji ima četiri pod-tipa.
+To su tipovi `Float64` i `Float32`, zatim tip `Float16` koji koristi samo dva bajta računalne memorije i tip `BigFloat` koji ima mantisu od 256-bitova.
 """
 
 # ╔═╡ dac635a5-7f41-478c-bede-5894410a0b6a
@@ -178,45 +180,45 @@ end
 
 # ╔═╡ 51356548-f58f-40a7-98b0-1b92ebeba3ed
 md"""
-## Basic Floating Point Operations
+## Osnovne operacije s plivajućim zarezom
 
-We begin with the four basic arithmetic operations, addition ($+$),subtraction ($-$),multiplication ($*$), and division ($/$). Suppose that $\odot$ is an operation such that
+Četiri osnovne operacije su zbrajanje ($+$), oduzimanje ($-$), množenje ($*$) i dijeljenje ($/$). Neka $\odot$ označava operaciju,
 
 $$
 \odot \in \{ + , - , *,/\}.$$
 
-Then, in floating point arithmetic with machine unit $\epsilon_M$, it is reasonable to expect that for any two floating point numbers $x$ and $y$, we have
+U aritmetici s plivajućim zarezom sa strojnom jednicom $\epsilon_M$, razumno je očekivati da za bilo koja dva broja s plivajućim zarezom $x$ and $y$ vrijedi (ukoliko je rezultat u rasponu brojeva s pliovajućim zarezom)
 
 $$
 fl(x\;op\;y) = (x \; op\; y)\;(1 + \xi),\quad
 |\xi| \leq \epsilon_M.$$
 
-For division, we assume $y \neq 0$. Any IEEE standard computer must follow this rule.  Rounding is one of two limitations that floating point arithmetic has that real arithmetic does not have. You can quickly conclude from the above rule that as long as all that we do is add numbers of the same sign, multiply, and divide, floating point results will almost always come very close to the corresponding real arithmetic results. The difficulty occurs if we either of $x$ or $y$ is rounded, they have different signs and we add or have the same signs and we subtract. 
+Kod dijeljenja pretpostavljamo $y \neq 0$. Svako računalo s ugrađenim IEEE standardom mora poštovati ovo pravilo. Zaokruživanje je jedno ograničenje aritmetike s plivajućim zarezom koje realna aritmetika nema. Iz ovog pravila možete lako zaključiti da će, ukoliko zbrajamo brojeve istog predznaka, množimo i dijelimo, rezultat u aritmetici plivajućeg zareza gotovo uvijek biti vrlo blizu točnom rezultatu. Poteškoće nastaju kada su $x$ i/ili $y$ već zaokruženi i imaju različite predznake te ih zbrajamo, ili imaju isti predznak te ih oduzimamo.
 
-That is, suppose we have
+Drugim riječima, neka je 
 
 $$
 \tilde{x}= x(1+\delta_x), \quad \tilde{y} = y(1+\delta_y),$$
 
-where $x$ and $y$ are the exact real results of some computation and $\tilde{x}$ and $\tilde{y}$ are rounded floating point results with $|\delta_x| |\delta_y| \leq \delta$ for some small delta.  Suppose also that $x$ and $y$ have the same sign. Let
+gdje su $x$ i $y$ točni rezultati nekog proračuna a $\tilde{x}$ i $\tilde{y}$ su zaokruženi rezultati u aritmetici plivajućeg zareza i vrijedi $|\delta_x|, |\delta_y| \leq \delta$ za neki mali $\delta$. Pretpostavimo i da  $x$ i $y$ imaju isti predznak. Neka je
 
 $$
 z=x-y,\quad  \tilde{z} = fl(\tilde{x} -\tilde{y}).$$
 
-Then, 
+Onda je
 
 $$
 \begin{aligned}
-\tilde{z} &=(\tilde{x}-\tilde{y})(1+\xi)= x(1+\delta_x)(1+\xi) -y(1+\delta_y)(1+\xi) 
+\tilde{z} &=(\tilde{x}-\tilde{y})(1+\xi)= x(1+\delta_x)(1+\xi) -y(1+\delta_y)(1+\xi)
 =x-y + \delta_z,
 \end{aligned}$$
 
-where $|\xi| \leq \epsilon$ and
+pri čemu je $|\xi| \leq \epsilon$ i
 
 $$
 \delta_z = (x-y)\xi + (x\delta_x -y\delta_y)(1+\xi).$$
 
-The best available bound on $|\delta_z|$ is
+Najbolja moguća ograda za $|\delta_z|$ je
 
 $$
 \begin{aligned}
@@ -224,33 +226,33 @@ $$
 & \leq |x-y| \epsilon_M + (|x|+|y|)\,\delta\,(1+\epsilon_M).
 \end{aligned}$$
 
-Thus, the relative error in $z$ is 
+Prema tome, relativna pogreška od $z$ je
 
 $$
 \begin{aligned}
-\frac{|\tilde{z}-z|}{|z|}&=\frac{|\delta_z|}{|z|} 
+\frac{|\tilde{z}-z|}{|z|}&=\frac{|\delta_z|}{|z|}
 \leq \epsilon_M + (1+\epsilon_M)\,\delta\,\frac{|x|+|y|}{|x-y|}\approx \delta \,\frac{|x|+|y|}{|x-y|}.
 \end{aligned}$$
 
-If $|x-y| << |x|+|y|$, the effect of the round in the subtraction is not important, but the error from previous computations on $x$ and $y$ can have a huge effect. The effect is called __propagation__. It can dramatically change the result of a compuation! We will see this issue with some examples later in this lecture.
+Ako je $|x-y| << |x|+|y|$, onda utjecaj zaokruživanja prilikom oduzivanja nije važan, ali pogreška iz prethodnih proračuna kod $x$ and $y$ može imati ogroman utjecaj. Taj efekat se zove __propagacija__ (_propagation_) i može dramatično promijeniti rezultat izračuna, što ćemo vidjeti kasnije na nekim primjerima. 
 
-Rounding is the first important limitation of floating point arithmetic.  A second limitation is the number range.
+Zaokruživanje je prvo važno ograničenje aritmetike s plivajućim zarezom. Drugo ograničenje je raspon brojeva.
 """
 
 # ╔═╡ 3170458d-931a-41a1-8715-b41de07aa3c6
 md"""
-## Number Ranges
+## Rasponi brojeva
 
-Floating point arithmetic has a largest and smallest computer number. First, the largest one.
+Aritmetika s plivajućim zarezom ima najveći i najmanji broj. Opišimo prvo najveći.
 
-__Largest Computer Number__ $\Omega$
+__Najveći broj u računalu__ $\Omega$
 
-In base $2$, with a $t$ bit mantissa, the largest computer number is
+U bazi $2$ s mantisom od $t$ bitova najveći broj u računalu je
 
 $$
 \Omega = (1 - 2^{-t}) \cdot 2^{e_{\max+1}}$$
 
-When numbers exceed $\Omega$, they are stored as `Inf` ($\infty$) or `-Inf` ($-\infty$). We say than an _owerflow_ occured.
+Brojevi apsulutno veći od $\Omega$ se spremaju kao `Inf` ($\infty$) ili `-Inf` ($-\infty$). Kažemo da se dogodio __pretek__ (_owerflow_) (➡ Ariane 5).
 
 
 _IEEE Standard Single Precision_ (`Float32`)
@@ -263,21 +265,21 @@ _IEEE Standard Double Precision_ (`Float64`)
 $$
 \Omega = 1.79777 \times 10^{308}$$
 
-The MATLAB command `realmax` and the Julia function `floatmax()` show this number.
+MATLAB naredba `realmax` i Julia funkcija `floatmax()` daju $\Omega$.
 """
 
 # ╔═╡ 2ee4617f-70cf-4ecb-99b2-7167cc6b34d6
 md"""
-__Smallest Computer Number__ $\omega$
+__Najmanji broj u računalu__ $\omega$
 
-The definition of the smallest computer number is somewhat more complex.
+Definicija najmanjeg (pozitivnog) broja u računalu je nešto složenija.
 
-The smallest computer number is given by
+Najmanj broj u računalu je
 
 $$
 \omega = 2^{1-t} 2^{e_{\min}}.$$
 
-If a computation produces a number smaller in magnitude than $\omega$, it produces what is called an __underflow__, it is set to $0$ or $-0$.  If the programmer chooses, an underflow can result in an error, but in most computations, underflows are not harmful.
+Ukoliko izračun daje broj koji je apsolutno manji od $\omega$, dogodi se ono što se zove __podtek__ (_underflow_), rezultat se postavi na $0$ ili $-0$. SAko programer to odabere, podtek može rezultirati greškom, ali u većini slučajava podteci su bezopasni. 
 
 
 _IEEE Standard Single Precision_ (`Float32`):
@@ -285,7 +287,7 @@ _IEEE Standard Single Precision_ (`Float32`):
 $$
 \omega = 2^{-23- 126} = 2^{-149} \approx  1.4013 \times 10^{-45}.$$
 
-In MATLAB, this comes from the command `omega= eps('single')*realmin('single')`.
+U MATLAB-u možemo koristiti naredbu `omega= eps('single')*realmin('single')`.
 
 
 _IEEE Standard Double Precision_ (`Float64`):
@@ -293,41 +295,40 @@ _IEEE Standard Double Precision_ (`Float64`):
 $$
 \omega= 2^{-1022-52} = 2^{-1074} \approx  4.9407 \times 10^{-324}$$
 
-The appropriate MATLAB command to get this value is `omega = eps*realmin` and the equivalent Julia command is `floatmin()*eps()`.
+Odgovarajuća MATLAB naredba je `omega = eps*realmin`, a odgovarajuća Julia naredba je  `floatmin()*eps()`.
 
 
-__Important and Subtle Point__ 
+__Važan detalj__
 
-Numbers at the bottom of the exponent
-range are not normalized.
+Brojevi pri dnu raspona brojeva nisu normalizirani. 
 
-MATLAB function `realmin` yields
-
-$$
-\omega_{useful} \approx 2.2251 \times 10^{-308}.$$
-
-Some people call this the smallest USEFUL floating point number since
+MATLAB naredba `realmin` daje
 
 $$
-1/\omega_{useful} \leq \Omega$$
+\omega_{koristan} \approx 2.2251 \times 10^{-308}.$$
 
-and $\omega_{useful}$ is normalized.
+Ovaj broj se još zove namanji _koristan_ broj s plivajućim zarezom jer je
 
-Smallest floating point number, $\omega$, has the form
+$$
+1/\omega_{koristan} \leq \Omega,$$
+
+pri čemu je $\omega_{koristan}$ je normaliziran.
+
+Najmanji broj s plivajućim zarezom $\omega$ je oblika
 
 $$
 0.0 \cdots 01 \times 2^{e_{\min}} \quad \cdots\quad
-\mbox{Gradual Underflow}$$
+\mbox{postupni podtek - Gradual Underflow}$$
 
-Before the IEEE standard most computers had the smallest floating point number as
+Prije uvođenja IEEE standarda, najmanji broj u većini računala je bio
 
 $$
 0.10 \cdots 0 \times 2^{e_{\min}} \qquad \cdots
-\mbox{ normalized}$$
+\mbox{ normaliziran}$$
 
-Earlier computers, (pre-1985) set numbers below this smallest 'useful' floating point number to zero. This change was one of the more controversial features of the IEEE standard.
+Starija računala (prije 1985) su brojeve manje od najmanjeg korisnog broja s plivajućim zarezom postavljala na nulu. Ova promjena je bila jedna on najkontroverznijih osobina IEEE standarda.
 
-__Example.__ $\beta = 10$, $-5 \leq e \leq 5$
+__Primjer.__ $\beta = 10$, $-5 \leq e \leq 5$
 
 $$
 \begin{aligned}
@@ -335,17 +336,18 @@ x & = 0.1957 \times 10^{-5}   \\
 y & = 0.1942 \times 10^{-5}
 \end{aligned}$$
 
-Compute  $fl(x - y)$. Whar happens?
+Izračunajmo $fl(x - y)$. Što će se dogoditi?
 
 $$
 0.1957 \times 10^{-5}-0.1942 \times 10^{-5}  =0.0015 \times 10^{-5}$$
 
-Pre-1985 philosophy was to set $fl(x - y)=0$.
+Prije 1985 računala bi stavila $fl(x - y)=0$.
 
-Gradual Underflow stores $fl(x - y)=0.0015 \times 10^{-5}$, that is, Gradual Underflow guarantees that for any two floating point numbers $x$ and $y$
+Postupni podtek računa $fl(x - y)=0.0015 \times 10^{-5}$, odnosno garantira 
+da za svaka dva broja s plivajućim zarezom $x$ i $y$ vrijedi
 
 $$
-fl(x - y) = 0 \mbox{ if and only if } x = y.$$
+fl(x - y) = 0 \mbox{ ako i samo ako je } x = y.$$
 """
 
 # ╔═╡ b9dd627b-5b1a-4113-bfdf-af4dc1901827
@@ -363,9 +365,9 @@ end
 
 # ╔═╡ d0b306c4-6cbc-48dc-90ba-8ef4498f8d73
 md"""
-##  Special Quantities  $0$, $-0$, `Inf`,`-Inf` i `NaN`
+##  Posebne veličine $0$, $-0$, `Inf`,`-Inf` i `NaN`
 
-Zero has a sign:
+Nula ima predznak:
 """
 
 # ╔═╡ abe311d5-fbd1-40e2-8bce-2c341301deef
@@ -391,7 +393,7 @@ b₁/c₁
 
 # ╔═╡ afc32ff2-014a-43ee-8e6a-d35a57434622
 md"""
-`NaN` (Not a Number) can be generated by (c.f. Calculus 1):
+`NaN` (Not a Number) nastaje kao (vidi neodređene oblike iz Matematike 1):
 """
 
 # ╔═╡ 03f1778e-c222-4221-a4e7-eabf1071d298
@@ -399,21 +401,21 @@ Inf+(-Inf),0*Inf, Inf/Inf, 0.0/0.0
 
 # ╔═╡ 307a27e6-8128-42be-9ba8-cbdacb498ada
 md"""
-IEEE Arithmetic is a closed system:
+IEEE aritmetika je zatvoren sustav:
 
- $\big\{$ floating point numbers,`Inf`,`-Inf`, `NaN`$\big\}$ 
-$\stackrel{\odot}{\rightarrow}$ 
+ $\big\{$ floating point numbers,`Inf`,`-Inf`, `NaN`$\big\}$
+$\stackrel{\odot}{\rightarrow}$
 $\big\{$ floating point numbers,`Inf`,`-Inf`, `NaN` $\big\}$
 
-no matter what the operation $\odot$ is.
+bez obzira o kojoj operaciju $\odot$ se radi.
 
-Clever programmers take advantage of these features. However, in the coding assignments in this course, if you get
-`NaN` or `Inf` or `-Inf`, you have probably made an error.
+Programeri mogu korisno uopotrijebiti prethodna svojstva. Međutim, ako u zadaći iz programiranja dobijete
+`NaN` ili `Inf` ili `-Inf`, vjerojatno se radi o grešci.
 """
 
 # ╔═╡ 20fa79ac-93c3-4e3f-bf31-f9c0f0e79d4a
 md"""
-## Binary Representation
+## Binarni prikaz
 """
 
 # ╔═╡ 1f8f4a15-0eca-4759-bee6-843306e35754
@@ -439,21 +441,21 @@ bitstring(2.0)
 
 # ╔═╡ 037cddff-3663-4fcb-8575-ea7a78e490b8
 md"""
-__Problem.__ Explain the above binary representations. 
+__Zadatak.__ Objasnite ove binarne prikaze.
 """
 
 # ╔═╡ 4e97e67b-8ef6-412d-8851-2b6635ff46e6
 md"""
-## Examples
+# Primjeri
 
-### Using difference of squares
+## Korištenje razlike kvadrata
 
-Compute
+Izračunajte
 
 $$
-f(x) = \sqrt{1 + x^2} - 1, \quad \mbox{$x$ is near zero}.$$
+f(x) = \sqrt{1 + x^2} - 1, \quad \mbox{$x$ je blizu nule}.$$
 
-This formula in standard double precision yields $f(10^{-12}) = 0$.
+Ova formula u standardnoj dvostrukoj točnosti daje $f(10^{-12}) = 0$.
 """
 
 # ╔═╡ 88584373-9519-46fe-ae88-7199e76fb8f7
@@ -464,7 +466,7 @@ end
 
 # ╔═╡ 1215b318-8121-4adb-aa5d-139654607717
 md"""
-The difference-of-squares trick yields
+Trik s razlikom kvadrata daje
 
 $$
 \begin{aligned}
@@ -472,7 +474,7 @@ f(x) & \equiv (\sqrt{1 + x^2} - 1) \left( \frac{\sqrt{1 + x^2} + 1}{\sqrt{1 + x^
 & = \frac{x^2}{\sqrt{1+x^2} + 1}\equiv f_1(x),
 \end{aligned}$$
 
-that is,  $f_1(10^{-12}) = 0.5 \cdot 10^{-24}$. This answer is as accurate as we can expect in standard double precision.
+odnosno,  $f_1(10^{-12}) = 0.5 \cdot 10^{-24}$. Ovaj rezultat je onoliko točan koliko možemo očekivati u standardnoj dvostrukoj točnosti.
 """
 
 # ╔═╡ b9180215-218a-48d8-a662-2a5664c2e480
@@ -485,7 +487,7 @@ end
 x=1e-12
 
 # ╔═╡ 905dd1d7-5f1b-43b3-a461-651cc992bd1c
-# Using BigFloat
+# Koristeći BigFloat
 BigFloat(x)
 
 # ╔═╡ c5d305a9-5a27-44d6-a610-50ab6d396f93
@@ -493,13 +495,13 @@ f(BigFloat(x))
 
 # ╔═╡ 82ac21a4-384e-47e8-a964-95c8eb0889bd
 md"""
-### Quadratic equation
+## Kvadratne jednadžba
 
-In exact arithmetic, the quadratic equation
+U egzaktnoj aritmetici kvadratna jednadžba
 
 $$ax^2 + bx+c=0$$
 
-has roots
+ima korjene
 
 $$
 \begin{aligned}
@@ -514,7 +516,7 @@ begin
 	a₂=2.0
 	b₂=123456789.0
 	c₂=4.0
-	
+
 	x₁(a,b,c)=(-b-sqrt(b*b-4*a*c))/(2.0*a)
 	x₂(a,b,c)=(-b+sqrt(b*b-4*a*c))/(2.0*a)
 	x₂ₐ(a,b,c)=(2*c)/(-b-sqrt(b*b-4*a*c))
@@ -523,7 +525,7 @@ end
 
 # ╔═╡ d429eede-d77d-4709-b635-c3993fce4a47
 md"""
-Let us check using `BigFloat`:
+Provjerimo koristeći `BigFloat`:
 """
 
 # ╔═╡ ff5e3103-11cb-4438-aa19-c25af84fc3da
@@ -534,7 +536,7 @@ x₂(BigFloat(a₂),BigFloat(b₂),BigFloat(c₂))
 
 # ╔═╡ c94ccf15-a0bd-4605-96f2-a27d0508fbeb
 md"""
-### Tangent and sine
+## Tangens i sinus
 """
 
 # ╔═╡ 65f44437-4d44-4d93-a9bc-814ab9b6ee02
@@ -545,16 +547,16 @@ end
 
 # ╔═╡ bf8fd692-0e01-4368-a52d-91edb4fe77c0
 md"""
-However, the trigonometric identities give
+Međutim, trigonometrijski identiteti daju
 
 $$
 \begin{aligned}
-\tan x - \sin x & = \tan x (1 - \cos x ) 
+\tan x - \sin x & = \tan x (1 - \cos x )
 = \tan x (1-\cos x)\frac{1+\cos x}{1+\cos x}\\ & = \tan x \frac{1-\cos^2 x}{1+\cos x} \\
 &= \tan x \sin^2 x \frac{1}{1+\cos x},
 \end{aligned}$$
 
-and Taylor formula gives
+a Taylorova formula daje
 
 $$
 \begin{aligned}
@@ -563,7 +565,7 @@ $$
 \tan x - \sin x &= \frac{x^3}{2} + \frac{7x^5}{120} +O(x^7).
 \end{aligned}$$
 
-Both formulas give accurate resut:
+Obe formule daju točan rezultat:
 """
 
 # ╔═╡ d58c4727-448d-47b2-a194-2002304a4708
@@ -571,20 +573,20 @@ tan(x₃)*sin(x₃)^2/(1+cos(x₃)), x₃^3/2+7*x₃^5/120
 
 # ╔═╡ 4035ef81-4348-4721-9448-48c569a65c9d
 md"""
-### Absolute value of a complex number
+## Apsolutna vrijednost kompleksnog broja
 
-To avoid underflow or overflow, instead of using the standard formula 
+Radi izbjegavanja podteka i preteka, umjesto standardne formule
 
 $$
 |z|=|x+iy|=\sqrt{x^2+y^2}$$
 
-we must use the following formulas (Explain!):
+trebamo koristiti sljedeće formule (Objasnite!):
 
 $$
-M = \max \{ |x|,|y|\}, \quad m = \min \{ |x|,|y| \}, \quad r = \frac{m}{M}, \quad 
+M = \max \{ |x|,|y|\}, \quad m = \min \{ |x|,|y| \}, \quad r = \frac{m}{M}, \quad
 |z| = M \sqrt{1+r^2}.$$
 
-These formulas are encoded in the function `abs()`.
+Ove formule su ugrađene u funkciju `abs()`.
 """
 
 # ╔═╡ ac2caf5e-9874-44b9-ba5e-f0011940055f
@@ -601,7 +603,7 @@ end
 
 # ╔═╡ b573a376-d60f-4f1d-b876-592dbcd47be4
 md"""
-__Problem.__ Compare the function [hypot](https://en.wikipedia.org/wiki/Hypot) and the  BLAS 1 function `dnrm2.f`.
+__Zadatak.__ Usporedite funkciju  [hypot](https://en.wikipedia.org/wiki/Hypot) BLAS 1 funkciju `dnrm2.f`.
 """
 
 # ╔═╡ 03679ace-1368-4be3-988c-1f0dcaa1407e
@@ -613,7 +615,7 @@ PLUTO_PROJECT_TOML_CONTENTS = """
 PlutoUI = "7f904dfe-b85e-4ff6-b463-dae2292396a8"
 
 [compat]
-PlutoUI = "~0.7.14"
+PlutoUI = "~0.7.9"
 """
 
 # ╔═╡ 00000000-0000-0000-0000-000000000002
@@ -626,17 +628,6 @@ uuid = "2a0f44e3-6c83-55bd-87e4-b1978d98bd5f"
 [[Dates]]
 deps = ["Printf"]
 uuid = "ade2ca70-3891-5945-98fb-dc099432e06a"
-
-[[HypertextLiteral]]
-git-tree-sha1 = "72053798e1be56026b81d4e2682dbe58922e5ec9"
-uuid = "ac1192a8-f4b3-4bfe-ba22-af5b92cd3ab2"
-version = "0.9.0"
-
-[[IOCapture]]
-deps = ["Logging", "Random"]
-git-tree-sha1 = "f7be53659ab06ddc986428d3a9dcc95f6fa6705a"
-uuid = "b5f81e59-6552-4d32-b1f0-c071b021bf89"
-version = "0.2.2"
 
 [[InteractiveUtils]]
 deps = ["Markdown"]
@@ -660,15 +651,15 @@ uuid = "a63ad114-7e13-5084-954f-fe012c677804"
 
 [[Parsers]]
 deps = ["Dates"]
-git-tree-sha1 = "a8709b968a1ea6abc2dc1967cb1db6ac9a00dfb6"
+git-tree-sha1 = "438d35d2d95ae2c5e8780b330592b6de8494e779"
 uuid = "69de0a69-1ddd-5017-9359-2bf0b02dc9f0"
-version = "2.0.5"
+version = "2.0.3"
 
 [[PlutoUI]]
-deps = ["Base64", "Dates", "HypertextLiteral", "IOCapture", "InteractiveUtils", "JSON", "Logging", "Markdown", "Random", "Reexport", "UUIDs"]
-git-tree-sha1 = "d1fb76655a95bf6ea4348d7197b22e889a4375f4"
+deps = ["Base64", "Dates", "InteractiveUtils", "JSON", "Logging", "Markdown", "Random", "Reexport", "Suppressor"]
+git-tree-sha1 = "44e225d5837e2a2345e69a1d1e01ac2443ff9fcb"
 uuid = "7f904dfe-b85e-4ff6-b463-dae2292396a8"
-version = "0.7.14"
+version = "0.7.9"
 
 [[Printf]]
 deps = ["Unicode"]
@@ -683,15 +674,13 @@ git-tree-sha1 = "45e428421666073eab6f2da5c9d310d99bb12f9b"
 uuid = "189a3867-3050-52da-a836-e630ba90ab69"
 version = "1.2.2"
 
-[[SHA]]
-uuid = "ea8e919c-243c-51af-8825-aaa63cd721ce"
-
 [[Serialization]]
 uuid = "9e88b42a-f829-5b0c-bbe9-9e923198166b"
 
-[[UUIDs]]
-deps = ["Random", "SHA"]
-uuid = "cf7118a7-6976-5b1a-9a39-7adc72f591a4"
+[[Suppressor]]
+git-tree-sha1 = "a819d77f31f83e5792a76081eee1ea6342ab8787"
+uuid = "fd094767-a336-5f1f-9728-57cf17d0bbfb"
+version = "0.2.0"
 
 [[Unicode]]
 uuid = "4ec0a83e-493e-50e2-b9ac-8f72acf5a8f5"
@@ -757,7 +746,7 @@ uuid = "4ec0a83e-493e-50e2-b9ac-8f72acf5a8f5"
 # ╠═ac2caf5e-9874-44b9-ba5e-f0011940055f
 # ╠═b990e038-aff2-4d44-bb27-eb9de8c3977a
 # ╠═c1acfea2-a60d-4433-a00b-6d3515274a18
-# ╟─b573a376-d60f-4f1d-b876-592dbcd47be4
+# ╠═b573a376-d60f-4f1d-b876-592dbcd47be4
 # ╠═03679ace-1368-4be3-988c-1f0dcaa1407e
 # ╟─00000000-0000-0000-0000-000000000001
 # ╟─00000000-0000-0000-0000-000000000002
