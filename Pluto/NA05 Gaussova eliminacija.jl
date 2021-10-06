@@ -1,40 +1,30 @@
 ### A Pluto.jl notebook ###
-# v0.12.21
+# v0.16.0
 
 using Markdown
 using InteractiveUtils
 
-# ╔═╡ 63842a33-b596-4f3f-bde5-7953ec4dc840
-using Markdown
-
 # ╔═╡ 22dc4490-8d6b-11eb-20ce-ed84c7206167
-begin
-	using PlutoUI
-	PlutoUI.TableOfContents(aside=true)
-end
+using PlutoUI, Random, LinearAlgebra
 
-# ╔═╡ 53d8d8e0-0d7f-11eb-358f-3f001e5e7d78
-begin
-	using LinearAlgebra
-	import Random
-	Random.seed!(123);
-end
+# ╔═╡ 7b3f544c-1995-4eed-8818-37a9867375cc
+TableOfContents(title="📚 Sadržaj", aside=true)
 
 # ╔═╡ 48167400-0d83-11eb-1c7d-359a2574c8b1
 md"
 # Gaussova eliminacija
 
 
-## Općenito
+# Osnovna ideja
 
 Sustav $Ax=b$
-se rješava u tri koraka (_bez pivotiranja_ ):
+se rješava u tri koraka (__bez pivotiranja__):
 
 1.  $A=LU\quad$ (LU rastav, $O(\frac{2}{3}n^3)$ operacija),
 2.  $Ly=b\quad$ (donje trokutrasti sustav, $n^2$ operacija),
 3.  $Ux=y\quad$ (gornje torkutasti sustav, $n^2$ operacija).
 
-S pivotiranjem vrijedi
+S __pivotiranjem__ (redaka) imamo
 
 1.  $PA=LU$
 2.  $Ly=P b$
@@ -55,11 +45,12 @@ $\begin{aligned}\frac{\epsilon}{10} x_1 + x_2  = 1 \\ x_1 + x_2 = 2\end{aligned}
 
 Dobro približno rješenje je $x_1 = x_2 =1$. Koristimo proširenu matricu sustava:
 
-\begin{align}
+$$
+\begin{aligned}
 & \left(\begin{array}{cc|c} \displaystyle\displaystyle\frac{\epsilon}{10} & 1 & 1 \cr 1 & 1 & 2 \end{array}\right) \sim
 \left(\begin{array}{cc|c} \displaystyle \displaystyle\frac{\epsilon}{10} & 1 & 1 \cr 0 & 1-\displaystyle\displaystyle\frac{10}{\epsilon} & 2-\displaystyle\displaystyle\frac{10}{\epsilon}\end{array}\right)
 \approx \left(\begin{array}{cc|c}  \displaystyle\displaystyle\frac{\epsilon}{10} & 1 & 1 \cr 0 & -\displaystyle\displaystyle\frac{10}{\epsilon} & -\displaystyle\displaystyle\frac{10}{\epsilon}\end{array}\right).
-\end{align}
+\end{aligned}$$
 
 Zadnja transformacija je zaokruživanje do na točnost stroja $\epsilon$.
 Vrlo značajni "1" i "2" u zadnjem retku su _nestali prilikom zaokruživanja_ !
@@ -75,13 +66,14 @@ Rješavanje zadnjeg trokutastog sustava daje $x_1 = 0$, $x_2 = 1$. Uvrštavanje 
 
 # ╔═╡ ed629240-6b9a-4a85-b412-97a06565a9cf
 md"""
-I ovdje postoji "rješenje" koje se zove _parcijalno pivotiranje_. Stavimo apsolutno najveći element koji još nije poništen u promatranom stupcu na pivotnu odnosno dijagonalnu poziciju:
+I ovdje postoji "rješenje" koje se zove __parcijalno pivotiranje__. Stavimo apsolutno najveći element koji još nije poništen u promatranom stupcu na pivotnu odnosno dijagonalnu poziciju:
 
-\begin{align}
+$$
+\begin{aligned}
 &\left(\begin{array}{cc|c}     1 & 1 & 2 \cr \displaystyle\frac{\epsilon}{10} & 1 & 1 \end{array}\right) \sim
 \left(\begin{array}{cc|c}     1 & 1 & 2 \cr 0                   & 1-\displaystyle\frac{\epsilon}{10}&1-\displaystyle\frac{2\epsilon}{10}\end{array}\right)
 \approx   \left(\begin{array}{cc|c}     1 & 1 & 2 \cr 0                   & 1                    &1                    \end{array}\right)
-\end{align}
+\end{aligned}$$
 """
 
 # ╔═╡ b8b17cd3-c828-438d-a2c0-13b1965ed778
@@ -120,7 +112,7 @@ $\left(\begin{array}{cc|c}
 (1+2\epsilon)&     (1+2\epsilon )&     2+4\epsilon \cr
 (1+\epsilon)&     1   &2 +\epsilon \end{array}\right).$
 
-Točno rješenje je $x_1=x_2=1$, ali zbog zaokruživanja dobije $x_1 =0$, $x_2 =2$. __Objasnite.__
+Točno rješenje je $x_1=x_2=1$, ali zbog zaokruživanja dobije $x_1 =0$, $x_2 =2$. __Objasnite!__
 Niti jedan trik kojeg smo vidjeli ne daje točno rješenje. 
 """
 
@@ -155,7 +147,7 @@ __Pitanje.__ Koja je geometrijska interpretacija ovog sustava?
 
 # ╔═╡ c9bc269a-a306-4a35-acd8-aad3de58f56a
 md"""
-## LU rastav
+# LU rastav
 
 $A=\begin{pmatrix}\alpha & a^T \cr b  & B \end{pmatrix}=
 \begin{pmatrix} 1 & 0 \cr l & I \end{pmatrix}
@@ -192,6 +184,9 @@ function mylu(A₁::Array{T}) where T # Strang, str. 100
     return L,U
 end
 
+# ╔═╡ 53d8d8e0-0d7f-11eb-358f-3f001e5e7d78
+Random.seed!(123);
+
 # ╔═╡ 19567c60-0d82-11eb-3405-8d0312a34b5f
 begin
 	n=6
@@ -216,7 +211,7 @@ L*U-A
 
 # ╔═╡ 946eb7cd-8a97-4aa8-880c-bfba8e6efae1
 md"""
-## Trokutasti sustavi
+# Trokutasti sustavi
 """
 
 # ╔═╡ 29d27f7f-d2e5-4d1f-a667-39fc266ffa17
@@ -269,7 +264,7 @@ x-x₁
 
 # ╔═╡ 4225c750-b668-4331-b6b8-0509635e69c6
 md"""
-## Brzina
+# Brzina
 
 Funkcija `mylu()` je spora. Između ostalog, alocira nepotrebno tri matrice i ne računa s blok matricama.
 
@@ -317,7 +312,7 @@ mylu₁(A₁);
 
 # ╔═╡ 09b70bcd-43ad-46b2-9664-2809351f9f70
 md"""
-### Blok varijanta
+## Blok inačica
 
 `mylu()` i $\mathsf{mylu}_1()$ su nekoliko desetaka puta sporiji od `lu()`.
 
@@ -392,7 +387,7 @@ Program još uvijek nije optimalan jer alocira previše memorije.
 
 # ╔═╡ 9a2ef752-2231-4282-aa5c-275894c21de5
 md"""
-## Pivotiranje
+# Pivotiranje
 
 Standardne implementacije uvijek računaju Gaussovu eliminaciju koristeći __parcijalno pivotiranje__ :
 
@@ -453,7 +448,7 @@ F₄.L*F₄.U-A[F₄.p,:]
 
 # ╔═╡ 630a82aa-6998-4325-a0c9-d44f60c0df31
 md"""
-### Potpuno pivotiranje
+## Potpuno pivotiranje
 
 Sljedeći program računa Gaussovu eliminaciju koristeći __potpuno pivotiranje__ - u svakom koraku 
 se retci i stupci zamijene tako da se na pivotnu poziciju dovede element koji ima najveću 
@@ -527,17 +522,17 @@ A*xₚ-b
 
 # ╔═╡ 55d12cd0-0d87-11eb-10cc-edca8db298a1
 md"""
-## Točnost
+# Točnost
 
 Neka je zadan sustav $Ax=b$, pri čemu je matrica $A$ regularna.
 
 Da bi primijenili koncepte iz bilježnice 
-[NA04 Pogreska unatrag i stabilni algoritmi](NA04%20Pogreska%20unatrag%20i%20stabilni%20algoritmi.ipynb), potrebno je:
+[NA04 Pogreska unatrag i stabilni algoritmi](https://ivanslapnicar.github.io/Numericka_analiza/NA04%20Pogreska%20unatrag%20i%20stabilni%20algoritmi.jl.html), potrebno je:
 
 1. napraviti teoriju smetnje za dani problem
 2. analizirati pogreške algoritma (Gaussove eliminacije)
 
-### Teorija smetnje
+## Teorija smetnje
 
 Neka je 
 
@@ -639,7 +634,7 @@ cond(A₃), norm(δA₃)/norm(A₃), norm(x₄-x₃)/norm(x₃)
 
 # ╔═╡ a47802e0-0df1-11eb-3f9f-2fe1ebc781fd
 md"""
-### Pogreška Gaussove eliminacije
+## Pogreška Gaussove eliminacije
 
 Prema [Matrix Computations, poglavlje 3.3](https://books.google.hr/books?id=X5YfsuCWpxMC&printsec=frontcover&hl=hr#v=onepage&q&f=false), za izračunate faktore
 $\hat L$ i $\hat U$ vrijedi
@@ -668,9 +663,12 @@ Zaključimo:
 
 > _Ukoliko je kondicija matrice velika, rješenje može biti netočno._
 
-__Primjer.__ Vandermondeova matrica
-
 """
+
+# ╔═╡ ecc4e74f-7fa4-4a88-9f89-eb2c0643adef
+md"
+### Vandermondeova matrica
+"
 
 # ╔═╡ f1c74560-0df1-11eb-19a7-c9ad6aed7410
 begin
@@ -709,7 +707,7 @@ map(Float64,norm(xbig-xᵥ)/norm(xbig))
 
 # ╔═╡ 50ed08c1-391f-4baa-8cfa-54db04038fb1
 md"""
-### Umjetno loša kondicija
+## Umjetno loša kondicija
 """
 
 # ╔═╡ a496c05e-0def-11eb-0ae1-83f3cdccf36e
@@ -738,7 +736,7 @@ x₅,cond(A₅),xᵤ-x₅
 
 # ╔═╡ bfc0ea15-556f-4109-b626-cb724ee14bfd
 md"""
-### Procjena kondicije
+## Procjena kondicije
 
 Računanje kondicije prema definiciji $\kappa(A)=\|A\| \cdot \|A^{-1}\|$ zahtijeva računanje inverzne matrice, za što je potrebno $O(n^3)$ operacija. To je isti red veličine operacija koji je potreban za rješavanje zadanog sustava. Prilikom rješavanja sustava na raspolaganju su nam trokutasti faktori $L$ i $U$, što se može iskoristiti kako bi se kondicija približno izračunala u $O(n^2)$ operacija. 
 Detalji se nalaze u [Matrix Computations, poglavlje 3.5.4](https://books.google.hr/books/about/Matrix_Computations.html?id=X5YfsuCWpxMC&redir_esc=y). 
@@ -839,9 +837,108 @@ md"
 Zaključujemo da je rješenje $x_v$ izračunato stabilno, odnosno s vrlo malom pogreškom unatrag u početnim podatcima. To još uvijek ne znači da je rješenje relativno vrlo točno.
 "
 
+# ╔═╡ 00000000-0000-0000-0000-000000000001
+PLUTO_PROJECT_TOML_CONTENTS = """
+[deps]
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
+PlutoUI = "7f904dfe-b85e-4ff6-b463-dae2292396a8"
+Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
+
+[compat]
+PlutoUI = "~0.7.14"
+"""
+
+# ╔═╡ 00000000-0000-0000-0000-000000000002
+PLUTO_MANIFEST_TOML_CONTENTS = """
+# This file is machine-generated - editing it directly is not advised
+
+[[Base64]]
+uuid = "2a0f44e3-6c83-55bd-87e4-b1978d98bd5f"
+
+[[Dates]]
+deps = ["Printf"]
+uuid = "ade2ca70-3891-5945-98fb-dc099432e06a"
+
+[[HypertextLiteral]]
+git-tree-sha1 = "f6532909bf3d40b308a0f360b6a0e626c0e263a8"
+uuid = "ac1192a8-f4b3-4bfe-ba22-af5b92cd3ab2"
+version = "0.9.1"
+
+[[IOCapture]]
+deps = ["Logging", "Random"]
+git-tree-sha1 = "f7be53659ab06ddc986428d3a9dcc95f6fa6705a"
+uuid = "b5f81e59-6552-4d32-b1f0-c071b021bf89"
+version = "0.2.2"
+
+[[InteractiveUtils]]
+deps = ["Markdown"]
+uuid = "b77e0a4c-d291-57a0-90e8-8db25a27a240"
+
+[[JSON]]
+deps = ["Dates", "Mmap", "Parsers", "Unicode"]
+git-tree-sha1 = "8076680b162ada2a031f707ac7b4953e30667a37"
+uuid = "682c06a0-de6a-54ab-a142-c8b1cf79cde6"
+version = "0.21.2"
+
+[[Libdl]]
+uuid = "8f399da3-3557-5675-b5ff-fb832c97cbdb"
+
+[[LinearAlgebra]]
+deps = ["Libdl"]
+uuid = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
+
+[[Logging]]
+uuid = "56ddb016-857b-54e1-b83d-db4d58db5568"
+
+[[Markdown]]
+deps = ["Base64"]
+uuid = "d6f4376e-aef5-505a-96c1-9c027394607a"
+
+[[Mmap]]
+uuid = "a63ad114-7e13-5084-954f-fe012c677804"
+
+[[Parsers]]
+deps = ["Dates"]
+git-tree-sha1 = "a8709b968a1ea6abc2dc1967cb1db6ac9a00dfb6"
+uuid = "69de0a69-1ddd-5017-9359-2bf0b02dc9f0"
+version = "2.0.5"
+
+[[PlutoUI]]
+deps = ["Base64", "Dates", "HypertextLiteral", "IOCapture", "InteractiveUtils", "JSON", "Logging", "Markdown", "Random", "Reexport", "UUIDs"]
+git-tree-sha1 = "d1fb76655a95bf6ea4348d7197b22e889a4375f4"
+uuid = "7f904dfe-b85e-4ff6-b463-dae2292396a8"
+version = "0.7.14"
+
+[[Printf]]
+deps = ["Unicode"]
+uuid = "de0858da-6303-5e67-8744-51eddeeeb8d7"
+
+[[Random]]
+deps = ["Serialization"]
+uuid = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
+
+[[Reexport]]
+git-tree-sha1 = "45e428421666073eab6f2da5c9d310d99bb12f9b"
+uuid = "189a3867-3050-52da-a836-e630ba90ab69"
+version = "1.2.2"
+
+[[SHA]]
+uuid = "ea8e919c-243c-51af-8825-aaa63cd721ce"
+
+[[Serialization]]
+uuid = "9e88b42a-f829-5b0c-bbe9-9e923198166b"
+
+[[UUIDs]]
+deps = ["Random", "SHA"]
+uuid = "cf7118a7-6976-5b1a-9a39-7adc72f591a4"
+
+[[Unicode]]
+uuid = "4ec0a83e-493e-50e2-b9ac-8f72acf5a8f5"
+"""
+
 # ╔═╡ Cell order:
-# ╟─63842a33-b596-4f3f-bde5-7953ec4dc840
-# ╟─22dc4490-8d6b-11eb-20ce-ed84c7206167
+# ╠═22dc4490-8d6b-11eb-20ce-ed84c7206167
+# ╠═7b3f544c-1995-4eed-8818-37a9867375cc
 # ╟─48167400-0d83-11eb-1c7d-359a2574c8b1
 # ╟─221d2474-de59-4042-918f-534305d8708f
 # ╠═89291e44-4ea6-4e74-99bd-a30e8ee4d895
@@ -926,6 +1023,7 @@ Zaključujemo da je rješenje $x_v$ izračunato stabilno, odnosno s vrlo malom p
 # ╠═5179d372-0df1-11eb-0183-8bcc73149584
 # ╠═69b8cbd0-0df1-11eb-3fcd-a9f0865efdce
 # ╟─a47802e0-0df1-11eb-3f9f-2fe1ebc781fd
+# ╟─ecc4e74f-7fa4-4a88-9f89-eb2c0643adef
 # ╠═f1c74560-0df1-11eb-19a7-c9ad6aed7410
 # ╠═026d0d00-0df2-11eb-26fd-cbc13048e56c
 # ╠═2f58af40-0df2-11eb-28e4-5b1911f53b83
@@ -955,3 +1053,5 @@ Zaključujemo da je rješenje $x_v$ izračunato stabilno, odnosno s vrlo malom p
 # ╠═2ec7cf00-0df4-11eb-03c6-03c37219650d
 # ╠═3a45b400-0df4-11eb-3e3c-41fed6f7a499
 # ╟─40c1dc00-0df4-11eb-10a6-bf598057f7fb
+# ╟─00000000-0000-0000-0000-000000000001
+# ╟─00000000-0000-0000-0000-000000000002
