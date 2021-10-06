@@ -94,6 +94,8 @@ L-L₁
 # ╔═╡ af9b1080-8d4f-11eb-02e4-97071de47db5
 md"
 ## Cholesky rastav s pivotiranjem
+
+Zbog pozitivne definitnosti najveći apsolutno najveći element se nalazi na glavnoj dijagonali. Stoga se potpuno pivotiranje postiže odabirom najvećeg elementa na glavnoj dijagonali svake podmatrice.
 "
 
 # ╔═╡ bf6f0930-8d4f-11eb-28ce-7d1216521e8a
@@ -151,7 +153,7 @@ Lb=mycholb(Ab)
 norm(Lb'*Lb-Ab)
 
 # ╔═╡ 281cdf66-87e4-4cd1-893d-cc9779b1a813
-# Converting block matrix into a standard one
+# Prebacivanje blok matrice u standardni oblik
 unblock(A) = mapreduce(identity, hcat, [mapreduce(identity, vcat, A[:,i]) for i = 1:size(A,2)])
 
 # ╔═╡ 55f47608-829c-45ed-b6ac-eff79850c4d9
