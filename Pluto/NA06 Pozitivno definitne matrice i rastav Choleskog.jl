@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.12.21
+# v0.16.0
 
 using Markdown
 using InteractiveUtils
@@ -12,7 +12,7 @@ md"""
 # Pozitivno definitne matrice i rastav Choleskog
 
 
-Matrica $A$ je _pozitivno definitna_ ako je simetrična, $A^T=A$, i ako su sve njene svojstvene vrijednosti pozitivne.
+Matrica $A$ je __pozitivno definitna__ ako je simetrična, $A^T=A$, i ako su sve njene svojstvene vrijednosti pozitivne.
 
 Pozitivno definitnu matricu možemo rastaviti (bez pivotiranja) kao
 
@@ -20,7 +20,7 @@ $$
 A=L L^T$$
 
 pri čemu je $L$ donje trokutasta matrica s pozitivnim dijagonalnim elementima. Taj rastav se zove
-_rastav Choleskog_ (vidi [Numerička matematika, poglavlje 3.6](http://www.mathos.unios.hr/pim/Materijali/Num.pdf)).
+__rastav Choleskog__ (vidi [Numerička matematika, poglavlje 3.6](http://www.mathos.unios.hr/pim/Materijali/Num.pdf)).
 
 Iz 
 
@@ -113,16 +113,84 @@ Lₚ*Lₚ'-A[Cₚ.p,Cₚ.p]
 
 # ╔═╡ 8fe33ce0-8cdc-11eb-0b6a-c3632016d982
 md"
-## Blok matrice
+## Blok Cholesky
 "
 
+# ╔═╡ 72bb3568-0528-49fa-96af-65c3e1da00cf
+function mycholb(A₁::Matrix{T}) where T
+    A=copy(A₁)
+    n,m=size(A)
+    for k=1:n
+		C=cholesky(A[k,k])
+        A[k,k]=C.U
+        for j=k+1:n
+            A[k,j]=C.L\A[k,j] # Rješavanje sustava
+        end
+        for j=k+1:n
+            for i=k+1:j
+                A[i,j]-=transpose(A[k,i])*A[k,j]
+			end
+        end
+    end
+    return triu(A)
+end
+
+# ╔═╡ ca0eb511-ba7b-42b4-89b3-8c9eb90f8fb7
+# Generirajmo matricu
+begin
+	k,l=32,16   # 32,16
+	Ab=[rand(k,k) for i=1:l, j=1:l]
+	Ab=Ab'*Ab
+end
+
+# ╔═╡ dcdfcda1-74d5-42a9-bec8-0a09d87a43c5
+Lb=mycholb(Ab)
+
+# ╔═╡ b51c6282-64f1-4b03-a2d4-009338d183d9
+# Rezidual
+norm(Lb'*Lb-Ab)
+
+# ╔═╡ 281cdf66-87e4-4cd1-893d-cc9779b1a813
+# Converting block matrix into a standard one
+unblock(A) = mapreduce(identity, hcat, [mapreduce(identity, vcat, A[:,i]) for i = 1:size(A,2)])
+
+# ╔═╡ 55f47608-829c-45ed-b6ac-eff79850c4d9
+Ab₀=unblock(Ab);
+
+# ╔═╡ 54fee016-a27f-4eda-916c-9f51413faf15
+
+cholesky(Ab₀);
+
+# ╔═╡ 9024604d-88f7-4098-a0eb-474161bed4fe
+md"
+Vremena izvođenja našeg blok algoritma `mycholb()` i ugrađene funkcije `cholesky()` su slična.
+"
+
+# ╔═╡ 00000000-0000-0000-0000-000000000001
+PLUTO_PROJECT_TOML_CONTENTS = """
+[deps]
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
+"""
+
+# ╔═╡ 00000000-0000-0000-0000-000000000002
+PLUTO_MANIFEST_TOML_CONTENTS = """
+# This file is machine-generated - editing it directly is not advised
+
+[[Libdl]]
+uuid = "8f399da3-3557-5675-b5ff-fb832c97cbdb"
+
+[[LinearAlgebra]]
+deps = ["Libdl"]
+uuid = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
+"""
+
 # ╔═╡ Cell order:
+# ╠═c162d7c0-0efc-11eb-16ad-3d5ff641f6e0
 # ╟─70942b12-0bd1-44e6-8e04-862d4948e8a0
 # ╠═a808c71a-97bb-4106-89fd-dcc0e902d2cb
 # ╠═ea4f0c1f-55e7-4423-a8df-b9de1889e511
 # ╠═26ab5250-1377-11eb-2824-69646a3f5444
 # ╠═3c7d6960-1377-11eb-25b9-177b4c932ce6
-# ╠═c162d7c0-0efc-11eb-16ad-3d5ff641f6e0
 # ╠═dfea6e0a-a718-49ef-8e60-bd0ad6e204db
 # ╠═396ba935-a1fc-4978-a64e-990bb1d78f44
 # ╠═1ff3e65c-8253-47d7-9caa-466a1359a434
@@ -136,3 +204,13 @@ md"
 # ╠═e1a8f00e-8d4f-11eb-2dfa-1f02d40baf55
 # ╠═13cb690e-8d50-11eb-0af4-9f2eb9733164
 # ╟─8fe33ce0-8cdc-11eb-0b6a-c3632016d982
+# ╠═72bb3568-0528-49fa-96af-65c3e1da00cf
+# ╠═ca0eb511-ba7b-42b4-89b3-8c9eb90f8fb7
+# ╠═dcdfcda1-74d5-42a9-bec8-0a09d87a43c5
+# ╠═b51c6282-64f1-4b03-a2d4-009338d183d9
+# ╠═281cdf66-87e4-4cd1-893d-cc9779b1a813
+# ╠═55f47608-829c-45ed-b6ac-eff79850c4d9
+# ╠═54fee016-a27f-4eda-916c-9f51413faf15
+# ╟─9024604d-88f7-4098-a0eb-474161bed4fe
+# ╟─00000000-0000-0000-0000-000000000001
+# ╟─00000000-0000-0000-0000-000000000002
