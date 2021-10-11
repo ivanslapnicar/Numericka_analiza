@@ -1,26 +1,25 @@
 # Numerička analiza
 
-Bilježnice za predmet _Numerička analiza_ ili _Numerička matematika_ kao prvi (uvodni) jednosemestralni predmet kakav standardno slušaju studenti STEM studija.
+Bilježnice za predmet __Numerička analiza__ ili __Numerička matematika__ kao prvi (uvodni) jednosemestralni predmet kakav standardno slušaju studenti STEM studija.
 
 Bilježnice se koriste na predmetu
-  _[Numerička analiza](https://nastava.fesb.unist.hr/nastava/predmeti/8183)_ koji se predaje na diplomskom studiju Računarstva (250) na [FESBu](https://www.fesb.unist.hr/).
+  __[Numerička analiza](https://nastava.fesb.unist.hr/nastava/predmeti/8183)__ koji se predaje na diplomskom studiju Računarstva (250) na [FESBu](https://www.fesb.unist.hr/).
 
-Bilježnice su posebno prilagođene on-line nastavi. Bilježnice su pisane u programskom jeziku [Julia](https://julialang.org) koristeći paket
-[Pluto.jl](https://github.com/fonsp/Pluto.jl)
+Bilježnice su pisane u programskom jeziku [Julia](https://julialang.org) koristeći paket [Pluto.jl](https://github.com/fonsp/Pluto.jl). Prilagođene su diretnoj i on-line nastavi.
 
-## Pregledavanje bilježnica
+# Pregledavanje bilježnica
 
 Unutar svojeg preglednika, bilježnice možete pregledati na poveznici
 [https://ivanslapnicar.github.io/Numericka_analiza](https://ivanslapnicar.github.io/Numericka_analiza/)
 
-##  Izvršavanje bilježnica
+#  Izvršavanje bilježnica
 
-### Izvršavanje na `binder`-u
+## Binder
 
 1. Idite na adresu  https://ivanslapnicar.github.io/NumericalMathematics/ i odaberite želejnu bilježnicu.
 2. Pritisnite `Edit or run this notebook` i odaberite `binder`. Učitat će se svi poptrebni paketi i pokrenuti bilježnica (kroz nekoliko minuta).
 
-### Izvršavanje na računalu
+## Računalo
 
 1. Klonirajte cijeli repozitorij koristeći `git` naredbu:
 ```

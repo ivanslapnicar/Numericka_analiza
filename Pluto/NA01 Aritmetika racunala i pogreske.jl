@@ -17,7 +17,7 @@ end
 using PlutoUI
 
 # ╔═╡ 0425b895-a11b-49ee-b715-228384218624
-TableOfContents(title="📚 Table of Contents", aside=true)
+TableOfContents(title="📚 Sadržaj", aside=true)
 
 # ╔═╡ 76d37869-e20b-4211-8227-1f0616e3d8f2
 md"""
@@ -746,7 +746,7 @@ uuid = "4ec0a83e-493e-50e2-b9ac-8f72acf5a8f5"
 # ╠═ac2caf5e-9874-44b9-ba5e-f0011940055f
 # ╠═b990e038-aff2-4d44-bb27-eb9de8c3977a
 # ╠═c1acfea2-a60d-4433-a00b-6d3515274a18
-# ╠═b573a376-d60f-4f1d-b876-592dbcd47be4
+# ╟─b573a376-d60f-4f1d-b876-592dbcd47be4
 # ╠═03679ace-1368-4be3-988c-1f0dcaa1407e
 # ╟─00000000-0000-0000-0000-000000000001
 # ╟─00000000-0000-0000-0000-000000000002
