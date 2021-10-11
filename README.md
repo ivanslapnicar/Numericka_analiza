@@ -16,7 +16,7 @@ Unutar svojeg preglednika, bilježnice možete pregledati na poveznici
 
 ## Binder
 
-1. Idite na adresu  https://ivanslapnicar.github.io/NumericalMathematics/ i odaberite želejnu bilježnicu.
+1. Idite na adresu  https://ivanslapnicar.github.io/NumericalMathematics/ i odaberite željenu bilježnicu.
 2. Pritisnite `Edit or run this notebook` i odaberite `binder`. Učitat će se svi poptrebni paketi i pokrenuti bilježnica (kroz nekoliko minuta).
 
 ## Računalo
