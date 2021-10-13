@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.16.0
+# v0.16.1
 
 using Markdown
 using InteractiveUtils
@@ -155,7 +155,7 @@ MATLAB naredba `eps` i Julia funkcija `eps()` daju $\epsilon = 2.2204 \times 10^
 eps()
 
 # ╔═╡ f5a5a27d-27bc-49b5-b245-c32a1f3fe13c
-# Što jer ovo?
+# Što je ovo?
 eps(64.0)
 
 # ╔═╡ aa042b72-246d-432a-9a1c-d014da8ef957
@@ -187,7 +187,7 @@ md"""
 $$
 \odot \in \{ + , - , *,/\}.$$
 
-U aritmetici s plivajućim zarezom sa strojnom jednicom $\epsilon_M$, razumno je očekivati da za bilo koja dva broja s plivajućim zarezom $x$ and $y$ vrijedi (ukoliko je rezultat u rasponu brojeva s pliovajućim zarezom)
+U aritmetici s plivajućim zarezom sa strojnom jednicom $\epsilon_M$, razumno je očekivati da za bilo koja dva broja s plivajućim zarezom $x$ and $y$ vrijedi (ukoliko je rezultat u rasponu brojeva s plivajućim zarezom)
 
 $$
 fl(x\;op\;y) = (x \; op\; y)\;(1 + \xi),\quad
@@ -380,6 +380,9 @@ end
 
 # ╔═╡ 88f1bf59-5eb4-4e2d-b28b-0d9b1004d5bd
 a₁/b₁
+
+# ╔═╡ be2cb230-df60-4db6-86e3-8f7d91e28a86
+b₁+c₁
 
 # ╔═╡ 36c79f63-7a8c-46c9-afa5-95bbed8fd598
 begin
@@ -712,6 +715,7 @@ uuid = "4ec0a83e-493e-50e2-b9ac-8f72acf5a8f5"
 # ╟─d0b306c4-6cbc-48dc-90ba-8ef4498f8d73
 # ╠═abe311d5-fbd1-40e2-8bce-2c341301deef
 # ╠═88f1bf59-5eb4-4e2d-b28b-0d9b1004d5bd
+# ╠═be2cb230-df60-4db6-86e3-8f7d91e28a86
 # ╠═36c79f63-7a8c-46c9-afa5-95bbed8fd598
 # ╠═92490cef-70af-417e-8bc8-91b1be0635cc
 # ╟─afc32ff2-014a-43ee-8e6a-d35a57434622
