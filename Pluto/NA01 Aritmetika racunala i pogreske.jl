@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.16.1
+# v0.16.0
 
 using Markdown
 using InteractiveUtils
@@ -363,6 +363,37 @@ for T in (Float16, Float32, Float64)
     println((floatmin(T)*eps(T)))
 end
 
+# ╔═╡ 20fa79ac-93c3-4e3f-bf31-f9c0f0e79d4a
+md"""
+## Binarni prikaz
+"""
+
+# ╔═╡ 1f8f4a15-0eca-4759-bee6-843306e35754
+bitstring(0)
+
+# ╔═╡ 8ca8e4e7-6450-4aaf-b208-6c0aa95ccb12
+bitstring(1)
+
+# ╔═╡ f6f7081b-212a-4c7a-b91c-0d747f4b9fb2
+bitstring(0.0)
+
+# ╔═╡ d7160016-c046-4ab8-b349-27f7a209d853
+bitstring(-0.0)
+
+# ╔═╡ 10dcdca1-71fe-42eb-8f04-6122b3a03666
+bitstring(1.0)
+
+# ╔═╡ f85ec710-1f59-4826-a376-6672bf0552ae
+bitstring(Float16(1.0))
+
+# ╔═╡ 9b7e4278-2f1a-4fff-a6f7-2249f45aaccf
+bitstring(2.0)
+
+# ╔═╡ 037cddff-3663-4fcb-8575-ea7a78e490b8
+md"""
+__Zadatak.__ Objasnite ove binarne prikaze.
+"""
+
 # ╔═╡ d0b306c4-6cbc-48dc-90ba-8ef4498f8d73
 md"""
 ##  Posebne veličine $0$, $-0$, `Inf`,`-Inf` i `NaN`
@@ -402,6 +433,29 @@ md"""
 # ╔═╡ 03f1778e-c222-4221-a4e7-eabf1071d298
 Inf+(-Inf),0*Inf, Inf/Inf, 0.0/0.0
 
+# ╔═╡ f5f3c110-b31f-4c41-8eb5-121965a5e54d
+md"""
+U IEEE standardu brojevi s plivajućim zarezom i posebne veličine imaju sljedeće binarne zapise:
+
+| Eksponent | Mantisa | Prikazuje |
+| :-----    | :-----  | :-----    |
+| $e=e_{\min}-1$ |  $d=0$     | $\pm 0$     |
+| $e=e_{\min}-1$ |  $d\neq 0$ | $0.d\times 2^{e_\min}$ - denormalizirani brojevi |
+| $e_{\min}-1$ |  1      |    1     |
+| $e_{\min}-1$ |  1      |    1     |
+| $e_{\min}-1$ |  1      |    1     |
+
+"""
+
+# ╔═╡ 94380193-9789-43db-8220-5ef210dc36aa
+bitstring(Inf)
+
+# ╔═╡ 949b08e6-f84b-475d-ab80-66ecc7532b8e
+bitstring(-Inf)
+
+# ╔═╡ 40702b4e-cecc-4a2c-ad88-d2613f49f71b
+bitstring(NaN)
+
 # ╔═╡ 307a27e6-8128-42be-9ba8-cbdacb498ada
 md"""
 IEEE aritmetika je zatvoren sustav:
@@ -414,37 +468,6 @@ bez obzira o kojoj operaciju $\odot$ se radi.
 
 Programeri mogu korisno uopotrijebiti prethodna svojstva. Međutim, ako u zadaći iz programiranja dobijete
 `NaN` ili `Inf` ili `-Inf`, vjerojatno se radi o grešci.
-"""
-
-# ╔═╡ 20fa79ac-93c3-4e3f-bf31-f9c0f0e79d4a
-md"""
-## Binarni prikaz
-"""
-
-# ╔═╡ 1f8f4a15-0eca-4759-bee6-843306e35754
-bitstring(0)
-
-# ╔═╡ 8ca8e4e7-6450-4aaf-b208-6c0aa95ccb12
-bitstring(1)
-
-# ╔═╡ f6f7081b-212a-4c7a-b91c-0d747f4b9fb2
-bitstring(0.0)
-
-# ╔═╡ d7160016-c046-4ab8-b349-27f7a209d853
-bitstring(-0.0)
-
-# ╔═╡ 10dcdca1-71fe-42eb-8f04-6122b3a03666
-bitstring(1.0)
-
-# ╔═╡ f85ec710-1f59-4826-a376-6672bf0552ae
-bitstring(Float16(1.0))
-
-# ╔═╡ 9b7e4278-2f1a-4fff-a6f7-2249f45aaccf
-bitstring(2.0)
-
-# ╔═╡ 037cddff-3663-4fcb-8575-ea7a78e490b8
-md"""
-__Zadatak.__ Objasnite ove binarne prikaze.
 """
 
 # ╔═╡ 4e97e67b-8ef6-412d-8851-2b6635ff46e6
@@ -712,15 +735,6 @@ uuid = "4ec0a83e-493e-50e2-b9ac-8f72acf5a8f5"
 # ╠═b9dd627b-5b1a-4113-bfdf-af4dc1901827
 # ╠═0f7ba6b2-aede-4f09-b7c5-adca1295195b
 # ╠═b8647d13-c400-4324-85f7-8994a1f2322f
-# ╟─d0b306c4-6cbc-48dc-90ba-8ef4498f8d73
-# ╠═abe311d5-fbd1-40e2-8bce-2c341301deef
-# ╠═88f1bf59-5eb4-4e2d-b28b-0d9b1004d5bd
-# ╠═be2cb230-df60-4db6-86e3-8f7d91e28a86
-# ╠═36c79f63-7a8c-46c9-afa5-95bbed8fd598
-# ╠═92490cef-70af-417e-8bc8-91b1be0635cc
-# ╟─afc32ff2-014a-43ee-8e6a-d35a57434622
-# ╠═03f1778e-c222-4221-a4e7-eabf1071d298
-# ╟─307a27e6-8128-42be-9ba8-cbdacb498ada
 # ╟─20fa79ac-93c3-4e3f-bf31-f9c0f0e79d4a
 # ╠═1f8f4a15-0eca-4759-bee6-843306e35754
 # ╠═8ca8e4e7-6450-4aaf-b208-6c0aa95ccb12
@@ -730,6 +744,19 @@ uuid = "4ec0a83e-493e-50e2-b9ac-8f72acf5a8f5"
 # ╠═f85ec710-1f59-4826-a376-6672bf0552ae
 # ╠═9b7e4278-2f1a-4fff-a6f7-2249f45aaccf
 # ╟─037cddff-3663-4fcb-8575-ea7a78e490b8
+# ╟─d0b306c4-6cbc-48dc-90ba-8ef4498f8d73
+# ╠═abe311d5-fbd1-40e2-8bce-2c341301deef
+# ╠═88f1bf59-5eb4-4e2d-b28b-0d9b1004d5bd
+# ╠═be2cb230-df60-4db6-86e3-8f7d91e28a86
+# ╠═36c79f63-7a8c-46c9-afa5-95bbed8fd598
+# ╠═92490cef-70af-417e-8bc8-91b1be0635cc
+# ╟─afc32ff2-014a-43ee-8e6a-d35a57434622
+# ╠═03f1778e-c222-4221-a4e7-eabf1071d298
+# ╠═f5f3c110-b31f-4c41-8eb5-121965a5e54d
+# ╠═94380193-9789-43db-8220-5ef210dc36aa
+# ╠═949b08e6-f84b-475d-ab80-66ecc7532b8e
+# ╠═40702b4e-cecc-4a2c-ad88-d2613f49f71b
+# ╟─307a27e6-8128-42be-9ba8-cbdacb498ada
 # ╟─4e97e67b-8ef6-412d-8851-2b6635ff46e6
 # ╠═88584373-9519-46fe-ae88-7199e76fb8f7
 # ╟─1215b318-8121-4adb-aa5d-139654607717
