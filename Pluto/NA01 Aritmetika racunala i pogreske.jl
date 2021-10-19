@@ -190,7 +190,7 @@ $$
 U aritmetici s plivajućim zarezom sa strojnom jednicom $\epsilon_M$, razumno je očekivati da za bilo koja dva broja s plivajućim zarezom $x$ and $y$ vrijedi (ukoliko je rezultat u rasponu brojeva s plivajućim zarezom)
 
 $$
-fl(x\;op\;y) = (x \; op\; y)\;(1 + \xi),\quad
+fl(x\;\odot\;y) = (x \; \odot\; y)\;(1 + \xi),\quad
 |\xi| \leq \epsilon_M.$$
 
 Kod dijeljenja pretpostavljamo $y \neq 0$. Svako računalo s ugrađenim IEEE standardom mora poštovati ovo pravilo. Zaokruživanje je jedno ograničenje aritmetike s plivajućim zarezom koje realna aritmetika nema. Iz ovog pravila možete lako zaključiti da će, ukoliko zbrajamo brojeve istog predznaka, množimo i dijelimo, rezultat u aritmetici plivajućeg zareza gotovo uvijek biti vrlo blizu točnom rezultatu. Poteškoće nastaju kada su $x$ i/ili $y$ već zaokruženi i imaju različite predznake te ih zbrajamo, ili imaju isti predznak te ih oduzimamo.
@@ -441,9 +441,9 @@ U IEEE standardu brojevi s plivajućim zarezom i posebne veličine imaju sljede�
 | :-----    | :-----  | :-----    |
 | $e=e_{\min}-1$ |  $d=0$     | $\pm 0$     |
 | $e=e_{\min}-1$ |  $d\neq 0$ | $0.d\times 2^{e_\min}$ - denormalizirani brojevi |
-| $e_{\min}-1$ |  1      |    1     |
-| $e_{\min}-1$ |  1      |    1     |
-| $e_{\min}-1$ |  1      |    1     |
+| $e_{\min}\leq e\leq e\_\max$ |  $d$      | $1.d \times 2^e$ - standardni brojevi | 
+| $e=e_{\max}+1$ |  $d=0$      |  $\pm$`Inf`     |
+| $e=e_{\max}+1$ |  $d\neq 0$  |  `NaN`     |
 
 """
 
@@ -455,6 +455,9 @@ bitstring(-Inf)
 
 # ╔═╡ 40702b4e-cecc-4a2c-ad88-d2613f49f71b
 bitstring(NaN)
+
+# ╔═╡ da406d8f-a48b-4a56-8f34-73f0ab837589
+bitstring(0.0\0.0)
 
 # ╔═╡ 307a27e6-8128-42be-9ba8-cbdacb498ada
 md"""
@@ -752,10 +755,11 @@ uuid = "4ec0a83e-493e-50e2-b9ac-8f72acf5a8f5"
 # ╠═92490cef-70af-417e-8bc8-91b1be0635cc
 # ╟─afc32ff2-014a-43ee-8e6a-d35a57434622
 # ╠═03f1778e-c222-4221-a4e7-eabf1071d298
-# ╠═f5f3c110-b31f-4c41-8eb5-121965a5e54d
+# ╟─f5f3c110-b31f-4c41-8eb5-121965a5e54d
 # ╠═94380193-9789-43db-8220-5ef210dc36aa
 # ╠═949b08e6-f84b-475d-ab80-66ecc7532b8e
 # ╠═40702b4e-cecc-4a2c-ad88-d2613f49f71b
+# ╠═da406d8f-a48b-4a56-8f34-73f0ab837589
 # ╟─307a27e6-8128-42be-9ba8-cbdacb498ada
 # ╟─4e97e67b-8ef6-412d-8851-2b6635ff46e6
 # ╠═88584373-9519-46fe-ae88-7199e76fb8f7
