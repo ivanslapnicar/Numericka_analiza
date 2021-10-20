@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.16.0
+# v0.16.3
 
 using Markdown
 using InteractiveUtils
@@ -8,7 +8,7 @@ using InteractiveUtils
 using PlutoUI, Random, LinearAlgebra
 
 # ╔═╡ 732d0a51-841e-4ca7-aca6-32fe38ef90f2
-TableOfContents(title="📚 Sardžaj", aside=true)
+TableOfContents(title="📚 Sadržaj", aside=true)
 
 # ╔═╡ 54201b21-914a-4152-b187-3ecfe9982e65
 md"""

@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.16.0
+# v0.16.3
 
 using Markdown
 using InteractiveUtils
@@ -75,7 +75,7 @@ Algoritam je __stabilan__ ako uvijek vrijedi
 $$
 \mathrm{alg}(x)=f(x+\delta x)$$
 
-za neki mali $ \delta x$.
+za neki "mali" $\delta x$.
 """
 
 # ╔═╡ Cell order:
