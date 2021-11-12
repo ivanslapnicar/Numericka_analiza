@@ -791,19 +791,19 @@ $$\frac{r}{\| A\| \cdot \|\hat x \|}$$
 
 ima veliku normu, tada _rješenje nije izračunato stabilno._
 
-S druge strane, ako relativni rezidual ima malu normu, tada je _rješenje izračunato stabilno_. Naime, za
+S druge strane, ako relativni rezidual ima malu normu, tada je _rješenje izračunato stabilno_. Naime, za (ovdje koristimo 2-normu)
 
-$$\delta A=\frac{r\hat x^T}{\|\hat x\|^2}$$
+$$\delta A=\frac{r\hat x^T}{\|\hat x\|^2_2}$$
 
 vrijedi (1):
 
-$$b-(A+\delta A)\hat x=(b-A\hat x)-\delta A \hat x = r-\frac{r\hat x^T \hat x}{\|\hat x\|^2}
-= r-\frac{r \|\hat x^T \hat x\|}{\|\hat x\|^2}=r-r=0.$$
+$$b-(A+\delta A)\hat x=(b-A\hat x)-\delta A \hat x = r-\frac{r\hat x^T \hat x}{\|\hat x\|^2_2}
+= r-\frac{r \|\hat x^T \hat x\|_2}{\|\hat x\|^2_2}=r-r=0.$$
 
 Također vrijedi
 
-$$\frac{\|  \delta A\|}{\|A \|}  \leq  \frac{\|r\|\|\hat x \|}{\| A\| \cdot \|\hat x \|^2}=
-\frac{\|r\|}{\| A\| \cdot \|\hat x \|}.$$
+$$\frac{\|  \delta A\|_2}{\|A \|}  \leq  \frac{\|r\|_2\|\hat x \|_2}{\| A\| \cdot \|\hat x \|^2_2}=
+\frac{\|r\|_2}{\| A\| \cdot \|\hat x \|_2}.$$
 
 Izračunajmo reziduale za prethodni primjer dimenzije $2$:
 
