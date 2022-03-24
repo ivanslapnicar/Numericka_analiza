@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.17.1
+# v0.17.3
 
 using Markdown
 using InteractiveUtils
@@ -65,7 +65,7 @@ Koristan članak:
 
 $$x = \pm d \cdot \beta^e, \quad \beta \in \{ 2,10 \}$$
 
-__Baza__ 2 je za standardna računala opće namjene, __baza__ 10 je za džepne kalkupatore.
+__Baza__ 2 je za standardna računala opće namjene, __baza__ 10 je za džepne kalkulatore.
 
  $e$ je __eksponent__ i zadovoljava
 
@@ -146,6 +146,9 @@ begin
 	end
 	a₀
 end
+
+# ╔═╡ 6065926a-21a0-4b98-b7f9-ecb96693f12d
+1+a₀==1
 
 # ╔═╡ 82a6d40f-4c81-4ff1-8e02-3f427c413f61
 md"""
@@ -351,6 +354,9 @@ $$
 fl(x - y) = 0 \mbox{ ako i samo ako je } x = y.$$
 """
 
+# ╔═╡ eaf34525-9f16-468e-ab8b-54a5e0a8b40d
+floatmax(27.0)
+
 # ╔═╡ b9dd627b-5b1a-4113-bfdf-af4dc1901827
 for T in (Float16, Float32, Float64, BigFloat)
     println((floatmin(T),floatmax(T)))
@@ -364,6 +370,12 @@ for T in (Float16, Float32, Float64)
     println((floatmin(T)*eps(T)))
 end
 
+# ╔═╡ dec72eaf-d4c8-4f67-9e4e-8d71c6651796
+1/floatmin()
+
+# ╔═╡ e1b1c9aa-cff4-4155-80c2-9181be546116
+1/(floatmin()*eps())
+
 # ╔═╡ 20fa79ac-93c3-4e3f-bf31-f9c0f0e79d4a
 md"""
 ## Binarni prikaz
@@ -373,7 +385,7 @@ md"""
 bitstring(0)
 
 # ╔═╡ 8ca8e4e7-6450-4aaf-b208-6c0aa95ccb12
-bitstring(1)
+bitstring(-1)
 
 # ╔═╡ f6f7081b-212a-4c7a-b91c-0d747f4b9fb2
 bitstring(0.0)
@@ -455,7 +467,7 @@ bitstring(Inf)
 bitstring(-Inf)
 
 # ╔═╡ 40702b4e-cecc-4a2c-ad88-d2613f49f71b
-bitstring(NaN)
+bitstring(0.0*Inf)
 
 # ╔═╡ da406d8f-a48b-4a56-8f34-73f0ab837589
 bitstring(0.0\0.0)
@@ -696,13 +708,16 @@ deps = ["Unicode"]
 uuid = "de0858da-6303-5e67-8744-51eddeeeb8d7"
 
 [[Random]]
-deps = ["Serialization"]
+deps = ["SHA", "Serialization"]
 uuid = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
 
 [[Reexport]]
 git-tree-sha1 = "45e428421666073eab6f2da5c9d310d99bb12f9b"
 uuid = "189a3867-3050-52da-a836-e630ba90ab69"
 version = "1.2.2"
+
+[[SHA]]
+uuid = "ea8e919c-243c-51af-8825-aaa63cd721ce"
 
 [[Serialization]]
 uuid = "9e88b42a-f829-5b0c-bbe9-9e923198166b"
@@ -725,6 +740,7 @@ uuid = "4ec0a83e-493e-50e2-b9ac-8f72acf5a8f5"
 # ╟─91448849-f9f0-459b-87c0-b9fc5a386770
 # ╟─1f8858f4-104d-4dd8-99de-b4bbf278e720
 # ╠═030a0e5f-f9e1-4696-af85-b890eaa129d7
+# ╠═6065926a-21a0-4b98-b7f9-ecb96693f12d
 # ╟─82a6d40f-4c81-4ff1-8e02-3f427c413f61
 # ╠═7c28c479-912d-4a12-bc38-d15c6a3f0501
 # ╠═f5a5a27d-27bc-49b5-b245-c32a1f3fe13c
@@ -736,9 +752,12 @@ uuid = "4ec0a83e-493e-50e2-b9ac-8f72acf5a8f5"
 # ╟─51356548-f58f-40a7-98b0-1b92ebeba3ed
 # ╟─3170458d-931a-41a1-8715-b41de07aa3c6
 # ╟─2ee4617f-70cf-4ecb-99b2-7167cc6b34d6
+# ╠═eaf34525-9f16-468e-ab8b-54a5e0a8b40d
 # ╠═b9dd627b-5b1a-4113-bfdf-af4dc1901827
 # ╠═0f7ba6b2-aede-4f09-b7c5-adca1295195b
 # ╠═b8647d13-c400-4324-85f7-8994a1f2322f
+# ╠═dec72eaf-d4c8-4f67-9e4e-8d71c6651796
+# ╠═e1b1c9aa-cff4-4155-80c2-9181be546116
 # ╟─20fa79ac-93c3-4e3f-bf31-f9c0f0e79d4a
 # ╠═1f8f4a15-0eca-4759-bee6-843306e35754
 # ╠═8ca8e4e7-6450-4aaf-b208-6c0aa95ccb12

@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.17.1
+# v0.17.3
 
 using Markdown
 using InteractiveUtils
@@ -61,6 +61,9 @@ Rješavanje zadnjeg trokutastog sustava daje $x_1 = 0$, $x_2 = 1$. Uvrštavanje 
 # ╔═╡ 89291e44-4ea6-4e74-99bd-a30e8ee4d895
 [eps()/10 1;0 1-10/eps()]\[1; 2-10/eps()]
 
+# ╔═╡ e128967d-ee0f-4f54-bd35-8b8a55a9fbb3
+cond([eps()/10 1;0 1-10/eps()])
+
 # ╔═╡ 7b998fd0-87d4-11eb-286a-fd35bcef317c
 2-10/eps()==-10/eps()
 
@@ -118,6 +121,9 @@ Niti jedan trik kojeg smo vidjeli ne daje točno rješenje.
 
 # ╔═╡ c471e93a-5c8a-433f-880a-9e26788fa601
 [1+2*eps() 1+2*eps(); 1+eps() 1]\[2+4*eps(); 2+eps()]
+
+# ╔═╡ e1a789e2-7402-49a5-b0f2-ed1666f1ca4c
+cond([1+2*eps() 1+2*eps(); 1+eps() 1])
 
 # ╔═╡ 9983cc49-9398-4772-9d04-3f7bbf2b47a1
 [BigFloat(1)+2*eps() 1+2*eps(); 1+eps() 1]\[BigFloat(2)+4*eps(); 2+eps()]
@@ -341,7 +347,7 @@ Napravimo prvo mali test, $k=2$, $l=4$:
 
 # ╔═╡ 090a3f10-0d85-11eb-0181-fdc5aa091df7
 begin
-	k,l=2,4   # 32,16
+	k,l=32,26 # 2,4   # 32,16
 	Ab=[rand(k,k) for i=1:l, j=1:l]
 end
 
@@ -372,7 +378,7 @@ Rezidual=L₀*U₀-Ab
 unblock(A) = mapreduce(identity, hcat, [mapreduce(identity, vcat, A[:,i]) for i = 1:size(A,2)])
 
 # ╔═╡ c64b1170-87de-11eb-1bf1-8f695cd2ac73
-norm(Rezidual)
+norm(Rezidual)/norm(Ab)
 
 # ╔═╡ 86f3ce48-73ce-4626-914f-478cf3ad1154
 md"""
@@ -439,8 +445,14 @@ A
 # ╔═╡ 573618c0-0def-11eb-0101-e1b09c384512
 F₄=lu(A)
 
+# ╔═╡ a05104c4-48ff-4a64-a5f7-8b0557d2019b
+F₄.P
+
 # ╔═╡ 74b55dc0-0def-11eb-37e2-71ba59aa8295
 F₄.L*F₄.U==A[F₄.p,:]
+
+# ╔═╡ 16800a1d-8ab9-48dc-ad0e-9cb11b55b00c
+F₄.L*F₄.U-F₄.P*A
 
 # ╔═╡ 90e4a320-0def-11eb-189e-7fc9c7b53942
 # Javljaju se greške zaokruživanja
@@ -852,8 +864,15 @@ PlutoUI = "~0.7.14"
 PLUTO_MANIFEST_TOML_CONTENTS = """
 # This file is machine-generated - editing it directly is not advised
 
+[[Artifacts]]
+uuid = "56f22d72-fd6d-98f1-02f0-08ddc0907c33"
+
 [[Base64]]
 uuid = "2a0f44e3-6c83-55bd-87e4-b1978d98bd5f"
+
+[[CompilerSupportLibraries_jll]]
+deps = ["Artifacts", "Libdl"]
+uuid = "e66e0078-7015-5450-92f7-15fbd957f2ae"
 
 [[Dates]]
 deps = ["Printf"]
@@ -884,7 +903,7 @@ version = "0.21.2"
 uuid = "8f399da3-3557-5675-b5ff-fb832c97cbdb"
 
 [[LinearAlgebra]]
-deps = ["Libdl"]
+deps = ["Libdl", "libblastrampoline_jll"]
 uuid = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
 
 [[Logging]]
@@ -896,6 +915,10 @@ uuid = "d6f4376e-aef5-505a-96c1-9c027394607a"
 
 [[Mmap]]
 uuid = "a63ad114-7e13-5084-954f-fe012c677804"
+
+[[OpenBLAS_jll]]
+deps = ["Artifacts", "CompilerSupportLibraries_jll", "Libdl"]
+uuid = "4536629a-c528-5b80-bd46-f80d51c5b363"
 
 [[Parsers]]
 deps = ["Dates"]
@@ -914,7 +937,7 @@ deps = ["Unicode"]
 uuid = "de0858da-6303-5e67-8744-51eddeeeb8d7"
 
 [[Random]]
-deps = ["Serialization"]
+deps = ["SHA", "Serialization"]
 uuid = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
 
 [[Reexport]]
@@ -934,6 +957,10 @@ uuid = "cf7118a7-6976-5b1a-9a39-7adc72f591a4"
 
 [[Unicode]]
 uuid = "4ec0a83e-493e-50e2-b9ac-8f72acf5a8f5"
+
+[[libblastrampoline_jll]]
+deps = ["Artifacts", "Libdl", "OpenBLAS_jll"]
+uuid = "8e850b90-86db-534c-a0d3-1478176c7d93"
 """
 
 # ╔═╡ Cell order:
@@ -942,11 +969,13 @@ uuid = "4ec0a83e-493e-50e2-b9ac-8f72acf5a8f5"
 # ╟─48167400-0d83-11eb-1c7d-359a2574c8b1
 # ╟─221d2474-de59-4042-918f-534305d8708f
 # ╠═89291e44-4ea6-4e74-99bd-a30e8ee4d895
+# ╠═e128967d-ee0f-4f54-bd35-8b8a55a9fbb3
 # ╠═7b998fd0-87d4-11eb-286a-fd35bcef317c
 # ╟─ed629240-6b9a-4a85-b412-97a06565a9cf
 # ╠═b8b17cd3-c828-438d-a2c0-13b1965ed778
 # ╟─eb5aab00-0d73-11eb-2f45-771b2e23a5e3
 # ╠═c471e93a-5c8a-433f-880a-9e26788fa601
+# ╠═e1a789e2-7402-49a5-b0f2-ed1666f1ca4c
 # ╠═9983cc49-9398-4772-9d04-3f7bbf2b47a1
 # ╟─de3e2152-7ec2-4366-a6fa-dc1476d19480
 # ╟─c9bc269a-a306-4a35-acd8-aad3de58f56a
@@ -1000,7 +1029,9 @@ uuid = "4ec0a83e-493e-50e2-b9ac-8f72acf5a8f5"
 # ╠═68c72cf0-0dfe-11eb-37fb-d5ac2e1142e7
 # ╠═4483e520-0d88-11eb-1eb4-25f4eaf1a88d
 # ╠═573618c0-0def-11eb-0101-e1b09c384512
+# ╠═a05104c4-48ff-4a64-a5f7-8b0557d2019b
 # ╠═74b55dc0-0def-11eb-37e2-71ba59aa8295
+# ╠═16800a1d-8ab9-48dc-ad0e-9cb11b55b00c
 # ╠═90e4a320-0def-11eb-189e-7fc9c7b53942
 # ╟─630a82aa-6998-4325-a0c9-d44f60c0df31
 # ╠═18ad03b0-0d87-11eb-06f9-45ac1b7e3b04

@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.16.0
+# v0.17.3
 
 using Markdown
 using InteractiveUtils
@@ -34,9 +34,8 @@ md"""
 Upišite pravilni $n$-terokut u kružnicu radijusa $1$. Izračunajte opseg njegove gornje polovice.
 To je najlakše napraviti kada je $n=2^k$. Koristeći geometriju,
 
-\begin{equation}
-p(n) = 2n \sin \: \frac{\pi}{2n}.
-\end{equation}
+$$
+p(n) = 2n \sin \: \frac{\pi}{2n}.$$
 
 Premda se ova formula poziva na $\pi$, vrijednosti $p(n)$ za $n=1,2,\cdots$, možemo izračunati bez poznavanja $\pi$ i bez korištenja funkcije $\sin$ na kalkulatoru (Računanje sinusa zahtijeva poznavanje broja $\pi$!).
 """
@@ -346,6 +345,10 @@ git-tree-sha1 = "31d0151f5716b655421d9d75b7fa74cc4e744df2"
 uuid = "34da2185-b29b-5c13-b0c7-acf172513d20"
 version = "3.39.0"
 
+[[CompilerSupportLibraries_jll]]
+deps = ["Artifacts", "Libdl"]
+uuid = "e66e0078-7015-5450-92f7-15fbd957f2ae"
+
 [[Dates]]
 deps = ["Printf"]
 uuid = "ade2ca70-3891-5945-98fb-dc099432e06a"
@@ -422,7 +425,7 @@ uuid = "29816b5a-b9ab-546f-933c-edad1886dfa8"
 uuid = "8f399da3-3557-5675-b5ff-fb832c97cbdb"
 
 [[LinearAlgebra]]
-deps = ["Libdl"]
+deps = ["Libdl", "libblastrampoline_jll"]
 uuid = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
 
 [[Logging]]
@@ -457,6 +460,10 @@ version = "0.2.20"
 [[NetworkOptions]]
 uuid = "ca575930-c2e3-43a9-ace4-1e988b2c1908"
 
+[[OpenBLAS_jll]]
+deps = ["Artifacts", "CompilerSupportLibraries_jll", "Libdl"]
+uuid = "4536629a-c528-5b80-bd46-f80d51c5b363"
+
 [[Parsers]]
 deps = ["Dates"]
 git-tree-sha1 = "a8709b968a1ea6abc2dc1967cb1db6ac9a00dfb6"
@@ -488,7 +495,7 @@ deps = ["InteractiveUtils", "Markdown", "Sockets", "Unicode"]
 uuid = "3fa0cd96-eef1-5676-8a61-b3b8758bbffb"
 
 [[Random]]
-deps = ["Serialization"]
+deps = ["SHA", "Serialization"]
 uuid = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
 
 [[RecipesBase]]
@@ -550,6 +557,10 @@ uuid = "4ec0a83e-493e-50e2-b9ac-8f72acf5a8f5"
 [[Zlib_jll]]
 deps = ["Libdl"]
 uuid = "83775a58-1f1d-513f-b197-d71354ab007a"
+
+[[libblastrampoline_jll]]
+deps = ["Artifacts", "Libdl", "OpenBLAS_jll"]
+uuid = "8e850b90-86db-534c-a0d3-1478176c7d93"
 
 [[nghttp2_jll]]
 deps = ["Artifacts", "Libdl"]

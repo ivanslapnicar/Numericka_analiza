@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.17.1
+# v0.17.3
 
 using Markdown
 using InteractiveUtils
@@ -271,6 +271,9 @@ end
 # Izvršite dva puta, drugo mjerenje je relevantno.
 @time A₁*B₁
 
+# ╔═╡ 67ae15b6-7c2c-40e1-8b68-c562bb9264c4
+@which A₁*B₁
+
 # ╔═╡ 698da56b-ed97-4e26-8456-403080e095e3
 operacija_u_sekundi=(2*n^3)/0.003
 
@@ -332,6 +335,9 @@ end
 # ╔═╡ 9bc2dc46-206d-46c5-b3c3-17d398d2cf6d
 # This is considerably faster.
 @time AB(Ab,Bb)
+
+# ╔═╡ dccef80c-4a20-49f0-a45d-073f62777432
+@which Ab*Bb
 
 # ╔═╡ a7de05aa-0ed1-4e11-88de-de70d629d30b
 md"""
@@ -476,8 +482,15 @@ PlutoUI = "~0.7.9"
 PLUTO_MANIFEST_TOML_CONTENTS = """
 # This file is machine-generated - editing it directly is not advised
 
+[[Artifacts]]
+uuid = "56f22d72-fd6d-98f1-02f0-08ddc0907c33"
+
 [[Base64]]
 uuid = "2a0f44e3-6c83-55bd-87e4-b1978d98bd5f"
+
+[[CompilerSupportLibraries_jll]]
+deps = ["Artifacts", "Libdl"]
+uuid = "e66e0078-7015-5450-92f7-15fbd957f2ae"
 
 [[Dates]]
 deps = ["Printf"]
@@ -497,7 +510,7 @@ version = "0.21.2"
 uuid = "8f399da3-3557-5675-b5ff-fb832c97cbdb"
 
 [[LinearAlgebra]]
-deps = ["Libdl"]
+deps = ["Libdl", "libblastrampoline_jll"]
 uuid = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
 
 [[Logging]]
@@ -509,6 +522,10 @@ uuid = "d6f4376e-aef5-505a-96c1-9c027394607a"
 
 [[Mmap]]
 uuid = "a63ad114-7e13-5084-954f-fe012c677804"
+
+[[OpenBLAS_jll]]
+deps = ["Artifacts", "CompilerSupportLibraries_jll", "Libdl"]
+uuid = "4536629a-c528-5b80-bd46-f80d51c5b363"
 
 [[Parsers]]
 deps = ["Dates"]
@@ -527,13 +544,16 @@ deps = ["Unicode"]
 uuid = "de0858da-6303-5e67-8744-51eddeeeb8d7"
 
 [[Random]]
-deps = ["Serialization"]
+deps = ["SHA", "Serialization"]
 uuid = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
 
 [[Reexport]]
 git-tree-sha1 = "45e428421666073eab6f2da5c9d310d99bb12f9b"
 uuid = "189a3867-3050-52da-a836-e630ba90ab69"
 version = "1.2.2"
+
+[[SHA]]
+uuid = "ea8e919c-243c-51af-8825-aaa63cd721ce"
 
 [[Serialization]]
 uuid = "9e88b42a-f829-5b0c-bbe9-9e923198166b"
@@ -545,6 +565,10 @@ version = "0.2.0"
 
 [[Unicode]]
 uuid = "4ec0a83e-493e-50e2-b9ac-8f72acf5a8f5"
+
+[[libblastrampoline_jll]]
+deps = ["Artifacts", "Libdl", "OpenBLAS_jll"]
+uuid = "8e850b90-86db-534c-a0d3-1478176c7d93"
 """
 
 # ╔═╡ Cell order:
@@ -565,6 +589,7 @@ uuid = "4ec0a83e-493e-50e2-b9ac-8f72acf5a8f5"
 # ╟─25d321c6-26bc-4d2d-ab74-8c048560e57c
 # ╠═533c1833-8b02-4d45-b1fc-ad0255d0380a
 # ╠═1783e655-bc2f-4442-a772-2b98f5ab2e96
+# ╠═67ae15b6-7c2c-40e1-8b68-c562bb9264c4
 # ╠═698da56b-ed97-4e26-8456-403080e095e3
 # ╟─ea827322-031d-42b5-aafd-10c2d12fa469
 # ╠═d1dccfbf-7878-4b48-a376-f0bf9b61ad59
@@ -573,6 +598,7 @@ uuid = "4ec0a83e-493e-50e2-b9ac-8f72acf5a8f5"
 # ╠═be605463-3a97-4869-b9ba-426dc1822c96
 # ╠═6fc4fe72-e7ac-4c14-aa9c-37a5459d7004
 # ╠═9bc2dc46-206d-46c5-b3c3-17d398d2cf6d
+# ╠═dccef80c-4a20-49f0-a45d-073f62777432
 # ╟─a7de05aa-0ed1-4e11-88de-de70d629d30b
 # ╠═209d4041-a0d9-455d-a28d-1a7cc632082f
 # ╟─3b096734-bd85-4e21-ad81-6c1ed99e2f43
