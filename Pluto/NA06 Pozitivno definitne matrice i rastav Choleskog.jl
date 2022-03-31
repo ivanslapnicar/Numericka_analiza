@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.16.0
+# v0.17.3
 
 using Markdown
 using InteractiveUtils
@@ -77,6 +77,9 @@ C=cholesky(A)
 # Izvadimo L iz strukture
 L=C.U
 
+# ╔═╡ e20bffc4-b17f-4a7c-98d9-182ce8eb8395
+C.L
+
 # ╔═╡ 1ff3e65c-8253-47d7-9caa-466a1359a434
 # Residual 
 L'*L-A
@@ -145,8 +148,14 @@ begin
 	Ab=Ab'*Ab
 end
 
+# ╔═╡ 7f37a748-d31c-433f-bc66-9e7358762c1b
+Ab[1,1]
+
 # ╔═╡ dcdfcda1-74d5-42a9-bec8-0a09d87a43c5
 Lb=mycholb(Ab)
+
+# ╔═╡ 138188b6-1452-49cc-ba14-82309f92d0cc
+Lb[1,1]
 
 # ╔═╡ b51c6282-64f1-4b03-a2d4-009338d183d9
 # Rezidual
@@ -178,12 +187,27 @@ LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
 PLUTO_MANIFEST_TOML_CONTENTS = """
 # This file is machine-generated - editing it directly is not advised
 
+[[Artifacts]]
+uuid = "56f22d72-fd6d-98f1-02f0-08ddc0907c33"
+
+[[CompilerSupportLibraries_jll]]
+deps = ["Artifacts", "Libdl"]
+uuid = "e66e0078-7015-5450-92f7-15fbd957f2ae"
+
 [[Libdl]]
 uuid = "8f399da3-3557-5675-b5ff-fb832c97cbdb"
 
 [[LinearAlgebra]]
-deps = ["Libdl"]
+deps = ["Libdl", "libblastrampoline_jll"]
 uuid = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
+
+[[OpenBLAS_jll]]
+deps = ["Artifacts", "CompilerSupportLibraries_jll", "Libdl"]
+uuid = "4536629a-c528-5b80-bd46-f80d51c5b363"
+
+[[libblastrampoline_jll]]
+deps = ["Artifacts", "Libdl", "OpenBLAS_jll"]
+uuid = "8e850b90-86db-534c-a0d3-1478176c7d93"
 """
 
 # ╔═╡ Cell order:
@@ -195,6 +219,7 @@ uuid = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
 # ╠═3c7d6960-1377-11eb-25b9-177b4c932ce6
 # ╠═dfea6e0a-a718-49ef-8e60-bd0ad6e204db
 # ╠═396ba935-a1fc-4978-a64e-990bb1d78f44
+# ╠═e20bffc4-b17f-4a7c-98d9-182ce8eb8395
 # ╠═1ff3e65c-8253-47d7-9caa-466a1359a434
 # ╠═286a74e5-6a3b-41ee-a227-cb5d88dd027e
 # ╠═2e54b52f-2ba0-4de0-a7bf-73bf1c0d5b6f
@@ -208,7 +233,9 @@ uuid = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
 # ╟─8fe33ce0-8cdc-11eb-0b6a-c3632016d982
 # ╠═72bb3568-0528-49fa-96af-65c3e1da00cf
 # ╠═ca0eb511-ba7b-42b4-89b3-8c9eb90f8fb7
+# ╠═7f37a748-d31c-433f-bc66-9e7358762c1b
 # ╠═dcdfcda1-74d5-42a9-bec8-0a09d87a43c5
+# ╠═138188b6-1452-49cc-ba14-82309f92d0cc
 # ╠═b51c6282-64f1-4b03-a2d4-009338d183d9
 # ╠═281cdf66-87e4-4cd1-893d-cc9779b1a813
 # ╠═55f47608-829c-45ed-b6ac-eff79850c4d9

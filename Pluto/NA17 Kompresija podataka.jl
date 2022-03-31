@@ -53,7 +53,7 @@ begin
 end
 
 # ╔═╡ c1cbc1a9-0a1e-4ac2-90fb-e9ce3c20be62
-colorview(Gray,Red)
+colorview(Gray,Blue)
 
 # ╔═╡ c0cd1d7e-1fb9-4ae8-aa8d-794c36b85837
 begin

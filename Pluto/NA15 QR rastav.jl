@@ -286,6 +286,18 @@ Fₚ.Q*Fₚ.R-A*Fₚ.P
 # Provjera s vektorom
 Fₚ.Q*Fₚ.R-A[:,Fₚ.p]
 
+# ╔═╡ a199bc51-275d-44a6-bc48-e97cb533922f
+F.factors
+
+# ╔═╡ 550adbc6-118d-4dab-b13b-5cc2eb59b287
+F.R
+
+# ╔═╡ 4c803427-419f-42ee-8672-1af245889d33
+v1=HouseholderVector(A[:,1])
+
+# ╔═╡ 3c9bf5b9-3a35-46e8-bcad-a9b16b0e731d
+v1/v1[1]
+
 # ╔═╡ 60166ed0-dfe1-474a-91df-64c433867489
 md"""
 ## Brzina
@@ -303,6 +315,9 @@ end
 # ╔═╡ c7f654da-3ad0-4781-a1b0-f7f31a19bf74
 # Ispis je u Julia terminalu
 @time F₁=qr(A₁);
+
+# ╔═╡ 8a76f428-69aa-4770-a5f5-766e47fa9f9c
+@time lu(A₁);
 
 # ╔═╡ c0eaba40-c919-49af-96f8-700173e3a72a
 @time qr(A₁,Val(true));
@@ -570,9 +585,14 @@ uuid = "3f19e933-33d8-53b3-aaab-bd5110c3b7a0"
 # ╠═dcc30d6f-3170-4e6d-ad51-741bce871a42
 # ╠═ad9107ee-2abd-4dd7-b821-2e0a4bae4374
 # ╠═17cebd37-73b8-4699-a119-4237ab85d084
+# ╠═a199bc51-275d-44a6-bc48-e97cb533922f
+# ╠═550adbc6-118d-4dab-b13b-5cc2eb59b287
+# ╠═4c803427-419f-42ee-8672-1af245889d33
+# ╠═3c9bf5b9-3a35-46e8-bcad-a9b16b0e731d
 # ╟─60166ed0-dfe1-474a-91df-64c433867489
 # ╠═7a2fb72c-2c5c-4e1a-895a-fb0eb5608876
 # ╠═c7f654da-3ad0-4781-a1b0-f7f31a19bf74
+# ╠═8a76f428-69aa-4770-a5f5-766e47fa9f9c
 # ╠═c0eaba40-c919-49af-96f8-700173e3a72a
 # ╠═f6b568ec-20e5-4575-a62c-70d470589ef1
 # ╟─7e40ad34-0497-410d-9669-20ad8a9ca74b

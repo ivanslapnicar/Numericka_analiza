@@ -180,7 +180,7 @@ __Pitanje.__ Zbog čega stvarna krivulja populacije ima lom?
 
 # ╔═╡ 1ac0491b-6cc9-4a14-af99-c6c6defc3074
 # Predvidimo populaciju 2021 godine
-P₁(2021)
+P₁(2050)
 
 # ╔═╡ 23e34ea5-8dc6-4444-bcd6-94229abad290
 md"
@@ -197,7 +197,7 @@ begin
 end
 
 # ╔═╡ e8911abc-74bd-4daa-9336-5b10270616b1
-P₂(2021)
+P₂(2050)
 
 # ╔═╡ 00000000-0000-0000-0000-000000000001
 PLUTO_PROJECT_TOML_CONTENTS = """
