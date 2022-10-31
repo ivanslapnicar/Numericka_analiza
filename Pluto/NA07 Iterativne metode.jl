@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.17.3
+# v0.19.14
 
 using Markdown
 using InteractiveUtils
@@ -261,6 +261,7 @@ uuid = "2a0f44e3-6c83-55bd-87e4-b1978d98bd5f"
 [[CompilerSupportLibraries_jll]]
 deps = ["Artifacts", "Libdl"]
 uuid = "e66e0078-7015-5450-92f7-15fbd957f2ae"
+version = "0.5.2+0"
 
 [[Dates]]
 deps = ["Printf"]
@@ -313,6 +314,7 @@ uuid = "a63ad114-7e13-5084-954f-fe012c677804"
 [[OpenBLAS_jll]]
 deps = ["Artifacts", "CompilerSupportLibraries_jll", "Libdl"]
 uuid = "4536629a-c528-5b80-bd46-f80d51c5b363"
+version = "0.3.20+0"
 
 [[Parsers]]
 deps = ["Dates"]
@@ -341,6 +343,7 @@ version = "1.2.2"
 
 [[SHA]]
 uuid = "ea8e919c-243c-51af-8825-aaa63cd721ce"
+version = "0.7.0"
 
 [[Serialization]]
 uuid = "9e88b42a-f829-5b0c-bbe9-9e923198166b"
@@ -359,11 +362,12 @@ uuid = "4ec0a83e-493e-50e2-b9ac-8f72acf5a8f5"
 [[libblastrampoline_jll]]
 deps = ["Artifacts", "Libdl", "OpenBLAS_jll"]
 uuid = "8e850b90-86db-534c-a0d3-1478176c7d93"
+version = "5.1.1+0"
 """
 
 # ╔═╡ Cell order:
 # ╠═26644809-5e85-46be-a15b-dbe3f99b14ca
-# ╟─daf29e3a-f99e-4df8-95f9-d5a6c71e1271
+# ╠═daf29e3a-f99e-4df8-95f9-d5a6c71e1271
 # ╟─1a406352-1739-4709-85bc-6ca3ecb19253
 # ╟─610ef7a4-f0a6-42c8-a2cc-1a03cb155a22
 # ╟─b2ed8cb0-1386-11eb-364f-ab9a25428f4b
