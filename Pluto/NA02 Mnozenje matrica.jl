@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.17.3
+# v0.19.9
 
 using Markdown
 using InteractiveUtils
@@ -275,12 +275,15 @@ end
 @which A₁*B₁
 
 # ╔═╡ 698da56b-ed97-4e26-8456-403080e095e3
-operacija_u_sekundi=(2*n^3)/0.003
+operacija_u_sekundi=(2*n₁^3)/0.014
 
 # ╔═╡ ea827322-031d-42b5-aafd-10c2d12fa469
 md"""
 __Zadatak.__ Izračunajte najveći $n$ za koji tri kvadratne $n\times n$ matrice `Float64` brojeva stanu u RAM vašeg računala. Koliko dugo će trajati množenje?
 """
+
+# ╔═╡ 7dc0b94c-4955-4eef-85ee-c5c65d7ec6e2
+1/0.014
 
 # ╔═╡ 2015d3fc-37d2-43ee-99da-fe7029b73ee4
 md"""
@@ -491,6 +494,7 @@ uuid = "2a0f44e3-6c83-55bd-87e4-b1978d98bd5f"
 [[CompilerSupportLibraries_jll]]
 deps = ["Artifacts", "Libdl"]
 uuid = "e66e0078-7015-5450-92f7-15fbd957f2ae"
+version = "0.5.2+0"
 
 [[Dates]]
 deps = ["Printf"]
@@ -526,6 +530,7 @@ uuid = "a63ad114-7e13-5084-954f-fe012c677804"
 [[OpenBLAS_jll]]
 deps = ["Artifacts", "CompilerSupportLibraries_jll", "Libdl"]
 uuid = "4536629a-c528-5b80-bd46-f80d51c5b363"
+version = "0.3.20+0"
 
 [[Parsers]]
 deps = ["Dates"]
@@ -554,6 +559,7 @@ version = "1.2.2"
 
 [[SHA]]
 uuid = "ea8e919c-243c-51af-8825-aaa63cd721ce"
+version = "0.7.0"
 
 [[Serialization]]
 uuid = "9e88b42a-f829-5b0c-bbe9-9e923198166b"
@@ -569,6 +575,7 @@ uuid = "4ec0a83e-493e-50e2-b9ac-8f72acf5a8f5"
 [[libblastrampoline_jll]]
 deps = ["Artifacts", "Libdl", "OpenBLAS_jll"]
 uuid = "8e850b90-86db-534c-a0d3-1478176c7d93"
+version = "5.1.1+0"
 """
 
 # ╔═╡ Cell order:
@@ -586,13 +593,14 @@ uuid = "8e850b90-86db-534c-a0d3-1478176c7d93"
 # ╟─6a085347-8f1d-4dc4-8742-774c4e279cfc
 # ╟─b3f1858f-b1ec-4f60-8343-b4b12d2c60c7
 # ╟─85135806-d982-4ca1-b852-fc53cfd0903e
-# ╟─25d321c6-26bc-4d2d-ab74-8c048560e57c
+# ╠═25d321c6-26bc-4d2d-ab74-8c048560e57c
 # ╠═533c1833-8b02-4d45-b1fc-ad0255d0380a
 # ╠═1783e655-bc2f-4442-a772-2b98f5ab2e96
 # ╠═67ae15b6-7c2c-40e1-8b68-c562bb9264c4
 # ╠═698da56b-ed97-4e26-8456-403080e095e3
 # ╟─ea827322-031d-42b5-aafd-10c2d12fa469
 # ╠═d1dccfbf-7878-4b48-a376-f0bf9b61ad59
+# ╠═7dc0b94c-4955-4eef-85ee-c5c65d7ec6e2
 # ╟─2015d3fc-37d2-43ee-99da-fe7029b73ee4
 # ╠═47168e37-a8b8-4969-856e-c12486882a13
 # ╠═be605463-3a97-4869-b9ba-426dc1822c96

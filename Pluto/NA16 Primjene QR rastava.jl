@@ -50,6 +50,9 @@ begin
 	x=R\c
 end
 
+# ╔═╡ b9dff261-50aa-40d5-a5bd-521572926369
+transpose(Q)
+
 # ╔═╡ fbfa49ba-8c53-4fdf-ae26-d9b678fcce2e
 # Rezidual
 norm(A*x-b)
@@ -100,6 +103,9 @@ end
 # ╔═╡ c4762bb2-56fd-4e2a-9255-4922f41addfe
 # Ugrađena funkcija
 A₁\y₁
+
+# ╔═╡ 19680165-b96b-4c39-bf0a-caa1ca75276c
+Matrix(F₁.Q)
 
 # ╔═╡ 881daa94-e922-4b76-bca3-6b255049ba67
 begin
@@ -1130,12 +1136,14 @@ version = "0.9.1+5"
 # ╠═f5819991-3fb6-498b-a8e0-a8061e1fef42
 # ╟─e0f03ec0-f136-411f-a270-bcc85fde0579
 # ╠═d0aa1de2-f2e5-4c59-b7ce-a0022bf6dbef
+# ╠═b9dff261-50aa-40d5-a5bd-521572926369
 # ╠═fbfa49ba-8c53-4fdf-ae26-d9b678fcce2e
 # ╟─45923270-4d63-4eaf-8d99-f9e9baab558e
 # ╠═2e4f479e-9a3a-4495-abb9-52a3203a35c4
 # ╠═743b75c7-d6a0-4fa0-bd99-6412378453e2
 # ╠═04bb12df-5d6a-460f-a381-23058dcfe0b7
 # ╠═c4762bb2-56fd-4e2a-9255-4922f41addfe
+# ╠═19680165-b96b-4c39-bf0a-caa1ca75276c
 # ╠═881daa94-e922-4b76-bca3-6b255049ba67
 # ╠═16461985-6cb3-4ddb-9eab-bd13917b8b69
 # ╠═d01748e8-169d-4d39-bf79-90c0c0d2df56

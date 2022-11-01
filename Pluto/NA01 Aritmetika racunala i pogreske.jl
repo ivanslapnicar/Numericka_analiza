@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.17.3
+# v0.19.9
 
 using Markdown
 using InteractiveUtils
@@ -382,13 +382,13 @@ md"""
 """
 
 # ╔═╡ 1f8f4a15-0eca-4759-bee6-843306e35754
-bitstring(0)
+bitstring(Int32(0))
 
 # ╔═╡ 8ca8e4e7-6450-4aaf-b208-6c0aa95ccb12
-bitstring(-1)
+bitstring(-2)
 
 # ╔═╡ f6f7081b-212a-4c7a-b91c-0d747f4b9fb2
-bitstring(0.0)
+bitstring(-0.0)
 
 # ╔═╡ d7160016-c046-4ab8-b349-27f7a209d853
 bitstring(-0.0)
@@ -397,10 +397,13 @@ bitstring(-0.0)
 bitstring(1.0)
 
 # ╔═╡ f85ec710-1f59-4826-a376-6672bf0552ae
-bitstring(Float16(1.0))
+bitstring(Float32(1.0))
 
 # ╔═╡ 9b7e4278-2f1a-4fff-a6f7-2249f45aaccf
-bitstring(2.0)
+bitstring(Float32(2.0))
+
+# ╔═╡ 40d953af-e5e8-42c0-be55-26d95e334195
+2^7
 
 # ╔═╡ 037cddff-3663-4fcb-8575-ea7a78e490b8
 md"""
@@ -502,8 +505,8 @@ Ova formula u standardnoj dvostrukoj točnosti daje $f(10^{-12}) = 0$.
 
 # ╔═╡ 88584373-9519-46fe-ae88-7199e76fb8f7
 begin
-	f(x)=sqrt(1+x^2)-1
-	[(x,f(x)) for x in [1e-6,1e-7,1e-8,1e-9,1e-10,1e-11,1e-12]]
+	f(x)=√(1+x^2)-1
+	[(x,f(x)) for x ∈ [1e-6,1e-7,1e-8,1e-9,1e-10,1e-11,1e-12]]
 end
 
 # ╔═╡ 1215b318-8121-4adb-aa5d-139654607717
@@ -521,8 +524,8 @@ odnosno,  $f_1(10^{-12}) = 0.5 \cdot 10^{-24}$. Ovaj rezultat je onoliko točan 
 
 # ╔═╡ b9180215-218a-48d8-a662-2a5664c2e480
 begin
-	f₁(x)=x^2/(1+sqrt(1+x^2))
-    [(x,f₁(x)) for x in [1e-6,1e-7,1e-8,1e-9,1e-10,1e-11,1e-12]]
+	f₁(x)=x^2/(1+√(1+x^2))
+    [(x,f₁(x)) for x ∈ [1e-6,1e-7,1e-8,1e-9,1e-10,1e-11,1e-12]]
 end
 
 # ╔═╡ 209cad48-c496-41b4-8093-6e2a55cc469f
@@ -718,6 +721,7 @@ version = "1.2.2"
 
 [[SHA]]
 uuid = "ea8e919c-243c-51af-8825-aaa63cd721ce"
+version = "0.7.0"
 
 [[Serialization]]
 uuid = "9e88b42a-f829-5b0c-bbe9-9e923198166b"
@@ -735,7 +739,7 @@ uuid = "4ec0a83e-493e-50e2-b9ac-8f72acf5a8f5"
 # ╠═62d67e4a-ae9f-43a2-bcc8-53ee5da9e268
 # ╠═0425b895-a11b-49ee-b715-228384218624
 # ╟─76d37869-e20b-4211-8227-1f0616e3d8f2
-# ╟─5c635357-8163-4954-949a-999dc48998f0
+# ╠═5c635357-8163-4954-949a-999dc48998f0
 # ╠═9ccbb154-8618-4190-bfce-985ba66c8380
 # ╟─91448849-f9f0-459b-87c0-b9fc5a386770
 # ╟─1f8858f4-104d-4dd8-99de-b4bbf278e720
@@ -766,6 +770,7 @@ uuid = "4ec0a83e-493e-50e2-b9ac-8f72acf5a8f5"
 # ╠═10dcdca1-71fe-42eb-8f04-6122b3a03666
 # ╠═f85ec710-1f59-4826-a376-6672bf0552ae
 # ╠═9b7e4278-2f1a-4fff-a6f7-2249f45aaccf
+# ╠═40d953af-e5e8-42c0-be55-26d95e334195
 # ╟─037cddff-3663-4fcb-8575-ea7a78e490b8
 # ╟─d0b306c4-6cbc-48dc-90ba-8ef4498f8d73
 # ╠═abe311d5-fbd1-40e2-8bce-2c341301deef
