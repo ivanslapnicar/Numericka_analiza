@@ -33,7 +33,7 @@ konvergira prema jedinstvenom vektoru $\tilde x$ za kojeg vrijedi
 $$
 \tilde x = F(\tilde x).$$
 
-Broj $\tilde x$ se zove __fiksna točka__ funkcije $F$. Za pogrešku u $k$-tom koraku vrijede ocjene
+Vektor $\tilde x$ se zove __fiksna točka__ funkcije $F$. Za pogrešku u $k$-tom koraku vrijede ocjene
 
 $$
 \|x_k- \tilde x\| \leq \frac{q}{1-q} \|x_k-x_{k-1}\|$$
@@ -47,6 +47,8 @@ pri čemu je druga ocjena bolja. Brzina konvergencije je __linearna__,
 
 $$
 \|x_{k+1}-\tilde x\| \leq q\| x_k-\tilde x\|.$$
+
+__Napomena.__ Dokaz Banachovog teorema za jednostavniji slučaj $n=1$, dat ćemo prilikom razmatranja iterativne metoda za računanje nul-točaka funkcija.
 
 """
 
@@ -148,17 +150,17 @@ L=inv(D)*tril(A,-1)
 U=inv(D)*triu(A,1)
 
 # ╔═╡ 5aba7e24-0424-45f2-9716-3b32a71fc610
-function Jacobi(A::Array,b::Array,x::Array)
+function Jacobi(A::Array,b::Array,x::Array,tol::Float64=1000.0*eps())
     D=Diagonal(A)
     L=inv(D)*tril(A,-1)
     U=inv(D)*triu(A,1)
-    tol=1000*eps()
     d=1.0
     B=-(L+U)
     c=inv(D)*b
-    q=norm(B,Inf)
-    # @show q
+    q=opnorm(B,Inf)
+    @show q
 	println()
+	y=Vector{Float64}(undef,n)
     while d>tol
         y=B*x+c
         d=norm(x-y,Inf)
@@ -185,23 +187,23 @@ r=A*x-b
 norm(r)/(norm(A)*norm(x))
 
 # ╔═╡ adbd72cb-4dcf-490b-bbcb-1d681358c455
-function GaussSeidel(A::Array,b::Array,x::Array)
+function GaussSeidel(A::Array,b::Array,x::Array,tol::Float64=1000.0*eps())
     D=Diagonal(A)
     L=inv(D)*tril(A,-1)
     U=inv(D)*triu(A,1)
-    tol=1000*eps()
     d=1.0
-    # B=-inv(I+L)*U
     B=-(I+L)\U
     c=(I+L)\(inv(D)*b)
-    # @show norm(U,Inf)
-    # y=Vector{Float64}(undef,n)
+	q=opnorm(B,Inf)
+    @show q
+	println()
+    y=Vector{Float64}(undef,n)
     while d>tol
         y=B*x+c
         d=norm(x-y)
 		@show d
         x=y
-    end
+	end
     x,d
 end
 
@@ -219,6 +221,7 @@ Izmjerimo brzinu za veće matrice:
 
 # ╔═╡ 54e5e9c4-5ad2-45f9-a3ed-0aaced61663d
 begin
+	Random.seed!(3345)
 	n₁=1024
 	A₁=rand(n₁,n₁)+n₁*I
 	b₁=rand(n₁)
@@ -227,10 +230,14 @@ begin
 end
 
 # ╔═╡ 8794b613-ddab-4fa9-82e6-eec4192705dd
-@time GaussSeidel(A₁,b₁,x₁);
+@time x₂,d₂=Jacobi(A₁,b₁,x₁);
+
+# ╔═╡ f19969e6-8e49-4c00-987a-3d16425cd8d5
+# Rezidual
+norm(A₁*x₂-b₁)
 
 # ╔═╡ 02d632a3-3ab8-4b02-ba94-709880df6313
-@time A\b;
+@time A₁\b₁;
 
 # ╔═╡ aba2f7f6-8690-4ede-8282-ad925e4aae8d
 md"""
@@ -388,6 +395,7 @@ version = "5.1.1+0"
 # ╟─92d8992a-f55e-4576-a1aa-c8b0de9e5806
 # ╠═54e5e9c4-5ad2-45f9-a3ed-0aaced61663d
 # ╠═8794b613-ddab-4fa9-82e6-eec4192705dd
+# ╠═f19969e6-8e49-4c00-987a-3d16425cd8d5
 # ╠═02d632a3-3ab8-4b02-ba94-709880df6313
 # ╟─aba2f7f6-8690-4ede-8282-ad925e4aae8d
 # ╟─00000000-0000-0000-0000-000000000001

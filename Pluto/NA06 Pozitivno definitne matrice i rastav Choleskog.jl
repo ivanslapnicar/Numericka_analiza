@@ -154,12 +154,22 @@ Ab[1,1]
 # ╔═╡ dcdfcda1-74d5-42a9-bec8-0a09d87a43c5
 Lb=mycholb(Ab)
 
+# ╔═╡ 9024604d-88f7-4098-a0eb-474161bed4fe
+md"
+Vremena izvođenja našeg blok algoritma `mycholb()` i ugrađene funkcije `cholesky()` su slična.
+"
+
 # ╔═╡ 138188b6-1452-49cc-ba14-82309f92d0cc
 Lb[1,1]
 
 # ╔═╡ b51c6282-64f1-4b03-a2d4-009338d183d9
 # Rezidual
 norm(Lb'*Lb-Ab)
+
+# ╔═╡ 73f28eab-b214-4477-af72-178016eed643
+md"
+Naša funkcija `mychol()` koja ne koristi blokove je 20-tak puta sporija!
+"
 
 # ╔═╡ 281cdf66-87e4-4cd1-893d-cc9779b1a813
 # Prebacivanje blok matrice u standardni oblik
@@ -169,13 +179,24 @@ unblock(A) = mapreduce(identity, hcat, [mapreduce(identity, vcat, A[:,i]) for i 
 Ab₀=unblock(Ab);
 
 # ╔═╡ 54fee016-a27f-4eda-916c-9f51413faf15
-
 cholesky(Ab₀);
 
-# ╔═╡ 9024604d-88f7-4098-a0eb-474161bed4fe
+# ╔═╡ 761841cb-536f-4140-9854-d31b51669c2e
+@time mychol(Ab₀)
+
+# ╔═╡ bfd53356-1cce-47d6-b99e-4930a2a26b6d
 md"
-Vremena izvođenja našeg blok algoritma `mycholb()` i ugrađene funkcije `cholesky()` su slična.
+Ukoliko simetrična matrica nije pozitivno definitna, Cholesky rastav neće uspjeti  jer će u nekom trenutku trebati računati korijen negativnog broja.
 "
+
+# ╔═╡ b8584018-1371-4b03-b939-3b1f555632aa
+b=randn(5,5)
+
+# ╔═╡ cbaf7dad-5980-43a4-82c0-34bb946d9376
+c=b+b'
+
+# ╔═╡ 970c1a3b-205c-421c-a564-62b8beba625e
+cholesky(c)
 
 # ╔═╡ 00000000-0000-0000-0000-000000000001
 PLUTO_PROJECT_TOML_CONTENTS = """
@@ -238,11 +259,17 @@ version = "5.1.1+0"
 # ╠═ca0eb511-ba7b-42b4-89b3-8c9eb90f8fb7
 # ╠═7f37a748-d31c-433f-bc66-9e7358762c1b
 # ╠═dcdfcda1-74d5-42a9-bec8-0a09d87a43c5
+# ╟─9024604d-88f7-4098-a0eb-474161bed4fe
 # ╠═138188b6-1452-49cc-ba14-82309f92d0cc
 # ╠═b51c6282-64f1-4b03-a2d4-009338d183d9
+# ╟─73f28eab-b214-4477-af72-178016eed643
 # ╠═281cdf66-87e4-4cd1-893d-cc9779b1a813
 # ╠═55f47608-829c-45ed-b6ac-eff79850c4d9
 # ╠═54fee016-a27f-4eda-916c-9f51413faf15
-# ╟─9024604d-88f7-4098-a0eb-474161bed4fe
+# ╠═761841cb-536f-4140-9854-d31b51669c2e
+# ╟─bfd53356-1cce-47d6-b99e-4930a2a26b6d
+# ╠═b8584018-1371-4b03-b939-3b1f555632aa
+# ╠═cbaf7dad-5980-43a4-82c0-34bb946d9376
+# ╠═970c1a3b-205c-421c-a564-62b8beba625e
 # ╟─00000000-0000-0000-0000-000000000001
 # ╟─00000000-0000-0000-0000-000000000002
