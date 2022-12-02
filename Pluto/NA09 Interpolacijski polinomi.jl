@@ -13,7 +13,7 @@ TableOfContents(title="📚 Sadržaj", aside=true)
 # ╔═╡ 68cc76f3-e124-4129-9339-98a21093bf1f
 begin
 	# Generirajmo slučajne točke
-	Random.seed!(125)
+	Random.seed!(4145)
 	n=6
 	x=rand(n)
 	y=rand(n)
@@ -107,12 +107,12 @@ scatter(x,y,label="Točke")
 
 # ╔═╡ f57091bd-a669-461f-ba5f-9ab7539a3c37
 # Nacrtajmo polinom 
-plot!(p,label="Polinom",xlims=(0,1),ylims=(-20,20))
+plot!(p,label="Polinom",xlims=(0,1),ylims=(-4,5))
 
 # ╔═╡ 51668880-461a-45ce-82fe-204543677c75
 begin
 	# Nacrtajmo polinom s našom funkcijom
-	xx=range(x₀,stop=xₙ,length=100)
+	xx=range(x₀,stop=xₙ,length=101)
 	pS=p.(xx)
 	plot(xx,pS,label="Polinom")
 	scatter!(x,y,label="Točke")
