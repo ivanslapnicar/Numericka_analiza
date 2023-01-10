@@ -272,6 +272,15 @@ Za procjenu derivacije možemo koristiti paket `Calculus.jl` koji aproksimira de
 # ╔═╡ 21495df3-1163-4d7f-afce-ad3600a5411a
 varinfo(ForwardDiff.ForwardDiff)
 
+# ╔═╡ 80a7ae46-0d8e-4405-a293-89ab54ec195a
+g(x)=(x-2)^3
+
+# ╔═╡ ea2a569b-4d4c-43c1-9521-8b4fa1ad6650
+@code_native g(1)
+
+# ╔═╡ d77cedcd-c164-4a3f-adcb-0779437fbfe4
+@code_native ForwardDiff.derivative(g,1)
+
 # ╔═╡ 492a1939-ea1e-4912-b8d3-0330624f0ffd
 md"""
 ## Primjer
@@ -483,7 +492,7 @@ f₆(x₀)*(x->ForwardDiff.derivative(
         x->ForwardDiff.derivative(f₆,x),x))(x₀)>0
 
 # ╔═╡ 6de6ad42-cad9-40b4-8503-78f1316b3b38
-Newton(f₆,x₀) # 1e-15
+Newton(f₆,x₀,1e-10) # 1e-15
 
 # ╔═╡ 9ba461d0-3b8c-4ec7-9b14-8ea720a569c3
 begin
@@ -1159,9 +1168,9 @@ uuid = "de0858da-6303-5e67-8744-51eddeeeb8d7"
 
 [[deps.Qt5Base_jll]]
 deps = ["Artifacts", "CompilerSupportLibraries_jll", "Fontconfig_jll", "Glib_jll", "JLLWrappers", "Libdl", "Libglvnd_jll", "OpenSSL_jll", "Pkg", "Xorg_libXext_jll", "Xorg_libxcb_jll", "Xorg_xcb_util_image_jll", "Xorg_xcb_util_keysyms_jll", "Xorg_xcb_util_renderutil_jll", "Xorg_xcb_util_wm_jll", "Zlib_jll", "xkbcommon_jll"]
-git-tree-sha1 = "0c03844e2231e12fda4d0086fd7cbe4098ee8dc5"
+git-tree-sha1 = "c6c0f690d0cc7caddb74cef7aa847b824a16b256"
 uuid = "ea2cea3b-5b76-57ae-a6ef-0a8af62496e1"
-version = "5.15.3+2"
+version = "5.15.3+1"
 
 [[deps.REPL]]
 deps = ["InteractiveUtils", "Markdown", "Sockets", "Unicode"]
@@ -1552,6 +1561,9 @@ version = "0.9.1+5"
 # ╠═d794399b-9c03-47a1-8a37-40f8545a0d46
 # ╟─5cc494f2-a789-4455-9ac9-925428d274fe
 # ╠═21495df3-1163-4d7f-afce-ad3600a5411a
+# ╠═80a7ae46-0d8e-4405-a293-89ab54ec195a
+# ╠═ea2a569b-4d4c-43c1-9521-8b4fa1ad6650
+# ╠═d77cedcd-c164-4a3f-adcb-0779437fbfe4
 # ╟─492a1939-ea1e-4912-b8d3-0330624f0ffd
 # ╠═7dab9934-414d-44dd-94b5-96a849184687
 # ╠═1e5be7af-8236-4a8c-ab10-4f988350bd6a
