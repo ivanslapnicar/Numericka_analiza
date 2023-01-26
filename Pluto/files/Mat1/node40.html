@@ -1,0 +1,797 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2012 (1.2)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-2382574370068590",
+    enable_page_level_ads: true
+  });
+</script>
+<TITLE>Determinante</TITLE>
+<META NAME="description" CONTENT="Determinante">
+<META NAME="keywords" CONTENT="predavanja">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2012">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="predavanja.css">
+
+<LINK REL="next" HREF="node46.html">
+<LINK REL="previous" HREF="node39.html">
+<LINK REL="up" HREF="node22.html">
+<LINK REL="next" HREF="node41.html">
+</HEAD>
+
+<BODY >
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="shortcut icon" href="favicon.ico"/>
+
+<style>
+.sidenav {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 50px;
+}
+
+div.sidenav a {
+    padding: 8px 8px 8px 10px;
+    text-decoration: none;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    display: block;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dropdown-btn {
+    padding: 8px 8px 8px 8px;
+    text-decoration: none; 
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s;
+}
+
+
+.sidenav a:hover, .dropdown-btn:hover {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #C00;
+}
+
+.menu2 {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    font-style:italic;
+}
+
+.dropdown-container {
+  display: none;
+  font-family: 'Open Sans',sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #ddd;
+  padding-left: 8px;
+}
+
+.dropdown-container a:hover {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    background-color: #ccc;
+}
+
+.sidenav .active {
+    background-color: #C00;
+    color: white;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+hr { 
+    display: block;
+    margin-top: 0.2em;
+    margin-bottom: 0.4em;
+    margin-left: -5px;
+    margin-right: -5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color:#ec971f;
+} 
+  
+.caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 20px;
+    vertical-align: middle;
+    border-top: 5px dashed;
+        border-top-width: 5px;
+        border-top-style: dashed;
+        border-top-color: currentcolor;
+    border-right: 5px solid transparent;
+        border-right-width: 5px;
+        border-right-style: solid;
+        border-right-color: transparent;
+    border-left: 5px solid transparent;
+        border-left-width: 5px;
+        border-left-style: solid;
+        border-left-color: transparent;
+}
+
+</style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- First -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2382574370068590"
+     data-ad-slot="8207843721"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<script>
+   // alert('|ivan'+document.getElementById("mys-content").innerHTML+'|') 
+//    alert(typeof(window.CustomEvent))
+//    if(typeof(window.CustomEvent)=="undefined")
+// {
+//     document.display = 'none';
+// } 
+</script>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" 
+  onclick="closeNav()"
+  style="font-size:24px;cursor:pointer;color:#000;position: absolute; top: 0;
+    right: 10px; font-size: 24px; margin-left: 50px;">&nbsp; &times; &nbsp;</a>
+  <a href="/matematika1/index.html">HOME</a>
+  <button href="/matematika1/predavanja" class="dropdown-btn">PREDAVANJA
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/predavanja/predavanja.html">SADRŽAJ</a>
+      <a href="/matematika1/predavanja/node3.html">OSNOVE</a>
+      <a href="/matematika1/predavanja/node22.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/predavanja/node47.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/predavanja/node67.html">FUNKCIJE</a>
+      <a href="/matematika1/predavanja/node98.html">DERIVACIJE</a>
+      <a href="/matematika1/predavanja/node125.html">NIZOVI I REDOVI</a>
+      <a href="/matematika1/predavanja/node144.html">INDEKS</a>
+    </div>
+  <button href="/matematika1/vjezbe" class="dropdown-btn">VJEŽBE
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/vjezbe/vjezbe.html">SADRŽAJ</a>
+      <a href="/matematika1/vjezbe/node2.html">OSNOVE</a>
+      <a href="/matematika1/vjezbe/node24.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/vjezbe/node55.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/vjezbe/node87.html">FUNKCIJE</a>
+      <a href="/matematika1/vjezbe/node110.html">DERIVACIJE</a>
+      <a href="/matematika1/vjezbe/node136.html">NIZOVI I REDOVI</a>
+    </div>
+  <button href="/matematika1/kviz" class="dropdown-btn">KVIZ
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/kviz/index.html">SADRŽAJ</a>
+      <a href="/matematika1/kviz/osnove/">OSNOVE</a>
+      <a href="/matematika1/kviz/algebra/">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/kviz/vektori/">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/kviz/funkcije/">FUNKCIJE</a>
+      <a href="/matematika1/kviz/derivacije/">DERIVACIJE</a>
+      <a href="/matematika1/kviz/nizovi/">NIZOVI I REDOVI</a>
+    </div>
+  <button href="/matematika1/podsjetnik" class="dropdown-btn">PODSJETNIK
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/podsjetnik/podsjetnik.html">SADRŽAJ</a>
+      <a href="/matematika1/podsjetnik/node1.html">OSNOVE</a>
+      <a href="/matematika1/podsjetnik/node2.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/podsjetnik/node3.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/podsjetnik/node4.html">FUNKCIJE</a>
+      <a href="/matematika1/podsjetnik/node5.html">DERIVACIJE</a>
+      <a href="/matematika1/podsjetnik/node6.html">NIZOVI I REDOVI</a>
+    </div>
+  <!--<a href="/matematika1/kviz">Kviz</a>-->
+  <a href="/matematika1/java">JAVA</a>
+  <a href="http://lavica.fesb.unist.hr/netplot"  class="menu2">NETPLOT</a>
+  <!-- <a href="/matematika1/gauss"  class="menu2">GAUSS</a> -->
+  <a href="http://lavica.fesb.unist.hr/octave/ool_hr.php"  class="menu2">OCTAVE</a>
+  <a href="/matematika1/search.html">Traži ...</a>
+</div>
+
+<span style="font-size:24px;font-family:'Open Sans', sans-serif;cursor:pointer;color:#ec971f"
+      onclick="openNav()">&#9776;</span> &nbsp; 
+<span style="font-size:30px;cursor:pointer;color:#888;font-family:'Opens Sans',sans-serif;"
+      onclick="window.location.assign('../index.html')">
+<font style="color:#C00">m</font>atematika<font style="color:#C00;vertical-align:super;margin-left:2px;font-size:24px;">1</font></span>
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "300px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+
+</script>     
+<hr>
+
+
+
+
+<arrow class=left> </arrow> <A NAME="tex2html705"
+  HREF="node39.html">Inverzna matrica</A> &nbsp; &nbsp;
+<arrow class=up> </arrow> <A NAME="tex2html711"
+  HREF="node22.html">LINEARNA ALGEBRA</A> &nbsp; &nbsp;
+<arrow class=right> </arrow> <A NAME="tex2html713"
+  HREF="node41.html">Svojstva determinanti</A>
+
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00490000000000000000"></A>
+<A NAME="sec:det"></A>
+<BR>
+Determinante
+</H1>
+
+<P>
+Za definiciju determinante potreban nam je pojam permutacije.
+<EM>Permutacija</EM><A NAME="6676"></A> 
+brojeva <!-- MATH
+ $1,2,\ldots,n$
+ -->
+<IMG
+ WIDTH="82" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img823.gif"
+ ALT="$ 1,2,\ldots,n$">
+ je svaka uređena <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img241.gif"
+ ALT="$ n$">
+-torka
+<!-- MATH
+ $(i_1,i_2,\ldots,i_n)$
+ -->
+<IMG
+ WIDTH="112" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img824.gif"
+ ALT="$ (i_1,i_2,\ldots,i_n)$">
+ u kojoj se svaki od brojeva <!-- MATH
+ $1,2,\ldots,n$
+ -->
+<IMG
+ WIDTH="82" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img823.gif"
+ ALT="$ 1,2,\ldots,n$">
+
+javlja točno jedanput. Brojevi <IMG
+ WIDTH="19" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img825.gif"
+ ALT="$ i_p$">
+ i <IMG
+ WIDTH="19" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img826.gif"
+ ALT="$ i_q$">
+ su u
+inverziji<A NAME="6677"></A>  ako je 
+<IMG
+ WIDTH="47" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img827.gif"
+ ALT="$ p&lt;q$">
+ i <IMG
+ WIDTH="58" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img828.gif"
+ ALT="$ i_p&gt;i_q$">
+. Permutacija je <EM>parna</EM> ako je broj inverzija u
+njoj paran, a <EM>neparna</EM> inače. Sljedeća tablica prikazuje
+sve permutacije brojeva <IMG
+ WIDTH="48" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img829.gif"
+ ALT="$ 1,2,3$">
+, broj inverzija i parnost:
+<DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3 BORDER="1">
+<TR><TD ALIGN="CENTER">permutacija</TD>
+<TD ALIGN="CENTER"># inverzija</TD>
+<TD ALIGN="CENTER">parnost</TD>
+</TR>
+<TR><TD ALIGN="CENTER">(1,2,3)</TD>
+<TD ALIGN="CENTER">0</TD>
+<TD ALIGN="CENTER">parna</TD>
+</TR>
+<TR><TD ALIGN="CENTER">(1,3,2)</TD>
+<TD ALIGN="CENTER">1</TD>
+<TD ALIGN="CENTER">neparna</TD>
+</TR>
+<TR><TD ALIGN="CENTER">(2,1,3)</TD>
+<TD ALIGN="CENTER">1</TD>
+<TD ALIGN="CENTER">neparna</TD>
+</TR>
+<TR><TD ALIGN="CENTER">(2,3,1)</TD>
+<TD ALIGN="CENTER">2</TD>
+<TD ALIGN="CENTER">parna</TD>
+</TR>
+<TR><TD ALIGN="CENTER">(3,1,2)</TD>
+<TD ALIGN="CENTER">2</TD>
+<TD ALIGN="CENTER">parna</TD>
+</TR>
+<TR><TD ALIGN="CENTER">(3,2,1)</TD>
+<TD ALIGN="CENTER">3</TD>
+<TD ALIGN="CENTER">neparna</TD>
+</TR>
+</TABLE>
+</DIV>
+Vidimo da je pola permutacija parno, a pola neparno. To vrijedi za
+svaki <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img241.gif"
+ ALT="$ n$">
+. 
+
+<P>
+<div class="teo"><P>
+<DIV><B>Teorem  2.7</B> &nbsp; <A NAME="tm:1.34"></A> Vrijedi sljedeće:
+<DL COMPACT>
+<DT>i)</DT>
+<DD>broj permutacija od <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img241.gif"
+ ALT="$ n$">
+ brojeva jednak je
+<P><!-- MATH
+ \begin{displaymath}
+%
+n(n-1)(n-2)\cdots 1\equiv n!,
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="208" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img830.gif"
+ ALT="$\displaystyle %
+n(n-1)(n-2)\cdots 1\equiv n!,
+$">
+</DIV><P>
+</P> 
+</DD>
+<DT>ii)</DT>
+<DD>ako u permutaciji <!-- MATH
+ $(i_1,i_2,\ldots,i_n)$
+ -->
+<IMG
+ WIDTH="112" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img824.gif"
+ ALT="$ (i_1,i_2,\ldots,i_n)$">
+ zamijenimo mjesta
+brojevima <IMG
+ WIDTH="19" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img825.gif"
+ ALT="$ i_p$">
+ i <IMG
+ WIDTH="19" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img826.gif"
+ ALT="$ i_q$">
+, <IMG
+ WIDTH="47" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img831.gif"
+ ALT="$ p\neq q$">
+, parnost će se promijeniti.
+</DD>
+</DL></DIV><P></P>
+
+</div><p></p><div class="dok"><B>Dokaz. </B></div><p></p>
+<DL COMPACT>
+<DT>i)</DT>
+<DD>Prvo mjesto u permutaciji možemo popuniti s <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img241.gif"
+ ALT="$ n$">
+ brojeva, a drugo
+mjesto u permutaciji možemo popuniti s preostalih <IMG
+ WIDTH="47" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img832.gif"
+ ALT="$ n-1$">
+ brojeva. 
+To znači da prva dva mjesta možemo popuniti na <IMG
+ WIDTH="71" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img833.gif"
+ ALT="$ n(n-1)$">
+ različitih
+načina pa prvu tvrdnju možemo dokazati indukcijom.
+</DD>
+<DT>ii)</DT>
+<DD>Ako dva susjedna elementa zamijene mjesta,
+tada se parnost promijeni. Pretpostavimo sada da je <IMG
+ WIDTH="78" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img834.gif"
+ ALT="$ q-p&gt;1$">
+, odnosno 
+<IMG
+ WIDTH="19" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img825.gif"
+ ALT="$ i_p$">
+ i <IMG
+ WIDTH="19" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img826.gif"
+ ALT="$ i_q$">
+ nisu susjedi. Tada <IMG
+ WIDTH="19" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img825.gif"
+ ALT="$ i_p$">
+ možemo prebaciti na <IMG
+ WIDTH="14" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img835.gif"
+ ALT="$ q$">
+-tu
+poziciji s <IMG
+ WIDTH="45" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img836.gif"
+ ALT="$ q-p$">
+ zamjena susjednih elemenata udesno. Pri tome su se svi
+elementi <!-- MATH
+ $i_{p+1},\ldots,i_q$
+ -->
+<IMG
+ WIDTH="92" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img837.gif"
+ ALT="$ i_{p+1},\ldots,i_q$">
+ pomakli za jedno mjesto ulijevo.
+Sada pomoću <IMG
+ WIDTH="76" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img838.gif"
+ ALT="$ q-p-1$">
+ zamjena susjednih elemenata ulijevo prebacimo
+element <IMG
+ WIDTH="19" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img826.gif"
+ ALT="$ i_q$">
+ s pozicije <IMG
+ WIDTH="45" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img839.gif"
+ ALT="$ q-1$">
+ na poziciju <IMG
+ WIDTH="14" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img304.gif"
+ ALT="$ p$">
+. Pri tome se ostali
+elementi <!-- MATH
+ $i_{p+1},\ldots,i_{q-1}$
+ -->
+<IMG
+ WIDTH="110" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img840.gif"
+ ALT="$ i_{p+1},\ldots,i_{q-1}$">
+ vrate na svoja originalna mjesta,
+a <IMG
+ WIDTH="19" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img825.gif"
+ ALT="$ i_p$">
+ i <IMG
+ WIDTH="19" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img826.gif"
+ ALT="$ i_q$">
+ su zamijenili mjesta. 
+Ukupno smo izvršili <IMG
+ WIDTH="99" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img841.gif"
+ ALT="$ 2(q-p)-1$">
+, dakle neparni broj zamjena susjednih 
+elemenata pa se parnost promijenila. <div class="dok"><B>Q.E.D.</B>
+<BR></div><p></p>
+</DD>
+</DL>
+
+<P>
+<div class="zad"><P>
+<DIV><B>Zadatak  2.8</B> &nbsp; Odredite parnost permutacije <!-- MATH
+ $(1,3,5,7,6,2,4)$
+ -->
+<IMG
+ WIDTH="130" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img842.gif"
+ ALT="$ (1,3,5,7,6,2,4)$">
+, a zatim zamijenite
+  <IMG
+ WIDTH="19" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img843.gif"
+ ALT="$ i_2$">
+ i <IMG
+ WIDTH="19" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img844.gif"
+ ALT="$ i_5$">
+ na način koji je opisan u dokazu teorema 
+  <A HREF="#tm:1.34">2.7</A>.  </DIV><P></P>
+
+</div><p></p>
+<P>
+Sada možemo definirati determinantu.
+
+<P>
+<div class="def"><P>
+<DIV><B>Definicija  2.6</B> &nbsp; <A NAME="d1.36"></A><EM>Determinanta</EM><A NAME="6701"></A> 
+matrice <!-- MATH
+ $A=(a_{ij})\in\mathcal{M}_n$
+ -->
+<IMG
+ WIDTH="132" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img845.gif"
+ ALT="$ A=(a_{ij})\in\mathcal{M}_n$">
+ je broj
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="eq:1.37"></A><!-- MATH
+ \begin{equation}
+\det(A)=\sum_{\pi\in \Pi_n} (-1)^{k(\pi)} a_{1i_1}
+  a_{2i_2}\cdots a_{ni_n},
+\end{equation}
+ -->
+<TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><IMG
+ WIDTH="310" HEIGHT="59" ALIGN="MIDDLE" BORDER="0"
+ SRC="img846.gif"
+ ALT="$\displaystyle \det(A)=\sum_{\pi\in \Pi_n} (-1)^{k(\pi)} a_{1i_1} a_{2i_2}\cdots a_{ni_n},$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+(2.8)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+pri čemu je <IMG
+ WIDTH="28" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img847.gif"
+ ALT="$ \Pi_n$">
+ skup svih permutacija <!-- MATH
+ $\pi=(i_1,i_2,\ldots,i_n)$
+ -->
+<IMG
+ WIDTH="146" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img848.gif"
+ ALT="$ \pi=(i_1,i_2,\ldots,i_n)$">
+, 
+a <IMG
+ WIDTH="40" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img849.gif"
+ ALT="$ k(\pi)$">
+ je broj inverzija u permutaciji <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img722.gif"
+ ALT="$ \pi$">
+.</DIV><P></P>
+
+</div><p></p>
+<P>
+Determinantu matrice <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img27.gif"
+ ALT="$ A$">
+ još označavamo s <IMG
+ WIDTH="29" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img850.gif"
+ ALT="$ \vert A\vert$">
+. Na primjer,
+<P><!-- MATH
+ \begin{displaymath}
+%
+\begin{vmatrix} a & b\\c&d
+\end{vmatrix}=ad-bc,
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="139" HEIGHT="61" ALIGN="MIDDLE" BORDER="0"
+ SRC="img851.gif"
+ ALT="$\displaystyle %
+\begin{vmatrix}a &amp; b\\ c&amp;d
+\end{vmatrix}=ad-bc,
+$">
+</DIV><P>
+</P> 
+i
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="eq:1.38"></A><!-- MATH
+ \begin{equation}
+\begin{split}
+\begin{vmatrix}
+  a_{11}&a_{12}&a_{13}\\a_{21}&a_{22}&a_{23}\\a_{31}&a_{32}&a_{33}
+\end{vmatrix}=&+a_{1\textcolor{red}{\mathbf{1}}}
+a_{2\textcolor{red}{\mathbf{2}}}a_{3\textcolor{red}{\mathbf{3}}}-
+a_{1\textcolor{red}{\mathbf{1}}}
+a_{2\textcolor{red}{\mathbf{3}}}a_{3\textcolor{red}{\mathbf{2}}}-
+a_{1\textcolor{red}{\mathbf{2}}}
+a_{2\textcolor{red}{\mathbf{1}}}a_{3\textcolor{red}{\mathbf{3}}}
+\notag\\&+
+a_{1\textcolor{red}{\mathbf{2}}}
+a_{2\textcolor{red}{\mathbf{3}}}a_{3\textcolor{red}{\mathbf{1}}}+
+a_{1\textcolor{red}{\mathbf{3}}}
+a_{2\textcolor{red}{\mathbf{1}}}a_{3\textcolor{red}{\mathbf{2}}}-
+a_{1\textcolor{red}{\mathbf{3}}}
+a_{2\textcolor{red}{\mathbf{2}}}a_{3\textcolor{red}{\mathbf{1}}}.
+\end{split}
+\end{equation}
+ -->
+<TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><IMG
+ WIDTH="440" HEIGHT="101" BORDER="0"
+ SRC="img852.gif"
+ ALT="\begin{displaymath}\begin{split}\begin{vmatrix}a_{11}&amp;a_{12}&amp;a_{13}\\ a_{21}&amp;a_{...
+...{red}{\mathbf{2}}}a_{3\textcolor{red}{\mathbf{1}}}. \end{split}\end{displaymath}"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Formulu za determinantu matrice <IMG
+ WIDTH="45" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img853.gif"
+ ALT="$ 3\times 3$">
+ jednostavnije pamtimo
+pomoću  <EM>Sarrusovog pravila</EM>. 
+
+<P>
+Za izračunavanje formule (<A HREF="#eq:1.37">2.8</A>) potrebno je <IMG
+ WIDTH="77" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img854.gif"
+ ALT="$ (n-1)n!$">
+
+množenja  i <IMG
+ WIDTH="52" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img855.gif"
+ ALT="$ n!-1$">
+ zbrajanja, što je praktično neizvedivo za veliki
+<IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img241.gif"
+ ALT="$ n$">
+. U poglavlju <A HREF="node41.html#sec:svojstva">2.9.1</A> ćemo vidjeti kako se determinante
+efikasno računaju pomoću <A HREF="node32.html#sec:gauss">Gaussove eliminacije</A>.
+
+<P>
+Svaki umnožak u  formuli (<A HREF="#eq:1.37">2.8</A>) ima točno jedan
+element iz svakog retka i svakog stupca, pri čemu  su indeksi redaka
+navedeni u osnovnoj permutaciji <!-- MATH
+ $(1,2,\ldots,n)$
+ -->
+<IMG
+ WIDTH="96" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img856.gif"
+ ALT="$ (1,2,\ldots,n)$">
+.
+No, svaki umnožak možemo zapisati i tako da indeksi stupaca budu u
+osnovnoj permutaciji. Indeksi redaka tada stoje u inverznoj
+permutaciji permutacije <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img722.gif"
+ ALT="$ \pi$">
+. Može se pokazati da inverzna
+permutacija ima istu parnost kao i <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img722.gif"
+ ALT="$ \pi$">
+.
+Stoga vrijedi
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="eq:1.39"></A><!-- MATH
+ \begin{equation}
+\det(A)=\sum_{\pi\in \Pi} (-1)^{k(\pi)} a_{i_11}
+  a_{i_22}\cdots a_{i_nn}.
+\end{equation}
+ -->
+<TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><IMG
+ WIDTH="301" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
+ SRC="img857.gif"
+ ALT="$\displaystyle \det(A)=\sum_{\pi\in \Pi} (-1)^{k(\pi)} a_{i_11} a_{i_22}\cdots a_{i_nn}.$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+(2.9)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+<P>
+<div class="zad"><P>
+<DIV><B>Zadatak  2.9</B> &nbsp; <A NAME="z1.40"></A>Izračunajte determinantu matrice <IMG
+ WIDTH="45" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img853.gif"
+ ALT="$ 3\times 3$">
+ prema formuli 
+(<A HREF="#eq:1.39">2.9</A>) i usporedite s izrazom (<A HREF="#eq:1.38">2.9</A>) kojeg smo
+dobili prema formuli (<A HREF="#eq:1.37">2.8</A>).</DIV><P></P>
+
+</div><p></p>
+<P>
+<BR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Poglavlja</STRONG></A>
+
+<UL>
+<LI><A NAME="tex2html714"
+  HREF="node41.html">Svojstva determinanti</A>
+<LI><A NAME="tex2html715"
+  HREF="node42.html">Podmatrice i poddeterminante</A>
+<LI><A NAME="tex2html716"
+  HREF="node43.html">Laplaceov razvoj determinante</A>
+<LI><A NAME="tex2html717"
+  HREF="node44.html">Računanje inverzne matrice</A>
+<LI><A NAME="tex2html718"
+  HREF="node45.html">Cramerovo pravilo</A>
+</UL>
+<!--End of Table of Child-Links-->
+<p><HR></p>
+<arrow class=left> </arrow> <A NAME="tex2html705"
+  HREF="node39.html">Inverzna matrica</A> &nbsp; &nbsp;
+<arrow class=up> </arrow> <A NAME="tex2html711"
+  HREF="node22.html">LINEARNA ALGEBRA</A> &nbsp; &nbsp;
+<arrow class=right> </arrow> <A NAME="tex2html713"
+  HREF="node41.html">Svojstva determinanti</A>  
+
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

@@ -1,0 +1,987 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2012 (1.2)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-2382574370068590",
+    enable_page_level_ads: true
+  });
+</script>
+<TITLE>Kriteriji konvergencije</TITLE>
+<META NAME="description" CONTENT="Kriteriji konvergencije">
+<META NAME="keywords" CONTENT="predavanja">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2012">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="predavanja.css">
+
+<LINK REL="next" HREF="node136.html">
+<LINK REL="previous" HREF="node134.html">
+<LINK REL="up" HREF="node133.html">
+<LINK REL="next" HREF="node136.html">
+</HEAD>
+
+<BODY >
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="shortcut icon" href="favicon.ico"/>
+
+<style>
+.sidenav {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 50px;
+}
+
+div.sidenav a {
+    padding: 8px 8px 8px 10px;
+    text-decoration: none;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    display: block;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dropdown-btn {
+    padding: 8px 8px 8px 8px;
+    text-decoration: none; 
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s;
+}
+
+
+.sidenav a:hover, .dropdown-btn:hover {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #C00;
+}
+
+.menu2 {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    font-style:italic;
+}
+
+.dropdown-container {
+  display: none;
+  font-family: 'Open Sans',sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #ddd;
+  padding-left: 8px;
+}
+
+.dropdown-container a:hover {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    background-color: #ccc;
+}
+
+.sidenav .active {
+    background-color: #C00;
+    color: white;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+hr { 
+    display: block;
+    margin-top: 0.2em;
+    margin-bottom: 0.4em;
+    margin-left: -5px;
+    margin-right: -5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color:#ec971f;
+} 
+  
+.caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 20px;
+    vertical-align: middle;
+    border-top: 5px dashed;
+        border-top-width: 5px;
+        border-top-style: dashed;
+        border-top-color: currentcolor;
+    border-right: 5px solid transparent;
+        border-right-width: 5px;
+        border-right-style: solid;
+        border-right-color: transparent;
+    border-left: 5px solid transparent;
+        border-left-width: 5px;
+        border-left-style: solid;
+        border-left-color: transparent;
+}
+
+</style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- First -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2382574370068590"
+     data-ad-slot="8207843721"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<script>
+   // alert('|ivan'+document.getElementById("mys-content").innerHTML+'|') 
+//    alert(typeof(window.CustomEvent))
+//    if(typeof(window.CustomEvent)=="undefined")
+// {
+//     document.display = 'none';
+// } 
+</script>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" 
+  onclick="closeNav()"
+  style="font-size:24px;cursor:pointer;color:#000;position: absolute; top: 0;
+    right: 10px; font-size: 24px; margin-left: 50px;">&nbsp; &times; &nbsp;</a>
+  <a href="/matematika1/index.html">HOME</a>
+  <button href="/matematika1/predavanja" class="dropdown-btn">PREDAVANJA
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/predavanja/predavanja.html">SADRŽAJ</a>
+      <a href="/matematika1/predavanja/node3.html">OSNOVE</a>
+      <a href="/matematika1/predavanja/node22.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/predavanja/node47.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/predavanja/node67.html">FUNKCIJE</a>
+      <a href="/matematika1/predavanja/node98.html">DERIVACIJE</a>
+      <a href="/matematika1/predavanja/node125.html">NIZOVI I REDOVI</a>
+      <a href="/matematika1/predavanja/node144.html">INDEKS</a>
+    </div>
+  <button href="/matematika1/vjezbe" class="dropdown-btn">VJEŽBE
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/vjezbe/vjezbe.html">SADRŽAJ</a>
+      <a href="/matematika1/vjezbe/node2.html">OSNOVE</a>
+      <a href="/matematika1/vjezbe/node24.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/vjezbe/node55.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/vjezbe/node87.html">FUNKCIJE</a>
+      <a href="/matematika1/vjezbe/node110.html">DERIVACIJE</a>
+      <a href="/matematika1/vjezbe/node136.html">NIZOVI I REDOVI</a>
+    </div>
+  <button href="/matematika1/kviz" class="dropdown-btn">KVIZ
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/kviz/index.html">SADRŽAJ</a>
+      <a href="/matematika1/kviz/osnove/">OSNOVE</a>
+      <a href="/matematika1/kviz/algebra/">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/kviz/vektori/">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/kviz/funkcije/">FUNKCIJE</a>
+      <a href="/matematika1/kviz/derivacije/">DERIVACIJE</a>
+      <a href="/matematika1/kviz/nizovi/">NIZOVI I REDOVI</a>
+    </div>
+  <button href="/matematika1/podsjetnik" class="dropdown-btn">PODSJETNIK
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/podsjetnik/podsjetnik.html">SADRŽAJ</a>
+      <a href="/matematika1/podsjetnik/node1.html">OSNOVE</a>
+      <a href="/matematika1/podsjetnik/node2.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/podsjetnik/node3.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/podsjetnik/node4.html">FUNKCIJE</a>
+      <a href="/matematika1/podsjetnik/node5.html">DERIVACIJE</a>
+      <a href="/matematika1/podsjetnik/node6.html">NIZOVI I REDOVI</a>
+    </div>
+  <!--<a href="/matematika1/kviz">Kviz</a>-->
+  <a href="/matematika1/java">JAVA</a>
+  <a href="http://lavica.fesb.unist.hr/netplot"  class="menu2">NETPLOT</a>
+  <!-- <a href="/matematika1/gauss"  class="menu2">GAUSS</a> -->
+  <a href="http://lavica.fesb.unist.hr/octave/ool_hr.php"  class="menu2">OCTAVE</a>
+  <a href="/matematika1/search.html">Traži ...</a>
+</div>
+
+<span style="font-size:24px;font-family:'Open Sans', sans-serif;cursor:pointer;color:#ec971f"
+      onclick="openNav()">&#9776;</span> &nbsp; 
+<span style="font-size:30px;cursor:pointer;color:#888;font-family:'Opens Sans',sans-serif;"
+      onclick="window.location.assign('../index.html')">
+<font style="color:#C00">m</font>atematika<font style="color:#C00;vertical-align:super;margin-left:2px;font-size:24px;">1</font></span>
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "300px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+
+</script>     
+<hr>
+
+
+
+
+<arrow class=left> </arrow> <A NAME="tex2html1774"
+  HREF="node134.html">Nužan uvjet konvergencije</A> &nbsp; &nbsp;
+<arrow class=up> </arrow> <A NAME="tex2html1780"
+  HREF="node133.html">Red realnih brojeva</A> &nbsp; &nbsp;
+<arrow class=right> </arrow> <A NAME="tex2html1782"
+  HREF="node136.html">Apsolutna konvergencija</A>
+
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00822000000000000000"></A>
+<A NAME="sec:krit"></A><A NAME="24268"></A>
+<BR>
+Kriteriji konvergencije
+</H2>
+
+<P>
+Kod razmatranja konvergencije geometrijskog reda u primjeru
+<A HREF="node133.html#n2.2">6.8</A>, istovremeno smo odgovorili na pitanje da li red konvergira
+i našli njegovu sumu. Međutim, zapravo se radi o dva odvojena pitanja:
+<DL COMPACT>
+<DT>1)</DT>
+<DD>Da li zadani red konvergira?
+</DD>
+<DT>2)</DT>
+<DD>Ukoliko red konvergira, koja mu je suma?
+</DD>
+</DL>
+Često je lakše odgovoriti na prvo, nego na drugo pitanje.
+Tako kod redova čiji su svi članovi pozitivni, na prvo pitanje 
+često možemo odgovoriti koristeći jedan od četiri kriterija
+konvergencije koje navodimo u ovom poglavlju.
+
+<P>
+<div class="def"><P>
+<DIV><B>Definicija  6.10</B> &nbsp; <A NAME="n2.5"></A>Neka su <IMG
+ WIDTH="46" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2737.gif"
+ ALT="$ \sum a_n$">
+ i <IMG
+ WIDTH="45" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2759.gif"
+ ALT="$ \sum b_n$">
+ redovi s pozitivnim članovima,
+odnosno <IMG
+ WIDTH="83" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2760.gif"
+ ALT="$ a_n,b_n&gt;0$">
+ za <!-- MATH
+ $\forall n\in \mathbb{N}$
+ -->
+<IMG
+ WIDTH="61" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2761.gif"
+ ALT="$ \forall n\in \mathbb{N}$">
+. Ako postoji <!-- MATH
+ $n_0\in \mathbb{N}$
+ -->
+<IMG
+ WIDTH="59" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2685.gif"
+ ALT="$ n_0\in \mathbb{N}$">
+
+takav da <IMG
+ WIDTH="59" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2686.gif"
+ ALT="$ n\geq n_0$">
+ povlači <!-- MATH
+ $a_n\leq b_n$
+ -->
+<IMG
+ WIDTH="66" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2762.gif"
+ ALT="$ a_n\leq b_n$">
+, red <IMG
+ WIDTH="45" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2759.gif"
+ ALT="$ \sum b_n$">
+ je
+<EM>majoranta</EM> reda <IMG
+ WIDTH="46" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2737.gif"
+ ALT="$ \sum a_n$">
+, a red <IMG
+ WIDTH="46" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2737.gif"
+ ALT="$ \sum a_n$">
+ je 
+<EM>minoranta</EM> reda <IMG
+ WIDTH="45" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2759.gif"
+ ALT="$ \sum b_n$">
+.</DIV><P></P>
+
+</div><p></p>
+<P>
+<div class="teo"><P>
+<DIV><B>Teorem  6.10</B> &nbsp; [Kriteriji konvergencije]<A NAME="n2.6"></A>Neka su <IMG
+ WIDTH="46" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2737.gif"
+ ALT="$ \sum a_n$">
+ i <IMG
+ WIDTH="45" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2759.gif"
+ ALT="$ \sum b_n$">
+ redovi s pozitivnim članovima.
+Tada vrijede sljedeći kriteriji konvergencije:
+<DL COMPACT>
+<DT>i)</DT>
+<DD><EM>Poredbeni kriterij I.</EM><A NAME="24281"></A>
+    Red je konvergentan ako ima konvergentnu
+    majorantu<A NAME="24282"></A>, 
+    a divergentan ako ima divergentnu minorantu<A NAME="24283"></A>.
+</DD>
+<DT>ii)</DT>
+<DD><EM>Poredbeni kriterij II.</EM> 
+Neka je
+<P><!-- MATH
+ \begin{displaymath}
+\lim\frac{a_n}{b_n}=r.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="93" HEIGHT="49" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2763.gif"
+ ALT="$\displaystyle \lim\frac{a_n}{b_n}=r.
+$">
+</DIV><P>
+</P>
+Tada vrijedi:
+<DL COMPACT>
+<DT>a)</DT>
+<DD>ako je <!-- MATH
+ $0<r< +\infty$
+ -->
+<IMG
+ WIDTH="102" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2764.gif"
+ ALT="$ 0&lt;r&lt; +\infty$">
+, tada oba reda ili konvergiraju ili
+  divergiraju;
+</DD>
+<DT>b)</DT>
+<DD>ako je <IMG
+ WIDTH="47" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2765.gif"
+ ALT="$ r=0$">
+ i red <IMG
+ WIDTH="46" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2737.gif"
+ ALT="$ \sum a_n$">
+ divergira, tada red <IMG
+ WIDTH="45" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2759.gif"
+ ALT="$ \sum b_n$">
+
+  divergira;
+</DD>
+<DT>c)</DT>
+<DD>ako je <IMG
+ WIDTH="47" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2765.gif"
+ ALT="$ r=0$">
+ i red <IMG
+ WIDTH="45" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2759.gif"
+ ALT="$ \sum b_n$">
+ konvergira, tada red 
+  <IMG
+ WIDTH="46" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2737.gif"
+ ALT="$ \sum a_n$">
+ konvergira;
+</DD>
+<DT>d)</DT>
+<DD>ako je <IMG
+ WIDTH="69" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2766.gif"
+ ALT="$ r=+\infty$">
+ i red <IMG
+ WIDTH="46" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2737.gif"
+ ALT="$ \sum a_n$">
+ konvergira, tada red
+<IMG
+ WIDTH="45" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2759.gif"
+ ALT="$ \sum b_n$">
+ konvergira;
+</DD>
+<DT>e)</DT>
+<DD>ako je <IMG
+ WIDTH="69" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2766.gif"
+ ALT="$ r=+\infty$">
+ i red <IMG
+ WIDTH="45" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2759.gif"
+ ALT="$ \sum b_n$">
+ divergira, tada red
+<IMG
+ WIDTH="46" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2737.gif"
+ ALT="$ \sum a_n$">
+ divergira.
+</DD>
+</DL>
+</DD>
+<DT>iii)</DT>
+<DD><EM>D'Alembertov kriterij.</EM>
+<A NAME="24290"></A> 
+Neka je 
+<P><!-- MATH
+ \begin{displaymath}
+%
+\lim \frac{a_{n+1}}{a_n}=q.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="112" HEIGHT="49" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2767.gif"
+ ALT="$\displaystyle %
+\lim \frac{a_{n+1}}{a_n}=q.
+$">
+</DIV><P>
+</P> 
+Ako je <IMG
+ WIDTH="47" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2768.gif"
+ ALT="$ q&lt;1$">
+, tada red <IMG
+ WIDTH="46" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2737.gif"
+ ALT="$ \sum a_n$">
+ konvergira, a ako je <IMG
+ WIDTH="47" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2617.gif"
+ ALT="$ q&gt;1$">
+, tada
+red <IMG
+ WIDTH="46" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2737.gif"
+ ALT="$ \sum a_n$">
+ divergira.
+
+<P>
+</DD>
+<DT>iv)</DT>
+<DD><EM>Cauchyjev kriterij.</EM>
+<A NAME="24294"></A>
+ Neka je 
+<P><!-- MATH
+ \begin{displaymath}
+%
+\lim \sqrt[n]{a_n}=q.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="108" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2769.gif"
+ ALT="$\displaystyle %
+\lim \sqrt[n]{a_n}=q.
+$">
+</DIV><P>
+</P> 
+Ako je <IMG
+ WIDTH="47" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2768.gif"
+ ALT="$ q&lt;1$">
+, tada red <IMG
+ WIDTH="46" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2737.gif"
+ ALT="$ \sum a_n$">
+ konvergira, a ako je <IMG
+ WIDTH="47" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2617.gif"
+ ALT="$ q&gt;1$">
+, tada
+red <IMG
+ WIDTH="46" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2737.gif"
+ ALT="$ \sum a_n$">
+ divergira.
+
+<P>
+</DD>
+<DT>v)</DT>
+<DD><EM>Raabeov kriterij.</EM> 
+<A NAME="24297"></A>
+Neka je 
+<P><!-- MATH
+ \begin{displaymath}
+%
+\lim n\left(1-\frac{a_{n+1}}{a_n}\right)=q.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="184" HEIGHT="61" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2770.gif"
+ ALT="$\displaystyle %
+\lim n\left(1-\frac{a_{n+1}}{a_n}\right)=q.
+$">
+</DIV><P>
+</P> 
+Ako je <IMG
+ WIDTH="47" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2617.gif"
+ ALT="$ q&gt;1$">
+, tada red <IMG
+ WIDTH="46" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2737.gif"
+ ALT="$ \sum a_n$">
+ konvergira, a ako je <IMG
+ WIDTH="47" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2768.gif"
+ ALT="$ q&lt;1$">
+, tada
+red <IMG
+ WIDTH="46" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2737.gif"
+ ALT="$ \sum a_n$">
+ divergira.
+</DD>
+</DL></DIV><P></P>
+
+</div><p></p><div class="dok"><B>Dokaz. </B></div><p></p>
+Dokazat ćemo samo prvu varijantu poredbenog kriterija, dok
+dokaze ostalih tvrdnji izostavljamo.
+
+<P>
+Neka red <IMG
+ WIDTH="46" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2737.gif"
+ ALT="$ \sum a_n$">
+ ima konvergentnu majorantu <!-- MATH
+ $\sum b_n=b$
+ -->
+<IMG
+ WIDTH="76" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2771.gif"
+ ALT="$ \sum b_n=b$">
+ i neka je
+<!-- MATH
+ $a_n\leq b_n$
+ -->
+<IMG
+ WIDTH="66" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2762.gif"
+ ALT="$ a_n\leq b_n$">
+. Niz parcijalnih suma <IMG
+ WIDTH="40" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2722.gif"
+ ALT="$ \{s_k\}$">
+ reda <IMG
+ WIDTH="46" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2737.gif"
+ ALT="$ \sum a_n$">
+ je
+  omeđen odozgo, <IMG
+ WIDTH="54" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2772.gif"
+ ALT="$ s_k\leq b$">
+. Kako je  <IMG
+ WIDTH="57" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2673.gif"
+ ALT="$ a_n &gt; 0$">
+, niz <IMG
+ WIDTH="40" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2722.gif"
+ ALT="$ \{s_k\}$">
+ je i 
+strogo rastući pa konvergira po teoremu <A HREF="node128.html#n1.13">6.4</A>.
+Druga tvrdnja je očita.
+&nbsp;&nbsp;&nbsp;&nbsp;<div class="dok"><B>Q.E.D.</B>
+<BR></div><p></p>
+
+<P>
+Raabeov kriterij se obično koristi tek kada zakaže D'Alembertov
+kriterij, dakle kada je <!-- MATH
+ $\lim a_{n+1}/a_n =1$
+ -->
+<IMG
+ WIDTH="132" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2773.gif"
+ ALT="$ \lim a_{n+1}/a_n =1$">
+.
+
+<P>
+Dat ćemo nekoliko primjera.
+<div class="pri"><P>
+<DIV><B>Primjer  6.11</B> &nbsp; Kako je <!-- MATH
+ $\frac{1}{n}\leq \frac{1}{\sqrt{n}}$
+ -->
+<IMG
+ WIDTH="67" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2774.gif"
+ ALT="$ \frac{1}{n}\leq \frac{1}{\sqrt{n}}$">
+, red
+<P><!-- MATH
+ \begin{displaymath}
+%
+\sum \frac{1}{\sqrt{n}}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="64" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2775.gif"
+ ALT="$\displaystyle %
+\sum \frac{1}{\sqrt{n}}
+$">
+</DIV><P>
+</P> 
+divergira jer ima divergentnu minorantu <!-- MATH
+ $\sum \frac{1}{n}$
+ -->
+<IMG
+ WIDTH="40" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2776.gif"
+ ALT="$ \sum \frac{1}{n}$">
+ (vidi 
+primjer <A HREF="node134.html#n2.4">6.10</A>). Općenito, red 
+<P><!-- MATH
+ \begin{displaymath}
+\sum\frac{1}{n^p}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="57" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2777.gif"
+ ALT="$\displaystyle \sum\frac{1}{n^p}
+$">
+</DIV><P>
+</P>
+divergira za <IMG
+ WIDTH="47" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2778.gif"
+ ALT="$ p&lt;1$">
+ zbog istog razloga (vidi napomenu <A HREF="node134.html#n2.4a">6.3</A>).</DIV><P></P>
+
+</div><p></p>
+<P>
+<div class="pri"><P>
+<DIV><B>Primjer  6.12</B> &nbsp; Promotrimo red
+<P><!-- MATH
+ \begin{displaymath}
+%
+\sum \frac{1}{n(n+1)}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="110" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2779.gif"
+ ALT="$\displaystyle %
+\sum \frac{1}{n(n+1)}.
+$">
+</DIV><P>
+</P> 
+Zbog
+<P><!-- MATH
+ \begin{displaymath}
+%
+\frac{1}{n(n+1)} =\frac{1}{n}-\frac{1}{n+1}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="183" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2780.gif"
+ ALT="$\displaystyle %
+\frac{1}{n(n+1)} =\frac{1}{n}-\frac{1}{n+1}
+$">
+</DIV><P>
+</P> 
+vrijedi
+<P></P>
+<DIV ALIGN="CENTER"><TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2781.gif"
+ ALT="$\displaystyle s_k$"></TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="548" HEIGHT="75" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2782.gif"
+ ALT="$\displaystyle =\sum_{n=1}^k \frac{1}{n(n+1)}=1-\frac{1}{2}+\frac{1}{2}-\frac{1}{3}+ \frac{1}{3}-\frac{1}{4}+ \cdots +\frac{1}{k-1}+\frac{1}{k}-\frac{1}{k+1}$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="105" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2783.gif"
+ ALT="$\displaystyle =1-\frac{1}{k+1}.$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Stoga je <!-- MATH
+ $\sum \frac{1}{n(n+1)}=\lim s_k=1$
+ -->
+<IMG
+ WIDTH="181" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2784.gif"
+ ALT="$ \sum \frac{1}{n(n+1)}=\lim s_k=1$">
+. Red 
+<P><!-- MATH
+ \begin{displaymath}
+%
+\sum \frac{1}{(n+1)^2}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="102" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2785.gif"
+ ALT="$\displaystyle %
+\sum \frac{1}{(n+1)^2}
+$">
+</DIV><P>
+</P> 
+također konvergira jer ima konvergentnu majorantu
+ <!-- MATH
+ $\sum \frac{1}{n(n+1)}$
+ -->
+<IMG
+ WIDTH="79" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2786.gif"
+ ALT="$ \sum \frac{1}{n(n+1)}$">
+. No, tada konvergira i red
+<P><!-- MATH
+ \begin{displaymath}
+%
+\sum \frac{1}{n^2}= 1+ \sum \frac{1}{(n+1)^2} =\frac{\pi^2}{6}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="261" HEIGHT="63" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2787.gif"
+ ALT="$\displaystyle %
+\sum \frac{1}{n^2}= 1+ \sum \frac{1}{(n+1)^2} =\frac{\pi^2}{6}.
+$">
+</DIV><P>
+</P> 
+Zadnju jednakost dokazat ćemo u Matematici 3.
+Konačno, prema poredbenom kriteriju red 
+<!-- MATH
+ $\sum \frac{1}{n^p}$
+ -->
+<IMG
+ WIDTH="48" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2788.gif"
+ ALT="$ \sum \frac{1}{n^p}$">
+ konvergira za <IMG
+ WIDTH="47" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2789.gif"
+ ALT="$ p\geq 2$">
+ (vidi napomenu
+<A HREF="node134.html#n2.4a">6.3</A>).</DIV><P></P>
+
+</div><p></p>
+<P>
+<div class="pri"><P>
+<DIV><B>Primjer  6.13</B> &nbsp; Ispitajmo konvergenciju reda 
+<P><!-- MATH
+ \begin{displaymath}
+%
+\sum\frac{n}{3^n}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="57" HEIGHT="49" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2790.gif"
+ ALT="$\displaystyle %
+\sum\frac{n}{3^n}
+$">
+</DIV><P>
+</P> 
+po D'Alembertovom i Cauchyjevom kriteriju.
+Red konvergira po D'Alembertovom kriteriju jer je
+<P><!-- MATH
+ \begin{displaymath}
+%
+\lim \frac{a_{n+1}}{a_n}=\lim \frac{\frac{n+1}{3^{n+1}}}{\frac{n}{3^n}}
+=\lim\frac{ n+1}{3n}=\frac{1}{3}<1.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="340" HEIGHT="66" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2791.gif"
+ ALT="$\displaystyle %
+\lim \frac{a_{n+1}}{a_n}=\lim \frac{\frac{n+1}{3^{n+1}}}{\frac{n}{3^n}}
+=\lim\frac{ n+1}{3n}=\frac{1}{3}&lt;1.
+$">
+</DIV><P>
+</P> 
+Red konvergira po Cauchyjevom kriteriju jer je
+<P><!-- MATH
+ \begin{displaymath}
+%
+\lim \sqrt[n]{a_n}=\lim\sqrt[n]{\frac{n}{3^n}}=\lim
+\frac{\sqrt[n]{n}}{3} \stackrel{\textrm{Zad.\ \ref{n1.23}}}{=} \frac{1}{3}<1.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="364" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2792.gif"
+ ALT="% latex2html id marker 44226
+$\displaystyle %
+\lim \sqrt[n]{a_n}=\lim\sqrt[n]{\...
+...
+\frac{\sqrt[n]{n}}{3} \stackrel{\textrm{Zad.\ \ref{n1.23}}}{=} \frac{1}{3}&lt;1.
+$">
+</DIV><P>
+</P> </DIV><P></P>
+
+</div><p></p>
+<P>
+<div class="pri"><P>
+<DIV><B>Primjer  6.14</B> &nbsp; Sljedeći važan red daje nam prikaz broja <IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img23.gif"
+ ALT="$ e$">
+: 
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="nbroje"></A><!-- MATH
+ \begin{equation}
+\sum_{n=0}^{\infty}\frac{1}{n!}=
+1+1+\frac{1}{2!}+\frac{1}{3!}+\frac{1}{4!}+\cdots = e.
+\end{equation}
+ -->
+<TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><IMG
+ WIDTH="320" HEIGHT="69" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2793.gif"
+ ALT="$\displaystyle \sum_{n=0}^{\infty}\frac{1}{n!}= 1+1+\frac{1}{2!}+\frac{1}{3!}+\frac{1}{4!}+\cdots = e.$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+(6.1)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Red konvergira po D'Alembertovom kriteriju jer je 
+<P><!-- MATH
+ \begin{displaymath}
+%
+\lim \frac{a_{n+1}}{a_n}=\lim \frac{\frac{1}{(n+1)!}}{\frac{1}{n!}}
+=\lim\frac{1}{n+1}=0<1.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="347" HEIGHT="72" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2794.gif"
+ ALT="$\displaystyle %
+\lim \frac{a_{n+1}}{a_n}=\lim \frac{\frac{1}{(n+1)!}}{\frac{1}{n!}}
+=\lim\frac{1}{n+1}=0&lt;1.
+$">
+</DIV><P>
+</P> 
+Zadnja jednakost u formuli (<A HREF="#nbroje">6.1</A>) dokazat će se u zadatku 
+<A HREF="node143.html#n5.5c">6.5</A>.</DIV><P></P>
+
+</div><p></p>
+<P>
+<p><HR></p>
+<arrow class=left> </arrow> <A NAME="tex2html1774"
+  HREF="node134.html">Nužan uvjet konvergencije</A> &nbsp; &nbsp;
+<arrow class=up> </arrow> <A NAME="tex2html1780"
+  HREF="node133.html">Red realnih brojeva</A> &nbsp; &nbsp;
+<arrow class=right> </arrow> <A NAME="tex2html1782"
+  HREF="node136.html">Apsolutna konvergencija</A>  
+
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

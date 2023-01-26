@@ -1,0 +1,797 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2012 (1.2)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-2382574370068590",
+    enable_page_level_ads: true
+  });
+</script>
+<TITLE>Vektorski produkt</TITLE>
+<META NAME="description" CONTENT="Vektorski produkt">
+<META NAME="keywords" CONTENT="predavanja">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2012">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="predavanja.css">
+
+<LINK REL="next" HREF="node61.html">
+<LINK REL="previous" HREF="node59.html">
+<LINK REL="up" HREF="node47.html">
+<LINK REL="next" HREF="node61.html">
+</HEAD>
+
+<BODY >
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="shortcut icon" href="favicon.ico"/>
+
+<style>
+.sidenav {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 50px;
+}
+
+div.sidenav a {
+    padding: 8px 8px 8px 10px;
+    text-decoration: none;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    display: block;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dropdown-btn {
+    padding: 8px 8px 8px 8px;
+    text-decoration: none; 
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s;
+}
+
+
+.sidenav a:hover, .dropdown-btn:hover {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #C00;
+}
+
+.menu2 {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    font-style:italic;
+}
+
+.dropdown-container {
+  display: none;
+  font-family: 'Open Sans',sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #ddd;
+  padding-left: 8px;
+}
+
+.dropdown-container a:hover {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    background-color: #ccc;
+}
+
+.sidenav .active {
+    background-color: #C00;
+    color: white;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+hr { 
+    display: block;
+    margin-top: 0.2em;
+    margin-bottom: 0.4em;
+    margin-left: -5px;
+    margin-right: -5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color:#ec971f;
+} 
+  
+.caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 20px;
+    vertical-align: middle;
+    border-top: 5px dashed;
+        border-top-width: 5px;
+        border-top-style: dashed;
+        border-top-color: currentcolor;
+    border-right: 5px solid transparent;
+        border-right-width: 5px;
+        border-right-style: solid;
+        border-right-color: transparent;
+    border-left: 5px solid transparent;
+        border-left-width: 5px;
+        border-left-style: solid;
+        border-left-color: transparent;
+}
+
+</style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- First -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2382574370068590"
+     data-ad-slot="8207843721"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<script>
+   // alert('|ivan'+document.getElementById("mys-content").innerHTML+'|') 
+//    alert(typeof(window.CustomEvent))
+//    if(typeof(window.CustomEvent)=="undefined")
+// {
+//     document.display = 'none';
+// } 
+</script>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" 
+  onclick="closeNav()"
+  style="font-size:24px;cursor:pointer;color:#000;position: absolute; top: 0;
+    right: 10px; font-size: 24px; margin-left: 50px;">&nbsp; &times; &nbsp;</a>
+  <a href="/matematika1/index.html">HOME</a>
+  <button href="/matematika1/predavanja" class="dropdown-btn">PREDAVANJA
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/predavanja/predavanja.html">SADRŽAJ</a>
+      <a href="/matematika1/predavanja/node3.html">OSNOVE</a>
+      <a href="/matematika1/predavanja/node22.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/predavanja/node47.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/predavanja/node67.html">FUNKCIJE</a>
+      <a href="/matematika1/predavanja/node98.html">DERIVACIJE</a>
+      <a href="/matematika1/predavanja/node125.html">NIZOVI I REDOVI</a>
+      <a href="/matematika1/predavanja/node144.html">INDEKS</a>
+    </div>
+  <button href="/matematika1/vjezbe" class="dropdown-btn">VJEŽBE
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/vjezbe/vjezbe.html">SADRŽAJ</a>
+      <a href="/matematika1/vjezbe/node2.html">OSNOVE</a>
+      <a href="/matematika1/vjezbe/node24.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/vjezbe/node55.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/vjezbe/node87.html">FUNKCIJE</a>
+      <a href="/matematika1/vjezbe/node110.html">DERIVACIJE</a>
+      <a href="/matematika1/vjezbe/node136.html">NIZOVI I REDOVI</a>
+    </div>
+  <button href="/matematika1/kviz" class="dropdown-btn">KVIZ
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/kviz/index.html">SADRŽAJ</a>
+      <a href="/matematika1/kviz/osnove/">OSNOVE</a>
+      <a href="/matematika1/kviz/algebra/">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/kviz/vektori/">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/kviz/funkcije/">FUNKCIJE</a>
+      <a href="/matematika1/kviz/derivacije/">DERIVACIJE</a>
+      <a href="/matematika1/kviz/nizovi/">NIZOVI I REDOVI</a>
+    </div>
+  <button href="/matematika1/podsjetnik" class="dropdown-btn">PODSJETNIK
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/podsjetnik/podsjetnik.html">SADRŽAJ</a>
+      <a href="/matematika1/podsjetnik/node1.html">OSNOVE</a>
+      <a href="/matematika1/podsjetnik/node2.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/podsjetnik/node3.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/podsjetnik/node4.html">FUNKCIJE</a>
+      <a href="/matematika1/podsjetnik/node5.html">DERIVACIJE</a>
+      <a href="/matematika1/podsjetnik/node6.html">NIZOVI I REDOVI</a>
+    </div>
+  <!--<a href="/matematika1/kviz">Kviz</a>-->
+  <a href="/matematika1/java">JAVA</a>
+  <a href="http://lavica.fesb.unist.hr/netplot"  class="menu2">NETPLOT</a>
+  <!-- <a href="/matematika1/gauss"  class="menu2">GAUSS</a> -->
+  <a href="http://lavica.fesb.unist.hr/octave/ool_hr.php"  class="menu2">OCTAVE</a>
+  <a href="/matematika1/search.html">Traži ...</a>
+</div>
+
+<span style="font-size:24px;font-family:'Open Sans', sans-serif;cursor:pointer;color:#ec971f"
+      onclick="openNav()">&#9776;</span> &nbsp; 
+<span style="font-size:30px;cursor:pointer;color:#888;font-family:'Opens Sans',sans-serif;"
+      onclick="window.location.assign('../index.html')">
+<font style="color:#C00">m</font>atematika<font style="color:#C00;vertical-align:super;margin-left:2px;font-size:24px;">1</font></span>
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "300px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+
+</script>     
+<hr>
+
+
+
+
+<arrow class=left> </arrow> <A NAME="tex2html926"
+  HREF="node59.html">Skalarni produkt</A> &nbsp; &nbsp;
+<arrow class=up> </arrow> <A NAME="tex2html932"
+  HREF="node47.html">VEKTORSKA ALGEBRA I ANALITIČKA</A> &nbsp; &nbsp;
+<arrow class=right> </arrow> <A NAME="tex2html934"
+  HREF="node61.html">Mješoviti produkt</A>
+
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION005100000000000000000"></A>
+<A NAME="sec:vekp"></A>
+<BR>
+Vektorski produkt
+</H1>
+
+<P>
+<div class="def"><P>
+<DIV><B>Definicija  3.5</B> &nbsp; <A NAME="v2.26"></A><EM>Vektorski produkt</EM><A NAME="9161"></A>
+vektora <!-- MATH
+ $\mathbf{a}$
+ -->
+<IMG
+ WIDTH="15" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img969.gif"
+ ALT="$ \mathbf{a}$">
+ i <!-- MATH
+ $\mathbf{b}$
+ -->
+<IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img618.gif"
+ ALT="$ \mathbf{b}$">
+ je 
+<U>vektor</U> <!-- MATH
+ $\mathbf{c}=\mathbf{a}\times \mathbf{b}$
+ -->
+<IMG
+ WIDTH="82" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1148.gif"
+ ALT="$ \mathbf{c}=\mathbf{a}\times \mathbf{b}$">
+ takav da je
+<P><!-- MATH
+ \begin{displaymath}
+|\mathbf{c}|=|\mathbf{a}|\, |\mathbf{b}| \sin \angle(\mathbf{a},\mathbf{b}).
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="182" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1149.gif"
+ ALT="$\displaystyle \vert\mathbf{c}\vert=\vert\mathbf{a}\vert\, \vert\mathbf{b}\vert \sin \angle(\mathbf{a},\mathbf{b}).
+$">
+</DIV><P>
+</P>
+Pored toga, ako je <!-- MATH
+ $|\mathbf{c}|>0$
+ -->
+<IMG
+ WIDTH="57" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1150.gif"
+ ALT="$ \vert\mathbf{c}\vert&gt;0$">
+, tada je
+<P><!-- MATH
+ \begin{displaymath}
+\mathbf{c}\perp\mathbf{a}\quad \wedge \quad
+\mathbf{c}\perp\mathbf{b},
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="154" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1151.gif"
+ ALT="$\displaystyle \mathbf{c}\perp\mathbf{a}\quad \wedge \quad
+\mathbf{c}\perp\mathbf{b},
+$">
+</DIV><P>
+</P>
+pri čemu uređena trojka vektora <!-- MATH
+ $(\mathbf{a},\mathbf{b},\mathbf{c})$
+ -->
+<IMG
+ WIDTH="66" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1152.gif"
+ ALT="$ (\mathbf{a},\mathbf{b},\mathbf{c})$">
+ čini desni
+sustav (slika <A HREF="#fig:v10">3.10</A>).</DIV><P></P>
+
+</div><p></p>
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:v10"></A><A NAME="9168"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Slika 3.10:</STRONG>
+Vektorski produkt</CAPTION>
+<TR><TD><IMG
+ WIDTH="237" HEIGHT="256" BORDER="0"
+ SRC="img1153.gif"
+ ALT="\begin{figure}\begin{center}
+\epsfig{file=slike/vekp.eps,width=6.0cm}\end{center}\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+Vektorski produkt ima sljedeća svojstva:
+<DL COMPACT>
+<DT>V1.</DT>
+<DD><!-- MATH
+ $\mathbf{a}\times\mathbf{b}=\mathbf{0}$
+ -->
+<IMG
+ WIDTH="83" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1154.gif"
+ ALT="$ \mathbf{a}\times\mathbf{b}=\mathbf{0}$">
+ ako je <!-- MATH
+ $\mathbf{a}=\mathbf{0}$
+ -->
+<IMG
+ WIDTH="49" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1005.gif"
+ ALT="$ \mathbf{a}=\mathbf{0}$">
+ ili 
+  <!-- MATH
+ $\mathbf{b}=\mathbf{0}$
+ -->
+<IMG
+ WIDTH="51" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1121.gif"
+ ALT="$ \mathbf{b}=\mathbf{0}$">
+ ili ako su vektori <!-- MATH
+ $\mathbf{a}$
+ -->
+<IMG
+ WIDTH="15" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img969.gif"
+ ALT="$ \mathbf{a}$">
+ i <!-- MATH
+ $\mathbf{b}$
+ -->
+<IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img618.gif"
+ ALT="$ \mathbf{b}$">
+ kolinearni,
+</DD>
+<DT>V2.</DT>
+<DD>vrijedi 
+<P></P>
+<DIV ALIGN="CENTER"><TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="204" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1155.gif"
+ ALT="$\displaystyle \mathbf{i}\times\mathbf{i}=\mathbf{j}\times\mathbf{j}=\mathbf{k}\times\mathbf{k}=\mathbf{0},$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="269" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1156.gif"
+ ALT="$\displaystyle \mathbf{i}\times\mathbf{j}=\mathbf{k},\quad \mathbf{j}\times\mathbf{k}=\mathbf{i},\quad \mathbf{k}\times\mathbf{i}=\mathbf{j},$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="312" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1157.gif"
+ ALT="$\displaystyle \mathbf{j}\times\mathbf{i}=-\mathbf{k},\quad \mathbf{k}\times\mathbf{j}=-\mathbf{i},\quad \mathbf{i}\times\mathbf{k}=\mathbf{-}j,$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+</DD>
+<DT>V3.</DT>
+<DD><!-- MATH
+ $\mathbf{a}\times\mathbf{b}=-\mathbf{b}\times\mathbf{a}$
+ -->
+<IMG
+ WIDTH="130" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1158.gif"
+ ALT="$ \mathbf{a}\times\mathbf{b}=-\mathbf{b}\times\mathbf{a}$">
+ &nbsp;&nbsp;&nbsp;&nbsp;
+(anti-komutativnost)<A NAME="9176"></A>, 
+</DD>
+<DT>V4.</DT>
+<DD><!-- MATH
+ $\mathbf{a}\times (\mathbf{b}+\mathbf{c})=\mathbf{a}\times\mathbf{b}+
+\mathbf{a}\times\mathbf{c}$
+ -->
+<IMG
+ WIDTH="224" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1159.gif"
+ ALT="$ \mathbf{a}\times (\mathbf{b}+\mathbf{c})=\mathbf{a}\times\mathbf{b}+
+\mathbf{a}\times\mathbf{c}$">
+ &nbsp;&nbsp;&nbsp;&nbsp;(distributivnost)<A NAME="9177"></A>,
+</DD>
+<DT>V5.</DT>
+<DD><!-- MATH
+ $\lambda(\mathbf{a}\times\mathbf{b})=(\lambda\mathbf{a})\times\mathbf{b}=
+\mathbf{a}\times (\lambda\mathbf{b})$
+ -->
+<IMG
+ WIDTH="257" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1160.gif"
+ ALT="$ \lambda(\mathbf{a}\times\mathbf{b})=(\lambda\mathbf{a})\times\mathbf{b}=
+\mathbf{a}\times (\lambda\mathbf{b})$">
+ &nbsp;&nbsp;&nbsp;&nbsp;(homogenost)<A NAME="9178"></A>,
+</DD>
+<DT>V6.</DT>
+<DD>norma <!-- MATH
+ $|\mathbf{a}\times\mathbf{b}|$
+ -->
+<IMG
+ WIDTH="58" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1161.gif"
+ ALT="$ \vert\mathbf{a}\times\mathbf{b}\vert$">
+ jednaka je površini
+paralelograma<A NAME="9179"></A> 
+što ga razapinju vektori <!-- MATH
+ $\mathbf{a}$
+ -->
+<IMG
+ WIDTH="15" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img969.gif"
+ ALT="$ \mathbf{a}$">
+ i <!-- MATH
+ $\mathbf{b}$
+ -->
+<IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img618.gif"
+ ALT="$ \mathbf{b}$">
+
+(slika <A HREF="#fig:v11">3.11</A>).
+</DD>
+</DL>
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:v11"></A><A NAME="9185"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Slika 3.11:</STRONG>
+Modul vektorskog produkta</CAPTION>
+<TR><TD><IMG
+ WIDTH="340" HEIGHT="142" BORDER="0"
+ SRC="img1162.gif"
+ ALT="\begin{figure}\begin{center}
+\epsfig{file=slike/mvp.eps,width=8.6cm}\end{center}\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+U pravokutnom koordinatnom sustavu vektorski produkt računamo pomoću
+determinante.
+
+<P>
+<div class="teo"><P>
+<DIV><B>Teorem  3.3</B> &nbsp; <A NAME="v2.28"></A>Ako je 
+<P><!-- MATH
+ \begin{displaymath}
+%
+\mathbf{a}=a_x\mathbf{i}+a_y\mathbf{j}+a_z\mathbf{k}, \qquad
+\mathbf{b}=b_x\mathbf{i}+b_y\mathbf{j}+b_z\mathbf{k},
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="361" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1136.gif"
+ ALT="$\displaystyle %
+\mathbf{a}=a_x\mathbf{i}+a_y\mathbf{j}+a_z\mathbf{k}, \qquad
+\mathbf{b}=b_x\mathbf{i}+b_y\mathbf{j}+b_z\mathbf{k},
+$">
+</DIV><P>
+</P> 
+tada je
+<P><!-- MATH
+ \begin{displaymath}
+%
+\mathbf{a}\times\mathbf{b}=(a_yb_z-a_zb_y)\, \mathbf{i}
++(a_zb_x-a_xb_z)\, \mathbf{j}+(a_xb_y-a_yb_x)\, \mathbf{k},
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="469" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1163.gif"
+ ALT="$\displaystyle %
+\mathbf{a}\times\mathbf{b}=(a_yb_z-a_zb_y)\, \mathbf{i}
++(a_zb_x-a_xb_z)\, \mathbf{j}+(a_xb_y-a_yb_x)\, \mathbf{k},
+$">
+</DIV><P>
+</P> 
+odnosno
+<P><!-- MATH
+ \begin{displaymath}
+%
+\mathbf{a}\times\mathbf{b}=\begin{vmatrix} \mathbf{i}&\mathbf{j}&\mathbf{k}\\
+a_x&a_y&a_z\\b_x&b_y&b_z
+\end{vmatrix}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="183" HEIGHT="83" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1164.gif"
+ ALT="$\displaystyle %
+\mathbf{a}\times\mathbf{b}=\begin{vmatrix}\mathbf{i}&amp;\mathbf{j}&amp;\mathbf{k}\\
+a_x&amp;a_y&amp;a_z\\ b_x&amp;b_y&amp;b_z
+\end{vmatrix}.
+$">
+</DIV><P>
+</P> </DIV><P></P>
+
+</div><p></p><div class="dok"><B>Dokaz. </B></div><p></p>
+Tvrdnja slijedi iz svojstava V2, V4 i V5. 
+&nbsp;&nbsp;&nbsp;&nbsp;<div class="dok"><B>Q.E.D.</B>
+<BR></div><p></p>
+
+<P>
+<div class="nap"><P>
+<DIV><B>Napomena  3.2</B> &nbsp; <A NAME="v2.29"></A>Svojstva vektorskog produkta odgovaraju svojstvima determinanti iz
+poglavlja <A HREF="node41.html#sec:svojstva">2.9.1</A>:
+
+<UL>
+<LI>prvi dio svojstva V2 odgovara svojstvu D4 koje kaže da je
+determinanta s dva jednaka retka jednaka nuli,
+</LI>
+<LI>svojstvo V3 odgovara svojstvu D3 koje kaže da zamjenom dvaju redaka
+determinanta mijenja predznak,
+</LI>
+<LI>svojstva V4 i V5 odgovaraju 
+svojstvu D5.
+</LI>
+</UL></DIV><P></P>
+
+</div><p></p>
+<P>
+Definicija vektorskog produkta <A HREF="#v2.26">3.5</A> i teorem <A HREF="#v2.28">3.3</A>
+omogućuju računanje površine poligonalnih likova u ravnini.
+
+<P>
+<div class="pri"><P>
+<DIV><B>Primjer  3.7</B> &nbsp; <A NAME="v2.29a"></A>Izračunajmo površinu trokuta<A NAME="9204"></A> 
+<!-- MATH
+ $\triangle ABC$
+ -->
+<IMG
+ WIDTH="63" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1144.gif"
+ ALT="$ \triangle ABC$">
+ zadanog s
+<P><!-- MATH
+ \begin{displaymath}
+%
+A=(1,2,3),\qquad B=(0,-1,2), \qquad C=(3,3,0).
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="397" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1165.gif"
+ ALT="$\displaystyle %
+A=(1,2,3),\qquad B=(0,-1,2), \qquad C=(3,3,0).
+$">
+</DIV><P>
+</P> 
+Površina trokuta jednaka je polovici površine paralelograma
+razapetog s vektorima <!-- MATH
+ $\overrightarrow{AB}$
+ -->
+<IMG
+ WIDTH="33" HEIGHT="22" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1166.gif"
+ ALT="$ \overrightarrow{AB}$">
+ i <!-- MATH
+ $\overrightarrow{AC}$
+ -->
+<IMG
+ WIDTH="33" HEIGHT="23" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1167.gif"
+ ALT="$ \overrightarrow{AC}$">
+ (slika <A HREF="#fig:v12">3.12</A>).
+Kako je
+<P><!-- MATH
+ \begin{displaymath}
+%
+\overrightarrow{AB}=\{-1,-3,-1\}, \qquad \overrightarrow{AC}=\{2,1,-3\},
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="336" HEIGHT="47" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1168.gif"
+ ALT="$\displaystyle %
+\overrightarrow{AB}=\{-1,-3,-1\}, \qquad \overrightarrow{AC}=\{2,1,-3\},
+$">
+</DIV><P>
+</P> 
+vrijedi
+<P></P>
+<DIV ALIGN="CENTER"><!-- MATH
+ \begin{equation*}
+\begin{split}
+P_{\triangle ABC}&=\frac{1}{2}|\overrightarrow{AB}\times \overrightarrow{AC}|=
+\bigg|\,
+\frac{1}{2}\begin{vmatrix} \mathbf{i}&\mathbf{j}&\mathbf{k}\\
+-1& -3&-1\\2&1&-3
+\end{vmatrix}\,
+\bigg|\\\\
+&=\frac{1}{2}| \mathbf{i}\, (9+1)-\mathbf{j}\, (3+2)+\mathbf{k}\,
+(-1+6)|=\frac{1}{2}\sqrt{150}\approx 6.12.
+\end{split}
+\end{equation*}
+ -->
+<TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><IMG
+ WIDTH="497" HEIGHT="145" BORDER="0"
+ SRC="img1169.gif"
+ ALT="\begin{displaymath}\begin{split}P_{\triangle ABC}&amp;=\frac{1}{2}\vert\overrightarr...
+...k}\, (-1+6)\vert=\frac{1}{2}\sqrt{150}\approx 6.12. \end{split}\end{displaymath}"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Uočimo da smo na jednostavan način riješili naočigled složeni problem,
+jer smo našli površinu trokuta smještenog u prostoru, a nismo ga
+morali niti skicirati. Na isti način možemo provjeriti leže li
+tri točke na pravcu, jer će u tom slučaju površina trokuta biti
+nula.
+
+<P>
+Na sličan način možemo izračunati površinu bilo kojeg poligonalnog
+lika u prostoru, jer svaki takav lik možemo podijeliti na trokute.</DIV><P></P>
+
+</div><p></p>
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:v12"></A><A NAME="9232"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Slika 3.12:</STRONG>
+Površina trokuta</CAPTION>
+<TR><TD><IMG
+ WIDTH="428" HEIGHT="370" BORDER="0"
+ SRC="img1170.gif"
+ ALT="\begin{figure}\begin{center}
+\epsfig{file=slike/ptrok.eps,width=10.8cm}\end{center}\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+<div class="zad"><P>
+<DIV><B>Zadatak  3.2</B> &nbsp; <A NAME="v2.29b"></A>Izračunajte površinu trokuta iz prethodnog primjera pomoću
+paralelograma razapetog s vektorima <!-- MATH
+ $\overrightarrow{BA}$
+ -->
+<IMG
+ WIDTH="33" HEIGHT="22" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1171.gif"
+ ALT="$ \overrightarrow{BA}$">
+ i <!-- MATH
+ $\overrightarrow{BC}$
+ -->
+<IMG
+ WIDTH="34" HEIGHT="23" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1172.gif"
+ ALT="$ \overrightarrow{BC}$">
+.
+Može li se zadatak riješiti ako promatramo paralelogram
+razapet s vektorima <!-- MATH
+ $\overrightarrow{AB}$
+ -->
+<IMG
+ WIDTH="33" HEIGHT="22" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1166.gif"
+ ALT="$ \overrightarrow{AB}$">
+ i <!-- MATH
+ $\overrightarrow{BC}$
+ -->
+<IMG
+ WIDTH="34" HEIGHT="23" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1172.gif"
+ ALT="$ \overrightarrow{BC}$">
+?</DIV><P></P>
+
+</div><p></p>
+<P>
+<p><HR></p>
+<arrow class=left> </arrow> <A NAME="tex2html926"
+  HREF="node59.html">Skalarni produkt</A> &nbsp; &nbsp;
+<arrow class=up> </arrow> <A NAME="tex2html932"
+  HREF="node47.html">VEKTORSKA ALGEBRA I ANALITIČKA</A> &nbsp; &nbsp;
+<arrow class=right> </arrow> <A NAME="tex2html934"
+  HREF="node61.html">Mješoviti produkt</A>  
+
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

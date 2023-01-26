@@ -1,0 +1,660 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2012 (1.2)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-2382574370068590",
+    enable_page_level_ads: true
+  });
+</script>
+<TITLE>Teorem o inverznoj funkciji</TITLE>
+<META NAME="description" CONTENT="Teorem o inverznoj funkciji">
+<META NAME="keywords" CONTENT="predavanja">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2012">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="predavanja.css">
+
+<LINK REL="next" HREF="node9.html">
+<LINK REL="previous" HREF="node7.html">
+<LINK REL="up" HREF="node7.html">
+<LINK REL="next" HREF="node9.html">
+</HEAD>
+
+<BODY >
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="shortcut icon" href="favicon.ico"/>
+
+<style>
+.sidenav {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 50px;
+}
+
+div.sidenav a {
+    padding: 8px 8px 8px 10px;
+    text-decoration: none;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    display: block;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dropdown-btn {
+    padding: 8px 8px 8px 8px;
+    text-decoration: none; 
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s;
+}
+
+
+.sidenav a:hover, .dropdown-btn:hover {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #C00;
+}
+
+.menu2 {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    font-style:italic;
+}
+
+.dropdown-container {
+  display: none;
+  font-family: 'Open Sans',sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #ddd;
+  padding-left: 8px;
+}
+
+.dropdown-container a:hover {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    background-color: #ccc;
+}
+
+.sidenav .active {
+    background-color: #C00;
+    color: white;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+hr { 
+    display: block;
+    margin-top: 0.2em;
+    margin-bottom: 0.4em;
+    margin-left: -5px;
+    margin-right: -5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color:#ec971f;
+} 
+  
+.caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 20px;
+    vertical-align: middle;
+    border-top: 5px dashed;
+        border-top-width: 5px;
+        border-top-style: dashed;
+        border-top-color: currentcolor;
+    border-right: 5px solid transparent;
+        border-right-width: 5px;
+        border-right-style: solid;
+        border-right-color: transparent;
+    border-left: 5px solid transparent;
+        border-left-width: 5px;
+        border-left-style: solid;
+        border-left-color: transparent;
+}
+
+</style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- First -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2382574370068590"
+     data-ad-slot="8207843721"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<script>
+   // alert('|ivan'+document.getElementById("mys-content").innerHTML+'|') 
+//    alert(typeof(window.CustomEvent))
+//    if(typeof(window.CustomEvent)=="undefined")
+// {
+//     document.display = 'none';
+// } 
+</script>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" 
+  onclick="closeNav()"
+  style="font-size:24px;cursor:pointer;color:#000;position: absolute; top: 0;
+    right: 10px; font-size: 24px; margin-left: 50px;">&nbsp; &times; &nbsp;</a>
+  <a href="/matematika1/index.html">HOME</a>
+  <button href="/matematika1/predavanja" class="dropdown-btn">PREDAVANJA
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/predavanja/predavanja.html">SADRŽAJ</a>
+      <a href="/matematika1/predavanja/node3.html">OSNOVE</a>
+      <a href="/matematika1/predavanja/node22.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/predavanja/node47.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/predavanja/node67.html">FUNKCIJE</a>
+      <a href="/matematika1/predavanja/node98.html">DERIVACIJE</a>
+      <a href="/matematika1/predavanja/node125.html">NIZOVI I REDOVI</a>
+      <a href="/matematika1/predavanja/node144.html">INDEKS</a>
+    </div>
+  <button href="/matematika1/vjezbe" class="dropdown-btn">VJEŽBE
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/vjezbe/vjezbe.html">SADRŽAJ</a>
+      <a href="/matematika1/vjezbe/node2.html">OSNOVE</a>
+      <a href="/matematika1/vjezbe/node24.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/vjezbe/node55.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/vjezbe/node87.html">FUNKCIJE</a>
+      <a href="/matematika1/vjezbe/node110.html">DERIVACIJE</a>
+      <a href="/matematika1/vjezbe/node136.html">NIZOVI I REDOVI</a>
+    </div>
+  <button href="/matematika1/kviz" class="dropdown-btn">KVIZ
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/kviz/index.html">SADRŽAJ</a>
+      <a href="/matematika1/kviz/osnove/">OSNOVE</a>
+      <a href="/matematika1/kviz/algebra/">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/kviz/vektori/">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/kviz/funkcije/">FUNKCIJE</a>
+      <a href="/matematika1/kviz/derivacije/">DERIVACIJE</a>
+      <a href="/matematika1/kviz/nizovi/">NIZOVI I REDOVI</a>
+    </div>
+  <button href="/matematika1/podsjetnik" class="dropdown-btn">PODSJETNIK
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/podsjetnik/podsjetnik.html">SADRŽAJ</a>
+      <a href="/matematika1/podsjetnik/node1.html">OSNOVE</a>
+      <a href="/matematika1/podsjetnik/node2.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/podsjetnik/node3.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/podsjetnik/node4.html">FUNKCIJE</a>
+      <a href="/matematika1/podsjetnik/node5.html">DERIVACIJE</a>
+      <a href="/matematika1/podsjetnik/node6.html">NIZOVI I REDOVI</a>
+    </div>
+  <!--<a href="/matematika1/kviz">Kviz</a>-->
+  <a href="/matematika1/java">JAVA</a>
+  <a href="http://lavica.fesb.unist.hr/netplot"  class="menu2">NETPLOT</a>
+  <!-- <a href="/matematika1/gauss"  class="menu2">GAUSS</a> -->
+  <a href="http://lavica.fesb.unist.hr/octave/ool_hr.php"  class="menu2">OCTAVE</a>
+  <a href="/matematika1/search.html">Traži ...</a>
+</div>
+
+<span style="font-size:24px;font-family:'Open Sans', sans-serif;cursor:pointer;color:#ec971f"
+      onclick="openNav()">&#9776;</span> &nbsp; 
+<span style="font-size:30px;cursor:pointer;color:#888;font-family:'Opens Sans',sans-serif;"
+      onclick="window.location.assign('../index.html')">
+<font style="color:#C00">m</font>atematika<font style="color:#C00;vertical-align:super;margin-left:2px;font-size:24px;">1</font></span>
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "300px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+
+</script>     
+<hr>
+
+
+
+
+<arrow class=left> </arrow> <A NAME="tex2html359"
+  HREF="node7.html">Funkcije</A> &nbsp; &nbsp;
+<arrow class=up> </arrow> <A NAME="tex2html365"
+  HREF="node7.html">Funkcije</A> &nbsp; &nbsp;
+<arrow class=right> </arrow> <A NAME="tex2html367"
+  HREF="node9.html">Ekvipotencija i beskonačni skupovi</A>
+
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00331000000000000000"></A>
+<A NAME="sec:invf"></A>
+<BR>
+Teorem o inverznoj funkciji
+</H2>
+
+<P>
+Prvo ćemo definirati neke klase funkcija.
+
+<P>
+<div class="def"><P>
+<DIV><B>Definicija  1.11</B> &nbsp; <A NAME="o3.7"></A>Funkcija <IMG
+ WIDTH="89" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img174.gif"
+ ALT="$ f:X\to Y$">
+ je:
+
+<UL>
+<LI><EM>surjekcija</EM><A NAME="651"></A> 
+ili <EM>preslikavanje na</EM><A NAME="653"></A> ako je <IMG
+ WIDTH="66" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img191.gif"
+ ALT="$ R_f=Y$">
+;
+</LI>
+<LI><EM>injekcija</EM><A NAME="655"></A> ili 
+<EM>1-1 preslikavanje</EM><A NAME="657"></A> ako 
+ <!-- MATH
+ $f(x)=f(x')\Rightarrow x=x'$
+ -->
+<IMG
+ WIDTH="182" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img192.gif"
+ ALT="$ f(x)=f(x')\Rightarrow x=x'$">
+ za sve <!-- MATH
+ $x,x'\in D_f$
+ -->
+<IMG
+ WIDTH="85" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img193.gif"
+ ALT="$ x,x'\in D_f$">
+; 
+</LI>
+<LI><EM>bijekcija</EM><A NAME="659"></A> ili 
+<EM>obostrano jednoznačno 
+preslikavanje</EM><A NAME="661"></A> 
+ako je surjekcija i injekcija. 
+</LI>
+</UL></DIV><P></P>
+
+</div><p></p>
+<P>
+Jedan primjer bijekcije je <EM>identiteta</EM><A NAME="665"></A>, 
+odnosno funkcija
+<!-- MATH
+ $i_X:X\to X$
+ -->
+<IMG
+ WIDTH="100" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img194.gif"
+ ALT="$ i_X:X\to X$">
+ definirana s <IMG
+ WIDTH="83" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img195.gif"
+ ALT="$ i_X(x)=x$">
+ za svaki <IMG
+ WIDTH="53" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img93.gif"
+ ALT="$ x\in X$">
+. 
+
+<P>
+<div class="teo"><P>
+<DIV><B>Teorem  1.1</B> &nbsp; <A NAME="o3.8"></A>Funkcija <IMG
+ WIDTH="89" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img174.gif"
+ ALT="$ f:X\to Y$">
+, gdje je <IMG
+ WIDTH="69" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img196.gif"
+ ALT="$ X=D_{f}$">
+, je bijekcija ako i samo 
+ako postoji funkcija
+<IMG
+ WIDTH="88" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img197.gif"
+ ALT="$ g:Y\to X$">
+ takva da je <!-- MATH
+ $g\circ f=i_X$
+ -->
+<IMG
+ WIDTH="86" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img198.gif"
+ ALT="$ g\circ f=i_X$">
+ i <!-- MATH
+ $f\circ g=i_Y$
+ -->
+<IMG
+ WIDTH="85" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img199.gif"
+ ALT="$ f\circ g=i_Y$">
+, gdje su <IMG
+ WIDTH="25" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img200.gif"
+ ALT="$ i_X$">
+
+i <IMG
+ WIDTH="24" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img201.gif"
+ ALT="$ i_Y$">
+ odgovarajuće identitete. Funkcija <IMG
+ WIDTH="14" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img167.gif"
+ ALT="$ g$">
+ je jedinstvena, a zove
+se <EM>inverzna funkcija 
+funkcije <IMG
+ WIDTH="16" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img162.gif"
+ ALT="$ f$">
+</EM><A NAME="670"></A><A NAME="671"></A> 
+i označava s <IMG
+ WIDTH="35" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img202.gif"
+ ALT="$ f^{-1}$">
+. </DIV><P></P>
+
+</div><p></p><div class="dok"><B>Dokaz. </B></div><p></p>
+Potrebno je dokazati oba smjera tvrdnje teorema. 
+Neka je <IMG
+ WIDTH="16" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img162.gif"
+ ALT="$ f$">
+ bijekcija. Potrebno je konstruirati funkciju <IMG
+ WIDTH="14" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img167.gif"
+ ALT="$ g$">
+ s
+traženim svojstvima. Definicija <A HREF="#o3.7">1.11</A> povlači 
+<P><!-- MATH
+ \begin{displaymath}
+%
+(\forall y\in Y) (\exists! x\in X)\quad \textrm{takav da je}\quad y=f(x).
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="349" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img203.gif"
+ ALT="$\displaystyle %
+(\forall y\in Y) (\exists! x\in X)\quad \textrm{takav da je}\quad y=f(x).
+$">
+</DIV><P>
+</P> 
+Stoga možemo definirati funkciju <IMG
+ WIDTH="88" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img197.gif"
+ ALT="$ g:Y\to X$">
+ pravilom
+<P><!-- MATH
+ \begin{displaymath}
+%
+g(y)=x \quad \textrm{čim je} \quad y=f(x).
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="229" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img204.gif"
+ ALT="$\displaystyle %
+g(y)=x \quad \textrm{čim je} \quad y=f(x).
+$">
+</DIV><P>
+</P> 
+Za svaki <IMG
+ WIDTH="53" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img93.gif"
+ ALT="$ x\in X$">
+ vrijedi <!-- MATH
+ $g(f(x))=g(y)=x$
+ -->
+<IMG
+ WIDTH="154" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img205.gif"
+ ALT="$ g(f(x))=g(y)=x$">
+ pa je <!-- MATH
+ $g\circ f=i_X$
+ -->
+<IMG
+ WIDTH="86" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img198.gif"
+ ALT="$ g\circ f=i_X$">
+. 
+Slično, za svaki <IMG
+ WIDTH="51" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img94.gif"
+ ALT="$ y\in Y$">
+ vrijedi <!-- MATH
+ $f(g(y))=f(x)=y$
+ -->
+<IMG
+ WIDTH="155" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img206.gif"
+ ALT="$ f(g(y))=f(x)=y$">
+ pa je 
+<!-- MATH
+ $f\circ g=i_Y$
+ -->
+<IMG
+ WIDTH="85" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img199.gif"
+ ALT="$ f\circ g=i_Y$">
+ i prvi smjer je dokazan.
+
+<P>
+Dokažimo drugi smjer tvrdnje teorema. Neka postoji funkcija <IMG
+ WIDTH="14" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img167.gif"
+ ALT="$ g$">
+ s
+traženim svojstvima. Potrebno je pokazati da je <IMG
+ WIDTH="16" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img162.gif"
+ ALT="$ f$">
+ bijekcija.
+Odaberimo proizvoljni <IMG
+ WIDTH="51" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img94.gif"
+ ALT="$ y\in Y$">
+. Neka je <IMG
+ WIDTH="72" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img207.gif"
+ ALT="$ x=g(y)$">
+. Svojstva funkcije
+<IMG
+ WIDTH="14" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img167.gif"
+ ALT="$ g$">
+ povlače
+<P><!-- MATH
+ \begin{displaymath}
+%
+f(x)=f(g(y))=(f\circ g)(y)=i_Y(y)=y.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="324" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img208.gif"
+ ALT="$\displaystyle %
+f(x)=f(g(y))=(f\circ g)(y)=i_Y(y)=y.
+$">
+</DIV><P>
+</P> 
+Zaključujemo da je svaki element <IMG
+ WIDTH="51" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img94.gif"
+ ALT="$ y\in Y$">
+ slika nekog elementa
+<IMG
+ WIDTH="53" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img93.gif"
+ ALT="$ x\in X$">
+ pa je <IMG
+ WIDTH="16" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img162.gif"
+ ALT="$ f$">
+ surjekcija. Dokažimo da je <IMG
+ WIDTH="16" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img162.gif"
+ ALT="$ f$">
+ injekcija. 
+Zaista, ako je <!-- MATH
+ $f(x)=f(x')$
+ -->
+<IMG
+ WIDTH="104" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img209.gif"
+ ALT="$ f(x)=f(x')$">
+, tada je
+<P><!-- MATH
+ \begin{displaymath}
+%
+x=i_X(x)=g(f(x))=g(f(x'))=i_X(x')=x'.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="370" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img210.gif"
+ ALT="$\displaystyle %
+x=i_X(x)=g(f(x))=g(f(x'))=i_X(x')=x'.
+$">
+</DIV><P>
+</P> 
+Dakle, <IMG
+ WIDTH="16" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img162.gif"
+ ALT="$ f$">
+ je bijekcija te smo dokazali i drugi smjer tvrdnje
+teorema.
+
+<P>
+Na kraju dokažimo jedinstvenost funkcije <IMG
+ WIDTH="14" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img167.gif"
+ ALT="$ g$">
+. Pretpostavimo da postoje
+dvije funkcije s traženim svojstvima, <IMG
+ WIDTH="14" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img167.gif"
+ ALT="$ g$">
+ i <IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img211.gif"
+ ALT="$ g_1$">
+. Za svaki <IMG
+ WIDTH="51" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img94.gif"
+ ALT="$ y\in Y$">
+
+vrijedi
+<P><!-- MATH
+ \begin{displaymath}
+%
+g(y)=x=i_X(g(y))=(g_1\circ f)(g(y))=g_1(f(g(y)))=g_1(i_Y(y))=g_1(y)
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="564" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img212.gif"
+ ALT="$\displaystyle %
+g(y)=x=i_X(g(y))=(g_1\circ f)(g(y))=g_1(f(g(y)))=g_1(i_Y(y))=g_1(y)
+$">
+</DIV><P>
+</P> 
+pa je <IMG
+ WIDTH="55" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img213.gif"
+ ALT="$ g=g_1$">
+ prema definiciji <A HREF="node7.html#o3.2">1.8</A>.
+&nbsp;&nbsp;&nbsp;&nbsp;<div class="dok"><B>Q.E.D.</B>
+<BR></div><p></p>
+
+<P>
+<p><HR></p>
+<arrow class=left> </arrow> <A NAME="tex2html359"
+  HREF="node7.html">Funkcije</A> &nbsp; &nbsp;
+<arrow class=up> </arrow> <A NAME="tex2html365"
+  HREF="node7.html">Funkcije</A> &nbsp; &nbsp;
+<arrow class=right> </arrow> <A NAME="tex2html367"
+  HREF="node9.html">Ekvipotencija i beskonačni skupovi</A>  
+
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

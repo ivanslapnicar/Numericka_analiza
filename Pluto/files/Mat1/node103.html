@@ -1,0 +1,474 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2012 (1.2)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-2382574370068590",
+    enable_page_level_ads: true
+  });
+</script>
+<TITLE>Deriviranje implicitno zadane funkcije</TITLE>
+<META NAME="description" CONTENT="Deriviranje implicitno zadane funkcije">
+<META NAME="keywords" CONTENT="predavanja">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2012">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="predavanja.css">
+
+<LINK REL="next" HREF="node104.html">
+<LINK REL="previous" HREF="node102.html">
+<LINK REL="up" HREF="node99.html">
+<LINK REL="next" HREF="node104.html">
+</HEAD>
+
+<BODY >
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="shortcut icon" href="favicon.ico"/>
+
+<style>
+.sidenav {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 50px;
+}
+
+div.sidenav a {
+    padding: 8px 8px 8px 10px;
+    text-decoration: none;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    display: block;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dropdown-btn {
+    padding: 8px 8px 8px 8px;
+    text-decoration: none; 
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s;
+}
+
+
+.sidenav a:hover, .dropdown-btn:hover {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #C00;
+}
+
+.menu2 {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    font-style:italic;
+}
+
+.dropdown-container {
+  display: none;
+  font-family: 'Open Sans',sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #ddd;
+  padding-left: 8px;
+}
+
+.dropdown-container a:hover {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    background-color: #ccc;
+}
+
+.sidenav .active {
+    background-color: #C00;
+    color: white;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+hr { 
+    display: block;
+    margin-top: 0.2em;
+    margin-bottom: 0.4em;
+    margin-left: -5px;
+    margin-right: -5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color:#ec971f;
+} 
+  
+.caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 20px;
+    vertical-align: middle;
+    border-top: 5px dashed;
+        border-top-width: 5px;
+        border-top-style: dashed;
+        border-top-color: currentcolor;
+    border-right: 5px solid transparent;
+        border-right-width: 5px;
+        border-right-style: solid;
+        border-right-color: transparent;
+    border-left: 5px solid transparent;
+        border-left-width: 5px;
+        border-left-style: solid;
+        border-left-color: transparent;
+}
+
+</style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- First -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2382574370068590"
+     data-ad-slot="8207843721"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<script>
+   // alert('|ivan'+document.getElementById("mys-content").innerHTML+'|') 
+//    alert(typeof(window.CustomEvent))
+//    if(typeof(window.CustomEvent)=="undefined")
+// {
+//     document.display = 'none';
+// } 
+</script>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" 
+  onclick="closeNav()"
+  style="font-size:24px;cursor:pointer;color:#000;position: absolute; top: 0;
+    right: 10px; font-size: 24px; margin-left: 50px;">&nbsp; &times; &nbsp;</a>
+  <a href="/matematika1/index.html">HOME</a>
+  <button href="/matematika1/predavanja" class="dropdown-btn">PREDAVANJA
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/predavanja/predavanja.html">SADRŽAJ</a>
+      <a href="/matematika1/predavanja/node3.html">OSNOVE</a>
+      <a href="/matematika1/predavanja/node22.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/predavanja/node47.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/predavanja/node67.html">FUNKCIJE</a>
+      <a href="/matematika1/predavanja/node98.html">DERIVACIJE</a>
+      <a href="/matematika1/predavanja/node125.html">NIZOVI I REDOVI</a>
+      <a href="/matematika1/predavanja/node144.html">INDEKS</a>
+    </div>
+  <button href="/matematika1/vjezbe" class="dropdown-btn">VJEŽBE
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/vjezbe/vjezbe.html">SADRŽAJ</a>
+      <a href="/matematika1/vjezbe/node2.html">OSNOVE</a>
+      <a href="/matematika1/vjezbe/node24.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/vjezbe/node55.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/vjezbe/node87.html">FUNKCIJE</a>
+      <a href="/matematika1/vjezbe/node110.html">DERIVACIJE</a>
+      <a href="/matematika1/vjezbe/node136.html">NIZOVI I REDOVI</a>
+    </div>
+  <button href="/matematika1/kviz" class="dropdown-btn">KVIZ
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/kviz/index.html">SADRŽAJ</a>
+      <a href="/matematika1/kviz/osnove/">OSNOVE</a>
+      <a href="/matematika1/kviz/algebra/">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/kviz/vektori/">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/kviz/funkcije/">FUNKCIJE</a>
+      <a href="/matematika1/kviz/derivacije/">DERIVACIJE</a>
+      <a href="/matematika1/kviz/nizovi/">NIZOVI I REDOVI</a>
+    </div>
+  <button href="/matematika1/podsjetnik" class="dropdown-btn">PODSJETNIK
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/podsjetnik/podsjetnik.html">SADRŽAJ</a>
+      <a href="/matematika1/podsjetnik/node1.html">OSNOVE</a>
+      <a href="/matematika1/podsjetnik/node2.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/podsjetnik/node3.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/podsjetnik/node4.html">FUNKCIJE</a>
+      <a href="/matematika1/podsjetnik/node5.html">DERIVACIJE</a>
+      <a href="/matematika1/podsjetnik/node6.html">NIZOVI I REDOVI</a>
+    </div>
+  <!--<a href="/matematika1/kviz">Kviz</a>-->
+  <a href="/matematika1/java">JAVA</a>
+  <a href="http://lavica.fesb.unist.hr/netplot"  class="menu2">NETPLOT</a>
+  <!-- <a href="/matematika1/gauss"  class="menu2">GAUSS</a> -->
+  <a href="http://lavica.fesb.unist.hr/octave/ool_hr.php"  class="menu2">OCTAVE</a>
+  <a href="/matematika1/search.html">Traži ...</a>
+</div>
+
+<span style="font-size:24px;font-family:'Open Sans', sans-serif;cursor:pointer;color:#ec971f"
+      onclick="openNav()">&#9776;</span> &nbsp; 
+<span style="font-size:30px;cursor:pointer;color:#888;font-family:'Opens Sans',sans-serif;"
+      onclick="window.location.assign('../index.html')">
+<font style="color:#C00">m</font>atematika<font style="color:#C00;vertical-align:super;margin-left:2px;font-size:24px;">1</font></span>
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "300px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+
+</script>     
+<hr>
+
+
+
+
+<arrow class=left> </arrow> <A NAME="tex2html1432"
+  HREF="node102.html">Pravila deriviranja</A> &nbsp; &nbsp;
+<arrow class=up> </arrow> <A NAME="tex2html1438"
+  HREF="node99.html">Derivacija</A> &nbsp; &nbsp;
+<arrow class=right> </arrow> <A NAME="tex2html1440"
+  HREF="node104.html">Derivacije elementarnih funkcija</A>
+
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00714000000000000000"></A>
+<A NAME="sec:derimpl"></A><A NAME="18453"></A>
+<A NAME="18454"></A>
+<BR>
+Deriviranje implicitno zadane funkcije
+</H2>
+
+<P>
+Implicitno zadanu funkciju <IMG
+ WIDTH="94" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1353.gif"
+ ALT="$ F(x,y)=0$">
+ deriviramo  
+tako da izraze koji sadrže zavisnu varijablu <IMG
+ WIDTH="14" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img22.gif"
+ ALT="$ y$">
+ deriviramo koristeći 
+Teorem o deriviranju kompozicije <A HREF="node102.html#d2.11">5.4</A>.
+
+<P>
+Na primjer, želimo odrediti tangentu<A NAME="18456"></A> na 
+elipsu<A NAME="18457"></A>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{x^2}{4}+y^2=1
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="100" HEIGHT="63" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2018.gif"
+ ALT="$\displaystyle \frac{x^2}{4}+y^2=1
+$">
+</DIV><P>
+</P>
+u točki <IMG
+ WIDTH="48" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img404.gif"
+ ALT="$ x=1$">
+, <IMG
+ WIDTH="47" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2019.gif"
+ ALT="$ y&gt;0$">
+. Kako su lijeva i desna strana jednadžbe elipse
+jednake, jednake su im i derivacije. Pored toga, <IMG
+ WIDTH="22" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2020.gif"
+ ALT="$ y^2$">
+ deriviramo kao u
+primjeru <A HREF="node102.html#d2.12">5.6</A>. Dakle,
+<P><!-- MATH
+ \begin{displaymath}
+\frac{2x}{4}+2yy'=0,
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="121" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2021.gif"
+ ALT="$\displaystyle \frac{2x}{4}+2yy'=0,
+$">
+</DIV><P>
+</P>
+odnosno
+<P><!-- MATH
+ \begin{displaymath}
+y'=-\frac{x}{4y}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="85" HEIGHT="49" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2022.gif"
+ ALT="$\displaystyle y'=-\frac{x}{4y}.
+$">
+</DIV><P>
+</P>
+Vidimo da smo dobili izraz za derivaciju <IMG
+ WIDTH="19" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2023.gif"
+ ALT="$ y'$">
+ kao funkciju od <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img21.gif"
+ ALT="$ x$">
+ i
+<IMG
+ WIDTH="14" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img22.gif"
+ ALT="$ y$">
+. Za točku u kojoj tražimo jednadžbu tangente vrijedi
+<P><!-- MATH
+ \begin{displaymath}
+y(1)=+ \sqrt{1-\frac{1^2}{4}}=\frac{\sqrt{3}}{2}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="198" HEIGHT="70" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2024.gif"
+ ALT="$\displaystyle y(1)=+ \sqrt{1-\frac{1^2}{4}}=\frac{\sqrt{3}}{2}
+$">
+</DIV><P>
+</P>
+(pozitivnu vrijednost korijena smo uzeli zbog uvjeta <IMG
+ WIDTH="47" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2019.gif"
+ ALT="$ y&gt;0$">
+) pa je
+koeficijent smjera tangente dan s
+<P><!-- MATH
+ \begin{displaymath}
+y'(1)=-\frac{1}{2\sqrt{3}}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="123" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2025.gif"
+ ALT="$\displaystyle y'(1)=-\frac{1}{2\sqrt{3}}.
+$">
+</DIV><P>
+</P>
+Uvrštavanje u formulu (<A HREF="node100.html#d2.5a">5.2</A>) nakon sređivanja 
+daje jednadžbu tražene tangente,
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="d:tanel"></A><!-- MATH
+ \begin{equation}
+y=-\frac{1}{2\sqrt{3}}x+\frac{2}{\sqrt{3}}.
+\end{equation}
+ -->
+<TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><IMG
+ WIDTH="155" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2026.gif"
+ ALT="$\displaystyle y=-\frac{1}{2\sqrt{3}}x+\frac{2}{\sqrt{3}}.$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+(5.3)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Zadana elipsa i njena tangenta prikazane su na slici <A HREF="#fig:d3">5.3</A>.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:d3"></A><A NAME="18483"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Slika 5.3:</STRONG>
+Elipsa i tangenta</CAPTION>
+<TR><TD><IMG
+ WIDTH="297" HEIGHT="208" BORDER="0"
+ SRC="img2027.gif"
+ ALT="\begin{figure}\begin{center}
+\epsfig{file=slike/eltan.eps,width=8.4cm}
+\end{center}\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+<p><HR></p>
+<arrow class=left> </arrow> <A NAME="tex2html1432"
+  HREF="node102.html">Pravila deriviranja</A> &nbsp; &nbsp;
+<arrow class=up> </arrow> <A NAME="tex2html1438"
+  HREF="node99.html">Derivacija</A> &nbsp; &nbsp;
+<arrow class=right> </arrow> <A NAME="tex2html1440"
+  HREF="node104.html">Derivacije elementarnih funkcija</A>  
+
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

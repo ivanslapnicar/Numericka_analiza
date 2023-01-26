@@ -1,0 +1,667 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2012 (1.2)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-2382574370068590",
+    enable_page_level_ads: true
+  });
+</script>
+<TITLE>Svojstva determinanti</TITLE>
+<META NAME="description" CONTENT="Svojstva determinanti">
+<META NAME="keywords" CONTENT="predavanja">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2012">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="predavanja.css">
+
+<LINK REL="next" HREF="node42.html">
+<LINK REL="previous" HREF="node40.html">
+<LINK REL="up" HREF="node40.html">
+<LINK REL="next" HREF="node42.html">
+</HEAD>
+
+<BODY >
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="shortcut icon" href="favicon.ico"/>
+
+<style>
+.sidenav {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 50px;
+}
+
+div.sidenav a {
+    padding: 8px 8px 8px 10px;
+    text-decoration: none;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    display: block;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dropdown-btn {
+    padding: 8px 8px 8px 8px;
+    text-decoration: none; 
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s;
+}
+
+
+.sidenav a:hover, .dropdown-btn:hover {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #C00;
+}
+
+.menu2 {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    font-style:italic;
+}
+
+.dropdown-container {
+  display: none;
+  font-family: 'Open Sans',sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #ddd;
+  padding-left: 8px;
+}
+
+.dropdown-container a:hover {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    background-color: #ccc;
+}
+
+.sidenav .active {
+    background-color: #C00;
+    color: white;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+hr { 
+    display: block;
+    margin-top: 0.2em;
+    margin-bottom: 0.4em;
+    margin-left: -5px;
+    margin-right: -5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color:#ec971f;
+} 
+  
+.caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 20px;
+    vertical-align: middle;
+    border-top: 5px dashed;
+        border-top-width: 5px;
+        border-top-style: dashed;
+        border-top-color: currentcolor;
+    border-right: 5px solid transparent;
+        border-right-width: 5px;
+        border-right-style: solid;
+        border-right-color: transparent;
+    border-left: 5px solid transparent;
+        border-left-width: 5px;
+        border-left-style: solid;
+        border-left-color: transparent;
+}
+
+</style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- First -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2382574370068590"
+     data-ad-slot="8207843721"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<script>
+   // alert('|ivan'+document.getElementById("mys-content").innerHTML+'|') 
+//    alert(typeof(window.CustomEvent))
+//    if(typeof(window.CustomEvent)=="undefined")
+// {
+//     document.display = 'none';
+// } 
+</script>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" 
+  onclick="closeNav()"
+  style="font-size:24px;cursor:pointer;color:#000;position: absolute; top: 0;
+    right: 10px; font-size: 24px; margin-left: 50px;">&nbsp; &times; &nbsp;</a>
+  <a href="/matematika1/index.html">HOME</a>
+  <button href="/matematika1/predavanja" class="dropdown-btn">PREDAVANJA
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/predavanja/predavanja.html">SADRŽAJ</a>
+      <a href="/matematika1/predavanja/node3.html">OSNOVE</a>
+      <a href="/matematika1/predavanja/node22.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/predavanja/node47.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/predavanja/node67.html">FUNKCIJE</a>
+      <a href="/matematika1/predavanja/node98.html">DERIVACIJE</a>
+      <a href="/matematika1/predavanja/node125.html">NIZOVI I REDOVI</a>
+      <a href="/matematika1/predavanja/node144.html">INDEKS</a>
+    </div>
+  <button href="/matematika1/vjezbe" class="dropdown-btn">VJEŽBE
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/vjezbe/vjezbe.html">SADRŽAJ</a>
+      <a href="/matematika1/vjezbe/node2.html">OSNOVE</a>
+      <a href="/matematika1/vjezbe/node24.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/vjezbe/node55.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/vjezbe/node87.html">FUNKCIJE</a>
+      <a href="/matematika1/vjezbe/node110.html">DERIVACIJE</a>
+      <a href="/matematika1/vjezbe/node136.html">NIZOVI I REDOVI</a>
+    </div>
+  <button href="/matematika1/kviz" class="dropdown-btn">KVIZ
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/kviz/index.html">SADRŽAJ</a>
+      <a href="/matematika1/kviz/osnove/">OSNOVE</a>
+      <a href="/matematika1/kviz/algebra/">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/kviz/vektori/">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/kviz/funkcije/">FUNKCIJE</a>
+      <a href="/matematika1/kviz/derivacije/">DERIVACIJE</a>
+      <a href="/matematika1/kviz/nizovi/">NIZOVI I REDOVI</a>
+    </div>
+  <button href="/matematika1/podsjetnik" class="dropdown-btn">PODSJETNIK
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/podsjetnik/podsjetnik.html">SADRŽAJ</a>
+      <a href="/matematika1/podsjetnik/node1.html">OSNOVE</a>
+      <a href="/matematika1/podsjetnik/node2.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/podsjetnik/node3.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/podsjetnik/node4.html">FUNKCIJE</a>
+      <a href="/matematika1/podsjetnik/node5.html">DERIVACIJE</a>
+      <a href="/matematika1/podsjetnik/node6.html">NIZOVI I REDOVI</a>
+    </div>
+  <!--<a href="/matematika1/kviz">Kviz</a>-->
+  <a href="/matematika1/java">JAVA</a>
+  <a href="http://lavica.fesb.unist.hr/netplot"  class="menu2">NETPLOT</a>
+  <!-- <a href="/matematika1/gauss"  class="menu2">GAUSS</a> -->
+  <a href="http://lavica.fesb.unist.hr/octave/ool_hr.php"  class="menu2">OCTAVE</a>
+  <a href="/matematika1/search.html">Traži ...</a>
+</div>
+
+<span style="font-size:24px;font-family:'Open Sans', sans-serif;cursor:pointer;color:#ec971f"
+      onclick="openNav()">&#9776;</span> &nbsp; 
+<span style="font-size:30px;cursor:pointer;color:#888;font-family:'Opens Sans',sans-serif;"
+      onclick="window.location.assign('../index.html')">
+<font style="color:#C00">m</font>atematika<font style="color:#C00;vertical-align:super;margin-left:2px;font-size:24px;">1</font></span>
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "300px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+
+</script>     
+<hr>
+
+
+
+
+<arrow class=left> </arrow> <A NAME="tex2html720"
+  HREF="node40.html">Determinante</A> &nbsp; &nbsp;
+<arrow class=up> </arrow> <A NAME="tex2html726"
+  HREF="node40.html">Determinante</A> &nbsp; &nbsp;
+<arrow class=right> </arrow> <A NAME="tex2html728"
+  HREF="node42.html">Podmatrice i poddeterminante</A>
+
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00491000000000000000"></A>
+<A NAME="sec:svojstva"></A>
+<BR>
+Svojstva determinanti
+</H2>
+
+<P>
+Navodimo najvažnija svojstva determinanti.
+<A NAME="6789"></A> Dokazi nekih tvrdnji dani su u obliku
+uputa ili naznaka ili u vrlo sažetom obliku.
+<DL COMPACT>
+<DT>D1.</DT>
+<DD><EM>Determinanta <A HREF="node31.html#sec:trok">trokutaste matrice</A> 
+jednaka je produktu elemenata na dijagonali.</EM> 
+
+<P>
+Ako je <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img27.gif"
+ ALT="$ A$">
+ recimo gornje trokutasta matrica,  tada svi
+umnošci u (<A HREF="node40.html#eq:1.37">2.8</A>),
+osim <!-- MATH
+ $a_{11}a_{22}\cdots a_{nn}$
+ -->
+<IMG
+ WIDTH="110" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img858.gif"
+ ALT="$ a_{11}a_{22}\cdots a_{nn}$">
+, imaju barem jedan element iz
+donjeg trokuta pa su jednaki nula. Na primjer, za 
+<A HREF="node27.html#sec:nul">jediničnu matricu</A> vrijedi
+<P><!-- MATH
+ \begin{displaymath}
+%
+\det(I)=1.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="91" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img859.gif"
+ ALT="$\displaystyle %
+\det(I)=1.
+$">
+</DIV><P>
+</P> 
+
+<P>
+</DD>
+<DT>D2.</DT>
+<DD><!-- MATH
+ $\det(A)=\det(A^T)$
+ -->
+<IMG
+ WIDTH="145" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img860.gif"
+ ALT="$ \det(A)=\det(A^T)$">
+.
+
+<P>
+Jednakost vrijedi zbog formula (<A HREF="node40.html#eq:1.37">2.8</A>) i (<A HREF="node40.html#eq:1.39">2.9</A>).
+Iz ovog svojstva zaključujemo da sva svojstva koja ćemo navesti za
+retke vrijede i za stupce.
+</DD>
+<DT>D3.</DT>
+<DD><EM>Zamjenom dvaju stupaca determinanta mijenja predznak.</EM>
+
+<P>
+Zamjenom dvaju stupaca u svakom umnošku u formuli
+(<A HREF="node40.html#eq:1.37">2.8</A>) dolazi do zamjene dvaju elemenata u permutaciji drugih
+indeksa pa se po teoremu <A HREF="node40.html#tm:1.34">2.7</A> u svakom umnošku 
+parnost permutacije promijeni.
+</DD>
+<DT>D4.</DT>
+<DD><EM>Determinanta matrice s dva jednaka stupca je nula.</EM>
+
+<P>
+Svojstvo slijedi stoga što po svojstvu D3 zamjenom dvaju redaka
+determinanta mijenja predznak, a kako smo zamijenili iste retke
+determinanta se ne mijenja. Koji broj jedini ostaje isti kada
+promijeni predznak?
+</DD>
+<DT>D5.</DT>
+<DD><EM>Determinanta je multilinearna funkcija svojih stupaca, odnosno</EM>
+<P><!-- MATH
+ \begin{displaymath}
+%
+\begin{vmatrix} \cdots& \beta\mathbf{b}+\gamma\mathbf{c} & \cdots
+\end{vmatrix}
+= \beta 
+\begin{vmatrix} \cdots& \mathbf{b}& \cdots
+\end{vmatrix}+
+\gamma
+\begin{vmatrix} \cdots& \mathbf{c} & \cdots
+\end{vmatrix}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="450" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img861.gif"
+ ALT="$\displaystyle %
+\begin{vmatrix}\cdots&amp; \beta\mathbf{b}+\gamma\mathbf{c} &amp; \cdot...
+...end{vmatrix}+
+\gamma
+\begin{vmatrix}\cdots&amp; \mathbf{c} &amp; \cdots
+\end{vmatrix}.
+$">
+</DIV><P>
+</P> 
+Ovo svojstvo slijedi direktno iz formule (<A HREF="node40.html#eq:1.37">2.8</A>).
+Posebno zaključujemo da za matricu <IMG
+ WIDTH="27" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img862.gif"
+ ALT="$ A_1$">
+ koja se dobije tako što
+se svi elementi nekog stupca matrice <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img27.gif"
+ ALT="$ A$">
+ pomnože brojem <IMG
+ WIDTH="17" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img863.gif"
+ ALT="$ \alpha$">
+
+vrijedi 
+<P><!-- MATH
+ \begin{displaymath}
+%
+\det(A_1)=\alpha \det(A).
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="162" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img864.gif"
+ ALT="$\displaystyle %
+\det(A_1)=\alpha \det(A).
+$">
+</DIV><P>
+</P> 
+Također, ako matrica <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img27.gif"
+ ALT="$ A$">
+ ima nul-stupac, tada je <IMG
+ WIDTH="91" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img865.gif"
+ ALT="$ \det(A)=0$">
+.
+</DD>
+<DT>D6.</DT>
+<DD><EM>Determinanta se ne mijenja ako jednom stupcu pribrojimo neki
+  drugi stupac pomnožen nekim brojem.</EM>
+
+<P>
+Po svojstvu D5 vrijedi
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER"><!-- MATH
+ \begin{equation*}
+\begin{split}
+\begin{vmatrix} \cdots& \mathbf{a}+\beta\mathbf{b} & \cdots&\mathbf{b}&\cdots
+\end{vmatrix}
+=&
+\begin{vmatrix} \cdots& \mathbf{a}& \cdots&\mathbf{b}&\cdots
+\end{vmatrix}\\&+
+\beta
+\begin{vmatrix} \cdots& \mathbf{b} & \cdots&\mathbf{b}&\cdots
+\end{vmatrix},
+\end{split}
+\end{equation*}
+ -->
+<TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><IMG
+ WIDTH="455" HEIGHT="59" BORDER="0"
+ SRC="img866.gif"
+ ALT="\begin{displaymath}\begin{split}\begin{vmatrix}\cdots&amp; \mathbf{a}+\beta\mathbf{b...
+...mathbf{b} &amp; \cdots&amp;\mathbf{b}&amp;\cdots \end{vmatrix}, \end{split}\end{displaymath}"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+a po svojstvu D4 je druga determinanta na desnoj strani jednaka nula.
+
+<P>
+</DD>
+<DT>D7.</DT>
+<DD><EM>Za matrice <!-- MATH
+ $A, B\in\mathcal{M}_n$
+ -->
+<IMG
+ WIDTH="94" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img867.gif"
+ ALT="$ A, B\in\mathcal{M}_n$">
+ vrijedi</EM>
+<P><!-- MATH
+ \begin{displaymath}
+%
+\det(AB)=\det(A)\det(B).
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="210" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img868.gif"
+ ALT="$\displaystyle %
+\det(AB)=\det(A)\det(B).
+$">
+</DIV><P>
+</P> 
+
+<P>
+Na primjer, za regularnu matricu <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img27.gif"
+ ALT="$ A$">
+
+<P><!-- MATH
+ \begin{displaymath}
+%
+\det(AA^{-1})=\det(A)\det(A^{-1})=\det(I)=1
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="347" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img869.gif"
+ ALT="$\displaystyle %
+\det(AA^{-1})=\det(A)\det(A^{-1})=\det(I)=1
+$">
+</DIV><P>
+</P> 
+povlači
+<P><!-- MATH
+ \begin{displaymath}
+%
+\det(A^{-1})=\frac{1}{\det(A)}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="162" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img870.gif"
+ ALT="$\displaystyle %
+\det(A^{-1})=\frac{1}{\det(A)}.
+$">
+</DIV><P>
+</P> 
+</DD>
+<DT>D8.</DT>
+<DD><EM>Determinanta je različita od nule ako i samo ako su stupci
+    matrice <A HREF="node36.html#sec:zav">linearno nezavisni</A>, 
+    odnosno ako je matrica <A HREF="node39.html#sec:inverz">regularna</A>.</EM>
+
+<P>
+Ako je <!-- MATH
+ $\mathop{\mathrm{rang}}\nolimits (A)<n$
+ -->
+<IMG
+ WIDTH="102" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img774.gif"
+ ALT="$ \mathop{\mathrm{rang}}\nolimits (A)&lt;n$">
+, tada je jedan od stupaca linearna
+kombinacija ostalih pa ga, koristeći operacije iz svojstva D6, možemo
+poništiti. Tada je <IMG
+ WIDTH="91" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img865.gif"
+ ALT="$ \det(A)=0$">
+ po svojstvu D5.
+
+<P>
+Obratno, ako je <IMG
+ WIDTH="91" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img865.gif"
+ ALT="$ \det(A)=0$">
+, tada matrica <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img27.gif"
+ ALT="$ A$">
+ mora biti singularna,
+odnosno <!-- MATH
+ $\mathop{\mathrm{rang}}\nolimits (A)<n$
+ -->
+<IMG
+ WIDTH="102" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img774.gif"
+ ALT="$ \mathop{\mathrm{rang}}\nolimits (A)&lt;n$">
+, jer bi u protivnom <!-- MATH
+ $\det(A)\det(A^{-1})=1$
+ -->
+<IMG
+ WIDTH="165" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img871.gif"
+ ALT="$ \det(A)\det(A^{-1})=1$">
+
+povlačilo <!-- MATH
+ $\det(A)\neq 0$
+ -->
+<IMG
+ WIDTH="91" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img872.gif"
+ ALT="$ \det(A)\neq 0$">
+.
+</DD>
+</DL>
+<div class="nap"><P>
+<DIV><B>Napomena  2.3</B> &nbsp; <A NAME="n1.41"></A>Koristeći svojstva 
+D3, D5 i D6 lako možemo pratiti kako se determinanta mijenja kada
+vršimo <A HREF="node32.html#sec:gauss">elementarne transformacije</A> na matrici -
+determinanta ili promijeni predznak ili se uveća za neki faktor ili
+ostane ista. Nakon što Gaussovom eliminacijom dobijemo trokutasti
+oblik, determinantu lako izračunamo po svojstvu D1.
+Napose, ako koristimo samo matrice transformacije <IMG
+ WIDTH="28" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img764.gif"
+ ALT="$ M_i$">
+ opisane u
+poglavlju <A HREF="node32.html#sec:gauss">2.4</A>, čija je determinanta jednaka jedan, tada je 
+determinanta polazne matrice jednaka determinanti trokutaste matrice.</DIV><P></P>
+
+</div><p></p>
+<P>
+<div class="zad"><P>
+<DIV><B>Zadatak  2.10</B> &nbsp; Izračunajte
+<P><!-- MATH
+ \begin{displaymath}
+%
+\begin{vmatrix}
+  1&-2&1\\2&1&-2\\-1&-1&0
+\end{vmatrix}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="122" HEIGHT="83" ALIGN="MIDDLE" BORDER="0"
+ SRC="img873.gif"
+ ALT="$\displaystyle %
+\begin{vmatrix}
+1&amp;-2&amp;1\\ 2&amp;1&amp;-2\\ -1&amp;-1&amp;0
+\end{vmatrix}$">
+</DIV><P>
+</P> 
+pomoću formule (<A HREF="node40.html#eq:1.38">2.9</A>) i pomoću Gaussove eliminacije
+(vidi primjer <A HREF="node33.html#p1.6">2.1</A>).</DIV><P></P>
+
+</div><p></p>
+<P>
+<p><HR></p>
+<arrow class=left> </arrow> <A NAME="tex2html720"
+  HREF="node40.html">Determinante</A> &nbsp; &nbsp;
+<arrow class=up> </arrow> <A NAME="tex2html726"
+  HREF="node40.html">Determinante</A> &nbsp; &nbsp;
+<arrow class=right> </arrow> <A NAME="tex2html728"
+  HREF="node42.html">Podmatrice i poddeterminante</A>  
+
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

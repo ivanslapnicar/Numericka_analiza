@@ -1,0 +1,937 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2012 (1.2)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-2382574370068590",
+    enable_page_level_ads: true
+  });
+</script>
+<TITLE>Pravila deriviranja</TITLE>
+<META NAME="description" CONTENT="Pravila deriviranja">
+<META NAME="keywords" CONTENT="predavanja">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2012">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="predavanja.css">
+
+<LINK REL="next" HREF="node103.html">
+<LINK REL="previous" HREF="node101.html">
+<LINK REL="up" HREF="node99.html">
+<LINK REL="next" HREF="node103.html">
+</HEAD>
+
+<BODY >
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="shortcut icon" href="favicon.ico"/>
+
+<style>
+.sidenav {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 50px;
+}
+
+div.sidenav a {
+    padding: 8px 8px 8px 10px;
+    text-decoration: none;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    display: block;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dropdown-btn {
+    padding: 8px 8px 8px 8px;
+    text-decoration: none; 
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s;
+}
+
+
+.sidenav a:hover, .dropdown-btn:hover {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #C00;
+}
+
+.menu2 {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    font-style:italic;
+}
+
+.dropdown-container {
+  display: none;
+  font-family: 'Open Sans',sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #ddd;
+  padding-left: 8px;
+}
+
+.dropdown-container a:hover {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    background-color: #ccc;
+}
+
+.sidenav .active {
+    background-color: #C00;
+    color: white;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+hr { 
+    display: block;
+    margin-top: 0.2em;
+    margin-bottom: 0.4em;
+    margin-left: -5px;
+    margin-right: -5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color:#ec971f;
+} 
+  
+.caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 20px;
+    vertical-align: middle;
+    border-top: 5px dashed;
+        border-top-width: 5px;
+        border-top-style: dashed;
+        border-top-color: currentcolor;
+    border-right: 5px solid transparent;
+        border-right-width: 5px;
+        border-right-style: solid;
+        border-right-color: transparent;
+    border-left: 5px solid transparent;
+        border-left-width: 5px;
+        border-left-style: solid;
+        border-left-color: transparent;
+}
+
+</style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- First -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2382574370068590"
+     data-ad-slot="8207843721"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<script>
+   // alert('|ivan'+document.getElementById("mys-content").innerHTML+'|') 
+//    alert(typeof(window.CustomEvent))
+//    if(typeof(window.CustomEvent)=="undefined")
+// {
+//     document.display = 'none';
+// } 
+</script>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" 
+  onclick="closeNav()"
+  style="font-size:24px;cursor:pointer;color:#000;position: absolute; top: 0;
+    right: 10px; font-size: 24px; margin-left: 50px;">&nbsp; &times; &nbsp;</a>
+  <a href="/matematika1/index.html">HOME</a>
+  <button href="/matematika1/predavanja" class="dropdown-btn">PREDAVANJA
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/predavanja/predavanja.html">SADRŽAJ</a>
+      <a href="/matematika1/predavanja/node3.html">OSNOVE</a>
+      <a href="/matematika1/predavanja/node22.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/predavanja/node47.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/predavanja/node67.html">FUNKCIJE</a>
+      <a href="/matematika1/predavanja/node98.html">DERIVACIJE</a>
+      <a href="/matematika1/predavanja/node125.html">NIZOVI I REDOVI</a>
+      <a href="/matematika1/predavanja/node144.html">INDEKS</a>
+    </div>
+  <button href="/matematika1/vjezbe" class="dropdown-btn">VJEŽBE
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/vjezbe/vjezbe.html">SADRŽAJ</a>
+      <a href="/matematika1/vjezbe/node2.html">OSNOVE</a>
+      <a href="/matematika1/vjezbe/node24.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/vjezbe/node55.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/vjezbe/node87.html">FUNKCIJE</a>
+      <a href="/matematika1/vjezbe/node110.html">DERIVACIJE</a>
+      <a href="/matematika1/vjezbe/node136.html">NIZOVI I REDOVI</a>
+    </div>
+  <button href="/matematika1/kviz" class="dropdown-btn">KVIZ
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/kviz/index.html">SADRŽAJ</a>
+      <a href="/matematika1/kviz/osnove/">OSNOVE</a>
+      <a href="/matematika1/kviz/algebra/">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/kviz/vektori/">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/kviz/funkcije/">FUNKCIJE</a>
+      <a href="/matematika1/kviz/derivacije/">DERIVACIJE</a>
+      <a href="/matematika1/kviz/nizovi/">NIZOVI I REDOVI</a>
+    </div>
+  <button href="/matematika1/podsjetnik" class="dropdown-btn">PODSJETNIK
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/podsjetnik/podsjetnik.html">SADRŽAJ</a>
+      <a href="/matematika1/podsjetnik/node1.html">OSNOVE</a>
+      <a href="/matematika1/podsjetnik/node2.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/podsjetnik/node3.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/podsjetnik/node4.html">FUNKCIJE</a>
+      <a href="/matematika1/podsjetnik/node5.html">DERIVACIJE</a>
+      <a href="/matematika1/podsjetnik/node6.html">NIZOVI I REDOVI</a>
+    </div>
+  <!--<a href="/matematika1/kviz">Kviz</a>-->
+  <a href="/matematika1/java">JAVA</a>
+  <a href="http://lavica.fesb.unist.hr/netplot"  class="menu2">NETPLOT</a>
+  <!-- <a href="/matematika1/gauss"  class="menu2">GAUSS</a> -->
+  <a href="http://lavica.fesb.unist.hr/octave/ool_hr.php"  class="menu2">OCTAVE</a>
+  <a href="/matematika1/search.html">Traži ...</a>
+</div>
+
+<span style="font-size:24px;font-family:'Open Sans', sans-serif;cursor:pointer;color:#ec971f"
+      onclick="openNav()">&#9776;</span> &nbsp; 
+<span style="font-size:30px;cursor:pointer;color:#888;font-family:'Opens Sans',sans-serif;"
+      onclick="window.location.assign('../index.html')">
+<font style="color:#C00">m</font>atematika<font style="color:#C00;vertical-align:super;margin-left:2px;font-size:24px;">1</font></span>
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "300px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+
+</script>     
+<hr>
+
+
+
+
+<arrow class=left> </arrow> <A NAME="tex2html1422"
+  HREF="node101.html">Derivacije slijeva i zdesna</A> &nbsp; &nbsp;
+<arrow class=up> </arrow> <A NAME="tex2html1428"
+  HREF="node99.html">Derivacija</A> &nbsp; &nbsp;
+<arrow class=right> </arrow> <A NAME="tex2html1430"
+  HREF="node103.html">Deriviranje implicitno zadane funkcije</A>
+
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00713000000000000000"></A>
+<A NAME="sec:pravder"></A>
+<BR>
+Pravila deriviranja
+</H2>
+
+<P>
+Pravila koja ćemo dati u ovom poglavlju znatno olakšavaju 
+računanje derivacija<A NAME="18307"></A> zadanih funkcija.
+
+<P>
+<div class="teo"><P>
+<DIV><B>Teorem  5.2</B> &nbsp; <A NAME="d2.9"></A>Ako su  funkcije <!-- MATH
+ $f,g:\mathcal{D}\to \mathbb{R}$
+ -->
+<IMG
+ WIDTH="102" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1973.gif"
+ ALT="$ f,g:\mathcal{D}\to \mathbb{R}$">
+ derivabilne na skupu 
+<!-- MATH
+ $\mathcal{A}\subseteq\mathcal{D}$
+ -->
+<IMG
+ WIDTH="58" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1413.gif"
+ ALT="$ \mathcal{A}\subseteq \mathcal{D}$">
+, tada za svaki <!-- MATH
+ $x\in\mathcal{A}$
+ -->
+<IMG
+ WIDTH="52" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1539.gif"
+ ALT="$ x\in\mathcal{A}$">
+ vrijedi
+<P></P>
+<DIV ALIGN="CENTER"><TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="90" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1974.gif"
+ ALT="$\displaystyle (f+g)'(x)$"></TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="130" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1975.gif"
+ ALT="$\displaystyle =f'(x)+g'(x),$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="90" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1976.gif"
+ ALT="$\displaystyle (f-g)'(x)$"></TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="130" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1977.gif"
+ ALT="$\displaystyle =f'(x)-g'(x),$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="81" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1978.gif"
+ ALT="$\displaystyle (f\cdot g)'(x)$"></TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="198" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1979.gif"
+ ALT="$\displaystyle =f'(x)g(x)+f(x)g'(x),$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="76" HEIGHT="66" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1980.gif"
+ ALT="$\displaystyle \bigg(\frac{f}{g}\bigg)'(x)$"></TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="313" HEIGHT="61" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1981.gif"
+ ALT="$\displaystyle =\frac{f'(x)g(x)-f(x)g'(x)}{g^2(x)},\qquad g(x)\neq 0.$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P></DIV><P></P>
+
+</div><p></p><div class="dok"><B>Dokaz. </B></div><p></p>
+Dokažimo zadnju tvrdnju teorema. Prema formuli (<A HREF="node99.html#d2.3">5.1</A>)
+vrijedi
+<P></P>
+<DIV ALIGN="CENTER"><TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="76" HEIGHT="66" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1980.gif"
+ ALT="$\displaystyle \bigg(\frac{f}{g}\bigg)'(x)$"></TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="516" HEIGHT="78" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1982.gif"
+ ALT="$\displaystyle =\lim_{\Delta x\to 0} \frac{ \frac{f(x+\Delta x)}{g(x+\Delta x)} ...
+...a x\to 0}\frac{f(x+\Delta x)g(x)-f(x)g(x+\Delta x)} {g(x+\Delta x)g(x)\Delta x}$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="507" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1983.gif"
+ ALT="$\displaystyle =\lim_{\Delta x\to 0}\frac{f(x+\Delta x)g(x) -f(x)g(x)+f(x)g(x) -f(x)g(x+\Delta x)} {g(x+\Delta x)g(x)\Delta x}$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="366" HEIGHT="72" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1984.gif"
+ ALT="$\displaystyle =\lim_{\Delta x\to 0}\frac{ \frac{f(x+\Delta x)-f(x)}{\Delta x} g(x) - f(x) \frac{g(x+\Delta x)-g(x)}{\Delta x} } {g(x+\Delta x)g(x)}$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="462" HEIGHT="72" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1985.gif"
+ ALT="$\displaystyle = \frac{\lim_{\Delta x\to 0} \frac{f(x+\Delta x)-f(x)}{\Delta x} ...
+... \frac{g(x+\Delta x)-g(x)}{\Delta x} } {\lim_{\Delta x\to 0} g(x+\Delta x)g(x)}$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="202" HEIGHT="61" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1986.gif"
+ ALT="$\displaystyle =\frac{f'(x)g(x)-f(x)g'(x)}{g^2(x)},$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+što je i trebalo dokazati.
+Dokaz prve tri tvrdnje ostavljamo za vježbu.
+&nbsp;&nbsp;&nbsp;&nbsp;<div class="dok"><B>Q.E.D.</B>
+<BR></div><p></p>
+
+<P>
+<div class="pri"><P>
+<DIV><B>Primjer  5.4</B> &nbsp; <A NAME="d2.9a"></A>  <DL COMPACT>
+<DT>a)</DT>
+<DD>Treća tvrdnja teorema <A HREF="#d2.9">5.2</A> i primjer <A HREF="node99.html#d2.4">5.1</A> povlače
+<P><!-- MATH
+ \begin{displaymath}
+(x^3)'=(x^2\cdot x)'=(x^2)'\cdot x+ x^2\cdot (x)'= 2x\cdot x+ x^2\cdot
+1= 3x^2.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="479" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1987.gif"
+ ALT="$\displaystyle (x^3)'=(x^2\cdot x)'=(x^2)'\cdot x+ x^2\cdot (x)'= 2x\cdot x+ x^2\cdot
+1= 3x^2.
+$">
+</DIV><P>
+</P> 
+</DD>
+<DT>b)</DT>
+<DD>Četvrta tvrdnja teorema <A HREF="#d2.9">5.2</A> i primjer <A HREF="node99.html#d2.4">5.1</A>
+  povlače
+<P></P>
+<DIV ALIGN="CENTER"><TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="53" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1988.gif"
+ ALT="$\displaystyle (\mathop{\mathrm{tg}}\nolimits x)'$"></TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="496" HEIGHT="66" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1989.gif"
+ ALT="$\displaystyle =\bigg(\frac{\sin x}{\cos x}\bigg)' = \frac{(\sin x)'\cdot \cos x-\sin x\cdot(\cos x)'}{\cos^2 x} =\frac{\cos^2 x + \sin^2 x}{\cos^2 x}$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="79" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1990.gif"
+ ALT="$\displaystyle = \frac{1}{\cos^2 x},$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="61" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1991.gif"
+ ALT="$\displaystyle (\mathop{\mathrm{ctg}}\nolimits x)'$"></TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="513" HEIGHT="66" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1992.gif"
+ ALT="$\displaystyle =\bigg(\frac{\cos x}{\sin x}\bigg)' = \frac{(\cos x)'\cdot \sin x-\cos x\cdot(\sin x)'}{\sin^2 x} =\frac{-\cos^2 x - \sin^2 x}{\sin^2 x}$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="91" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1993.gif"
+ ALT="$\displaystyle = -\frac{1}{\sin^2 x}.$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+</DD>
+</DL>
+
+Primijetimo da po su definiciji <A HREF="node99.html#d2.1">5.1</A> sve derivirane funkcije
+glatke, jer su im derivacije neprekidne na čitavom području definicije.</DIV><P></P>
+
+</div><p></p>
+<P>
+Sljedeća dva teorema navodimo bez dokaza.
+
+<P>
+<div class="teo"><P>
+<DIV><B>Teorem  5.3</B> &nbsp; [Deriviranje inverzne funkcije]<A NAME="d2.10"></A><A NAME="18384"></A><A NAME="18385"></A>
+Neka je funkcija <!-- MATH
+ $f:\mathcal{D}\to \mathcal{K}$
+ -->
+<IMG
+ WIDTH="87" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1328.gif"
+ ALT="$ f:\mathcal{D}\to \mathcal{K}$">
+ bijekcija, neka je derivabilna u
+točki <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img21.gif"
+ ALT="$ x$">
+ i neka je <!-- MATH
+ $f'(x)\neq 0$
+ -->
+<IMG
+ WIDTH="78" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1994.gif"
+ ALT="$ f'(x)\neq 0$">
+. Neka je inverzna funkcija 
+<!-- MATH
+ $f^{-1}:\mathcal{K}\to \mathcal{D}$
+ -->
+<IMG
+ WIDTH="106" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1995.gif"
+ ALT="$ f^{-1}:\mathcal{K}\to \mathcal{D}$">
+ neprekidna u točki <IMG
+ WIDTH="73" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img374.gif"
+ ALT="$ y=f(x)$">
+.
+Tada je 
+<P><!-- MATH
+ \begin{displaymath}
+(f^{-1})'(y)=\frac{1}{f'(x)}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="151" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1996.gif"
+ ALT="$\displaystyle (f^{-1})'(y)=\frac{1}{f'(x)}.
+$">
+</DIV><P>
+</P></DIV><P></P>
+
+</div><p></p>
+<P>
+<div class="pri"><P>
+<DIV><B>Primjer  5.5</B> &nbsp; <A NAME="d2.10a"></A><DL COMPACT>
+<DT>a)</DT>
+<DD>Za funkciju <IMG
+ WIDTH="57" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1997.gif"
+ ALT="$ y=x^2$">
+ koja ima inverznu funkciju za <IMG
+ WIDTH="48" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img385.gif"
+ ALT="$ x\geq 0$">
+ 
+teorem <A HREF="#d2.10">5.3</A> daje
+<P><!-- MATH
+ \begin{displaymath}
+(\sqrt{y})'=\frac{1}{(x^2)'}=\frac{1}{2x}=\frac{1}{2\sqrt{y}}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="229" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1998.gif"
+ ALT="$\displaystyle (\sqrt{y})'=\frac{1}{(x^2)'}=\frac{1}{2x}=\frac{1}{2\sqrt{y}}.
+$">
+</DIV><P>
+</P>
+Sada na lijevoj i na desnoj strani imamo funkciju od <IMG
+ WIDTH="14" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img22.gif"
+ ALT="$ y$">
+ pa  
+možemo zamijeniti <IMG
+ WIDTH="14" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img22.gif"
+ ALT="$ y$">
+ s <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img21.gif"
+ ALT="$ x$">
+ što nam daje standardni
+zapis
+<P><!-- MATH
+ \begin{displaymath}
+(\sqrt{x})'=\frac{1}{2\sqrt{x}}, \qquad x>0.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="204" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1999.gif"
+ ALT="$\displaystyle (\sqrt{x})'=\frac{1}{2\sqrt{x}}, \qquad x&gt;0.
+$">
+</DIV><P>
+</P>
+Dodatno ograničenje <IMG
+ WIDTH="48" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1346.gif"
+ ALT="$ x\neq 0$">
+ smo morali uvesti jer dijeljenje s nulom
+nije moguće. Na slici <A HREF="node86.html#fig:paran">4.20</A> vidimo da funkcija
+<IMG
+ WIDTH="30" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1545.gif"
+ ALT="$ \sqrt{x}$">
+ nema derivaciju u točki <IMG
+ WIDTH="48" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1563.gif"
+ ALT="$ x=0$">
+. 
+
+<P>
+</DD>
+<DT>b)</DT>
+<DD>Za funkciju <IMG
+ WIDTH="74" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2000.gif"
+ ALT="$ y=\sin x$">
+ koja ima inverznu funkciju za 
+<!-- MATH
+ $x\in [-\pi/2,\pi/2]$
+ -->
+<IMG
+ WIDTH="127" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2001.gif"
+ ALT="$ x\in [-\pi/2,\pi/2]$">
+ vrijedi
+<P><!-- MATH
+ \begin{displaymath}
+(\arcsin y)'=\frac{1}{(\sin x)'}=\frac{1}{\cos
+  x}=\frac{1}{\sqrt{1-\sin^2 x}}=\frac{1}{\sqrt{1-y^2}},
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="451" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2002.gif"
+ ALT="$\displaystyle (\arcsin y)'=\frac{1}{(\sin x)'}=\frac{1}{\cos
+x}=\frac{1}{\sqrt{1-\sin^2 x}}=\frac{1}{\sqrt{1-y^2}},
+$">
+</DIV><P>
+</P>
+odnosno, nakon zamjene <IMG
+ WIDTH="14" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img22.gif"
+ ALT="$ y$">
+ s <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img21.gif"
+ ALT="$ x$">
+,
+<P><!-- MATH
+ \begin{displaymath}
+(\arcsin x)'=\frac{1}{\sqrt{1-x^2}}, \qquad x\in (-1,1).
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="311" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2003.gif"
+ ALT="$\displaystyle (\arcsin x)'=\frac{1}{\sqrt{1-x^2}}, \qquad x\in (-1,1).
+$">
+</DIV><P>
+</P>
+Funkcija <IMG
+ WIDTH="64" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1799.gif"
+ ALT="$ \arcsin x$">
+ je definirana na intervalu <IMG
+ WIDTH="55" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2004.gif"
+ ALT="$ [-1,1]$">
+ (poglavlje
+<A HREF="node94.html#sec:arkus">4.6.6</A>), dok njena derivacija nije definirana u rubovima tog
+intervala kako bi se izbjeglo dijeljenje s nulom.
+</DD>
+<DT>c)</DT>
+<DD>Za funkciju <!-- MATH
+ $y=\mathop{\mathrm{tg}}\nolimits x$
+ -->
+<IMG
+ WIDTH="68" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2005.gif"
+ ALT="$ y=\mathop{\mathrm{tg}}\nolimits x$">
+ koja ima inverznu funkciju za 
+<!-- MATH
+ $x\in (-\pi/2,\pi/2)$
+ -->
+<IMG
+ WIDTH="131" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2006.gif"
+ ALT="$ x\in (-\pi/2,\pi/2)$">
+ (vidi sliku <A HREF="node94.html#fig:atanx">4.38</A>) vrijedi
+<P><!-- MATH
+ \begin{displaymath}
+(\mathop{\mathrm{arctg}}\nolimits y)'=\frac{1}{(\mathop{\mathrm{tg}}\nolimits x)'}=\frac{1}{\frac{1}{\cos^2 x}}
+=\cos^2 x=\frac{1}{1+ \mathop{\mathrm{tg}}\nolimits ^2 x}=\frac{1}{1+y^2},
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="471" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2007.gif"
+ ALT="$\displaystyle (\mathop{\mathrm{arctg}}\nolimits y)'=\frac{1}{(\mathop{\mathrm{t...
+...x}}
+=\cos^2 x=\frac{1}{1+ \mathop{\mathrm{tg}}\nolimits ^2 x}=\frac{1}{1+y^2},
+$">
+</DIV><P>
+</P>
+odnosno, nakon zamjene <IMG
+ WIDTH="14" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img22.gif"
+ ALT="$ y$">
+ s <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img21.gif"
+ ALT="$ x$">
+,
+<P><!-- MATH
+ \begin{displaymath}
+(\mathop{\mathrm{arctg}}\nolimits x)'=\frac{1}{1+x^2}, \qquad x\in \mathbb{R}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="249" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2008.gif"
+ ALT="$\displaystyle (\mathop{\mathrm{arctg}}\nolimits x)'=\frac{1}{1+x^2}, \qquad x\in \mathbb{R}.
+$">
+</DIV><P>
+</P>
+</DD>
+</DL></DIV><P></P>
+
+</div><p></p>
+<P>
+<div class="teo"><P>
+<DIV><B>Teorem  5.4</B> &nbsp; [Deriviranje kompozicije funkcija]<A NAME="d2.11"></A><A NAME="18434"></A>
+<A NAME="18435"></A>
+  Ako je funkcija <IMG
+ WIDTH="16" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img162.gif"
+ ALT="$ f$">
+ derivabilna u točki <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img21.gif"
+ ALT="$ x$">
+, a funkcija <IMG
+ WIDTH="14" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img167.gif"
+ ALT="$ g$">
+ 
+  derivabilna u točki <IMG
+ WIDTH="73" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img374.gif"
+ ALT="$ y=f(x)$">
+, tada je kompozicija <IMG
+ WIDTH="42" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1540.gif"
+ ALT="$ g\circ f$">
+
+  derivabilna u točki <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img21.gif"
+ ALT="$ x$">
+ i vrijedi
+<P><!-- MATH
+ \begin{displaymath}
+[g(f(x))]'=g'(y)f'(x)=g'(f(x)) f'(x).
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="312" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2009.gif"
+ ALT="$\displaystyle [g(f(x))]'=g'(y)f'(x)=g'(f(x)) f'(x).
+$">
+</DIV><P>
+</P></DIV><P></P>
+
+</div><p></p>
+<P>
+Ovaj način deriviranja je vrlo čest. Sada ćemo navesti samo dva
+primjera, a dvije važne primjene dat ćemo u poglavljima o deriviranju
+implicitno zadane funkcije <A HREF="node103.html#sec:derimpl">5.1.4</A> i logaritamskom
+deriviranju <A HREF="node109.html#sec:derlog">5.1.6</A>.
+
+<P>
+<div class="pri"><P>
+<DIV><B>Primjer  5.6</B> &nbsp; <A NAME="d2.12"></A>  <DL COMPACT>
+<DT>a)</DT>
+<DD>Ako je <IMG
+ WIDTH="73" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img374.gif"
+ ALT="$ y=f(x)$">
+, tada je 
+<P><!-- MATH
+ \begin{displaymath}
+(y^2)'=2y y'.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="104" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2010.gif"
+ ALT="$\displaystyle (y^2)'=2y y'.
+$">
+</DIV><P>
+</P>
+Tako iz primjera <A HREF="node99.html#d2.4">5.1</A> i <A HREF="#d2.9a">5.4</A> za <!-- MATH
+ $y=x^3-3x^2+5x$
+ -->
+<IMG
+ WIDTH="147" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2011.gif"
+ ALT="$ y=x^3-3x^2+5x$">
+
+slijedi
+<P></P>
+<DIV ALIGN="CENTER"><TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="151" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2012.gif"
+ ALT="$\displaystyle [(x^3-3x^2+5x)^2]'$"></TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="284" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2013.gif"
+ ALT="$\displaystyle =2(x^3-3x^2+5x) (x^3-3x^2+5x)'$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="274" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2014.gif"
+ ALT="$\displaystyle = 2(x^3-3x^2+5x)(3x^2-6x+5).$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+</DD>
+<DT>b)</DT>
+<DD>Ako je <IMG
+ WIDTH="73" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img374.gif"
+ ALT="$ y=f(x)$">
+, tada teorem <A HREF="#d2.12">5.6</A> i primjer <A HREF="node99.html#d2.4">5.1</A>
+povlače
+<P><!-- MATH
+ \begin{displaymath}
+(\sin y)'=(\cos y) y'.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="153" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2015.gif"
+ ALT="$\displaystyle (\sin y)'=(\cos y) y'.
+$">
+</DIV><P>
+</P>
+Tako za funkciju <!-- MATH
+ $f(x)=\sin(\cos x)$
+ -->
+<IMG
+ WIDTH="137" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2016.gif"
+ ALT="$ f(x)=\sin(\cos x)$">
+ vrijedi 
+<P><!-- MATH
+ \begin{displaymath}
+f'(x)=\cos(\cos x)(\cos x)'=\cos(\cos x) (-\sin x).
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="372" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2017.gif"
+ ALT="$\displaystyle f'(x)=\cos(\cos x)(\cos x)'=\cos(\cos x) (-\sin x).
+$">
+</DIV><P>
+</P>
+</DD>
+</DL></DIV><P></P>
+
+</div><p></p>
+<P>
+<p><HR></p>
+<arrow class=left> </arrow> <A NAME="tex2html1422"
+  HREF="node101.html">Derivacije slijeva i zdesna</A> &nbsp; &nbsp;
+<arrow class=up> </arrow> <A NAME="tex2html1428"
+  HREF="node99.html">Derivacija</A> &nbsp; &nbsp;
+<arrow class=right> </arrow> <A NAME="tex2html1430"
+  HREF="node103.html">Deriviranje implicitno zadane funkcije</A>  
+
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

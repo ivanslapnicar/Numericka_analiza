@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.19.14
+# v0.19.20
 
 using Markdown
 using InteractiveUtils
@@ -274,8 +274,7 @@ $$
 \mathop{\mathrm{grad}} f(x)=0.
 $$
 
-
-Za razliku od prethodnih zadataka, gdje je kondicija 
+U prethodnim zadatcima, kondicija Jacobijena ja
 
 $$\kappa(J)=O(10)$$ 
 
@@ -283,38 +282,37 @@ u zadacima (a), (b) i (c) i
 
 $$\kappa(J)=O(1000)$$ 
 
-u zadatku (d), u ovom zadatku je 
+u zadatku (d). U ovom zadatku je hesseove matrice  
 
-$$\kappa(J)>O(10^6)$$ 
+$$\kappa(J)>O(10^3).$$ 
 
-pa je metoda netočna i ne konvergira prema točnom rješenju $x=(4.93,2.62,0.28)$.
+Unatoč tome, metoda je netočna i ne konvergira prema točnom rješenju $x=(4.93,2.62,0.28)$.
 """
 
 # ╔═╡ 33ca0d51-92fe-4313-ba67-7792af17b11e
 begin
 	t=collect(0:10)
 	y=[0.001,0.01,0.04,0.12,0.21,0.25,0.21,0.12,0.04,0.01,0.001]
-	f₅(x)=sum([( x[3]*exp(-((t[i]-x[1])^2/x[2]))-y[1])^2 for i=1:11])
+	f₅(x)=sum([(x[3]*exp(-(t[i]-x[1])^2/x[2])-y[i])^2 for i=1:11])
 end
 
 # ╔═╡ e5d2cee7-c2d4-45a5-901c-206be7d2ff58
 begin
 	# Početna točka je vrlo blizu rješenja
-	x₀=[4.9,2.63,0.28]
-	f₅(x₀)
+	x₀=[4.9,2.6,0.2]
 	g₅(x)=ForwardDiff.gradient(f₅,x)
 	J₅(x)=ForwardDiff.hessian(f₅,x)
 	f₅(x₀), g₅(x₀), cond(J₅(x₀))
 end
 
 # ╔═╡ ab87421c-e498-44ff-af23-13ea14a0c5d3
-x₅,iter₅=Newton(g₅,J₅,x₀,1e-8)
+x₅,iter₅=Newton(g₅,J₅,x₀,1e-10)
 
 # ╔═╡ d9df727c-a96f-4af4-ab5a-60715662adce
 g₅(x₅)
 
 # ╔═╡ 82fffd1c-9ec0-459c-b033-d926641268dc
-Newton(g₅,J₅,[4.9,2.62,0.28],1e-8)
+Newton(g₅,J₅,[4.9,2.62,0.28],1e-12)
 
 # ╔═╡ e823348a-1ea3-45b7-b1ad-d51096f224dc
 md"""
@@ -614,8 +612,11 @@ opt=optimize(f₄,[-1.0,2],Optim.BFGS())
 opt.minimizer[1]
 
 # ╔═╡ 90043461-3f6a-45e6-a661-57c8df3a2a93
-# Primjer 5 - opet ne konvergira prema rješenju
-optimize(f₅,[4.9,2.6,0.2],Optim.BFGS())
+# Primjer 5 - opet ne konvergira prema rješenju ???
+opt₅=optimize(f₅,[4.0,2.5,0.27],Optim.BFGS())
+
+# ╔═╡ a107fc1f-f0db-42cb-ad4a-ffd51726808a
+opt₅.minimizer
 
 # ╔═╡ 00000000-0000-0000-0000-000000000001
 PLUTO_PROJECT_TOML_CONTENTS = """
@@ -639,7 +640,7 @@ PlutoUI = "~0.7.27"
 PLUTO_MANIFEST_TOML_CONTENTS = """
 # This file is machine-generated - editing it directly is not advised
 
-julia_version = "1.8.2"
+julia_version = "1.8.5"
 manifest_format = "2.0"
 project_hash = "8130e26e874d411eabac7777d37b410a37af62d6"
 
@@ -678,7 +679,7 @@ uuid = "6e34b625-4abd-537c-b88f-471c36dfa7a0"
 version = "1.0.8+0"
 
 [[deps.Cairo_jll]]
-deps = ["Artifacts", "Bzip2_jll", "Fontconfig_jll", "FreeType2_jll", "Glib_jll", "JLLWrappers", "LZO_jll", "Libdl", "Pixman_jll", "Pkg", "Xorg_libXext_jll", "Xorg_libXrender_jll", "Zlib_jll", "libpng_jll"]
+deps = ["Artifacts", "Bzip2_jll", "CompilerSupportLibraries_jll", "Fontconfig_jll", "FreeType2_jll", "Glib_jll", "JLLWrappers", "LZO_jll", "Libdl", "Pixman_jll", "Pkg", "Xorg_libXext_jll", "Xorg_libXrender_jll", "Zlib_jll", "libpng_jll"]
 git-tree-sha1 = "4b859a208b2397a7a623a03449e4636bdb17bcf2"
 uuid = "83423d85-b0ee-5818-9007-b63ccbeb887a"
 version = "1.16.1+1"
@@ -728,7 +729,7 @@ version = "3.41.0"
 [[deps.CompilerSupportLibraries_jll]]
 deps = ["Artifacts", "Libdl"]
 uuid = "e66e0078-7015-5450-92f7-15fbd957f2ae"
-version = "0.5.2+0"
+version = "1.0.1+0"
 
 [[deps.Contour]]
 deps = ["StaticArrays"]
@@ -1075,9 +1076,9 @@ version = "1.42.0+0"
 
 [[deps.Libiconv_jll]]
 deps = ["Artifacts", "JLLWrappers", "Libdl", "Pkg"]
-git-tree-sha1 = "42b62845d70a619f063a7da093d995ec8e15e778"
+git-tree-sha1 = "c7cb1f5d892775ba13767a87c7ada0b980ea0a71"
 uuid = "94ce4f54-9a6c-5748-9c1c-f9c7231a4531"
-version = "1.16.1+1"
+version = "1.16.1+2"
 
 [[deps.Libmount_jll]]
 deps = ["Artifacts", "JLLWrappers", "Libdl", "Pkg"]
@@ -1292,9 +1293,9 @@ uuid = "de0858da-6303-5e67-8744-51eddeeeb8d7"
 
 [[deps.Qt5Base_jll]]
 deps = ["Artifacts", "CompilerSupportLibraries_jll", "Fontconfig_jll", "Glib_jll", "JLLWrappers", "Libdl", "Libglvnd_jll", "OpenSSL_jll", "Pkg", "Xorg_libXext_jll", "Xorg_libxcb_jll", "Xorg_xcb_util_image_jll", "Xorg_xcb_util_keysyms_jll", "Xorg_xcb_util_renderutil_jll", "Xorg_xcb_util_wm_jll", "Zlib_jll", "xkbcommon_jll"]
-git-tree-sha1 = "c6c0f690d0cc7caddb74cef7aa847b824a16b256"
+git-tree-sha1 = "0c03844e2231e12fda4d0086fd7cbe4098ee8dc5"
 uuid = "ea2cea3b-5b76-57ae-a6ef-0a8af62496e1"
-version = "5.15.3+1"
+version = "5.15.3+2"
 
 [[deps.REPL]]
 deps = ["InteractiveUtils", "Markdown", "Sockets", "Unicode"]
@@ -1750,5 +1751,6 @@ version = "0.9.1+5"
 # ╠═bc477197-2ac5-4798-a62b-62f89791fb94
 # ╠═8ff25700-5584-11eb-1f95-abf9735d479e
 # ╠═90043461-3f6a-45e6-a661-57c8df3a2a93
+# ╠═a107fc1f-f0db-42cb-ad4a-ffd51726808a
 # ╟─00000000-0000-0000-0000-000000000001
 # ╟─00000000-0000-0000-0000-000000000002

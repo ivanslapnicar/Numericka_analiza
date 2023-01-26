@@ -1,0 +1,707 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2012 (1.2)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-2382574370068590",
+    enable_page_level_ads: true
+  });
+</script>
+<TITLE>Rješavanje trokutastih sustava</TITLE>
+<META NAME="description" CONTENT="Rješavanje trokutastih sustava">
+<META NAME="keywords" CONTENT="predavanja">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2012">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="predavanja.css">
+
+<LINK REL="next" HREF="node32.html">
+<LINK REL="previous" HREF="node30.html">
+<LINK REL="up" HREF="node22.html">
+<LINK REL="next" HREF="node32.html">
+</HEAD>
+
+<BODY >
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="shortcut icon" href="favicon.ico"/>
+
+<style>
+.sidenav {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 50px;
+}
+
+div.sidenav a {
+    padding: 8px 8px 8px 10px;
+    text-decoration: none;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    display: block;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dropdown-btn {
+    padding: 8px 8px 8px 8px;
+    text-decoration: none; 
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s;
+}
+
+
+.sidenav a:hover, .dropdown-btn:hover {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #C00;
+}
+
+.menu2 {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    font-style:italic;
+}
+
+.dropdown-container {
+  display: none;
+  font-family: 'Open Sans',sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #ddd;
+  padding-left: 8px;
+}
+
+.dropdown-container a:hover {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    background-color: #ccc;
+}
+
+.sidenav .active {
+    background-color: #C00;
+    color: white;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+hr { 
+    display: block;
+    margin-top: 0.2em;
+    margin-bottom: 0.4em;
+    margin-left: -5px;
+    margin-right: -5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color:#ec971f;
+} 
+  
+.caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 20px;
+    vertical-align: middle;
+    border-top: 5px dashed;
+        border-top-width: 5px;
+        border-top-style: dashed;
+        border-top-color: currentcolor;
+    border-right: 5px solid transparent;
+        border-right-width: 5px;
+        border-right-style: solid;
+        border-right-color: transparent;
+    border-left: 5px solid transparent;
+        border-left-width: 5px;
+        border-left-style: solid;
+        border-left-color: transparent;
+}
+
+</style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- First -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2382574370068590"
+     data-ad-slot="8207843721"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<script>
+   // alert('|ivan'+document.getElementById("mys-content").innerHTML+'|') 
+//    alert(typeof(window.CustomEvent))
+//    if(typeof(window.CustomEvent)=="undefined")
+// {
+//     document.display = 'none';
+// } 
+</script>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" 
+  onclick="closeNav()"
+  style="font-size:24px;cursor:pointer;color:#000;position: absolute; top: 0;
+    right: 10px; font-size: 24px; margin-left: 50px;">&nbsp; &times; &nbsp;</a>
+  <a href="/matematika1/index.html">HOME</a>
+  <button href="/matematika1/predavanja" class="dropdown-btn">PREDAVANJA
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/predavanja/predavanja.html">SADRŽAJ</a>
+      <a href="/matematika1/predavanja/node3.html">OSNOVE</a>
+      <a href="/matematika1/predavanja/node22.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/predavanja/node47.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/predavanja/node67.html">FUNKCIJE</a>
+      <a href="/matematika1/predavanja/node98.html">DERIVACIJE</a>
+      <a href="/matematika1/predavanja/node125.html">NIZOVI I REDOVI</a>
+      <a href="/matematika1/predavanja/node144.html">INDEKS</a>
+    </div>
+  <button href="/matematika1/vjezbe" class="dropdown-btn">VJEŽBE
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/vjezbe/vjezbe.html">SADRŽAJ</a>
+      <a href="/matematika1/vjezbe/node2.html">OSNOVE</a>
+      <a href="/matematika1/vjezbe/node24.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/vjezbe/node55.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/vjezbe/node87.html">FUNKCIJE</a>
+      <a href="/matematika1/vjezbe/node110.html">DERIVACIJE</a>
+      <a href="/matematika1/vjezbe/node136.html">NIZOVI I REDOVI</a>
+    </div>
+  <button href="/matematika1/kviz" class="dropdown-btn">KVIZ
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/kviz/index.html">SADRŽAJ</a>
+      <a href="/matematika1/kviz/osnove/">OSNOVE</a>
+      <a href="/matematika1/kviz/algebra/">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/kviz/vektori/">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/kviz/funkcije/">FUNKCIJE</a>
+      <a href="/matematika1/kviz/derivacije/">DERIVACIJE</a>
+      <a href="/matematika1/kviz/nizovi/">NIZOVI I REDOVI</a>
+    </div>
+  <button href="/matematika1/podsjetnik" class="dropdown-btn">PODSJETNIK
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/podsjetnik/podsjetnik.html">SADRŽAJ</a>
+      <a href="/matematika1/podsjetnik/node1.html">OSNOVE</a>
+      <a href="/matematika1/podsjetnik/node2.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/podsjetnik/node3.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/podsjetnik/node4.html">FUNKCIJE</a>
+      <a href="/matematika1/podsjetnik/node5.html">DERIVACIJE</a>
+      <a href="/matematika1/podsjetnik/node6.html">NIZOVI I REDOVI</a>
+    </div>
+  <!--<a href="/matematika1/kviz">Kviz</a>-->
+  <a href="/matematika1/java">JAVA</a>
+  <a href="http://lavica.fesb.unist.hr/netplot"  class="menu2">NETPLOT</a>
+  <!-- <a href="/matematika1/gauss"  class="menu2">GAUSS</a> -->
+  <a href="http://lavica.fesb.unist.hr/octave/ool_hr.php"  class="menu2">OCTAVE</a>
+  <a href="/matematika1/search.html">Traži ...</a>
+</div>
+
+<span style="font-size:24px;font-family:'Open Sans', sans-serif;cursor:pointer;color:#ec971f"
+      onclick="openNav()">&#9776;</span> &nbsp; 
+<span style="font-size:30px;cursor:pointer;color:#888;font-family:'Opens Sans',sans-serif;"
+      onclick="window.location.assign('../index.html')">
+<font style="color:#C00">m</font>atematika<font style="color:#C00;vertical-align:super;margin-left:2px;font-size:24px;">1</font></span>
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "300px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+
+</script>     
+<hr>
+
+
+
+
+<arrow class=left> </arrow> <A NAME="tex2html614"
+  HREF="node30.html">Matrični zapis sustava linearnih</A> &nbsp; &nbsp;
+<arrow class=up> </arrow> <A NAME="tex2html620"
+  HREF="node22.html">LINEARNA ALGEBRA</A> &nbsp; &nbsp;
+<arrow class=right> </arrow> <A NAME="tex2html622"
+  HREF="node32.html">Gaussova eliminacija</A>
+
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00430000000000000000"></A>
+<A NAME="sec:trok"></A><A NAME="4963"></A>
+<BR>
+Rješavanje trokutastih sustava
+</H1>
+
+<P>
+Matrica <IMG
+ WIDTH="19" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img632.gif"
+ ALT="$ U$">
+ je <EM>gornje trokutasta</EM><A NAME="4965"></A> ako
+<P><!-- MATH
+ \begin{displaymath}
+%
+i>j \Longrightarrow u_{ij}=0.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="144" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img633.gif"
+ ALT="$\displaystyle %
+i&gt;j \Longrightarrow u_{ij}=0.
+$">
+</DIV><P>
+</P> 
+Drugim riječima, svi elementi koji leže ispod
+dijagonale su nula.
+Primjer gornje trokutaste matrice reda pet je
+<P><!-- MATH
+ \begin{displaymath}
+%
+U=
+\begin{bmatrix}
+  u_{11}&u_{12}&u_{13}&u_{14}&u_{15}\\
+  0 & u_{22}&u_{23}&u_{24}&u_{25}\\
+  0&0&u_{33}& u_{34}&u_{35}\\
+  0&0&0&u_{44}&u_{45}\\
+  0&0&0&0&u_{55}
+\end{bmatrix}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="267" HEIGHT="126" ALIGN="MIDDLE" BORDER="0"
+ SRC="img634.gif"
+ ALT="$\displaystyle %
+U=
+\begin{bmatrix}
+u_{11}&amp;u_{12}&amp;u_{13}&amp;u_{14}&amp;u_{15}\\
+0 &amp; ...
+...&amp;u_{33}&amp; u_{34}&amp;u_{35}\\
+0&amp;0&amp;0&amp;u_{44}&amp;u_{45}\\
+0&amp;0&amp;0&amp;0&amp;u_{55}
+\end{bmatrix}$">
+</DIV><P>
+</P> 
+Slično, matrica <IMG
+ WIDTH="17" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img635.gif"
+ ALT="$ L$">
+ je <EM>donje trokutasta</EM> ako
+<P><!-- MATH
+ \begin{displaymath}
+%
+i<j \Longrightarrow l_{ij}=0,
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="139" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img636.gif"
+ ALT="$\displaystyle %
+i&lt;j \Longrightarrow l_{ij}=0,
+$">
+</DIV><P>
+</P> 
+odnosno elementi iznad dijagonale su nula.
+
+<P>
+<div class="teo"><P>
+<DIV><B>Teorem  2.3</B> &nbsp; <A NAME="atrte"></A>Ako su svi dijagonalni elementi kvadratne gornje trokutaste matrice <IMG
+ WIDTH="19" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img632.gif"
+ ALT="$ U$">
+
+različiti od nule, tada sustav <!-- MATH
+ $U\mathbf{x}=\mathbf{b}$
+ -->
+<IMG
+ WIDTH="66" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img637.gif"
+ ALT="$ U\mathbf{x}=\mathbf{b}$">
+ ima jedinstveno
+rješenje.  </DIV><P></P>
+
+</div><p></p><div class="dok"><B>Dokaz. </B></div><p></p>
+Ilustrirajmo prvo rješavanje sustava za <IMG
+ WIDTH="49" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img638.gif"
+ ALT="$ n=5$">
+. Prvo napišimo sustav u
+skalarnom obliku
+<P></P>
+<DIV ALIGN="CENTER"><TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="352" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img639.gif"
+ ALT="$\displaystyle u_{11}x_1+u_{12}x_2+u_{13}x_3+u_{14}x_4+u_{15}x_5= b_1$"></TD>
+<TD>&nbsp;</TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="286" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img640.gif"
+ ALT="$\displaystyle u_{22}x_2+u_{23}x_3+u_{24}x_4+u_{25}x_5= b_2$"></TD>
+<TD>&nbsp;</TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="220" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img641.gif"
+ ALT="$\displaystyle u_{33}x_3+u_{34}x_4+u_{35}x_5=b_3$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="154" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img642.gif"
+ ALT="$\displaystyle u_{44}x_4+u_{45}x_5= b_4$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="89" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img643.gif"
+ ALT="$\displaystyle u_{55}x_5= b_5$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Peta jednadžba sadrži samo nepoznanicu <IMG
+ WIDTH="23" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img644.gif"
+ ALT="$ x_5$">
+ i možemo je riješiti
+odmah:
+<P><!-- MATH
+ \begin{displaymath}
+%
+x_5={\frac{b_5}{u_{55}}}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="82" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
+ SRC="img645.gif"
+ ALT="$\displaystyle %
+x_5={\frac{b_5}{u_{55}}}.
+$">
+</DIV><P>
+</P> 
+Dobivenu vrijednost od <IMG
+ WIDTH="23" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img644.gif"
+ ALT="$ x_5$">
+ možemo uvrstiti u četvrtu
+jednadžbu koju potom riješimo i dobijemo 
+<P><!-- MATH
+ \begin{displaymath}
+%
+x_4={\frac{b_4-u_{45}x_5}{u_{44}}}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="138" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
+ SRC="img646.gif"
+ ALT="$\displaystyle %
+x_4={\frac{b_4-u_{45}x_5}{u_{44}}}.
+$">
+</DIV><P>
+</P> 
+Uvrštavanjem <IMG
+ WIDTH="23" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img647.gif"
+ ALT="$ x_4$">
+ i <IMG
+ WIDTH="23" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img644.gif"
+ ALT="$ x_5$">
+ u treću jednadžbu te rješavanjem te
+jednadžbe  dobijemo
+<P><!-- MATH
+ \begin{displaymath}
+%
+x_3={\frac{b_3-u_{34}x_4-u_{35}x_5}{u_{33}}}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="204" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
+ SRC="img648.gif"
+ ALT="$\displaystyle %
+x_3={\frac{b_3-u_{34}x_4-u_{35}x_5}{u_{33}}}.
+$">
+</DIV><P>
+</P> 
+Nastavljajući ovim postupkom dobijemo
+<P><!-- MATH
+ \begin{displaymath}
+%
+x_2={\frac{b_2-u_{23}x_3-u_{24}x_4-u_{25}x_5}{u_{22}}}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="265" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
+ SRC="img649.gif"
+ ALT="$\displaystyle %
+x_2={\frac{b_2-u_{23}x_3-u_{24}x_4-u_{25}x_5}{u_{22}}}
+$">
+</DIV><P>
+</P> 
+i
+<P><!-- MATH
+ \begin{displaymath}
+%
+x_1={\frac{b_1-u_{12}x_2-u_{13}x_3-u_{14}x_4-u_{15}x_5}{u_{11}}}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="336" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
+ SRC="img650.gif"
+ ALT="$\displaystyle %
+x_1={\frac{b_1-u_{12}x_2-u_{13}x_3-u_{14}x_4-u_{15}x_5}{u_{11}}}.
+$">
+</DIV><P>
+</P> 
+Kako su po pretpostavci dijagonalni elementi <IMG
+ WIDTH="26" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img651.gif"
+ ALT="$ u_{ii}$">
+ različiti od
+nule, ove formule jednoznačno određuju <IMG
+ WIDTH="21" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img652.gif"
+ ALT="$ x_i$">
+.   
+Ovaj postupak se očito može izvesti za proizvoljnu dimenziju <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img241.gif"
+ ALT="$ n$">
+ pa
+je teorem dokazan. &nbsp;&nbsp;&nbsp;&nbsp;<div class="dok"><B>Q.E.D.</B>
+<BR></div><p></p>
+
+<P>
+Ovaj postupak se jednostavno može izvršiti na računalu.
+Odgovarajući program u programskom jeziku C<A NAME="5026"></A> glasi
+
+<P>
+<PRE> 
+    for (i=n;i&gt;=1;i--){ 
+       for (j=n;j&gt;i;j--)
+          b[i]=b[i]-u[i][j]*b[j];
+       b[i]=b[i]/u[i][i];
+    }
+</PRE>
+Nakon završetka programa, rješenje <!-- MATH
+ $\mathbf{x}$
+ -->
+<IMG
+ WIDTH="16" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img617.gif"
+ ALT="$ \mathbf{x}$">
+ se nalazi na mjestu gdje
+se na početku nalazio vektor <!-- MATH
+ $\mathbf{b}$
+ -->
+<IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img618.gif"
+ ALT="$ \mathbf{b}$">
+.
+
+<P>
+Program za rješavanje gornje trokutastog sustava u programskom jeziku 
+Matlab<A NAME="5031"></A> izgleda nešto jednostavnije:
+
+<P>
+<PRE>
+    for i=n:-1:1
+       for j=n:-1:i+1
+          b(i)=b(i)-u(i,j)*b(j)
+       end
+       b(i)=b(i)/u(i,i)
+    end
+</PRE>
+
+<P>
+Isti program u programskom jeziku FORTRAN<A NAME="5034"></A>, ovaj put 
+napisan korištenjem uzlazne petlje, izgleda ovako:
+
+<P>
+<PRE>
+    do k=1,n
+       i=n-k+1
+       do j=i+1,n
+          b(i)=b(i)-u(i,j)*b(j)
+       enddo
+       b(i)=b(i)/u(i,i)
+    enddo
+</PRE>
+
+<P>
+Broj računskih operacija potrebnih za rješavanje gornje trokutastog
+sustava iznosi
+<P><!-- MATH
+ \begin{displaymath}
+%
+\sum_{i=1}^n (2i-1) = 2\frac{n(n+1)}{2}-n= n^2.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="276" HEIGHT="69" ALIGN="MIDDLE" BORDER="0"
+ SRC="img653.gif"
+ ALT="$\displaystyle %
+\sum_{i=1}^n (2i-1) = 2\frac{n(n+1)}{2}-n= n^2.
+$">
+</DIV><P>
+</P> 
+Na modernim računalima (Pentium 350), koja izvršavaju do <IMG
+ WIDTH="23" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img654.gif"
+ ALT="$ 30$">
+ milijuna
+operacija u sekundi, rješavanje trokutastog sustava dimenzije <IMG
+ WIDTH="76" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img655.gif"
+ ALT="$ n=1000$">
+
+traje oko <IMG
+ WIDTH="41" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img656.gif"
+ ALT="$ 1/30$">
+ sekunde.
+
+<P>
+Postupak za rješavanje donje trokutastog sustava <!-- MATH
+ $L\mathbf{x}=\mathbf{b}$
+ -->
+<IMG
+ WIDTH="64" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img657.gif"
+ ALT="$ L\mathbf{x}=\mathbf{b}$">
+ je
+sličan i dan je u sljedećem Matlab programu:
+
+<P>
+<PRE>
+    for i=1:n
+       for j=i+1:n
+          b(i)=b(i)-l(i,j)*b(j)
+       end
+       b(i)=b(i)/l(i,i)
+    end
+</PRE>
+
+<P>
+Kako se trokutasti sustavi lako rješavaju, rješenje općeg
+(netrokutastog) sustava dobijemo tako da pomoću Gaussove eliminacije
+zadani sustav svedemo na trokutasti oblik.
+
+<P>
+<div class="zad"><P>
+<DIV><B>Zadatak  2.3</B> &nbsp; Zadajte nekoliko gornje i donje trokutastih sustava i riješite ih 
+  pomoću opisanih Matlab programa. Pri tome možete koristiti program 
+  <A NAME="tex2html9"
+  HREF="http://piaf.fesb.hr/octave/octave-on-line.php">Octave On-line</A>.  </DIV><P></P>
+
+</div><p></p>
+<P>
+<p><HR></p>
+<arrow class=left> </arrow> <A NAME="tex2html614"
+  HREF="node30.html">Matrični zapis sustava linearnih</A> &nbsp; &nbsp;
+<arrow class=up> </arrow> <A NAME="tex2html620"
+  HREF="node22.html">LINEARNA ALGEBRA</A> &nbsp; &nbsp;
+<arrow class=right> </arrow> <A NAME="tex2html622"
+  HREF="node32.html">Gaussova eliminacija</A>  
+
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

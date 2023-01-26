@@ -1,0 +1,882 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2012 (1.2)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-2382574370068590",
+    enable_page_level_ads: true
+  });
+</script>
+<TITLE>Klasifikacija funkcija</TITLE>
+<META NAME="description" CONTENT="Klasifikacija funkcija">
+<META NAME="keywords" CONTENT="predavanja">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2012">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="predavanja.css">
+
+<LINK REL="next" HREF="node74.html">
+<LINK REL="previous" HREF="node68.html">
+<LINK REL="up" HREF="node67.html">
+<LINK REL="next" HREF="node74.html">
+</HEAD>
+
+<BODY >
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="shortcut icon" href="favicon.ico"/>
+
+<style>
+.sidenav {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 50px;
+}
+
+div.sidenav a {
+    padding: 8px 8px 8px 10px;
+    text-decoration: none;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    display: block;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dropdown-btn {
+    padding: 8px 8px 8px 8px;
+    text-decoration: none; 
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s;
+}
+
+
+.sidenav a:hover, .dropdown-btn:hover {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #C00;
+}
+
+.menu2 {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    font-style:italic;
+}
+
+.dropdown-container {
+  display: none;
+  font-family: 'Open Sans',sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #ddd;
+  padding-left: 8px;
+}
+
+.dropdown-container a:hover {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    background-color: #ccc;
+}
+
+.sidenav .active {
+    background-color: #C00;
+    color: white;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+hr { 
+    display: block;
+    margin-top: 0.2em;
+    margin-bottom: 0.4em;
+    margin-left: -5px;
+    margin-right: -5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color:#ec971f;
+} 
+  
+.caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 20px;
+    vertical-align: middle;
+    border-top: 5px dashed;
+        border-top-width: 5px;
+        border-top-style: dashed;
+        border-top-color: currentcolor;
+    border-right: 5px solid transparent;
+        border-right-width: 5px;
+        border-right-style: solid;
+        border-right-color: transparent;
+    border-left: 5px solid transparent;
+        border-left-width: 5px;
+        border-left-style: solid;
+        border-left-color: transparent;
+}
+
+</style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- First -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2382574370068590"
+     data-ad-slot="8207843721"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<script>
+   // alert('|ivan'+document.getElementById("mys-content").innerHTML+'|') 
+//    alert(typeof(window.CustomEvent))
+//    if(typeof(window.CustomEvent)=="undefined")
+// {
+//     document.display = 'none';
+// } 
+</script>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" 
+  onclick="closeNav()"
+  style="font-size:24px;cursor:pointer;color:#000;position: absolute; top: 0;
+    right: 10px; font-size: 24px; margin-left: 50px;">&nbsp; &times; &nbsp;</a>
+  <a href="/matematika1/index.html">HOME</a>
+  <button href="/matematika1/predavanja" class="dropdown-btn">PREDAVANJA
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/predavanja/predavanja.html">SADRŽAJ</a>
+      <a href="/matematika1/predavanja/node3.html">OSNOVE</a>
+      <a href="/matematika1/predavanja/node22.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/predavanja/node47.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/predavanja/node67.html">FUNKCIJE</a>
+      <a href="/matematika1/predavanja/node98.html">DERIVACIJE</a>
+      <a href="/matematika1/predavanja/node125.html">NIZOVI I REDOVI</a>
+      <a href="/matematika1/predavanja/node144.html">INDEKS</a>
+    </div>
+  <button href="/matematika1/vjezbe" class="dropdown-btn">VJEŽBE
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/vjezbe/vjezbe.html">SADRŽAJ</a>
+      <a href="/matematika1/vjezbe/node2.html">OSNOVE</a>
+      <a href="/matematika1/vjezbe/node24.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/vjezbe/node55.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/vjezbe/node87.html">FUNKCIJE</a>
+      <a href="/matematika1/vjezbe/node110.html">DERIVACIJE</a>
+      <a href="/matematika1/vjezbe/node136.html">NIZOVI I REDOVI</a>
+    </div>
+  <button href="/matematika1/kviz" class="dropdown-btn">KVIZ
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/kviz/index.html">SADRŽAJ</a>
+      <a href="/matematika1/kviz/osnove/">OSNOVE</a>
+      <a href="/matematika1/kviz/algebra/">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/kviz/vektori/">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/kviz/funkcije/">FUNKCIJE</a>
+      <a href="/matematika1/kviz/derivacije/">DERIVACIJE</a>
+      <a href="/matematika1/kviz/nizovi/">NIZOVI I REDOVI</a>
+    </div>
+  <button href="/matematika1/podsjetnik" class="dropdown-btn">PODSJETNIK
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/podsjetnik/podsjetnik.html">SADRŽAJ</a>
+      <a href="/matematika1/podsjetnik/node1.html">OSNOVE</a>
+      <a href="/matematika1/podsjetnik/node2.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/podsjetnik/node3.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/podsjetnik/node4.html">FUNKCIJE</a>
+      <a href="/matematika1/podsjetnik/node5.html">DERIVACIJE</a>
+      <a href="/matematika1/podsjetnik/node6.html">NIZOVI I REDOVI</a>
+    </div>
+  <!--<a href="/matematika1/kviz">Kviz</a>-->
+  <a href="/matematika1/java">JAVA</a>
+  <a href="http://lavica.fesb.unist.hr/netplot"  class="menu2">NETPLOT</a>
+  <!-- <a href="/matematika1/gauss"  class="menu2">GAUSS</a> -->
+  <a href="http://lavica.fesb.unist.hr/octave/ool_hr.php"  class="menu2">OCTAVE</a>
+  <a href="/matematika1/search.html">Traži ...</a>
+</div>
+
+<span style="font-size:24px;font-family:'Open Sans', sans-serif;cursor:pointer;color:#ec971f"
+      onclick="openNav()">&#9776;</span> &nbsp; 
+<span style="font-size:30px;cursor:pointer;color:#888;font-family:'Opens Sans',sans-serif;"
+      onclick="window.location.assign('../index.html')">
+<font style="color:#C00">m</font>atematika<font style="color:#C00;vertical-align:super;margin-left:2px;font-size:24px;">1</font></span>
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "300px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+
+</script>     
+<hr>
+
+
+
+
+<arrow class=left> </arrow> <A NAME="tex2html1085"
+  HREF="node72.html">Parametarsko zadavanje</A> &nbsp; &nbsp;
+<arrow class=up> </arrow> <A NAME="tex2html1091"
+  HREF="node67.html">FUNKCIJE REALNE VARIJABLE</A> &nbsp; &nbsp;
+<arrow class=right> </arrow> <A NAME="tex2html1093"
+  HREF="node74.html">Limes</A>
+
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00620000000000000000"></A>
+<A NAME="sec:klas"></A>
+<BR>
+Klasifikacija funkcija
+</H1>
+
+<P>
+U ovom poglavlju definirat ćemo što su 
+
+<UL>
+<LI>omeđene i neomeđene funkcije,
+</LI>
+<LI>parne i neparne funkcije,
+</LI>
+<LI>rastuće i padajuće (monotone) funkcije i
+</LI>
+<LI>periodične funkcije.
+</LI>
+</UL>
+Neka je 
+<P><!-- MATH
+ \begin{displaymath}
+f:\mathcal{D}\to\mathcal{K}, \qquad \mathcal{D}, \mathcal{K}\subseteq\mathbb{R}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="209" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1400.gif"
+ ALT="$\displaystyle f:\mathcal{D}\to\mathcal{K}, \qquad \mathcal{D}, \mathcal{K}\subseteq\mathbb{R}. $">
+</DIV><P>
+</P>
+
+<P>
+<div class="def"><P>
+<DIV><B>Definicija  4.1</B> &nbsp; <A NAME="f1.3"></A><A NAME="13057"></A>
+Funkcija <IMG
+ WIDTH="16" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img162.gif"
+ ALT="$ f$">
+ je <EM>omeđena</EM><A NAME="13059"></A> 
+ako postoji broj <IMG
+ WIDTH="21" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img134.gif"
+ ALT="$ m$">
+ takav da je
+<!-- MATH
+ $|f(x)|\leq m$
+ -->
+<IMG
+ WIDTH="90" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1401.gif"
+ ALT="$ \vert f(x)\vert\leq m$">
+ za svaki <!-- MATH
+ $x\in\mathcal{D}$
+ -->
+<IMG
+ WIDTH="52" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1329.gif"
+ ALT="$ x\in \mathcal{D}$">
+. Funkcija <IMG
+ WIDTH="16" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img162.gif"
+ ALT="$ f$">
+ je 
+<EM>neomeđena</EM><A NAME="13061"></A>
+ako nije omeđena. </DIV><P></P>
+
+</div><p></p>
+<P>
+Na primjer, funkcija <IMG
+ WIDTH="25" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.gif"
+ ALT="$ \vert x\vert$">
+ iz poglavlja <A HREF="node18.html#sec:apsv">1.7.2</A> je neomeđena
+jer za svaki <IMG
+ WIDTH="54" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1402.gif"
+ ALT="$ m&gt;0$">
+ postoji <!-- MATH
+ $x\in \mathcal{D}$
+ -->
+<IMG
+ WIDTH="52" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1329.gif"
+ ALT="$ x\in \mathcal{D}$">
+ takav da je <IMG
+ WIDTH="65" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1403.gif"
+ ALT="$ \vert x\vert&gt;m$">
+.
+
+<P>
+<div class="def"><P>
+<DIV><B>Definicija  4.2</B> &nbsp; <A NAME="f1.4"></A>Funkcija <IMG
+ WIDTH="16" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img162.gif"
+ ALT="$ f$">
+ je <EM>parna</EM><A NAME="13067"></A> 
+ako je <!-- MATH
+ $f(-x)=f(x)$
+ -->
+<IMG
+ WIDTH="113" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1404.gif"
+ ALT="$ f(-x)=f(x)$">
+ za svaki <!-- MATH
+ $x\in\mathcal{D}$
+ -->
+<IMG
+ WIDTH="52" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1329.gif"
+ ALT="$ x\in \mathcal{D}$">
+, 
+a <EM>neparna</EM><A NAME="13069"></A> 
+ako je <!-- MATH
+ $f(-x)=-f(x)$
+ -->
+<IMG
+ WIDTH="127" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1405.gif"
+ ALT="$ f(-x)=-f(x)$">
+ za svaki <!-- MATH
+ $x\in\mathcal{D}$
+ -->
+<IMG
+ WIDTH="52" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1329.gif"
+ ALT="$ x\in \mathcal{D}$">
+.</DIV><P></P>
+
+</div><p></p>
+<P>
+Očito i kod parne i neparne funkcije područje definicije mora biti
+simetrično s obzirom na ishodište.
+Na primjer, funkcija
+<P><!-- MATH
+ \begin{displaymath}
+x^n, \qquad n\in\mathbb{N}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="115" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1406.gif"
+ ALT="$\displaystyle x^n, \qquad n\in\mathbb{N}
+$">
+</DIV><P>
+</P>
+je parna za <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img241.gif"
+ ALT="$ n$">
+ paran, a neparna za <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img241.gif"
+ ALT="$ n$">
+ neparan pa odatle i nazivi:
+<P><!-- MATH
+ \begin{displaymath}
+f(-x)=(-x)^n=(-1)^n x^n=(-1)^n f(x).
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="328" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1407.gif"
+ ALT="$\displaystyle f(-x)=(-x)^n=(-1)^n x^n=(-1)^n f(x).
+$">
+</DIV><P>
+</P>
+
+<P>
+Funkcija <IMG
+ WIDTH="25" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.gif"
+ ALT="$ \vert x\vert$">
+ je parna: ako je <IMG
+ WIDTH="48" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1408.gif"
+ ALT="$ x&gt;0$">
+, tada je <IMG
+ WIDTH="62" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1409.gif"
+ ALT="$ -x&lt;0$">
+ pa vrijedi
+<P><!-- MATH
+ \begin{displaymath}
+|-x|=-(-x)=x=|x|,
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="207" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1410.gif"
+ ALT="$\displaystyle \vert-x\vert=-(-x)=x=\vert x\vert,
+$">
+</DIV><P>
+</P>
+a ako je <IMG
+ WIDTH="48" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img388.gif"
+ ALT="$ x&lt;0$">
+ tada je <IMG
+ WIDTH="62" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1411.gif"
+ ALT="$ -x&gt;0$">
+ pa vrijedi
+<P><!-- MATH
+ \begin{displaymath}
+|-x|=-x=|x|.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="145" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1412.gif"
+ ALT="$\displaystyle \vert-x\vert=-x=\vert x\vert.
+$">
+</DIV><P>
+</P>
+
+<P>
+<div class="def"><P>
+<DIV><B>Definicija  4.3</B> &nbsp; <A NAME="f1.6"></A>Funkcija <IMG
+ WIDTH="16" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img162.gif"
+ ALT="$ f$">
+ je <EM>rastuća</EM><A NAME="13074"></A> ili 
+<EM>uzlazna</EM><A NAME="13076"></A> na intervalu
+<!-- MATH
+ $\mathcal{A}\subseteq \mathcal{D}$
+ -->
+<IMG
+ WIDTH="58" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1413.gif"
+ ALT="$ \mathcal{A}\subseteq \mathcal{D}$">
+ ako 
+<P><!-- MATH
+ \begin{displaymath}
+( \forall x_1,x_2\in \mathcal{A})
+\quad x_1 < x_2 \quad \Rightarrow \quad f(x_1)\leq f(x_2).
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="368" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1414.gif"
+ ALT="$\displaystyle ( \forall x_1,x_2\in \mathcal{A})
+\quad x_1 &lt; x_2 \quad \Rightarrow \quad f(x_1)\leq f(x_2).
+$">
+</DIV><P>
+</P>
+Funkcija <IMG
+ WIDTH="16" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img162.gif"
+ ALT="$ f$">
+ je <EM>strogo rastuća</EM><A NAME="13080"></A> 
+na intervalu
+<!-- MATH
+ $\mathcal{A}\subseteq \mathcal{D}$
+ -->
+<IMG
+ WIDTH="58" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1413.gif"
+ ALT="$ \mathcal{A}\subseteq \mathcal{D}$">
+ ako 
+<P><!-- MATH
+ \begin{displaymath}
+( \forall x_1,x_2\in \mathcal{A})
+\quad x_1 < x_2 \quad \Rightarrow \quad f(x_1)< f(x_2).
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="368" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1415.gif"
+ ALT="$\displaystyle ( \forall x_1,x_2\in \mathcal{A})
+\quad x_1 &lt; x_2 \quad \Rightarrow \quad f(x_1)&lt; f(x_2).
+$">
+</DIV><P>
+</P>
+Slično, funkcija  <IMG
+ WIDTH="16" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img162.gif"
+ ALT="$ f$">
+ je <EM>padajuća</EM><A NAME="13084"></A> ili 
+<EM>silazna</EM><A NAME="13086"></A> na intervalu
+<!-- MATH
+ $\mathcal{A}\subseteq \mathcal{D}$
+ -->
+<IMG
+ WIDTH="58" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1413.gif"
+ ALT="$ \mathcal{A}\subseteq \mathcal{D}$">
+ ako 
+<P><!-- MATH
+ \begin{displaymath}
+( \forall x_1,x_2\in \mathcal{A})
+\quad x_1 < x_2 \quad \Rightarrow \quad f(x_1)\geq f(x_2),
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="368" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1416.gif"
+ ALT="$\displaystyle ( \forall x_1,x_2\in \mathcal{A})
+\quad x_1 &lt; x_2 \quad \Rightarrow \quad f(x_1)\geq f(x_2),
+$">
+</DIV><P>
+</P>
+a <EM>strogo padajuća</EM><A NAME="13090"></A> na intervalu
+<!-- MATH
+ $\mathcal{A}\subseteq \mathcal{D}$
+ -->
+<IMG
+ WIDTH="58" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1413.gif"
+ ALT="$ \mathcal{A}\subseteq \mathcal{D}$">
+ ako 
+<P><!-- MATH
+ \begin{displaymath}
+( \forall x_1,x_2\in \mathcal{A})
+\quad x_1 < x_2 \quad \Rightarrow \quad f(x_1) > f(x_2).
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="368" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1417.gif"
+ ALT="$\displaystyle ( \forall x_1,x_2\in \mathcal{A})
+\quad x_1 &lt; x_2 \quad \Rightarrow \quad f(x_1) &gt; f(x_2).
+$">
+</DIV><P>
+</P>
+Ako je <!-- MATH
+ $\mathcal{A} = \mathcal{D}$
+ -->
+<IMG
+ WIDTH="58" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1418.gif"
+ ALT="$ \mathcal{A} = \mathcal{D}$">
+ tada kažemo da je funkcija <IMG
+ WIDTH="16" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img162.gif"
+ ALT="$ f$">
+
+(strogo) rastuća ili padajuća bez navođenja skupa.
+
+<BR>
+Ako je funkcija (strogo) rastuća ili padajuća, još kažemo i da je
+(strogo) <EM>monotona</EM><A NAME="13095"></A>. 
+
+<BR>
+Funkcija je 
+<EM>po dijelovima monotona</EM><A NAME="13097"></A> 
+ako se područje definicije 
+<!-- MATH
+ $\mathcal{D}$
+ -->
+<IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1313.gif"
+ ALT="$ \mathcal{D}$">
+ može rastaviti na <U>konačno</U> mnogo podintervala takvih da
+je na svakom od njih funkcija monotona. </DIV><P></P>
+
+</div><p></p>
+<P>
+Na primjer, funkcija <IMG
+ WIDTH="25" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.gif"
+ ALT="$ \vert x\vert$">
+ je strogo padajuća na intervalu 
+<!-- MATH
+ $(-\infty,0]$
+ -->
+<IMG
+ WIDTH="66" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1419.gif"
+ ALT="$ (-\infty,0]$">
+ i strogo rastuća na intervalu <!-- MATH
+ $[0,\infty)$
+ -->
+<IMG
+ WIDTH="52" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1420.gif"
+ ALT="$ [0,\infty)$">
+, dakle po
+dijelovima strogo monotona.
+Konstantna funkcija <IMG
+ WIDTH="73" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1421.gif"
+ ALT="$ f(x)=2$">
+ (slika <A HREF="node84.html#fig:kon">4.17</A>) 
+je monotona i to istovremeno i rastuća i
+padajuća na čitavoj domeni (ali ne strogo). 
+
+<P>
+<div class="def"><P>
+<DIV><B>Definicija  4.4</B> &nbsp; <A NAME="f1.7"></A>Funkcija <IMG
+ WIDTH="16" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img162.gif"
+ ALT="$ f$">
+ je <EM>periodična</EM><A NAME="13104"></A> 
+ako postoji broj <IMG
+ WIDTH="52" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1422.gif"
+ ALT="$ P\neq 0$">
+ takav 
+da za svaki <!-- MATH
+ $x\in\mathcal{D}$
+ -->
+<IMG
+ WIDTH="52" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1329.gif"
+ ALT="$ x\in \mathcal{D}$">
+ vrijedi
+<P><!-- MATH
+ \begin{displaymath}
+f(x+P)=f(x).
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="140" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1423.gif"
+ ALT="$\displaystyle f(x+P)=f(x).
+$">
+</DIV><P>
+</P>
+Tada očito mora vrijediti <!-- MATH
+ $x+P\in\mathcal{D}$
+ -->
+<IMG
+ WIDTH="88" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1424.gif"
+ ALT="$ x+P\in\mathcal{D}$">
+. Najmanji pozitivni <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img729.gif"
+ ALT="$ P$">
+ s ovim 
+svojstvom
+zove se <EM>osnovni period</EM><A NAME="13106"></A> ili 
+<EM>period</EM><A NAME="13108"></A> funkcije <IMG
+ WIDTH="16" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img162.gif"
+ ALT="$ f$">
+.</DIV><P></P>
+
+</div><p></p>Primjeri periodičnih funkcija su 
+<A HREF="node91.html#sec:trig">trigonometrijske funkcije</A>.
+
+<P>
+<div class="pri"><P>
+<DIV><B>Primjer  4.5</B> &nbsp; <A NAME="f1.8"></A>Funkcija <EM>najveće cijelo</EM><A NAME="13115"></A>, 
+<!-- MATH
+ $[x]:\mathbb{R}\to \mathbb{Z}$
+ -->
+<IMG
+ WIDTH="93" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1425.gif"
+ ALT="$ [x]:\mathbb{R}\to \mathbb{Z}$">
+ je definirana s
+<P><!-- MATH
+ \begin{displaymath}
+[x]=k, \qquad k\leq x < k+1, \quad k\in \mathbb{Z}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="287" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1426.gif"
+ ALT="$\displaystyle [x]=k, \qquad k\leq x &lt; k+1, \quad k\in \mathbb{Z}.
+$">
+</DIV><P>
+</P>
+Definirajmo funkciju <!-- MATH
+ $f:\mathbb{R}\to\mathbb{R}$
+ -->
+<IMG
+ WIDTH="85" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1427.gif"
+ ALT="$ f:\mathbb{R}\to\mathbb{R}$">
+ s
+<P><!-- MATH
+ \begin{displaymath}
+f(x)=x-[x].
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="121" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1428.gif"
+ ALT="$\displaystyle f(x)=x-[x].
+$">
+</DIV><P>
+</P>
+Kako je <!-- MATH
+ $0\leq f(x)<1$
+ -->
+<IMG
+ WIDTH="106" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1429.gif"
+ ALT="$ 0\leq f(x)&lt;1$">
+, to je <!-- MATH
+ $R_{f}=[0,1)$
+ -->
+<IMG
+ WIDTH="90" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1430.gif"
+ ALT="$ R_{f}=[0,1)$">
+. Nadalje, za svaki
+<!-- MATH
+ $n\in\mathbb{N}$
+ -->
+<IMG
+ WIDTH="51" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img220.gif"
+ ALT="$ n\in \mathbb{N}$">
+ vrijedi
+<P><!-- MATH
+ \begin{displaymath}
+f(x+n)=x+n-[x+n]=x+n-([x]+n)=x+n-[x]-n=x-[x]=f(x)
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="645" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1431.gif"
+ ALT="$\displaystyle f(x+n)=x+n-[x+n]=x+n-([x]+n)=x+n-[x]-n=x-[x]=f(x)
+$">
+</DIV><P>
+</P>
+pa je <IMG
+ WIDTH="16" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img162.gif"
+ ALT="$ f$">
+ periodična funkcija s osnovnim periodom <IMG
+ WIDTH="52" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1432.gif"
+ ALT="$ P=1$">
+.</DIV><P></P>
+
+</div><p></p>
+<P>
+<div class="zad"><P>
+<DIV><B>Zadatak  4.4</B> &nbsp; Nacrtajte funkcije <IMG
+ WIDTH="25" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1433.gif"
+ ALT="$ [x]$">
+ i <IMG
+ WIDTH="16" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img162.gif"
+ ALT="$ f$">
+ iz primjera <A HREF="#f1.8">4.5</A>.</DIV><P></P>
+
+</div><p></p>
+<P>
+<p><HR></p>
+<arrow class=left> </arrow> <A NAME="tex2html1085"
+  HREF="node72.html">Parametarsko zadavanje</A> &nbsp; &nbsp;
+<arrow class=up> </arrow> <A NAME="tex2html1091"
+  HREF="node67.html">FUNKCIJE REALNE VARIJABLE</A> &nbsp; &nbsp;
+<arrow class=right> </arrow> <A NAME="tex2html1093"
+  HREF="node74.html">Limes</A>  
+
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

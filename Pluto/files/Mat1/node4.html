@@ -1,0 +1,1256 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2012 (1.2)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-2382574370068590",
+    enable_page_level_ads: true
+  });
+</script>
+<TITLE>Osnove matematičke logike</TITLE>
+<META NAME="description" CONTENT="Osnove matematičke logike">
+<META NAME="keywords" CONTENT="predavanja">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2012">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="predavanja.css">
+
+<LINK REL="next" HREF="node5.html">
+<LINK REL="previous" HREF="node3.html">
+<LINK REL="up" HREF="node3.html">
+<LINK REL="next" HREF="node5.html">
+</HEAD>
+
+<BODY >
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="shortcut icon" href="favicon.ico"/>
+
+<style>
+.sidenav {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 50px;
+}
+
+div.sidenav a {
+    padding: 8px 8px 8px 10px;
+    text-decoration: none;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    display: block;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dropdown-btn {
+    padding: 8px 8px 8px 8px;
+    text-decoration: none; 
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s;
+}
+
+
+.sidenav a:hover, .dropdown-btn:hover {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #C00;
+}
+
+.menu2 {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    font-style:italic;
+}
+
+.dropdown-container {
+  display: none;
+  font-family: 'Open Sans',sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #ddd;
+  padding-left: 8px;
+}
+
+.dropdown-container a:hover {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    background-color: #ccc;
+}
+
+.sidenav .active {
+    background-color: #C00;
+    color: white;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+hr { 
+    display: block;
+    margin-top: 0.2em;
+    margin-bottom: 0.4em;
+    margin-left: -5px;
+    margin-right: -5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color:#ec971f;
+} 
+  
+.caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 20px;
+    vertical-align: middle;
+    border-top: 5px dashed;
+        border-top-width: 5px;
+        border-top-style: dashed;
+        border-top-color: currentcolor;
+    border-right: 5px solid transparent;
+        border-right-width: 5px;
+        border-right-style: solid;
+        border-right-color: transparent;
+    border-left: 5px solid transparent;
+        border-left-width: 5px;
+        border-left-style: solid;
+        border-left-color: transparent;
+}
+
+</style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- First -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2382574370068590"
+     data-ad-slot="8207843721"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<script>
+   // alert('|ivan'+document.getElementById("mys-content").innerHTML+'|') 
+//    alert(typeof(window.CustomEvent))
+//    if(typeof(window.CustomEvent)=="undefined")
+// {
+//     document.display = 'none';
+// } 
+</script>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" 
+  onclick="closeNav()"
+  style="font-size:24px;cursor:pointer;color:#000;position: absolute; top: 0;
+    right: 10px; font-size: 24px; margin-left: 50px;">&nbsp; &times; &nbsp;</a>
+  <a href="/matematika1/index.html">HOME</a>
+  <button href="/matematika1/predavanja" class="dropdown-btn">PREDAVANJA
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/predavanja/predavanja.html">SADRŽAJ</a>
+      <a href="/matematika1/predavanja/node3.html">OSNOVE</a>
+      <a href="/matematika1/predavanja/node22.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/predavanja/node47.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/predavanja/node67.html">FUNKCIJE</a>
+      <a href="/matematika1/predavanja/node98.html">DERIVACIJE</a>
+      <a href="/matematika1/predavanja/node125.html">NIZOVI I REDOVI</a>
+      <a href="/matematika1/predavanja/node144.html">INDEKS</a>
+    </div>
+  <button href="/matematika1/vjezbe" class="dropdown-btn">VJEŽBE
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/vjezbe/vjezbe.html">SADRŽAJ</a>
+      <a href="/matematika1/vjezbe/node2.html">OSNOVE</a>
+      <a href="/matematika1/vjezbe/node24.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/vjezbe/node55.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/vjezbe/node87.html">FUNKCIJE</a>
+      <a href="/matematika1/vjezbe/node110.html">DERIVACIJE</a>
+      <a href="/matematika1/vjezbe/node136.html">NIZOVI I REDOVI</a>
+    </div>
+  <button href="/matematika1/kviz" class="dropdown-btn">KVIZ
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/kviz/index.html">SADRŽAJ</a>
+      <a href="/matematika1/kviz/osnove/">OSNOVE</a>
+      <a href="/matematika1/kviz/algebra/">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/kviz/vektori/">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/kviz/funkcije/">FUNKCIJE</a>
+      <a href="/matematika1/kviz/derivacije/">DERIVACIJE</a>
+      <a href="/matematika1/kviz/nizovi/">NIZOVI I REDOVI</a>
+    </div>
+  <button href="/matematika1/podsjetnik" class="dropdown-btn">PODSJETNIK
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/podsjetnik/podsjetnik.html">SADRŽAJ</a>
+      <a href="/matematika1/podsjetnik/node1.html">OSNOVE</a>
+      <a href="/matematika1/podsjetnik/node2.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/podsjetnik/node3.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/podsjetnik/node4.html">FUNKCIJE</a>
+      <a href="/matematika1/podsjetnik/node5.html">DERIVACIJE</a>
+      <a href="/matematika1/podsjetnik/node6.html">NIZOVI I REDOVI</a>
+    </div>
+  <!--<a href="/matematika1/kviz">Kviz</a>-->
+  <a href="/matematika1/java">JAVA</a>
+  <a href="http://lavica.fesb.unist.hr/netplot"  class="menu2">NETPLOT</a>
+  <!-- <a href="/matematika1/gauss"  class="menu2">GAUSS</a> -->
+  <a href="http://lavica.fesb.unist.hr/octave/ool_hr.php"  class="menu2">OCTAVE</a>
+  <a href="/matematika1/search.html">Traži ...</a>
+</div>
+
+<span style="font-size:24px;font-family:'Open Sans', sans-serif;cursor:pointer;color:#ec971f"
+      onclick="openNav()">&#9776;</span> &nbsp; 
+<span style="font-size:30px;cursor:pointer;color:#888;font-family:'Opens Sans',sans-serif;"
+      onclick="window.location.assign('../index.html')">
+<font style="color:#C00">m</font>atematika<font style="color:#C00;vertical-align:super;margin-left:2px;font-size:24px;">1</font></span>
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "300px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+
+</script>     
+<hr>
+
+
+
+
+<arrow class=left> </arrow> <A NAME="tex2html318"
+  HREF="node3.html">OSNOVE MATEMATIKE</A> &nbsp; &nbsp;
+<arrow class=up> </arrow> <A NAME="tex2html324"
+  HREF="node3.html">OSNOVE MATEMATIKE</A> &nbsp; &nbsp;
+<arrow class=right> </arrow> <A NAME="tex2html326"
+  HREF="node5.html">Binarne relacije</A>
+
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00310000000000000000"></A>
+<A NAME="sec:osn"></A>
+<BR>
+Osnove matematičke logike
+</H1>
+
+<P>
+U ovom poglavlju definirat ćemo pojam suda, osnovne operacije sa
+sudovima, pojam predikata te vrste kvantifikatora.
+
+<P>
+<div class="def"><P>
+<DIV><B>Definicija  1.1</B> &nbsp; <A NAME="o1.1"></A><EM>Sud</EM><A NAME="355"></A> 
+je svaka smislena izjava koja može biti samo istinita ili
+neistinita, odnosno lažna.</DIV><P></P>
+
+</div><p></p>
+<P>
+<div class="pri"><P>
+<DIV><B>Primjer  1.1</B> &nbsp; <A NAME="o1.2"></A><EM>''Je li danas četvrtak?''</EM>
+ nije sud nego pitanje.
+<EM>''Jutro je pametnije od večeri''</EM> nema smisla kao izjava, osim
+u prenesenom značenju, pa nije sud.
+<EM>''Danas je četvrtak''</EM> je sud koji je istinit ili neistinit, već
+prema danu u kojem se izgovara. 
+<EM>''Svaki brod je jedrenjak''</EM> je neistinit sud.</DIV><P></P>
+
+</div><p></p>
+<P>
+Istinitost<A NAME="364"></A> 
+suda <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img27.gif"
+ ALT="$ A$">
+ označimo s <IMG
+ WIDTH="42" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img28.gif"
+ ALT="$ \tau(A)$">
+. Pri tome <!-- MATH
+ $\tau(A)=\top$
+ -->
+<IMG
+ WIDTH="80" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img29.gif"
+ ALT="$ \tau(A)=\top$">
+
+znači <EM><IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img27.gif"
+ ALT="$ A$">
+ je istinit</EM>, a <!-- MATH
+ $\tau(A)=\bot$
+ -->
+<IMG
+ WIDTH="80" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img30.gif"
+ ALT="$ \tau(A)=\bot$">
+ znači <EM><IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img27.gif"
+ ALT="$ A$">
+ je
+  neistinit</EM>. Osnovne operacije sa sudovima i njihove tablice
+istinitosti su:
+
+<UL>
+<LI><EM>konjunkcija</EM><A NAME="369"></A>, 
+<IMG
+ WIDTH="53" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img31.gif"
+ ALT="$ A\wedge B$">
+<A NAME="370"></A>, [<EM><IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img27.gif"
+ ALT="$ A$">
+ i <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img33.gif"
+ ALT="$ B$">
+</EM>],
+<DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3 BORDER="1">
+<TR><TD ALIGN="CENTER"><IMG
+ WIDTH="42" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img28.gif"
+ ALT="$ \tau(A)$">
+</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="43" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img34.gif"
+ ALT="$ \tau(B)$">
+</TD>
+<TD ALIGN="CENTER"><!-- MATH
+ $\tau(A\wedge B)$
+ -->
+<IMG
+ WIDTH="77" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img35.gif"
+ ALT="$ \tau(A\wedge B)$">
+</TD>
+</TR>
+<TR><TD ALIGN="CENTER"><IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img36.gif"
+ ALT="$ \top$">
+</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img36.gif"
+ ALT="$ \top$">
+</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img36.gif"
+ ALT="$ \top$">
+</TD>
+</TR>
+<TR><TD ALIGN="CENTER"><IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img36.gif"
+ ALT="$ \top$">
+</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img37.gif"
+ ALT="$ \bot$">
+</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img37.gif"
+ ALT="$ \bot$">
+</TD>
+</TR>
+<TR><TD ALIGN="CENTER"><IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img37.gif"
+ ALT="$ \bot$">
+</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img36.gif"
+ ALT="$ \top$">
+</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img37.gif"
+ ALT="$ \bot$">
+</TD>
+</TR>
+<TR><TD ALIGN="CENTER"><IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img37.gif"
+ ALT="$ \bot$">
+</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img37.gif"
+ ALT="$ \bot$">
+</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img37.gif"
+ ALT="$ \bot$">
+</TD>
+</TR>
+</TABLE> 
+</DIV>
+</LI>
+<LI><EM>disjunkcija</EM><A NAME="378"></A>,  
+<IMG
+ WIDTH="53" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img38.gif"
+ ALT="$ A\vee B$">
+<A NAME="379"></A>, [<EM><IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img27.gif"
+ ALT="$ A$">
+ ili <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img33.gif"
+ ALT="$ B$">
+</EM>],
+<DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3 BORDER="1">
+<TR><TD ALIGN="CENTER"><IMG
+ WIDTH="42" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img28.gif"
+ ALT="$ \tau(A)$">
+</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="43" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img34.gif"
+ ALT="$ \tau(B)$">
+</TD>
+<TD ALIGN="CENTER"><!-- MATH
+ $\tau(A\vee B)$
+ -->
+<IMG
+ WIDTH="77" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img40.gif"
+ ALT="$ \tau(A\vee B)$">
+</TD>
+</TR>
+<TR><TD ALIGN="CENTER"><IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img36.gif"
+ ALT="$ \top$">
+</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img36.gif"
+ ALT="$ \top$">
+</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img36.gif"
+ ALT="$ \top$">
+</TD>
+</TR>
+<TR><TD ALIGN="CENTER"><IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img36.gif"
+ ALT="$ \top$">
+</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img37.gif"
+ ALT="$ \bot$">
+</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img36.gif"
+ ALT="$ \top$">
+</TD>
+</TR>
+<TR><TD ALIGN="CENTER"><IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img37.gif"
+ ALT="$ \bot$">
+</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img36.gif"
+ ALT="$ \top$">
+</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img36.gif"
+ ALT="$ \top$">
+</TD>
+</TR>
+<TR><TD ALIGN="CENTER"><IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img37.gif"
+ ALT="$ \bot$">
+</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img37.gif"
+ ALT="$ \bot$">
+</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img37.gif"
+ ALT="$ \bot$">
+</TD>
+</TR>
+</TABLE> 
+</DIV>
+</LI>
+<LI><EM>ekskluzivna disjunkcija</EM><A NAME="387"></A>, 
+<!-- MATH
+ $A\veebar B$
+ -->
+<IMG
+ WIDTH="52" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img41.gif"
+ ALT="$ A\veebar B$">
+<A NAME="388"></A>, 
+[<EM>ili <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img27.gif"
+ ALT="$ A$">
+ ili <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img33.gif"
+ ALT="$ B$">
+</EM>],
+<DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3 BORDER="1">
+<TR><TD ALIGN="CENTER"><IMG
+ WIDTH="42" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img28.gif"
+ ALT="$ \tau(A)$">
+</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="43" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img34.gif"
+ ALT="$ \tau(B)$">
+</TD>
+<TD ALIGN="CENTER"><!-- MATH
+ $\tau(A\veebar B)$
+ -->
+<IMG
+ WIDTH="76" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img43.gif"
+ ALT="$ \tau(A\veebar B)$">
+</TD>
+</TR>
+<TR><TD ALIGN="CENTER"><IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img36.gif"
+ ALT="$ \top$">
+</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img36.gif"
+ ALT="$ \top$">
+</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img37.gif"
+ ALT="$ \bot$">
+</TD>
+</TR>
+<TR><TD ALIGN="CENTER"><IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img36.gif"
+ ALT="$ \top$">
+</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img37.gif"
+ ALT="$ \bot$">
+</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img36.gif"
+ ALT="$ \top$">
+</TD>
+</TR>
+<TR><TD ALIGN="CENTER"><IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img37.gif"
+ ALT="$ \bot$">
+</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img36.gif"
+ ALT="$ \top$">
+</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img36.gif"
+ ALT="$ \top$">
+</TD>
+</TR>
+<TR><TD ALIGN="CENTER"><IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img37.gif"
+ ALT="$ \bot$">
+</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img37.gif"
+ ALT="$ \bot$">
+</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img37.gif"
+ ALT="$ \bot$">
+</TD>
+</TR>
+</TABLE> 
+</DIV>
+</LI>
+<LI><EM>implikacija</EM><A NAME="396"></A>, <!-- MATH
+ $A\Rightarrow B$
+ -->
+<IMG
+ WIDTH="61" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img44.gif"
+ ALT="$ A\Rightarrow B$">
+, 
+[<EM><IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img27.gif"
+ ALT="$ A$">
+ povlači <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img33.gif"
+ ALT="$ B$">
+; iz <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img27.gif"
+ ALT="$ A$">
+ slijedi <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img33.gif"
+ ALT="$ B$">
+; <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img27.gif"
+ ALT="$ A$">
+ je dovoljan
+  uvjet<A NAME="397"></A>
+za <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img33.gif"
+ ALT="$ B$">
+; <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img33.gif"
+ ALT="$ B$">
+ je nužan uvjet<A NAME="398"></A> za <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img27.gif"
+ ALT="$ A$">
+</EM>], 
+<DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3 BORDER="1">
+<TR><TD ALIGN="CENTER"><IMG
+ WIDTH="42" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img28.gif"
+ ALT="$ \tau(A)$">
+</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="43" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img34.gif"
+ ALT="$ \tau(B)$">
+</TD>
+<TD ALIGN="CENTER"><!-- MATH
+ $\tau(A\Rightarrow B)$
+ -->
+<IMG
+ WIDTH="85" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img45.gif"
+ ALT="$ \tau(A\Rightarrow B)$">
+</TD>
+</TR>
+<TR><TD ALIGN="CENTER"><IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img36.gif"
+ ALT="$ \top$">
+</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img36.gif"
+ ALT="$ \top$">
+</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img36.gif"
+ ALT="$ \top$">
+</TD>
+</TR>
+<TR><TD ALIGN="CENTER"><IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img36.gif"
+ ALT="$ \top$">
+</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img37.gif"
+ ALT="$ \bot$">
+</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img37.gif"
+ ALT="$ \bot$">
+</TD>
+</TR>
+<TR><TD ALIGN="CENTER"><IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img37.gif"
+ ALT="$ \bot$">
+</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img36.gif"
+ ALT="$ \top$">
+</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img36.gif"
+ ALT="$ \top$">
+</TD>
+</TR>
+<TR><TD ALIGN="CENTER"><IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img37.gif"
+ ALT="$ \bot$">
+</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img37.gif"
+ ALT="$ \bot$">
+</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img36.gif"
+ ALT="$ \top$">
+</TD>
+</TR>
+</TABLE> 
+</DIV>
+</LI>
+<LI><EM>ekvivalencija</EM><A NAME="405"></A>, 
+<!-- MATH
+ $A\Leftrightarrow B$
+ -->
+<IMG
+ WIDTH="61" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img46.gif"
+ ALT="$ A\Leftrightarrow B$">
+<A NAME="406"></A>,
+[<EM><IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img27.gif"
+ ALT="$ A$">
+ je ekvivalentno s  <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img33.gif"
+ ALT="$ B$">
+; <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img27.gif"
+ ALT="$ A$">
+ je ako i samo ako je <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img33.gif"
+ ALT="$ B$">
+;
+<IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img27.gif"
+ ALT="$ A$">
+ je nužan i dovoljan uvjet za <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img33.gif"
+ ALT="$ B$">
+</EM>], 
+<DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3 BORDER="1">
+<TR><TD ALIGN="CENTER"><IMG
+ WIDTH="42" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img28.gif"
+ ALT="$ \tau(A)$">
+</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="43" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img34.gif"
+ ALT="$ \tau(B)$">
+</TD>
+<TD ALIGN="CENTER"><!-- MATH
+ $\tau(A\Leftrightarrow B)$
+ -->
+<IMG
+ WIDTH="85" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img48.gif"
+ ALT="$ \tau(A\Leftrightarrow B)$">
+</TD>
+</TR>
+<TR><TD ALIGN="CENTER"><IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img36.gif"
+ ALT="$ \top$">
+</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img36.gif"
+ ALT="$ \top$">
+</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img36.gif"
+ ALT="$ \top$">
+</TD>
+</TR>
+<TR><TD ALIGN="CENTER"><IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img36.gif"
+ ALT="$ \top$">
+</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img37.gif"
+ ALT="$ \bot$">
+</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img37.gif"
+ ALT="$ \bot$">
+</TD>
+</TR>
+<TR><TD ALIGN="CENTER"><IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img37.gif"
+ ALT="$ \bot$">
+</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img36.gif"
+ ALT="$ \top$">
+</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img37.gif"
+ ALT="$ \bot$">
+</TD>
+</TR>
+<TR><TD ALIGN="CENTER"><IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img37.gif"
+ ALT="$ \bot$">
+</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img37.gif"
+ ALT="$ \bot$">
+</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img36.gif"
+ ALT="$ \top$">
+</TD>
+</TR>
+</TABLE> 
+</DIV>
+</LI>
+<LI><EM>negacija</EM><A NAME="414"></A>,  <IMG
+ WIDTH="30" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img49.gif"
+ ALT="$ \neg A$">
+<A NAME="415"></A>, 
+[<EM>ne <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img27.gif"
+ ALT="$ A$">
+; non <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img27.gif"
+ ALT="$ A$">
+</EM>], 
+<DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3 BORDER="1">
+<TR><TD ALIGN="CENTER"><IMG
+ WIDTH="42" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img28.gif"
+ ALT="$ \tau(A)$">
+</TD>
+<TD ALIGN="CENTER"><!-- MATH
+ $\tau(\neg A)$
+ -->
+<IMG
+ WIDTH="54" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img51.gif"
+ ALT="$ \tau(\neg A)$">
+</TD>
+</TR>
+<TR><TD ALIGN="CENTER"><IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img36.gif"
+ ALT="$ \top$">
+</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img37.gif"
+ ALT="$ \bot$">
+</TD>
+</TR>
+<TR><TD ALIGN="CENTER"><IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img37.gif"
+ ALT="$ \bot$">
+</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img36.gif"
+ ALT="$ \top$">
+</TD>
+</TR>
+</TABLE>
+</DIV>
+</LI>
+</UL>
+
+<P>
+Za sudove <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img27.gif"
+ ALT="$ A$">
+, <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img33.gif"
+ ALT="$ B$">
+ i <IMG
+ WIDTH="19" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img52.gif"
+ ALT="$ C$">
+ vrijede <EM>DeMorganovi
+  zakoni</EM><A NAME="424"></A>,
+<P></P>
+<DIV ALIGN="CENTER"><TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="79" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img53.gif"
+ ALT="$\displaystyle \neg (A\wedge B)$"></TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="101" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img54.gif"
+ ALT="$\displaystyle =\neg A \vee \neg B,$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="79" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img55.gif"
+ ALT="$\displaystyle \neg (A\vee B)$"></TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="101" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img56.gif"
+ ALT="$\displaystyle =\neg A \wedge \neg B,$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+i <EM>zakoni distribucije</EM><A NAME="428"></A>,
+<P></P>
+<DIV ALIGN="CENTER"><TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="101" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img57.gif"
+ ALT="$\displaystyle A \wedge (B\vee C)$"></TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="173" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img58.gif"
+ ALT="$\displaystyle =(A\wedge B) \vee (A\wedge C),$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="101" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.gif"
+ ALT="$\displaystyle A \vee (B\wedge C)$"></TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="173" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img60.gif"
+ ALT="$\displaystyle =(A\vee B) \wedge (A\vee C).$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+<P>
+<div class="zad"><P>
+<DIV><B>Zadatak  1.1</B> &nbsp; <A NAME="o1.2a"></A>Dajte primjere za osnovne operacije sa sudovima i protumačite
+tablice istinitosti. Dajte primjere za DeMorganove zakone i zakone 
+distribucije. </DIV><P></P>
+
+</div><p></p>
+<P>
+<div class="def"><P>
+<DIV><B>Definicija  1.2</B> &nbsp; <A NAME="o1.3"></A><EM>Otvorena rečenica</EM><A NAME="437"></A> ili 
+<EM>predikat</EM><A NAME="439"></A> je izjavna rečenica koja 
+sadrži parametre i koja postaje sud kada
+parametri poprime određenu vrijednost.</DIV><P></P>
+
+</div><p></p>
+<P>
+Na primjer, predikat <EM><IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img21.gif"
+ ALT="$ x$">
+ je rođen prije <IMG
+ WIDTH="14" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img22.gif"
+ ALT="$ y$">
+</EM> postaje sud kada su <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img21.gif"
+ ALT="$ x$">
+
+i <IMG
+ WIDTH="14" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img22.gif"
+ ALT="$ y$">
+ dvije osobe. Predikat s dvije varijable označavamo s <IMG
+ WIDTH="61" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img61.gif"
+ ALT="$ P(x,y)$">
+.
+
+<P>
+Kod izražavanja pomoću predikata koristimo <EM>kvantifikatore</EM>: 
+
+<UL>
+<LI><EM>univerzalni</EM><A NAME="445"></A>, 
+<!-- MATH
+ $(\forall x) P(x)$
+ -->
+<IMG
+ WIDTH="78" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img62.gif"
+ ALT="$ (\forall x) P(x)$">
+<A NAME="446"></A>, odnosno <EM>za svaki <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img21.gif"
+ ALT="$ x$">
+ je
+    <IMG
+ WIDTH="43" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img64.gif"
+ ALT="$ P(x)$">
+</EM>, i 
+</LI>
+<LI><EM>egzistencijalni</EM><A NAME="449"></A>, 
+<!-- MATH
+ $(\exists x) P(x)$
+ -->
+<IMG
+ WIDTH="78" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img65.gif"
+ ALT="$ (\exists x) P(x)$">
+<A NAME="450"></A>, odnosno <EM>postoji <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img21.gif"
+ ALT="$ x$">
+
+    takav da je <IMG
+ WIDTH="43" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img64.gif"
+ ALT="$ P(x)$">
+</EM> te <!-- MATH
+ $(\exists! x) P(x)$
+ -->
+<IMG
+ WIDTH="82" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img67.gif"
+ ALT="$ (\exists! x) P(x)$">
+, odnosno <EM>postoji
+    točno jedan <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img21.gif"
+ ALT="$ x$">
+ takav da je <IMG
+ WIDTH="43" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img64.gif"
+ ALT="$ P(x)$">
+</EM>.
+</LI>
+</UL>
+
+<P>
+<div class="pri"><P>
+<DIV><B>Primjer  1.2</B> &nbsp; <A NAME="o1.5"></A>  <DL COMPACT>
+<DT>a)</DT>
+<DD>Neka je <!-- MATH
+ $P(x,y)=x \textit{ je rođen prije } y$
+ -->
+<IMG
+ WIDTH="224" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img68.gif"
+ ALT="$ P(x,y)=x \textit{ je rođen prije } y$">
+. Tada vrijedi
+    <P></P>
+<DIV ALIGN="CENTER"><TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="209" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img69.gif"
+ ALT="$\displaystyle \tau[ (\forall x)(\exists y) \quad P(x,y)]=\top,$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="209" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img70.gif"
+ ALT="$\displaystyle \tau[ (\forall y)(\exists x) \quad P(x,y)]=\top,$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="214" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.gif"
+ ALT="$\displaystyle \tau[ (\forall y)(\exists! x) \quad P(x,y)]=\bot.$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+</DD>
+<DT>b)</DT>
+<DD>Neka <IMG
+ WIDTH="43" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img64.gif"
+ ALT="$ P(x)$">
+ glasi <IMG
+ WIDTH="56" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img72.gif"
+ ALT="$ x^2=4$">
+. Tada vrijedi 
+    <P></P>
+<DIV ALIGN="CENTER"><TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="193" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img73.gif"
+ ALT="$\displaystyle \tau[ (\forall x\in \mathbb{R}) \quad P(x)]=\bot,$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="193" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img74.gif"
+ ALT="$\displaystyle \tau[ (\exists x\in \mathbb{R}) \quad P(x)]=\top,$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="198" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img75.gif"
+ ALT="$\displaystyle \tau[ (\exists! x\in \mathbb{R}) \quad P(x)]=\bot,$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="198" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img76.gif"
+ ALT="$\displaystyle \tau[ (\exists! x\in \mathbb{N}) \quad P(x)]=\top.$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+</DD>
+</DL></DIV><P></P>
+
+</div><p></p>
+<P>
+<p><HR></p>
+<arrow class=left> </arrow> <A NAME="tex2html318"
+  HREF="node3.html">OSNOVE MATEMATIKE</A> &nbsp; &nbsp;
+<arrow class=up> </arrow> <A NAME="tex2html324"
+  HREF="node3.html">OSNOVE MATEMATIKE</A> &nbsp; &nbsp;
+<arrow class=right> </arrow> <A NAME="tex2html326"
+  HREF="node5.html">Binarne relacije</A>  
+
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

@@ -1,0 +1,1295 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2012 (1.2)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-2382574370068590",
+    enable_page_level_ads: true
+  });
+</script>
+<TITLE>Rješavanje električne mreže</TITLE>
+<META NAME="description" CONTENT="Rješavanje električne mreže">
+<META NAME="keywords" CONTENT="predavanja">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2012">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="predavanja.css">
+
+<LINK REL="previous" HREF="node40.html">
+<LINK REL="up" HREF="node22.html">
+<LINK REL="next" HREF="node47.html">
+</HEAD>
+
+<BODY >
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="shortcut icon" href="favicon.ico"/>
+
+<style>
+.sidenav {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 50px;
+}
+
+div.sidenav a {
+    padding: 8px 8px 8px 10px;
+    text-decoration: none;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    display: block;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dropdown-btn {
+    padding: 8px 8px 8px 8px;
+    text-decoration: none; 
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s;
+}
+
+
+.sidenav a:hover, .dropdown-btn:hover {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #C00;
+}
+
+.menu2 {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    font-style:italic;
+}
+
+.dropdown-container {
+  display: none;
+  font-family: 'Open Sans',sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #ddd;
+  padding-left: 8px;
+}
+
+.dropdown-container a:hover {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    background-color: #ccc;
+}
+
+.sidenav .active {
+    background-color: #C00;
+    color: white;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+hr { 
+    display: block;
+    margin-top: 0.2em;
+    margin-bottom: 0.4em;
+    margin-left: -5px;
+    margin-right: -5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color:#ec971f;
+} 
+  
+.caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 20px;
+    vertical-align: middle;
+    border-top: 5px dashed;
+        border-top-width: 5px;
+        border-top-style: dashed;
+        border-top-color: currentcolor;
+    border-right: 5px solid transparent;
+        border-right-width: 5px;
+        border-right-style: solid;
+        border-right-color: transparent;
+    border-left: 5px solid transparent;
+        border-left-width: 5px;
+        border-left-style: solid;
+        border-left-color: transparent;
+}
+
+</style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- First -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2382574370068590"
+     data-ad-slot="8207843721"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<script>
+   // alert('|ivan'+document.getElementById("mys-content").innerHTML+'|') 
+//    alert(typeof(window.CustomEvent))
+//    if(typeof(window.CustomEvent)=="undefined")
+// {
+//     document.display = 'none';
+// } 
+</script>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" 
+  onclick="closeNav()"
+  style="font-size:24px;cursor:pointer;color:#000;position: absolute; top: 0;
+    right: 10px; font-size: 24px; margin-left: 50px;">&nbsp; &times; &nbsp;</a>
+  <a href="/matematika1/index.html">HOME</a>
+  <button href="/matematika1/predavanja" class="dropdown-btn">PREDAVANJA
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/predavanja/predavanja.html">SADRŽAJ</a>
+      <a href="/matematika1/predavanja/node3.html">OSNOVE</a>
+      <a href="/matematika1/predavanja/node22.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/predavanja/node47.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/predavanja/node67.html">FUNKCIJE</a>
+      <a href="/matematika1/predavanja/node98.html">DERIVACIJE</a>
+      <a href="/matematika1/predavanja/node125.html">NIZOVI I REDOVI</a>
+      <a href="/matematika1/predavanja/node144.html">INDEKS</a>
+    </div>
+  <button href="/matematika1/vjezbe" class="dropdown-btn">VJEŽBE
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/vjezbe/vjezbe.html">SADRŽAJ</a>
+      <a href="/matematika1/vjezbe/node2.html">OSNOVE</a>
+      <a href="/matematika1/vjezbe/node24.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/vjezbe/node55.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/vjezbe/node87.html">FUNKCIJE</a>
+      <a href="/matematika1/vjezbe/node110.html">DERIVACIJE</a>
+      <a href="/matematika1/vjezbe/node136.html">NIZOVI I REDOVI</a>
+    </div>
+  <button href="/matematika1/kviz" class="dropdown-btn">KVIZ
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/kviz/index.html">SADRŽAJ</a>
+      <a href="/matematika1/kviz/osnove/">OSNOVE</a>
+      <a href="/matematika1/kviz/algebra/">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/kviz/vektori/">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/kviz/funkcije/">FUNKCIJE</a>
+      <a href="/matematika1/kviz/derivacije/">DERIVACIJE</a>
+      <a href="/matematika1/kviz/nizovi/">NIZOVI I REDOVI</a>
+    </div>
+  <button href="/matematika1/podsjetnik" class="dropdown-btn">PODSJETNIK
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/podsjetnik/podsjetnik.html">SADRŽAJ</a>
+      <a href="/matematika1/podsjetnik/node1.html">OSNOVE</a>
+      <a href="/matematika1/podsjetnik/node2.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/podsjetnik/node3.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/podsjetnik/node4.html">FUNKCIJE</a>
+      <a href="/matematika1/podsjetnik/node5.html">DERIVACIJE</a>
+      <a href="/matematika1/podsjetnik/node6.html">NIZOVI I REDOVI</a>
+    </div>
+  <!--<a href="/matematika1/kviz">Kviz</a>-->
+  <a href="/matematika1/java">JAVA</a>
+  <a href="http://lavica.fesb.unist.hr/netplot"  class="menu2">NETPLOT</a>
+  <!-- <a href="/matematika1/gauss"  class="menu2">GAUSS</a> -->
+  <a href="http://lavica.fesb.unist.hr/octave/ool_hr.php"  class="menu2">OCTAVE</a>
+  <a href="/matematika1/search.html">Traži ...</a>
+</div>
+
+<span style="font-size:24px;font-family:'Open Sans', sans-serif;cursor:pointer;color:#ec971f"
+      onclick="openNav()">&#9776;</span> &nbsp; 
+<span style="font-size:30px;cursor:pointer;color:#888;font-family:'Opens Sans',sans-serif;"
+      onclick="window.location.assign('../index.html')">
+<font style="color:#C00">m</font>atematika<font style="color:#C00;vertical-align:super;margin-left:2px;font-size:24px;">1</font></span>
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "300px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+
+</script>     
+<hr>
+
+
+
+
+<arrow class=left> </arrow> <A NAME="tex2html768"
+  HREF="node45.html">Cramerovo pravilo</A> &nbsp; &nbsp;
+<arrow class=up> </arrow> <A NAME="tex2html772"
+  HREF="node22.html">LINEARNA ALGEBRA</A> &nbsp; &nbsp;
+<arrow class=right> </arrow> <A NAME="tex2html774"
+  HREF="node47.html">VEKTORSKA ALGEBRA I ANALITIČKA</A>
+
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION004100000000000000000"></A>
+<A NAME="sec:mreza"></A>
+<BR>
+Rješavanje električne mreže
+</H1>
+
+<P>
+U ovom poglavlju pokazat ćemo kako se pomoću matričnog računa mogu
+rješavati električne mreže. Zanimljivo ja da se u tom postupku koriste 
+mnoga svojstva matrica i sustava jednadžbi koja smo opisali u
+prethodnim poglavljima. Stoga praćenje primjera nije jednostavno i
+zahtijeva odlično poznavanje prethodnih poglavlja.
+
+<P>
+Promotrimo mrežu prikazanu na slici <A HREF="#fig:mreza">2.2</A><A NAME="tex2html10"
+  HREF="footnode.html#foot6973"><SUP>2.1</SUP></A>.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:mreza"></A><A NAME="7142"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Slika 2.2:</STRONG>
+Električna mreža</CAPTION>
+<TR><TD><IMG
+ WIDTH="381" HEIGHT="262" BORDER="0"
+ SRC="img896.gif"
+ ALT="\begin{figure}\begin{center}
+\leavevmode
+\epsfig{file=slike/mreza.eps,width=9.6cm}
+\end{center}\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+Grane mreže su označene s brojevima od <IMG
+ WIDTH="14" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img536.gif"
+ ALT="$ 1$">
+ do <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img897.gif"
+ ALT="$ 7$">
+, a čvorovi mreže 
+s brojevima od <IMG
+ WIDTH="14" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img536.gif"
+ ALT="$ 1$">
+ do <IMG
+ WIDTH="14" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img898.gif"
+ ALT="$ 4$">
+. Grana <IMG
+ WIDTH="15" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img264.gif"
+ ALT="$ k$">
+ se sastoji od serijskog spoja
+otpora <IMG
+ WIDTH="27" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img899.gif"
+ ALT="$ R_k$">
+ i naponskog izvora <IMG
+ WIDTH="26" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img900.gif"
+ ALT="$ U_k$">
+, a kroz granu
+teče struja <IMG
+ WIDTH="22" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img901.gif"
+ ALT="$ I_k$">
+ (vidi Sliku <A HREF="#fig:grana">2.3</A>).
+Čvor <IMG
+ WIDTH="11" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img407.gif"
+ ALT="$ i$">
+ ima napon (potencijal)  <IMG
+ WIDTH="21" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img902.gif"
+ ALT="$ V_i$">
+.
+Naš zadatak je izračunati struje <IMG
+ WIDTH="22" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img901.gif"
+ ALT="$ I_k$">
+ ako znamo otpore <IMG
+ WIDTH="27" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img899.gif"
+ ALT="$ R_k$">
+ i 
+naponske izvore <IMG
+ WIDTH="26" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img900.gif"
+ ALT="$ U_k$">
+. 
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:grana"></A><A NAME="6985"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Slika 2.3:</STRONG>
+Standardna grana mreže</CAPTION>
+<TR><TD><IMG
+ WIDTH="381" HEIGHT="93" BORDER="0"
+ SRC="img903.gif"
+ ALT="\begin{figure}\begin{center}
+\leavevmode
+\epsfig{file=slike/grana.eps,width=9.6cm}
+\end{center}\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+Za rješavanje mreže koristimo dva zakona:
+
+<UL>
+<LI><EM>prvi Kirchoffov zakon</EM> po kojemu je zbroj struja koje
+  ulaze u pojedini čvor jednak nula i
+</LI>
+<LI><EM>Ohmov zakon</EM> po kojemu je 
+<P><!-- MATH
+ \begin{displaymath}
+\textrm{struja kroz otpor}=\frac{\textrm{napon na otporu}}
+{\textrm{otpor}}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="304" HEIGHT="56" ALIGN="MIDDLE" BORDER="0"
+ SRC="img904.gif"
+ ALT="% latex2html id marker 36118
+$\displaystyle \textrm{struja kroz otpor}=\frac{\textrm{napon na otporu}}
+{\textrm{otpor}}.
+$">
+</DIV><P>
+</P>
+</LI>
+</UL>
+
+<P>
+Ako struje koje ulaze u čvor označimo s predznakom <IMG
+ WIDTH="19" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img312.gif"
+ ALT="$ -$">
+, a struje koje
+izlaze iz čvora s predznakom <IMG
+ WIDTH="19" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img229.gif"
+ ALT="$ +$">
+, tada prvi Kirchoffov zakon
+primijenjen na čvorove <IMG
+ WIDTH="14" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img536.gif"
+ ALT="$ 1$">
+-<IMG
+ WIDTH="14" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img898.gif"
+ ALT="$ 4$">
+ daje
+<P><!-- MATH
+ \begin{displaymath}
+\begin{array}{rrrrrrrrr}
+I_1&+I_2&+I_3 &      & &      & -I_7 & = & 0\\
+-I_1 &    &     & -I_4 & & +I_6 &      & = & 0\\
+& -I_2 & & +I_4&+I_5 & & & = & 0\\
+& & -I_3& & -I_5&-I_6& & = & 0
+\end{array}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="375" HEIGHT="105" BORDER="0"
+ SRC="img905.gif"
+ ALT="\begin{displaymath}
+\begin{array}{rrrrrrrrr}
+I_1&amp;+I_2&amp;+I_3 &amp; &amp; &amp; &amp; -I_7 &amp; = &amp; 0\...
+...&amp;+I_5 &amp; &amp; &amp; = &amp; 0\\
+&amp; &amp; -I_3&amp; &amp; -I_5&amp;-I_6&amp; &amp; = &amp; 0
+\end{array}\end{displaymath}">
+</DIV><P>
+</P>
+Vidimo da se radi o homogenom sustavu linearnih jednadžbi koji ima 
+četiri jednadžbe i sedam nepoznanica, <IMG
+ WIDTH="21" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img906.gif"
+ ALT="$ I_1$">
+, ..., <IMG
+ WIDTH="21" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img907.gif"
+ ALT="$ I_7$">
+.
+Ako je 
+<P><!-- MATH
+ \begin{displaymath}
+A= \begin{bmatrix} 1&1&1& & & & -1\\
+-1& & & -1& & 1 & \\
+& -1& & 1& 1& & \\
+& & -1& & -1& -1&
+\end{bmatrix}, \qquad
+I=\begin{bmatrix}I_1\\I_2 \\I_3 \\I_4 \\I_5 \\I_6 \\I_7
+\end{bmatrix},
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="463" HEIGHT="169" ALIGN="MIDDLE" BORDER="0"
+ SRC="img908.gif"
+ ALT="$\displaystyle A= \begin{bmatrix}1&amp;1&amp;1&amp; &amp; &amp; &amp; -1\\
+-1&amp; &amp; &amp; -1&amp; &amp; 1 &amp; \\
+&amp; -1&amp; ...
+...d
+I=\begin{bmatrix}I_1\\ I_2 \\ I_3 \\ I_4 \\ I_5 \\ I_6 \\ I_7
+\end{bmatrix},
+$">
+</DIV><P>
+</P>
+tada matrični zapis sustava glasi
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="eq:kirch"></A><!-- MATH
+ \begin{equation}
+AI=0.
+\end{equation}
+ -->
+<TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><IMG
+ WIDTH="66" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img909.gif"
+ ALT="$\displaystyle AI=0.$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+(2.10)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Matrica <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img27.gif"
+ ALT="$ A$">
+ zove se <EM>matrica incidencija</EM> ili 
+<EM>matrica susjedstva</EM> zadane električne mreže. 
+Ako zadnji stupac matrice <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img27.gif"
+ ALT="$ A$">
+ premjestimo na prvo mjesto, dobit ćemo
+gornje trokutastu matricu pa lako vidimo da je <!-- MATH
+ $\mathop{\mathrm{rang}}\nolimits (A) = 4$
+ -->
+<IMG
+ WIDTH="101" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img910.gif"
+ ALT="$ \mathop{\mathrm{rang}}\nolimits (A) = 4$">
+.
+
+<P>
+Ako <IMG
+ WIDTH="15" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img264.gif"
+ ALT="$ k$">
+-ti vodič ide od čvora <IMG
+ WIDTH="11" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img407.gif"
+ ALT="$ i$">
+ prema čvoru <IMG
+ WIDTH="13" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img522.gif"
+ ALT="$ j$">
+, tada Ohmov zakon
+daje
+<P><!-- MATH
+ \begin{displaymath}
+R_k I_k = V_i-V_j+U_k.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="173" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img911.gif"
+ ALT="$\displaystyle R_k I_k = V_i-V_j+U_k.
+$">
+</DIV><P>
+</P>
+Dakle, imamo još jedan sustav linearnih jednadžbi koji glasi
+<P></P>
+<DIV ALIGN="CENTER"><TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="43" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img912.gif"
+ ALT="$\displaystyle R_1 I_1$"></TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="125" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img913.gif"
+ ALT="$\displaystyle = V_1-V_2+U_1$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="43" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img914.gif"
+ ALT="$\displaystyle R_2 I_2$"></TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="125" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img915.gif"
+ ALT="$\displaystyle = V_1-V_3+U_2$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="43" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img916.gif"
+ ALT="$\displaystyle R_3 I_3$"></TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="125" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img917.gif"
+ ALT="$\displaystyle = V_1-V_4+U_3$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="43" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img918.gif"
+ ALT="$\displaystyle R_4 I_4$"></TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="139" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img919.gif"
+ ALT="$\displaystyle = -V_2+V_3+U_4$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="43" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img920.gif"
+ ALT="$\displaystyle R_5 I_5$"></TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="125" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img921.gif"
+ ALT="$\displaystyle = V_3-V_4+U_5$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="43" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img922.gif"
+ ALT="$\displaystyle R_6 I_6$"></TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="125" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img923.gif"
+ ALT="$\displaystyle = V_2-V_4+U_6$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="43" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img924.gif"
+ ALT="$\displaystyle R_7 I_7$"></TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="130" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img925.gif"
+ ALT="$\displaystyle = -V_1+0+U_7$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Neka je <IMG
+ WIDTH="19" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img926.gif"
+ ALT="$ R$">
+ dijagonalna matrica otpora vodiča (matrica
+čiji su dijagonalni elementi otpori), <IMG
+ WIDTH="19" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img927.gif"
+ ALT="$ V$">
+ vektor napona čvorova i 
+<IMG
+ WIDTH="19" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img632.gif"
+ ALT="$ U$">
+ vektor naponskih izvora na vodičima,
+<P><!-- MATH
+ \begin{displaymath}
+R=\begin{bmatrix} R_1 & & & & & & \\
+& R_2 & & & & & \\& & R_3 & & & & \\& & & R_4 & & & \\
+& & & & R_5 & & \\& & & & & R_6 & \\& & & & & & R_7
+\end{bmatrix}  , \qquad
+V=\begin{bmatrix}V_1\\V_2 \\V_3 \\V_4
+\end{bmatrix}, \qquad
+U=\begin{bmatrix}U_1\\U_2 \\U_3 \\U_4 \\U_5 \\U_6 \\U_7
+\end{bmatrix}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="592" HEIGHT="169" ALIGN="MIDDLE" BORDER="0"
+ SRC="img928.gif"
+ ALT="$\displaystyle R=\begin{bmatrix}R_1 &amp; &amp; &amp; &amp; &amp; &amp; \\
+&amp; R_2 &amp; &amp; &amp; &amp; &amp; \\ &amp; &amp; R_3 &amp;...
+...
+U=\begin{bmatrix}U_1\\ U_2 \\ U_3 \\ U_4 \\ U_5 \\ U_6 \\ U_7
+\end{bmatrix}.
+$">
+</DIV><P>
+</P>
+Uz ove oznake gornji sustav možemo zapisati u matričnom obliku kao
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="struja0"></A><!-- MATH
+ \begin{equation}
+R I = A^T V + U.
+\end{equation}
+ -->
+<TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><IMG
+ WIDTH="131" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img929.gif"
+ ALT="$\displaystyle R I = A^T V + U.$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+(2.11)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Primijetimo da se i u matričnom zapisu Ohmovog zakona ponovo javlja
+matrica incidencija <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img27.gif"
+ ALT="$ A$">
+, ovaj put transponirana.
+
+<P>
+Matrica <IMG
+ WIDTH="19" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img926.gif"
+ ALT="$ R$">
+ je dijagonalna, a njeni dijagonalni elementi
+(otpori) su veći od nule pa je prema tome <IMG
+ WIDTH="19" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img926.gif"
+ ALT="$ R$">
+ regularna i vrijedi
+<P><!-- MATH
+ \begin{displaymath}
+R^{-1}=\begin{bmatrix} \frac{1}{R_1} & & & & & & \\
+& \frac{1}{R_2} & & & & & \\& & \frac{1}{R_3} & & & &
+\\& & & \frac{1}{R_4} & & & \\
+& & & & \frac{1}{R_5} & & \\& & & & & \frac{1}{R_6} & 
+\\& & & & & & \frac{1}{R_7}
+\end{bmatrix}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="349" HEIGHT="180" ALIGN="MIDDLE" BORDER="0"
+ SRC="img930.gif"
+ ALT="$\displaystyle R^{-1}=\begin{bmatrix}\frac{1}{R_1} &amp; &amp; &amp; &amp; &amp; &amp; \\
+&amp; \frac{1}{R_...
+...5} &amp; &amp; \\ &amp; &amp; &amp; &amp; &amp; \frac{1}{R_6} &amp;
+\\ &amp; &amp; &amp; &amp; &amp; &amp; \frac{1}{R_7}
+\end{bmatrix}$">
+</DIV><P>
+</P>
+
+<P>
+Kada jednadžbu (<A HREF="#struja0">2.11</A>) pomnožimo s matricom <IMG
+ WIDTH="38" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img931.gif"
+ ALT="$ R^{-1}$">
+ 
+<U>s lijeve strane</U>, dobit ćemo novi ekvivalentan sustav
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="eq:struja"></A><!-- MATH
+ \begin{equation}
+I=R^{-1} A^T V + R^{-1} U.
+\end{equation}
+ -->
+<TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><IMG
+ WIDTH="183" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img932.gif"
+ ALT="$\displaystyle I=R^{-1} A^T V + R^{-1} U.$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+(2.12)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Pomnožimo sada ovu jednadžbu s matricom incidencija <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img27.gif"
+ ALT="$ A$">
+
+s lijeve strane. To nam daje sustav 
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="eq:struja1"></A><!-- MATH
+ \begin{equation}
+AI=A R^{-1} A^T V + A R^{-1} U =0.
+\end{equation}
+ -->
+<TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><IMG
+ WIDTH="258" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img933.gif"
+ ALT="$\displaystyle AI=A R^{-1} A^T V + A R^{-1} U =0.$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+(2.13)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Zadnja jednakost u ovoj jednadžbi slijedi iz prvog Kirchoffovog zakona
+(<A HREF="#eq:kirch">2.10</A>). 
+
+<P>
+Radi lakšeg snalaženja uvedimo nove oznake,
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="eq:struja1a"></A><!-- MATH
+ \begin{equation}
+K=A R^{-1} A^T, \qquad L=-A R^{-1} U.
+\end{equation}
+ -->
+<TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><IMG
+ WIDTH="275" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img934.gif"
+ ALT="$\displaystyle K=A R^{-1} A^T, \qquad L=-A R^{-1} U.$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+(2.14)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Matrica <IMG
+ WIDTH="22" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img935.gif"
+ ALT="$ K$">
+ i vektor <IMG
+ WIDTH="17" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img635.gif"
+ ALT="$ L$">
+ su poznati jer su matrice <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img27.gif"
+ ALT="$ A$">
+ i <IMG
+ WIDTH="19" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img926.gif"
+ ALT="$ R$">
+ i vektor
+<IMG
+ WIDTH="19" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img632.gif"
+ ALT="$ U$">
+ zadani. Matrica <IMG
+ WIDTH="22" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img935.gif"
+ ALT="$ K$">
+ je dimenzije <IMG
+ WIDTH="45" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img658.gif"
+ ALT="$ 4 \times 4$">
+, a vektor <IMG
+ WIDTH="17" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img635.gif"
+ ALT="$ L$">
+ je
+dimenzije <IMG
+ WIDTH="45" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img936.gif"
+ ALT="$ 4\times 1$">
+. Matrica <IMG
+ WIDTH="22" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img935.gif"
+ ALT="$ K$">
+ je simetrična jer je
+<P><!-- MATH
+ \begin{displaymath}
+K^T= (A R^{-1} A^T)^T= (A^T)^T (R^{-1})^T A^T= A R^{-1} A^T = K.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="451" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img937.gif"
+ ALT="$\displaystyle K^T= (A R^{-1} A^T)^T= (A^T)^T (R^{-1})^T A^T= A R^{-1} A^T = K.
+$">
+</DIV><P>
+</P>
+Uz ove oznake jednadžba (<A HREF="#eq:struja1">2.13</A>) daje
+sustav od četiri jednadžbe i četiri nepoznanice 
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="eq:struja2"></A><!-- MATH
+ \begin{equation}
+K V = L.
+\end{equation}
+ -->
+<TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><IMG
+ WIDTH="77" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img938.gif"
+ ALT="$\displaystyle K V = L.$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+(2.15)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Primijetimo da u električnoj mreži čvorova uvijek ima manje nego
+vodiča. Stoga je ovaj sustav manjih dimenzija od sustava
+(<A HREF="#eq:kirch">2.10</A>) pa je njega povoljnije rješavati. 
+
+<P>
+Prema Kronecker-Cappelijevom teoremu sustav (<A HREF="#eq:struja2">2.15</A>)
+će imati jedinstveno rješenje <IMG
+ WIDTH="19" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img927.gif"
+ ALT="$ V$">
+ ako i samo ako je <!-- MATH
+ $\mathop{\mathrm{rang}}\nolimits (K) = 4$
+ -->
+<IMG
+ WIDTH="104" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img939.gif"
+ ALT="$ \mathop{\mathrm{rang}}\nolimits (K) = 4$">
+. 
+Da je taj uvjet zaista ispunjen možemo zaključiti pomoću sljedećeg
+važnog teorema koji navodimo bez dokaza.
+
+<P>
+<div class="teo"><P>
+<DIV><B>Teorem  2.11</B> &nbsp; <A NAME="tm:struja"></A>  Ako je matrica <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img27.gif"
+ ALT="$ A$">
+ tipa <IMG
+ WIDTH="53" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img550.gif"
+ ALT="$ m\times k$">
+ i matrica <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img33.gif"
+ ALT="$ B$">
+ tipa <IMG
+ WIDTH="48" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img551.gif"
+ ALT="$ k\times n$">
+, 
+  tada je
+<P><!-- MATH
+ \begin{displaymath}
+\mathop{\mathrm{rang}}\nolimits (A)+ \mathop{\mathrm{rang}}\nolimits (B)-k\leq \mathop{\mathrm{rang}}\nolimits (AB) \leq \min\{\mathop{\mathrm{rang}}\nolimits (A),\mathop{\mathrm{rang}}\nolimits (B)\}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="498" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img940.gif"
+ ALT="$\displaystyle \mathop{\mathrm{rang}}\nolimits (A)+ \mathop{\mathrm{rang}}\nolim...
+...in\{\mathop{\mathrm{rang}}\nolimits (A),\mathop{\mathrm{rang}}\nolimits (B)\}.
+$">
+</DIV><P>
+</P>
+Pored toga, za svaku matricu <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img27.gif"
+ ALT="$ A$">
+ vrijedi
+<P><!-- MATH
+ \begin{displaymath}
+\mathop{\mathrm{rang}}\nolimits (A A^T)=\mathop{\mathrm{rang}}\nolimits (A^T A)= \mathop{\mathrm{rang}}\nolimits (A).
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="296" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img941.gif"
+ ALT="$\displaystyle \mathop{\mathrm{rang}}\nolimits (A A^T)=\mathop{\mathrm{rang}}\nolimits (A^T A)= \mathop{\mathrm{rang}}\nolimits (A).
+$">
+</DIV><P>
+</P></DIV><P></P>
+
+</div><p></p>
+<P>
+Da bi primijenili teorem <A HREF="#tm:struja">2.11</A>, uočimo da matricu <IMG
+ WIDTH="22" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img935.gif"
+ ALT="$ K$">
+ možemo
+zapisati kao 
+<P><!-- MATH
+ \begin{displaymath}
+K=A R^{-1} A^T =A S^{-1} (S^{-1})^T A^T = F F^T,
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="336" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img942.gif"
+ ALT="$\displaystyle K=A R^{-1} A^T =A S^{-1} (S^{-1})^T A^T = F F^T,
+$">
+</DIV><P>
+</P>
+gdje je <!-- MATH
+ $F=A S^{-1}$
+ -->
+<IMG
+ WIDTH="88" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img943.gif"
+ ALT="$ F=A S^{-1}$">
+, a 
+<!-- MATH
+ $S=(s_{ij})$
+ -->
+<IMG
+ WIDTH="76" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img944.gif"
+ ALT="$ S=(s_{ij})$">
+ je dijagonalna matrica čiji su dijagonalni 
+elementi <!-- MATH
+ $s_{kk}=\sqrt{R_k}$
+ -->
+<IMG
+ WIDTH="92" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img945.gif"
+ ALT="$ s_{kk}=\sqrt{R_k}$">
+. 
+Kako je <!-- MATH
+ $\mathop{\mathrm{rang}}\nolimits (A)=4$
+ -->
+<IMG
+ WIDTH="101" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img910.gif"
+ ALT="$ \mathop{\mathrm{rang}}\nolimits (A) = 4$">
+ i <!-- MATH
+ $\mathop{\mathrm{rang}}\nolimits (S)=\mathop{\mathrm{rang}}\nolimits (R)=7$
+ -->
+<IMG
+ WIDTH="186" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img946.gif"
+ ALT="$ \mathop{\mathrm{rang}}\nolimits (S)=\mathop{\mathrm{rang}}\nolimits (R)=7$">
+, prva tvrdnja 
+teorema <A HREF="#tm:struja">2.11</A> daje
+<P><!-- MATH
+ \begin{displaymath}
+4+7-7\leq\mathop{\mathrm{rang}}\nolimits (A S^{-1})=\mathop{\mathrm{rang}}\nolimits (F)\leq \min\{4,7\},
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="384" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img947.gif"
+ ALT="$\displaystyle 4+7-7\leq\mathop{\mathrm{rang}}\nolimits (A S^{-1})=\mathop{\mathrm{rang}}\nolimits (F)\leq \min\{4,7\},
+$">
+</DIV><P>
+</P>
+odnosno <!-- MATH
+ $\mathop{\mathrm{rang}}\nolimits (F)=4$
+ -->
+<IMG
+ WIDTH="101" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img948.gif"
+ ALT="$ \mathop{\mathrm{rang}}\nolimits (F)=4$">
+. Druga tvrdnja teorema <A HREF="#tm:struja">2.11</A>
+sada povlači  <!-- MATH
+ $\mathop{\mathrm{rang}}\nolimits (K)=\mathop{\mathrm{rang}}\nolimits (F)=4$
+ -->
+<IMG
+ WIDTH="191" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img949.gif"
+ ALT="$ \mathop{\mathrm{rang}}\nolimits (K)=\mathop{\mathrm{rang}}\nolimits (F)=4$">
+ pa sustav 
+(<A HREF="#eq:struja2">2.15</A>) ima jedinstveno rješenje <IMG
+ WIDTH="19" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img927.gif"
+ ALT="$ V$">
+.
+
+<P>
+Konačno, nakon što smo izračunali napone u čvorovima <IMG
+ WIDTH="19" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img927.gif"
+ ALT="$ V$">
+, 
+struje kroz vodiče <IMG
+ WIDTH="14" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img589.gif"
+ ALT="$ I$">
+ lako izračunamo uvrštavanjem u jednadžbu 
+(<A HREF="#eq:struja">2.12</A>). 
+
+<P>
+Za kraj, izračunajmo napone u čvorovima <IMG
+ WIDTH="19" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img927.gif"
+ ALT="$ V$">
+ i struje u vodičima <IMG
+ WIDTH="14" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img589.gif"
+ ALT="$ I$">
+ 
+za električnu mrežu sa slike <A HREF="#fig:mreza">2.2</A> za slučaj kada su 
+otpori svih vodiča jednaki <IMG
+ WIDTH="23" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img950.gif"
+ ALT="$ 10$">
+ oma, 
+<!-- MATH
+ $R_k=10\, \Omega$
+ -->
+<IMG
+ WIDTH="86" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img951.gif"
+ ALT="$ R_k=10\, \Omega$">
+, a u vodičima <IMG
+ WIDTH="14" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img536.gif"
+ ALT="$ 1$">
+, <IMG
+ WIDTH="14" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img898.gif"
+ ALT="$ 4$">
+
+i <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img147.gif"
+ ALT="$ 5$">
+ se nalaze naponski izvori od jednog volta, 
+<!-- MATH
+ $U_1=U_4=U_5=1\, \textrm{V}$
+ -->
+<IMG
+ WIDTH="164" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img952.gif"
+ ALT="$ U_1=U_4=U_5=1\, \textrm{V}$">
+. Uvrštavanje u relaciju (<A HREF="#eq:struja1a">2.14</A>)
+daje
+<P><!-- MATH
+ \begin{displaymath}
+K=\left[\begin{array}{rrrr}
+   0.4&  -0.1&  -0.1&  -0.1\\
+  -0.1&   0.3&  -0.1&  -0.1\\
+  -0.1&  -0.1&   0.3&  -0.1\\
+  -0.1&  -0.1&  -0.1&   0.3
+\end{array}\right], \qquad
+L=\left[\begin{array}{r}
+  -0.1\\
+  0.2\\
+  -0.2\\
+  0.1
+ \end{array}\right].
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="459" HEIGHT="104" ALIGN="MIDDLE" BORDER="0"
+ SRC="img953.gif"
+ ALT="$\displaystyle K=\left[\begin{array}{rrrr}
+0.4&amp; -0.1&amp; -0.1&amp; -0.1\\
+-0.1&amp; 0.3...
+...d
+L=\left[\begin{array}{r}
+-0.1\\
+0.2\\
+-0.2\\
+0.1
+\end{array}\right].
+$">
+</DIV><P>
+</P>
+Rješenje sustava (<A HREF="#eq:struja2">2.15</A>) daje napone u čvorovima
+<P><!-- MATH
+ \begin{displaymath}
+V=\left[\begin{array}{r}
+   0 \textrm{ V}\\
+   0.75 \textrm{ V}\\
+   -0.25 \textrm{ V}\\
+   0.5 \textrm{ V}
+ \end{array}\right],
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="159" HEIGHT="104" ALIGN="MIDDLE" BORDER="0"
+ SRC="img954.gif"
+ ALT="$\displaystyle V=\left[\begin{array}{r}
+0 \textrm{ V}\\
+0.75 \textrm{ V}\\
+-0.25 \textrm{ V}\\
+0.5 \textrm{ V}
+\end{array}\right],
+$">
+</DIV><P>
+</P>
+a uvrštavanje u jednadžbu (<A HREF="#eq:struja">2.12</A>) daje struje u vodičima
+<P><!-- MATH
+ \begin{displaymath}
+I=\left[\begin{array}{r}
+   0.025 \textrm{ A}\\
+   0.025 \textrm{ A}\\
+  -0.05 \textrm{ A}\\
+   0 \textrm{ A}\\
+   0.025 \textrm{ A}\\
+   0.025 \textrm{ A}\\
+   0 \textrm{ A}\\
+ \end{array}\right].
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="154" HEIGHT="169" ALIGN="MIDDLE" BORDER="0"
+ SRC="img955.gif"
+ ALT="$\displaystyle I=\left[\begin{array}{r}
+0.025 \textrm{ A}\\
+0.025 \textrm{ A}...
+...25 \textrm{ A}\\
+0.025 \textrm{ A}\\
+0 \textrm{ A}\\
+\end{array}\right].
+$">
+</DIV><P>
+</P> 
+
+<P>
+<div class="zad"><P>
+<DIV><B>Zadatak  2.13</B> &nbsp; Gornje rješenje dobiveno je pomoću sljedećeg programa napisanog u 
+  programskom jeziku Matlab:
+
+<P>
+<PRE>
+A=[1 1 1 0 0 0 -1; -1 0 0 -1 0 1 0; 0 -1 0 1 1 0 0; 0 0 -1 0 -1 -1 0]
+R=diag([10 10 10 10 10 10 10])
+U=[1 0 0 1 1 0 0]'
+R1=inv(R)
+K=A*R1*A'
+L=-A*R1*U
+V=K\L
+I=R1*(A'*V+U)
+</PRE>
+
+<P>
+U prvom retku programa matrica <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img27.gif"
+ ALT="$ A$">
+ je zadana po retcima, 
+pri čemu su retci odvojeni znakom <TT>;</TT>.
+U drugom retku programa naredba <TT>diag</TT> koristi se za kreiranje
+dijagonalne matrice čiji su dijagonalni elementi jednaki elementima
+zadanog vektora.
+U trećem, petom i zadnjem retku znak <TT>'</TT> označava
+transponiranu matricu. 
+U četvrtom retku koristi se naredba <TT>inv</TT> koja daje inverznu
+matricu. U sedmom retku znak <!-- MATH
+ $\backslash$
+ -->
+<IMG
+ WIDTH="14" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img956.gif"
+ ALT="$ \backslash$">
+ znači rješavanje sustava.
+
+<P>
+Izvedite gornji program u Matlabu. Zatim riješite električnu mrežu sa 
+slike <A HREF="#fig:mreza">2.2</A> za neke druge vrijednosti otpora <IMG
+ WIDTH="27" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img899.gif"
+ ALT="$ R_k$">
+
+i naponskih izvora <IMG
+ WIDTH="26" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img900.gif"
+ ALT="$ U_k$">
+. 
+Zadajte neku drugu električnu mrežu i riješite je na isti način.
+Pri rješavanju zadatka možete koristiti program 
+  <A NAME="tex2html13"
+  HREF="http://piaf.fesb.hr/octave/octave-on-line.php">Octave On-line</A>.</DIV><P></P>
+
+</div><p></p>
+<P>
+
+
+<P>
+<p><HR></p>
+<arrow class=left> </arrow> <A NAME="tex2html768"
+  HREF="node45.html">Cramerovo pravilo</A> &nbsp; &nbsp;
+<arrow class=up> </arrow> <A NAME="tex2html772"
+  HREF="node22.html">LINEARNA ALGEBRA</A> &nbsp; &nbsp;
+<arrow class=right> </arrow> <A NAME="tex2html774"
+  HREF="node47.html">VEKTORSKA ALGEBRA I ANALITIČKA</A>  
+
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

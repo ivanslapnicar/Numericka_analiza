@@ -1,0 +1,846 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2012 (1.2)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-2382574370068590",
+    enable_page_level_ads: true
+  });
+</script>
+<TITLE>Koordinatizacija prostora</TITLE>
+<META NAME="description" CONTENT="Koordinatizacija prostora">
+<META NAME="keywords" CONTENT="predavanja">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2012">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="predavanja.css">
+
+<LINK REL="previous" HREF="node54.html">
+<LINK REL="up" HREF="node52.html">
+<LINK REL="next" HREF="node56.html">
+</HEAD>
+
+<BODY >
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="shortcut icon" href="favicon.ico"/>
+
+<style>
+.sidenav {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 50px;
+}
+
+div.sidenav a {
+    padding: 8px 8px 8px 10px;
+    text-decoration: none;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    display: block;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dropdown-btn {
+    padding: 8px 8px 8px 8px;
+    text-decoration: none; 
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s;
+}
+
+
+.sidenav a:hover, .dropdown-btn:hover {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #C00;
+}
+
+.menu2 {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    font-style:italic;
+}
+
+.dropdown-container {
+  display: none;
+  font-family: 'Open Sans',sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #ddd;
+  padding-left: 8px;
+}
+
+.dropdown-container a:hover {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    background-color: #ccc;
+}
+
+.sidenav .active {
+    background-color: #C00;
+    color: white;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+hr { 
+    display: block;
+    margin-top: 0.2em;
+    margin-bottom: 0.4em;
+    margin-left: -5px;
+    margin-right: -5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color:#ec971f;
+} 
+  
+.caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 20px;
+    vertical-align: middle;
+    border-top: 5px dashed;
+        border-top-width: 5px;
+        border-top-style: dashed;
+        border-top-color: currentcolor;
+    border-right: 5px solid transparent;
+        border-right-width: 5px;
+        border-right-style: solid;
+        border-right-color: transparent;
+    border-left: 5px solid transparent;
+        border-left-width: 5px;
+        border-left-style: solid;
+        border-left-color: transparent;
+}
+
+</style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- First -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2382574370068590"
+     data-ad-slot="8207843721"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<script>
+   // alert('|ivan'+document.getElementById("mys-content").innerHTML+'|') 
+//    alert(typeof(window.CustomEvent))
+//    if(typeof(window.CustomEvent)=="undefined")
+// {
+//     document.display = 'none';
+// } 
+</script>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" 
+  onclick="closeNav()"
+  style="font-size:24px;cursor:pointer;color:#000;position: absolute; top: 0;
+    right: 10px; font-size: 24px; margin-left: 50px;">&nbsp; &times; &nbsp;</a>
+  <a href="/matematika1/index.html">HOME</a>
+  <button href="/matematika1/predavanja" class="dropdown-btn">PREDAVANJA
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/predavanja/predavanja.html">SADRŽAJ</a>
+      <a href="/matematika1/predavanja/node3.html">OSNOVE</a>
+      <a href="/matematika1/predavanja/node22.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/predavanja/node47.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/predavanja/node67.html">FUNKCIJE</a>
+      <a href="/matematika1/predavanja/node98.html">DERIVACIJE</a>
+      <a href="/matematika1/predavanja/node125.html">NIZOVI I REDOVI</a>
+      <a href="/matematika1/predavanja/node144.html">INDEKS</a>
+    </div>
+  <button href="/matematika1/vjezbe" class="dropdown-btn">VJEŽBE
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/vjezbe/vjezbe.html">SADRŽAJ</a>
+      <a href="/matematika1/vjezbe/node2.html">OSNOVE</a>
+      <a href="/matematika1/vjezbe/node24.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/vjezbe/node55.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/vjezbe/node87.html">FUNKCIJE</a>
+      <a href="/matematika1/vjezbe/node110.html">DERIVACIJE</a>
+      <a href="/matematika1/vjezbe/node136.html">NIZOVI I REDOVI</a>
+    </div>
+  <button href="/matematika1/kviz" class="dropdown-btn">KVIZ
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/kviz/index.html">SADRŽAJ</a>
+      <a href="/matematika1/kviz/osnove/">OSNOVE</a>
+      <a href="/matematika1/kviz/algebra/">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/kviz/vektori/">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/kviz/funkcije/">FUNKCIJE</a>
+      <a href="/matematika1/kviz/derivacije/">DERIVACIJE</a>
+      <a href="/matematika1/kviz/nizovi/">NIZOVI I REDOVI</a>
+    </div>
+  <button href="/matematika1/podsjetnik" class="dropdown-btn">PODSJETNIK
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/podsjetnik/podsjetnik.html">SADRŽAJ</a>
+      <a href="/matematika1/podsjetnik/node1.html">OSNOVE</a>
+      <a href="/matematika1/podsjetnik/node2.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/podsjetnik/node3.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/podsjetnik/node4.html">FUNKCIJE</a>
+      <a href="/matematika1/podsjetnik/node5.html">DERIVACIJE</a>
+      <a href="/matematika1/podsjetnik/node6.html">NIZOVI I REDOVI</a>
+    </div>
+  <!--<a href="/matematika1/kviz">Kviz</a>-->
+  <a href="/matematika1/java">JAVA</a>
+  <a href="http://lavica.fesb.unist.hr/netplot"  class="menu2">NETPLOT</a>
+  <!-- <a href="/matematika1/gauss"  class="menu2">GAUSS</a> -->
+  <a href="http://lavica.fesb.unist.hr/octave/ool_hr.php"  class="menu2">OCTAVE</a>
+  <a href="/matematika1/search.html">Traži ...</a>
+</div>
+
+<span style="font-size:24px;font-family:'Open Sans', sans-serif;cursor:pointer;color:#ec971f"
+      onclick="openNav()">&#9776;</span> &nbsp; 
+<span style="font-size:30px;cursor:pointer;color:#888;font-family:'Opens Sans',sans-serif;"
+      onclick="window.location.assign('../index.html')">
+<font style="color:#C00">m</font>atematika<font style="color:#C00;vertical-align:super;margin-left:2px;font-size:24px;">1</font></span>
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "300px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+
+</script>     
+<hr>
+
+
+
+
+<arrow class=left> </arrow> <A NAME="tex2html878"
+  HREF="node54.html">Koordinatizacija ravnine</A> &nbsp; &nbsp;
+<arrow class=up> </arrow> <A NAME="tex2html882"
+  HREF="node52.html">Koordinatizacija</A> &nbsp; &nbsp;
+<arrow class=right> </arrow> <A NAME="tex2html884"
+  HREF="node56.html">Duljina vektora, jedinični vektor,</A>
+
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00553000000000000000"></A>
+<A NAME="sec:koorde"></A>
+<BR>
+Koordinatizacija prostora
+</H2>
+
+<P>
+Koordinatizaciju trodimenzionalnog 
+prostora<A NAME="8876"></A> 
+<IMG
+ WIDTH="16" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.gif"
+ ALT="$ {\cal E}$">
+ dobijemo slično
+kao u prethodnim poglavljima.
+Prvo odaberemo ishodište <IMG
+ WIDTH="19" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img584.gif"
+ ALT="$ O$">
+ i međusobno
+okomite pravce <IMG
+ WIDTH="14" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img304.gif"
+ ALT="$ p$">
+, <IMG
+ WIDTH="14" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img835.gif"
+ ALT="$ q$">
+ i <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img445.gif"
+ ALT="$ r$">
+ koji prolaze 
+kroz točku <IMG
+ WIDTH="19" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img584.gif"
+ ALT="$ O$">
+. U ravnini razapetoj s pravcima <IMG
+ WIDTH="14" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img304.gif"
+ ALT="$ p$">
+ i <IMG
+ WIDTH="14" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img835.gif"
+ ALT="$ q$">
+ definiramo
+desni pravokutni koordinatni sustav <!-- MATH
+ $(O,\mathbf{i},\mathbf{j})$
+ -->
+<IMG
+ WIDTH="61" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1036.gif"
+ ALT="$ (O,\mathbf{i},\mathbf{j})$">
+ na način
+opisan u poglavlju <A HREF="node54.html#sec:koordr">3.5.2</A>.
+Potom na pravcu <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img445.gif"
+ ALT="$ r$">
+ definiramo koordinatni sustav <!-- MATH
+ $(O,\mathbf{k})$
+ -->
+<IMG
+ WIDTH="52" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1058.gif"
+ ALT="$ (O,\mathbf{k})$">
+
+tako da vektori <!-- MATH
+ $\mathbf{i}$
+ -->
+<IMG
+ WIDTH="11" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1022.gif"
+ ALT="$ \mathbf{i}$">
+, <!-- MATH
+ $\mathbf{j}$
+ -->
+<IMG
+ WIDTH="11" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1055.gif"
+ ALT="$ \mathbf{j}$">
+ i <!-- MATH
+ $\mathbf{k}$
+ -->
+<IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1059.gif"
+ ALT="$ \mathbf{k}$">
+ zadovoljavaju pravilo
+desnog vijka. Time smo definirali 
+<EM>desni pravokutni koordinatni sustav</EM>
+<A NAME="8880"></A>
+<A NAME="8881"></A>
+<A NAME="8882"></A>
+<!-- MATH
+ $(O,\mathbf{i},\mathbf{j},\mathbf{k})$
+ -->
+<IMG
+ WIDTH="80" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1060.gif"
+ ALT="$ (O,\mathbf{i},\mathbf{j},\mathbf{k})$">
+ u prostoru <IMG
+ WIDTH="16" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.gif"
+ ALT="$ {\cal E}$">
+ koji je prikazan na 
+slici <A HREF="#fig:v7">3.7</A>.
+Pri tome vrijedi
+<P><!-- MATH
+ \begin{displaymath}
+%
+\mathbf{i}=\overrightarrow{OI}, \quad \mathbf{j}=\overrightarrow{OJ}, \quad \mathbf{k}=\overrightarrow{OK},
+\qquad |\mathbf{i}|=|\mathbf{j}|=|\mathbf{k}|=1.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="415" HEIGHT="47" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1061.gif"
+ ALT="$\displaystyle %
+\mathbf{i}=\overrightarrow{OI}, \quad \mathbf{j}=\overrightarro...
+...{OK},
+\qquad \vert\mathbf{i}\vert=\vert\mathbf{j}\vert=\vert\mathbf{k}\vert=1.
+$">
+</DIV><P>
+</P> 
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:v7"></A><A NAME="8891"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Slika 3.7:</STRONG>
+Koordinatizacija prostora</CAPTION>
+<TR><TD><IMG
+ WIDTH="406" HEIGHT="345" BORDER="0"
+ SRC="img1062.gif"
+ ALT="\begin{figure}\begin{center}
+\epsfig{file=slike/koordp.eps,width=10.2cm}\end{center}\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+Brojevni pravci koje smo nanijeli na pravce <IMG
+ WIDTH="14" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img304.gif"
+ ALT="$ p$">
+, <IMG
+ WIDTH="14" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img835.gif"
+ ALT="$ q$">
+ i <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img445.gif"
+ ALT="$ r$">
+ su
+<EM>koordinatne osi</EM> i to redom
+<EM>apscisna</EM>, <EM>ordinatna</EM> i <EM>aplikatna os</EM> (<EM><IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img21.gif"
+ ALT="$ x$">
+-os</EM>, 
+<EM><IMG
+ WIDTH="14" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img22.gif"
+ ALT="$ y$">
+-os</EM> i <EM><IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img78.gif"
+ ALT="$ z$">
+-os</EM>).
+Tri ravnine <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img21.gif"
+ ALT="$ x$">
+-<IMG
+ WIDTH="14" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img22.gif"
+ ALT="$ y$">
+, <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img21.gif"
+ ALT="$ x$">
+-<IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img78.gif"
+ ALT="$ z$">
+ i <IMG
+ WIDTH="14" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img22.gif"
+ ALT="$ y$">
+-<IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img78.gif"
+ ALT="$ z$">
+, koje su određene
+odgovarajućim koordinatnim osima, zovu se 
+<EM>koordinatne ravnine</EM> i dijele prostor na osam <EM>oktanata</EM>.
+
+<P>
+Neka je zadana točka <!-- MATH
+ $T\in \cal E$
+ -->
+<IMG
+ WIDTH="51" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1063.gif"
+ ALT="$ T\in \cal E$">
+. Ravnine paralelne s koordinatnim
+osima koje prolaze kroz točku <IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img770.gif"
+ ALT="$ T$">
+ sijeku koordinatne osi u točkama
+<IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img729.gif"
+ ALT="$ P$">
+, <IMG
+ WIDTH="19" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img959.gif"
+ ALT="$ Q$">
+ i <IMG
+ WIDTH="19" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img926.gif"
+ ALT="$ R$">
+ (slika <A HREF="#fig:v7">3.7</A>).
+Koordinate tih točaka u koordinatnim sustavima <!-- MATH
+ $(O,\mathbf{i})$
+ -->
+<IMG
+ WIDTH="47" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1025.gif"
+ ALT="$ (O,\mathbf{i})$">
+, 
+<!-- MATH
+ $(O,\mathbf{j})$
+ -->
+<IMG
+ WIDTH="48" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1032.gif"
+ ALT="$ (O,\mathbf{j})$">
+ i <!-- MATH
+ $(O,\mathbf{k})$
+ -->
+<IMG
+ WIDTH="52" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1058.gif"
+ ALT="$ (O,\mathbf{k})$">
+ jednake su <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img21.gif"
+ ALT="$ x$">
+, <IMG
+ WIDTH="14" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img22.gif"
+ ALT="$ y$">
+ i <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img78.gif"
+ ALT="$ z$">
+.
+Brojevi <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img21.gif"
+ ALT="$ x$">
+, <IMG
+ WIDTH="14" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img22.gif"
+ ALT="$ y$">
+ i <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img78.gif"
+ ALT="$ z$">
+ su <EM>koordinate</EM> točke <IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img770.gif"
+ ALT="$ T$">
+, odnosno
+<IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img21.gif"
+ ALT="$ x$">
+ je <EM>apscisa</EM><A NAME="8907"></A>, <IMG
+ WIDTH="14" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img22.gif"
+ ALT="$ y$">
+ je
+<EM>ordinata</EM><A NAME="8909"></A>, 
+a <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img78.gif"
+ ALT="$ z$">
+ je <EM>aplikata</EM><A NAME="8911"></A> točke <IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img770.gif"
+ ALT="$ T$">
+.
+
+<P>
+Brojevi <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img21.gif"
+ ALT="$ x$">
+, <IMG
+ WIDTH="14" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img22.gif"
+ ALT="$ y$">
+ i <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img78.gif"
+ ALT="$ z$">
+ su također 
+<EM>skalarne komponente</EM><A NAME="8913"></A>
+vektora <!-- MATH
+ $\mathbf{a}=\overrightarrow{OT}$
+ -->
+<IMG
+ WIDTH="66" HEIGHT="23" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1042.gif"
+ ALT="$ \mathbf{a}=\overrightarrow{OT}$">
+ u sustavu <!-- MATH
+ $(O,\mathbf{i},\mathbf{j},\mathbf{k})$
+ -->
+<IMG
+ WIDTH="80" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1060.gif"
+ ALT="$ (O,\mathbf{i},\mathbf{j},\mathbf{k})$">
+. 
+Prema pravilu o zbrajanju vektora iz poglavlja <A HREF="node49.html#sec:zbrv">3.2</A>
+vrijedi (slika <A HREF="#fig:v7">3.7</A>)
+<P><!-- MATH
+ \begin{displaymath}
+%
+\overrightarrow{OT}=\overrightarrow{OT'}+\overrightarrow{OR}=x\, \overrightarrow{OI} + y\, \overrightarrow{OJ}
++z\, \overrightarrow{OK},
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="329" HEIGHT="51" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1064.gif"
+ ALT="$\displaystyle %
+\overrightarrow{OT}=\overrightarrow{OT'}+\overrightarrow{OR}=x\, \overrightarrow{OI} + y\, \overrightarrow{OJ}
++z\, \overrightarrow{OK},
+$">
+</DIV><P>
+</P> 
+odnosno
+<P><!-- MATH
+ \begin{displaymath}
+%
+\mathbf{a}=x\, \mathbf{i}+y\, \mathbf{j}+z\, \mathbf{k}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="149" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1065.gif"
+ ALT="$\displaystyle %
+\mathbf{a}=x\, \mathbf{i}+y\, \mathbf{j}+z\, \mathbf{k}.
+$">
+</DIV><P>
+</P> 
+
+<P>
+Skalarne komponente jednoznačno su određene točkom <IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img770.gif"
+ ALT="$ T$">
+ pa za
+označavanje vektora koristimo skraćene zapise
+<P><!-- MATH
+ \begin{displaymath}
+%
+\mathbf{a}=\{x,y,z\}, \qquad
+\mathbf{a}=\begin{bmatrix} x& y & z\end{bmatrix}, \qquad
+\mathbf{a}=\begin{bmatrix} x\\y\\z \end{bmatrix}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="383" HEIGHT="83" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1066.gif"
+ ALT="$\displaystyle %
+\mathbf{a}=\{x,y,z\}, \qquad
+\mathbf{a}=\begin{bmatrix}x&amp; y &amp; z\end{bmatrix}, \qquad
+\mathbf{a}=\begin{bmatrix}x\\ y\\ z \end{bmatrix}.
+$">
+</DIV><P>
+</P> 
+Kako vektor u prostoru možemo zapisati ili  kao retčanu matricu 
+dimenzije <IMG
+ WIDTH="45" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1067.gif"
+ ALT="$ 1\times 3$">
+ ili
+stupčanu matricu dimenzije <IMG
+ WIDTH="45" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1068.gif"
+ ALT="$ 3\times 1$">
+,
+zbrajanje vektora i množenje vektora skalarom odgovara zbrajanju
+matrica i množenju matrica skalarom.
+
+<P>
+U koordinatnom sustavu možemo naći skalarne komponente vektora,
+odnosno usmjerene dužine koja je zadana s dvije točke.
+
+<P>
+<div class="pri"><P>
+<DIV><B>Primjer  3.2</B> &nbsp; <A NAME="v2.13"></A>Neka su zadane točke <!-- MATH
+ $A=(x_A,y_A,z_A)$
+ -->
+<IMG
+ WIDTH="135" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1069.gif"
+ ALT="$ A=(x_A,y_A,z_A)$">
+ i <!-- MATH
+ $B=(x_B,y_B,z_B)$
+ -->
+<IMG
+ WIDTH="138" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1070.gif"
+ ALT="$ B=(x_B,y_B,z_B)$">
+.
+Kao što se vidi na slici <A HREF="#fig:v8">3.8</A> vrijedi
+<P><!-- MATH
+ \begin{displaymath}
+%
+\overrightarrow{OA}+\overrightarrow{AB}=\overrightarrow{OB},
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="141" HEIGHT="47" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1071.gif"
+ ALT="$\displaystyle %
+\overrightarrow{OA}+\overrightarrow{AB}=\overrightarrow{OB},
+$">
+</DIV><P>
+</P> 
+odnosno
+<P><!-- MATH
+ \begin{displaymath}
+%
+\overrightarrow{AB}=\overrightarrow{OB}-\overrightarrow{OA}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="141" HEIGHT="47" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1072.gif"
+ ALT="$\displaystyle %
+\overrightarrow{AB}=\overrightarrow{OB}-\overrightarrow{OA}.
+$">
+</DIV><P>
+</P> 
+Dakle, 
+<P><!-- MATH
+ \begin{displaymath}
+%
+\overrightarrow{AB}=(x_B-x_A)\, \mathbf{i}+(y_B-y_A)\, \mathbf{j}
++(z_B-z_A)
+\, \mathbf{k} = \begin{bmatrix}
+x_B-x_A\\y_B-y_A\\z_B-z_A \end{bmatrix}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="491" HEIGHT="83" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1073.gif"
+ ALT="$\displaystyle %
+\overrightarrow{AB}=(x_B-x_A)\, \mathbf{i}+(y_B-y_A)\, \mathbf{...
+..._A)
+\, \mathbf{k} = \begin{bmatrix}
+x_B-x_A\\ y_B-y_A\\ z_B-z_A \end{bmatrix}.
+$">
+</DIV><P>
+</P> 
+Na primjer, 
+<P><!-- MATH
+ \begin{displaymath}
+%
+A=(1,2,3)\quad \wedge \quad B=(-1,0,5)\quad
+\Rightarrow \quad \overrightarrow{AB}=\{ -2,-2,2\}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="475" HEIGHT="47" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1074.gif"
+ ALT="$\displaystyle %
+A=(1,2,3)\quad \wedge \quad B=(-1,0,5)\quad
+\Rightarrow \quad \overrightarrow{AB}=\{ -2,-2,2\}.
+$">
+</DIV><P>
+</P> </DIV><P></P>
+
+</div><p></p>
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:v8"></A><A NAME="8944"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Slika 3.8:</STRONG>
+Komponente vektora</CAPTION>
+<TR><TD><IMG
+ WIDTH="286" HEIGHT="239" BORDER="0"
+ SRC="img1075.gif"
+ ALT="\begin{figure}\begin{center}
+\epsfig{file=slike/kompv.eps,width=7.2cm}\end{center}\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+<div class="nap"><P>
+<DIV><B>Napomena  3.1</B> &nbsp; Kod definicije pravokutnih koordinatnih sustava u ovom i prethodnom
+  poglavlju koristili smo međusobno okomite pravce.
+  Međutim, koordinatni sustav se može definirati i s pravcima koji
+  nisu međusobno okomiti. Tako kod koordinatizacije ravnine možemo
+  uzeti bilo koja dva pravca koja prolaze kroz točku <IMG
+ WIDTH="19" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img584.gif"
+ ALT="$ O$">
+ i nisu
+  paralelna. Slično, kod koordinatizacije prostora možemo uzeti 
+  bilo koju koordinatizaciju neke odabrane ravnine u prostoru 
+  i treći pravac koji prolazi kroz ishodište i ne leži u toj ravnini
+  (vidi poglavlje <A HREF="node58.html#sec:baza">3.8</A>).</DIV><P></P>
+
+</div><p></p>
+<P>
+<p><HR></p>
+<arrow class=left> </arrow> <A NAME="tex2html878"
+  HREF="node54.html">Koordinatizacija ravnine</A> &nbsp; &nbsp;
+<arrow class=up> </arrow> <A NAME="tex2html882"
+  HREF="node52.html">Koordinatizacija</A> &nbsp; &nbsp;
+<arrow class=right> </arrow> <A NAME="tex2html884"
+  HREF="node56.html">Duljina vektora, jedinični vektor,</A>  
+
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

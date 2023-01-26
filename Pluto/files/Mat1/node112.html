@@ -1,0 +1,661 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2012 (1.2)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-2382574370068590",
+    enable_page_level_ads: true
+  });
+</script>
+<TITLE>Više derivacije i diferencijali</TITLE>
+<META NAME="description" CONTENT="Više derivacije i diferencijali">
+<META NAME="keywords" CONTENT="predavanja">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2012">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="predavanja.css">
+
+<LINK REL="next" HREF="node113.html">
+<LINK REL="previous" HREF="node110.html">
+<LINK REL="up" HREF="node98.html">
+<LINK REL="next" HREF="node113.html">
+</HEAD>
+
+<BODY >
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="shortcut icon" href="favicon.ico"/>
+
+<style>
+.sidenav {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 50px;
+}
+
+div.sidenav a {
+    padding: 8px 8px 8px 10px;
+    text-decoration: none;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    display: block;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dropdown-btn {
+    padding: 8px 8px 8px 8px;
+    text-decoration: none; 
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s;
+}
+
+
+.sidenav a:hover, .dropdown-btn:hover {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #C00;
+}
+
+.menu2 {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    font-style:italic;
+}
+
+.dropdown-container {
+  display: none;
+  font-family: 'Open Sans',sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #ddd;
+  padding-left: 8px;
+}
+
+.dropdown-container a:hover {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    background-color: #ccc;
+}
+
+.sidenav .active {
+    background-color: #C00;
+    color: white;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+hr { 
+    display: block;
+    margin-top: 0.2em;
+    margin-bottom: 0.4em;
+    margin-left: -5px;
+    margin-right: -5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color:#ec971f;
+} 
+  
+.caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 20px;
+    vertical-align: middle;
+    border-top: 5px dashed;
+        border-top-width: 5px;
+        border-top-style: dashed;
+        border-top-color: currentcolor;
+    border-right: 5px solid transparent;
+        border-right-width: 5px;
+        border-right-style: solid;
+        border-right-color: transparent;
+    border-left: 5px solid transparent;
+        border-left-width: 5px;
+        border-left-style: solid;
+        border-left-color: transparent;
+}
+
+</style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- First -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2382574370068590"
+     data-ad-slot="8207843721"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<script>
+   // alert('|ivan'+document.getElementById("mys-content").innerHTML+'|') 
+//    alert(typeof(window.CustomEvent))
+//    if(typeof(window.CustomEvent)=="undefined")
+// {
+//     document.display = 'none';
+// } 
+</script>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" 
+  onclick="closeNav()"
+  style="font-size:24px;cursor:pointer;color:#000;position: absolute; top: 0;
+    right: 10px; font-size: 24px; margin-left: 50px;">&nbsp; &times; &nbsp;</a>
+  <a href="/matematika1/index.html">HOME</a>
+  <button href="/matematika1/predavanja" class="dropdown-btn">PREDAVANJA
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/predavanja/predavanja.html">SADRŽAJ</a>
+      <a href="/matematika1/predavanja/node3.html">OSNOVE</a>
+      <a href="/matematika1/predavanja/node22.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/predavanja/node47.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/predavanja/node67.html">FUNKCIJE</a>
+      <a href="/matematika1/predavanja/node98.html">DERIVACIJE</a>
+      <a href="/matematika1/predavanja/node125.html">NIZOVI I REDOVI</a>
+      <a href="/matematika1/predavanja/node144.html">INDEKS</a>
+    </div>
+  <button href="/matematika1/vjezbe" class="dropdown-btn">VJEŽBE
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/vjezbe/vjezbe.html">SADRŽAJ</a>
+      <a href="/matematika1/vjezbe/node2.html">OSNOVE</a>
+      <a href="/matematika1/vjezbe/node24.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/vjezbe/node55.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/vjezbe/node87.html">FUNKCIJE</a>
+      <a href="/matematika1/vjezbe/node110.html">DERIVACIJE</a>
+      <a href="/matematika1/vjezbe/node136.html">NIZOVI I REDOVI</a>
+    </div>
+  <button href="/matematika1/kviz" class="dropdown-btn">KVIZ
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/kviz/index.html">SADRŽAJ</a>
+      <a href="/matematika1/kviz/osnove/">OSNOVE</a>
+      <a href="/matematika1/kviz/algebra/">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/kviz/vektori/">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/kviz/funkcije/">FUNKCIJE</a>
+      <a href="/matematika1/kviz/derivacije/">DERIVACIJE</a>
+      <a href="/matematika1/kviz/nizovi/">NIZOVI I REDOVI</a>
+    </div>
+  <button href="/matematika1/podsjetnik" class="dropdown-btn">PODSJETNIK
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/podsjetnik/podsjetnik.html">SADRŽAJ</a>
+      <a href="/matematika1/podsjetnik/node1.html">OSNOVE</a>
+      <a href="/matematika1/podsjetnik/node2.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/podsjetnik/node3.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/podsjetnik/node4.html">FUNKCIJE</a>
+      <a href="/matematika1/podsjetnik/node5.html">DERIVACIJE</a>
+      <a href="/matematika1/podsjetnik/node6.html">NIZOVI I REDOVI</a>
+    </div>
+  <!--<a href="/matematika1/kviz">Kviz</a>-->
+  <a href="/matematika1/java">JAVA</a>
+  <a href="http://lavica.fesb.unist.hr/netplot"  class="menu2">NETPLOT</a>
+  <!-- <a href="/matematika1/gauss"  class="menu2">GAUSS</a> -->
+  <a href="http://lavica.fesb.unist.hr/octave/ool_hr.php"  class="menu2">OCTAVE</a>
+  <a href="/matematika1/search.html">Traži ...</a>
+</div>
+
+<span style="font-size:24px;font-family:'Open Sans', sans-serif;cursor:pointer;color:#ec971f"
+      onclick="openNav()">&#9776;</span> &nbsp; 
+<span style="font-size:30px;cursor:pointer;color:#888;font-family:'Opens Sans',sans-serif;"
+      onclick="window.location.assign('../index.html')">
+<font style="color:#C00">m</font>atematika<font style="color:#C00;vertical-align:super;margin-left:2px;font-size:24px;">1</font></span>
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "300px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+
+</script>     
+<hr>
+
+
+
+
+<arrow class=left> </arrow> <A NAME="tex2html1521"
+  HREF="node111.html">Približno računanje</A> &nbsp; &nbsp;
+<arrow class=up> </arrow> <A NAME="tex2html1527"
+  HREF="node98.html">DERIVACIJE I PRIMJENE</A> &nbsp; &nbsp;
+<arrow class=right> </arrow> <A NAME="tex2html1529"
+  HREF="node113.html">Deriviranje parametarski zadane funkcije</A>
+
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00730000000000000000"></A>
+<A NAME="sec:dervis"></A>
+<BR>
+Više derivacije i diferencijali
+</H1>
+
+<P>
+Neka je <!-- MATH
+ $f:\mathcal{D}\to \mathbb{R}$
+ -->
+<IMG
+ WIDTH="86" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1398.gif"
+ ALT="$ f:\mathcal{D}\to \mathbb{R}$">
+ zadana funkcija. Njena derivacija
+<!-- MATH
+ $f':\mathcal{A}\subseteq\mathcal{D}\to \mathbb{R}$
+ -->
+<IMG
+ WIDTH="130" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2132.gif"
+ ALT="$ f':\mathcal{A}\subseteq\mathcal{D}\to \mathbb{R}$">
+ je također funkcija pa je možemo
+derivirati. <EM>Druga derivacija</EM><A NAME="18772"></A>
+funkcije <IMG
+ WIDTH="16" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img162.gif"
+ ALT="$ f$">
+ je derivacija funkcije 
+<IMG
+ WIDTH="21" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1919.gif"
+ ALT="$ f'$">
+, odnosno
+<P><!-- MATH
+ \begin{displaymath}
+f''\equiv(f')':\mathcal{B}\subseteq\mathcal{A}\subseteq\mathcal{D}\to \mathbb{R}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="234" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2133.gif"
+ ALT="$\displaystyle f''\equiv(f')':\mathcal{B}\subseteq\mathcal{A}\subseteq\mathcal{D}\to \mathbb{R}.
+$">
+</DIV><P>
+</P>
+Indukcijom definiramo <EM><IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img241.gif"
+ ALT="$ n$">
+-tu derivaciju</EM>
+<A NAME="18776"></A>
+ funkcije <IMG
+ WIDTH="16" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img162.gif"
+ ALT="$ f$">
+ kao
+derivaciju njene <IMG
+ WIDTH="61" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2134.gif"
+ ALT="$ (n-1)$">
+-ve derivacije,
+<P><!-- MATH
+ \begin{displaymath}
+f^{(n)}=\big(f^{(n-1)}\big)'.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="138" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2135.gif"
+ ALT="$\displaystyle f^{(n)}=\big(f^{(n-1)}\big)'.
+$">
+</DIV><P>
+</P>
+
+<P>
+<div class="pri"><P>
+<DIV><B>Primjer  5.9</B> &nbsp; <A NAME="d2.22"></A>  <DL COMPACT>
+<DT>a)</DT>
+<DD>Za više derivacije funkcije <IMG
+ WIDTH="64" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2136.gif"
+ ALT="$ y=e^{kx}$">
+ vrijedi
+<P></P>
+<DIV ALIGN="CENTER"><TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="19" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2137.gif"
+ ALT="$\displaystyle y'$"><IMG
+ WIDTH="137" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2138.gif"
+ ALT="$\displaystyle =e^{kx}\cdot k=k e^{kx} ,$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><IMG
+ WIDTH="178" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2139.gif"
+ ALT="$\displaystyle y''&amp;=ke^{kx}\cdot k=k^2 e^{kx},$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="28" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2140.gif"
+ ALT="$\displaystyle y'''$"><IMG
+ WIDTH="163" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2141.gif"
+ ALT="$\displaystyle =k^2e^{kx}\cdot k=k^3 e^{kx},$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+pa indukcijom zaključujemo da je <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img241.gif"
+ ALT="$ n$">
+-ta derivacija jednaka
+<P><!-- MATH
+ \begin{displaymath}
+y^{(n)}=k^n e^{kx}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="110" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2142.gif"
+ ALT="$\displaystyle y^{(n)}=k^n e^{kx}.
+$">
+</DIV><P>
+</P>
+</DD>
+<DT>b)</DT>
+<DD>Za polinom 
+<P><!-- MATH
+ \begin{displaymath}
+y=a_3 x^3+a_2x^2+a_1x+a_0
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="222" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2143.gif"
+ ALT="$\displaystyle y=a_3 x^3+a_2x^2+a_1x+a_0
+$">
+</DIV><P>
+</P>
+vrijedi
+<P></P>
+<DIV ALIGN="CENTER"><TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="19" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2137.gif"
+ ALT="$\displaystyle y'$"><IMG
+ WIDTH="172" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2144.gif"
+ ALT="$\displaystyle = 3a_3 x^2 + 2a_2 x+a_1 ,$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><IMG
+ WIDTH="138" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2145.gif"
+ ALT="$\displaystyle y''&amp;=6a_3x+ 2a_2,$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="28" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2140.gif"
+ ALT="$\displaystyle y'''$"><IMG
+ WIDTH="56" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2146.gif"
+ ALT="$\displaystyle =6a_3,$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="34" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2147.gif"
+ ALT="$\displaystyle y^{IV}$"><IMG
+ WIDTH="38" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1221.gif"
+ ALT="$\displaystyle =0,$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="27" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2148.gif"
+ ALT="$\displaystyle y^{V}$"><IMG
+ WIDTH="38" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1221.gif"
+ ALT="$\displaystyle =0,$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="16" HEIGHT="63" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2149.gif"
+ ALT="$\displaystyle \ \vdots$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Lako vidimo da općenito za polinom <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img241.gif"
+ ALT="$ n$">
+-tog stupnja <IMG
+ WIDTH="48" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2150.gif"
+ ALT="$ p_n(x)$">
+ vrijedi
+<P><!-- MATH
+ \begin{displaymath}
+p_n^{(k)}(x)=0, \qquad k > n.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="185" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2151.gif"
+ ALT="$\displaystyle p_n^{(k)}(x)=0, \qquad k &gt; n.
+$">
+</DIV><P>
+</P>
+</DD>
+</DL></DIV><P></P>
+
+</div><p></p>
+<P>
+Diferencijale višeg reda definiramo analogno.
+Neka je <IMG
+ WIDTH="73" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img374.gif"
+ ALT="$ y=f(x)$">
+ dva puta derivabilna funkcija.
+<EM>Diferencijal drugog reda funkcije <IMG
+ WIDTH="16" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img162.gif"
+ ALT="$ f$">
+</EM>
+<A NAME="18801"></A>je diferencijal njenog
+diferencijala <IMG
+ WIDTH="24" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2152.gif"
+ ALT="$ dy$">
+, odnosno
+<P><!-- MATH
+ \begin{displaymath}
+d^2 f\equiv d^2 y= d(dy).
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="155" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2153.gif"
+ ALT="$\displaystyle d^2 f\equiv d^2 y= d(dy).
+$">
+</DIV><P>
+</P>
+Pri tome prema formuli (<A HREF="node110.html#d2.16b">5.9</A>) vrijedi 
+<P><!-- MATH
+ \begin{displaymath}
+d^2 y=d(dy)=(dy)'dx=(f'(x)dx)'dx=f''(x) dx\cdot dx=f''(x)dx^2.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="523" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2154.gif"
+ ALT="$\displaystyle d^2 y=d(dy)=(dy)'dx=(f'(x)dx)'dx=f''(x) dx\cdot dx=f''(x)dx^2.
+$">
+</DIV><P>
+</P>
+Primijetimo da se ovdje prilikom  deriviranja <IMG
+ WIDTH="25" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2155.gif"
+ ALT="$ dx$">
+ tretira kao
+konstanta.
+
+<P>
+Iz ove formule slijedi još jedan koristan izraz za 
+drugu derivaciju<A NAME="18803"></A>:
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="d2.22a"></A><!-- MATH
+ \begin{equation}
+f''(x)=\frac{d^2 y}{dx^2}.
+\end{equation}
+ -->
+<TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><IMG
+ WIDTH="110" HEIGHT="63" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2156.gif"
+ ALT="$\displaystyle f''(x)=\frac{d^2 y}{dx^2}.$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+(5.11)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+<P>
+Nadalje, ako je <IMG
+ WIDTH="73" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img374.gif"
+ ALT="$ y=f(x)$">
+ <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img241.gif"
+ ALT="$ n$">
+ puta derivabilna funkcija, tada je 
+<EM>diferencijal <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img241.gif"
+ ALT="$ n$">
+-tog reda</EM><A NAME="18810"></A> 
+funkcije <IMG
+ WIDTH="16" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img162.gif"
+ ALT="$ f$">
+ dan s
+<P><!-- MATH
+ \begin{displaymath}
+d^n f\equiv d^n y= d(d^{n-1})y = f^{(n)} dx^n.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="272" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2157.gif"
+ ALT="$\displaystyle d^n f\equiv d^n y= d(d^{n-1})y = f^{(n)} dx^n.
+$">
+</DIV><P>
+</P>
+
+<P>
+<p><HR></p>
+<arrow class=left> </arrow> <A NAME="tex2html1521"
+  HREF="node111.html">Približno računanje</A> &nbsp; &nbsp;
+<arrow class=up> </arrow> <A NAME="tex2html1527"
+  HREF="node98.html">DERIVACIJE I PRIMJENE</A> &nbsp; &nbsp;
+<arrow class=right> </arrow> <A NAME="tex2html1529"
+  HREF="node113.html">Deriviranje parametarski zadane funkcije</A>  
+
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

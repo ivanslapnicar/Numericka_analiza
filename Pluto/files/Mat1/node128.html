@@ -1,0 +1,759 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2012 (1.2)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-2382574370068590",
+    enable_page_level_ads: true
+  });
+</script>
+<TITLE>Omeđenost, monotonost i konvergencija</TITLE>
+<META NAME="description" CONTENT="Omeđenost, monotonost i konvergencija">
+<META NAME="keywords" CONTENT="predavanja">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2012">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="predavanja.css">
+
+<LINK REL="next" HREF="node129.html">
+<LINK REL="previous" HREF="node127.html">
+<LINK REL="up" HREF="node126.html">
+<LINK REL="next" HREF="node129.html">
+</HEAD>
+
+<BODY >
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="shortcut icon" href="favicon.ico"/>
+
+<style>
+.sidenav {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 50px;
+}
+
+div.sidenav a {
+    padding: 8px 8px 8px 10px;
+    text-decoration: none;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    display: block;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dropdown-btn {
+    padding: 8px 8px 8px 8px;
+    text-decoration: none; 
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s;
+}
+
+
+.sidenav a:hover, .dropdown-btn:hover {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #C00;
+}
+
+.menu2 {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    font-style:italic;
+}
+
+.dropdown-container {
+  display: none;
+  font-family: 'Open Sans',sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #ddd;
+  padding-left: 8px;
+}
+
+.dropdown-container a:hover {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    background-color: #ccc;
+}
+
+.sidenav .active {
+    background-color: #C00;
+    color: white;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+hr { 
+    display: block;
+    margin-top: 0.2em;
+    margin-bottom: 0.4em;
+    margin-left: -5px;
+    margin-right: -5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color:#ec971f;
+} 
+  
+.caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 20px;
+    vertical-align: middle;
+    border-top: 5px dashed;
+        border-top-width: 5px;
+        border-top-style: dashed;
+        border-top-color: currentcolor;
+    border-right: 5px solid transparent;
+        border-right-width: 5px;
+        border-right-style: solid;
+        border-right-color: transparent;
+    border-left: 5px solid transparent;
+        border-left-width: 5px;
+        border-left-style: solid;
+        border-left-color: transparent;
+}
+
+</style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- First -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2382574370068590"
+     data-ad-slot="8207843721"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<script>
+   // alert('|ivan'+document.getElementById("mys-content").innerHTML+'|') 
+//    alert(typeof(window.CustomEvent))
+//    if(typeof(window.CustomEvent)=="undefined")
+// {
+//     document.display = 'none';
+// } 
+</script>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" 
+  onclick="closeNav()"
+  style="font-size:24px;cursor:pointer;color:#000;position: absolute; top: 0;
+    right: 10px; font-size: 24px; margin-left: 50px;">&nbsp; &times; &nbsp;</a>
+  <a href="/matematika1/index.html">HOME</a>
+  <button href="/matematika1/predavanja" class="dropdown-btn">PREDAVANJA
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/predavanja/predavanja.html">SADRŽAJ</a>
+      <a href="/matematika1/predavanja/node3.html">OSNOVE</a>
+      <a href="/matematika1/predavanja/node22.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/predavanja/node47.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/predavanja/node67.html">FUNKCIJE</a>
+      <a href="/matematika1/predavanja/node98.html">DERIVACIJE</a>
+      <a href="/matematika1/predavanja/node125.html">NIZOVI I REDOVI</a>
+      <a href="/matematika1/predavanja/node144.html">INDEKS</a>
+    </div>
+  <button href="/matematika1/vjezbe" class="dropdown-btn">VJEŽBE
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/vjezbe/vjezbe.html">SADRŽAJ</a>
+      <a href="/matematika1/vjezbe/node2.html">OSNOVE</a>
+      <a href="/matematika1/vjezbe/node24.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/vjezbe/node55.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/vjezbe/node87.html">FUNKCIJE</a>
+      <a href="/matematika1/vjezbe/node110.html">DERIVACIJE</a>
+      <a href="/matematika1/vjezbe/node136.html">NIZOVI I REDOVI</a>
+    </div>
+  <button href="/matematika1/kviz" class="dropdown-btn">KVIZ
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/kviz/index.html">SADRŽAJ</a>
+      <a href="/matematika1/kviz/osnove/">OSNOVE</a>
+      <a href="/matematika1/kviz/algebra/">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/kviz/vektori/">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/kviz/funkcije/">FUNKCIJE</a>
+      <a href="/matematika1/kviz/derivacije/">DERIVACIJE</a>
+      <a href="/matematika1/kviz/nizovi/">NIZOVI I REDOVI</a>
+    </div>
+  <button href="/matematika1/podsjetnik" class="dropdown-btn">PODSJETNIK
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/podsjetnik/podsjetnik.html">SADRŽAJ</a>
+      <a href="/matematika1/podsjetnik/node1.html">OSNOVE</a>
+      <a href="/matematika1/podsjetnik/node2.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/podsjetnik/node3.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/podsjetnik/node4.html">FUNKCIJE</a>
+      <a href="/matematika1/podsjetnik/node5.html">DERIVACIJE</a>
+      <a href="/matematika1/podsjetnik/node6.html">NIZOVI I REDOVI</a>
+    </div>
+  <!--<a href="/matematika1/kviz">Kviz</a>-->
+  <a href="/matematika1/java">JAVA</a>
+  <a href="http://lavica.fesb.unist.hr/netplot"  class="menu2">NETPLOT</a>
+  <!-- <a href="/matematika1/gauss"  class="menu2">GAUSS</a> -->
+  <a href="http://lavica.fesb.unist.hr/octave/ool_hr.php"  class="menu2">OCTAVE</a>
+  <a href="/matematika1/search.html">Traži ...</a>
+</div>
+
+<span style="font-size:24px;font-family:'Open Sans', sans-serif;cursor:pointer;color:#ec971f"
+      onclick="openNav()">&#9776;</span> &nbsp; 
+<span style="font-size:30px;cursor:pointer;color:#888;font-family:'Opens Sans',sans-serif;"
+      onclick="window.location.assign('../index.html')">
+<font style="color:#C00">m</font>atematika<font style="color:#C00;vertical-align:super;margin-left:2px;font-size:24px;">1</font></span>
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "300px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+
+</script>     
+<hr>
+
+
+
+
+<arrow class=left> </arrow> <A NAME="tex2html1702"
+  HREF="node127.html">Gomilište i podniz</A> &nbsp; &nbsp;
+<arrow class=up> </arrow> <A NAME="tex2html1708"
+  HREF="node126.html">Niz realnih brojeva</A> &nbsp; &nbsp;
+<arrow class=right> </arrow> <A NAME="tex2html1710"
+  HREF="node129.html">Broj</A>
+
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00812000000000000000"></A>
+<A NAME="sec:omed"></A>
+<BR>
+Omeđenost, monotonost i konvergencija
+</H2>
+
+<P>
+U ovom poglavlju dokazat ćemo četiri teorema koji povezuju 
+monotonost, omeđenost i konvergenciju nizova i podnizova.
+
+<P>
+<div class="teo"><P>
+<DIV><B>Teorem  6.2</B> &nbsp; <A NAME="n1.11"></A>Svaki konvergentan niz je omeđen.<A NAME="23807"></A></DIV><P></P>
+
+</div><p></p><div class="dok"><B>Dokaz. </B></div><p></p>
+Neka je <!-- MATH
+ $a=\lim a_n$
+ -->
+<IMG
+ WIDTH="86" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2621.gif"
+ ALT="$ a=\lim a_n$">
+. Odaberimo <!-- MATH
+ $\varepsilon > 0$
+ -->
+<IMG
+ WIDTH="46" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1460.gif"
+ ALT="$ \varepsilon &gt;0$">
+. Tada se članovi niza
+<P><!-- MATH
+ \begin{displaymath}
+a_{n_{\varepsilon }},a_{n_{\varepsilon }+1},a_{n_{\varepsilon }+2},\ldots
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="165" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2622.gif"
+ ALT="$\displaystyle a_{n_{\varepsilon }},a_{n_{\varepsilon }+1},a_{n_{\varepsilon }+2},\ldots
+$">
+</DIV><P>
+</P>
+nalaze unutar
+intervala <!-- MATH
+ $(a-\varepsilon ,a+\varepsilon )$
+ -->
+<IMG
+ WIDTH="107" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2572.gif"
+ ALT="$ (a-\varepsilon ,a+\varepsilon )$">
+. To znači da za svaki <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img241.gif"
+ ALT="$ n$">
+ vrijedi
+<P><!-- MATH
+ \begin{displaymath}
+%
+\min\{a_1,a_2,\ldots, a_{n_{\varepsilon }-1},a-\varepsilon \} \leq a_n \leq
+\max\{a_1,a_2,\ldots, a_{n_{\varepsilon }-1},a+\varepsilon \}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="523" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2623.gif"
+ ALT="$\displaystyle %
+\min\{a_1,a_2,\ldots, a_{n_{\varepsilon }-1},a-\varepsilon \} \leq a_n \leq
+\max\{a_1,a_2,\ldots, a_{n_{\varepsilon }-1},a+\varepsilon \}
+$">
+</DIV><P>
+</P> 
+i teorem je dokazan. &nbsp;&nbsp;&nbsp;&nbsp;<div class="dok"><B>Q.E.D.</B>
+<BR></div><p></p>
+
+<P>
+<div class="teo"><P>
+<DIV><B>Teorem  6.3</B> &nbsp; <A NAME="n1.12"></A>Svaki niz ima monotoni podniz.</DIV><P></P>
+
+</div><p></p><div class="dok"><B>Dokaz. </B></div><p></p>
+Neka je zadan niz <IMG
+ WIDTH="42" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2559.gif"
+ ALT="$ \{a_n\}$">
+. Definirajmo skup 
+<P><!-- MATH
+ \begin{displaymath}
+%
+M=\{ m\in \mathbb{N}: n\geq m \Rightarrow a_n\geq a_m \}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="282" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2624.gif"
+ ALT="$\displaystyle %
+M=\{ m\in \mathbb{N}: n\geq m \Rightarrow a_n\geq a_m \}.
+$">
+</DIV><P>
+</P> 
+Na primjer, ako je niz zadan s
+<P><!-- MATH
+ \begin{displaymath}
+%
+a_1=1, a_2=3, a_3=2, a_4=4, a_5=5 \textrm{ i }  a_n=n \textrm{ za }
+n\geq 6,
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="438" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2625.gif"
+ ALT="$\displaystyle %
+a_1=1, a_2=3, a_3=2, a_4=4, a_5=5 \textrm{ i } a_n=n \textrm{ za }
+n\geq 6,
+$">
+</DIV><P>
+</P> 
+tada je <IMG
+ WIDTH="55" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img222.gif"
+ ALT="$ 1\in M$">
+, <!-- MATH
+ $2\not\in M$
+ -->
+<IMG
+ WIDTH="55" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2626.gif"
+ ALT="$ 2\not\in M$">
+, <IMG
+ WIDTH="55" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2627.gif"
+ ALT="$ 3\in M$">
+.
+Skup <!-- MATH
+ $M\subseteq \mathbb{N}$
+ -->
+<IMG
+ WIDTH="61" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img221.gif"
+ ALT="$ M\subseteq \mathbb{N}$">
+ je ili konačan ili beskonačan pa svaki od
+tih slučajeva razmatramo posebno.
+
+<P>
+Ako je skup <IMG
+ WIDTH="24" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img141.gif"
+ ALT="$ M$">
+ beskonačan, tada u njemu možemo odabrati strogo
+uzlazni niz 
+<P><!-- MATH
+ \begin{displaymath}
+%
+n_1<n_2<\cdots <n_k<\cdots.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="211" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2628.gif"
+ ALT="$\displaystyle %
+n_1&lt;n_2&lt;\cdots &lt;n_k&lt;\cdots.
+$">
+</DIV><P>
+</P> 
+Prema definiciji skupa <IMG
+ WIDTH="24" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img141.gif"
+ ALT="$ M$">
+ vrijedi
+<P><!-- MATH
+ \begin{displaymath}
+%
+a_{n_1}\leq a_{n_2}\leq \cdots \leq a_{n_k}\leq \cdots.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="234" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2629.gif"
+ ALT="$\displaystyle %
+a_{n_1}\leq a_{n_2}\leq \cdots \leq a_{n_k}\leq \cdots.
+$">
+</DIV><P>
+</P> 
+Dakle, <!-- MATH
+ $\{a_{n_k}\}$
+ -->
+<IMG
+ WIDTH="50" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2619.gif"
+ ALT="$ \{a_{n_k}\}$">
+ je rastući podniz niza <IMG
+ WIDTH="42" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2618.gif"
+ ALT="$ \{a_{n}\}$">
+ i teorem je
+dokazan.
+
+<P>
+Ako je skup <IMG
+ WIDTH="24" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img141.gif"
+ ALT="$ M$">
+ konačan, odaberimo <!-- MATH
+ $n_1\in \mathbb{N}$
+ -->
+<IMG
+ WIDTH="59" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2630.gif"
+ ALT="$ n_1\in \mathbb{N}$">
+ koji je veći od svih
+elemenata od <IMG
+ WIDTH="24" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img141.gif"
+ ALT="$ M$">
+. Tada postoji <!-- MATH
+ $n_2\in\mathbb{N}$
+ -->
+<IMG
+ WIDTH="59" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2631.gif"
+ ALT="$ n_2\in\mathbb{N}$">
+ takav da je 
+<IMG
+ WIDTH="67" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2632.gif"
+ ALT="$ n_2&gt;n_1$">
+ i <!-- MATH
+ $a_{n_2}<a_{n_1}$
+ -->
+<IMG
+ WIDTH="82" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2633.gif"
+ ALT="$ a_{n_2}&lt;a_{n_1}$">
+, jer bi u protivnom <IMG
+ WIDTH="24" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2634.gif"
+ ALT="$ n_1$">
+ bio iz <IMG
+ WIDTH="24" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img141.gif"
+ ALT="$ M$">
+.
+Očito je i <!-- MATH
+ $n_2\not\in M$
+ -->
+<IMG
+ WIDTH="65" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2635.gif"
+ ALT="$ n_2\not\in M$">
+. Nastavljajući ovim postupkom dobivamo 
+strogo uzlazni niz 
+<P><!-- MATH
+ \begin{displaymath}
+%
+n_1<n_2<\cdots <n_k<\cdots,
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="211" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2636.gif"
+ ALT="$\displaystyle %
+n_1&lt;n_2&lt;\cdots &lt;n_k&lt;\cdots,
+$">
+</DIV><P>
+</P> 
+čiji su elementi iz skupa <!-- MATH
+ $\mathbb{N}\setminus M$
+ -->
+<IMG
+ WIDTH="54" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2637.gif"
+ ALT="$ \mathbb{N}\setminus M$">
+. Vrijedi
+<P><!-- MATH
+ \begin{displaymath}
+%
+a_{n_1}>a_{n_2}> \cdots > a_{n_k}> \cdots
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="226" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2638.gif"
+ ALT="$\displaystyle %
+a_{n_1}&gt;a_{n_2}&gt; \cdots &gt; a_{n_k}&gt; \cdots
+$">
+</DIV><P>
+</P> 
+pa je <!-- MATH
+ $\{a_{n_k}\}$
+ -->
+<IMG
+ WIDTH="50" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2619.gif"
+ ALT="$ \{a_{n_k}\}$">
+ strogo padajući podniz niza <IMG
+ WIDTH="42" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2618.gif"
+ ALT="$ \{a_{n}\}$">
+.
+&nbsp;&nbsp;&nbsp;&nbsp;<div class="dok"><B>Q.E.D.</B>
+<BR></div><p></p>
+
+<P>
+<div class="teo"><P>
+<DIV><B>Teorem  6.4</B> &nbsp; <A NAME="n1.13"></A>Svaki monoton i omeđen niz je konvergentan.<A NAME="23833"></A></DIV><P></P>
+
+</div><p></p><div class="dok"><B>Dokaz. </B></div><p></p>
+Dokazat ćemo slučaj kada je niz <IMG
+ WIDTH="42" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2559.gif"
+ ALT="$ \{a_n\}$">
+ padajući.
+Neka je <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1434.gif"
+ ALT="$ a$">
+ najveća donja međa skupa čiji su elementi članovi niza,
+<!-- MATH
+ $a=\inf \{ a_1,a_2,\cdots \}$
+ -->
+<IMG
+ WIDTH="154" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2639.gif"
+ ALT="$ a=\inf \{ a_1,a_2,\cdots \}$">
+. Tada
+<P><!-- MATH
+ \begin{displaymath}
+%
+(\forall \varepsilon >0) (\exists n_{\varepsilon }\in\mathbb{N}) \textrm{ takav da }
+a_{n_{\varepsilon }}<a+\varepsilon .
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="322" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2640.gif"
+ ALT="$\displaystyle %
+(\forall \varepsilon &gt;0) (\exists n_{\varepsilon }\in\mathbb{N}) \textrm{ takav da }
+a_{n_{\varepsilon }}&lt;a+\varepsilon .
+$">
+</DIV><P>
+</P> 
+Naime, u protivnom bi postojao <!-- MATH
+ $\varepsilon >0$
+ -->
+<IMG
+ WIDTH="46" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1460.gif"
+ ALT="$ \varepsilon &gt;0$">
+ takav da je <!-- MATH
+ $a_n\geq a+\varepsilon$
+ -->
+<IMG
+ WIDTH="88" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2641.gif"
+ ALT="$ a_n\geq a+\varepsilon $">
+ za
+svaki <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img241.gif"
+ ALT="$ n$">
+, što je u suprotnosti s pretpostavkom da je <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1434.gif"
+ ALT="$ a$">
+ infimum.
+
+<P>
+Niz je padajući pa za <!-- MATH
+ $n\geq n_{\varepsilon }$
+ -->
+<IMG
+ WIDTH="58" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2642.gif"
+ ALT="$ n\geq n_{\varepsilon }$">
+ vrijedi
+<P><!-- MATH
+ \begin{displaymath}
+%
+a\leq a_n\leq a_{n_{\varepsilon }} \leq a+\varepsilon ,
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="177" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2643.gif"
+ ALT="$\displaystyle %
+a\leq a_n\leq a_{n_{\varepsilon }} \leq a+\varepsilon ,
+$">
+</DIV><P>
+</P> 
+odnosno <!-- MATH
+ $|a_n-a|<\varepsilon$
+ -->
+<IMG
+ WIDTH="98" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2644.gif"
+ ALT="$ \vert a_n-a\vert&lt;\varepsilon $">
+. Dakle, definicija <A HREF="node126.html#n1.1">6.1</A> povlači
+<!-- MATH
+ $\lim a_n=a$
+ -->
+<IMG
+ WIDTH="86" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2645.gif"
+ ALT="$ \lim a_n=a$">
+ i teorem je dokazan.
+&nbsp;&nbsp;&nbsp;&nbsp;<div class="dok"><B>Q.E.D.</B>
+<BR></div><p></p>
+
+<P>
+Koristeći ovaj teorem u poglavlju <A HREF="node129.html#sec:e">6.1.3</A> dat ćemo 
+definiciju broja <IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img23.gif"
+ ALT="$ e$">
+, odnosno baze prirodnih
+logaritama.
+Prethodna dva teorema nam također koriste za dokazivanje poznatog
+Bolzano-Weierstrassovog teorema.
+
+<P>
+<div class="teo"><P>
+<DIV><B>Teorem  6.5</B> &nbsp; [Bolzano--Weierstrass]<A NAME="n1.14"></A>Svaki omeđen niz ima konvergentan
+podniz.<A NAME="23844"></A><A NAME="23845"></A></DIV><P></P>
+
+</div><p></p><div class="dok"><B>Dokaz. </B></div><p></p>
+Po teoremu <A HREF="#n1.12">6.3</A> svaki niz ima monotoni podniz.
+Ako je zadani niz omeđen, tada je i monotoni podniz omeđen pa
+podniz konvergira po teoremu <A HREF="#n1.13">6.4</A>.
+&nbsp;&nbsp;&nbsp;&nbsp;<div class="dok"><B>Q.E.D.</B>
+<BR></div><p></p>
+
+<P>
+<p><HR></p>
+<arrow class=left> </arrow> <A NAME="tex2html1702"
+  HREF="node127.html">Gomilište i podniz</A> &nbsp; &nbsp;
+<arrow class=up> </arrow> <A NAME="tex2html1708"
+  HREF="node126.html">Niz realnih brojeva</A> &nbsp; &nbsp;
+<arrow class=right> </arrow> <A NAME="tex2html1710"
+  HREF="node129.html">Broj</A>  
+
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

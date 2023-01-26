@@ -1,0 +1,704 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2012 (1.2)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-2382574370068590",
+    enable_page_level_ads: true
+  });
+</script>
+<TITLE>Binarne relacije</TITLE>
+<META NAME="description" CONTENT="Binarne relacije">
+<META NAME="keywords" CONTENT="predavanja">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2012">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="predavanja.css">
+
+<LINK REL="next" HREF="node7.html">
+<LINK REL="previous" HREF="node4.html">
+<LINK REL="up" HREF="node3.html">
+<LINK REL="next" HREF="node6.html">
+</HEAD>
+
+<BODY >
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="shortcut icon" href="favicon.ico"/>
+
+<style>
+.sidenav {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 50px;
+}
+
+div.sidenav a {
+    padding: 8px 8px 8px 10px;
+    text-decoration: none;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    display: block;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dropdown-btn {
+    padding: 8px 8px 8px 8px;
+    text-decoration: none; 
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s;
+}
+
+
+.sidenav a:hover, .dropdown-btn:hover {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #C00;
+}
+
+.menu2 {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    font-style:italic;
+}
+
+.dropdown-container {
+  display: none;
+  font-family: 'Open Sans',sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #ddd;
+  padding-left: 8px;
+}
+
+.dropdown-container a:hover {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    background-color: #ccc;
+}
+
+.sidenav .active {
+    background-color: #C00;
+    color: white;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+hr { 
+    display: block;
+    margin-top: 0.2em;
+    margin-bottom: 0.4em;
+    margin-left: -5px;
+    margin-right: -5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color:#ec971f;
+} 
+  
+.caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 20px;
+    vertical-align: middle;
+    border-top: 5px dashed;
+        border-top-width: 5px;
+        border-top-style: dashed;
+        border-top-color: currentcolor;
+    border-right: 5px solid transparent;
+        border-right-width: 5px;
+        border-right-style: solid;
+        border-right-color: transparent;
+    border-left: 5px solid transparent;
+        border-left-width: 5px;
+        border-left-style: solid;
+        border-left-color: transparent;
+}
+
+</style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- First -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2382574370068590"
+     data-ad-slot="8207843721"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<script>
+   // alert('|ivan'+document.getElementById("mys-content").innerHTML+'|') 
+//    alert(typeof(window.CustomEvent))
+//    if(typeof(window.CustomEvent)=="undefined")
+// {
+//     document.display = 'none';
+// } 
+</script>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" 
+  onclick="closeNav()"
+  style="font-size:24px;cursor:pointer;color:#000;position: absolute; top: 0;
+    right: 10px; font-size: 24px; margin-left: 50px;">&nbsp; &times; &nbsp;</a>
+  <a href="/matematika1/index.html">HOME</a>
+  <button href="/matematika1/predavanja" class="dropdown-btn">PREDAVANJA
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/predavanja/predavanja.html">SADRŽAJ</a>
+      <a href="/matematika1/predavanja/node3.html">OSNOVE</a>
+      <a href="/matematika1/predavanja/node22.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/predavanja/node47.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/predavanja/node67.html">FUNKCIJE</a>
+      <a href="/matematika1/predavanja/node98.html">DERIVACIJE</a>
+      <a href="/matematika1/predavanja/node125.html">NIZOVI I REDOVI</a>
+      <a href="/matematika1/predavanja/node144.html">INDEKS</a>
+    </div>
+  <button href="/matematika1/vjezbe" class="dropdown-btn">VJEŽBE
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/vjezbe/vjezbe.html">SADRŽAJ</a>
+      <a href="/matematika1/vjezbe/node2.html">OSNOVE</a>
+      <a href="/matematika1/vjezbe/node24.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/vjezbe/node55.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/vjezbe/node87.html">FUNKCIJE</a>
+      <a href="/matematika1/vjezbe/node110.html">DERIVACIJE</a>
+      <a href="/matematika1/vjezbe/node136.html">NIZOVI I REDOVI</a>
+    </div>
+  <button href="/matematika1/kviz" class="dropdown-btn">KVIZ
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/kviz/index.html">SADRŽAJ</a>
+      <a href="/matematika1/kviz/osnove/">OSNOVE</a>
+      <a href="/matematika1/kviz/algebra/">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/kviz/vektori/">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/kviz/funkcije/">FUNKCIJE</a>
+      <a href="/matematika1/kviz/derivacije/">DERIVACIJE</a>
+      <a href="/matematika1/kviz/nizovi/">NIZOVI I REDOVI</a>
+    </div>
+  <button href="/matematika1/podsjetnik" class="dropdown-btn">PODSJETNIK
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/podsjetnik/podsjetnik.html">SADRŽAJ</a>
+      <a href="/matematika1/podsjetnik/node1.html">OSNOVE</a>
+      <a href="/matematika1/podsjetnik/node2.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/podsjetnik/node3.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/podsjetnik/node4.html">FUNKCIJE</a>
+      <a href="/matematika1/podsjetnik/node5.html">DERIVACIJE</a>
+      <a href="/matematika1/podsjetnik/node6.html">NIZOVI I REDOVI</a>
+    </div>
+  <!--<a href="/matematika1/kviz">Kviz</a>-->
+  <a href="/matematika1/java">JAVA</a>
+  <a href="http://lavica.fesb.unist.hr/netplot"  class="menu2">NETPLOT</a>
+  <!-- <a href="/matematika1/gauss"  class="menu2">GAUSS</a> -->
+  <a href="http://lavica.fesb.unist.hr/octave/ool_hr.php"  class="menu2">OCTAVE</a>
+  <a href="/matematika1/search.html">Traži ...</a>
+</div>
+
+<span style="font-size:24px;font-family:'Open Sans', sans-serif;cursor:pointer;color:#ec971f"
+      onclick="openNav()">&#9776;</span> &nbsp; 
+<span style="font-size:30px;cursor:pointer;color:#888;font-family:'Opens Sans',sans-serif;"
+      onclick="window.location.assign('../index.html')">
+<font style="color:#C00">m</font>atematika<font style="color:#C00;vertical-align:super;margin-left:2px;font-size:24px;">1</font></span>
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "300px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+
+</script>     
+<hr>
+
+
+
+
+<arrow class=left> </arrow> <A NAME="tex2html328"
+  HREF="node4.html">Osnove matematičke logike</A> &nbsp; &nbsp;
+<arrow class=up> </arrow> <A NAME="tex2html334"
+  HREF="node3.html">OSNOVE MATEMATIKE</A> &nbsp; &nbsp;
+<arrow class=right> </arrow> <A NAME="tex2html336"
+  HREF="node6.html">Uređeni skupovi</A>
+
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00320000000000000000"></A>
+<A NAME="sec:rel"></A>
+<BR>
+Binarne relacije
+</H1>
+
+<P>
+U ovom poglavlju definirat ćemo partitivni skup, Kartezijev produkt
+skupova i binarnu relaciju te dati klasifikaciju binarnih relacija.
+
+<P>
+<EM>Skup</EM><A NAME="469"></A> je pojam koji se ne definira. Skup je zadan svojim
+elementima. Na primjer, skup <!-- MATH
+ $S=\{x,y,z,w\}$
+ -->
+<IMG
+ WIDTH="125" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.gif"
+ ALT="$ S=\{x,y,z,w\}$">
+ ima 
+elemente<A NAME="470"></A>
+<IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img21.gif"
+ ALT="$ x$">
+, <IMG
+ WIDTH="14" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img22.gif"
+ ALT="$ y$">
+, <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img78.gif"
+ ALT="$ z$">
+ i <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img79.gif"
+ ALT="$ w$">
+. Tu činjenicu zapisujemo s<A NAME="471"></A>
+<P><!-- MATH
+ \begin{displaymath}
+%
+x\in S, \quad y\in S, \quad z\in S, \quad w\in S,
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="262" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img81.gif"
+ ALT="$\displaystyle %
+x\in S, \quad y\in S, \quad z\in S, \quad w\in S,
+$">
+</DIV><P>
+</P> 
+dok, recimo, <IMG
+ WIDTH="45" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img82.gif"
+ ALT="$ t\notin S$">
+<A NAME="472"></A>. 
+S <IMG
+ WIDTH="14" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img84.gif"
+ ALT="$ \emptyset$">
+<A NAME="473"></A><A NAME="474"></A> 
+označavamo prazan skup, 
+odnosno skup bez elemenata.
+
+<P>
+<div class="zad"><P>
+<DIV><B>Zadatak  1.2</B> &nbsp; <A NAME="o2.1"></A>Ponovite pojmove podskupa, nadskupa, unije skupova, presjeka skupova i
+razlike skupova te osnovna svojstva tih operacija.</DIV><P></P>
+
+</div><p></p>
+<P>
+<EM>Partitivni skup</EM><A NAME="479"></A> 
+skupa <IMG
+ WIDTH="21" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img85.gif"
+ ALT="$ X$">
+ je skup <IMG
+ WIDTH="28" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img86.gif"
+ ALT="$ 2^X$">
+ čiji su elementi svi
+podskupovi skupa <IMG
+ WIDTH="21" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img85.gif"
+ ALT="$ X$">
+.  Na primjer, ako je <!-- MATH
+ $X=\{a,b,c\}$
+ -->
+<IMG
+ WIDTH="104" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img87.gif"
+ ALT="$ X=\{a,b,c\}$">
+, tada je 
+<P><!-- MATH
+ \begin{displaymath}
+%
+2^X=\{ \emptyset,\{a\},\{b\},\{c\},\{a,b\},\{a,c\},\{b,c\},\{a,b,c\}\}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="406" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img88.gif"
+ ALT="$\displaystyle %
+2^X=\{ \emptyset,\{a\},\{b\},\{c\},\{a,b\},\{a,c\},\{b,c\},\{a,b,c\}\}.
+$">
+</DIV><P>
+</P> 
+Dakle, uvijek je <!-- MATH
+ $\emptyset\in 2^X$
+ -->
+<IMG
+ WIDTH="59" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img89.gif"
+ ALT="$ \emptyset\in 2^X$">
+ i <IMG
+ WIDTH="66" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img90.gif"
+ ALT="$ X\in 2^X$">
+.
+
+<P>
+<div class="def"><P>
+<DIV><B>Definicija  1.3</B> &nbsp; <A NAME="o2.3"></A><EM>Direktni produkt</EM><A NAME="483"></A> 
+ili <EM>Kartezijev produkt</EM><A NAME="485"></A> 
+skupova <IMG
+ WIDTH="21" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img85.gif"
+ ALT="$ X$">
+ i <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img91.gif"
+ ALT="$ Y$">
+
+je skup svih uređenih parova <IMG
+ WIDTH="47" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img92.gif"
+ ALT="$ (x,y)$">
+, gdje je <IMG
+ WIDTH="53" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img93.gif"
+ ALT="$ x\in X$">
+ i <IMG
+ WIDTH="51" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img94.gif"
+ ALT="$ y\in Y$">
+,
+odnosno
+<P><!-- MATH
+ \begin{displaymath}
+%
+X\times Y =\{ (x,y):  x\in X \wedge y\in Y\}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="276" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img95.gif"
+ ALT="$\displaystyle %
+X\times Y =\{ (x,y): x\in X \wedge y\in Y\}.
+$">
+</DIV><P>
+</P> </DIV><P></P>
+
+</div><p></p>
+<P>
+Na primjer, ako je <!-- MATH
+ $X=\{1,2,3\}$
+ -->
+<IMG
+ WIDTH="106" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img96.gif"
+ ALT="$ X=\{1,2,3\}$">
+ i <IMG
+ WIDTH="87" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img97.gif"
+ ALT="$ Y=\{a,b\}$">
+, tada je
+<P><!-- MATH
+ \begin{displaymath}
+%
+X\times Y=\{ (1,a),(2,a),(3,a),(1,b),(2,b),(3,b)\}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="382" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img98.gif"
+ ALT="$\displaystyle %
+X\times Y=\{ (1,a),(2,a),(3,a),(1,b),(2,b),(3,b)\}.
+$">
+</DIV><P>
+</P> 
+Također, <!-- MATH
+ $X\times \emptyset=\emptyset$
+ -->
+<IMG
+ WIDTH="85" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img99.gif"
+ ALT="$ X\times \emptyset=\emptyset$">
+ za svaki skup <IMG
+ WIDTH="21" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img85.gif"
+ ALT="$ X$">
+.
+
+<P>
+<div class="def"><P>
+<DIV><B>Definicija  1.4</B> &nbsp; <A NAME="o2.5"></A><EM>Binarna relacija na skupu <IMG
+ WIDTH="21" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img85.gif"
+ ALT="$ X$">
+</EM><A NAME="490"></A> 
+je svaki podskup 
+<!-- MATH
+ $\mathcal{R} \subseteq X\times X$
+ -->
+<IMG
+ WIDTH="99" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img100.gif"
+ ALT="$ \mathcal{R} \subseteq X\times X$">
+. Ako je uređeni par 
+<!-- MATH
+ $(x,y)\in \mathcal{R}$
+ -->
+<IMG
+ WIDTH="84" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img101.gif"
+ ALT="$ (x,y)\in \mathcal{R}$">
+, kažemo 
+da je <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img21.gif"
+ ALT="$ x$">
+ u relaciji <!-- MATH
+ $\mathcal{R}$
+ -->
+<IMG
+ WIDTH="20" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img102.gif"
+ ALT="$ \mathcal{R}$">
+ s <IMG
+ WIDTH="14" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img22.gif"
+ ALT="$ y$">
+, i pišemo
+<!-- MATH
+ $x\,\mathcal{R}\, y$
+ -->
+<IMG
+ WIDTH="46" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img103.gif"
+ ALT="$ x\,\mathcal{R}\, y$">
+ ili  
+<!-- MATH
+ $\mathcal{R}(x,y)$
+ -->
+<IMG
+ WIDTH="62" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img104.gif"
+ ALT="$ \mathcal{R}(x,y)$">
+. Binarna relacija je:
+
+<UL>
+<LI><EM>refleksivna</EM><A NAME="498"></A> 
+ako je <!-- MATH
+ $x\,\mathcal{R}\, x$
+ -->
+<IMG
+ WIDTH="47" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img105.gif"
+ ALT="$ x\,\mathcal{R}\, x$">
+ za svaki <IMG
+ WIDTH="53" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img93.gif"
+ ALT="$ x\in X$">
+;
+</LI>
+<LI><EM>simetrična</EM><A NAME="501"></A>
+ ako <!-- MATH
+ $x\,\mathcal{R}\, y\Rightarrow
+  y\,\mathcal{R}\, x$
+ -->
+<IMG
+ WIDTH="115" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img106.gif"
+ ALT="$ x\,\mathcal{R}\, y\Rightarrow
+y\,\mathcal{R}\, x$">
+; 
+</LI>
+<LI><EM>tranzitivna</EM><A NAME="505"></A>
+ ako <!-- MATH
+ $(x\,\mathcal{R}\, y \wedge
+  y\,\mathcal{R}\, z) \Rightarrow x\,\mathcal{R}\, z$
+ -->
+<IMG
+ WIDTH="188" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img107.gif"
+ ALT="$ (x\,\mathcal{R}\, y \wedge
+y\,\mathcal{R}\, z) \Rightarrow x\,\mathcal{R}\, z$">
+; 
+</LI>
+<LI><EM>relacija ekvivalencije</EM>
+<A NAME="510"></A><A NAME="511"></A>
+ ako je refleksivna, simetrična i
+  tranzitivna. 
+</LI>
+</UL></DIV><P></P>
+
+</div><p></p>
+<P>
+Na primjer, neka je <IMG
+ WIDTH="21" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img85.gif"
+ ALT="$ X$">
+ skup ljudi i neka je <!-- MATH
+ $(x,y)\in \mathcal{R}$
+ -->
+<IMG
+ WIDTH="84" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img101.gif"
+ ALT="$ (x,y)\in \mathcal{R}$">
+
+ako su <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img21.gif"
+ ALT="$ x$">
+ i <IMG
+ WIDTH="14" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img22.gif"
+ ALT="$ y$">
+ rođeni istog dana. Očito vrijedi  
+<P><!-- MATH
+ \begin{displaymath}
+%
+x\,\mathcal{R}\, x, \quad
+x\,\mathcal{R}\, y\Rightarrow y\,\mathcal{R}\, x, \quad
+(x\,\mathcal{R}\, y \wedge y\,\mathcal{R}\, z)
+  \Rightarrow x\,\mathcal{R}\, z,
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="397" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img108.gif"
+ ALT="$\displaystyle %
+x\,\mathcal{R}\, x, \quad
+x\,\mathcal{R}\, y\Rightarrow y\,\ma...
+...x\,\mathcal{R}\, y \wedge y\,\mathcal{R}\, z)
+\Rightarrow x\,\mathcal{R}\, z,
+$">
+</DIV><P>
+</P> 
+pa je <!-- MATH
+ $\mathcal{R}$
+ -->
+<IMG
+ WIDTH="20" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img102.gif"
+ ALT="$ \mathcal{R}$">
+ relacija ekvivalencije.
+
+<P>
+<div class="nap"><P>
+<DIV><B>Napomena  1.1</B> &nbsp; <A NAME="o2.9"></A>Relacija ekvivalencije na skupu <IMG
+ WIDTH="21" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img85.gif"
+ ALT="$ X$">
+ cijepa taj skup na
+međusobno disjunktne podskupove, takozvane <EM>klase
+  ekvivalencije</EM>. Skup <IMG
+ WIDTH="21" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img85.gif"
+ ALT="$ X$">
+ se može na jedinstven način prikazati kao 
+unija tih klasa ekvivalencije<A NAME="525"></A>.</DIV><P></P>
+
+</div><p></p>
+<P>
+<BR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Poglavlja</STRONG></A>
+
+<UL>
+<LI><A NAME="tex2html337"
+  HREF="node6.html">Uređeni skupovi</A>
+</UL>
+<!--End of Table of Child-Links-->
+<p><HR></p>
+<arrow class=left> </arrow> <A NAME="tex2html328"
+  HREF="node4.html">Osnove matematičke logike</A> &nbsp; &nbsp;
+<arrow class=up> </arrow> <A NAME="tex2html334"
+  HREF="node3.html">OSNOVE MATEMATIKE</A> &nbsp; &nbsp;
+<arrow class=right> </arrow> <A NAME="tex2html336"
+  HREF="node6.html">Uređeni skupovi</A>  
+
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

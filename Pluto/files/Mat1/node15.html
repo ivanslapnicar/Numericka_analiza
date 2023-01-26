@@ -1,0 +1,754 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2012 (1.2)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-2382574370068590",
+    enable_page_level_ads: true
+  });
+</script>
+<TITLE>Racionalni brojevi</TITLE>
+<META NAME="description" CONTENT="Racionalni brojevi">
+<META NAME="keywords" CONTENT="predavanja">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2012">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="predavanja.css">
+
+<LINK REL="next" HREF="node16.html">
+<LINK REL="previous" HREF="node14.html">
+<LINK REL="up" HREF="node3.html">
+<LINK REL="next" HREF="node16.html">
+</HEAD>
+
+<BODY >
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="shortcut icon" href="favicon.ico"/>
+
+<style>
+.sidenav {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 50px;
+}
+
+div.sidenav a {
+    padding: 8px 8px 8px 10px;
+    text-decoration: none;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    display: block;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dropdown-btn {
+    padding: 8px 8px 8px 8px;
+    text-decoration: none; 
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s;
+}
+
+
+.sidenav a:hover, .dropdown-btn:hover {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #C00;
+}
+
+.menu2 {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    font-style:italic;
+}
+
+.dropdown-container {
+  display: none;
+  font-family: 'Open Sans',sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #ddd;
+  padding-left: 8px;
+}
+
+.dropdown-container a:hover {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    background-color: #ccc;
+}
+
+.sidenav .active {
+    background-color: #C00;
+    color: white;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+hr { 
+    display: block;
+    margin-top: 0.2em;
+    margin-bottom: 0.4em;
+    margin-left: -5px;
+    margin-right: -5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color:#ec971f;
+} 
+  
+.caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 20px;
+    vertical-align: middle;
+    border-top: 5px dashed;
+        border-top-width: 5px;
+        border-top-style: dashed;
+        border-top-color: currentcolor;
+    border-right: 5px solid transparent;
+        border-right-width: 5px;
+        border-right-style: solid;
+        border-right-color: transparent;
+    border-left: 5px solid transparent;
+        border-left-width: 5px;
+        border-left-style: solid;
+        border-left-color: transparent;
+}
+
+</style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- First -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2382574370068590"
+     data-ad-slot="8207843721"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<script>
+   // alert('|ivan'+document.getElementById("mys-content").innerHTML+'|') 
+//    alert(typeof(window.CustomEvent))
+//    if(typeof(window.CustomEvent)=="undefined")
+// {
+//     document.display = 'none';
+// } 
+</script>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" 
+  onclick="closeNav()"
+  style="font-size:24px;cursor:pointer;color:#000;position: absolute; top: 0;
+    right: 10px; font-size: 24px; margin-left: 50px;">&nbsp; &times; &nbsp;</a>
+  <a href="/matematika1/index.html">HOME</a>
+  <button href="/matematika1/predavanja" class="dropdown-btn">PREDAVANJA
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/predavanja/predavanja.html">SADRŽAJ</a>
+      <a href="/matematika1/predavanja/node3.html">OSNOVE</a>
+      <a href="/matematika1/predavanja/node22.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/predavanja/node47.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/predavanja/node67.html">FUNKCIJE</a>
+      <a href="/matematika1/predavanja/node98.html">DERIVACIJE</a>
+      <a href="/matematika1/predavanja/node125.html">NIZOVI I REDOVI</a>
+      <a href="/matematika1/predavanja/node144.html">INDEKS</a>
+    </div>
+  <button href="/matematika1/vjezbe" class="dropdown-btn">VJEŽBE
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/vjezbe/vjezbe.html">SADRŽAJ</a>
+      <a href="/matematika1/vjezbe/node2.html">OSNOVE</a>
+      <a href="/matematika1/vjezbe/node24.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/vjezbe/node55.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/vjezbe/node87.html">FUNKCIJE</a>
+      <a href="/matematika1/vjezbe/node110.html">DERIVACIJE</a>
+      <a href="/matematika1/vjezbe/node136.html">NIZOVI I REDOVI</a>
+    </div>
+  <button href="/matematika1/kviz" class="dropdown-btn">KVIZ
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/kviz/index.html">SADRŽAJ</a>
+      <a href="/matematika1/kviz/osnove/">OSNOVE</a>
+      <a href="/matematika1/kviz/algebra/">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/kviz/vektori/">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/kviz/funkcije/">FUNKCIJE</a>
+      <a href="/matematika1/kviz/derivacije/">DERIVACIJE</a>
+      <a href="/matematika1/kviz/nizovi/">NIZOVI I REDOVI</a>
+    </div>
+  <button href="/matematika1/podsjetnik" class="dropdown-btn">PODSJETNIK
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/podsjetnik/podsjetnik.html">SADRŽAJ</a>
+      <a href="/matematika1/podsjetnik/node1.html">OSNOVE</a>
+      <a href="/matematika1/podsjetnik/node2.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/podsjetnik/node3.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/podsjetnik/node4.html">FUNKCIJE</a>
+      <a href="/matematika1/podsjetnik/node5.html">DERIVACIJE</a>
+      <a href="/matematika1/podsjetnik/node6.html">NIZOVI I REDOVI</a>
+    </div>
+  <!--<a href="/matematika1/kviz">Kviz</a>-->
+  <a href="/matematika1/java">JAVA</a>
+  <a href="http://lavica.fesb.unist.hr/netplot"  class="menu2">NETPLOT</a>
+  <!-- <a href="/matematika1/gauss"  class="menu2">GAUSS</a> -->
+  <a href="http://lavica.fesb.unist.hr/octave/ool_hr.php"  class="menu2">OCTAVE</a>
+  <a href="/matematika1/search.html">Traži ...</a>
+</div>
+
+<span style="font-size:24px;font-family:'Open Sans', sans-serif;cursor:pointer;color:#ec971f"
+      onclick="openNav()">&#9776;</span> &nbsp; 
+<span style="font-size:30px;cursor:pointer;color:#888;font-family:'Opens Sans',sans-serif;"
+      onclick="window.location.assign('../index.html')">
+<font style="color:#C00">m</font>atematika<font style="color:#C00;vertical-align:super;margin-left:2px;font-size:24px;">1</font></span>
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "300px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+
+</script>     
+<hr>
+
+
+
+
+<arrow class=left> </arrow> <A NAME="tex2html428"
+  HREF="node14.html">Cijeli brojevi</A> &nbsp; &nbsp;
+<arrow class=up> </arrow> <A NAME="tex2html434"
+  HREF="node3.html">OSNOVE MATEMATIKE</A> &nbsp; &nbsp;
+<arrow class=right> </arrow> <A NAME="tex2html436"
+  HREF="node16.html">Realni brojevi</A>
+
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00360000000000000000"></A>
+<A NAME="sec:qq"></A>
+<BR>
+Racionalni brojevi
+</H1>
+
+<P>
+U ovom poglavlju definirat ćemo skup racionalnih brojeva <!-- MATH
+ $\mathbb{Q}$
+ -->
+<IMG
+ WIDTH="19" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img121.gif"
+ ALT="$ \mathbb{Q}$">
+
+te dati osnovna svojstva tog skupa.
+
+<P>
+Na skupu
+<P><!-- MATH
+ \begin{displaymath}
+%
+\mathbb{Z}\times \mathbb{N}=\{ (m,n): m\in \mathbb{Z},\ n\in \mathbb{N}\}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="267" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img313.gif"
+ ALT="$\displaystyle %
+\mathbb{Z}\times \mathbb{N}=\{ (m,n): m\in \mathbb{Z},\ n\in \mathbb{N}\}
+$">
+</DIV><P>
+</P> 
+definiramo relaciju <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img314.gif"
+ ALT="$ \sim$">
+ s
+<P><!-- MATH
+ \begin{displaymath}
+%
+(m_1,n_1)\sim(m_2,n_2) \Leftrightarrow m_1\cdot n_2=m_2\cdot n_1.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="327" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img315.gif"
+ ALT="$\displaystyle %
+(m_1,n_1)\sim(m_2,n_2) \Leftrightarrow m_1\cdot n_2=m_2\cdot n_1.
+$">
+</DIV><P>
+</P> 
+<IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img314.gif"
+ ALT="$ \sim$">
+ je relacija ekvivalencije, na primjer
+<!-- MATH
+ $(2,3)\sim(4,6)\sim(6,9)$
+ -->
+<IMG
+ WIDTH="173" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img316.gif"
+ ALT="$ (2,3)\sim(4,6)\sim(6,9)$">
+. 
+
+<P>
+<EM>Skup racionalnih brojeva <!-- MATH
+ $\mathbb{Q}$
+ -->
+<IMG
+ WIDTH="19" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img121.gif"
+ ALT="$ \mathbb{Q}$">
+</EM><A NAME="1050"></A> 
+<A NAME="1051"></A>
+je skup svih klasa ekvivalencije
+na skupu <!-- MATH
+ $\mathbb{Z}\times \mathbb{N}$
+ -->
+<IMG
+ WIDTH="52" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img317.gif"
+ ALT="$ \mathbb{Z}\times \mathbb{N}$">
+, odnosno
+<P><!-- MATH
+ \begin{displaymath}
+%
+\mathbb{Q}=\left\{ \frac{m}{n}: m\in \mathbb{Z},\ n\in \mathbb{N}\right\}_{\sim}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="232" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
+ SRC="img318.gif"
+ ALT="$\displaystyle %
+\mathbb{Q}=\left\{ \frac{m}{n}: m\in \mathbb{Z},\ n\in \mathbb{N}\right\}_{\sim}.
+$">
+</DIV><P>
+</P> 
+
+<P>
+Računske operacije <IMG
+ WIDTH="19" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img229.gif"
+ ALT="$ +$">
+, <IMG
+ WIDTH="10" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img230.gif"
+ ALT="$ \cdot$">
+ i <IMG
+ WIDTH="10" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img319.gif"
+ ALT="$ :$">
+ te relaciju potpunog uređaja 
+<IMG
+ WIDTH="19" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img111.gif"
+ ALT="$ \leq$">
+ na skupu <!-- MATH
+ $\mathbb{Q}$
+ -->
+<IMG
+ WIDTH="19" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img121.gif"
+ ALT="$ \mathbb{Q}$">
+ definiramo redom kako slijedi:
+<P></P>
+<DIV ALIGN="CENTER"><TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="83" HEIGHT="49" ALIGN="MIDDLE" BORDER="0"
+ SRC="img320.gif"
+ ALT="$\displaystyle \frac{m_1}{n_1}+\frac{m_2}{n_2}$"></TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="167" HEIGHT="54" ALIGN="MIDDLE" BORDER="0"
+ SRC="img321.gif"
+ ALT="$\displaystyle = \frac{m_1\cdot n_2+n_1\cdot m_2}{n_1\cdot n_2},$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="74" HEIGHT="49" ALIGN="MIDDLE" BORDER="0"
+ SRC="img322.gif"
+ ALT="$\displaystyle \frac{m_1}{n_1}\cdot \frac{m_2}{n_2}$"></TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="94" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
+ SRC="img323.gif"
+ ALT="$\displaystyle = \frac{m_1\cdot m_2}{n_1\cdot n_2},$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="76" HEIGHT="49" ALIGN="MIDDLE" BORDER="0"
+ SRC="img324.gif"
+ ALT="$\displaystyle \frac{m_1}{n_1} : \frac{m_2}{n_2}$"></TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="259" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ SRC="img325.gif"
+ ALT="$\displaystyle = \frac{\frac{m_1}{n_1}}{\frac{m_2}{n_2}}= \frac{m_1\cdot n_2}{n_1\cdot m_2}, \quad \textrm{za}\quad m_2\neq 0,$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="85" HEIGHT="49" ALIGN="MIDDLE" BORDER="0"
+ SRC="img326.gif"
+ ALT="$\displaystyle \frac{m_1}{n_1}\leq \frac{m_2}{n_2}$"></TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="168" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img327.gif"
+ ALT="$\displaystyle \Leftrightarrow m_1\cdot n_2\leq n_1\cdot m_2.$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+<P>
+Ovdje se zaista radi o definicijama, jer smo "nove" operacije
+i relaciju uređaja na lijevim stranama definirali 
+pomoću poznatih operacija i uređaja na skupu <!-- MATH
+ $\mathbb{Z}$
+ -->
+<IMG
+ WIDTH="17" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img120.gif"
+ ALT="$ \mathbb{Z}$">
+ na
+desnim stranama. Dakle, iste oznake za računske 
+operacije i relaciju uređaja imaju različita značenja na lijevim i
+desnim stranama. 
+Računske operacije i relacija uređaja na skupu <!-- MATH
+ $\mathbb{Q}$
+ -->
+<IMG
+ WIDTH="19" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img121.gif"
+ ALT="$ \mathbb{Q}$">
+
+su dobro definirane jer ne ovise o predstavniku klase ekvivalencije, 
+na primjer <!-- MATH
+ $\frac{1}{3}+\frac{1}{4}=\frac{2}{6}+\frac{9}{12}$
+ -->
+<IMG
+ WIDTH="126" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img328.gif"
+ ALT="$ \frac{1}{3}+\frac{1}{4}=\frac{2}{6}+\frac{9}{12}$">
+.
+Za računske operacije vrijede poznata svojstva slično kao u 
+teoremu <A HREF="node10.html#o4.2">1.3</A>.
+
+<P>
+Za razliku od skupova <!-- MATH
+ $\mathbb{N}$
+ -->
+<IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img119.gif"
+ ALT="$ \mathbb{N}$">
+ i <!-- MATH
+ $\mathbb{Z}$
+ -->
+<IMG
+ WIDTH="17" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img120.gif"
+ ALT="$ \mathbb{Z}$">
+ koji su diskretni, skup <!-- MATH
+ $\mathbb{Q}$
+ -->
+<IMG
+ WIDTH="19" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img121.gif"
+ ALT="$ \mathbb{Q}$">
+ je
+<EM>gust</EM><A NAME="1095"></A>, 
+odnosno između svaka dva različita racionalna broja 
+nalazi se beskonačno mnogo racionalnih brojeva.
+
+<P>
+<div class="teo"><P>
+<DIV><B>Teorem  1.7</B> &nbsp; <A NAME="o4.15"></A>Skup <!-- MATH
+ $\mathbb{Q}$
+ -->
+<IMG
+ WIDTH="19" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img121.gif"
+ ALT="$ \mathbb{Q}$">
+ je gust.</DIV><P></P>
+
+</div><p></p><div class="dok"><B>Dokaz. </B></div><p></p>
+Dovoljno je dokazati da se između svaka dva različita 
+racionalna broja nalazi barem jedan racionalni broj. Neka je
+<P><!-- MATH
+ \begin{displaymath}
+%
+q_1=\frac{m_1}{n_1},\quad q_2=\frac{m_2}{n_2} \quad \textrm{i}
+\quad q_1< q_2 \quad \textrm{odnosno}\quad m_1n_2<n_1m_2.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="480" HEIGHT="49" ALIGN="MIDDLE" BORDER="0"
+ SRC="img329.gif"
+ ALT="$\displaystyle %
+q_1=\frac{m_1}{n_1},\quad q_2=\frac{m_2}{n_2} \quad \textrm{i}
+\quad q_1&lt; q_2 \quad \textrm{odnosno}\quad m_1n_2&lt;n_1m_2.
+$">
+</DIV><P>
+</P> 
+Neka je
+<P><!-- MATH
+ \begin{displaymath}
+%
+q=\frac{q_1+q_2}{2}=\frac{m_1n_2+n_1m_2}{2n_1n_2}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="237" HEIGHT="54" ALIGN="MIDDLE" BORDER="0"
+ SRC="img330.gif"
+ ALT="$\displaystyle %
+q=\frac{q_1+q_2}{2}=\frac{m_1n_2+n_1m_2}{2n_1n_2}.
+$">
+</DIV><P>
+</P> 
+Tada je <IMG
+ WIDTH="54" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img331.gif"
+ ALT="$ q_1&lt;q$">
+ jer je <!-- MATH
+ $2m_1n_1n_2<m_1n_1n_2+n_1n_1m_2$
+ -->
+<IMG
+ WIDTH="245" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img332.gif"
+ ALT="$ 2m_1n_1n_2&lt;m_1n_1n_2+n_1n_1m_2$">
+.
+Slično vrijedi <IMG
+ WIDTH="54" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img333.gif"
+ ALT="$ q&lt;q_2$">
+ i teorem je dokazan. &nbsp;&nbsp;&nbsp;&nbsp;<div class="dok"><B>Q.E.D.</B>
+<BR></div><p></p>
+
+<P>
+Unatoč tome što je <!-- MATH
+ $\mathbb{Q}$
+ -->
+<IMG
+ WIDTH="19" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img121.gif"
+ ALT="$ \mathbb{Q}$">
+ gust, a <!-- MATH
+ $\mathbb{N}$
+ -->
+<IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img119.gif"
+ ALT="$ \mathbb{N}$">
+ prebrojiv, oba skupa imaju
+jednako mnogo elemenata. Naime, skupovi <!-- MATH
+ $\mathbb{N}$
+ -->
+<IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img119.gif"
+ ALT="$ \mathbb{N}$">
+ i <!-- MATH
+ $\mathbb{N}\times \mathbb{N}$
+ -->
+<IMG
+ WIDTH="53" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img334.gif"
+ ALT="$ \mathbb{N}\times \mathbb{N}$">
+ su
+ekvipotentni jer je funkcija <!-- MATH
+ $f:\mathbb{N}\to\mathbb{N}\times\mathbb{N}$
+ -->
+<IMG
+ WIDTH="120" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img335.gif"
+ ALT="$ f:\mathbb{N}\to\mathbb{N}\times\mathbb{N}$">
+ definirana s
+<P><!-- MATH
+ \begin{displaymath}
+%
+\begin{array}{ccccc}
+(1,1)_{f(1)}&(1,2)_{f(3)}&(1,3)_{f(6)}&(1,4)_{f(10)}&\cdots\\
+(2,1)_{f(2)}&(2,2)_{f(5)}&(2,3)_{f(9)}&\cdots&\\
+(3,1)_{f(4)}&(3,2)_{f(8)}&\cdots&&\\
+(4,1)_{f(7)}&\cdots&&&\\
+\cdots&&&&
+\end{array}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="368" HEIGHT="126" BORDER="0"
+ SRC="img336.gif"
+ ALT="\begin{displaymath}%
+\begin{array}{ccccc}
+(1,1)_{f(1)}&amp;(1,2)_{f(3)}&amp;(1,3)_{f(6)}...
+...)}&amp;\cdots&amp;&amp;\\
+(4,1)_{f(7)}&amp;\cdots&amp;&amp;&amp;\\
+\cdots&amp;&amp;&amp;&amp;
+\end{array}\end{displaymath}">
+</DIV><P>
+</P> 
+bijekcija. Oznaka <!-- MATH
+ $(1,1)_{f(1)}$
+ -->
+<IMG
+ WIDTH="73" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img337.gif"
+ ALT="$ (1,1)_{f(1)}$">
+ znači <!-- MATH
+ $f(1)=(1,1)$
+ -->
+<IMG
+ WIDTH="103" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img338.gif"
+ ALT="$ f(1)=(1,1)$">
+. 
+Kako je <!-- MATH
+ $\mathbb{Z}$
+ -->
+<IMG
+ WIDTH="17" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img120.gif"
+ ALT="$ \mathbb{Z}$">
+ ekvipotentan s <!-- MATH
+ $\mathbb{N}$
+ -->
+<IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img119.gif"
+ ALT="$ \mathbb{N}$">
+, to su i skupovi
+<!-- MATH
+ $\mathbb{N}$
+ -->
+<IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img119.gif"
+ ALT="$ \mathbb{N}$">
+ i <!-- MATH
+ $\mathbb{Z}\times \mathbb{N}$
+ -->
+<IMG
+ WIDTH="52" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img317.gif"
+ ALT="$ \mathbb{Z}\times \mathbb{N}$">
+ ekvipotentni. Konačno,  
+iz <!-- MATH
+ $\mathbb{N}\subset \mathbb{Q}\subset \mathbb{Z}\times \mathbb{N}$
+ -->
+<IMG
+ WIDTH="127" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img339.gif"
+ ALT="$ \mathbb{N}\subset \mathbb{Q}\subset \mathbb{Z}\times \mathbb{N}$">
+ zaključujemo da je skup <!-- MATH
+ $\mathbb{Q}$
+ -->
+<IMG
+ WIDTH="19" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img121.gif"
+ ALT="$ \mathbb{Q}$">
+
+također ekvipotentan s <!-- MATH
+ $\mathbb{N}$
+ -->
+<IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img119.gif"
+ ALT="$ \mathbb{N}$">
+. 
+
+<P>
+<p><HR></p>
+<arrow class=left> </arrow> <A NAME="tex2html428"
+  HREF="node14.html">Cijeli brojevi</A> &nbsp; &nbsp;
+<arrow class=up> </arrow> <A NAME="tex2html434"
+  HREF="node3.html">OSNOVE MATEMATIKE</A> &nbsp; &nbsp;
+<arrow class=right> </arrow> <A NAME="tex2html436"
+  HREF="node16.html">Realni brojevi</A>  
+
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

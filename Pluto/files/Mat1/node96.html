@@ -1,0 +1,638 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2012 (1.2)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-2382574370068590",
+    enable_page_level_ads: true
+  });
+</script>
+<TITLE>Polinomi i racionalne funkcije</TITLE>
+<META NAME="description" CONTENT="Polinomi i racionalne funkcije">
+<META NAME="keywords" CONTENT="predavanja">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2012">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="predavanja.css">
+
+<LINK REL="next" HREF="node97.html">
+<LINK REL="previous" HREF="node95.html">
+<LINK REL="up" HREF="node83.html">
+<LINK REL="next" HREF="node97.html">
+</HEAD>
+
+<BODY >
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="shortcut icon" href="favicon.ico"/>
+
+<style>
+.sidenav {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 50px;
+}
+
+div.sidenav a {
+    padding: 8px 8px 8px 10px;
+    text-decoration: none;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    display: block;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dropdown-btn {
+    padding: 8px 8px 8px 8px;
+    text-decoration: none; 
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s;
+}
+
+
+.sidenav a:hover, .dropdown-btn:hover {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #C00;
+}
+
+.menu2 {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    font-style:italic;
+}
+
+.dropdown-container {
+  display: none;
+  font-family: 'Open Sans',sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #ddd;
+  padding-left: 8px;
+}
+
+.dropdown-container a:hover {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    background-color: #ccc;
+}
+
+.sidenav .active {
+    background-color: #C00;
+    color: white;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+hr { 
+    display: block;
+    margin-top: 0.2em;
+    margin-bottom: 0.4em;
+    margin-left: -5px;
+    margin-right: -5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color:#ec971f;
+} 
+  
+.caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 20px;
+    vertical-align: middle;
+    border-top: 5px dashed;
+        border-top-width: 5px;
+        border-top-style: dashed;
+        border-top-color: currentcolor;
+    border-right: 5px solid transparent;
+        border-right-width: 5px;
+        border-right-style: solid;
+        border-right-color: transparent;
+    border-left: 5px solid transparent;
+        border-left-width: 5px;
+        border-left-style: solid;
+        border-left-color: transparent;
+}
+
+</style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- First -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2382574370068590"
+     data-ad-slot="8207843721"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<script>
+   // alert('|ivan'+document.getElementById("mys-content").innerHTML+'|') 
+//    alert(typeof(window.CustomEvent))
+//    if(typeof(window.CustomEvent)=="undefined")
+// {
+//     document.display = 'none';
+// } 
+</script>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" 
+  onclick="closeNav()"
+  style="font-size:24px;cursor:pointer;color:#000;position: absolute; top: 0;
+    right: 10px; font-size: 24px; margin-left: 50px;">&nbsp; &times; &nbsp;</a>
+  <a href="/matematika1/index.html">HOME</a>
+  <button href="/matematika1/predavanja" class="dropdown-btn">PREDAVANJA
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/predavanja/predavanja.html">SADRŽAJ</a>
+      <a href="/matematika1/predavanja/node3.html">OSNOVE</a>
+      <a href="/matematika1/predavanja/node22.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/predavanja/node47.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/predavanja/node67.html">FUNKCIJE</a>
+      <a href="/matematika1/predavanja/node98.html">DERIVACIJE</a>
+      <a href="/matematika1/predavanja/node125.html">NIZOVI I REDOVI</a>
+      <a href="/matematika1/predavanja/node144.html">INDEKS</a>
+    </div>
+  <button href="/matematika1/vjezbe" class="dropdown-btn">VJEŽBE
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/vjezbe/vjezbe.html">SADRŽAJ</a>
+      <a href="/matematika1/vjezbe/node2.html">OSNOVE</a>
+      <a href="/matematika1/vjezbe/node24.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/vjezbe/node55.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/vjezbe/node87.html">FUNKCIJE</a>
+      <a href="/matematika1/vjezbe/node110.html">DERIVACIJE</a>
+      <a href="/matematika1/vjezbe/node136.html">NIZOVI I REDOVI</a>
+    </div>
+  <button href="/matematika1/kviz" class="dropdown-btn">KVIZ
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/kviz/index.html">SADRŽAJ</a>
+      <a href="/matematika1/kviz/osnove/">OSNOVE</a>
+      <a href="/matematika1/kviz/algebra/">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/kviz/vektori/">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/kviz/funkcije/">FUNKCIJE</a>
+      <a href="/matematika1/kviz/derivacije/">DERIVACIJE</a>
+      <a href="/matematika1/kviz/nizovi/">NIZOVI I REDOVI</a>
+    </div>
+  <button href="/matematika1/podsjetnik" class="dropdown-btn">PODSJETNIK
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/podsjetnik/podsjetnik.html">SADRŽAJ</a>
+      <a href="/matematika1/podsjetnik/node1.html">OSNOVE</a>
+      <a href="/matematika1/podsjetnik/node2.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/podsjetnik/node3.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/podsjetnik/node4.html">FUNKCIJE</a>
+      <a href="/matematika1/podsjetnik/node5.html">DERIVACIJE</a>
+      <a href="/matematika1/podsjetnik/node6.html">NIZOVI I REDOVI</a>
+    </div>
+  <!--<a href="/matematika1/kviz">Kviz</a>-->
+  <a href="/matematika1/java">JAVA</a>
+  <a href="http://lavica.fesb.unist.hr/netplot"  class="menu2">NETPLOT</a>
+  <!-- <a href="/matematika1/gauss"  class="menu2">GAUSS</a> -->
+  <a href="http://lavica.fesb.unist.hr/octave/ool_hr.php"  class="menu2">OCTAVE</a>
+  <a href="/matematika1/search.html">Traži ...</a>
+</div>
+
+<span style="font-size:24px;font-family:'Open Sans', sans-serif;cursor:pointer;color:#ec971f"
+      onclick="openNav()">&#9776;</span> &nbsp; 
+<span style="font-size:30px;cursor:pointer;color:#888;font-family:'Opens Sans',sans-serif;"
+      onclick="window.location.assign('../index.html')">
+<font style="color:#C00">m</font>atematika<font style="color:#C00;vertical-align:super;margin-left:2px;font-size:24px;">1</font></span>
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "300px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+
+</script>     
+<hr>
+
+
+
+
+<arrow class=left> </arrow> <A NAME="tex2html1328"
+  HREF="node95.html">Klasifikacija elementarnih funkcija</A> &nbsp; &nbsp;
+<arrow class=up> </arrow> <A NAME="tex2html1334"
+  HREF="node83.html">Pregled elementarnih funkcija</A> &nbsp; &nbsp;
+<arrow class=right> </arrow> <A NAME="tex2html1336"
+  HREF="node97.html">Hiperbolne i area funkcije</A>
+
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00668000000000000000"></A>
+<A NAME="sec:polinomi"></A>
+<BR>
+Polinomi i racionalne funkcije
+</H2>
+
+<P>
+<EM>Polinom <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img241.gif"
+ ALT="$ n$">
+-tog stupnja</EM><A NAME="16768"></A> je funkcija
+<P><!-- MATH
+ \begin{displaymath}
+p_n(x)=a_nx^n+a_{n-1} x^{n-1} + \cdots + a_2 x^2 + a_1 x + a_0
+=\sum_{i=0}^{n} a_i x^i,
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="490" HEIGHT="69" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1845.gif"
+ ALT="$\displaystyle p_n(x)=a_nx^n+a_{n-1} x^{n-1} + \cdots + a_2 x^2 + a_1 x + a_0
+=\sum_{i=0}^{n} a_i x^i,
+$">
+</DIV><P>
+</P>
+pri čemu su <EM>koeficijenti</EM> <IMG
+ WIDTH="21" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1846.gif"
+ ALT="$ a_i$">
+ realni brojevi i
+vrijedi <IMG
+ WIDTH="57" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1847.gif"
+ ALT="$ a_n\neq 0$">
+. Napomenimo da je prirodno definirati i polinome 
+čiji su koeficijenti kompleksni brojevi. Takvi polinomi se razmatraju
+u Matematici 3.
+
+<P>
+Za polinome vrijedi sljedeći važan teorem kojeg navodimo bez dokaza,
+a koji slijedi iz poznatog 
+<EM>Osnovnog teorema algebre</EM><A NAME="16775"></A>.
+
+<P>
+<div class="teo"><P>
+<DIV><B>Teorem  4.9</B> &nbsp; <A NAME="f1.31"></A>  Svaki polinom <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img241.gif"
+ ALT="$ n$">
+-tog stupnja <IMG
+ WIDTH="24" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1848.gif"
+ ALT="$ p_n$">
+ ima točno <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img241.gif"
+ ALT="$ n$">
+ kompleksnih 
+  nul-točaka<A NAME="16778"></A>
+  <IMG
+ WIDTH="19" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1849.gif"
+ ALT="$ z_i$">
+ za koje vrijedi <!-- MATH
+ $p_n(z_i)=0, \ i=1,2,\ldots,n$
+ -->
+<IMG
+ WIDTH="206" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1850.gif"
+ ALT="$ p_n(z_i)=0, \ i=1,2,\ldots,n$">
+. Drugim
+  riječima, <IMG
+ WIDTH="24" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1848.gif"
+ ALT="$ p_n$">
+ se dade rastaviti kao
+<P><!-- MATH
+ \begin{displaymath}
+p_n(x)=a_nx^n+ \cdots + a_1 x + a_0 = a_n(x-z_1)(x-z_2)\cdots (x-z_n).
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="509" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1851.gif"
+ ALT="$\displaystyle p_n(x)=a_nx^n+ \cdots + a_1 x + a_0 = a_n(x-z_1)(x-z_2)\cdots (x-z_n).
+$">
+</DIV><P>
+</P>
+Nadalje, strogo kompleksne nul-točke (one za koje 
+je <!-- MATH
+ $\mathop{\mathrm{Im}}\nolimits z_i\neq 0$
+ -->
+<IMG
+ WIDTH="77" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1852.gif"
+ ALT="$ \mathop{\mathrm{Im}}\nolimits z_i\neq 0$">
+) se uvijek javljaju u konjugirano
+kompleksnim parovima<A NAME="16779"></A>, 
+odnosno
+<P><!-- MATH
+ \begin{displaymath}
+p_n(z_i)=0 \quad \Leftrightarrow \quad p_n(\bar z_i)=0.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="234" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1853.gif"
+ ALT="$\displaystyle p_n(z_i)=0 \quad \Leftrightarrow \quad p_n(\bar z_i)=0.
+$">
+</DIV><P>
+</P></DIV><P></P>
+
+</div><p></p>
+<P>
+Primijetimo da u iskazu teorema nul-točke <IMG
+ WIDTH="19" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1849.gif"
+ ALT="$ z_i$">
+ ne moraju biti
+međusobno različite. Ako je neki broj <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img78.gif"
+ ALT="$ z$">
+ nul-točka koja se u gornjem 
+rastavu pojavljuje <IMG
+ WIDTH="15" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img264.gif"
+ ALT="$ k$">
+ puta, tada kažemo da je <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img78.gif"
+ ALT="$ z$">
+ <IMG
+ WIDTH="15" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img264.gif"
+ ALT="$ k$">
+-terostruka
+nul-točka polinoma <IMG
+ WIDTH="24" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1848.gif"
+ ALT="$ p_n$">
+ ili <EM>nul-točka kratnosti <IMG
+ WIDTH="15" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img264.gif"
+ ALT="$ k$">
+</EM>.
+
+<P>
+Zadnja tvrdnja teorema također ima zanimljive posljedice.
+Tako polinom drugog stupnja može imati samo 
+ili dvije realne ili dvije konjugirano kompleksne nul-točke, a ne
+može imati jednu realnu i jednu strogo kompleksnu nul-točku.
+Na primjer,
+<P></P>
+<DIV ALIGN="CENTER"><TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="95" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1854.gif"
+ ALT="$\displaystyle 2x^2-x-1$"></TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="155" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1855.gif"
+ ALT="$\displaystyle =2(x-1)\big(x+\frac{1}{2}\big),$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="87" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1856.gif"
+ ALT="$\displaystyle x^2+x+1$"></TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="300" HEIGHT="66" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1857.gif"
+ ALT="$\displaystyle =\bigg(x-\frac{-1+i\sqrt{3}}{2}\bigg) \bigg(x-\frac{-1-i\sqrt{3}}{2}\bigg)$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="286" HEIGHT="66" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1858.gif"
+ ALT="$\displaystyle = \bigg(x+\frac{1}{2}-i\frac{\sqrt{3}}{2}\bigg) \bigg(x+\frac{1}{2}+i\frac{\sqrt{3}}{2}\bigg).$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Slično, polinom trećeg stupnja može imati ili tri ili jednu realnu
+nul-točku, a polinom četvrtog stupnja može imati ili četiri ili dvije
+ili nijednu realnu nul-točku.
+
+<P>
+<div class="zad"><P>
+<DIV><B>Zadatak  4.13</B> &nbsp; Nacrtajte nekoliko polinoma različitih stupnjeva pomoću programa 
+<A NAME="tex2html81"
+  HREF="http://lavica.fesb.hr/netplot">NetPlot</A><A NAME="16802"></A>
+
+i opišite njihovo ponašanje.</DIV><P></P>
+
+</div><p></p>
+<P>
+<EM>Racionalna funkcija</EM><A NAME="16805"></A> je kvocijent
+dvaju polinoma<A NAME="16806"></A>,
+<P><!-- MATH
+ \begin{displaymath}
+r(x)=\frac{p_n(x)}{q_m(x)}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="117" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1859.gif"
+ ALT="$\displaystyle r(x)=\frac{p_n(x)}{q_m(x)}.
+$">
+</DIV><P>
+</P>
+Očito vrijedi
+<P><!-- MATH
+ \begin{displaymath}
+r:\mathbb{R}\setminus  \{ x\in\mathbb{R}: q_m(x)= 0\} \to \mathbb{R}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="262" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1860.gif"
+ ALT="$\displaystyle r:\mathbb{R}\setminus \{ x\in\mathbb{R}: q_m(x)= 0\} \to \mathbb{R}.
+$">
+</DIV><P>
+</P>
+U točkama prekida racionalna funkcija ima ili vertikalu 
+asimptotu<A NAME="16809"></A> s obje
+strane ili uklonjivi prekid<A NAME="16810"></A>.
+
+<P>
+Ako je stupanj brojnika manji od stupnja nazivnika, <IMG
+ WIDTH="56" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img306.gif"
+ ALT="$ n&lt;m$">
+, tada kažemo 
+da je <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img445.gif"
+ ALT="$ r$">
+ 
+<EM>prava racionalna funkcija</EM><A NAME="16812"></A>.
+Ako je <IMG
+ WIDTH="56" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1861.gif"
+ ALT="$ n\geq m$">
+, tada možemo <U>podijeliti</U> polinom 
+<IMG
+ WIDTH="24" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1848.gif"
+ ALT="$ p_n$">
+ s polinomom <IMG
+ WIDTH="27" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1862.gif"
+ ALT="$ q_m$">
+, odnosno vrijedi
+<P><!-- MATH
+ \begin{displaymath}
+r(x)=s_k(x)+\frac{t_l(x)}{q_m(x)},
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="181" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1863.gif"
+ ALT="$\displaystyle r(x)=s_k(x)+\frac{t_l(x)}{q_m(x)},
+$">
+</DIV><P>
+</P>
+pri čemu su <IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1864.gif"
+ ALT="$ s_k$">
+ i <IMG
+ WIDTH="17" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1865.gif"
+ ALT="$ t_l$">
+ također polinomi.
+<EM>Ostatak</EM>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{t_l(x)}{q_m(x)}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="55" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1866.gif"
+ ALT="$\displaystyle \frac{t_l(x)}{q_m(x)}
+$">
+</DIV><P>
+</P>
+je prava racionalna funkcija, odnosno vrijedi <IMG
+ WIDTH="50" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1867.gif"
+ ALT="$ l&lt;m$">
+.
+Na primjer, 
+<P><!-- MATH
+ \begin{displaymath}
+\frac{2x^3-x^2+4x-2}{x^2-2x+3}=2x+3+\frac{4x-11}{x^2-2x+3}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="345" HEIGHT="63" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1868.gif"
+ ALT="$\displaystyle \frac{2x^3-x^2+4x-2}{x^2-2x+3}=2x+3+\frac{4x-11}{x^2-2x+3}.
+$">
+</DIV><P>
+</P> 
+
+<P>
+<p><HR></p>
+<arrow class=left> </arrow> <A NAME="tex2html1328"
+  HREF="node95.html">Klasifikacija elementarnih funkcija</A> &nbsp; &nbsp;
+<arrow class=up> </arrow> <A NAME="tex2html1334"
+  HREF="node83.html">Pregled elementarnih funkcija</A> &nbsp; &nbsp;
+<arrow class=right> </arrow> <A NAME="tex2html1336"
+  HREF="node97.html">Hiperbolne i area funkcije</A>  
+
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

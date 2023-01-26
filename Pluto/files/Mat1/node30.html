@@ -1,0 +1,614 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2012 (1.2)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-2382574370068590",
+    enable_page_level_ads: true
+  });
+</script>
+<TITLE>Matrični zapis sustava linearnih jednadžbi</TITLE>
+<META NAME="description" CONTENT="Matrični zapis sustava linearnih jednadžbi">
+<META NAME="keywords" CONTENT="predavanja">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2012">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="predavanja.css">
+
+<LINK REL="next" HREF="node31.html">
+<LINK REL="previous" HREF="node23.html">
+<LINK REL="up" HREF="node22.html">
+<LINK REL="next" HREF="node31.html">
+</HEAD>
+
+<BODY >
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="shortcut icon" href="favicon.ico"/>
+
+<style>
+.sidenav {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 50px;
+}
+
+div.sidenav a {
+    padding: 8px 8px 8px 10px;
+    text-decoration: none;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    display: block;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dropdown-btn {
+    padding: 8px 8px 8px 8px;
+    text-decoration: none; 
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s;
+}
+
+
+.sidenav a:hover, .dropdown-btn:hover {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #C00;
+}
+
+.menu2 {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    font-style:italic;
+}
+
+.dropdown-container {
+  display: none;
+  font-family: 'Open Sans',sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #ddd;
+  padding-left: 8px;
+}
+
+.dropdown-container a:hover {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    background-color: #ccc;
+}
+
+.sidenav .active {
+    background-color: #C00;
+    color: white;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+hr { 
+    display: block;
+    margin-top: 0.2em;
+    margin-bottom: 0.4em;
+    margin-left: -5px;
+    margin-right: -5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color:#ec971f;
+} 
+  
+.caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 20px;
+    vertical-align: middle;
+    border-top: 5px dashed;
+        border-top-width: 5px;
+        border-top-style: dashed;
+        border-top-color: currentcolor;
+    border-right: 5px solid transparent;
+        border-right-width: 5px;
+        border-right-style: solid;
+        border-right-color: transparent;
+    border-left: 5px solid transparent;
+        border-left-width: 5px;
+        border-left-style: solid;
+        border-left-color: transparent;
+}
+
+</style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- First -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2382574370068590"
+     data-ad-slot="8207843721"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<script>
+   // alert('|ivan'+document.getElementById("mys-content").innerHTML+'|') 
+//    alert(typeof(window.CustomEvent))
+//    if(typeof(window.CustomEvent)=="undefined")
+// {
+//     document.display = 'none';
+// } 
+</script>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" 
+  onclick="closeNav()"
+  style="font-size:24px;cursor:pointer;color:#000;position: absolute; top: 0;
+    right: 10px; font-size: 24px; margin-left: 50px;">&nbsp; &times; &nbsp;</a>
+  <a href="/matematika1/index.html">HOME</a>
+  <button href="/matematika1/predavanja" class="dropdown-btn">PREDAVANJA
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/predavanja/predavanja.html">SADRŽAJ</a>
+      <a href="/matematika1/predavanja/node3.html">OSNOVE</a>
+      <a href="/matematika1/predavanja/node22.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/predavanja/node47.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/predavanja/node67.html">FUNKCIJE</a>
+      <a href="/matematika1/predavanja/node98.html">DERIVACIJE</a>
+      <a href="/matematika1/predavanja/node125.html">NIZOVI I REDOVI</a>
+      <a href="/matematika1/predavanja/node144.html">INDEKS</a>
+    </div>
+  <button href="/matematika1/vjezbe" class="dropdown-btn">VJEŽBE
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/vjezbe/vjezbe.html">SADRŽAJ</a>
+      <a href="/matematika1/vjezbe/node2.html">OSNOVE</a>
+      <a href="/matematika1/vjezbe/node24.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/vjezbe/node55.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/vjezbe/node87.html">FUNKCIJE</a>
+      <a href="/matematika1/vjezbe/node110.html">DERIVACIJE</a>
+      <a href="/matematika1/vjezbe/node136.html">NIZOVI I REDOVI</a>
+    </div>
+  <button href="/matematika1/kviz" class="dropdown-btn">KVIZ
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/kviz/index.html">SADRŽAJ</a>
+      <a href="/matematika1/kviz/osnove/">OSNOVE</a>
+      <a href="/matematika1/kviz/algebra/">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/kviz/vektori/">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/kviz/funkcije/">FUNKCIJE</a>
+      <a href="/matematika1/kviz/derivacije/">DERIVACIJE</a>
+      <a href="/matematika1/kviz/nizovi/">NIZOVI I REDOVI</a>
+    </div>
+  <button href="/matematika1/podsjetnik" class="dropdown-btn">PODSJETNIK
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/podsjetnik/podsjetnik.html">SADRŽAJ</a>
+      <a href="/matematika1/podsjetnik/node1.html">OSNOVE</a>
+      <a href="/matematika1/podsjetnik/node2.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/podsjetnik/node3.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/podsjetnik/node4.html">FUNKCIJE</a>
+      <a href="/matematika1/podsjetnik/node5.html">DERIVACIJE</a>
+      <a href="/matematika1/podsjetnik/node6.html">NIZOVI I REDOVI</a>
+    </div>
+  <!--<a href="/matematika1/kviz">Kviz</a>-->
+  <a href="/matematika1/java">JAVA</a>
+  <a href="http://lavica.fesb.unist.hr/netplot"  class="menu2">NETPLOT</a>
+  <!-- <a href="/matematika1/gauss"  class="menu2">GAUSS</a> -->
+  <a href="http://lavica.fesb.unist.hr/octave/ool_hr.php"  class="menu2">OCTAVE</a>
+  <a href="/matematika1/search.html">Traži ...</a>
+</div>
+
+<span style="font-size:24px;font-family:'Open Sans', sans-serif;cursor:pointer;color:#ec971f"
+      onclick="openNav()">&#9776;</span> &nbsp; 
+<span style="font-size:30px;cursor:pointer;color:#888;font-family:'Opens Sans',sans-serif;"
+      onclick="window.location.assign('../index.html')">
+<font style="color:#C00">m</font>atematika<font style="color:#C00;vertical-align:super;margin-left:2px;font-size:24px;">1</font></span>
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "300px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+
+</script>     
+<hr>
+
+
+
+
+<arrow class=left> </arrow> <A NAME="tex2html604"
+  HREF="node29.html">Još o množenju matrica</A> &nbsp; &nbsp;
+<arrow class=up> </arrow> <A NAME="tex2html610"
+  HREF="node22.html">LINEARNA ALGEBRA</A> &nbsp; &nbsp;
+<arrow class=right> </arrow> <A NAME="tex2html612"
+  HREF="node31.html">Rješavanje trokutastih sustava</A>
+
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00420000000000000000"></A>
+<A NAME="sec:zap"></A><A NAME="4884"></A>
+<BR>
+Matrični zapis sustava linearnih jednadžbi
+</H1>
+
+<P>
+Sustav
+<P></P>
+<DIV ALIGN="CENTER"><TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="73" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img613.gif"
+ ALT="$\displaystyle 2x_1+x_2$"></TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="33" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img510.gif"
+ ALT="$\displaystyle =1$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="78" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img614.gif"
+ ALT="$\displaystyle -x_1+x_2$"></TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="47" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img512.gif"
+ ALT="$\displaystyle =-1$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+možemo zapisati kao
+<P><!-- MATH
+ \begin{displaymath}
+%
+\begin{bmatrix} 2&1\\-1&1 \end{bmatrix}
+\begin{bmatrix} x_1\\x_2\end{bmatrix}=
+\begin{bmatrix} 1\\-1\end{bmatrix},
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="188" HEIGHT="61" ALIGN="MIDDLE" BORDER="0"
+ SRC="img615.gif"
+ ALT="$\displaystyle %
+\begin{bmatrix}2&amp;1\\ -1&amp;1 \end{bmatrix}\begin{bmatrix}x_1\\ x_2\end{bmatrix}=
+\begin{bmatrix}1\\ -1\end{bmatrix},
+$">
+</DIV><P>
+</P> 
+odnosno kao
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="a1.5c"></A><!-- MATH
+ \begin{equation}
+A \mathbf{x}=\mathbf{b},
+\end{equation}
+ -->
+<TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><IMG
+ WIDTH="70" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img616.gif"
+ ALT="$\displaystyle A \mathbf{x}=\mathbf{b},$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+(2.4)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+pri čemu su matrice <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img27.gif"
+ ALT="$ A$">
+, <!-- MATH
+ $\mathbf{x}$
+ -->
+<IMG
+ WIDTH="16" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img617.gif"
+ ALT="$ \mathbf{x}$">
+ i <!-- MATH
+ $\mathbf{b}$
+ -->
+<IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img618.gif"
+ ALT="$ \mathbf{b}$">
+ zadane s
+<P><!-- MATH
+ \begin{displaymath}
+%
+A=\begin{bmatrix} 2&1\\-1&1 \end{bmatrix}, \quad
+\mathbf{x}=\begin{bmatrix} x_1\\x_2\end{bmatrix}, \quad
+\mathbf{b}=\begin{bmatrix} 1\\-1\end{bmatrix}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="327" HEIGHT="61" ALIGN="MIDDLE" BORDER="0"
+ SRC="img619.gif"
+ ALT="$\displaystyle %
+A=\begin{bmatrix}2&amp;1\\ -1&amp;1 \end{bmatrix}, \quad
+\mathbf{x}=\be...
+...x}x_1\\ x_2\end{bmatrix}, \quad
+\mathbf{b}=\begin{bmatrix}1\\ -1\end{bmatrix}.
+$">
+</DIV><P>
+</P> 
+Istoznačnost ova dva zapisa slijedi iz definicije jednakosti matrica
+<A HREF="node23.html#a1.4">2.2</A>.
+Matrica <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img27.gif"
+ ALT="$ A$">
+ se zove <EM>matrica sustava</EM><A NAME="4911"></A>, 
+a vektor <!-- MATH
+ $\mathbf{b}$
+ -->
+<IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img618.gif"
+ ALT="$ \mathbf{b}$">
+ se zove
+<EM>slobodni vektor</EM><A NAME="4914"></A> 
+ili vektor slobodnih članova. 
+Zbog jednostavnosti možemo izostaviti vektor <!-- MATH
+ $\mathbf{x}$
+ -->
+<IMG
+ WIDTH="16" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img617.gif"
+ ALT="$ \mathbf{x}$">
+ jer se
+njegovo prisustvo podrazumijeva pa stoga često zapisujemo
+<EM>proširenu matricu sustava</EM><A NAME="4917"></A>
+<P><!-- MATH
+ \begin{displaymath}
+%
+\begin{bmatrix} A&\vline &\mathbf{b} \end{bmatrix}=
+\begin{bmatrix}
+\begin{matrix} 2&1\\-1&1 \end{matrix} & \vline &
+\begin{matrix} 1\\-1\end{matrix} \end{bmatrix}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="242" HEIGHT="61" ALIGN="MIDDLE" BORDER="0"
+ SRC="img620.gif"
+ ALT="$\displaystyle %
+\begin{bmatrix}A&amp;\vline &amp;\mathbf{b} \end{bmatrix}=
+\begin{bmatr...
+... -1&amp;1 \end{matrix} &amp; \vline &amp;
+\begin{matrix}1\\ -1\end{matrix} \end{bmatrix}.
+$">
+</DIV><P>
+</P> 
+Slično, sustav u obliku
+<P></P>
+<DIV ALIGN="CENTER"><TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="104" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img621.gif"
+ ALT="$\displaystyle 2x_1+x_2-1$"></TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="33" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img622.gif"
+ ALT="$\displaystyle =0$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="109" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img623.gif"
+ ALT="$\displaystyle -x_1+x_2+1$"></TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="33" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img622.gif"
+ ALT="$\displaystyle =0$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+možemo zapisati kao
+<P><!-- MATH
+ \begin{displaymath}
+%
+A\mathbf{x}-\mathbf{b}=O_{21},
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="121" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img624.gif"
+ ALT="$\displaystyle %
+A\mathbf{x}-\mathbf{b}=O_{21},
+$">
+</DIV><P>
+</P> 
+gdje je <IMG
+ WIDTH="34" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img625.gif"
+ ALT="$ O_{21}$">
+ odgovarajuća 
+<A HREF="node27.html#sec:nul">nul-matrica</A>. 
+
+<P>
+Sada možemo lako dokazati sljedeći teorem.
+<div class="teo"><P>
+<DIV><B>Teorem  2.2</B> &nbsp; <A NAME="a1.9"></A>Ako su <!-- MATH
+ $\mathbf{x}_1$
+ -->
+<IMG
+ WIDTH="24" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img626.gif"
+ ALT="$ \mathbf{x}_1$">
+ i <!-- MATH
+ $\mathbf{x}_2$
+ -->
+<IMG
+ WIDTH="24" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img627.gif"
+ ALT="$ \mathbf{x}_2$">
+ različita rješenja sustava
+<!-- MATH
+ $A\mathbf{x}=\mathbf{b}$
+ -->
+<IMG
+ WIDTH="65" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img628.gif"
+ ALT="$ A\mathbf{x}=\mathbf{b}$">
+, tada je
+<P><!-- MATH
+ \begin{displaymath}
+%
+\mathbf{x}(\lambda)=\lambda\mathbf{x}_1+(1-\lambda)\mathbf{x}_2
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="190" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img629.gif"
+ ALT="$\displaystyle %
+\mathbf{x}(\lambda)=\lambda\mathbf{x}_1+(1-\lambda)\mathbf{x}_2
+$">
+</DIV><P>
+</P> 
+također rješenje tog sustava za svaki <!-- MATH
+ $\lambda\in \mathbb{R}$
+ -->
+<IMG
+ WIDTH="50" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img630.gif"
+ ALT="$ \lambda\in \mathbb{R}$">
+.</DIV><P></P>
+
+</div><p></p><div class="dok"><B>Dokaz. </B></div><p></p>
+Iz svojstava <A HREF="node25.html#amats">množenja matrica skalarom</A>
+i <A HREF="node26.html#at1.5a">množenja matrica</A> slijedi
+<P><!-- MATH
+ \begin{displaymath}
+%
+A\mathbf{x}(\lambda)=\lambda A\mathbf{x}_1+(1-\lambda)A \mathbf{x}_2
+=\lambda\mathbf{b}+(1-\lambda)\mathbf{b}=\mathbf{b},
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="406" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img631.gif"
+ ALT="$\displaystyle %
+A\mathbf{x}(\lambda)=\lambda A\mathbf{x}_1+(1-\lambda)A \mathbf{x}_2
+=\lambda\mathbf{b}+(1-\lambda)\mathbf{b}=\mathbf{b},
+$">
+</DIV><P>
+</P> 
+pa je teorem dokazan. &nbsp;&nbsp;&nbsp;&nbsp;<div class="dok"><B>Q.E.D.</B>
+<BR></div><p></p>
+
+<P>
+Ovaj teorem nam zapravo kaže da je uvijek ispunjen točno jedan od tri
+slučaja:
+<DL COMPACT>
+<DT>1.</DT>
+<DD>sustav nema rješenje,
+</DD>
+<DT>2.</DT>
+<DD>sustav ima točno jedno rješenje,
+</DD>
+<DT>3.</DT>
+<DD>sustav ima beskonačno rješenja,
+</DD>
+</DL>
+kao što smo vidjeli u <A HREF="node22.html#cha:alg">uvodu</A>. 
+Detalje o tome kada nastupa koji od ovih slučajeva daje nam
+Kronecker-Capellijev teorem <A HREF="node38.html#tm:KC">2.5</A>.
+
+<P>
+<p><HR></p>
+<arrow class=left> </arrow> <A NAME="tex2html604"
+  HREF="node29.html">Još o množenju matrica</A> &nbsp; &nbsp;
+<arrow class=up> </arrow> <A NAME="tex2html610"
+  HREF="node22.html">LINEARNA ALGEBRA</A> &nbsp; &nbsp;
+<arrow class=right> </arrow> <A NAME="tex2html612"
+  HREF="node31.html">Rješavanje trokutastih sustava</A>  
+
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

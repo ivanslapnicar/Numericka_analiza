@@ -1,0 +1,740 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2012 (1.2)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-2382574370068590",
+    enable_page_level_ads: true
+  });
+</script>
+<TITLE>Kompleksni brojevi</TITLE>
+<META NAME="description" CONTENT="Kompleksni brojevi">
+<META NAME="keywords" CONTENT="predavanja">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2012">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="predavanja.css">
+
+<LINK REL="previous" HREF="node16.html">
+<LINK REL="up" HREF="node3.html">
+<LINK REL="next" HREF="node20.html">
+</HEAD>
+
+<BODY >
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="shortcut icon" href="favicon.ico"/>
+
+<style>
+.sidenav {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 50px;
+}
+
+div.sidenav a {
+    padding: 8px 8px 8px 10px;
+    text-decoration: none;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    display: block;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dropdown-btn {
+    padding: 8px 8px 8px 8px;
+    text-decoration: none; 
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s;
+}
+
+
+.sidenav a:hover, .dropdown-btn:hover {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #C00;
+}
+
+.menu2 {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    font-style:italic;
+}
+
+.dropdown-container {
+  display: none;
+  font-family: 'Open Sans',sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #ddd;
+  padding-left: 8px;
+}
+
+.dropdown-container a:hover {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    background-color: #ccc;
+}
+
+.sidenav .active {
+    background-color: #C00;
+    color: white;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+hr { 
+    display: block;
+    margin-top: 0.2em;
+    margin-bottom: 0.4em;
+    margin-left: -5px;
+    margin-right: -5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color:#ec971f;
+} 
+  
+.caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 20px;
+    vertical-align: middle;
+    border-top: 5px dashed;
+        border-top-width: 5px;
+        border-top-style: dashed;
+        border-top-color: currentcolor;
+    border-right: 5px solid transparent;
+        border-right-width: 5px;
+        border-right-style: solid;
+        border-right-color: transparent;
+    border-left: 5px solid transparent;
+        border-left-width: 5px;
+        border-left-style: solid;
+        border-left-color: transparent;
+}
+
+</style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- First -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2382574370068590"
+     data-ad-slot="8207843721"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<script>
+   // alert('|ivan'+document.getElementById("mys-content").innerHTML+'|') 
+//    alert(typeof(window.CustomEvent))
+//    if(typeof(window.CustomEvent)=="undefined")
+// {
+//     document.display = 'none';
+// } 
+</script>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" 
+  onclick="closeNav()"
+  style="font-size:24px;cursor:pointer;color:#000;position: absolute; top: 0;
+    right: 10px; font-size: 24px; margin-left: 50px;">&nbsp; &times; &nbsp;</a>
+  <a href="/matematika1/index.html">HOME</a>
+  <button href="/matematika1/predavanja" class="dropdown-btn">PREDAVANJA
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/predavanja/predavanja.html">SADRŽAJ</a>
+      <a href="/matematika1/predavanja/node3.html">OSNOVE</a>
+      <a href="/matematika1/predavanja/node22.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/predavanja/node47.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/predavanja/node67.html">FUNKCIJE</a>
+      <a href="/matematika1/predavanja/node98.html">DERIVACIJE</a>
+      <a href="/matematika1/predavanja/node125.html">NIZOVI I REDOVI</a>
+      <a href="/matematika1/predavanja/node144.html">INDEKS</a>
+    </div>
+  <button href="/matematika1/vjezbe" class="dropdown-btn">VJEŽBE
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/vjezbe/vjezbe.html">SADRŽAJ</a>
+      <a href="/matematika1/vjezbe/node2.html">OSNOVE</a>
+      <a href="/matematika1/vjezbe/node24.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/vjezbe/node55.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/vjezbe/node87.html">FUNKCIJE</a>
+      <a href="/matematika1/vjezbe/node110.html">DERIVACIJE</a>
+      <a href="/matematika1/vjezbe/node136.html">NIZOVI I REDOVI</a>
+    </div>
+  <button href="/matematika1/kviz" class="dropdown-btn">KVIZ
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/kviz/index.html">SADRŽAJ</a>
+      <a href="/matematika1/kviz/osnove/">OSNOVE</a>
+      <a href="/matematika1/kviz/algebra/">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/kviz/vektori/">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/kviz/funkcije/">FUNKCIJE</a>
+      <a href="/matematika1/kviz/derivacije/">DERIVACIJE</a>
+      <a href="/matematika1/kviz/nizovi/">NIZOVI I REDOVI</a>
+    </div>
+  <button href="/matematika1/podsjetnik" class="dropdown-btn">PODSJETNIK
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/podsjetnik/podsjetnik.html">SADRŽAJ</a>
+      <a href="/matematika1/podsjetnik/node1.html">OSNOVE</a>
+      <a href="/matematika1/podsjetnik/node2.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/podsjetnik/node3.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/podsjetnik/node4.html">FUNKCIJE</a>
+      <a href="/matematika1/podsjetnik/node5.html">DERIVACIJE</a>
+      <a href="/matematika1/podsjetnik/node6.html">NIZOVI I REDOVI</a>
+    </div>
+  <!--<a href="/matematika1/kviz">Kviz</a>-->
+  <a href="/matematika1/java">JAVA</a>
+  <a href="http://lavica.fesb.unist.hr/netplot"  class="menu2">NETPLOT</a>
+  <!-- <a href="/matematika1/gauss"  class="menu2">GAUSS</a> -->
+  <a href="http://lavica.fesb.unist.hr/octave/ool_hr.php"  class="menu2">OCTAVE</a>
+  <a href="/matematika1/search.html">Traži ...</a>
+</div>
+
+<span style="font-size:24px;font-family:'Open Sans', sans-serif;cursor:pointer;color:#ec971f"
+      onclick="openNav()">&#9776;</span> &nbsp; 
+<span style="font-size:30px;cursor:pointer;color:#888;font-family:'Opens Sans',sans-serif;"
+      onclick="window.location.assign('../index.html')">
+<font style="color:#C00">m</font>atematika<font style="color:#C00;vertical-align:super;margin-left:2px;font-size:24px;">1</font></span>
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "300px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+
+</script>     
+<hr>
+
+
+
+
+<arrow class=left> </arrow> <A NAME="tex2html468"
+  HREF="node18.html">Apsolutna vrijednost</A> &nbsp; &nbsp;
+<arrow class=up> </arrow> <A NAME="tex2html472"
+  HREF="node3.html">OSNOVE MATEMATIKE</A> &nbsp; &nbsp;
+<arrow class=right> </arrow> <A NAME="tex2html474"
+  HREF="node20.html">Trigonometrijski oblik</A>
+
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00380000000000000000"></A>
+<A NAME="sec:cc"></A>
+<BR>
+Kompleksni brojevi
+</H1>
+
+<P>
+U ovom poglavlju definirat ćemo skup kompleksnih brojeva <!-- MATH
+ $\mathbb{C}$
+ -->
+<IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img402.gif"
+ ALT="$ \mathbb{C}$">
+,
+osnovne računske operacije s kompleksnim brojevima i njihova svojstva,
+trigonometrijski oblik kompleksnog broja i operacije s brojevima u
+trigonometrijskom obliku te eksponencijalni oblik
+kompleksnog broja. Pretpostavljamo da čitatelj poznaje osnovna
+svojstva trigonometrijskih i arkus funkcija iz poglavlja 
+<A HREF="node91.html#sec:trig">4.6.5</A> i <A HREF="node94.html#sec:arkus">4.6.6</A>.
+
+<P>
+Motivacija za uvođenje kompleksnih brojeva je sljedeća: 
+jednadžba <IMG
+ WIDTH="87" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img403.gif"
+ ALT="$ x^2-1=0$">
+ ima dva rješenja u skupu <!-- MATH
+ $\mathbb{R}$
+ -->
+<IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img122.gif"
+ ALT="$ \mathbb{R}$">
+, <IMG
+ WIDTH="48" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img404.gif"
+ ALT="$ x=1$">
+ i <IMG
+ WIDTH="62" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img405.gif"
+ ALT="$ x=-1$">
+,
+dok slična jednadžba <IMG
+ WIDTH="87" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img406.gif"
+ ALT="$ x^2+1=0$">
+ nema niti jedno rješenje. 
+Stoga se <EM>imaginarna jedinica <IMG
+ WIDTH="11" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img407.gif"
+ ALT="$ i$">
+</EM> definira tako što su 
+<IMG
+ WIDTH="45" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img408.gif"
+ ALT="$ x=i$">
+ i <IMG
+ WIDTH="60" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img409.gif"
+ ALT="$ x=-i$">
+ rješenja jednadžbe <IMG
+ WIDTH="87" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img406.gif"
+ ALT="$ x^2+1=0$">
+.
+Iz ove definicije slijedi 
+<P><!-- MATH
+ \begin{displaymath}
+%
+i^2=-1,\quad  i^3=-i,\quad  i^4=-i\cdot i=-(-1)=1,\quad i^5=i,
+\quad i^6=-1,\ \ldots.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="563" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img410.gif"
+ ALT="$\displaystyle %
+i^2=-1,\quad i^3=-i,\quad i^4=-i\cdot i=-(-1)=1,\quad i^5=i,
+\quad i^6=-1,\ \ldots.
+$">
+</DIV><P>
+</P> 
+
+<P>
+<div class="def"><P>
+<DIV><B>Definicija  1.19</B> &nbsp; <A NAME="o4.19"></A><EM>Skup kompleksnih brojeva <!-- MATH
+ $\mathbb{C}$
+ -->
+<IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img402.gif"
+ ALT="$ \mathbb{C}$">
+</EM><A NAME="1248"></A>
+<A NAME="1249"></A> 
+je skup svih brojeva oblika
+<IMG
+ WIDTH="86" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img411.gif"
+ ALT="$ z=x+iy$">
+, gdje su <!-- MATH
+ $x,y\in \mathbb{R}$
+ -->
+<IMG
+ WIDTH="68" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img412.gif"
+ ALT="$ x,y\in \mathbb{R}$">
+. Posebno je <IMG
+ WIDTH="84" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img413.gif"
+ ALT="$ 0=0+i0$">
+.
+Realni broj <!-- MATH
+ $x=\mathop{\mathrm{Re}}\nolimits z$
+ -->
+<IMG
+ WIDTH="73" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img414.gif"
+ ALT="$ x=\mathop{\mathrm{Re}}\nolimits z$">
+ je 
+<EM>realni dio</EM><A NAME="1251"></A> 
+kompleksnog broja <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img78.gif"
+ ALT="$ z$">
+, a realni broj <!-- MATH
+ $y=\mathop{\mathrm{Im}}\nolimits z$
+ -->
+<IMG
+ WIDTH="72" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img415.gif"
+ ALT="$ y=\mathop{\mathrm{Im}}\nolimits z$">
+ je   
+<EM>imaginarni dio</EM><A NAME="1253"></A> 
+kompleksnog broja <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img78.gif"
+ ALT="$ z$">
+.
+Dva kompleksna broja su <EM>jednaka</EM> ako su im jednaki 
+realni i imaginarni dijelovi.
+<EM>Konjugirano kompleksni broj</EM><A NAME="1256"></A> 
+broja <IMG
+ WIDTH="86" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img411.gif"
+ ALT="$ z=x+iy$">
+ je broj
+<!-- MATH
+ $\bar z=x-iy$
+ -->
+<IMG
+ WIDTH="86" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img416.gif"
+ ALT="$ \bar z=x-iy$">
+. <EM>Modul</EM><A NAME="1258"></A> 
+ili <EM>apsolutna vrijednost</EM>
+<A NAME="1260"></A> kompleksnog
+broja <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img78.gif"
+ ALT="$ z$">
+ je nenegativni realni broj <!-- MATH
+ $r=|z|=\sqrt{x^2+y^2}$
+ -->
+<IMG
+ WIDTH="157" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img417.gif"
+ ALT="$ r=\vert z\vert=\sqrt{x^2+y^2}$">
+. </DIV><P></P>
+
+</div><p></p>
+<P>
+Neka su <!-- MATH
+ $z_1=x_1+iy_1$
+ -->
+<IMG
+ WIDTH="109" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img418.gif"
+ ALT="$ z_1=x_1+iy_1$">
+ i <!-- MATH
+ $z_2=x_2+iy_2$
+ -->
+<IMG
+ WIDTH="109" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img419.gif"
+ ALT="$ z_2=x_2+iy_2$">
+ dva kompleksna broja. 
+Računske operacije su definirane na sljedeći način:
+<P></P>
+<DIV ALIGN="CENTER"><TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="60" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img420.gif"
+ ALT="$\displaystyle z_1+z_2$"></TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="186" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img421.gif"
+ ALT="$\displaystyle = x_1+x_2+i(y_1+y_2),$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="60" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img422.gif"
+ ALT="$\displaystyle z_1-z_2$"></TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="186" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img423.gif"
+ ALT="$\displaystyle = x_1-x_2+i(y_1-y_2),$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="51" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img424.gif"
+ ALT="$\displaystyle z_1\cdot z_2$"></TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="436" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img425.gif"
+ ALT="$\displaystyle = (x_1+iy_1)(x_2+iy_2)=x_1x_2+iy_1x_2+ix_1y_2+i^2y_1y_2$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="256" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img426.gif"
+ ALT="$\displaystyle = x_1x_2-y_1y_2+i(x_1y_2+x_2y_1),$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="26" HEIGHT="49" ALIGN="MIDDLE" BORDER="0"
+ SRC="img427.gif"
+ ALT="$\displaystyle \frac{z_1}{z_2}$"></TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="172" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img428.gif"
+ ALT="$\displaystyle = \frac{x_1+iy_1}{x_2+iy_2}\cdot \frac{x_2-iy_2}{x_2-iy_2}$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="361" HEIGHT="54" ALIGN="MIDDLE" BORDER="0"
+ SRC="img429.gif"
+ ALT="$\displaystyle = \frac{x_1x_2+y_1y_2}{x_2^2+y_2^2} + i \frac{y_1x_2-x_1y_2}{x_2^2+y_2^2}, \quad \textrm{za}\quad z_2\neq 0.$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+<P>
+<div class="zad"><P>
+<DIV><B>Zadatak  1.5</B> &nbsp; <A NAME="o4.19a"></A> Dokažite da za <!-- MATH
+ $z,z_1,z_2\in \mathbb{C}$
+ -->
+<IMG
+ WIDTH="98" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img430.gif"
+ ALT="$ z,z_1,z_2\in \mathbb{C}$">
+ vrijedi:
+  <DL COMPACT>
+<DT>a)</DT>
+<DD><!-- MATH
+ $\overline{z_1+z_2}=\bar z_1+\bar z_2$
+ -->
+<IMG
+ WIDTH="139" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img431.gif"
+ ALT="$ \overline{z_1+z_2}=\bar z_1+\bar z_2$">
+,
+  
+</DD>
+<DT>b)</DT>
+<DD><!-- MATH
+ $\overline{z_1\cdot z_2}=\bar z_1\cdot\bar z_2$
+ -->
+<IMG
+ WIDTH="121" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img432.gif"
+ ALT="$ \overline{z_1\cdot z_2}=\bar z_1\cdot\bar z_2$">
+,
+  
+</DD>
+<DT>c)</DT>
+<DD><!-- MATH
+ $\displaystyle \overline{\left(\frac{z_1}{z_2}\right)}=
+  \frac{\bar z_1}{\bar z_2}$
+ -->
+<IMG
+ WIDTH="97" HEIGHT="68" ALIGN="MIDDLE" BORDER="0"
+ SRC="img433.gif"
+ ALT="$ \displaystyle \overline{\left(\frac{z_1}{z_2}\right)}=
+\frac{\bar z_1}{\bar z_2}$">
+, za <IMG
+ WIDTH="54" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img434.gif"
+ ALT="$ z_2\neq 0$">
+,
+</DD>
+<DT>d)</DT>
+<DD><!-- MATH
+ $\Bar{\Bar{z}}=z$
+ -->
+<IMG
+ WIDTH="47" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img435.gif"
+ ALT="$ \Bar{\Bar{z}}=z$">
+,
+</DD>
+<DT>e)</DT>
+<DD><!-- MATH
+ $z=\bar z \Leftrightarrow z\in \mathbb{R}$
+ -->
+<IMG
+ WIDTH="119" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img436.gif"
+ ALT="$ z=\bar z \Leftrightarrow z\in \mathbb{R}$">
+,
+</DD>
+<DT>f)</DT>
+<DD><!-- MATH
+ $z+\bar z=2 \mathop{\mathrm{Re}}\nolimits z$
+ -->
+<IMG
+ WIDTH="115" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img437.gif"
+ ALT="$ z+\bar z=2 \mathop{\mathrm{Re}}\nolimits z$">
+,
+</DD>
+<DT>g)</DT>
+<DD><!-- MATH
+ $z-\bar z= 2i\mathop{\mathrm{Im}}\nolimits z$
+ -->
+<IMG
+ WIDTH="121" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img438.gif"
+ ALT="$ z-\bar z= 2i\mathop{\mathrm{Im}}\nolimits z$">
+,
+</DD>
+<DT>h)</DT>
+<DD><!-- MATH
+ $\bar z\cdot z=z\cdot \bar z=|z|^2$
+ -->
+<IMG
+ WIDTH="143" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img439.gif"
+ ALT="$ \bar z\cdot z=z\cdot \bar z=\vert z\vert^2$">
+,
+</DD>
+<DT>i)</DT>
+<DD><!-- MATH
+ $|z|=0 \Leftrightarrow z=0$
+ -->
+<IMG
+ WIDTH="127" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img440.gif"
+ ALT="$ \vert z\vert=0 \Leftrightarrow z=0$">
+,
+</DD>
+<DT>j)</DT>
+<DD><!-- MATH
+ $|z_1+z_2|\leq |z_1|+|z_2|$
+ -->
+<IMG
+ WIDTH="169" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img441.gif"
+ ALT="$ \vert z_1+z_2\vert\leq \vert z_1\vert+\vert z_2\vert$">
+ (nejednakost trokuta).
+  
+</DD>
+</DL></DIV><P></P>
+
+</div><p></p>
+<P>
+Kompleksnom broju <IMG
+ WIDTH="86" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img411.gif"
+ ALT="$ z=x+iy$">
+ jednoznačno je pridružen uređeni par 
+<!-- MATH
+ $(x,y)\in \mathbb{R}\times\mathbb{R}$
+ -->
+<IMG
+ WIDTH="117" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img442.gif"
+ ALT="$ (x,y)\in \mathbb{R}\times\mathbb{R}$">
+, odnosno točka <IMG
+ WIDTH="84" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img443.gif"
+ ALT="$ T=(x,y)$">
+ u ravnini, kao što se
+vidi na slici <A HREF="#fig:o2">1.2</A>.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:o2"></A><A NAME="1293"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Slika 1.2:</STRONG>
+Kompleksni broj</CAPTION>
+<TR><TD><IMG
+ WIDTH="379" HEIGHT="212" BORDER="0"
+ SRC="img444.gif"
+ ALT="\begin{figure}\begin{center}
+\leavevmode
+\epsfig{file=slike/kombr.eps,width=9.6cm}
+\end{center}\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+Iz slike <A HREF="#fig:o2">1.2</A> se vidi zašto su formule za zbrajanje
+kompleksnih brojeva slične formulama za zbrajanje vektora, odnosno
+zašto se posebno zbrajaju realni, a posebno imaginarni dijelovi.
+
+<P>
+<BR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Poglavlja</STRONG></A>
+
+<UL>
+<LI><A NAME="tex2html475"
+  HREF="node20.html">Trigonometrijski oblik</A>
+<LI><A NAME="tex2html476"
+  HREF="node21.html">Eksponencijalni oblik</A>
+</UL>
+<!--End of Table of Child-Links-->
+<p><HR></p>
+<arrow class=left> </arrow> <A NAME="tex2html468"
+  HREF="node18.html">Apsolutna vrijednost</A> &nbsp; &nbsp;
+<arrow class=up> </arrow> <A NAME="tex2html472"
+  HREF="node3.html">OSNOVE MATEMATIKE</A> &nbsp; &nbsp;
+<arrow class=right> </arrow> <A NAME="tex2html474"
+  HREF="node20.html">Trigonometrijski oblik</A>  
+
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

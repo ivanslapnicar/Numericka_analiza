@@ -1,0 +1,1165 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2012 (1.2)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-2382574370068590",
+    enable_page_level_ads: true
+  });
+</script>
+<TITLE>Rješavanje problema ravnoteže</TITLE>
+<META NAME="description" CONTENT="Rješavanje problema ravnoteže">
+<META NAME="keywords" CONTENT="predavanja">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2012">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="predavanja.css">
+
+<LINK REL="previous" HREF="node122.html">
+<LINK REL="up" HREF="node98.html">
+<LINK REL="next" HREF="node125.html">
+</HEAD>
+
+<BODY >
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="shortcut icon" href="favicon.ico"/>
+
+<style>
+.sidenav {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 50px;
+}
+
+div.sidenav a {
+    padding: 8px 8px 8px 10px;
+    text-decoration: none;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    display: block;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dropdown-btn {
+    padding: 8px 8px 8px 8px;
+    text-decoration: none; 
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s;
+}
+
+
+.sidenav a:hover, .dropdown-btn:hover {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #C00;
+}
+
+.menu2 {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    font-style:italic;
+}
+
+.dropdown-container {
+  display: none;
+  font-family: 'Open Sans',sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #ddd;
+  padding-left: 8px;
+}
+
+.dropdown-container a:hover {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    background-color: #ccc;
+}
+
+.sidenav .active {
+    background-color: #C00;
+    color: white;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+hr { 
+    display: block;
+    margin-top: 0.2em;
+    margin-bottom: 0.4em;
+    margin-left: -5px;
+    margin-right: -5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color:#ec971f;
+} 
+  
+.caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 20px;
+    vertical-align: middle;
+    border-top: 5px dashed;
+        border-top-width: 5px;
+        border-top-style: dashed;
+        border-top-color: currentcolor;
+    border-right: 5px solid transparent;
+        border-right-width: 5px;
+        border-right-style: solid;
+        border-right-color: transparent;
+    border-left: 5px solid transparent;
+        border-left-width: 5px;
+        border-left-style: solid;
+        border-left-color: transparent;
+}
+
+</style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- First -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2382574370068590"
+     data-ad-slot="8207843721"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<script>
+   // alert('|ivan'+document.getElementById("mys-content").innerHTML+'|') 
+//    alert(typeof(window.CustomEvent))
+//    if(typeof(window.CustomEvent)=="undefined")
+// {
+//     document.display = 'none';
+// } 
+</script>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" 
+  onclick="closeNav()"
+  style="font-size:24px;cursor:pointer;color:#000;position: absolute; top: 0;
+    right: 10px; font-size: 24px; margin-left: 50px;">&nbsp; &times; &nbsp;</a>
+  <a href="/matematika1/index.html">HOME</a>
+  <button href="/matematika1/predavanja" class="dropdown-btn">PREDAVANJA
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/predavanja/predavanja.html">SADRŽAJ</a>
+      <a href="/matematika1/predavanja/node3.html">OSNOVE</a>
+      <a href="/matematika1/predavanja/node22.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/predavanja/node47.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/predavanja/node67.html">FUNKCIJE</a>
+      <a href="/matematika1/predavanja/node98.html">DERIVACIJE</a>
+      <a href="/matematika1/predavanja/node125.html">NIZOVI I REDOVI</a>
+      <a href="/matematika1/predavanja/node144.html">INDEKS</a>
+    </div>
+  <button href="/matematika1/vjezbe" class="dropdown-btn">VJEŽBE
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/vjezbe/vjezbe.html">SADRŽAJ</a>
+      <a href="/matematika1/vjezbe/node2.html">OSNOVE</a>
+      <a href="/matematika1/vjezbe/node24.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/vjezbe/node55.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/vjezbe/node87.html">FUNKCIJE</a>
+      <a href="/matematika1/vjezbe/node110.html">DERIVACIJE</a>
+      <a href="/matematika1/vjezbe/node136.html">NIZOVI I REDOVI</a>
+    </div>
+  <button href="/matematika1/kviz" class="dropdown-btn">KVIZ
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/kviz/index.html">SADRŽAJ</a>
+      <a href="/matematika1/kviz/osnove/">OSNOVE</a>
+      <a href="/matematika1/kviz/algebra/">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/kviz/vektori/">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/kviz/funkcije/">FUNKCIJE</a>
+      <a href="/matematika1/kviz/derivacije/">DERIVACIJE</a>
+      <a href="/matematika1/kviz/nizovi/">NIZOVI I REDOVI</a>
+    </div>
+  <button href="/matematika1/podsjetnik" class="dropdown-btn">PODSJETNIK
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/podsjetnik/podsjetnik.html">SADRŽAJ</a>
+      <a href="/matematika1/podsjetnik/node1.html">OSNOVE</a>
+      <a href="/matematika1/podsjetnik/node2.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/podsjetnik/node3.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/podsjetnik/node4.html">FUNKCIJE</a>
+      <a href="/matematika1/podsjetnik/node5.html">DERIVACIJE</a>
+      <a href="/matematika1/podsjetnik/node6.html">NIZOVI I REDOVI</a>
+    </div>
+  <!--<a href="/matematika1/kviz">Kviz</a>-->
+  <a href="/matematika1/java">JAVA</a>
+  <a href="http://lavica.fesb.unist.hr/netplot"  class="menu2">NETPLOT</a>
+  <!-- <a href="/matematika1/gauss"  class="menu2">GAUSS</a> -->
+  <a href="http://lavica.fesb.unist.hr/octave/ool_hr.php"  class="menu2">OCTAVE</a>
+  <a href="/matematika1/search.html">Traži ...</a>
+</div>
+
+<span style="font-size:24px;font-family:'Open Sans', sans-serif;cursor:pointer;color:#ec971f"
+      onclick="openNav()">&#9776;</span> &nbsp; 
+<span style="font-size:30px;cursor:pointer;color:#888;font-family:'Opens Sans',sans-serif;"
+      onclick="window.location.assign('../index.html')">
+<font style="color:#C00">m</font>atematika<font style="color:#C00;vertical-align:super;margin-left:2px;font-size:24px;">1</font></span>
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "300px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+
+</script>     
+<hr>
+
+
+
+
+<arrow class=left> </arrow> <A NAME="tex2html1640"
+  HREF="node123.html">Parametarski zadana funkcija</A> &nbsp; &nbsp;
+<arrow class=up> </arrow> <A NAME="tex2html1644"
+  HREF="node98.html">DERIVACIJE I PRIMJENE</A> &nbsp; &nbsp;
+<arrow class=right> </arrow> <A NAME="tex2html1646"
+  HREF="node125.html">NIZOVI I REDOVI</A>
+
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION007100000000000000000"></A>
+<A NAME="sec:probrav"></A>
+<BR>
+Rješavanje problema ravnoteže
+</H1>
+
+<P>
+Diferencijalni račun izložen u prethodnim poglavljima ima 
+mnoge važne primjene u fizici i tehnici. Ovdje ćemo kao ilustraciju
+detaljno opisati postupak riješavanja problema ravnoteže prikazanog na
+slici <A HREF="#fig:d18">5.18</A>:
+<BLOCKQUOTE>
+Preko koluta radijusa <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img445.gif"
+ ALT="$ r$">
+ koji se nalazi na
+udaljenosti <IMG
+ WIDTH="14" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2290.gif"
+ ALT="$ d$">
+ od ishodišta namotana je nit duljine <IMG
+ WIDTH="11" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1241.gif"
+ ALT="$ l$">
+ 
+na čijim su krajevima obješeni utezi s masama <IMG
+ WIDTH="29" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img158.gif"
+ ALT="$ m_1$">
+ i <IMG
+ WIDTH="29" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img159.gif"
+ ALT="$ m_2$">
+.
+Pri tome je <IMG
+ WIDTH="47" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2488.gif"
+ ALT="$ r&lt;d$">
+ i <IMG
+ WIDTH="77" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2489.gif"
+ ALT="$ m_1&gt;m_2$">
+. Kolut se oko svoje osi vrti bez
+trenja, a uteg s masom <IMG
+ WIDTH="29" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img159.gif"
+ ALT="$ m_2$">
+ se također bez trenja kliže po <IMG
+ WIDTH="14" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img22.gif"
+ ALT="$ y$">
+-osi.
+Zadatak je odrediti ima li navedeni mehanički sustav položaj
+ravnoteže, te ukoliko ima, naći taj položaj.<A NAME="tex2html107"
+  HREF="footnode.html#foot22142"><SUP>5.1</SUP></A>
+</BLOCKQUOTE>
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:d18"></A><A NAME="22147"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Slika 5.18:</STRONG>
+Položaj ravnoteže mehaničkog sustava</CAPTION>
+<TR><TD><IMG
+ WIDTH="381" HEIGHT="319" BORDER="0"
+ SRC="img2490.gif"
+ ALT="\begin{figure}\begin{center}
+\epsfig{file=slike/ravnoteza.eps,width=9.6cm}
+\end{center}\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+Sa slike <A HREF="#fig:d18">5.18</A> vidimo da je <IMG
+ WIDTH="78" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2491.gif"
+ ALT="$ d=\vert OD\vert$">
+. 
+Potencijalna energija <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2492.gif"
+ ALT="$ E$">
+ zadanog sustava u polju sile teže s
+gravitacijskom konstantom <IMG
+ WIDTH="14" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img167.gif"
+ ALT="$ g$">
+ dana je jednadžbom
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="ra.1"></A><!-- MATH
+ \begin{equation}
+E= - m_1 g |EF| - m_2 g |OC|.
+\end{equation}
+ -->
+<TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><IMG
+ WIDTH="227" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2493.gif"
+ ALT="$\displaystyle E= - m_1 g \vert EF\vert - m_2 g \vert OC\vert.$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+(5.12)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Sustav će, kao što je poznato, imati ravnotežu tamo gdje je
+potencijalna energija minimalna. Naš je zadatak stoga izraziti
+potencijalnu energiju kao funkciju jedne varijable, utvrditi da li ta
+funkcija ima minimum te naći minimum ukoliko postoji.
+
+<P>
+Pokazuje se da je najpogodnija varijabla kut <IMG
+ WIDTH="17" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img863.gif"
+ ALT="$ \alpha$">
+. 
+Zbog sličnosti trokuta vrijedi <!-- MATH
+ $\angle ADB=\angle ACO =\alpha$
+ -->
+<IMG
+ WIDTH="176" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2494.gif"
+ ALT="$ \angle ADB=\angle ACO =\alpha$">
+.
+Očito je <!-- MATH
+ $\alpha\in (0,\pi/2]$
+ -->
+<IMG
+ WIDTH="96" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2495.gif"
+ ALT="$ \alpha\in (0,\pi/2]$">
+.
+Trokut <!-- MATH
+ $\triangle ACO$
+ -->
+<IMG
+ WIDTH="63" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2496.gif"
+ ALT="$ \triangle ACO$">
+ je pravokutan pa je 
+<P><!-- MATH
+ \begin{displaymath}
+|OC| = \frac{|OA|}{\mathop{\mathrm{tg}}\nolimits \alpha}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="114" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2497.gif"
+ ALT="$\displaystyle \vert OC\vert = \frac{\vert OA\vert}{\mathop{\mathrm{tg}}\nolimits \alpha}.
+$">
+</DIV><P>
+</P>
+Zbog pravokutnosti trokuta <!-- MATH
+ $\triangle ADB$
+ -->
+<IMG
+ WIDTH="64" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2498.gif"
+ ALT="$ \triangle ADB$">
+ vrijedi
+<P><!-- MATH
+ \begin{displaymath}
+|OA|=|OD|-|AD|=d-|AD|=d-\frac{r}{\cos \alpha}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="360" HEIGHT="49" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2499.gif"
+ ALT="$\displaystyle \vert OA\vert=\vert OD\vert-\vert AD\vert=d-\vert AD\vert=d-\frac{r}{\cos \alpha}
+$">
+</DIV><P>
+</P>
+pa je 
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="ra.2"></A><!-- MATH
+ \begin{equation}
+|OC|= \frac{d\cos \alpha -r}{\cos \alpha}\cdot
+\frac{ \cos \alpha}{\sin \alpha} = \frac{d \cos \alpha -r}{\sin
+  \alpha}.
+\end{equation}
+ -->
+<TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><IMG
+ WIDTH="324" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2500.gif"
+ ALT="$\displaystyle \vert OC\vert= \frac{d\cos \alpha -r}{\cos \alpha}\cdot \frac{ \cos \alpha}{\sin \alpha} = \frac{d \cos \alpha -r}{\sin \alpha}.$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+(5.13)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+<P>
+Označimo s <IMG
+ WIDTH="18" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2501.gif"
+ ALT="$ l_1$">
+ duljinu dijela niti namotanog na kolut,
+<P><!-- MATH
+ \begin{displaymath}
+l_1=(\pi-\alpha)r.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="113" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2502.gif"
+ ALT="$\displaystyle l_1=(\pi-\alpha)r.
+$">
+</DIV><P>
+</P>
+Tada je 
+<P><!-- MATH
+ \begin{displaymath}
+|EF|= l - l_1 - |CB|.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="174" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2503.gif"
+ ALT="$\displaystyle \vert EF\vert= l - l_1 - \vert CB\vert.
+$">
+</DIV><P>
+</P>
+Vrijedi
+<P><!-- MATH
+ \begin{displaymath}
+|CB|=|CA|+|AB|=\frac{|OC|}{\cos \alpha} + r \mathop{\mathrm{tg}}\nolimits \alpha =
+\frac{d \cos \alpha -r}{\sin\alpha \cos \alpha} +
+r\frac{\sin \alpha}{\cos \alpha} = \frac{d-r\cos \alpha}{\sin \alpha}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="590" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2504.gif"
+ ALT="$\displaystyle \vert CB\vert=\vert CA\vert+\vert AB\vert=\frac{\vert OC\vert}{\c...
+...lpha} +
+r\frac{\sin \alpha}{\cos \alpha} = \frac{d-r\cos \alpha}{\sin \alpha}
+$">
+</DIV><P>
+</P>
+pa je
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="ra.3"></A><!-- MATH
+ \begin{equation}
+|EF|= l - (\pi-\alpha)r - \frac{d-r\cos \alpha}{\sin \alpha}.
+\end{equation}
+ -->
+<TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><IMG
+ WIDTH="275" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2505.gif"
+ ALT="$\displaystyle \vert EF\vert= l - (\pi-\alpha)r - \frac{d-r\cos \alpha}{\sin \alpha}.$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+(5.14)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Konačno, uvrštavanje izraza (<A HREF="#ra.2">5.13</A>) i (<A HREF="#ra.3">5.14</A>) u formulu
+(<A HREF="#ra.1">5.12</A>) daje traženu funkciju
+<P><!-- MATH
+ \begin{displaymath}
+E\equiv E(\alpha)= - m_1 g \bigg( l - (\pi-\alpha)r -
+\frac{d-r\cos \alpha}{\sin \alpha}\bigg) - m_2 g 
+\bigg( \frac{d \cos \alpha -r}{\sin \alpha}\bigg).
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="556" HEIGHT="61" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2506.gif"
+ ALT="$\displaystyle E\equiv E(\alpha)= - m_1 g \bigg( l - (\pi-\alpha)r -
+\frac{d-r\...
+...\sin \alpha}\bigg) - m_2 g
+\bigg( \frac{d \cos \alpha -r}{\sin \alpha}\bigg).
+$">
+</DIV><P>
+</P>
+
+<P>
+Sada treba utvrditi ima li funkcija <IMG
+ WIDTH="45" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2507.gif"
+ ALT="$ E(\alpha)$">
+ minimum za 
+<!-- MATH
+ $\alpha\in (0,\pi/2]$
+ -->
+<IMG
+ WIDTH="96" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2495.gif"
+ ALT="$ \alpha\in (0,\pi/2]$">
+. Zapravo se u ovom slučaju također radi o 
+geometrijskom ekstremu<A NAME="22188"></A> 
+(vidi poglavlje <A HREF="node120.html#sec:geoeks">5.7.1</A>).
+
+<P>
+Pogledajmo prvo kako se funkcija ponaša u
+rubovima intervala. Vrijedi
+<P></P>
+<DIV ALIGN="CENTER"><TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="62" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2508.gif"
+ ALT="$\displaystyle E(\pi/2)$"></TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="238" HEIGHT="49" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2509.gif"
+ ALT="$\displaystyle = -m_1 g \big(l-\frac{\pi}{2} r-d\big)+m_2g r,$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="97" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2510.gif"
+ ALT="$\displaystyle \lim_{\alpha\to 0+0} E(\alpha)$"></TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="389" HEIGHT="61" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2511.gif"
+ ALT="$\displaystyle = \lim_{\alpha\to 0+0} - m_1 g \bigg( l - \pi r - \frac{d-r}{\sin \alpha}\bigg) - m_2 g \bigg( \frac{d-r}{\sin \alpha}\bigg)$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="397" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2512.gif"
+ ALT="$\displaystyle = -m_1 g (l-\pi r ) + g (m_1-m_2)(d-r) \lim_{\alpha\to 0+0} \frac{1}{\sin \alpha}$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="61" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2513.gif"
+ ALT="$\displaystyle =+\infty.$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+U zadnjoj jednakosti smo koristili činjenicu da zbog pretpostavki 
+vrijedi <IMG
+ WIDTH="108" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2514.gif"
+ ALT="$ m_1-m_2&gt;0$">
+ i <IMG
+ WIDTH="78" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2515.gif"
+ ALT="$ d-r&gt;0$">
+.
+Promotrimo funkciju <IMG
+ WIDTH="45" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2507.gif"
+ ALT="$ E(\alpha)$">
+ na zatvorenom intervalu
+<!-- MATH
+ $[\varepsilon ,\pi/2]$
+ -->
+<IMG
+ WIDTH="60" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2516.gif"
+ ALT="$ [\varepsilon ,\pi/2]$">
+ pri čemu je <!-- MATH
+ $\varepsilon >0$
+ -->
+<IMG
+ WIDTH="46" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1460.gif"
+ ALT="$ \varepsilon &gt;0$">
+ takav da je <!-- MATH
+ $E(\varepsilon )> E(\pi/2)$
+ -->
+<IMG
+ WIDTH="123" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2517.gif"
+ ALT="$ E(\varepsilon )&gt; E(\pi/2)$">
+.
+Takav <!-- MATH
+ $\varepsilon$
+ -->
+<IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1441.gif"
+ ALT="$ \varepsilon $">
+ sigurno postoji jer je <!-- MATH
+ $\lim_{\alpha\to 0+0}
+E(\alpha)=+\infty$
+ -->
+<IMG
+ WIDTH="179" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2518.gif"
+ ALT="$ \lim_{\alpha\to 0+0}
+E(\alpha)=+\infty$">
+. No, kako je funkcija <IMG
+ WIDTH="45" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2507.gif"
+ ALT="$ E(\alpha)$">
+ na tom intervalu
+neprekidna, teorem <A HREF="node80.html#f1.39">4.8</A> nam garantira da funkcija na tom
+intervalu dostiže svoj minimum. 
+Dakle, <EM>zadani sustav ima položaj ravnoteže</EM>.
+
+<P>
+Ovim smo napravili važan korak u analizi zadanog sustava, jer čak i
+ako položaj ravnoteže ne budemo mogli točno odrediti, znamo da on
+postoji. 
+
+<P>
+Da bi odredili položaj ravnoteže, nađimo prvo derivaciju zadane
+funkcije:
+<BR>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{eqnarray*}
+E'(\alpha)&=& -m_1 g\, \bigg(r-\frac{r\sin\alpha\cdot \sin\alpha-(d-r\cos
+  \alpha)\cos \alpha}{\sin^2\alpha}\bigg)\\&& -m_2 g\, \frac{-d\sin \alpha
+  \sin \alpha -(d\cos \alpha -r)\cos \alpha}{\sin^2\alpha}\\
+&=&   \frac{-m_1g(d-r\cos \alpha)\cos \alpha -m_2g (-d+r\cos
+  \alpha)}{\sin^2\alpha}.
+\end{eqnarray*}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="50" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2519.gif"
+ ALT="$\displaystyle E'(\alpha)$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="19" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2520.gif"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="374" HEIGHT="61" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2521.gif"
+ ALT="$\displaystyle -m_1 g\, \bigg(r-\frac{r\sin\alpha\cdot \sin\alpha-(d-r\cos
+\alpha)\cos \alpha}{\sin^2\alpha}\bigg)$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="321" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2522.gif"
+ ALT="$\displaystyle -m_2 g\, \frac{-d\sin \alpha
+\sin \alpha -(d\cos \alpha -r)\cos \alpha}{\sin^2\alpha}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="19" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2520.gif"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="363" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2523.gif"
+ ALT="$\displaystyle \frac{-m_1g(d-r\cos \alpha)\cos \alpha -m_2g (-d+r\cos
+\alpha)}{\sin^2\alpha}.$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL">
+
+Izjednačavanje (brojnika) s nulom daje kvadratnu jednadžbu po 
+<!-- MATH
+ $\cos \alpha$
+ -->
+<IMG
+ WIDTH="44" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2524.gif"
+ ALT="$ \cos \alpha$">
+,
+<P><!-- MATH
+ \begin{displaymath}
+(m_1 g r)\cos^2\alpha-(m_1gd+m_2gr)\cos \alpha + m_2 g d =0.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="397" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2525.gif"
+ ALT="$\displaystyle (m_1 g r)\cos^2\alpha-(m_1gd+m_2gr)\cos \alpha + m_2 g d =0.
+$">
+</DIV><P>
+</P>
+Rješenja ove jednadžbe su
+<P></P>
+<DIV ALIGN="CENTER"><TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="77" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2526.gif"
+ ALT="$\displaystyle (\cos \alpha)_{1,2}$"></TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="444" HEIGHT="68" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2527.gif"
+ ALT="$\displaystyle = \frac{m_1gd+m_2gr \pm \sqrt{(m_1gd+m_2gr)^2-4 \cdot m_1 g r \cdot m_2 g d}}{2m_1 g r}$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="308" HEIGHT="68" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2528.gif"
+ ALT="$\displaystyle =\frac{m_1gd+m_2gr \pm \sqrt{(m_1gd-m_2gr)^2}}{2m_1 g r},$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+odnosno
+<P><!-- MATH
+ \begin{displaymath}
+(\cos \alpha)_1=\frac{d}{r}, \qquad (\cos \alpha)_2=\frac{m_2}{m_1}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="265" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2529.gif"
+ ALT="$\displaystyle (\cos \alpha)_1=\frac{d}{r}, \qquad (\cos \alpha)_2=\frac{m_2}{m_1}.
+$">
+</DIV><P>
+</P>
+Kako je <IMG
+ WIDTH="47" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2530.gif"
+ ALT="$ d&gt;r$">
+ to je <IMG
+ WIDTH="65" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2531.gif"
+ ALT="$ d/r&gt;1$">
+ pa je prvo rješenje nemoguće. 
+S druge strane, po pretpostavci je <!-- MATH
+ $0< m_2/m_1<1$
+ -->
+<IMG
+ WIDTH="128" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2532.gif"
+ ALT="$ 0&lt; m_2/m_1&lt;1$">
+ pa je rješenje
+jednadžbe <!-- MATH
+ $E'(\alpha)=0$
+ -->
+<IMG
+ WIDTH="83" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2533.gif"
+ ALT="$ E'(\alpha)=0$">
+ dano s
+<P><!-- MATH
+ \begin{displaymath}
+\cos \alpha_0 =\frac{m_2}{m_1},
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="109" HEIGHT="49" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2534.gif"
+ ALT="$\displaystyle \cos \alpha_0 =\frac{m_2}{m_1},
+$">
+</DIV><P>
+</P>
+odnosno
+<P><!-- MATH
+ \begin{displaymath}
+\alpha_0=\arccos \frac{m_2}{m_1}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="133" HEIGHT="49" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2535.gif"
+ ALT="$\displaystyle \alpha_0=\arccos \frac{m_2}{m_1}.
+$">
+</DIV><P>
+</P>
+Kako je derivacija <!-- MATH
+ $E'(\alpha)$
+ -->
+<IMG
+ WIDTH="50" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2536.gif"
+ ALT="$ E'(\alpha)$">
+ neprekidna na promatranom intervalu, 
+to je <IMG
+ WIDTH="25" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2537.gif"
+ ALT="$ \alpha_0$">
+ jedina kritična točka funkcije <IMG
+ WIDTH="45" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2507.gif"
+ ALT="$ E(\alpha)$">
+. 
+
+<P>
+Dovoljan uvjet ekstrema provjerit ćemo pomoću teorema <A HREF="node119.html#d3.8">5.14</A>.
+Pri tome možemo koristiti postupak <EM>skraćenog deriviranja</EM> koji se
+sastoji u sljedećem: ako je derivacija neke funkcije razlomak
+<P><!-- MATH
+ \begin{displaymath}
+f'(x)=\frac{B(x)}{N(x)}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="114" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2538.gif"
+ ALT="$\displaystyle f'(x)=\frac{B(x)}{N(x)}
+$">
+</DIV><P>
+</P>
+i ako je <IMG
+ WIDTH="78" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2184.gif"
+ ALT="$ f'(x)=0$">
+, to jest <IMG
+ WIDTH="77" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2539.gif"
+ ALT="$ B(x)=0$">
+, tada drugu derivaciju u toj
+točki možemo jednostavnije izračunati koristeći sljedeću jednakost
+<P><!-- MATH
+ \begin{displaymath}
+f''(x)= \frac{B'(x) N(x)- B(x) N'(x)}{N^2(x)}=
+ \frac{B'(x) N(x)-   0\cdot N'(x)}{N^2(x)}= \frac{B'(x)}{N(x)}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="548" HEIGHT="61" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2540.gif"
+ ALT="$\displaystyle f''(x)= \frac{B'(x) N(x)- B(x) N'(x)}{N^2(x)}=
+\frac{B'(x) N(x)- 0\cdot N'(x)}{N^2(x)}= \frac{B'(x)}{N(x)}.
+$">
+</DIV><P>
+</P>
+Dakle, 
+<P></P>
+<DIV ALIGN="CENTER"><TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="78" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2541.gif"
+ ALT="$\displaystyle E''(\alpha)_{\textrm{skr.}}$"></TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="529" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2542.gif"
+ ALT="$\displaystyle = \frac{ -m_1 g( r\sin\alpha)\cos \alpha -m_1g(d-r\cos \alpha)(-\sin\alpha)- m_2g (-r\sin\alpha)}{\sin^2\alpha}$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="367" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2543.gif"
+ ALT="$\displaystyle =\frac{gr(m_2-m_1\cos\alpha) + m_1g\sin\alpha (d-r\cos \alpha)}{\sin^2\alpha}.$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Vrijedi
+<P><!-- MATH
+ \begin{displaymath}
+E''(\alpha_0)=
+\frac{0 + m_1g\sin\alpha_0 (d-r\cos \alpha_0)}{\sin^2\alpha_0} >0
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="339" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2544.gif"
+ ALT="$\displaystyle E''(\alpha_0)=
+\frac{0 + m_1g\sin\alpha_0 (d-r\cos \alpha_0)}{\sin^2\alpha_0} &gt;0
+$">
+</DIV><P>
+</P>
+pa funkcija <IMG
+ WIDTH="45" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2507.gif"
+ ALT="$ E(\alpha)$">
+ ima u točki <IMG
+ WIDTH="25" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2537.gif"
+ ALT="$ \alpha_0$">
+ lokalni minimum.
+
+<P>
+Trebamo još ustanoviti da se u točki <IMG
+ WIDTH="25" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2537.gif"
+ ALT="$ \alpha_0$">
+ nalazi i globalni
+minimum zadane funkcije na promatranom intervalu.
+Zaista, kako je <!-- MATH
+ $E''(\alpha_0)>0$
+ -->
+<IMG
+ WIDTH="95" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2545.gif"
+ ALT="$ E''(\alpha_0)&gt;0$">
+ to znači da je derivacija
+<!-- MATH
+ $E'(\alpha)$
+ -->
+<IMG
+ WIDTH="50" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2536.gif"
+ ALT="$ E'(\alpha)$">
+ rastuća u nekoj okolini točke <IMG
+ WIDTH="25" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2537.gif"
+ ALT="$ \alpha_0$">
+. Kako je
+<!-- MATH
+ $E'(\alpha_0)=0$
+ -->
+<IMG
+ WIDTH="91" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2546.gif"
+ ALT="$ E'(\alpha_0)=0$">
+, to je <!-- MATH
+ $E'(\alpha)$
+ -->
+<IMG
+ WIDTH="50" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2536.gif"
+ ALT="$ E'(\alpha)$">
+ negativna lijevo od točke
+<IMG
+ WIDTH="25" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2537.gif"
+ ALT="$ \alpha_0$">
+, a pozitivna desno od točke <IMG
+ WIDTH="25" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2537.gif"
+ ALT="$ \alpha_0$">
+.
+Kako je <IMG
+ WIDTH="25" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2537.gif"
+ ALT="$ \alpha_0$">
+ jedina nul-točka derivacije na promatranom
+intervalu, slijedi da je <!-- MATH
+ $E'(\alpha)<0$
+ -->
+<IMG
+ WIDTH="83" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2547.gif"
+ ALT="$ E'(\alpha)&lt;0$">
+ za <!-- MATH
+ $\alpha\in(0,\alpha_0)$
+ -->
+<IMG
+ WIDTH="89" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2548.gif"
+ ALT="$ \alpha\in(0,\alpha_0)$">
+ i
+<!-- MATH
+ $E'(\alpha)>0$
+ -->
+<IMG
+ WIDTH="83" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2549.gif"
+ ALT="$ E'(\alpha)&gt;0$">
+ za <!-- MATH
+ $\alpha\in(\alpha_0,\pi/2)$
+ -->
+<IMG
+ WIDTH="109" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2550.gif"
+ ALT="$ \alpha\in(\alpha_0,\pi/2)$">
+.
+Teorem o monotonosti <A HREF="node118.html#d2.27">5.11</A> povlači da je funkcija <IMG
+ WIDTH="45" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2507.gif"
+ ALT="$ E(\alpha)$">
+
+strogo padajuća na intervalu <!-- MATH
+ $(0,\alpha_0)$
+ -->
+<IMG
+ WIDTH="56" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2551.gif"
+ ALT="$ (0,\alpha_0)$">
+ i strogo rastuća na
+intervalu <!-- MATH
+ $(\alpha_0,\pi/2)$
+ -->
+<IMG
+ WIDTH="75" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2552.gif"
+ ALT="$ (\alpha_0,\pi/2)$">
+ pa zaključujemo je <IMG
+ WIDTH="25" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2537.gif"
+ ALT="$ \alpha_0$">
+ točka
+globalnog minimuma.
+
+<P>
+Zadani sustav će zauzeti položaj ravnoteže za kut 
+<!-- MATH
+ $\alpha_0=\arccos (m_2/m_1)$
+ -->
+<IMG
+ WIDTH="167" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2553.gif"
+ ALT="$ \alpha_0=\arccos (m_2/m_1)$">
+. 
+Zanimljivo je uočiti da položaj ravnoteže ne ovisi ni o udaljenosti
+<IMG
+ WIDTH="14" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2290.gif"
+ ALT="$ d$">
+, ni o radijusu koluta <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img445.gif"
+ ALT="$ r$">
+, niti o duljini niti <IMG
+ WIDTH="11" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1241.gif"
+ ALT="$ l$">
+, nego samo o
+omjeru masa utega. Na primjer, kada se udaljenost <IMG
+ WIDTH="14" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2290.gif"
+ ALT="$ d$">
+ poveća, tada se
+uteg s masom <IMG
+ WIDTH="29" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img158.gif"
+ ALT="$ m_1$">
+ podigne, a uteg s masom <IMG
+ WIDTH="29" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img159.gif"
+ ALT="$ m_2$">
+ spusti. 
+
+<P>
+
+
+<P>
+<p><HR></p>
+<arrow class=left> </arrow> <A NAME="tex2html1640"
+  HREF="node123.html">Parametarski zadana funkcija</A> &nbsp; &nbsp;
+<arrow class=up> </arrow> <A NAME="tex2html1644"
+  HREF="node98.html">DERIVACIJE I PRIMJENE</A> &nbsp; &nbsp;
+<arrow class=right> </arrow> <A NAME="tex2html1646"
+  HREF="node125.html">NIZOVI I REDOVI</A>  
+
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

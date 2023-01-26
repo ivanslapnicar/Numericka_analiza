@@ -1,0 +1,664 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2012 (1.2)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-2382574370068590",
+    enable_page_level_ads: true
+  });
+</script>
+<TITLE>Svojstva neprekidnih funkcija</TITLE>
+<META NAME="description" CONTENT="Svojstva neprekidnih funkcija">
+<META NAME="keywords" CONTENT="predavanja">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2012">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="predavanja.css">
+
+<LINK REL="next" HREF="node81.html">
+<LINK REL="previous" HREF="node79.html">
+<LINK REL="up" HREF="node79.html">
+<LINK REL="next" HREF="node81.html">
+</HEAD>
+
+<BODY >
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="shortcut icon" href="favicon.ico"/>
+
+<style>
+.sidenav {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 50px;
+}
+
+div.sidenav a {
+    padding: 8px 8px 8px 10px;
+    text-decoration: none;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    display: block;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dropdown-btn {
+    padding: 8px 8px 8px 8px;
+    text-decoration: none; 
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s;
+}
+
+
+.sidenav a:hover, .dropdown-btn:hover {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #C00;
+}
+
+.menu2 {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    font-style:italic;
+}
+
+.dropdown-container {
+  display: none;
+  font-family: 'Open Sans',sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #ddd;
+  padding-left: 8px;
+}
+
+.dropdown-container a:hover {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    background-color: #ccc;
+}
+
+.sidenav .active {
+    background-color: #C00;
+    color: white;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+hr { 
+    display: block;
+    margin-top: 0.2em;
+    margin-bottom: 0.4em;
+    margin-left: -5px;
+    margin-right: -5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color:#ec971f;
+} 
+  
+.caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 20px;
+    vertical-align: middle;
+    border-top: 5px dashed;
+        border-top-width: 5px;
+        border-top-style: dashed;
+        border-top-color: currentcolor;
+    border-right: 5px solid transparent;
+        border-right-width: 5px;
+        border-right-style: solid;
+        border-right-color: transparent;
+    border-left: 5px solid transparent;
+        border-left-width: 5px;
+        border-left-style: solid;
+        border-left-color: transparent;
+}
+
+</style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- First -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2382574370068590"
+     data-ad-slot="8207843721"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<script>
+   // alert('|ivan'+document.getElementById("mys-content").innerHTML+'|') 
+//    alert(typeof(window.CustomEvent))
+//    if(typeof(window.CustomEvent)=="undefined")
+// {
+//     document.display = 'none';
+// } 
+</script>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" 
+  onclick="closeNav()"
+  style="font-size:24px;cursor:pointer;color:#000;position: absolute; top: 0;
+    right: 10px; font-size: 24px; margin-left: 50px;">&nbsp; &times; &nbsp;</a>
+  <a href="/matematika1/index.html">HOME</a>
+  <button href="/matematika1/predavanja" class="dropdown-btn">PREDAVANJA
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/predavanja/predavanja.html">SADRŽAJ</a>
+      <a href="/matematika1/predavanja/node3.html">OSNOVE</a>
+      <a href="/matematika1/predavanja/node22.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/predavanja/node47.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/predavanja/node67.html">FUNKCIJE</a>
+      <a href="/matematika1/predavanja/node98.html">DERIVACIJE</a>
+      <a href="/matematika1/predavanja/node125.html">NIZOVI I REDOVI</a>
+      <a href="/matematika1/predavanja/node144.html">INDEKS</a>
+    </div>
+  <button href="/matematika1/vjezbe" class="dropdown-btn">VJEŽBE
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/vjezbe/vjezbe.html">SADRŽAJ</a>
+      <a href="/matematika1/vjezbe/node2.html">OSNOVE</a>
+      <a href="/matematika1/vjezbe/node24.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/vjezbe/node55.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/vjezbe/node87.html">FUNKCIJE</a>
+      <a href="/matematika1/vjezbe/node110.html">DERIVACIJE</a>
+      <a href="/matematika1/vjezbe/node136.html">NIZOVI I REDOVI</a>
+    </div>
+  <button href="/matematika1/kviz" class="dropdown-btn">KVIZ
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/kviz/index.html">SADRŽAJ</a>
+      <a href="/matematika1/kviz/osnove/">OSNOVE</a>
+      <a href="/matematika1/kviz/algebra/">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/kviz/vektori/">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/kviz/funkcije/">FUNKCIJE</a>
+      <a href="/matematika1/kviz/derivacije/">DERIVACIJE</a>
+      <a href="/matematika1/kviz/nizovi/">NIZOVI I REDOVI</a>
+    </div>
+  <button href="/matematika1/podsjetnik" class="dropdown-btn">PODSJETNIK
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/podsjetnik/podsjetnik.html">SADRŽAJ</a>
+      <a href="/matematika1/podsjetnik/node1.html">OSNOVE</a>
+      <a href="/matematika1/podsjetnik/node2.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/podsjetnik/node3.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/podsjetnik/node4.html">FUNKCIJE</a>
+      <a href="/matematika1/podsjetnik/node5.html">DERIVACIJE</a>
+      <a href="/matematika1/podsjetnik/node6.html">NIZOVI I REDOVI</a>
+    </div>
+  <!--<a href="/matematika1/kviz">Kviz</a>-->
+  <a href="/matematika1/java">JAVA</a>
+  <a href="http://lavica.fesb.unist.hr/netplot"  class="menu2">NETPLOT</a>
+  <!-- <a href="/matematika1/gauss"  class="menu2">GAUSS</a> -->
+  <a href="http://lavica.fesb.unist.hr/octave/ool_hr.php"  class="menu2">OCTAVE</a>
+  <a href="/matematika1/search.html">Traži ...</a>
+</div>
+
+<span style="font-size:24px;font-family:'Open Sans', sans-serif;cursor:pointer;color:#ec971f"
+      onclick="openNav()">&#9776;</span> &nbsp; 
+<span style="font-size:30px;cursor:pointer;color:#888;font-family:'Opens Sans',sans-serif;"
+      onclick="window.location.assign('../index.html')">
+<font style="color:#C00">m</font>atematika<font style="color:#C00;vertical-align:super;margin-left:2px;font-size:24px;">1</font></span>
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "300px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+
+</script>     
+<hr>
+
+
+
+
+<arrow class=left> </arrow> <A NAME="tex2html1159"
+  HREF="node79.html">Neprekidnost</A> &nbsp; &nbsp;
+<arrow class=up> </arrow> <A NAME="tex2html1165"
+  HREF="node79.html">Neprekidnost</A> &nbsp; &nbsp;
+<arrow class=right> </arrow> <A NAME="tex2html1167"
+  HREF="node81.html">Vrste prekida</A>
+
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00641000000000000000"></A>
+<A NAME="sec:svnepr"></A>
+<BR>
+Svojstva neprekidnih funkcija
+</H2>
+
+<P>
+<div class="teo"><P>
+<DIV><B>Teorem  4.6</B> &nbsp; <A NAME="f1.36"></A>Neka su funkcije <IMG
+ WIDTH="16" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img162.gif"
+ ALT="$ f$">
+ i <IMG
+ WIDTH="14" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img167.gif"
+ ALT="$ g$">
+ neprekidne<A NAME="13411"></A> 
+u točki <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img21.gif"
+ ALT="$ x$">
+ 
+(na skupu <!-- MATH
+ $\mathcal{A}$
+ -->
+<IMG
+ WIDTH="19" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1533.gif"
+ ALT="$ \mathcal{A}$">
+). Tada su u točki <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img21.gif"
+ ALT="$ x$">
+ (na skupu <!-- MATH
+ $\mathcal{A}$
+ -->
+<IMG
+ WIDTH="19" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1533.gif"
+ ALT="$ \mathcal{A}$">
+)
+neprekidne i funkcije <IMG
+ WIDTH="47" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1534.gif"
+ ALT="$ f+g$">
+, <IMG
+ WIDTH="47" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1535.gif"
+ ALT="$ f-g$">
+, <IMG
+ WIDTH="38" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1536.gif"
+ ALT="$ f\cdot g$">
+ i 
+<!-- MATH
+ $\displaystyle \frac{f}{g}$
+ -->
+<IMG
+ WIDTH="20" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1537.gif"
+ ALT="$ \displaystyle \frac{f}{g}$">
+ uz <!-- MATH
+ $g(x)\neq 0$
+ -->
+<IMG
+ WIDTH="71" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1538.gif"
+ ALT="$ g(x)\neq 0$">
+ (<!-- MATH
+ $g(x)\neq 0$
+ -->
+<IMG
+ WIDTH="71" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1538.gif"
+ ALT="$ g(x)\neq 0$">
+ za svaki
+<!-- MATH
+ $x\in\mathcal{A}$
+ -->
+<IMG
+ WIDTH="52" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1539.gif"
+ ALT="$ x\in\mathcal{A}$">
+).   </DIV><P></P>
+
+</div><p></p>Dokaz ovog teorema sličan je dokazu teorema <A HREF="node75.html#f1.22">4.3</A>.
+<div class="teo"><P>
+<DIV><B>Teorem  4.7</B> &nbsp; <A NAME="f1.37"></A>  <DL COMPACT>
+<DT>i)</DT>
+<DD>Ako je funkcija <IMG
+ WIDTH="16" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img162.gif"
+ ALT="$ f$">
+ neprekidna u točki <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img21.gif"
+ ALT="$ x$">
+, a funkcija <IMG
+ WIDTH="14" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img167.gif"
+ ALT="$ g$">
+
+    neprekidna u točki <IMG
+ WIDTH="73" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img374.gif"
+ ALT="$ y=f(x)$">
+, tada je
+    kompozicija<A NAME="13422"></A>
+    <IMG
+ WIDTH="42" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1540.gif"
+ ALT="$ g\circ f$">
+
+    neprekidna u točki <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img21.gif"
+ ALT="$ x$">
+. 
+  
+</DD>
+<DT>ii)</DT>
+<DD>Ako je 
+<P><!-- MATH
+ \begin{displaymath}
+\lim_{x\to x_0} f(x)=y
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="114" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1541.gif"
+ ALT="$\displaystyle \lim_{x\to x_0} f(x)=y
+$">
+</DIV><P>
+</P>
+i ako je funkcija <IMG
+ WIDTH="14" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img167.gif"
+ ALT="$ g$">
+ neprekidna u točki <IMG
+ WIDTH="14" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img22.gif"
+ ALT="$ y$">
+, tada je
+<P><!-- MATH
+ \begin{displaymath}
+\lim_{x\to x_0} g(f(x))=g\big(\lim_{x\to x_0}f(x)\big) = g(y).
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="294" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1542.gif"
+ ALT="$\displaystyle \lim_{x\to x_0} g(f(x))=g\big(\lim_{x\to x_0}f(x)\big) = g(y).
+$">
+</DIV><P>
+</P>
+</DD>
+</DL></DIV><P></P>
+
+</div><p></p>Druga tvrdnja teorema nam olakšava nalaženje 
+limesa<A NAME="13428"></A><A NAME="13429"></A>, jer nam omogućava
+da s limesom "uđemo" u neprekidnu funkciju.
+<div class="pri"><P>
+<DIV><B>Primjer  4.9</B> &nbsp; <A NAME="f1.38"></A>  <DL COMPACT>
+<DT>a)</DT>
+<DD>Zbog neprekidnosti funkcije <IMG
+ WIDTH="22" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img17.gif"
+ ALT="$ e^x$">
+ i teorema <A HREF="#f1.37">4.7</A> ii)
+    vrijedi
+<P><!-- MATH
+ \begin{displaymath}
+\lim_{x\to +\infty} e^{\frac{2x^2-1}{1-x^2}} =
+e^{\lim_{x\to +\infty}\frac{2x^2-1}{1-x^2}} = e^{-2}=\frac{1}{e^2}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="345" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1543.gif"
+ ALT="$\displaystyle \lim_{x\to +\infty} e^{\frac{2x^2-1}{1-x^2}} =
+e^{\lim_{x\to +\infty}\frac{2x^2-1}{1-x^2}} = e^{-2}=\frac{1}{e^2}.
+$">
+</DIV><P>
+</P>
+</DD>
+<DT>b)</DT>
+<DD>Broj <IMG
+ WIDTH="13" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img23.gif"
+ ALT="$ e$">
+<A NAME="13443"></A> je definiran 
+kao (vidi poglavlje <A HREF="node129.html#sec:e">6.1.3</A>)
+<P><!-- MATH
+ \begin{displaymath}
+e=\lim_{x\to +\infty} \bigg(1+\frac{1}{x}\bigg)^x =
+\lim_{x\to 0+0} (1+x)^{\frac{1}{x}}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="314" HEIGHT="63" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1544.gif"
+ ALT="$\displaystyle e=\lim_{x\to +\infty} \bigg(1+\frac{1}{x}\bigg)^x =
+\lim_{x\to 0+0} (1+x)^{\frac{1}{x}}.
+$">
+</DIV><P>
+</P>
+Zbog neprekidnosti funkcija <IMG
+ WIDTH="33" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1325.gif"
+ ALT="$ \ln x$">
+ i <IMG
+ WIDTH="30" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1545.gif"
+ ALT="$ \sqrt{x}$">
+ i teorema <A HREF="#f1.37">4.7</A>
+ii) vrijedi
+<P></P>
+<DIV ALIGN="CENTER"><TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="144" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1546.gif"
+ ALT="$\displaystyle \lim_{x\to 0+0} \ln (1+x)^{\frac{1}{2x}}$"></TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="371" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1547.gif"
+ ALT="$\displaystyle = \ln \big(\lim_{x\to 0+0} (1+x)^{\frac{1}{2x}}\big) = \ln \big(\lim_{x\to 0+0} (1+x)^{\frac{1}{x}}\big)^{\frac{1}{2}}$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="171" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1548.gif"
+ ALT="$\displaystyle =\ln e^{\frac{1}{2}}= \frac{1}{2} \ln e = \frac{1}{2}.$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+</DD>
+</DL></DIV><P></P>
+
+</div><p></p>
+<P>
+<div class="teo"><P>
+<DIV><B>Teorem  4.8</B> &nbsp; <A NAME="f1.39"></A>Neka je funkcija <IMG
+ WIDTH="16" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img162.gif"
+ ALT="$ f$">
+ neprekidna na zatvorenom 
+intervalu <IMG
+ WIDTH="40" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1549.gif"
+ ALT="$ [a,b]$">
+<A NAME="13477"></A>,
+<IMG
+ WIDTH="46" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1550.gif"
+ ALT="$ a&lt;b$">
+. Tada vrijedi: 
+<DL COMPACT>
+<DT>i)</DT>
+<DD>ako <A HREF="node7.html#o3.4"
+ NAME="13481">restrikcija</A> 
+  <!-- MATH
+ $f\mid_{[a,b]}$
+ -->
+<IMG
+ WIDTH="53" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1551.gif"
+ ALT="$ f\mid_{[a,b]}$">
+ nije konstanta,
+  tada je slika tog intervala, <!-- MATH
+ $f([a,b])=[c,d]\subseteq\mathbb{R}$
+ -->
+<IMG
+ WIDTH="161" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1552.gif"
+ ALT="$ f([a,b])=[c,d]\subseteq\mathbb{R}$">
+, također
+  zatvoreni interval;
+</DD>
+<DT>ii)</DT>
+<DD>restrikcija <!-- MATH
+ $f\mid_{[a,b]}$
+ -->
+<IMG
+ WIDTH="53" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1551.gif"
+ ALT="$ f\mid_{[a,b]}$">
+ poprima na intervalu <IMG
+ WIDTH="40" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1549.gif"
+ ALT="$ [a,b]$">
+ svoj
+  minimum i maksimum, kao i svaku vrijednost između njih.
+</DD>
+</DL></DIV><P></P>
+
+</div><p></p>Situacija iz teorema prikazana je na slici <A HREF="#fig:f13">4.14</A>. Zatvorenost
+intervala je bitna, jer je funkcija na slici neprekidna i na
+intervalu <IMG
+ WIDTH="43" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1553.gif"
+ ALT="$ (e,a]$">
+, ali teorem ne vrijedi.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:f13"></A><A NAME="13490"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Slika 4.14:</STRONG>
+Neprekidna funkcija</CAPTION>
+<TR><TD><IMG
+ WIDTH="381" HEIGHT="343" BORDER="0"
+ SRC="img1554.gif"
+ ALT="\begin{figure}\begin{center}
+\epsfig{file=slike/neprek.eps,width=9.6cm}
+\end{center}\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+<div class="nap"><P>
+<DIV><B>Napomena  4.6</B> &nbsp; Druga tvrdnja teorema <A HREF="#f1.39">4.8</A> ima važan korolar:
+  ako je <!-- MATH
+ $\mathop{\mathrm{sign}}\nolimits f(a) \neq \mathop{\mathrm{sign}}\nolimits f(b)$
+ -->
+<IMG
+ WIDTH="164" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1555.gif"
+ ALT="$ \mathop{\mathrm{sign}}\nolimits f(a) \neq \mathop{\mathrm{sign}}\nolimits f(b)$">
+, tada postoji točka 
+  <IMG
+ WIDTH="76" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1556.gif"
+ ALT="$ x\in(a,b)$">
+ takva da je <IMG
+ WIDTH="73" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1557.gif"
+ ALT="$ f(x)=0$">
+. Ovu činjenicu koriste numeričke
+  metode za nalaženje nul-točaka funkcije, kao,  na primjer, metoda 
+  bisekcije.</DIV><P></P>
+
+</div><p></p>
+<P>
+<p><HR></p>
+<arrow class=left> </arrow> <A NAME="tex2html1159"
+  HREF="node79.html">Neprekidnost</A> &nbsp; &nbsp;
+<arrow class=up> </arrow> <A NAME="tex2html1165"
+  HREF="node79.html">Neprekidnost</A> &nbsp; &nbsp;
+<arrow class=right> </arrow> <A NAME="tex2html1167"
+  HREF="node81.html">Vrste prekida</A>  
+
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

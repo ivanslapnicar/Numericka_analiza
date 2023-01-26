@@ -1,0 +1,510 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2012 (1.2)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-2382574370068590",
+    enable_page_level_ads: true
+  });
+</script>
+<TITLE>Aritmetika računala</TITLE>
+<META NAME="description" CONTENT="Aritmetika računala">
+<META NAME="keywords" CONTENT="predavanja">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2012">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="predavanja.css">
+
+<LINK REL="next" HREF="node18.html">
+<LINK REL="previous" HREF="node16.html">
+<LINK REL="up" HREF="node16.html">
+<LINK REL="next" HREF="node18.html">
+</HEAD>
+
+<BODY >
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="shortcut icon" href="favicon.ico"/>
+
+<style>
+.sidenav {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 50px;
+}
+
+div.sidenav a {
+    padding: 8px 8px 8px 10px;
+    text-decoration: none;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    display: block;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dropdown-btn {
+    padding: 8px 8px 8px 8px;
+    text-decoration: none; 
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s;
+}
+
+
+.sidenav a:hover, .dropdown-btn:hover {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #C00;
+}
+
+.menu2 {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    font-style:italic;
+}
+
+.dropdown-container {
+  display: none;
+  font-family: 'Open Sans',sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #ddd;
+  padding-left: 8px;
+}
+
+.dropdown-container a:hover {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    background-color: #ccc;
+}
+
+.sidenav .active {
+    background-color: #C00;
+    color: white;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+hr { 
+    display: block;
+    margin-top: 0.2em;
+    margin-bottom: 0.4em;
+    margin-left: -5px;
+    margin-right: -5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color:#ec971f;
+} 
+  
+.caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 20px;
+    vertical-align: middle;
+    border-top: 5px dashed;
+        border-top-width: 5px;
+        border-top-style: dashed;
+        border-top-color: currentcolor;
+    border-right: 5px solid transparent;
+        border-right-width: 5px;
+        border-right-style: solid;
+        border-right-color: transparent;
+    border-left: 5px solid transparent;
+        border-left-width: 5px;
+        border-left-style: solid;
+        border-left-color: transparent;
+}
+
+</style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- First -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2382574370068590"
+     data-ad-slot="8207843721"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<script>
+   // alert('|ivan'+document.getElementById("mys-content").innerHTML+'|') 
+//    alert(typeof(window.CustomEvent))
+//    if(typeof(window.CustomEvent)=="undefined")
+// {
+//     document.display = 'none';
+// } 
+</script>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" 
+  onclick="closeNav()"
+  style="font-size:24px;cursor:pointer;color:#000;position: absolute; top: 0;
+    right: 10px; font-size: 24px; margin-left: 50px;">&nbsp; &times; &nbsp;</a>
+  <a href="/matematika1/index.html">HOME</a>
+  <button href="/matematika1/predavanja" class="dropdown-btn">PREDAVANJA
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/predavanja/predavanja.html">SADRŽAJ</a>
+      <a href="/matematika1/predavanja/node3.html">OSNOVE</a>
+      <a href="/matematika1/predavanja/node22.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/predavanja/node47.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/predavanja/node67.html">FUNKCIJE</a>
+      <a href="/matematika1/predavanja/node98.html">DERIVACIJE</a>
+      <a href="/matematika1/predavanja/node125.html">NIZOVI I REDOVI</a>
+      <a href="/matematika1/predavanja/node144.html">INDEKS</a>
+    </div>
+  <button href="/matematika1/vjezbe" class="dropdown-btn">VJEŽBE
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/vjezbe/vjezbe.html">SADRŽAJ</a>
+      <a href="/matematika1/vjezbe/node2.html">OSNOVE</a>
+      <a href="/matematika1/vjezbe/node24.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/vjezbe/node55.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/vjezbe/node87.html">FUNKCIJE</a>
+      <a href="/matematika1/vjezbe/node110.html">DERIVACIJE</a>
+      <a href="/matematika1/vjezbe/node136.html">NIZOVI I REDOVI</a>
+    </div>
+  <button href="/matematika1/kviz" class="dropdown-btn">KVIZ
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/kviz/index.html">SADRŽAJ</a>
+      <a href="/matematika1/kviz/osnove/">OSNOVE</a>
+      <a href="/matematika1/kviz/algebra/">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/kviz/vektori/">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/kviz/funkcije/">FUNKCIJE</a>
+      <a href="/matematika1/kviz/derivacije/">DERIVACIJE</a>
+      <a href="/matematika1/kviz/nizovi/">NIZOVI I REDOVI</a>
+    </div>
+  <button href="/matematika1/podsjetnik" class="dropdown-btn">PODSJETNIK
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/podsjetnik/podsjetnik.html">SADRŽAJ</a>
+      <a href="/matematika1/podsjetnik/node1.html">OSNOVE</a>
+      <a href="/matematika1/podsjetnik/node2.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/podsjetnik/node3.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/podsjetnik/node4.html">FUNKCIJE</a>
+      <a href="/matematika1/podsjetnik/node5.html">DERIVACIJE</a>
+      <a href="/matematika1/podsjetnik/node6.html">NIZOVI I REDOVI</a>
+    </div>
+  <!--<a href="/matematika1/kviz">Kviz</a>-->
+  <a href="/matematika1/java">JAVA</a>
+  <a href="http://lavica.fesb.unist.hr/netplot"  class="menu2">NETPLOT</a>
+  <!-- <a href="/matematika1/gauss"  class="menu2">GAUSS</a> -->
+  <a href="http://lavica.fesb.unist.hr/octave/ool_hr.php"  class="menu2">OCTAVE</a>
+  <a href="/matematika1/search.html">Traži ...</a>
+</div>
+
+<span style="font-size:24px;font-family:'Open Sans', sans-serif;cursor:pointer;color:#ec971f"
+      onclick="openNav()">&#9776;</span> &nbsp; 
+<span style="font-size:30px;cursor:pointer;color:#888;font-family:'Opens Sans',sans-serif;"
+      onclick="window.location.assign('../index.html')">
+<font style="color:#C00">m</font>atematika<font style="color:#C00;vertical-align:super;margin-left:2px;font-size:24px;">1</font></span>
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "300px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+
+</script>     
+<hr>
+
+
+
+
+<arrow class=left> </arrow> <A NAME="tex2html450"
+  HREF="node16.html">Realni brojevi</A> &nbsp; &nbsp;
+<arrow class=up> </arrow> <A NAME="tex2html456"
+  HREF="node16.html">Realni brojevi</A> &nbsp; &nbsp;
+<arrow class=right> </arrow> <A NAME="tex2html458"
+  HREF="node18.html">Apsolutna vrijednost</A>
+
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00371000000000000000"></A>
+<A NAME="sec:arit"></A><A NAME="1168"></A>
+<BR>
+Aritmetika računala
+</H2>
+
+<P>
+Broj <IMG
+ WIDTH="29" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img340.gif"
+ ALT="$ \sqrt{2}$">
+ ima beskonačni neperiodični decimalni zapis pa ga ne
+možemo zapisati ni kao decimalni broj, niti kao razlomak. 
+Slično, broj
+<!-- MATH
+ $\frac{1}{3}=0.3333\ldots=0.\dot{3}$
+ -->
+<IMG
+ WIDTH="161" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img356.gif"
+ ALT="$ \frac{1}{3}=0.3333\ldots=0.\dot{3}$">
+ ima beskonačni periodični
+decimalni zapis pa ga ne možemo zapisati kao decimalni broj, 
+ali ga možemo zapisati kao razlomak. 
+Zbog konačne memorije, računala
+za prikazivanje brojeva i računanje koriste jedan
+<U>diskretni</U> podskup skupa <!-- MATH
+ $\mathbb{Q}$
+ -->
+<IMG
+ WIDTH="19" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img121.gif"
+ ALT="$ \mathbb{Q}$">
+, tako da osnovni matematički
+zakoni asocijacije i distribucije iz teorema <A HREF="node10.html#o4.2">1.3</A> 
+<U>ne vrijede</U>.
+
+<P>
+Princip rada računala ilustrirat ćemo na jednostavnom primjeru.
+Zamislimo računalo koje za pohranjivanje brojeva i računanje 
+raspolaže s tri decimalna mjesta, s tim što se decimalna točka
+može pomicati,
+<P><!-- MATH
+ \begin{displaymath}
+%
+.\ \llcorner\lrcorner\ .\ \llcorner\lrcorner\ .\ \llcorner\lrcorner\ .
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="115" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img357.gif"
+ ALT="$\displaystyle %
+.\ \llcorner\lrcorner\ .\ \llcorner\lrcorner\ .\ \llcorner\lrcorner\ .
+$">
+</DIV><P>
+</P> 
+U ovakvom računalu možemo prikazati brojeve
+<P></P>
+<DIV ALIGN="CENTER"><TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="233" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img358.gif"
+ ALT="$\displaystyle 999,\ 998,\ldots,\ 102,\ 101,\ 100,$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="258" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img359.gif"
+ ALT="$\displaystyle 99.9,\ 99.8,\ldots,\ 10.2,\ 10.1,\ 10.0,$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="322" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img360.gif"
+ ALT="$\displaystyle 9.99,\ 9.98,\ldots,\ 3.14,\ldots,\ 1.41,\ldots,\ 1.00,$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="258" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img361.gif"
+ ALT="$\displaystyle .999,\ .998,\ .997,\ldots,\ .101,\ .100,$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="258" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img362.gif"
+ ALT="$\displaystyle .099,\ .098,\ldots,\ .012,\ .011,\ .010,$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="212" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img363.gif"
+ ALT="$\displaystyle .009,\ .008,\ldots,\ .002,\ .001.$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Skup brojeva koje možemo prikazati je očito diskretan jer, na
+primjer, ne možemo prikazati niti jedan broj između <IMG
+ WIDTH="32" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img364.gif"
+ ALT="$ 998$">
+ i <IMG
+ WIDTH="32" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img365.gif"
+ ALT="$ 999$">
+ kao
+niti između <IMG
+ WIDTH="37" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img366.gif"
+ ALT="$ .001$">
+ i <IMG
+ WIDTH="37" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img367.gif"
+ ALT="$ .002$">
+. No, za razliku od skupova <!-- MATH
+ $\mathbb{N}$
+ -->
+<IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img119.gif"
+ ALT="$ \mathbb{N}$">
+ i <!-- MATH
+ $\mathbb{Z}$
+ -->
+<IMG
+ WIDTH="17" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img120.gif"
+ ALT="$ \mathbb{Z}$">
+
+gdje su razmaci između elemenata konstantni, ovdje se duljina
+razmaka mijenja. U ovakvom računalu asocijativnost ne vrijedi, jer je
+<P><!-- MATH
+ \begin{displaymath}
+%
+( (200+0.4)+0.4)+0.4 =(200+0.4)+0.4=200+0.4=200,
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="502" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img368.gif"
+ ALT="$\displaystyle %
+( (200+0.4)+0.4)+0.4 =(200+0.4)+0.4=200+0.4=200,
+$">
+</DIV><P>
+</P> 
+dok je
+<P><!-- MATH
+ \begin{displaymath}
+%
+200+(0.4+(0.4+0.4))=200+(0.4+0.8)=200+1.2=201.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="502" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img369.gif"
+ ALT="$\displaystyle %
+200+(0.4+(0.4+0.4))=200+(0.4+0.8)=200+1.2=201.
+$">
+</DIV><P>
+</P> 
+U odnosu na točan rezultat 201.2, pogreška<A NAME="1179"></A> 
+u prvom slučaju iznosi 0.6%,
+dok u drugom slučaju iznosi 0.1%.
+Rezultat je točniji ako se prvo zbrajaju brojevi koji su bliže nuli,
+što je općenito pravilo koje vrijedi za svako računalo. Ovakvo
+računalo može, naravno, dati i točan rezultat
+<!-- MATH
+ $(0.5+0.5)+200=1+200=201$
+ -->
+<IMG
+ WIDTH="269" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img370.gif"
+ ALT="$ (0.5+0.5)+200=1+200=201$">
+. 
+
+<P>
+Princip rada svih računala je isti, s time što stvarna 
+računala uglavnom raspolažu s 16 decimalnih mjesta. Na taj se način
+osigurava mala pogreška s kojom se mogu kvalitetno vršiti željeni
+proračuni.
+
+<P>
+<p><HR></p>
+<arrow class=left> </arrow> <A NAME="tex2html450"
+  HREF="node16.html">Realni brojevi</A> &nbsp; &nbsp;
+<arrow class=up> </arrow> <A NAME="tex2html456"
+  HREF="node16.html">Realni brojevi</A> &nbsp; &nbsp;
+<arrow class=right> </arrow> <A NAME="tex2html458"
+  HREF="node18.html">Apsolutna vrijednost</A>  
+
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

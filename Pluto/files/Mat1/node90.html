@@ -1,0 +1,536 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2012 (1.2)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-2382574370068590",
+    enable_page_level_ads: true
+  });
+</script>
+<TITLE>Svojstva logaritama</TITLE>
+<META NAME="description" CONTENT="Svojstva logaritama">
+<META NAME="keywords" CONTENT="predavanja">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2012">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="predavanja.css">
+
+<LINK REL="previous" HREF="node89.html">
+<LINK REL="up" HREF="node89.html">
+<LINK REL="next" HREF="node91.html">
+</HEAD>
+
+<BODY >
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="shortcut icon" href="favicon.ico"/>
+
+<style>
+.sidenav {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 50px;
+}
+
+div.sidenav a {
+    padding: 8px 8px 8px 10px;
+    text-decoration: none;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    display: block;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dropdown-btn {
+    padding: 8px 8px 8px 8px;
+    text-decoration: none; 
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s;
+}
+
+
+.sidenav a:hover, .dropdown-btn:hover {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #C00;
+}
+
+.menu2 {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    font-style:italic;
+}
+
+.dropdown-container {
+  display: none;
+  font-family: 'Open Sans',sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #ddd;
+  padding-left: 8px;
+}
+
+.dropdown-container a:hover {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    background-color: #ccc;
+}
+
+.sidenav .active {
+    background-color: #C00;
+    color: white;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+hr { 
+    display: block;
+    margin-top: 0.2em;
+    margin-bottom: 0.4em;
+    margin-left: -5px;
+    margin-right: -5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color:#ec971f;
+} 
+  
+.caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 20px;
+    vertical-align: middle;
+    border-top: 5px dashed;
+        border-top-width: 5px;
+        border-top-style: dashed;
+        border-top-color: currentcolor;
+    border-right: 5px solid transparent;
+        border-right-width: 5px;
+        border-right-style: solid;
+        border-right-color: transparent;
+    border-left: 5px solid transparent;
+        border-left-width: 5px;
+        border-left-style: solid;
+        border-left-color: transparent;
+}
+
+</style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- First -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2382574370068590"
+     data-ad-slot="8207843721"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<script>
+   // alert('|ivan'+document.getElementById("mys-content").innerHTML+'|') 
+//    alert(typeof(window.CustomEvent))
+//    if(typeof(window.CustomEvent)=="undefined")
+// {
+//     document.display = 'none';
+// } 
+</script>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" 
+  onclick="closeNav()"
+  style="font-size:24px;cursor:pointer;color:#000;position: absolute; top: 0;
+    right: 10px; font-size: 24px; margin-left: 50px;">&nbsp; &times; &nbsp;</a>
+  <a href="/matematika1/index.html">HOME</a>
+  <button href="/matematika1/predavanja" class="dropdown-btn">PREDAVANJA
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/predavanja/predavanja.html">SADRŽAJ</a>
+      <a href="/matematika1/predavanja/node3.html">OSNOVE</a>
+      <a href="/matematika1/predavanja/node22.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/predavanja/node47.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/predavanja/node67.html">FUNKCIJE</a>
+      <a href="/matematika1/predavanja/node98.html">DERIVACIJE</a>
+      <a href="/matematika1/predavanja/node125.html">NIZOVI I REDOVI</a>
+      <a href="/matematika1/predavanja/node144.html">INDEKS</a>
+    </div>
+  <button href="/matematika1/vjezbe" class="dropdown-btn">VJEŽBE
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/vjezbe/vjezbe.html">SADRŽAJ</a>
+      <a href="/matematika1/vjezbe/node2.html">OSNOVE</a>
+      <a href="/matematika1/vjezbe/node24.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/vjezbe/node55.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/vjezbe/node87.html">FUNKCIJE</a>
+      <a href="/matematika1/vjezbe/node110.html">DERIVACIJE</a>
+      <a href="/matematika1/vjezbe/node136.html">NIZOVI I REDOVI</a>
+    </div>
+  <button href="/matematika1/kviz" class="dropdown-btn">KVIZ
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/kviz/index.html">SADRŽAJ</a>
+      <a href="/matematika1/kviz/osnove/">OSNOVE</a>
+      <a href="/matematika1/kviz/algebra/">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/kviz/vektori/">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/kviz/funkcije/">FUNKCIJE</a>
+      <a href="/matematika1/kviz/derivacije/">DERIVACIJE</a>
+      <a href="/matematika1/kviz/nizovi/">NIZOVI I REDOVI</a>
+    </div>
+  <button href="/matematika1/podsjetnik" class="dropdown-btn">PODSJETNIK
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/podsjetnik/podsjetnik.html">SADRŽAJ</a>
+      <a href="/matematika1/podsjetnik/node1.html">OSNOVE</a>
+      <a href="/matematika1/podsjetnik/node2.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/podsjetnik/node3.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/podsjetnik/node4.html">FUNKCIJE</a>
+      <a href="/matematika1/podsjetnik/node5.html">DERIVACIJE</a>
+      <a href="/matematika1/podsjetnik/node6.html">NIZOVI I REDOVI</a>
+    </div>
+  <!--<a href="/matematika1/kviz">Kviz</a>-->
+  <a href="/matematika1/java">JAVA</a>
+  <a href="http://lavica.fesb.unist.hr/netplot"  class="menu2">NETPLOT</a>
+  <!-- <a href="/matematika1/gauss"  class="menu2">GAUSS</a> -->
+  <a href="http://lavica.fesb.unist.hr/octave/ool_hr.php"  class="menu2">OCTAVE</a>
+  <a href="/matematika1/search.html">Traži ...</a>
+</div>
+
+<span style="font-size:24px;font-family:'Open Sans', sans-serif;cursor:pointer;color:#ec971f"
+      onclick="openNav()">&#9776;</span> &nbsp; 
+<span style="font-size:30px;cursor:pointer;color:#888;font-family:'Opens Sans',sans-serif;"
+      onclick="window.location.assign('../index.html')">
+<font style="color:#C00">m</font>atematika<font style="color:#C00;vertical-align:super;margin-left:2px;font-size:24px;">1</font></span>
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "300px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+
+</script>     
+<hr>
+
+
+
+
+<arrow class=left> </arrow> <A NAME="tex2html1270"
+  HREF="node89.html">Logaritamska funkcija</A> &nbsp; &nbsp;
+<arrow class=up> </arrow> <A NAME="tex2html1274"
+  HREF="node89.html">Logaritamska funkcija</A> &nbsp; &nbsp;
+<arrow class=right> </arrow> <A NAME="tex2html1276"
+  HREF="node91.html">Trigonometrijske funkcije</A>
+
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION00664100000000000000"></A>
+<A NAME="sec:svojlog"></A><A NAME="13988"></A>
+<BR>
+Svojstva logaritama
+</H3>
+
+<P>
+Najvažnija svojstva logaritamskih funkcija su:
+<A NAME="13989"></A><A NAME="13990"></A>
+<P></P>
+<DIV ALIGN="CENTER"><TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="336" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1685.gif"
+ ALT="$\displaystyle \log_a x=\log_a b \cdot \log_b x \quad \textrm{(veza dvaju baza)},$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+<A NAME="L1">(L1)</A></TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="124" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1686.gif"
+ ALT="$\displaystyle \log_a b = \frac{1}{\log_b a},$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+<A NAME="L2">(L2)</A></TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="311" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1687.gif"
+ ALT="$\displaystyle \log_a (x\cdot y) = \log_a x + \log_a y, \quad x,y&gt;0,$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+<A NAME="L3">(L3)</A></TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="282" HEIGHT="49" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1688.gif"
+ ALT="$\displaystyle \log_a \frac{x}{y} = \log_a x - \log_a y, \quad x,y&gt;0,$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+<A NAME="L4">(L4)</A></TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="215" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1689.gif"
+ ALT="$\displaystyle \log_a x^y = y \log_a x, \quad x&gt;0,$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+<A NAME="L5">(L5)</A></TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="180" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1690.gif"
+ ALT="$\displaystyle x^r = a^{r\cdot \log_a x}, \quad x&gt;0.$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+<A NAME="L6">(L6)</A></TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+<I>Dokaz svojstva (<A HREF="#L1">L1</A>):</I> jednakost <IMG
+ WIDTH="50" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1691.gif"
+ ALT="$ x=x$">
+ možemo
+koristeći logaritme s bazama <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1434.gif"
+ ALT="$ a$">
+ i <IMG
+ WIDTH="13" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1464.gif"
+ ALT="$ b$">
+ zapisati kao
+<P><!-- MATH
+ \begin{displaymath}
+a^{\log_a x} = b^{\log_b x}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="126" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1692.gif"
+ ALT="$\displaystyle a^{\log_a x} = b^{\log_b x}.
+$">
+</DIV><P>
+</P>
+Uvrštavanje <!-- MATH
+ $b=a^{\log_a b}$
+ -->
+<IMG
+ WIDTH="82" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1693.gif"
+ ALT="$ b=a^{\log_a b}$">
+ u gornju nejednakost i primjena svojstva
+potenciranja (<A HREF="node85.html#P2">P2</A>) daju
+<P><!-- MATH
+ \begin{displaymath}
+a^{\log_a x} = \left( a^{\log_a b}\right)^{\log_b x}=
+a^{\log_a b \cdot \log_b x}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="290" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1694.gif"
+ ALT="$\displaystyle a^{\log_a x} = \left( a^{\log_a b}\right)^{\log_b x}=
+a^{\log_a b \cdot \log_b x}.
+$">
+</DIV><P>
+</P>
+Kako su u prethodnoj jednakosti baze jednake, to moraju biti jednaki i
+eksponenti, odnosno svojstvo (<A HREF="#L1">L1</A>) vrijedi.
+
+<BR><I>Dokaz svojstva (<A HREF="#L2">L2</A>):</I> kada u svojstvo (<A HREF="#L1">L1</A>) uvrstimo
+<IMG
+ WIDTH="49" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1695.gif"
+ ALT="$ x=a$">
+ dobijemo 
+<P><!-- MATH
+ \begin{displaymath}
+1=\log_a a = \log_a b \cdot \log_b a.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="210" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1696.gif"
+ ALT="$\displaystyle 1=\log_a a = \log_a b \cdot \log_b a.
+$">
+</DIV><P>
+</P>
+<I>Dokaz svojstva (<A HREF="#L3">L3</A>):</I> slično kao u dokazu svojstva
+(<A HREF="#L1">L1</A>) izraz <!-- MATH
+ $xy=x\cdot y$
+ -->
+<IMG
+ WIDTH="81" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1697.gif"
+ ALT="$ xy=x\cdot y$">
+ možemo zapisati kao 
+<P><!-- MATH
+ \begin{displaymath}
+a^{\log_a (xy)}=a^{\log_a x} \cdot a^{\log_a y}=a^{\log_a x + \log_a
+  y}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="325" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1698.gif"
+ ALT="$\displaystyle a^{\log_a (xy)}=a^{\log_a x} \cdot a^{\log_a y}=a^{\log_a x + \log_a
+y}.
+$">
+</DIV><P>
+</P>
+Svojstva (<A HREF="#L4">L4</A>-<A HREF="#L6">L6</A>) dokazuju se slično.
+
+<P>
+<div class="nap"><P>
+<DIV><B>Napomena  4.10</B> &nbsp; Kako većina programa za crtanje funkcija 
+može crtati samo funkcije <IMG
+ WIDTH="42" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1324.gif"
+ ALT="$ \log x$">
+ i <IMG
+ WIDTH="33" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1325.gif"
+ ALT="$ \ln x$">
+,  kod crtanja funkcija 
+<IMG
+ WIDTH="50" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1579.gif"
+ ALT="$ \log_2 x$">
+ i <!-- MATH
+ $\log_{1/2} x$
+ -->
+<IMG
+ WIDTH="64" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1699.gif"
+ ALT="$ \log_{1/2} x$">
+ na slikama <A HREF="node89.html#fig:log2">4.25</A> i
+  <A HREF="node89.html#fig:logpola">4.26</A> korištena su svojstva (<A HREF="#L1">L1</A>) i (<A HREF="#L2">L2</A>).
+Program <A NAME="tex2html65"
+  HREF="http://www.gnuplot.info">Gnuplot</A><A NAME="14040"></A> 
+pomoću kojeg su
+nacrtane slike funkciju <IMG
+ WIDTH="33" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1325.gif"
+ ALT="$ \ln x$">
+ označava s <TT>log(x)</TT>. </DIV><P></P>
+
+</div><p></p>
+<P>
+<div class="zad"><P>
+<DIV><B>Zadatak  4.10</B> &nbsp; Nacrtajte funkcije <IMG
+ WIDTH="42" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1324.gif"
+ ALT="$ \log x$">
+, <IMG
+ WIDTH="33" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1325.gif"
+ ALT="$ \ln x$">
+, <IMG
+ WIDTH="50" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1700.gif"
+ ALT="$ \log_3 x$">
+ i <!-- MATH
+ $\log_{1/3} x$
+ -->
+<IMG
+ WIDTH="64" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1701.gif"
+ ALT="$ \log_{1/3} x$">
+.
+Jesu li te funkcije <A HREF="node73.html#f1.3">omeđene</A>,
+<A HREF="node73.html#f1.6">monotone</A>,
+<A HREF="node79.html#f1.14">neprekidne</A> i 
+imaju li <A HREF="node82.html#sec:asimpt">asimptote</A>? </DIV><P></P>
+
+</div><p></p>
+<P>
+<p><HR></p>
+<arrow class=left> </arrow> <A NAME="tex2html1270"
+  HREF="node89.html">Logaritamska funkcija</A> &nbsp; &nbsp;
+<arrow class=up> </arrow> <A NAME="tex2html1274"
+  HREF="node89.html">Logaritamska funkcija</A> &nbsp; &nbsp;
+<arrow class=right> </arrow> <A NAME="tex2html1276"
+  HREF="node91.html">Trigonometrijske funkcije</A>  
+
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

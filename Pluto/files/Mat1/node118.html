@@ -1,0 +1,805 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2012 (1.2)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-2382574370068590",
+    enable_page_level_ads: true
+  });
+</script>
+<TITLE>Monotonost</TITLE>
+<META NAME="description" CONTENT="Monotonost">
+<META NAME="keywords" CONTENT="predavanja">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2012">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="predavanja.css">
+
+<LINK REL="next" HREF="node119.html">
+<LINK REL="previous" HREF="node114.html">
+<LINK REL="up" HREF="node98.html">
+<LINK REL="next" HREF="node119.html">
+</HEAD>
+
+<BODY >
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="shortcut icon" href="favicon.ico"/>
+
+<style>
+.sidenav {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 50px;
+}
+
+div.sidenav a {
+    padding: 8px 8px 8px 10px;
+    text-decoration: none;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    display: block;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dropdown-btn {
+    padding: 8px 8px 8px 8px;
+    text-decoration: none; 
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s;
+}
+
+
+.sidenav a:hover, .dropdown-btn:hover {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #C00;
+}
+
+.menu2 {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    font-style:italic;
+}
+
+.dropdown-container {
+  display: none;
+  font-family: 'Open Sans',sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #ddd;
+  padding-left: 8px;
+}
+
+.dropdown-container a:hover {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    background-color: #ccc;
+}
+
+.sidenav .active {
+    background-color: #C00;
+    color: white;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+hr { 
+    display: block;
+    margin-top: 0.2em;
+    margin-bottom: 0.4em;
+    margin-left: -5px;
+    margin-right: -5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color:#ec971f;
+} 
+  
+.caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 20px;
+    vertical-align: middle;
+    border-top: 5px dashed;
+        border-top-width: 5px;
+        border-top-style: dashed;
+        border-top-color: currentcolor;
+    border-right: 5px solid transparent;
+        border-right-width: 5px;
+        border-right-style: solid;
+        border-right-color: transparent;
+    border-left: 5px solid transparent;
+        border-left-width: 5px;
+        border-left-style: solid;
+        border-left-color: transparent;
+}
+
+</style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- First -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2382574370068590"
+     data-ad-slot="8207843721"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<script>
+   // alert('|ivan'+document.getElementById("mys-content").innerHTML+'|') 
+//    alert(typeof(window.CustomEvent))
+//    if(typeof(window.CustomEvent)=="undefined")
+// {
+//     document.display = 'none';
+// } 
+</script>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" 
+  onclick="closeNav()"
+  style="font-size:24px;cursor:pointer;color:#000;position: absolute; top: 0;
+    right: 10px; font-size: 24px; margin-left: 50px;">&nbsp; &times; &nbsp;</a>
+  <a href="/matematika1/index.html">HOME</a>
+  <button href="/matematika1/predavanja" class="dropdown-btn">PREDAVANJA
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/predavanja/predavanja.html">SADRŽAJ</a>
+      <a href="/matematika1/predavanja/node3.html">OSNOVE</a>
+      <a href="/matematika1/predavanja/node22.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/predavanja/node47.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/predavanja/node67.html">FUNKCIJE</a>
+      <a href="/matematika1/predavanja/node98.html">DERIVACIJE</a>
+      <a href="/matematika1/predavanja/node125.html">NIZOVI I REDOVI</a>
+      <a href="/matematika1/predavanja/node144.html">INDEKS</a>
+    </div>
+  <button href="/matematika1/vjezbe" class="dropdown-btn">VJEŽBE
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/vjezbe/vjezbe.html">SADRŽAJ</a>
+      <a href="/matematika1/vjezbe/node2.html">OSNOVE</a>
+      <a href="/matematika1/vjezbe/node24.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/vjezbe/node55.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/vjezbe/node87.html">FUNKCIJE</a>
+      <a href="/matematika1/vjezbe/node110.html">DERIVACIJE</a>
+      <a href="/matematika1/vjezbe/node136.html">NIZOVI I REDOVI</a>
+    </div>
+  <button href="/matematika1/kviz" class="dropdown-btn">KVIZ
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/kviz/index.html">SADRŽAJ</a>
+      <a href="/matematika1/kviz/osnove/">OSNOVE</a>
+      <a href="/matematika1/kviz/algebra/">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/kviz/vektori/">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/kviz/funkcije/">FUNKCIJE</a>
+      <a href="/matematika1/kviz/derivacije/">DERIVACIJE</a>
+      <a href="/matematika1/kviz/nizovi/">NIZOVI I REDOVI</a>
+    </div>
+  <button href="/matematika1/podsjetnik" class="dropdown-btn">PODSJETNIK
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/podsjetnik/podsjetnik.html">SADRŽAJ</a>
+      <a href="/matematika1/podsjetnik/node1.html">OSNOVE</a>
+      <a href="/matematika1/podsjetnik/node2.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/podsjetnik/node3.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/podsjetnik/node4.html">FUNKCIJE</a>
+      <a href="/matematika1/podsjetnik/node5.html">DERIVACIJE</a>
+      <a href="/matematika1/podsjetnik/node6.html">NIZOVI I REDOVI</a>
+    </div>
+  <!--<a href="/matematika1/kviz">Kviz</a>-->
+  <a href="/matematika1/java">JAVA</a>
+  <a href="http://lavica.fesb.unist.hr/netplot"  class="menu2">NETPLOT</a>
+  <!-- <a href="/matematika1/gauss"  class="menu2">GAUSS</a> -->
+  <a href="http://lavica.fesb.unist.hr/octave/ool_hr.php"  class="menu2">OCTAVE</a>
+  <a href="/matematika1/search.html">Traži ...</a>
+</div>
+
+<span style="font-size:24px;font-family:'Open Sans', sans-serif;cursor:pointer;color:#ec971f"
+      onclick="openNav()">&#9776;</span> &nbsp; 
+<span style="font-size:30px;cursor:pointer;color:#888;font-family:'Opens Sans',sans-serif;"
+      onclick="window.location.assign('../index.html')">
+<font style="color:#C00">m</font>atematika<font style="color:#C00;vertical-align:super;margin-left:2px;font-size:24px;">1</font></span>
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "300px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+
+</script>     
+<hr>
+
+
+
+
+<arrow class=left> </arrow> <A NAME="tex2html1582"
+  HREF="node117.html">L'Hospitalovo pravilo i računanje</A> &nbsp; &nbsp;
+<arrow class=up> </arrow> <A NAME="tex2html1588"
+  HREF="node98.html">DERIVACIJE I PRIMJENE</A> &nbsp; &nbsp;
+<arrow class=right> </arrow> <A NAME="tex2html1590"
+  HREF="node119.html">Ekstremi</A>
+
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00760000000000000000"></A>
+<A NAME="sec:mon"></A>
+<BR>
+Monotonost
+</H1>
+
+<P>
+Predznak derivacije nam također kazuje da li funkcija raste ili pada
+na nekom intervalu. Pojam rastuće i padajuće 
+(monotone)<A NAME="19113"></A> funkcije dan je u 
+definiciji <A HREF="node73.html#f1.6">4.3</A>. U dokazu sljedećeg teorema koristit ćemo
+Lagrangeov teorem srednje vrijednosti <A HREF="node116.html#d2.26">5.9</A>.
+
+<P>
+<div class="teo"><P>
+<DIV><B>Teorem  5.11</B> &nbsp; <A NAME="d2.27"></A> <A NAME="19118"></A> 
+ Neka je funkcija <IMG
+ WIDTH="16" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img162.gif"
+ ALT="$ f$">
+ derivabilna na
+  intervalu <IMG
+ WIDTH="44" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2174.gif"
+ ALT="$ (a,b)$">
+. Tada vrijedi:
+  <DL COMPACT>
+<DT>i)</DT>
+<DD>funkcija <IMG
+ WIDTH="16" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img162.gif"
+ ALT="$ f$">
+ je rastuća<A NAME="19120"></A>
+  na intervalu <IMG
+ WIDTH="44" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2174.gif"
+ ALT="$ (a,b)$">
+ ako i samo ako je
+  <!-- MATH
+ $f'(x)\geq 0$
+ -->
+<IMG
+ WIDTH="78" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2255.gif"
+ ALT="$ f'(x)\geq 0$">
+ za svaki <!-- MATH
+ $x\in (a,b)$
+ -->
+<IMG
+ WIDTH="76" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1556.gif"
+ ALT="$ x\in(a,b)$">
+;
+  
+</DD>
+<DT>ii)</DT>
+<DD>funkcija <IMG
+ WIDTH="16" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img162.gif"
+ ALT="$ f$">
+ je padajuća<A NAME="19121"></A> na 
+  intervalu <IMG
+ WIDTH="44" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2174.gif"
+ ALT="$ (a,b)$">
+ ako i samo ako je
+  <!-- MATH
+ $f'(x)\leq 0$
+ -->
+<IMG
+ WIDTH="78" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2256.gif"
+ ALT="$ f'(x)\leq 0$">
+ za svaki <!-- MATH
+ $x\in (a,b)$
+ -->
+<IMG
+ WIDTH="76" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1556.gif"
+ ALT="$ x\in(a,b)$">
+;
+  
+</DD>
+<DT>iii)</DT>
+<DD>ako je <IMG
+ WIDTH="78" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2257.gif"
+ ALT="$ f'(x)&gt;0$">
+ za svaki <!-- MATH
+ $x\in (a,b)$
+ -->
+<IMG
+ WIDTH="76" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1556.gif"
+ ALT="$ x\in(a,b)$">
+, tada je funkcija <IMG
+ WIDTH="16" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img162.gif"
+ ALT="$ f$">
+ 
+  strogo rastuća<A NAME="19122"></A> 
+  na intervalu <IMG
+ WIDTH="44" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2174.gif"
+ ALT="$ (a,b)$">
+;  
+  
+</DD>
+<DT>iv)</DT>
+<DD>ako je <IMG
+ WIDTH="78" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2258.gif"
+ ALT="$ f'(x)&lt;0$">
+ za svaki <!-- MATH
+ $x\in (a,b)$
+ -->
+<IMG
+ WIDTH="76" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1556.gif"
+ ALT="$ x\in(a,b)$">
+, tada je funkcija <IMG
+ WIDTH="16" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img162.gif"
+ ALT="$ f$">
+ 
+  strogo padajuća<A NAME="19123"></A> na intervalu 
+  <IMG
+ WIDTH="44" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2174.gif"
+ ALT="$ (a,b)$">
+.
+  
+</DD>
+</DL></DIV><P></P>
+
+</div><p></p><div class="dok"><B>Dokaz. </B></div><p></p>
+Dokažimo prvu tvrdnju, pri čemu treba dokazati oba smjera.
+
+<P>
+Neka je <IMG
+ WIDTH="16" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img162.gif"
+ ALT="$ f$">
+ rastuća i derivabilna na intervalu <IMG
+ WIDTH="44" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2174.gif"
+ ALT="$ (a,b)$">
+. Trebamo
+dokazati da je <!-- MATH
+ $f'(x)\geq 0$
+ -->
+<IMG
+ WIDTH="78" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2255.gif"
+ ALT="$ f'(x)\geq 0$">
+ za svaki <!-- MATH
+ $x\in (a,b)$
+ -->
+<IMG
+ WIDTH="76" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1556.gif"
+ ALT="$ x\in(a,b)$">
+. Odaberimo
+proizvoljni <!-- MATH
+ $x\in (a,b)$
+ -->
+<IMG
+ WIDTH="76" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1556.gif"
+ ALT="$ x\in(a,b)$">
+. 
+Kako je <IMG
+ WIDTH="16" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img162.gif"
+ ALT="$ f$">
+ rastuća, za <!-- MATH
+ $\Delta x<0$
+ -->
+<IMG
+ WIDTH="63" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2259.gif"
+ ALT="$ \Delta x&lt;0$">
+ vrijedi 
+<!-- MATH
+ $f(x+\Delta x)\leq f(x)$
+ -->
+<IMG
+ WIDTH="146" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2260.gif"
+ ALT="$ f(x+\Delta x)\leq f(x)$">
+ pa je 
+<P><!-- MATH
+ \begin{displaymath}
+\lim_{\Delta x\to 0-0}\frac{f(x+\Delta x)-f(x)}{\Delta x}\geq 0.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="250" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2261.gif"
+ ALT="$\displaystyle \lim_{\Delta x\to 0-0}\frac{f(x+\Delta x)-f(x)}{\Delta x}\geq 0.
+$">
+</DIV><P>
+</P>
+S druge strane, za <!-- MATH
+ $\Delta x>0$
+ -->
+<IMG
+ WIDTH="63" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2262.gif"
+ ALT="$ \Delta x&gt;0$">
+ vrijedi 
+<!-- MATH
+ $f(x+\Delta x)\geq f(x)$
+ -->
+<IMG
+ WIDTH="146" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2263.gif"
+ ALT="$ f(x+\Delta x)\geq f(x)$">
+ pa je
+<P><!-- MATH
+ \begin{displaymath}
+\lim_{\Delta x\to 0+0}\frac{f(x+\Delta x)-f(x)}{\Delta x}\geq 0.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="249" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2264.gif"
+ ALT="$\displaystyle \lim_{\Delta x\to 0+0}\frac{f(x+\Delta x)-f(x)}{\Delta x}\geq 0.
+$">
+</DIV><P>
+</P>
+Kako je <IMG
+ WIDTH="16" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img162.gif"
+ ALT="$ f$">
+ derivabilna, to je 
+<P><!-- MATH
+ \begin{displaymath}
+f'(x)= \lim_{\Delta x\to 0-0}\frac{f(x+\Delta x)-f(x)}{\Delta x}
+=\lim_{\Delta x\to 0+0}\frac{f(x+\Delta x)-f(x)}{\Delta x}\geq 0.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="544" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2265.gif"
+ ALT="$\displaystyle f'(x)= \lim_{\Delta x\to 0-0}\frac{f(x+\Delta x)-f(x)}{\Delta x}
+=\lim_{\Delta x\to 0+0}\frac{f(x+\Delta x)-f(x)}{\Delta x}\geq 0.
+$">
+</DIV><P>
+</P>
+Točka <IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img21.gif"
+ ALT="$ x$">
+ je bila proizvoljno odabrana pa zaključujemo da je
+<!-- MATH
+ $f'(x)\geq 0$
+ -->
+<IMG
+ WIDTH="78" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2255.gif"
+ ALT="$ f'(x)\geq 0$">
+ za svaki <!-- MATH
+ $x\in (a,b)$
+ -->
+<IMG
+ WIDTH="76" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1556.gif"
+ ALT="$ x\in(a,b)$">
+.
+
+<P>
+Dokažimo drugi smjer. Neka je <IMG
+ WIDTH="16" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img162.gif"
+ ALT="$ f$">
+ derivabilna na intervalu <IMG
+ WIDTH="44" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2174.gif"
+ ALT="$ (a,b)$">
+ i
+neka je <!-- MATH
+ $f'(x)\geq 0$
+ -->
+<IMG
+ WIDTH="78" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2255.gif"
+ ALT="$ f'(x)\geq 0$">
+ za svaki <!-- MATH
+ $x\in (a,b)$
+ -->
+<IMG
+ WIDTH="76" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1556.gif"
+ ALT="$ x\in(a,b)$">
+. Trebamo dokazati da je
+<IMG
+ WIDTH="16" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img162.gif"
+ ALT="$ f$">
+ rastuća po definiciji <A HREF="node73.html#f1.6">4.3</A>. Odaberimo dvije točke
+<!-- MATH
+ $x_1,x_2\in (a,b)$
+ -->
+<IMG
+ WIDTH="111" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2266.gif"
+ ALT="$ x_1,x_2\in (a,b)$">
+, takve da je <IMG
+ WIDTH="66" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2267.gif"
+ ALT="$ x_1&lt;x_2$">
+. Po Lagrangeovom teoremu
+<A HREF="node116.html#d2.26">5.9</A> postoji točka <!-- MATH
+ $c\in (x_1,x_2)$
+ -->
+<IMG
+ WIDTH="93" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2268.gif"
+ ALT="$ c\in (x_1,x_2)$">
+ takva da je 
+<P><!-- MATH
+ \begin{displaymath}
+\frac{f(x_2)-f(x_1)}{x_2-x_1}=f'(c)\geq 0.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="217" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2269.gif"
+ ALT="$\displaystyle \frac{f(x_2)-f(x_1)}{x_2-x_1}=f'(c)\geq 0.
+$">
+</DIV><P>
+</P>
+Kako je <IMG
+ WIDTH="97" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2270.gif"
+ ALT="$ x_2-x_1&gt;0$">
+, zaključujemo da je nužno <!-- MATH
+ $f(x_2)\geq f(x_1)$
+ -->
+<IMG
+ WIDTH="115" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2271.gif"
+ ALT="$ f(x_2)\geq f(x_1)$">
+,
+odnosno <IMG
+ WIDTH="16" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img162.gif"
+ ALT="$ f$">
+ je rastuća na intervalu <IMG
+ WIDTH="44" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2174.gif"
+ ALT="$ (a,b)$">
+. 
+S ovim smo dokazali prvu tvrdnju teorema. Dokaz ostalih tvrdnji je
+sličan. &nbsp;&nbsp;&nbsp;&nbsp;<div class="dok"><B>Q.E.D.</B>
+<BR></div><p></p>
+
+<P>
+Dok prve dvije tvrdnje teorema vrijede u jednom i u
+drugom smjeru (ako i samo ako), zadnje dvije tvrdnje vrijede samo u
+jednom smjeru. Kao primjer zašto kod tih tvrdnji ne vrijedi drugi
+smjer,  možemo uzeti funkciju <IMG
+ WIDTH="57" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2272.gif"
+ ALT="$ y=x^3$">
+ koja je strogo rastuća na
+čitavom skupu <!-- MATH
+ $\mathbb{R}$
+ -->
+<IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img122.gif"
+ ALT="$ \mathbb{R}$">
+, ali je <IMG
+ WIDTH="76" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2273.gif"
+ ALT="$ y'(0)=0$">
+.
+
+<P>
+<div class="pri"><P>
+<DIV><B>Primjer  5.12</B> &nbsp; <A NAME="d2.31"></A>  Odredimo intervale monotonosti funkcije <!-- MATH
+ $f(x)=x^3-3x-2$
+ -->
+<IMG
+ WIDTH="155" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2274.gif"
+ ALT="$ f(x)=x^3-3x-2$">
+. 
+  Vrijedi <!-- MATH
+ $f'(x)=3x^2-3$
+ -->
+<IMG
+ WIDTH="127" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2275.gif"
+ ALT="$ f'(x)=3x^2-3$">
+. Stoga funkcija <IMG
+ WIDTH="16" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img162.gif"
+ ALT="$ f$">
+ raste za <!-- MATH
+ $3x^2-3\geq 0$
+ -->
+<IMG
+ WIDTH="96" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2276.gif"
+ ALT="$ 3x^2-3\geq 0$">
+.
+  Nakon rješavanja nejednadžbe zaključujemo da je <IMG
+ WIDTH="16" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img162.gif"
+ ALT="$ f$">
+ rastuća na
+  intervalima <!-- MATH
+ $(-\infty,-1)$
+ -->
+<IMG
+ WIDTH="82" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1389.gif"
+ ALT="$ (-\infty,-1)$">
+ i <!-- MATH
+ $(1,+\infty)$
+ -->
+<IMG
+ WIDTH="68" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2277.gif"
+ ALT="$ (1,+\infty)$">
+. Štoviše, pošto u 
+  prethodnoj nejednakosti jednakost vrijedi samo za <IMG
+ WIDTH="62" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img405.gif"
+ ALT="$ x=-1$">
+ i <IMG
+ WIDTH="48" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img404.gif"
+ ALT="$ x=1$">
+, 
+  zaključujemo da je na tim intervalima <IMG
+ WIDTH="16" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img162.gif"
+ ALT="$ f$">
+ strogo rastuća.
+  Slično, funkcija <IMG
+ WIDTH="16" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img162.gif"
+ ALT="$ f$">
+ pada za 
+  <!-- MATH
+ $3x^2-3\leq 0$
+ -->
+<IMG
+ WIDTH="96" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2278.gif"
+ ALT="$ 3x^2-3\leq 0$">
+, odnosno <IMG
+ WIDTH="16" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img162.gif"
+ ALT="$ f$">
+ je strogo padajuća na intervalu 
+  <IMG
+ WIDTH="59" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2279.gif"
+ ALT="$ (-1,1)$">
+. Funkcija <IMG
+ WIDTH="16" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img162.gif"
+ ALT="$ f$">
+ i njena derivacija prikazane su na slici
+  <A HREF="#fig:d8">5.8</A>.</DIV><P></P>
+
+</div><p></p>
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:d8"></A><A NAME="19149"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Slika 5.8:</STRONG>
+Intervali monotonosti</CAPTION>
+<TR><TD><IMG
+ WIDTH="228" HEIGHT="261" BORDER="0"
+ SRC="img2280.gif"
+ ALT="\begin{figure}\begin{center}
+\epsfig{file=slike/monotonost.eps,width=7.2cm}
+\end{center}\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+<p><HR></p>
+<arrow class=left> </arrow> <A NAME="tex2html1582"
+  HREF="node117.html">L'Hospitalovo pravilo i računanje</A> &nbsp; &nbsp;
+<arrow class=up> </arrow> <A NAME="tex2html1588"
+  HREF="node98.html">DERIVACIJE I PRIMJENE</A> &nbsp; &nbsp;
+<arrow class=right> </arrow> <A NAME="tex2html1590"
+  HREF="node119.html">Ekstremi</A>  
+
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

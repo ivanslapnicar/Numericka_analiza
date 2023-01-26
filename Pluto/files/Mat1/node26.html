@@ -1,0 +1,834 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2012 (1.2)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-2382574370068590",
+    enable_page_level_ads: true
+  });
+</script>
+<TITLE>Množenje matrica</TITLE>
+<META NAME="description" CONTENT="Množenje matrica">
+<META NAME="keywords" CONTENT="predavanja">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2012">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="predavanja.css">
+
+<LINK REL="next" HREF="node27.html">
+<LINK REL="previous" HREF="node25.html">
+<LINK REL="up" HREF="node23.html">
+<LINK REL="next" HREF="node27.html">
+</HEAD>
+
+<BODY >
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="shortcut icon" href="favicon.ico"/>
+
+<style>
+.sidenav {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 50px;
+}
+
+div.sidenav a {
+    padding: 8px 8px 8px 10px;
+    text-decoration: none;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    display: block;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dropdown-btn {
+    padding: 8px 8px 8px 8px;
+    text-decoration: none; 
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s;
+}
+
+
+.sidenav a:hover, .dropdown-btn:hover {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #C00;
+}
+
+.menu2 {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    font-style:italic;
+}
+
+.dropdown-container {
+  display: none;
+  font-family: 'Open Sans',sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #ddd;
+  padding-left: 8px;
+}
+
+.dropdown-container a:hover {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    background-color: #ccc;
+}
+
+.sidenav .active {
+    background-color: #C00;
+    color: white;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+hr { 
+    display: block;
+    margin-top: 0.2em;
+    margin-bottom: 0.4em;
+    margin-left: -5px;
+    margin-right: -5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color:#ec971f;
+} 
+  
+.caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 20px;
+    vertical-align: middle;
+    border-top: 5px dashed;
+        border-top-width: 5px;
+        border-top-style: dashed;
+        border-top-color: currentcolor;
+    border-right: 5px solid transparent;
+        border-right-width: 5px;
+        border-right-style: solid;
+        border-right-color: transparent;
+    border-left: 5px solid transparent;
+        border-left-width: 5px;
+        border-left-style: solid;
+        border-left-color: transparent;
+}
+
+</style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- First -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2382574370068590"
+     data-ad-slot="8207843721"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<script>
+   // alert('|ivan'+document.getElementById("mys-content").innerHTML+'|') 
+//    alert(typeof(window.CustomEvent))
+//    if(typeof(window.CustomEvent)=="undefined")
+// {
+//     document.display = 'none';
+// } 
+</script>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" 
+  onclick="closeNav()"
+  style="font-size:24px;cursor:pointer;color:#000;position: absolute; top: 0;
+    right: 10px; font-size: 24px; margin-left: 50px;">&nbsp; &times; &nbsp;</a>
+  <a href="/matematika1/index.html">HOME</a>
+  <button href="/matematika1/predavanja" class="dropdown-btn">PREDAVANJA
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/predavanja/predavanja.html">SADRŽAJ</a>
+      <a href="/matematika1/predavanja/node3.html">OSNOVE</a>
+      <a href="/matematika1/predavanja/node22.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/predavanja/node47.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/predavanja/node67.html">FUNKCIJE</a>
+      <a href="/matematika1/predavanja/node98.html">DERIVACIJE</a>
+      <a href="/matematika1/predavanja/node125.html">NIZOVI I REDOVI</a>
+      <a href="/matematika1/predavanja/node144.html">INDEKS</a>
+    </div>
+  <button href="/matematika1/vjezbe" class="dropdown-btn">VJEŽBE
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/vjezbe/vjezbe.html">SADRŽAJ</a>
+      <a href="/matematika1/vjezbe/node2.html">OSNOVE</a>
+      <a href="/matematika1/vjezbe/node24.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/vjezbe/node55.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/vjezbe/node87.html">FUNKCIJE</a>
+      <a href="/matematika1/vjezbe/node110.html">DERIVACIJE</a>
+      <a href="/matematika1/vjezbe/node136.html">NIZOVI I REDOVI</a>
+    </div>
+  <button href="/matematika1/kviz" class="dropdown-btn">KVIZ
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/kviz/index.html">SADRŽAJ</a>
+      <a href="/matematika1/kviz/osnove/">OSNOVE</a>
+      <a href="/matematika1/kviz/algebra/">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/kviz/vektori/">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/kviz/funkcije/">FUNKCIJE</a>
+      <a href="/matematika1/kviz/derivacije/">DERIVACIJE</a>
+      <a href="/matematika1/kviz/nizovi/">NIZOVI I REDOVI</a>
+    </div>
+  <button href="/matematika1/podsjetnik" class="dropdown-btn">PODSJETNIK
+    <span class="caret"></span>
+  </button>
+    <div class="dropdown-container">
+      <a href="/matematika1/podsjetnik/podsjetnik.html">SADRŽAJ</a>
+      <a href="/matematika1/podsjetnik/node1.html">OSNOVE</a>
+      <a href="/matematika1/podsjetnik/node2.html">LINEARNA ALGEBRA</a>
+      <a href="/matematika1/podsjetnik/node3.html">VEKTORI I GEOMETRIJA</a>
+      <a href="/matematika1/podsjetnik/node4.html">FUNKCIJE</a>
+      <a href="/matematika1/podsjetnik/node5.html">DERIVACIJE</a>
+      <a href="/matematika1/podsjetnik/node6.html">NIZOVI I REDOVI</a>
+    </div>
+  <!--<a href="/matematika1/kviz">Kviz</a>-->
+  <a href="/matematika1/java">JAVA</a>
+  <a href="http://lavica.fesb.unist.hr/netplot"  class="menu2">NETPLOT</a>
+  <!-- <a href="/matematika1/gauss"  class="menu2">GAUSS</a> -->
+  <a href="http://lavica.fesb.unist.hr/octave/ool_hr.php"  class="menu2">OCTAVE</a>
+  <a href="/matematika1/search.html">Traži ...</a>
+</div>
+
+<span style="font-size:24px;font-family:'Open Sans', sans-serif;cursor:pointer;color:#ec971f"
+      onclick="openNav()">&#9776;</span> &nbsp; 
+<span style="font-size:30px;cursor:pointer;color:#888;font-family:'Opens Sans',sans-serif;"
+      onclick="window.location.assign('../index.html')">
+<font style="color:#C00">m</font>atematika<font style="color:#C00;vertical-align:super;margin-left:2px;font-size:24px;">1</font></span>
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "300px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+
+</script>     
+<hr>
+
+
+
+
+<arrow class=left> </arrow> <A NAME="tex2html566"
+  HREF="node25.html">Množenje matrice skalarom</A> &nbsp; &nbsp;
+<arrow class=up> </arrow> <A NAME="tex2html572"
+  HREF="node23.html">Matrice</A> &nbsp; &nbsp;
+<arrow class=right> </arrow> <A NAME="tex2html574"
+  HREF="node27.html">Nul-matrica i jedinična matrica</A>
+
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00413000000000000000"></A><A NAME="sec:matmult"></A><A NAME="4580"></A>
+<BR>
+Množenje matrica
+</H2>
+
+<P>
+Definicija množenja matrica je na prvi pogled neobična, ali upravo nam
+ona omogućava jednostvno zapisivanje sustava linearnih jednadžbi.
+
+<P>
+Matrice <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img27.gif"
+ ALT="$ A$">
+ i <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img33.gif"
+ ALT="$ B$">
+ možemo pomnožiti samo ako su <EM>ulančane</EM>, odnosno
+ako <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img27.gif"
+ ALT="$ A$">
+ ima onoliko stupaca koliko <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img33.gif"
+ ALT="$ B$">
+ ima redaka. Matrica <!-- MATH
+ $C=A\cdot
+B$
+ -->
+<IMG
+ WIDTH="84" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img549.gif"
+ ALT="$ C=A\cdot
+B$">
+ ima redaka koliko <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img27.gif"
+ ALT="$ A$">
+ i stupaca koliko <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img33.gif"
+ ALT="$ B$">
+.
+Neka je, dakle, <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img27.gif"
+ ALT="$ A$">
+ tipa <IMG
+ WIDTH="53" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img550.gif"
+ ALT="$ m\times k$">
+ i <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img33.gif"
+ ALT="$ B$">
+ tipa <IMG
+ WIDTH="48" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img551.gif"
+ ALT="$ k\times n$">
+. 
+Tada je matrica <IMG
+ WIDTH="19" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img52.gif"
+ ALT="$ C$">
+ tipa <IMG
+ WIDTH="53" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img516.gif"
+ ALT="$ m\times n$">
+ i vrijedi
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="a1.5a"></A><!-- MATH
+ \begin{equation}
+c_{ij}=\sum_{l=1}^{k} a_{il} b_{lj}=
+a_{i1}b_{1j}+a_{i2}b_{2j}+\cdots +a_{ik}b_{kj}.
+\end{equation}
+ -->
+<TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><IMG
+ WIDTH="371" HEIGHT="75" ALIGN="MIDDLE" BORDER="0"
+ SRC="img552.gif"
+ ALT="$\displaystyle c_{ij}=\sum_{l=1}^{k} a_{il} b_{lj}= a_{i1}b_{1j}+a_{i2}b_{2j}+\cdots +a_{ik}b_{kj}.$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+(2.2)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Element <IMG
+ WIDTH="45" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img553.gif"
+ ALT="$ (2,3)$">
+ umnoška 
+<P><!-- MATH
+ \begin{displaymath}
+%
+\begin{bmatrix}
+  a_{11}&a_{12}&a_{13}&a_{14}\\
+  \textcolor{red}{a_{21}}&\textcolor{blue}{a_{22}}&
+  \textcolor{green}{a_{23}}&\textcolor{magenta}{a_{24}}\\
+  a_{31}&a_{32}&a_{33}&a_{34}
+\end{bmatrix}
+\begin{bmatrix}
+  b_{11}&b_{12}&\textcolor{red}{b_{13}}&b_{14}&b_{15}\\
+  b_{21}&b_{22}&\textcolor{blue}{b_{23}}&b_{24}&b_{25}\\
+  b_{31}&b_{32}&\textcolor{green}{b_{33}}&b_{34}&b_{35}\\
+  b_{41}&b_{42}&\textcolor{magenta}{b_{43}}&b_{44}&b_{45}
+\end{bmatrix}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="396" HEIGHT="104" ALIGN="MIDDLE" BORDER="0"
+ SRC="img554.gif"
+ ALT="$\displaystyle %
+\begin{bmatrix}
+a_{11}&amp;a_{12}&amp;a_{13}&amp;a_{14}\\
+\textcolor{red...
+..._{35}\\
+b_{41}&amp;b_{42}&amp;\textcolor{magenta}{b_{43}}&amp;b_{44}&amp;b_{45}
+\end{bmatrix}$">
+</DIV><P>
+</P> 
+nalazi se tako da stavite lijevi kažiprst na 
+<IMG
+ WIDTH="30" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img555.gif"
+ ALT="$ a_{21}$">
+ a desni na <IMG
+ WIDTH="28" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img556.gif"
+ ALT="$ b_{13}$">
+ i kažete ''puta''.
+Tada pomičete kažiprste prema <IMG
+ WIDTH="30" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img557.gif"
+ ALT="$ a_{22}$">
+ i <IMG
+ WIDTH="28" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img558.gif"
+ ALT="$ b_{23}$">
+ govoreći ''plus''
+dok se kažiprsti pomiču i ''puta'' kada stignu na cilj.
+Nastavite li na taj način izračunat ćete 
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+%
+a_{21}b_{13}+a_{22}b_{23}+a_{23}b_{33}+a_{24}b_{43},
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="267" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img559.gif"
+ ALT="$\displaystyle %
+a_{21}b_{13}+a_{22}b_{23}+a_{23}b_{33}+a_{24}b_{43},
+$">
+</DIV><P>
+</P> 
+što je upravo element <IMG
+ WIDTH="45" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img553.gif"
+ ALT="$ (2,3)$">
+ produkta.   
+
+<P>
+Na primjer,
+<P><!-- MATH
+ \begin{displaymath}
+%
+\begin{bmatrix}
+1& 2& 3\\
+  4 &5 &6\\
+  7 &8& 9
+\end{bmatrix}
+\begin{bmatrix}
+   1&  2&  0& -1\\
+   4&  3&  2&  1\\
+   1& -1&  1& -1
+ \end{bmatrix}=
+ \begin{bmatrix}
+   12 &  5&   7&  -2\\
+   30 & 17&  16&  -5\\
+   48 & 29&  25&  -8
+ \end{bmatrix}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="416" HEIGHT="83" ALIGN="MIDDLE" BORDER="0"
+ SRC="img560.gif"
+ ALT="$\displaystyle %
+\begin{bmatrix}
+1&amp; 2&amp; 3\\
+4 &amp;5 &amp;6\\
+7 &amp;8&amp; 9
+\end{bmatrix}\b...
+...{bmatrix}
+12 &amp; 5&amp; 7&amp; -2\\
+30 &amp; 17&amp; 16&amp; -5\\
+48 &amp; 29&amp; 25&amp; -8
+\end{bmatrix}$">
+</DIV><P>
+</P> 
+Uočimo da množenje u obrnutom poretku nije 
+definirano stoga što matrice nisu ulančane.
+U sljedećem primjeru su oba množenja definirana, ali umnošci 
+nisu istog tipa:
+<P></P>
+<DIV ALIGN="CENTER"><!-- MATH
+ \begin{equation*}
+\begin{split}
+\begin{bmatrix}
+  1\\1\\1
+\end{bmatrix}
+\begin{bmatrix}
+  1& 1& 1
+\end{bmatrix}
+&=
+\begin{bmatrix}
+  1& 1& 1\\1& 1& 1\\1& 1& 1
+\end{bmatrix},\\\\
+\begin{bmatrix}
+  1&1&1
+\end{bmatrix}
+\begin{bmatrix}
+  1\\1\\1
+\end{bmatrix} &=
+\begin{bmatrix}
+  3
+\end{bmatrix}.
+\end{split}
+\end{equation*}
+ -->
+<TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><IMG
+ WIDTH="229" HEIGHT="173" BORDER="0"
+ SRC="img561.gif"
+ ALT="\begin{displaymath}\begin{split}\begin{bmatrix}1\\ 1\\ 1 \end{bmatrix} \begin{bm...
+... 1 \end{bmatrix} &amp;= \begin{bmatrix}3 \end{bmatrix}. \end{split}\end{displaymath}"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+<P>
+U sljedećem primjeru su umnošci <IMG
+ WIDTH="33" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img562.gif"
+ ALT="$ AB$">
+ i <IMG
+ WIDTH="33" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img563.gif"
+ ALT="$ BA$">
+ istog tipa,
+ali nisu jednaki:
+<P></P>
+<DIV ALIGN="CENTER"><!-- MATH
+ \begin{equation*}
+\begin{split}
+A&=
+  \begin{bmatrix}
+    2&1\\1&0
+  \end{bmatrix}, \qquad
+B=
+\begin{bmatrix}
+  -1&1\\5&2
+\end{bmatrix}, \\\\
+AB&=
+\begin{bmatrix}
+  3&4\\-1&1
+\end{bmatrix}, \qquad
+BA=
+\begin{bmatrix}
+  -1&-1\\12&5
+\end{bmatrix}.
+\end{split}
+\end{equation*}
+ -->
+<TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><IMG
+ WIDTH="309" HEIGHT="130" BORDER="0"
+ SRC="img564.gif"
+ ALT="\begin{displaymath}\begin{split}A&amp;= \begin{bmatrix}2&amp;1\\ 1&amp;0 \end{bmatrix}, \qqu...
+...quad BA= \begin{bmatrix}-1&amp;-1\\ 12&amp;5 \end{bmatrix}. \end{split}\end{displaymath}"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+U ovom primjeru su, pak, oba umnoška jednaka:
+<P><!-- MATH
+ \begin{displaymath}
+%
+A=
+  \begin{bmatrix}
+    2&2\\2&2
+  \end{bmatrix}, \qquad
+B=
+\begin{bmatrix}
+  1&2\\2&1
+\end{bmatrix}, \quad
+AB= BA=
+\begin{bmatrix}
+  6&6\\6&6
+\end{bmatrix}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="434" HEIGHT="61" ALIGN="MIDDLE" BORDER="0"
+ SRC="img565.gif"
+ ALT="$\displaystyle %
+A=
+\begin{bmatrix}
+2&amp;2\\ 2&amp;2
+\end{bmatrix}, \qquad
+B=
+\begin...
+...2\\ 2&amp;1
+\end{bmatrix}, \quad
+AB= BA=
+\begin{bmatrix}
+6&amp;6\\ 6&amp;6
+\end{bmatrix}.
+$">
+</DIV><P>
+</P> 
+Iz prethodnih primjera zaključujemo kako, za razliku od množenja brojeva, 
+<BLOCKQUOTE>
+<EM>množenje matrica općenito nije komutativno.</EM>
+
+</BLOCKQUOTE>
+Budite oprezni, jer se ova činjenica lako zaboravi kada se manipulira s
+formulama koje sadrže matrice.
+
+<P>
+<div class="teo"><P>
+<DIV><B>Teorem  2.1</B> &nbsp; [Svojstva množenja matrica]<A NAME="at1.5a"></A>Za proizvoljne matrice <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img27.gif"
+ ALT="$ A$">
+, <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img33.gif"
+ ALT="$ B$">
+ i <IMG
+ WIDTH="19" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img52.gif"
+ ALT="$ C$">
+ i broj <IMG
+ WIDTH="16" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img566.gif"
+ ALT="$ \lambda$">
+, ukoliko su
+svi umnošci definirani vrijedi:
+<DL COMPACT>
+<DT>i)</DT>
+<DD><!-- MATH
+ $(AB)C=A(BC)$
+ -->
+<IMG
+ WIDTH="141" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img567.gif"
+ ALT="$ (AB)C=A(BC)$">
+ (asocijativnost),
+</DD>
+<DT>ii)</DT>
+<DD><!-- MATH
+ $A(B+C)=AB+AC$
+ -->
+<IMG
+ WIDTH="185" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img568.gif"
+ ALT="$ A(B+C)=AB+AC$">
+ (distributivnost),
+</DD>
+<DT>iii)</DT>
+<DD><!-- MATH
+ $(A+B)C=AC+BC$
+ -->
+<IMG
+ WIDTH="185" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img569.gif"
+ ALT="$ (A+B)C=AC+BC$">
+ (distributivnost),
+</DD>
+<DT>iv)</DT>
+<DD><!-- MATH
+ $\lambda(AB)=(\lambda A)B=A(\lambda B)$
+ -->
+<IMG
+ WIDTH="211" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img570.gif"
+ ALT="$ \lambda(AB)=(\lambda A)B=A(\lambda B)$">
+.
+</DD>
+</DL></DIV><P></P>
+
+</div><p></p>Primijetimo da zbog općenite nekomutativnosti množenja matrica, moramo
+posebno navesti distributivnost prema množenju slijeva i zdesna. 
+
+<BR><div class="dok"><B>Dokaz. </B></div><p></p>
+<EM>i)</EM> neka je <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img27.gif"
+ ALT="$ A$">
+ tipa <IMG
+ WIDTH="53" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img550.gif"
+ ALT="$ m\times k$">
+, <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img33.gif"
+ ALT="$ B$">
+ tipa <IMG
+ WIDTH="43" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img571.gif"
+ ALT="$ k\times l$">
+ i <IMG
+ WIDTH="19" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img52.gif"
+ ALT="$ C$">
+
+tipa <IMG
+ WIDTH="43" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img572.gif"
+ ALT="$ l\times n$">
+. Tada je <IMG
+ WIDTH="33" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img562.gif"
+ ALT="$ AB$">
+ tipa <IMG
+ WIDTH="48" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img573.gif"
+ ALT="$ m\times l$">
+, a <IMG
+ WIDTH="61" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img574.gif"
+ ALT="$ (AB)C$">
+
+je tipa <IMG
+ WIDTH="53" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img516.gif"
+ ALT="$ m\times n$">
+. Za proizvoljni element matrice <IMG
+ WIDTH="61" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img574.gif"
+ ALT="$ (AB)C$">
+
+vrijedi:
+<P></P>
+<DIV ALIGN="CENTER"><TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="84" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img575.gif"
+ ALT="$\displaystyle [(AB)C]_{ij}$"></TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="129" HEIGHT="75" ALIGN="MIDDLE" BORDER="0"
+ SRC="img576.gif"
+ ALT="$\displaystyle =\sum_{p=1}^l[AB]_{ip} C_{pj}$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="208" HEIGHT="75" ALIGN="MIDDLE" BORDER="0"
+ SRC="img577.gif"
+ ALT="$\displaystyle = \sum_{p=1}^l \biggl( \sum_{q=1}^k A_{iq}B_{qp} \biggr) C_{pj} =$">&nbsp; &nbsp;raspišemo sumu</TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="184" HEIGHT="75" ALIGN="MIDDLE" BORDER="0"
+ SRC="img578.gif"
+ ALT="$\displaystyle = \sum_{p=1}^l \sum_{q=1}^k A_{iq}B_{qp} C_{pj} =$">&nbsp; &nbsp;zamijenimo redoslijed zbrajanja</TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="184" HEIGHT="75" ALIGN="MIDDLE" BORDER="0"
+ SRC="img579.gif"
+ ALT="$\displaystyle = \sum_{q=1}^k \sum_{p=1}^l A_{iq}B_{qp} C_{pj} =$">&nbsp; &nbsp;grupiramo pribrojnike na drugi način</TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="192" HEIGHT="75" ALIGN="MIDDLE" BORDER="0"
+ SRC="img580.gif"
+ ALT="$\displaystyle = \sum_{q=1}^k A_{iq} \biggl( \sum_{p=1}^l B_{qp} C_{pj}\biggr)$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="133" HEIGHT="75" ALIGN="MIDDLE" BORDER="0"
+ SRC="img581.gif"
+ ALT="$\displaystyle = \sum_{q=1}^k A_{iq} [BC]_{qj}$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><IMG
+ WIDTH="108" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img582.gif"
+ ALT="$\displaystyle = [A(BC)]_{ij}.$"></TD>
+<TD NOWRAP WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Ostale tvrdnje dokazuju se slično. &nbsp;&nbsp;&nbsp;&nbsp;<div class="dok"><B>Q.E.D.</B>
+<BR></div><p></p>
+
+<P>
+<p><HR></p>
+<arrow class=left> </arrow> <A NAME="tex2html566"
+  HREF="node25.html">Množenje matrice skalarom</A> &nbsp; &nbsp;
+<arrow class=up> </arrow> <A NAME="tex2html572"
+  HREF="node23.html">Matrice</A> &nbsp; &nbsp;
+<arrow class=right> </arrow> <A NAME="tex2html574"
+  HREF="node27.html">Nul-matrica i jedinična matrica</A>  
+
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>
