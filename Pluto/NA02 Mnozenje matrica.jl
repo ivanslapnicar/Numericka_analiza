@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.19.9
+# v0.19.20
 
 using Markdown
 using InteractiveUtils
@@ -262,7 +262,7 @@ end
 begin
 	import Random
 	Random.seed!(123)
-	n₁=512
+	n₁=1024
 	A₁=rand(n₁,n₁)
 	B₁=rand(n₁,n₁)
 end
@@ -275,7 +275,8 @@ end
 @which A₁*B₁
 
 # ╔═╡ 698da56b-ed97-4e26-8456-403080e095e3
-operacija_u_sekundi=(2*n₁^3)/0.014
+# ~ 5 Gfglops
+operacija_u_sekundi=(2*n₁^3)/0.06
 
 # ╔═╡ ea827322-031d-42b5-aafd-10c2d12fa469
 md"""
@@ -283,7 +284,7 @@ __Zadatak.__ Izračunajte najveći $n$ za koji tri kvadratne $n\times n$ matrice
 """
 
 # ╔═╡ 7dc0b94c-4955-4eef-85ee-c5c65d7ec6e2
-1/0.014
+0.5/0.0075
 
 # ╔═╡ 2015d3fc-37d2-43ee-99da-fe7029b73ee4
 md"""
@@ -327,7 +328,7 @@ end
 # ╔═╡ 6fc4fe72-e7ac-4c14-aa9c-37a5459d7004
 begin
 	# Probajte k,l=32,16 i k,l=64,8. Izvršite dva puta.
-	k,l=64,8
+	k,l=64,16
 	Ab=[rand(k,k) for i=1:l, j=1:l]
 	Bb=[randn(k,k) for i=1:l, j=1:l]
 end
@@ -399,14 +400,178 @@ i relativnu pogrešku
 $$\frac{|fl(x\cdot y)-x\cdot y|}{|x\cdot y|}\leq O(n\varepsilon) \frac{|x|\cdot |y|}{|x\cdot y|}$$
 
 Ako su vektori $x$ i $y$ gotovo okomiti, relativna pogreška može biti velika.
+"""
 
+# ╔═╡ dbefde6e-998a-4b8e-b923-884d59e172f1
+md"
+Dokažimo  __egzaktnu__ varijantu ocjene (1). 
+
+__Lema 1__ [MC, Poglavlje 2.7] Ako je $n \varepsilon \leq 0.01$, onda je 
+
+$$
+|fl(x\cdot y)-x\cdot y| \leq 1.01 n\varepsilon  |x|\cdot |y|. \tag{2}$$
+
+Za dokaz Leme 1 potreban bnam je sljedeći rezultat [ASNA, p. 68]:
+
+__Lema 2__ Ako je $|\delta_i|\leq \varepsilon$ i $n\varepsilon \leq 0.01$, onda je 
+
+$$
+\prod_{i=1}^n (1+\delta_i) = 1+\eta_n, \qquad |\eta_n|\leq 1.01n\varepsilon.$$  
+
+_Dokaz:_ U dokazu koristimo činjenicu da je $1+x\leq e^x$ za mali $x\geq 0$ i razvoj funkcije $e^x$ u Taylorov red.  $\square$
+"
+
+# ╔═╡ eabdfa6d-b09b-4322-bfc8-d9871bf596e8
+md"
+_Dokaz Leme 1:_  Označimo
+
+$$
+s_p=fl(\sum_{k=1}^p x_k\,  y_k).$$
+
+Ako koristimo standardni algoritam, za svaki $p=2:n$ vrijedi
+
+$$
+s_p=fl(s_{p-1}+fl(x_p\, y_p))=(s_{p-1}+x_p\, y_p(1+\delta_p))(1+\epsilon_p),\quad
+|\delta_p|,|\epsilon_p|\leq \varepsilon.$$
+
+Posebno,
+
+$$
+s_1=x_1\, y_1(1+\delta_1),\qquad |\delta_1|\leq \varepsilon,$$
+
+$$
+s_2=fl(s_1+fl(x_2\, y_2))=(s_1+x_2\, y_2(1+\delta_2))(1+\epsilon_2),\quad 
+|\delta_2|,|\epsilon_2|\leq \varepsilon,$$
+
+$$
+s_3=fl(s_2+fl(x_3\, y_3))=(s_2+x_3\, y_3(1+\delta_3))(1+\epsilon_3),\quad 
+|\delta_3|,|\epsilon_3|\leq \varepsilon.$$
+"
+
+# ╔═╡ edc3dd30-4da8-48a3-83a2-0d6d3aa6debd
+md"
+Dakle,
+
+$$
+s_3=[(s_1+x_2\, y_2(1+\delta_2))(1+\varepsilon_2)+x_3\, y_3(1+\delta_3)](1+\varepsilon_3)$$
+
+ili, uz $\epsilon_1=0$,
+
+$$
+s_3=x_1\, y_1(1+\delta_1)(1+\epsilon_1)(1+\epsilon_2)(1+\epsilon_3)+
+x_2\, y_2 (1+\delta_2)(1+\epsilon_2)(1+\epsilon_3)+x_3\, y_3(1+\delta_3)(1+\epsilon_3).$$
+
+Indukcijom slijedi
+
+$$
+s_n=fl(x\cdot y)=\sum_{k=1}^n x_k\, y_k (1+\gamma_k),$$
+
+gdje je
+
+$$
+(1+\gamma_k)=(1+\delta_k)\prod_{j=k}^n (1+\epsilon_j).$$
+
+Prema tome vrijedi
+
+$$
+fl(x\cdot y)=x\cdot y+\sum_{k=1}^n x_k\, y_k \gamma_k,$$
+
+pa je
+
+$$
+|fl(x\cdot y)-x\cdot y|\leq\sum_{k=1}^n |x_k| |y_k| |\gamma_k|.$$
+
+Prema Lemi 2 je $|\gamma_k|\leq 1.01 n\varepsilon$ za svaki $k$, pa ocjena (2) slijedi. $\square$
+"
+
+# ╔═╡ 7daface9-5571-41b1-a467-4b4936eeed08
+md"""
+Ocjenu iz Leme 2 možemop zapisati i na slijedeće načine:
+
+$$
+|fl(x\cdot y)-x\cdot y| \leq n\varepsilon  |x|\cdot |y| +O(\varepsilon^2)$$, 
+
+$$
+|fl(x\cdot y)-x\cdot y| \leq \phi(n)\varepsilon  |x|\cdot |y|,$$
+
+gdje je $\phi(n)$ "umjerena" funkcija od $n$, i
+
+$$
+|fl(x\cdot y)-x\cdot y| \leq c\, n\varepsilon  |x|\cdot |y|$$
+
+gdje je $c$ konstanta reda veličine jedan.
+"""
+
+# ╔═╡ 009af427-b54e-406b-a6f2-ba9f9589e2e5
+md"
+## `_axpy()`
+
+Vrijedi
+
+$$
+fl(y+\alpha x)=y+\alpha x+z,\quad |z|\leq\varepsilon(|y|+2|\alpha x|)+O(\varepsilon^2).$$
+"
+
+# ╔═╡ 0e746d31-8024-4f04-acc8-b87d0ee9c388
+md"
+## Vanjski produkt
+
+Vrijedi
+
+$$
+fl(C+uv^T)=C+uv^T+E,\quad |E|\leq \varepsilon (|C|+2|uv^T|)+O(\varepsilon^2).$$
+"
+
+# ╔═╡ 1abeedfa-325e-498a-99a5-365d8cb744c1
+md"
+## Spremanje matrice u memoriju
+
+Zbog
+
+$$
+[fl(A)]_{ij}=a_{ij}(1+\epsilon_{ij}), \quad |\epsilon_{ij}|\leq \varepsilon,$$
+
+vrijedi
+
+$$|fl(A)-A|\leq \varepsilon|A|,$$
+
+odnosno
+
+$$\|fl(A)-A\|_1\leq \varepsilon\|A\|_1.$$
+"
+
+# ╔═╡ fbd0fb02-2060-437c-b1be-62cf12a530dc
+md"
+## Množenje matrice skalarom
+
+$$
+fl(\alpha A)=\alpha A+E,\quad |E|\leq \varepsilon |\alpha A|.$$
+"
+
+# ╔═╡ 7234f15a-b809-4cb4-a9ec-788cf8b09cb6
+md"
+## Zbrajanje matrica
+
+$$fl(A+B)=(A+B)+E,\quad |E|\leq \varepsilon(|A|+|B|).$$
+"
+
+# ╔═╡ f36d6407-d921-4c80-8af3-3f8845be3f9c
+md"
 ## Množenje matrica
 
-Za matrice $A$ i $B$ reda $n$ formula (1) daje
+Za sva tri načina množenja matrioca vrijedi
+
+$$
+fl(A\cdot B)=A\cdot B+E,\quad |E|\leq n\varepsilon |A|\cdot |B|+O(\varepsilon^2),$$
+
+ili, u normi,
+
+$$\|fl(A\cdot B) -A\cdot B\|_1 \leq n\varepsilon \|A\|_1 \|B\|_1 +O(\varepsilon^2),$$
+
+ili
 
 $$|fl(A\cdot B) -A\cdot B| \leq O(n\varepsilon) |A|\cdot |B|.$$
-
-"""
+"
 
 # ╔═╡ 1ff4efee-a106-46b4-855d-7b76265cb050
 begin
@@ -494,7 +659,7 @@ uuid = "2a0f44e3-6c83-55bd-87e4-b1978d98bd5f"
 [[CompilerSupportLibraries_jll]]
 deps = ["Artifacts", "Libdl"]
 uuid = "e66e0078-7015-5450-92f7-15fbd957f2ae"
-version = "0.5.2+0"
+version = "1.0.1+0"
 
 [[Dates]]
 deps = ["Printf"]
@@ -610,6 +775,16 @@ version = "5.1.1+0"
 # ╟─a7de05aa-0ed1-4e11-88de-de70d629d30b
 # ╠═209d4041-a0d9-455d-a28d-1a7cc632082f
 # ╟─3b096734-bd85-4e21-ad81-6c1ed99e2f43
+# ╟─dbefde6e-998a-4b8e-b923-884d59e172f1
+# ╟─eabdfa6d-b09b-4322-bfc8-d9871bf596e8
+# ╟─edc3dd30-4da8-48a3-83a2-0d6d3aa6debd
+# ╟─7daface9-5571-41b1-a467-4b4936eeed08
+# ╟─009af427-b54e-406b-a6f2-ba9f9589e2e5
+# ╟─0e746d31-8024-4f04-acc8-b87d0ee9c388
+# ╟─1abeedfa-325e-498a-99a5-365d8cb744c1
+# ╟─fbd0fb02-2060-437c-b1be-62cf12a530dc
+# ╟─7234f15a-b809-4cb4-a9ec-788cf8b09cb6
+# ╟─f36d6407-d921-4c80-8af3-3f8845be3f9c
 # ╠═1ff4efee-a106-46b4-855d-7b76265cb050
 # ╠═1850009e-d407-46a7-be70-88fdb4a774be
 # ╠═b76c7b7c-2e9e-4985-a977-6ae52d0d4dcd
