@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.19.14
+# v0.19.20
 
 using Markdown
 using InteractiveUtils
@@ -18,10 +18,14 @@ md"""
 Za velike sustave, a posebno za sustave s malom ispunom (malo elemenata različitih od nule), te ukoliko je matrica sustava _strogo dijagonalno dominantna_ , rješenje se može brzo naći __iterativnim metodama__
 (vidi [Numerička matematika, poglavlje 3.8](http://www.mathos.unios.hr/pim/Materijali/Num.pdf)):
 
+## Kontrakcija
+
 __Definicija.__ Funkcija $F:\mathbb{R}^n\to \mathbb{R}^n$ je __kontrakcija__ ako postoji broj $q<1$ za koji vrijedi
 
 $$
 \| F(x)-F(y)\| < q\|x-y\|\qquad \forall x,y.$$
+
+## Teorem o fiksnoj točki
 
 __Banachov teorem o fiksnoj točki.__
 Ako je $F$ kontrakcija, onda niz definiran s
@@ -268,7 +272,7 @@ uuid = "2a0f44e3-6c83-55bd-87e4-b1978d98bd5f"
 [[CompilerSupportLibraries_jll]]
 deps = ["Artifacts", "Libdl"]
 uuid = "e66e0078-7015-5450-92f7-15fbd957f2ae"
-version = "0.5.2+0"
+version = "1.0.1+0"
 
 [[Dates]]
 deps = ["Printf"]

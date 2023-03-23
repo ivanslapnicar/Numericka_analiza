@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.19.14
+# v0.19.20
 
 using Markdown
 using InteractiveUtils
@@ -48,6 +48,8 @@ md"
 `cond()` računa uvjetovanost pomoću rastava singularnih vrijednosti (SVD).
 
 Umjesto toga, sustav se može riješiti pomoću LAPack-ove ekspertne funkcije [__gesvx()__](https://www.intel.com/content/www/us/en/develop/documentation/onemkl-developer-reference-c/top/lapack-routines/lapack-linear-equation-routines/lapack-linear-equation-driver-routines/gesvx.html#gesvx), koja uz malo dpodatnog vremena računa procjenu inverzne kondicije u 1-normi. Za proračun kondicije koristi se izračunati LU rastav i funckija [__gecon()__](https://www.intel.com/content/www/us/en/develop/documentation/onemkl-developer-reference-c/top/lapack-routines/lapack-linear-equation-routines/lapack-linear-equation-computational-routines/estimate-the-condition-number-lapack-computation/gecon.html#gecon).
+
+Ekvivalentno, možemo računati kondiciju u 1-normi, `cond(A,1)`.
 "
 
 # ╔═╡ c83d84e4-4f4d-4a97-b50f-1a5805e54c32
@@ -70,7 +72,7 @@ Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
 PLUTO_MANIFEST_TOML_CONTENTS = """
 # This file is machine-generated - editing it directly is not advised
 
-julia_version = "1.8.2"
+julia_version = "1.8.5"
 manifest_format = "2.0"
 project_hash = "f479011a250b0799ce99df8978eea5d0a8ab069c"
 
@@ -80,7 +82,7 @@ uuid = "56f22d72-fd6d-98f1-02f0-08ddc0907c33"
 [[deps.CompilerSupportLibraries_jll]]
 deps = ["Artifacts", "Libdl"]
 uuid = "e66e0078-7015-5450-92f7-15fbd957f2ae"
-version = "0.5.2+0"
+version = "1.0.1+0"
 
 [[deps.Libdl]]
 uuid = "8f399da3-3557-5675-b5ff-fb832c97cbdb"
