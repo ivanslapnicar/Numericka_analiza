@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.19.9
+# v0.19.22
 
 using Markdown
 using InteractiveUtils
@@ -391,7 +391,7 @@ bitstring(-2)
 bitstring(-0.0)
 
 # ╔═╡ d7160016-c046-4ab8-b349-27f7a209d853
-bitstring(-0.0)
+bitstring(0.0)
 
 # ╔═╡ 10dcdca1-71fe-42eb-8f04-6122b3a03666
 bitstring(1.0)
