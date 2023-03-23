@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.19.14
+# v0.19.20
 
 using Markdown
 using InteractiveUtils
@@ -25,6 +25,10 @@ google (i ostali)
 * [50 milijardi stranica](http://www.worldwidewebsize.com/), [3.5 milijardi pretraga dnevno](http://www.internetlivestats.com/google-search-statistics/)
 * __PageRank__
 * povijest, kontekst - kolačići, spremanja podataka (o Vama), [200+ parametara](http://backlinko.com/google-ranking-factors)
+
+Nakon doba slijedilo je __doba preporuka__, a od prošle godine imamo i __doba AI__ (ima li bolje ime?). 
+
+ __age of search__ $\to$ __age of recommendations__ $\to$ __age of AI__
 
 # Matrica prijelaza i graf
 
@@ -133,6 +137,11 @@ function PageRank(G₁::SparseMatrixCSC{Float64,Int64},steps::Int)
 	return x
 end
 
+# ╔═╡ 9ddf938f-7313-4b69-9d48-98c1d342cd27
+md"
+__Potrebno je razumijeti CSC format i njegovo korištenje.__
+"
+
 # ╔═╡ 739c238c-03db-4ee6-9fb7-f8e5b93282f8
 fieldnames(typeof(G))
 
@@ -219,7 +228,7 @@ uuid = "2a0f44e3-6c83-55bd-87e4-b1978d98bd5f"
 [[CompilerSupportLibraries_jll]]
 deps = ["Artifacts", "Libdl"]
 uuid = "e66e0078-7015-5450-92f7-15fbd957f2ae"
-version = "0.5.2+0"
+version = "1.0.1+0"
 
 [[Dates]]
 deps = ["Printf"]
@@ -348,6 +357,7 @@ version = "5.1.1+0"
 # ╠═9d3b7528-4035-4304-bee9-a9407bced36f
 # ╟─90edb7b5-c882-41a6-a48b-ba15373f2283
 # ╠═fece3020-0f09-11eb-0f69-237286bd58af
+# ╟─9ddf938f-7313-4b69-9d48-98c1d342cd27
 # ╠═739c238c-03db-4ee6-9fb7-f8e5b93282f8
 # ╠═6c6a8ce2-5483-45ed-b5c8-61e924b3eb1c
 # ╠═cb04da5e-0f08-11eb-21b9-8fdaea539145

@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.19.14
+# v0.19.20
 
 using Markdown
 using InteractiveUtils
@@ -40,7 +40,7 @@ Indukcija daje sljedeći algoritam:
 """
 
 # ╔═╡ a808c71a-97bb-4106-89fd-dcc0e902d2cb
-function mychol(A₁::Matrix{T}) where T
+function chol(A₁::Matrix{T}) where T
     A=copy(A₁)
     n,m=size(A)
     for k=1:n
@@ -84,16 +84,6 @@ C.L
 # Residual 
 L'*L-A
 
-# ╔═╡ 286a74e5-6a3b-41ee-a227-cb5d88dd027e
-# Naša funkcija
-L₁=mychol(A)
-
-# ╔═╡ 2e54b52f-2ba0-4de0-a7bf-73bf1c0d5b6f
-L₁'*L₁-A
-
-# ╔═╡ 7decf367-ee06-401c-b742-b910e4b647a9
-L-L₁
-
 # ╔═╡ af9b1080-8d4f-11eb-02e4-97071de47db5
 md"
 ## Cholesky rastav s pivotiranjem
@@ -122,7 +112,7 @@ md"
 "
 
 # ╔═╡ 72bb3568-0528-49fa-96af-65c3e1da00cf
-function mycholb(A₁::Matrix{T}) where T
+function chol(A₁::Matrix{Matrix{T}}) where T
     A=copy(A₁)
     n,m=size(A)
     for k=1:n
@@ -140,6 +130,16 @@ function mycholb(A₁::Matrix{T}) where T
     return triu(A)
 end
 
+# ╔═╡ 286a74e5-6a3b-41ee-a227-cb5d88dd027e
+# Naša funkcija
+L₁=chol(A)
+
+# ╔═╡ 2e54b52f-2ba0-4de0-a7bf-73bf1c0d5b6f
+L₁'*L₁-A
+
+# ╔═╡ 7decf367-ee06-401c-b742-b910e4b647a9
+L-L₁
+
 # ╔═╡ ca0eb511-ba7b-42b4-89b3-8c9eb90f8fb7
 # Generirajmo matricu
 begin
@@ -152,7 +152,7 @@ end
 Ab[1,1]
 
 # ╔═╡ dcdfcda1-74d5-42a9-bec8-0a09d87a43c5
-Lb=mycholb(Ab)
+Lb=chol(Ab)
 
 # ╔═╡ 9024604d-88f7-4098-a0eb-474161bed4fe
 md"
@@ -182,7 +182,7 @@ Ab₀=unblock(Ab);
 cholesky(Ab₀);
 
 # ╔═╡ 761841cb-536f-4140-9854-d31b51669c2e
-@time mychol(Ab₀)
+@time chol(Ab₀)
 
 # ╔═╡ bfd53356-1cce-47d6-b99e-4930a2a26b6d
 md"
@@ -214,7 +214,7 @@ uuid = "56f22d72-fd6d-98f1-02f0-08ddc0907c33"
 [[CompilerSupportLibraries_jll]]
 deps = ["Artifacts", "Libdl"]
 uuid = "e66e0078-7015-5450-92f7-15fbd957f2ae"
-version = "0.5.2+0"
+version = "1.0.1+0"
 
 [[Libdl]]
 uuid = "8f399da3-3557-5675-b5ff-fb832c97cbdb"
