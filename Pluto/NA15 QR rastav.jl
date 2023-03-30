@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.19.14
+# v0.19.22
 
 using Markdown
 using InteractiveUtils
@@ -123,6 +123,7 @@ end
 begin
 	Random.seed!(123)
 	A=randn(8,5)
+	# A[:,3]=A[:,4]+1e-5*rand(8)
 end
 
 # ╔═╡ b8994eec-d651-4921-b1a3-184a029e83b7
@@ -139,7 +140,7 @@ R
 
 # ╔═╡ 9038e960-55c0-437a-a9fd-73f48860a36a
 # Rezidual
-A-Q*R
+norm(A-Q*R)
 
 # ╔═╡ b9bf7235-dcb8-47bf-8c3f-1179ba9e08e0
 md"""
@@ -183,8 +184,20 @@ Hx=x-\frac{2(v^Tx)}{v^Tv}v=x-\frac{2 (v\cdot x)}{v\cdot v}v$$
 za koju je potrebno $O(6m)$ operacija.
 """
 
+# ╔═╡ 5a42e1e7-7704-42d1-bbca-2eb09cf80cbc
+a=[5;1]
+
+# ╔═╡ 7040f957-6000-4be5-8fa9-314a6140c0d8
+ϕ=0.3
+
+# ╔═╡ 0c8b4d0e-62c0-4ee5-999f-274ab410b305
+g=[cos(ϕ) sin(ϕ);sin(ϕ) -cos(ϕ)]
+
+# ╔═╡ 26ab8ae1-3118-41aa-bb55-4f122dd62150
+g*a
+
 # ╔═╡ 4a371793-1d5c-413f-8e89-dce986c972ef
-function HouseholderVector(x::Array)
+function HouseholderVector(x::Vector)
     # Računa v
     v=copy(x)
     v[1]=x[1]+sign(x[1])*norm(x)
@@ -261,6 +274,9 @@ pa se može utvrditi i __numerički rang__ matrice.
 # Izračunajmo QR objekt
 F=qr(A)
 
+# ╔═╡ 90ad6140-fce2-457f-98fc-aecccab86589
+Matrix(F.Q)
+
 # ╔═╡ 64e052c2-b798-4fb8-80fd-c018df2c8625
 F.Q'*A
 
@@ -269,6 +285,9 @@ F.Q*F.R
 
 # ╔═╡ 6bf029d7-68e2-47a4-87b9-8f66154933d4
 Fₚ=qr(A,Val(true))
+
+# ╔═╡ 3406770c-943e-4d44-8e42-d3533621cf22
+A
 
 # ╔═╡ 68d0e359-9fb9-4a9b-9f13-e8039597e948
 # Vektor pivotiranja
@@ -370,7 +389,7 @@ PlutoUI = "~0.7.21"
 PLUTO_MANIFEST_TOML_CONTENTS = """
 # This file is machine-generated - editing it directly is not advised
 
-julia_version = "1.8.2"
+julia_version = "1.8.5"
 manifest_format = "2.0"
 project_hash = "105dc9f7ecd9d6f305e99cba5cba6828f8af817c"
 
@@ -393,7 +412,7 @@ uuid = "2a0f44e3-6c83-55bd-87e4-b1978d98bd5f"
 [[deps.CompilerSupportLibraries_jll]]
 deps = ["Artifacts", "Libdl"]
 uuid = "e66e0078-7015-5450-92f7-15fbd957f2ae"
-version = "0.5.2+0"
+version = "1.0.1+0"
 
 [[deps.Dates]]
 deps = ["Printf"]
@@ -587,6 +606,10 @@ version = "17.4.0+0"
 # ╠═9038e960-55c0-437a-a9fd-73f48860a36a
 # ╟─b9bf7235-dcb8-47bf-8c3f-1179ba9e08e0
 # ╟─3fd60d80-25d7-45e2-9776-7250841e8f74
+# ╠═5a42e1e7-7704-42d1-bbca-2eb09cf80cbc
+# ╠═7040f957-6000-4be5-8fa9-314a6140c0d8
+# ╠═0c8b4d0e-62c0-4ee5-999f-274ab410b305
+# ╠═26ab8ae1-3118-41aa-bb55-4f122dd62150
 # ╠═4a371793-1d5c-413f-8e89-dce986c972ef
 # ╠═814c6dd6-faa1-4211-8f64-bf349624dc37
 # ╠═e282bbd3-6505-4afc-b304-3c327fa5db62
@@ -599,10 +622,12 @@ version = "17.4.0+0"
 # ╠═3ceae442-3a07-4400-933c-a04bdc8ee742
 # ╟─ef4702ee-44cc-49d8-85bb-39249c431036
 # ╠═4587b182-80fd-4bd7-87af-17074ea7c9d9
+# ╠═90ad6140-fce2-457f-98fc-aecccab86589
 # ╠═f944cdbe-794c-405e-a215-687cbb12b22b
 # ╠═64e052c2-b798-4fb8-80fd-c018df2c8625
 # ╠═ef2ebf49-e7b2-4300-9a5c-3a2e42251e74
 # ╠═6bf029d7-68e2-47a4-87b9-8f66154933d4
+# ╠═3406770c-943e-4d44-8e42-d3533621cf22
 # ╠═68d0e359-9fb9-4a9b-9f13-e8039597e948
 # ╠═dcc30d6f-3170-4e6d-ad51-741bce871a42
 # ╠═ad9107ee-2abd-4dd7-b821-2e0a4bae4374

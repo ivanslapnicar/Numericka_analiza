@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.19.14
+# v0.19.22
 
 using Markdown
 using InteractiveUtils
@@ -74,7 +74,7 @@ end
 
 # ╔═╡ 1b894260-f180-4407-8c68-ad93ad40c55b
 # Kvaliteta prilagodbe
-sqrt(norm(A*[k;l]-y)/norm(y))
+norm(A*[k;l]-y)/norm(y)
 
 # ╔═╡ 986e6cb9-4a13-49e2-9891-29020262d002
 md"""
@@ -116,7 +116,7 @@ end
 
 # ╔═╡ 65f7a8eb-df16-4a01-91ff-0214ac092e61
 # Kvaliteta prilagodbe
-sqrt(norm(A₁*[a;b;c]-y₁)/norm(y₁))
+norm(A₁*[a;b;c]-y₁)/norm(y₁)
 
 # ╔═╡ b6166388-1d3b-4dce-969a-b7fce38426c1
 md"""
@@ -159,12 +159,12 @@ begin
 	t=[1750,1800,1850,1900,1950,1999,2008,2010,2012]
 	P=[791,978,1262,1650,2521,5978,6707,6896,7052]
 	Aₚ=[t ones(Int,length(t))]
-	(kₚ,C)=Aₚ\log.(P)
+	(kₚ,logC)=Aₚ\log.(P)
 end
 
 # ╔═╡ f1b3366d-c0c2-499c-86b7-c34f86d7998a
 # Vrijednosti na krivulji
-P₁(t)=exp(C)*exp(kₚ*t)
+P₁(t)=exp(logC)*exp(kₚ*t)
 
 # ╔═╡ 998e1154-e985-49a9-8cce-4b436a887e2f
 begin
@@ -180,7 +180,7 @@ __Pitanje.__ Zbog čega stvarna krivulja populacije ima lom?
 
 # ╔═╡ 1ac0491b-6cc9-4a14-af99-c6c6defc3074
 # Predvidimo populaciju 2021 godine
-P₁(2050)
+P₁(2023)
 
 # ╔═╡ 23e34ea5-8dc6-4444-bcd6-94229abad290
 md"
@@ -196,8 +196,11 @@ begin
 	plot!(t->t,P₂,t[5],t[end],label="Regresijska krivulja")
 end
 
+# ╔═╡ 73a285fe-2a4f-4944-bcf1-d2c80ccef449
+k₂
+
 # ╔═╡ e8911abc-74bd-4daa-9336-5b10270616b1
-P₂(2050)
+P₂(2023)
 
 # ╔═╡ 00000000-0000-0000-0000-000000000001
 PLUTO_PROJECT_TOML_CONTENTS = """
@@ -215,7 +218,7 @@ PlutoUI = "~0.7.21"
 PLUTO_MANIFEST_TOML_CONTENTS = """
 # This file is machine-generated - editing it directly is not advised
 
-julia_version = "1.8.2"
+julia_version = "1.8.5"
 manifest_format = "2.0"
 project_hash = "3fb0dbd44729a733756329360f0a30ced5295406"
 
@@ -248,7 +251,7 @@ uuid = "6e34b625-4abd-537c-b88f-471c36dfa7a0"
 version = "1.0.8+0"
 
 [[deps.Cairo_jll]]
-deps = ["Artifacts", "Bzip2_jll", "Fontconfig_jll", "FreeType2_jll", "Glib_jll", "JLLWrappers", "LZO_jll", "Libdl", "Pixman_jll", "Pkg", "Xorg_libXext_jll", "Xorg_libXrender_jll", "Zlib_jll", "libpng_jll"]
+deps = ["Artifacts", "Bzip2_jll", "CompilerSupportLibraries_jll", "Fontconfig_jll", "FreeType2_jll", "Glib_jll", "JLLWrappers", "LZO_jll", "Libdl", "Pixman_jll", "Pkg", "Xorg_libXext_jll", "Xorg_libXrender_jll", "Zlib_jll", "libpng_jll"]
 git-tree-sha1 = "4b859a208b2397a7a623a03449e4636bdb17bcf2"
 uuid = "83423d85-b0ee-5818-9007-b63ccbeb887a"
 version = "1.16.1+1"
@@ -292,7 +295,7 @@ version = "3.40.0"
 [[deps.CompilerSupportLibraries_jll]]
 deps = ["Artifacts", "Libdl"]
 uuid = "e66e0078-7015-5450-92f7-15fbd957f2ae"
-version = "0.5.2+0"
+version = "1.0.1+0"
 
 [[deps.Contour]]
 deps = ["StaticArrays"]
@@ -598,9 +601,9 @@ version = "1.42.0+0"
 
 [[deps.Libiconv_jll]]
 deps = ["Artifacts", "JLLWrappers", "Libdl", "Pkg"]
-git-tree-sha1 = "42b62845d70a619f063a7da093d995ec8e15e778"
+git-tree-sha1 = "c7cb1f5d892775ba13767a87c7ada0b980ea0a71"
 uuid = "94ce4f54-9a6c-5748-9c1c-f9c7231a4531"
-version = "1.16.1+1"
+version = "1.16.1+2"
 
 [[deps.Libmount_jll]]
 deps = ["Artifacts", "JLLWrappers", "Libdl", "Pkg"]
@@ -1151,6 +1154,7 @@ version = "0.9.1+5"
 # ╠═1ac0491b-6cc9-4a14-af99-c6c6defc3074
 # ╟─23e34ea5-8dc6-4444-bcd6-94229abad290
 # ╠═52e78105-19f7-4830-bf59-4e336daa9272
+# ╠═73a285fe-2a4f-4944-bcf1-d2c80ccef449
 # ╠═e8911abc-74bd-4daa-9336-5b10270616b1
 # ╟─00000000-0000-0000-0000-000000000001
 # ╟─00000000-0000-0000-0000-000000000002

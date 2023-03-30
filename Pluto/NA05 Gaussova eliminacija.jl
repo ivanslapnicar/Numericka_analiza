@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.19.14
+# v0.19.22
 
 using Markdown
 using InteractiveUtils
@@ -655,7 +655,7 @@ $$\hat L\cdot \hat U = A+\delta A$$
 
 gdje je (nejednakost se čita po elementima matrica, $\varepsilon$ je sada točnost stroja)
 
-$$| \delta A|\leq 3(n-1) \varepsilon (|A|+|\hat L| \cdot |\hat U|) +O(\varepsilon^2).$$
+$$| \delta A|\leq 2(n-1) \varepsilon (|A|+|\hat L| \cdot |\hat U|) +O(\varepsilon^2).$$
 
 Zanemarivanje člana $O(\varepsilon^2)$ i prelazak na normu daju
 
@@ -736,9 +736,11 @@ xᵤ,cond(Aᵤ)
 
 # ╔═╡ af144500-0df2-11eb-37e0-af9d5cd06c65
 A₅=[1e-4 1e-4;1 2]
+# A₅=[1 1;1e-4 2e-4]
 
 # ╔═╡ af16b600-0df2-11eb-2852-7f1e61314674
 b₅=[1e-4;3]
+# b₅=[1;3e-4]
 
 # ╔═╡ af2b7680-0df2-11eb-2ff2-6b188cbd6b7f
 x₅=A₅\b₅
@@ -873,7 +875,7 @@ uuid = "2a0f44e3-6c83-55bd-87e4-b1978d98bd5f"
 [[CompilerSupportLibraries_jll]]
 deps = ["Artifacts", "Libdl"]
 uuid = "e66e0078-7015-5450-92f7-15fbd957f2ae"
-version = "0.5.2+0"
+version = "1.0.1+0"
 
 [[Dates]]
 deps = ["Printf"]

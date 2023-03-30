@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.19.14
+# v0.19.22
 
 using Markdown
 using InteractiveUtils
@@ -113,7 +113,7 @@ x=(A'*A)\(A'*b)
 
 # ╔═╡ 49874317-1bb6-4882-ae83-4644094bf87e
 # Kvaliteta prilagodbe
-q=√(norm(A*x-b)/norm(b))
+q=norm(A*x-b)/norm(b)
 
 # ╔═╡ 1052a0b7-748d-46d5-a5fb-9d3b1ba2b65e
 md"
@@ -142,7 +142,7 @@ end
 x₁=A₁\b₁
 
 # ╔═╡ 73d14810-4471-40ad-b1ca-f1d210ad2eb2
-q₁=√(norm(A₁*x₁-b₁)/norm(b₁))
+q₁=norm(A₁*x₁-b₁)/norm(b₁)
 
 # ╔═╡ f7f6d6b8-44cc-4337-a601-3c4c5ef3fb77
 md"""
@@ -243,7 +243,7 @@ PlutoUI = "~0.7.21"
 PLUTO_MANIFEST_TOML_CONTENTS = """
 # This file is machine-generated - editing it directly is not advised
 
-julia_version = "1.8.2"
+julia_version = "1.8.5"
 manifest_format = "2.0"
 project_hash = "105dc9f7ecd9d6f305e99cba5cba6828f8af817c"
 
@@ -266,7 +266,7 @@ uuid = "2a0f44e3-6c83-55bd-87e4-b1978d98bd5f"
 [[deps.CompilerSupportLibraries_jll]]
 deps = ["Artifacts", "Libdl"]
 uuid = "e66e0078-7015-5450-92f7-15fbd957f2ae"
-version = "0.5.2+0"
+version = "1.0.1+0"
 
 [[deps.Dates]]
 deps = ["Printf"]

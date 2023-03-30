@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.19.20
+# v0.19.22
 
 using Markdown
 using InteractiveUtils
@@ -38,6 +38,16 @@ Vidimo da treba vrijediti $\alpha>0$. Također, matrica $B$ je simetrična pa je
 Indukcija daje sljedeći algoritam:
 
 """
+
+# ╔═╡ ff3639d7-c523-49fe-820c-0334d5861630
+begin
+	n=100
+	D=randn(n,n)
+	D=D*D'
+	println(norm(D-D'))
+	issymmetric(D)
+	isposdef(D)
+end
 
 # ╔═╡ a808c71a-97bb-4106-89fd-dcc0e902d2cb
 function chol(A₁::Matrix{T}) where T
@@ -237,6 +247,7 @@ version = "5.1.1+0"
 # ╔═╡ Cell order:
 # ╠═c162d7c0-0efc-11eb-16ad-3d5ff641f6e0
 # ╟─70942b12-0bd1-44e6-8e04-862d4948e8a0
+# ╠═ff3639d7-c523-49fe-820c-0334d5861630
 # ╠═a808c71a-97bb-4106-89fd-dcc0e902d2cb
 # ╠═ea4f0c1f-55e7-4423-a8df-b9de1889e511
 # ╠═26ab5250-1377-11eb-2824-69646a3f5444

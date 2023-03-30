@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.19.20
+# v0.19.22
 
 using Markdown
 using InteractiveUtils
@@ -47,7 +47,7 @@ b[1:3]
 md"
 `cond()` računa uvjetovanost pomoću rastava singularnih vrijednosti (SVD).
 
-Umjesto toga, sustav se može riješiti pomoću LAPack-ove ekspertne funkcije [__gesvx()__](https://www.intel.com/content/www/us/en/develop/documentation/onemkl-developer-reference-c/top/lapack-routines/lapack-linear-equation-routines/lapack-linear-equation-driver-routines/gesvx.html#gesvx), koja uz malo dpodatnog vremena računa procjenu inverzne kondicije u 1-normi. Za proračun kondicije koristi se izračunati LU rastav i funckija [__gecon()__](https://www.intel.com/content/www/us/en/develop/documentation/onemkl-developer-reference-c/top/lapack-routines/lapack-linear-equation-routines/lapack-linear-equation-computational-routines/estimate-the-condition-number-lapack-computation/gecon.html#gecon).
+Umjesto toga, sustav se može riješiti pomoću LAPack-ove ekspertne funkcije [__gesvx()__](https://www.intel.com/content/www/us/en/develop/documentation/onemkl-developer-reference-c/top/lapack-routines/lapack-linear-equation-routines/lapack-linear-equation-driver-routines/gesvx.html#gesvx), koja uz malo dodatnog vremena računa procjenu inverzne kondicije u 1-normi. Za proračun kondicije koristi se izračunati LU rastav i funkcija [__gecon()__](https://www.intel.com/content/www/us/en/develop/documentation/onemkl-developer-reference-c/top/lapack-routines/lapack-linear-equation-routines/lapack-linear-equation-computational-routines/estimate-the-condition-number-lapack-computation/gecon.html#gecon).
 
 Ekvivalentno, možemo računati kondiciju u 1-normi, `cond(A,1)`.
 "
