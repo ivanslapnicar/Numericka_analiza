@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.19.14
+# v0.19.22
 
 using Markdown
 using InteractiveUtils
@@ -31,6 +31,9 @@ Dat ćemo primjer kompresije slike.
 # ╔═╡ 3d91d5e7-e134-464a-a0a4-032a28254715
 img=load("files/P8040001a.jpg")
 
+# ╔═╡ 87cf62e0-eabc-48ae-89cc-c657603270a3
+size(img)
+
 # ╔═╡ 464d999f-f530-4cc0-b9c8-fa094d8a138c
 # Opis podataka
 typeof(img)
@@ -53,7 +56,7 @@ begin
 end
 
 # ╔═╡ c1cbc1a9-0a1e-4ac2-90fb-e9ce3c20be62
-colorview(Gray,Blue)
+colorview(Gray,Red)
 
 # ╔═╡ c0cd1d7e-1fb9-4ae8-aa8d-794c36b85837
 begin
@@ -118,7 +121,7 @@ PlutoUI = "~0.7.23"
 PLUTO_MANIFEST_TOML_CONTENTS = """
 # This file is machine-generated - editing it directly is not advised
 
-julia_version = "1.8.2"
+julia_version = "1.8.5"
 manifest_format = "2.0"
 project_hash = "1fac1c7bcd6e8504fb709788d460d5556c1f9870"
 
@@ -186,7 +189,7 @@ uuid = "fa961155-64e5-5f13-b03f-caf6b980ea82"
 version = "0.4.1"
 
 [[deps.Cairo_jll]]
-deps = ["Artifacts", "Bzip2_jll", "Fontconfig_jll", "FreeType2_jll", "Glib_jll", "JLLWrappers", "LZO_jll", "Libdl", "Pixman_jll", "Pkg", "Xorg_libXext_jll", "Xorg_libXrender_jll", "Zlib_jll", "libpng_jll"]
+deps = ["Artifacts", "Bzip2_jll", "CompilerSupportLibraries_jll", "Fontconfig_jll", "FreeType2_jll", "Glib_jll", "JLLWrappers", "LZO_jll", "Libdl", "Pixman_jll", "Pkg", "Xorg_libXext_jll", "Xorg_libXrender_jll", "Zlib_jll", "libpng_jll"]
 git-tree-sha1 = "4b859a208b2397a7a623a03449e4636bdb17bcf2"
 uuid = "83423d85-b0ee-5818-9007-b63ccbeb887a"
 version = "1.16.1+1"
@@ -254,7 +257,7 @@ version = "3.41.0"
 [[deps.CompilerSupportLibraries_jll]]
 deps = ["Artifacts", "Libdl"]
 uuid = "e66e0078-7015-5450-92f7-15fbd957f2ae"
-version = "0.5.2+0"
+version = "1.0.1+0"
 
 [[deps.ComputationalResources]]
 git-tree-sha1 = "52cb3ec90e8a8bea0e62e275ba577ad0f74821f7"
@@ -448,9 +451,9 @@ version = "0.21.0+0"
 
 [[deps.Ghostscript_jll]]
 deps = ["Artifacts", "JLLWrappers", "Libdl", "Pkg"]
-git-tree-sha1 = "78e2c69783c9753a91cdae88a8d432be85a2ab5e"
+git-tree-sha1 = "43ba3d3c82c18d88471cfd2924931658838c9d8f"
 uuid = "61579ee1-b43e-5ca0-a5da-69d92c66a64b"
-version = "9.55.0+0"
+version = "9.55.0+4"
 
 [[deps.Glib_jll]]
 deps = ["Artifacts", "Gettext_jll", "JLLWrappers", "Libdl", "Libffi_jll", "Libiconv_jll", "Libmount_jll", "PCRE_jll", "Pkg", "Zlib_jll"]
@@ -787,9 +790,9 @@ version = "1.42.0+0"
 
 [[deps.Libiconv_jll]]
 deps = ["Artifacts", "JLLWrappers", "Libdl", "Pkg"]
-git-tree-sha1 = "42b62845d70a619f063a7da093d995ec8e15e778"
+git-tree-sha1 = "c7cb1f5d892775ba13767a87c7ada0b980ea0a71"
 uuid = "94ce4f54-9a6c-5748-9c1c-f9c7231a4531"
-version = "1.16.1+1"
+version = "1.16.1+2"
 
 [[deps.Libmount_jll]]
 deps = ["Artifacts", "JLLWrappers", "Libdl", "Pkg"]
@@ -1509,6 +1512,7 @@ version = "0.9.1+5"
 # ╟─c94e89d0-1049-4b0d-aa26-d5a1eda436b9
 # ╠═1dd2098b-8d4d-4fa4-a794-49badf9790c2
 # ╠═3d91d5e7-e134-464a-a0a4-032a28254715
+# ╠═87cf62e0-eabc-48ae-89cc-c657603270a3
 # ╠═464d999f-f530-4cc0-b9c8-fa094d8a138c
 # ╠═86818c56-6d28-463a-aa87-3c0a715ef8ce
 # ╠═ce428ce6-9bc5-4ce2-bb17-3bb8173fc937

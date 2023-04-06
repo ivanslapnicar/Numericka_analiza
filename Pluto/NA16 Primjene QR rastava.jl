@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.19.14
+# v0.19.22
 
 using Markdown
 using InteractiveUtils
@@ -100,6 +100,9 @@ begin
 	x₁=F₁.R\c₁
 end
 
+# ╔═╡ c6f175e4-75a6-4c88-bb87-e0b3ab5b0d01
+F₁.R
+
 # ╔═╡ c4762bb2-56fd-4e2a-9255-4922f41addfe
 # Ugrađena funkcija
 A₁\y₁
@@ -120,6 +123,9 @@ end
 # ╔═╡ 16461985-6cb3-4ddb-9eab-bd13917b8b69
 F₂.R
 
+# ╔═╡ 8c8bbe2e-a5d6-4cf4-8428-25e7404b4a75
+F₂.Q
+
 # ╔═╡ d01748e8-169d-4d39-bf79-90c0c0d2df56
 # Spremanje generatora
 F₂.factors
@@ -131,7 +137,7 @@ A₂
 begin
 	a=A₂[:,1]
 	v=copy(a)
-	v[1]+=norm(a)
+	v[1]-=norm(a)
 	v./=v[1]
 end
 
@@ -240,7 +246,7 @@ PlutoUI = "~0.7.23"
 PLUTO_MANIFEST_TOML_CONTENTS = """
 # This file is machine-generated - editing it directly is not advised
 
-julia_version = "1.8.2"
+julia_version = "1.8.5"
 manifest_format = "2.0"
 project_hash = "5ca7463176ee2ea76fe00f971acb0e72d2f3c253"
 
@@ -273,7 +279,7 @@ uuid = "6e34b625-4abd-537c-b88f-471c36dfa7a0"
 version = "1.0.8+0"
 
 [[deps.Cairo_jll]]
-deps = ["Artifacts", "Bzip2_jll", "Fontconfig_jll", "FreeType2_jll", "Glib_jll", "JLLWrappers", "LZO_jll", "Libdl", "Pixman_jll", "Pkg", "Xorg_libXext_jll", "Xorg_libXrender_jll", "Zlib_jll", "libpng_jll"]
+deps = ["Artifacts", "Bzip2_jll", "CompilerSupportLibraries_jll", "Fontconfig_jll", "FreeType2_jll", "Glib_jll", "JLLWrappers", "LZO_jll", "Libdl", "Pixman_jll", "Pkg", "Xorg_libXext_jll", "Xorg_libXrender_jll", "Zlib_jll", "libpng_jll"]
 git-tree-sha1 = "4b859a208b2397a7a623a03449e4636bdb17bcf2"
 uuid = "83423d85-b0ee-5818-9007-b63ccbeb887a"
 version = "1.16.1+1"
@@ -317,7 +323,7 @@ version = "3.41.0"
 [[deps.CompilerSupportLibraries_jll]]
 deps = ["Artifacts", "Libdl"]
 uuid = "e66e0078-7015-5450-92f7-15fbd957f2ae"
-version = "0.5.2+0"
+version = "1.0.1+0"
 
 [[deps.Contour]]
 deps = ["StaticArrays"]
@@ -623,9 +629,9 @@ version = "1.42.0+0"
 
 [[deps.Libiconv_jll]]
 deps = ["Artifacts", "JLLWrappers", "Libdl", "Pkg"]
-git-tree-sha1 = "42b62845d70a619f063a7da093d995ec8e15e778"
+git-tree-sha1 = "c7cb1f5d892775ba13767a87c7ada0b980ea0a71"
 uuid = "94ce4f54-9a6c-5748-9c1c-f9c7231a4531"
-version = "1.16.1+1"
+version = "1.16.1+2"
 
 [[deps.Libmount_jll]]
 deps = ["Artifacts", "JLLWrappers", "Libdl", "Pkg"]
@@ -1163,11 +1169,13 @@ version = "0.9.1+5"
 # ╟─45923270-4d63-4eaf-8d99-f9e9baab558e
 # ╠═2e4f479e-9a3a-4495-abb9-52a3203a35c4
 # ╠═743b75c7-d6a0-4fa0-bd99-6412378453e2
+# ╠═c6f175e4-75a6-4c88-bb87-e0b3ab5b0d01
 # ╠═04bb12df-5d6a-460f-a381-23058dcfe0b7
 # ╠═c4762bb2-56fd-4e2a-9255-4922f41addfe
 # ╠═19680165-b96b-4c39-bf0a-caa1ca75276c
 # ╠═881daa94-e922-4b76-bca3-6b255049ba67
 # ╠═16461985-6cb3-4ddb-9eab-bd13917b8b69
+# ╠═8c8bbe2e-a5d6-4cf4-8428-25e7404b4a75
 # ╠═d01748e8-169d-4d39-bf79-90c0c0d2df56
 # ╠═0a0e0ea0-92c8-11eb-21d5-f3bb0e0946f0
 # ╠═f4b9b30e-92c7-11eb-0c68-a91a2bd974ff
