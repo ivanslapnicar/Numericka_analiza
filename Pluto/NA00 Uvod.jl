@@ -89,7 +89,7 @@ steps=30
 
 # ╔═╡ a47b53a0-027f-11eb-256d-f7d5ce0f97e3
 let
-	c=0.0
+	c=BigFloat(0.0)
 	for n=1:steps
     	s=√((1-c)/2)
     	c=√(1-s^2)
@@ -283,7 +283,7 @@ md"""
 * Kompletan izvorni kod je uvijek dostupan na GitHub-u.
 * MIT licenca
 * Makro `@which` olakšava snalaženje.
-* Može se pogledati LLVM kod i asemblerski kod.
+* __Može se pogledati LLVM kod i asemblerski kod.__
 """
 
 # ╔═╡ cb1cb5b0-0ee8-11eb-10c2-59d499c44695
@@ -309,11 +309,11 @@ Može se pogledati i datoteku na GitHub-u za najnoviju verziju.
 
 # ╔═╡ 3e6d474e-0ee9-11eb-278f-4d620b298db3
 # Ispis je u Julia terminalu
-@code_llvm korijeni(1,0,9)
+# @code_llvm korijeni(1,0,9)
 
 # ╔═╡ 4b09e2c0-0ee9-11eb-38c6-db7ffd4c00b3
 # ispis je u Julia terminalu
-@code_native korijeni(1,0,7)
+# @code_native korijeni(1,0,7)
 
 # ╔═╡ 00000000-0000-0000-0000-000000000001
 PLUTO_PROJECT_TOML_CONTENTS = """
@@ -687,7 +687,7 @@ version = "17.4.0+0"
 # ╠═0738969f-7c4f-4f8e-92de-62cb0cd6510c
 # ╠═cd29c4bc-9cfa-40bc-bc80-74ee5a635a94
 # ╠═af57717b-4dca-4b54-8272-e98fe76fd845
-# ╟─9315e7e0-0ee8-11eb-2eeb-4160ebee122d
+# ╠═9315e7e0-0ee8-11eb-2eeb-4160ebee122d
 # ╠═cb1cb5b0-0ee8-11eb-10c2-59d499c44695
 # ╠═d63410b0-0ee8-11eb-31a3-e71de384fadb
 # ╠═db5f4eb0-0ee8-11eb-3e4f-670b968e851d

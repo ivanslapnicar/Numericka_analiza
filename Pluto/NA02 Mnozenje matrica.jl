@@ -91,7 +91,7 @@ end
 # ╔═╡ 0f21c6e6-4aa9-4eb3-8c5e-c5366dd8f2a0
 begin
 	# Standardna formula
-	C=zeros(Int,n,n)
+	C=zero(A)
 	for i=1:n
 	    for j=1:n
 	        for k=1:n
@@ -114,7 +114,7 @@ end
 # ╔═╡ 2ddf86e1-0751-4c0e-aee5-c3b1d4bed2fa
 begin
 	# Unutrašnja petlja: _syrk
-	C₁=zeros(Int,n,n)
+	C₁=zero(A)
 	for i=1:n
 	    C₁=C₁+A[:,i]*B[i,:]'
 	    println(C₁) # vidljivo u terminalu
@@ -122,24 +122,10 @@ begin
 	C₁
 end
 
-# ╔═╡ da5dab82-8aa2-4bf3-9273-69bb3675508f
-begin
-	# Korak po korak
-	C₂=zeros(n,n)
-	for j=1:n
-	    for k=1:n
-	        for i=1:n
-	            C₂[i,j]+=A[i,k]*B[k,j]
-	            @show i,j,C₂[i,j]
-	        end
-	    end
-	end
-end
-
 # ╔═╡ 7d8c987a-3a4e-48d9-8020-2170090f9934
 begin
 	# Unutrašnja petlja: _axpy
-	C₃=zeros(n,n)
+	C₃=zero(A)
 	for i=1:n
 	    for k=1:n
 	        C₃[:,i]+=A[:,k]*B[k,i]
@@ -235,6 +221,9 @@ DOUBLE PRECISION FUNCTION DDOT(N,DX,INCX,DY,INCY)
 
 """
 
+# ╔═╡ 656975d5-874e-4859-88a2-d9cd60cc871d
+
+
 # ╔═╡ 85135806-d982-4ca1-b852-fc53cfd0903e
 md"""
 # Brzina računanja
@@ -242,15 +231,12 @@ md"""
 
 # ╔═╡ 25d321c6-26bc-4d2d-ab74-8c048560e57c
 function AB(A::Array{T},B::Array{T}) where T
-    (n,l)=size(A)
-	(m,p)=size(B)
-	if m!=l
-		return("Error in dimensions")
-	end
-    C=zeros(n,p)
+	# Množenje dvije kvadratne matrice
+    n=size(A,1)
+    C=[zero(A[1,1]) for i=1:n,j=1:n]
     for i=1:n
-        for j=1:p
-            for k=1:l
+        for j=1:n
+            for k=1:n
                 C[i,j]+=A[i,k]*B[k,j]
             end
         end
@@ -276,15 +262,37 @@ end
 
 # ╔═╡ 698da56b-ed97-4e26-8456-403080e095e3
 # ~ 5 Gfglops
-operacija_u_sekundi=(2*n₁^3)/0.06
+operacija_u_sekundi=(2*n₁^3)/0.1
 
 # ╔═╡ ea827322-031d-42b5-aafd-10c2d12fa469
 md"""
 __Zadatak.__ Izračunajte najveći $n$ za koji tri kvadratne $n\times n$ matrice `Float64` brojeva stanu u RAM vašeg računala. Koliko dugo će trajati množenje?
 """
 
+# ╔═╡ d1dccfbf-7878-4b48-a376-f0bf9b61ad59
+# Izvršite dva puta, drugo mjerenje je relevantno.
+# Naš program je puno sporiji!!
+@time AB(A₁,B₁);
+
 # ╔═╡ 7dc0b94c-4955-4eef-85ee-c5c65d7ec6e2
-0.5/0.0075
+12/0.1
+
+# ╔═╡ 04528cf4-0b12-4164-b70b-772202176392
+function ABa(A::Array{T},B::Array{T}) where T
+	# Množenje dvije kvadratne matrice, unutrašnja petlja axpy
+    n=size(A,1)
+    C=[zero(A[1,1]) for i=1:n,j=1:n]
+    for i=1:n
+        for k=1:n
+			for l=1:n
+            	C[l,i]+=A[l,k]*B[k,i]
+			end
+        end
+    end
+end
+
+# ╔═╡ 93d73551-f2d6-4364-9848-dcff2c847846
+@time ABa(A₁,B₁);
 
 # ╔═╡ 2015d3fc-37d2-43ee-99da-fe7029b73ee4
 md"""
@@ -301,30 +309,6 @@ BLAS razina  |  funkcija | memorija | # operacija
 __Zadatak.__ Proučite subrutine `daxpy.f`, `dgemmv.f` i `dgemm.f`.
 """
 
-# ╔═╡ be605463-3a97-4869-b9ba-426dc1822c96
-function AB(A::Array{T},B::Array{T}) where T<:Array
-	(n,l)=size(A)
-	(m,p)=size(B)
-	if m!=l
-		return("Greška u dimenziji")
-	end
-	# Pretpostavimo blokove jednakih dimenzija
-    C=[zero(A[1,1]) for i=1:n, j=1:p]
-    for i=1:n
-        for j=1:p
-            for k=1:l
-                C[i,j]=C[i,j]+A[i,k]*B[k,j]
-            end
-        end
-    end
-    C
-end
-
-# ╔═╡ d1dccfbf-7878-4b48-a376-f0bf9b61ad59
-# Izvršite dva puta, drugo mjerenje je relevantno.
-# Naš program je puno sporiji!!
-@time AB(A₁,B₁);
-
 # ╔═╡ 6fc4fe72-e7ac-4c14-aa9c-37a5459d7004
 begin
 	# Probajte k,l=32,16 i k,l=64,8. Izvršite dva puta.
@@ -333,14 +317,20 @@ begin
 	Bb=[randn(k,k) for i=1:l, j=1:l]
 end
 
-# ╔═╡ 47168e37-a8b8-4969-856e-c12486882a13
-[zero(Ab[1,1]) for i=1:n, j=1:n]
+# ╔═╡ 669a3f33-1cfa-4ef6-930f-38771afb18c0
+Ab[1,1]
 
 # ╔═╡ 9bc2dc46-206d-46c5-b3c3-17d398d2cf6d
 # This is considerably faster.
 @time AB(Ab,Bb)
 
+# ╔═╡ 4a639621-805e-4bc3-8ca1-7ca12e37f855
+@time ABa(Ab,Bb)
+
 # ╔═╡ dccef80c-4a20-49f0-a45d-073f62777432
+@time Ab*Bb
+
+# ╔═╡ 30bc11d3-78cc-422b-9792-685a388c386d
 @which Ab*Bb
 
 # ╔═╡ a7de05aa-0ed1-4e11-88de-de70d629d30b
@@ -751,12 +741,12 @@ version = "5.8.0+0"
 # ╠═0f21c6e6-4aa9-4eb3-8c5e-c5366dd8f2a0
 # ╠═c56ebccc-e0c3-4926-a7f2-6363bd0cc563
 # ╠═2ddf86e1-0751-4c0e-aee5-c3b1d4bed2fa
-# ╠═da5dab82-8aa2-4bf3-9273-69bb3675508f
 # ╠═7d8c987a-3a4e-48d9-8020-2170090f9934
 # ╟─8cef7e23-c539-4508-9176-37132955257d
 # ╟─05adbae2-88a2-49ed-9ca6-129757f94266
 # ╟─6a085347-8f1d-4dc4-8742-774c4e279cfc
 # ╟─b3f1858f-b1ec-4f60-8343-b4b12d2c60c7
+# ╠═656975d5-874e-4859-88a2-d9cd60cc871d
 # ╟─85135806-d982-4ca1-b852-fc53cfd0903e
 # ╠═25d321c6-26bc-4d2d-ab74-8c048560e57c
 # ╠═533c1833-8b02-4d45-b1fc-ad0255d0380a
@@ -766,12 +756,15 @@ version = "5.8.0+0"
 # ╟─ea827322-031d-42b5-aafd-10c2d12fa469
 # ╠═d1dccfbf-7878-4b48-a376-f0bf9b61ad59
 # ╠═7dc0b94c-4955-4eef-85ee-c5c65d7ec6e2
+# ╠═04528cf4-0b12-4164-b70b-772202176392
+# ╠═93d73551-f2d6-4364-9848-dcff2c847846
 # ╟─2015d3fc-37d2-43ee-99da-fe7029b73ee4
-# ╠═47168e37-a8b8-4969-856e-c12486882a13
-# ╠═be605463-3a97-4869-b9ba-426dc1822c96
 # ╠═6fc4fe72-e7ac-4c14-aa9c-37a5459d7004
+# ╠═669a3f33-1cfa-4ef6-930f-38771afb18c0
 # ╠═9bc2dc46-206d-46c5-b3c3-17d398d2cf6d
+# ╠═4a639621-805e-4bc3-8ca1-7ca12e37f855
 # ╠═dccef80c-4a20-49f0-a45d-073f62777432
+# ╠═30bc11d3-78cc-422b-9792-685a388c386d
 # ╟─a7de05aa-0ed1-4e11-88de-de70d629d30b
 # ╠═209d4041-a0d9-455d-a28d-1a7cc632082f
 # ╟─3b096734-bd85-4e21-ad81-6c1ed99e2f43

@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.19.22
+# v0.19.29
 
 using Markdown
 using InteractiveUtils
@@ -191,7 +191,7 @@ function mylu(A₁::Array{T}) where T # Strang, str. 100
 end
 
 # ╔═╡ 53d8d8e0-0d7f-11eb-358f-3f001e5e7d78
-Random.seed!(123);
+Random.seed!(127);
 
 # ╔═╡ 19567c60-0d82-11eb-3405-8d0312a34b5f
 begin
@@ -357,6 +357,9 @@ Ab[2,1]
 # ╔═╡ 24c23190-0d85-11eb-382d-2536a040dfc8
 A₀=mylu₂(Ab);
 
+# ╔═╡ 3ad22ca1-5497-4c98-9088-517c322f06d8
+A₀
+
 # ╔═╡ 3d486c20-0d85-11eb-2c81-a7d99c190907
 begin
 	# Provjera
@@ -447,6 +450,9 @@ F₄=lu(A)
 
 # ╔═╡ a05104c4-48ff-4a64-a5f7-8b0557d2019b
 F₄.P
+
+# ╔═╡ 441c6f6c-187f-4d15-b9b0-1ae91acbf8f4
+F₄.p
 
 # ╔═╡ 74b55dc0-0def-11eb-37e2-71ba59aa8295
 F₄.L*F₄.U==A[F₄.p,:]
@@ -875,7 +881,7 @@ uuid = "2a0f44e3-6c83-55bd-87e4-b1978d98bd5f"
 [[CompilerSupportLibraries_jll]]
 deps = ["Artifacts", "Libdl"]
 uuid = "e66e0078-7015-5450-92f7-15fbd957f2ae"
-version = "1.0.1+0"
+version = "1.0.5+0"
 
 [[Dates]]
 deps = ["Printf"]
@@ -906,7 +912,7 @@ version = "0.21.2"
 uuid = "8f399da3-3557-5675-b5ff-fb832c97cbdb"
 
 [[LinearAlgebra]]
-deps = ["Libdl", "libblastrampoline_jll"]
+deps = ["Libdl", "OpenBLAS_jll", "libblastrampoline_jll"]
 uuid = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
 
 [[Logging]]
@@ -922,7 +928,7 @@ uuid = "a63ad114-7e13-5084-954f-fe012c677804"
 [[OpenBLAS_jll]]
 deps = ["Artifacts", "CompilerSupportLibraries_jll", "Libdl"]
 uuid = "4536629a-c528-5b80-bd46-f80d51c5b363"
-version = "0.3.20+0"
+version = "0.3.21+4"
 
 [[Parsers]]
 deps = ["Dates"]
@@ -964,9 +970,9 @@ uuid = "cf7118a7-6976-5b1a-9a39-7adc72f591a4"
 uuid = "4ec0a83e-493e-50e2-b9ac-8f72acf5a8f5"
 
 [[libblastrampoline_jll]]
-deps = ["Artifacts", "Libdl", "OpenBLAS_jll"]
+deps = ["Artifacts", "Libdl"]
 uuid = "8e850b90-86db-534c-a0d3-1478176c7d93"
-version = "5.1.1+0"
+version = "5.8.0+0"
 """
 
 # ╔═╡ Cell order:
@@ -1016,6 +1022,7 @@ version = "5.1.1+0"
 # ╠═090a3f10-0d85-11eb-0181-fdc5aa091df7
 # ╠═21e796b0-0dfb-11eb-2493-6fe0d3c70180
 # ╠═24c23190-0d85-11eb-382d-2536a040dfc8
+# ╠═3ad22ca1-5497-4c98-9088-517c322f06d8
 # ╠═3d486c20-0d85-11eb-2c81-a7d99c190907
 # ╠═e68e0a50-87de-11eb-1348-5135365bc28f
 # ╠═9615e1c0-0d85-11eb-161d-39a7eff4046f
@@ -1036,6 +1043,7 @@ version = "5.1.1+0"
 # ╠═4483e520-0d88-11eb-1eb4-25f4eaf1a88d
 # ╠═573618c0-0def-11eb-0101-e1b09c384512
 # ╠═a05104c4-48ff-4a64-a5f7-8b0557d2019b
+# ╠═441c6f6c-187f-4d15-b9b0-1ae91acbf8f4
 # ╠═74b55dc0-0def-11eb-37e2-71ba59aa8295
 # ╠═16800a1d-8ab9-48dc-ad0e-9cb11b55b00c
 # ╠═90e4a320-0def-11eb-189e-7fc9c7b53942

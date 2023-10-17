@@ -73,16 +73,18 @@ $$e_{\min} \leq e \leq e_{\max},\quad e_{\min} < 0 < e_{\max}$$
 
 Pretpostavit ćemo da koristimo aritmetiku s bazom 2, ali ćemo primjere uglavnom davati u bazi 10.
 
-__Mantisa__ $d$ je oblika
+__Mantisa__ (_significand_) $d$ je oblika
 
 $$
 \begin{aligned}
-	d &= 0.d_1 \dots d_t = d_1 \beta^{-1} + d_2 \beta^{-2}
+	d &= d_0.d_1 \dots d_t = d_0+d_1 \beta^{-1} + d_2 \beta^{-2}
 	+ \dots + d_t \beta^{-t}\\
-d  &\in \{ 0,1\}\\
-	d_1 &= 1 \qquad \mbox{ normalized }   \\
-	d_1 &= 0 \qquad \mbox{ unnormalized }   \\
+d_i  &\in \{ 0,1\}\\
+	d_0 &= 1 \qquad \mbox{ normalizirani oblik }   \\
+	d_0 &= 0 \qquad \mbox{ denormalizirani oblik }   \\
 \end{aligned}$$
+
+__Decimalni dio__ (_fraction_) je $f=d_1 d_2 \dots d_t$.
 
 Standardni oblik brojeva s plivajućim zarezom je normalizirani oblik osim pri dnu raspona eksponenata.
 
@@ -384,6 +386,9 @@ md"""
 # ╔═╡ 1f8f4a15-0eca-4759-bee6-843306e35754
 bitstring(Int32(0))
 
+# ╔═╡ 516e1922-4de4-4f85-a35e-313607920ff4
+bitstring(0.0)
+
 # ╔═╡ 8ca8e4e7-6450-4aaf-b208-6c0aa95ccb12
 bitstring(-2)
 
@@ -396,14 +401,22 @@ bitstring(0.0)
 # ╔═╡ 10dcdca1-71fe-42eb-8f04-6122b3a03666
 bitstring(1.0)
 
+# ╔═╡ 290ebd38-0aca-4392-8b9c-90e4271ef19c
+parse(Int, "1111111111"; base=2)
+
 # ╔═╡ f85ec710-1f59-4826-a376-6672bf0552ae
 bitstring(Float32(1.0))
 
+# ╔═╡ ebad923b-3afb-4dd6-9e74-22eb304c0dfc
+parse(Int, "1111111"; base=2)
+
+# ╔═╡ 36d8dc90-3719-42b8-99e6-f53e05fd8695
+md"
+Dakle, $1.0=1\cdot 2^0$, pa binarni broj $1111111_2=127_{10}$ označava eksponent $0$.
+"
+
 # ╔═╡ 9b7e4278-2f1a-4fff-a6f7-2249f45aaccf
 bitstring(Float32(2.0))
-
-# ╔═╡ 40d953af-e5e8-42c0-be55-26d95e334195
-2^7
 
 # ╔═╡ 037cddff-3663-4fcb-8575-ea7a78e490b8
 md"""
@@ -424,6 +437,9 @@ begin
 	c₁=-b₁
 	c₁,b₁==c₁
 end
+
+# ╔═╡ efb8122d-bbde-48ea-bf83-278cdc2ffe67
+a₁/c₁==a₁\b₁
 
 # ╔═╡ 88f1bf59-5eb4-4e2d-b28b-0d9b1004d5bd
 a₁/b₁
@@ -453,13 +469,13 @@ Inf+(-Inf),0*Inf, Inf/Inf, 0.0/0.0
 md"""
 U IEEE standardu brojevi s plivajućim zarezom i posebne veličine imaju sljedeće binarne zapise:
 
-| Eksponent | Mantisa | Prikazuje |
+| Eksponent | Decimalni dio | Prikazuje |
 | :-----    | :-----  | :-----    |
-| $e=e_{\min}-1$ |  $d=0$     | $\pm 0$     |
-| $e=e_{\min}-1$ |  $d\neq 0$ | $0.d\times 2^{e_\min}$ - denormalizirani brojevi |
-| $e_{\min}\leq e\leq e\_\max$ |  $d$      | $1.d \times 2^e$ - standardni brojevi | 
-| $e=e_{\max}+1$ |  $d=0$      |  $\pm$`Inf`     |
-| $e=e_{\max}+1$ |  $d\neq 0$  |  `NaN`     |
+| $e=e_{\min}-1$ |  $f=0$     | $\pm 0$     |
+| $e=e_{\min}-1$ |  $f\neq 0$ | $0.f\times 2^{e_\min}$ - denormalizirani brojevi |
+| $e_{\min}\leq e\leq e\_\max$ |  $f$      | $1.f \times 2^e$ - standardni brojevi | 
+| $e=e_{\max}+1$ |  $f=0$      |  $\pm$`Inf`     |
+| $e=e_{\max}+1$ |  $f\neq 0$  |  `NaN`     |
 
 """
 
@@ -567,6 +583,12 @@ begin
 	x₂ₐ(a,b,c)=(2*c)/(-b-sqrt(b*b-4*a*c))
 	x₁(a₂,b₂,c₂),x₂(a₂,b₂,c₂),x₂ₐ(a₂,b₂,c₂)
 end
+
+# ╔═╡ 722ad758-0a95-4a1e-8600-86162ed8d319
+b₂^2-32
+
+# ╔═╡ f65bad48-a9ec-412e-96cc-d5aa82d9f26a
+sqrt(b₂^2-32)
 
 # ╔═╡ d429eede-d77d-4709-b635-c3993fce4a47
 md"""
@@ -764,16 +786,20 @@ uuid = "4ec0a83e-493e-50e2-b9ac-8f72acf5a8f5"
 # ╠═e1b1c9aa-cff4-4155-80c2-9181be546116
 # ╟─20fa79ac-93c3-4e3f-bf31-f9c0f0e79d4a
 # ╠═1f8f4a15-0eca-4759-bee6-843306e35754
+# ╠═516e1922-4de4-4f85-a35e-313607920ff4
 # ╠═8ca8e4e7-6450-4aaf-b208-6c0aa95ccb12
 # ╠═f6f7081b-212a-4c7a-b91c-0d747f4b9fb2
 # ╠═d7160016-c046-4ab8-b349-27f7a209d853
 # ╠═10dcdca1-71fe-42eb-8f04-6122b3a03666
+# ╠═290ebd38-0aca-4392-8b9c-90e4271ef19c
 # ╠═f85ec710-1f59-4826-a376-6672bf0552ae
+# ╠═ebad923b-3afb-4dd6-9e74-22eb304c0dfc
+# ╟─36d8dc90-3719-42b8-99e6-f53e05fd8695
 # ╠═9b7e4278-2f1a-4fff-a6f7-2249f45aaccf
-# ╠═40d953af-e5e8-42c0-be55-26d95e334195
 # ╟─037cddff-3663-4fcb-8575-ea7a78e490b8
 # ╟─d0b306c4-6cbc-48dc-90ba-8ef4498f8d73
 # ╠═abe311d5-fbd1-40e2-8bce-2c341301deef
+# ╠═efb8122d-bbde-48ea-bf83-278cdc2ffe67
 # ╠═88f1bf59-5eb4-4e2d-b28b-0d9b1004d5bd
 # ╠═be2cb230-df60-4db6-86e3-8f7d91e28a86
 # ╠═36c79f63-7a8c-46c9-afa5-95bbed8fd598
@@ -794,6 +820,8 @@ uuid = "4ec0a83e-493e-50e2-b9ac-8f72acf5a8f5"
 # ╠═905dd1d7-5f1b-43b3-a461-651cc992bd1c
 # ╠═c5d305a9-5a27-44d6-a610-50ab6d396f93
 # ╟─82ac21a4-384e-47e8-a964-95c8eb0889bd
+# ╠═722ad758-0a95-4a1e-8600-86162ed8d319
+# ╠═f65bad48-a9ec-412e-96cc-d5aa82d9f26a
 # ╠═139debf3-10ad-48da-9c2d-a13033486fbf
 # ╟─d429eede-d77d-4709-b635-c3993fce4a47
 # ╠═ff5e3103-11cb-4438-aa19-c25af84fc3da
