@@ -767,6 +767,25 @@ Izračunajmo približnu kondiciju Vandermondeove matrice iz prethodnog primjera.
  
 """
 
+# ╔═╡ 94525fd9-6847-4ff0-8662-6f6bb23f4083
+# Norma inverza gornje trokutaste matrice
+# GVL, str. 141, (3.5.6)
+function mycondU(U::Array{T}) where T
+	n=size(U,1)
+	p=zeros(n)
+	y=zeros(n)
+	d=zeros(n)
+	for k=n:-1:1
+	    d[k]= p[k] < zero(T) ? one(T) :  -one(T)
+		y[k]=(d[k]-p[k])/U[k,k]
+		p[1:k-1]+=y[k]*U[1:k-1,k]
+	end
+	# Test
+	println(norm(U*y-d))
+	println(d)
+	return norm(y,Inf)
+end
+
 # ╔═╡ 8707357c-84c9-4d30-aa81-1172d7ac715e
 # ?LAPACK.trcon!
 
@@ -775,6 +794,12 @@ begin
 	Fᵥ=lu(V)
 	cond(V,1), cond(Fᵥ.L,1), cond(Fᵥ.U,1)
 end
+
+# ╔═╡ 5499cc64-0f84-4ccb-adcc-f015b17d1284
+mycondU(Fᵥ.U) # *norm(U,Inf)
+
+# ╔═╡ a1969708-ddfc-49df-aaa3-9ff994e21f72
+Fᵥ.U
 
 # ╔═╡ 11add0f0-0df3-11eb-2f01-5b985574b265
 1 ./LAPACK.trcon!('O','L','U',Fᵥ.L),1 ./LAPACK.trcon!('O','U','N',Fᵥ.U)
@@ -1086,8 +1111,11 @@ version = "5.8.0+0"
 # ╠═af2b7680-0df2-11eb-2ff2-6b188cbd6b7f
 # ╠═af2dc072-0df2-11eb-2958-19fc8d01e81d
 # ╟─bfc0ea15-556f-4109-b626-cb724ee14bfd
+# ╠═94525fd9-6847-4ff0-8662-6f6bb23f4083
+# ╠═5499cc64-0f84-4ccb-adcc-f015b17d1284
 # ╠═8707357c-84c9-4d30-aa81-1172d7ac715e
 # ╠═e38b8370-0df2-11eb-0ed5-ab750f73de17
+# ╠═a1969708-ddfc-49df-aaa3-9ff994e21f72
 # ╠═11add0f0-0df3-11eb-2f01-5b985574b265
 # ╟─24dc3f3e-0df3-11eb-04f6-a58c63e5ba58
 # ╠═88f2801e-0df3-11eb-35ac-c32cb53aef8a
