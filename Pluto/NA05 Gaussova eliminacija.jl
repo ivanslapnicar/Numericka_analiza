@@ -723,6 +723,9 @@ end
 # ╔═╡ 56e4bd10-0df2-11eb-0152-556ef692a70e
 map(Float64,norm(xbig-xᵥ)/norm(xbig))
 
+# ╔═╡ 16ce5f29-1332-48d4-ad18-56602c72a00f
+
+
 # ╔═╡ 50ed08c1-391f-4baa-8cfa-54db04038fb1
 md"""
 ## Umjetno loša kondicija
@@ -797,6 +800,9 @@ end
 
 # ╔═╡ 5499cc64-0f84-4ccb-adcc-f015b17d1284
 mycondU(Fᵥ.U) # *norm(U,Inf)
+
+# ╔═╡ dc8009e5-99ae-415f-97aa-f7144f822057
+norm(Fᵥ.L)*norm(Fᵥ.U)/norm(V)
 
 # ╔═╡ a1969708-ddfc-49df-aaa3-9ff994e21f72
 Fᵥ.U
@@ -1101,6 +1107,7 @@ version = "5.8.0+0"
 # ╠═439224f0-0df2-11eb-2e57-539a3470de32
 # ╠═50da42a0-0df2-11eb-2ded-c52a76acc155
 # ╠═56e4bd10-0df2-11eb-0152-556ef692a70e
+# ╠═16ce5f29-1332-48d4-ad18-56602c72a00f
 # ╟─50ed08c1-391f-4baa-8cfa-54db04038fb1
 # ╠═a496c05e-0def-11eb-0ae1-83f3cdccf36e
 # ╠═aeee4670-0df2-11eb-0ef9-0bb353d8ebfe
@@ -1115,6 +1122,7 @@ version = "5.8.0+0"
 # ╠═5499cc64-0f84-4ccb-adcc-f015b17d1284
 # ╠═8707357c-84c9-4d30-aa81-1172d7ac715e
 # ╠═e38b8370-0df2-11eb-0ed5-ab750f73de17
+# ╠═dc8009e5-99ae-415f-97aa-f7144f822057
 # ╠═a1969708-ddfc-49df-aaa3-9ff994e21f72
 # ╠═11add0f0-0df3-11eb-2f01-5b985574b265
 # ╟─24dc3f3e-0df3-11eb-04f6-a58c63e5ba58
