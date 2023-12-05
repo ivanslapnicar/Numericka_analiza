@@ -121,7 +121,7 @@ end
 
 # ╔═╡ b6ee2c00-78e7-4d22-a851-d22c4a4946bc
 begin
-	Random.seed!(123)
+	Random.seed!(125)
 	A=randn(8,5)
 	# A[:,3]=A[:,4]+1e-5*rand(8)
 end
@@ -185,7 +185,7 @@ za koju je potrebno $O(6m)$ operacija.
 """
 
 # ╔═╡ 5a42e1e7-7704-42d1-bbca-2eb09cf80cbc
-a=[5;1]
+a=[5.0;1]
 
 # ╔═╡ 7040f957-6000-4be5-8fa9-314a6140c0d8
 ϕ=0.3
@@ -203,6 +203,15 @@ function HouseholderVector(x::Vector)
     v[1]=x[1]+sign(x[1])*norm(x)
     v
 end
+
+# ╔═╡ ef6f8af2-4ab8-4958-be52-3302448ff887
+vr=HouseholderVector(a)
+
+# ╔═╡ d391ffc6-974f-4a27-b0a6-a556392f4365
+Hr=I-2vr*vr'/(vr'*vr)
+
+# ╔═╡ 3b6cd3d5-fbf4-468f-8bbe-1149df7629f2
+Hr*a
 
 # ╔═╡ 814c6dd6-faa1-4211-8f64-bf349624dc37
 begin
@@ -254,7 +263,7 @@ Rₕ
 
 # ╔═╡ ef4702ee-44cc-49d8-85bb-39249c431036
 md"""
-Program `myHouseholderQR()` je ilustrativan. Profesionalni programi imaju sljedeća svojstva:
+Program `HouseholderQR()` je ilustrativan. Profesionalni programi imaju sljedeća svojstva:
 
 * računaju s blok matricama (uobičajena dimenzija bloka je 32 ili 64),
 * izračuna se vektor $\hat v=v/v_1$. Vrijedi $\hat v_1=1$, dok se ostali elemenenti vektora $\hat v$ spremaju u strogi donji trokut matrice $A$,
@@ -610,6 +619,9 @@ version = "17.4.0+0"
 # ╠═7040f957-6000-4be5-8fa9-314a6140c0d8
 # ╠═0c8b4d0e-62c0-4ee5-999f-274ab410b305
 # ╠═26ab8ae1-3118-41aa-bb55-4f122dd62150
+# ╠═ef6f8af2-4ab8-4958-be52-3302448ff887
+# ╠═d391ffc6-974f-4a27-b0a6-a556392f4365
+# ╠═3b6cd3d5-fbf4-468f-8bbe-1149df7629f2
 # ╠═4a371793-1d5c-413f-8e89-dce986c972ef
 # ╠═814c6dd6-faa1-4211-8f64-bf349624dc37
 # ╠═e282bbd3-6505-4afc-b304-3c327fa5db62
