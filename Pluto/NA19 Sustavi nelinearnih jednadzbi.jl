@@ -609,7 +609,10 @@ end
 opt=optimize(f₄,[-1.0,2],Optim.BFGS())
 
 # ╔═╡ 8ff25700-5584-11eb-1f95-abf9735d479e
-opt.minimizer[1]
+opt.minimizer
+
+# ╔═╡ e5711707-e83a-441f-916b-98f9cf5a0aa4
+opt.minimizer[2]
 
 # ╔═╡ 90043461-3f6a-45e6-a661-57c8df3a2a93
 # Primjer 5 - opet ne konvergira prema rješenju ???
@@ -2003,6 +2006,7 @@ version = "1.4.1+1"
 # ╠═ca57bf59-f348-439a-8622-ea0edcc86f17
 # ╠═bc477197-2ac5-4798-a62b-62f89791fb94
 # ╠═8ff25700-5584-11eb-1f95-abf9735d479e
+# ╠═e5711707-e83a-441f-916b-98f9cf5a0aa4
 # ╠═90043461-3f6a-45e6-a661-57c8df3a2a93
 # ╠═a107fc1f-f0db-42cb-ad4a-ffd51726808a
 # ╟─00000000-0000-0000-0000-000000000001

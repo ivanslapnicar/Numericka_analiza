@@ -396,7 +396,7 @@ begin
 end
 
 # ╔═╡ 9b237357-f6dc-4054-bee8-1cac4a5aad07
-Iteration(φ₃,3.0,1e-10), sqrt(10) # 1e-15
+Iteration(φ₃,3.0,1e-15), sqrt(10) # 1e-15
 
 # ╔═╡ 629f59b0-3f86-11eb-1e5d-c181f17a6209
 md"
