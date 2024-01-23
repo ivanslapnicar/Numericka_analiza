@@ -492,6 +492,9 @@ begin
 	plotKpartresult(C₂,X)
 end
 
+# ╔═╡ 9c5b2395-6f10-4c92-a2ae-d075d23da2bc
+L₂
+
 # ╔═╡ 10872191-c624-4f8a-8fac-81aedad0a19a
 E₂.values
 
@@ -1800,6 +1803,7 @@ version = "1.4.1+1"
 # ╠═46de28bc-73ed-495c-a2e0-f565c1ce5651
 # ╟─e004e4bf-ca04-4b41-947b-9f1ecd058abb
 # ╠═bb9d4d98-3aff-439e-b8a3-8347cf345839
+# ╠═9c5b2395-6f10-4c92-a2ae-d075d23da2bc
 # ╠═10872191-c624-4f8a-8fac-81aedad0a19a
 # ╟─012fa54a-5171-4980-a0ba-474a22c25981
 # ╟─00000000-0000-0000-0000-000000000001
