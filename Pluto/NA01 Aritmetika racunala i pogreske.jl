@@ -384,7 +384,7 @@ md"""
 """
 
 # ╔═╡ 1f8f4a15-0eca-4759-bee6-843306e35754
-bitstring(Int32(0))
+bitstring(Int32(1))
 
 # ╔═╡ 516e1922-4de4-4f85-a35e-313607920ff4
 bitstring(0.0)
@@ -439,7 +439,10 @@ begin
 end
 
 # ╔═╡ efb8122d-bbde-48ea-bf83-278cdc2ffe67
-a₁/c₁==a₁\b₁
+a₁/c₁==a₁/b₁
+
+# ╔═╡ 2dfc2812-be24-4ee2-a619-8f2e3ad08ede
+a₁/c₁
 
 # ╔═╡ 88f1bf59-5eb4-4e2d-b28b-0d9b1004d5bd
 a₁/b₁
@@ -996,6 +999,7 @@ version = "17.4.0+2"
 # ╟─d0b306c4-6cbc-48dc-90ba-8ef4498f8d73
 # ╠═abe311d5-fbd1-40e2-8bce-2c341301deef
 # ╠═efb8122d-bbde-48ea-bf83-278cdc2ffe67
+# ╠═2dfc2812-be24-4ee2-a619-8f2e3ad08ede
 # ╠═88f1bf59-5eb4-4e2d-b28b-0d9b1004d5bd
 # ╠═be2cb230-df60-4db6-86e3-8f7d91e28a86
 # ╠═36c79f63-7a8c-46c9-afa5-95bbed8fd598

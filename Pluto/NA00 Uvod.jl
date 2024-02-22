@@ -89,7 +89,7 @@ steps=30
 
 # ╔═╡ a47b53a0-027f-11eb-256d-f7d5ce0f97e3
 let
-	c=BigFloat(0.0)
+	c=Float64(0.0)
 	for n=1:steps
     	s=√((1-c)/2)
     	c=√(1-s^2)
@@ -100,6 +100,18 @@ end
 # ╔═╡ 4d68f850-027b-11eb-14a1-1741ea4ce7c2
 # Točan π
 π
+
+# ╔═╡ fc4ecaf9-d735-4fc2-aa48-e7dfda2a5727
+supertype(Float64)
+
+# ╔═╡ f68459d5-b408-472b-b3f5-a68da07cf1ee
+subtypes(Real)
+
+# ╔═╡ 5d3240fd-7c59-4b6d-baaa-9a91c2a523a8
+supertype(AbstractFloat)
+
+# ╔═╡ a6664117-a273-4d8a-9f49-e5455d916f3c
+subtypes(Number)
 
 # ╔═╡ 6ac49527-05f0-4a0a-ad99-aba5d4b07c17
 md"""
@@ -296,11 +308,11 @@ varinfo(Polynomials)
 # ╔═╡ db5f4eb0-0ee8-11eb-3e4f-670b968e851d
 p=Polynomial([c,b,a])
 
-# ╔═╡ 21ed22d0-0ee9-11eb-2407-3b2f0eb6ab8b
-roots(p)
-
 # ╔═╡ 298912b0-0ee9-11eb-2c06-11cd5e89feed
 @which roots(p)
+
+# ╔═╡ 97780d3c-80c4-4c7a-bb20-70c63bb12b5f
+roots(p)
 
 # ╔═╡ 32961ec2-0ee9-11eb-2a47-1568df8b95d7
 md"
@@ -314,6 +326,21 @@ Može se pogledati i datoteku na GitHub-u za najnoviju verziju.
 # ╔═╡ 4b09e2c0-0ee9-11eb-38c6-db7ffd4c00b3
 # ispis je u Julia terminalu
 # @code_native korijeni(1,0,7)
+
+# ╔═╡ 004fe019-b74a-467a-9e41-919e8a95a13c
+p₁=Polynomial([2//1,3//1,4//1])
+
+# ╔═╡ 7aab7932-5ec7-4763-af8f-d9cbd4f94fce
+roots(p₁)
+
+# ╔═╡ 54a31c16-424c-49c8-92d6-dbba0d4443fa
+korijeni(4//1,3//1,2//1)
+
+# ╔═╡ aaedea4f-5ee0-4a23-b0e8-77d857fdcb97
+Rational{BigInt}(√2)*Rational(√3)
+
+# ╔═╡ e651042d-b285-4bbf-98b8-f1b6b0e66a77
+Rational{BigInt}(√6)
 
 # ╔═╡ 00000000-0000-0000-0000-000000000001
 PLUTO_PROJECT_TOML_CONTENTS = """
@@ -663,6 +690,10 @@ version = "17.4.0+2"
 # ╠═3dea5041-85b9-4d8b-9dcf-2d39c8481314
 # ╠═a47b53a0-027f-11eb-256d-f7d5ce0f97e3
 # ╠═4d68f850-027b-11eb-14a1-1741ea4ce7c2
+# ╠═fc4ecaf9-d735-4fc2-aa48-e7dfda2a5727
+# ╠═f68459d5-b408-472b-b3f5-a68da07cf1ee
+# ╠═5d3240fd-7c59-4b6d-baaa-9a91c2a523a8
+# ╠═a6664117-a273-4d8a-9f49-e5455d916f3c
 # ╟─6ac49527-05f0-4a0a-ad99-aba5d4b07c17
 # ╟─8443676d-70db-4f63-8b8a-a7e96175f813
 # ╟─bd7a0ad8-8b31-42cf-94e9-881711a3c40e
@@ -675,14 +706,19 @@ version = "17.4.0+2"
 # ╠═0738969f-7c4f-4f8e-92de-62cb0cd6510c
 # ╠═cd29c4bc-9cfa-40bc-bc80-74ee5a635a94
 # ╠═af57717b-4dca-4b54-8272-e98fe76fd845
-# ╠═9315e7e0-0ee8-11eb-2eeb-4160ebee122d
+# ╟─9315e7e0-0ee8-11eb-2eeb-4160ebee122d
 # ╠═cb1cb5b0-0ee8-11eb-10c2-59d499c44695
 # ╠═d63410b0-0ee8-11eb-31a3-e71de384fadb
 # ╠═db5f4eb0-0ee8-11eb-3e4f-670b968e851d
-# ╠═21ed22d0-0ee9-11eb-2407-3b2f0eb6ab8b
 # ╠═298912b0-0ee9-11eb-2c06-11cd5e89feed
+# ╠═97780d3c-80c4-4c7a-bb20-70c63bb12b5f
 # ╟─32961ec2-0ee9-11eb-2a47-1568df8b95d7
 # ╠═3e6d474e-0ee9-11eb-278f-4d620b298db3
 # ╠═4b09e2c0-0ee9-11eb-38c6-db7ffd4c00b3
+# ╠═004fe019-b74a-467a-9e41-919e8a95a13c
+# ╠═7aab7932-5ec7-4763-af8f-d9cbd4f94fce
+# ╠═54a31c16-424c-49c8-92d6-dbba0d4443fa
+# ╠═aaedea4f-5ee0-4a23-b0e8-77d857fdcb97
+# ╠═e651042d-b285-4bbf-98b8-f1b6b0e66a77
 # ╟─00000000-0000-0000-0000-000000000001
 # ╟─00000000-0000-0000-0000-000000000002

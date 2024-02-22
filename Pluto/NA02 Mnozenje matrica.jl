@@ -401,7 +401,7 @@ __Lema 1__ [MC, Poglavlje 2.7] Ako je $n \varepsilon \leq 0.01$, onda je
 $$
 |fl(x\cdot y)-x\cdot y| \leq 1.01 n\varepsilon  |x|\cdot |y|. \tag{2}$$
 
-Za dokaz Leme 1 potreban bnam je sljedeći rezultat [ASNA, p. 68]:
+Za dokaz Leme 1 potreban nam je sljedeći rezultat [ASNA, p. 68]:
 
 __Lema 2__ Ako je $|\delta_i|\leq \varepsilon$ i $n\varepsilon \leq 0.01$, onda je 
 
