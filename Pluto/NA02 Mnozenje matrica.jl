@@ -261,13 +261,19 @@ end
 @which A₁*B₁
 
 # ╔═╡ 698da56b-ed97-4e26-8456-403080e095e3
-# ~ 5 Gfglops
+# ~ 20 Gfglops
 operacija_u_sekundi=(2*n₁^3)/0.1
 
 # ╔═╡ ea827322-031d-42b5-aafd-10c2d12fa469
 md"""
 __Zadatak.__ Izračunajte najveći $n$ za koji tri kvadratne $n\times n$ matrice `Float64` brojeva stanu u RAM vašeg računala. Koliko dugo će trajati množenje?
 """
+
+# ╔═╡ c59a40e9-ac14-4300-b4e7-8f2ae9f52a3d
+√500000000
+
+# ╔═╡ cbabb8e0-991c-44aa-93c8-0e198f93cb5b
+0.1*20^3
 
 # ╔═╡ d1dccfbf-7878-4b48-a376-f0bf9b61ad59
 # Izvršite dva puta, drugo mjerenje je relevantno.
@@ -925,6 +931,8 @@ version = "17.4.0+2"
 # ╠═67ae15b6-7c2c-40e1-8b68-c562bb9264c4
 # ╠═698da56b-ed97-4e26-8456-403080e095e3
 # ╟─ea827322-031d-42b5-aafd-10c2d12fa469
+# ╠═c59a40e9-ac14-4300-b4e7-8f2ae9f52a3d
+# ╠═cbabb8e0-991c-44aa-93c8-0e198f93cb5b
 # ╠═d1dccfbf-7878-4b48-a376-f0bf9b61ad59
 # ╠═7dc0b94c-4955-4eef-85ee-c5c65d7ec6e2
 # ╠═04528cf4-0b12-4164-b70b-772202176392

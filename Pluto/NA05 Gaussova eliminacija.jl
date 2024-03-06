@@ -196,7 +196,7 @@ Random.seed!(127);
 # ╔═╡ 19567c60-0d82-11eb-3405-8d0312a34b5f
 begin
 	n=6
-	A=rand(n,n)
+	A=randn(n,n)
 	b=rand(n)
 end
 
@@ -300,6 +300,24 @@ L
 # ╔═╡ 1ccfd9c0-0d84-11eb-097b-2bfde3a9790f
 U
 
+# ╔═╡ cb2c4741-63a2-4969-b7ef-88ca6ecf1563
+M=lu(A,Val(false))
+
+# ╔═╡ de4e00d5-7705-4b70-9581-8b8a32059efa
+M₁=lu(A)
+
+# ╔═╡ 56cf8ac9-549e-4735-94fb-1e054b9a896e
+M₁.L*M₁.U-A[M₁.p,:]
+
+# ╔═╡ fbccb866-56d2-45cf-96ba-65f7afb4ad12
+M₁.L*M₁.U-M₁.P*A
+
+# ╔═╡ 195b7bf3-058d-4cc2-8759-5868d2bd717b
+M₁.p
+
+# ╔═╡ 6e25952c-a90d-495c-bc6e-4f67188ebe9f
+M₁.P
+
 # ╔═╡ 6f3f3257-8dd9-4d3c-b18e-cdbb37d52e2a
 md"""
 Usporedimo brzine ugrađene funkcije `lu()` koja koristi LAPACK-ove rutine i naše naivne funkcije `mylu()`na većoj dimenziji. 
@@ -314,7 +332,7 @@ A₁=rand(512,512);
 lu(A₁)
 
 # ╔═╡ 9ce0bb70-0d84-11eb-14ac-5335e9985dbf
-mylu₁(A₁);
+mylu₁(A₁)
 
 # ╔═╡ 09b70bcd-43ad-46b2-9664-2809351f9f70
 md"""
@@ -347,7 +365,7 @@ Napravimo prvo mali test, $k=2$, $l=4$:
 
 # ╔═╡ 090a3f10-0d85-11eb-0181-fdc5aa091df7
 begin
-	k,l=32,26 # 2,4   # 32,16
+	k,l=32,16 # 2,4   # 32,16
 	Ab=[rand(k,k) for i=1:l, j=1:l]
 end
 
@@ -370,11 +388,17 @@ begin
 	end
 end
 
+# ╔═╡ e79269d2-532b-4929-bf19-030165807b3b
+U₀
+
 # ╔═╡ e68e0a50-87de-11eb-1348-5135365bc28f
 L₀
 
 # ╔═╡ 9615e1c0-0d85-11eb-161d-39a7eff4046f
 Rezidual=L₀*U₀-Ab
+
+# ╔═╡ d57feaf0-7000-454d-bd3d-e1ba52e36b0e
+norm(Rezidual)
 
 # ╔═╡ aa933e40-0d85-11eb-2141-d36ff3fc471b
 # Pretvaranje blok matrice u običnu
@@ -1204,6 +1228,12 @@ version = "17.4.0+2"
 # ╠═0b44bb30-0d84-11eb-1d3a-dfc67cf3cf20
 # ╠═13a09fb2-0d84-11eb-15d6-e1d3b4ba658e
 # ╠═1ccfd9c0-0d84-11eb-097b-2bfde3a9790f
+# ╠═cb2c4741-63a2-4969-b7ef-88ca6ecf1563
+# ╠═de4e00d5-7705-4b70-9581-8b8a32059efa
+# ╠═56cf8ac9-549e-4735-94fb-1e054b9a896e
+# ╠═fbccb866-56d2-45cf-96ba-65f7afb4ad12
+# ╠═195b7bf3-058d-4cc2-8759-5868d2bd717b
+# ╠═6e25952c-a90d-495c-bc6e-4f67188ebe9f
 # ╟─6f3f3257-8dd9-4d3c-b18e-cdbb37d52e2a
 # ╠═5da85850-0d84-11eb-091b-df4a89e4d052
 # ╠═46868fc0-0d84-11eb-0bea-f9ee72af7795
@@ -1215,9 +1245,11 @@ version = "17.4.0+2"
 # ╠═21e796b0-0dfb-11eb-2493-6fe0d3c70180
 # ╠═24c23190-0d85-11eb-382d-2536a040dfc8
 # ╠═3ad22ca1-5497-4c98-9088-517c322f06d8
+# ╠═e79269d2-532b-4929-bf19-030165807b3b
 # ╠═3d486c20-0d85-11eb-2c81-a7d99c190907
 # ╠═e68e0a50-87de-11eb-1348-5135365bc28f
 # ╠═9615e1c0-0d85-11eb-161d-39a7eff4046f
+# ╠═d57feaf0-7000-454d-bd3d-e1ba52e36b0e
 # ╠═aa933e40-0d85-11eb-2141-d36ff3fc471b
 # ╠═c64b1170-87de-11eb-1bf1-8f695cd2ac73
 # ╟─86f3ce48-73ce-4626-914f-478cf3ad1154

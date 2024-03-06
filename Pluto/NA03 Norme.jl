@@ -45,7 +45,7 @@ begin
 end
 
 # ╔═╡ c1ffcca3-d537-4c4f-86b1-87215325c115
-norm(x,1), norm(x), norm(x,Inf)
+norm(x,1), norm(x,2), norm(x,Inf)
 
 # ╔═╡ 31a749ca-adb3-4e0e-9484-4506e1586a74
 md"""
