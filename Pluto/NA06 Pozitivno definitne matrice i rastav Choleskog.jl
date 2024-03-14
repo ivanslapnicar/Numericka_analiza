@@ -45,8 +45,7 @@ begin
 	D=randn(n,n)
 	D=D*D'
 	println(norm(D-D'))
-	issymmetric(D)
-	isposdef(D)
+	issymmetric(D), isposdef(D)
 end
 
 # ╔═╡ a808c71a-97bb-4106-89fd-dcc0e902d2cb
@@ -208,6 +207,9 @@ c=b+b'
 # ╔═╡ 970c1a3b-205c-421c-a564-62b8beba625e
 cholesky(c)
 
+# ╔═╡ fda68abe-0ddc-4a54-a1c1-5b91ebce5390
+chol(c)
+
 # ╔═╡ 00000000-0000-0000-0000-000000000001
 PLUTO_PROJECT_TOML_CONTENTS = """
 [deps]
@@ -286,5 +288,6 @@ version = "5.8.0+1"
 # ╠═b8584018-1371-4b03-b939-3b1f555632aa
 # ╠═cbaf7dad-5980-43a4-82c0-34bb946d9376
 # ╠═970c1a3b-205c-421c-a564-62b8beba625e
+# ╠═fda68abe-0ddc-4a54-a1c1-5b91ebce5390
 # ╟─00000000-0000-0000-0000-000000000001
 # ╟─00000000-0000-0000-0000-000000000002

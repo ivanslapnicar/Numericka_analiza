@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.19.36
+# v0.19.40
 
 using Markdown
 using InteractiveUtils
@@ -134,8 +134,8 @@ md"""
 # ╔═╡ d92d5bed-8689-481f-b56f-d46fa4f835c1
 begin
 	Random.seed!(123)
-	A₁=rand(20,10)
-	b₁=rand(20);
+	A₁=randn(20,10)
+	b₁=randn(20);
 end
 
 # ╔═╡ 74feeef4-02b4-454c-9d86-c29d775c89c0
@@ -243,7 +243,7 @@ PlutoUI = "~0.7.54"
 PLUTO_MANIFEST_TOML_CONTENTS = """
 # This file is machine-generated - editing it directly is not advised
 
-julia_version = "1.10.1"
+julia_version = "1.10.2"
 manifest_format = "2.0"
 project_hash = "519c88b955a16a6f52e4beee9c744049f942c2fe"
 

@@ -715,7 +715,7 @@ md"
 # ╔═╡ f1c74560-0df1-11eb-19a7-c9ad6aed7410
 begin
 	nᵥ=10
-	v=rand(nᵥ)
+	v=randn(nᵥ)
 end
 
 # ╔═╡ 026d0d00-0df2-11eb-26fd-cbc13048e56c
@@ -765,7 +765,7 @@ bᵤ=[1;3]
 xᵤ=Aᵤ\bᵤ
 
 # ╔═╡ aef1a1d0-0df2-11eb-0aeb-c5f670c48b32
-xᵤ,cond(Aᵤ)
+xᵤ,cond(Aᵤ,1)
 
 # ╔═╡ af144500-0df2-11eb-37e0-af9d5cd06c65
 A₅=[1e-4 1e-4;1 2]

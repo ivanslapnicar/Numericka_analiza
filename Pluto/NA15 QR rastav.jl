@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.19.36
+# v0.19.40
 
 using Markdown
 using InteractiveUtils
@@ -221,6 +221,9 @@ begin
 	x-β*v
 end
 
+# ╔═╡ 7a7aa5c9-2dcd-45cc-8ac3-569c7a55b6de
+β
+
 # ╔═╡ e282bbd3-6505-4afc-b304-3c327fa5db62
 x
 
@@ -233,11 +236,11 @@ QR rastav matrice se računa rekurzivnim QR rastavom vektora pomoću Householder
 """
 
 # ╔═╡ 3bb4d086-a79a-44b1-92c3-5e29be4c36de
-function HouseholderQR(A₁::Array)
+function HouseholderQR(A₁::Matrix{T}) where T
     # Računa Q i R
     A=copy(A₁)
     m,n=size(A)
-    Q=Matrix{Float64}(I,m,m) # eye
+    Q=Matrix{T}(I,m,m) # eye
     for k=1:n
         v=HouseholderVector(A[k:m,k])
         β=(2/(v⋅v))*v
@@ -260,6 +263,17 @@ Qₕ'*A
 
 # ╔═╡ 3ceae442-3a07-4400-933c-a04bdc8ee742
 Rₕ
+
+# ╔═╡ ac488c01-8acb-4b5d-9251-1e6c6574997e
+begin
+	# Probajmo za kompleksne matrice
+	B=randn(ComplexF64,6,3)
+	Qb,Rb=HouseholderQR(B)
+	norm(Qb'*Qb-I), norm(Qb*Rb-B)
+end
+
+# ╔═╡ 8347726d-721a-46ad-b7af-332764ddae11
+Rb
 
 # ╔═╡ ef4702ee-44cc-49d8-85bb-39249c431036
 md"""
@@ -286,11 +300,14 @@ F=qr(A)
 # ╔═╡ 90ad6140-fce2-457f-98fc-aecccab86589
 Matrix(F.Q)
 
+# ╔═╡ c756e15a-dab1-4846-b0f3-fb232956ff21
+F.R
+
 # ╔═╡ 64e052c2-b798-4fb8-80fd-c018df2c8625
 F.Q'*A
 
 # ╔═╡ ef2ebf49-e7b2-4300-9a5c-3a2e42251e74
-F.Q*F.R
+norm(F.Q*F.R-A)
 
 # ╔═╡ 6bf029d7-68e2-47a4-87b9-8f66154933d4
 Fₚ=qr(A,Val(true))
@@ -308,23 +325,23 @@ Fₚ.P
 
 # ╔═╡ ad9107ee-2abd-4dd7-b821-2e0a4bae4374
 # Provjera s matricom
-Fₚ.Q*Fₚ.R-A*Fₚ.P
+norm(Fₚ.Q*Fₚ.R-A*Fₚ.P)
 
 # ╔═╡ 17cebd37-73b8-4699-a119-4237ab85d084
 # Provjera s vektorom
-Fₚ.Q*Fₚ.R-A[:,Fₚ.p]
+norm(Fₚ.Q*Fₚ.R-A[:,Fₚ.p])
 
 # ╔═╡ a199bc51-275d-44a6-bc48-e97cb533922f
 F.factors
-
-# ╔═╡ 550adbc6-118d-4dab-b13b-5cc2eb59b287
-F.R
 
 # ╔═╡ 4c803427-419f-42ee-8672-1af245889d33
 v1=HouseholderVector(A[:,1])
 
 # ╔═╡ 3c9bf5b9-3a35-46e8-bcad-a9b16b0e731d
 v1/v1[1]
+
+# ╔═╡ 550adbc6-118d-4dab-b13b-5cc2eb59b287
+F.R
 
 # ╔═╡ 60166ed0-dfe1-474a-91df-64c433867489
 md"""
@@ -391,22 +408,22 @@ PlutoUI = "7f904dfe-b85e-4ff6-b463-dae2292396a8"
 Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
 
 [compat]
-PlutoUI = "~0.7.54"
+PlutoUI = "~0.7.58"
 """
 
 # ╔═╡ 00000000-0000-0000-0000-000000000002
 PLUTO_MANIFEST_TOML_CONTENTS = """
 # This file is machine-generated - editing it directly is not advised
 
-julia_version = "1.10.1"
+julia_version = "1.10.2"
 manifest_format = "2.0"
-project_hash = "519c88b955a16a6f52e4beee9c744049f942c2fe"
+project_hash = "1867d9ce1bd88115b124f124b5d7cd866c186b11"
 
 [[deps.AbstractPlutoDingetjes]]
 deps = ["Pkg"]
-git-tree-sha1 = "c278dfab760520b8bb7e9511b968bf4ba38b7acc"
+git-tree-sha1 = "0f748c81756f2e5e6854298f11ad8b2dfae6911a"
 uuid = "6e696c72-6542-2067-7265-42206c756150"
-version = "1.2.3"
+version = "1.3.0"
 
 [[deps.ArgTools]]
 uuid = "0dad84c5-d112-42e6-8d28-ef12dabb789f"
@@ -449,9 +466,9 @@ version = "0.8.4"
 
 [[deps.Hyperscript]]
 deps = ["Test"]
-git-tree-sha1 = "8d511d5b81240fc8e6802386302675bdf47737b9"
+git-tree-sha1 = "179267cfa5e712760cd43dcae385d7ea90cc25a4"
 uuid = "47d2ed2b-36de-50cf-bf87-49c2cf4b8b91"
-version = "0.0.4"
+version = "0.0.5"
 
 [[deps.HypertextLiteral]]
 deps = ["Tricks"]
@@ -461,9 +478,9 @@ version = "0.9.5"
 
 [[deps.IOCapture]]
 deps = ["Logging", "Random"]
-git-tree-sha1 = "d75853a0bdbfb1ac815478bacd89cd27b550ace6"
+git-tree-sha1 = "8b72179abc660bfab5e28472e019392b97d0985c"
 uuid = "b5f81e59-6552-4d32-b1f0-c071b021bf89"
-version = "0.2.3"
+version = "0.2.4"
 
 [[deps.InteractiveUtils]]
 deps = ["Markdown"]
@@ -552,21 +569,21 @@ version = "1.10.0"
 
 [[deps.PlutoUI]]
 deps = ["AbstractPlutoDingetjes", "Base64", "ColorTypes", "Dates", "FixedPointNumbers", "Hyperscript", "HypertextLiteral", "IOCapture", "InteractiveUtils", "JSON", "Logging", "MIMEs", "Markdown", "Random", "Reexport", "URIs", "UUIDs"]
-git-tree-sha1 = "bd7c69c7f7173097e7b5e1be07cee2b8b7447f51"
+git-tree-sha1 = "71a22244e352aa8c5f0f2adde4150f62368a3f2e"
 uuid = "7f904dfe-b85e-4ff6-b463-dae2292396a8"
-version = "0.7.54"
+version = "0.7.58"
 
 [[deps.PrecompileTools]]
 deps = ["Preferences"]
-git-tree-sha1 = "03b4c25b43cb84cee5c90aa9b5ea0a78fd848d2f"
+git-tree-sha1 = "5aa36f7049a63a1528fe8f7c3f2113413ffd4e1f"
 uuid = "aea7be01-6a6a-4083-8856-8a6e6704d82a"
-version = "1.2.0"
+version = "1.2.1"
 
 [[deps.Preferences]]
 deps = ["TOML"]
-git-tree-sha1 = "00805cd429dcb4870060ff49ef443486c262e38e"
+git-tree-sha1 = "9306f6085165d270f7e3db02af26a400d580f5c6"
 uuid = "21216c6a-2e73-6563-6e65-726566657250"
-version = "1.4.1"
+version = "1.4.3"
 
 [[deps.Printf]]
 deps = ["Unicode"]
@@ -684,6 +701,7 @@ version = "17.4.0+2"
 # ╠═3b6cd3d5-fbf4-468f-8bbe-1149df7629f2
 # ╠═4a371793-1d5c-413f-8e89-dce986c972ef
 # ╠═814c6dd6-faa1-4211-8f64-bf349624dc37
+# ╠═7a7aa5c9-2dcd-45cc-8ac3-569c7a55b6de
 # ╠═e282bbd3-6505-4afc-b304-3c327fa5db62
 # ╠═eb8f508a-9018-4896-bd82-e707e01157bc
 # ╟─df0bb186-4b2c-429a-b279-5843f97cd3f0
@@ -692,10 +710,13 @@ version = "17.4.0+2"
 # ╠═cb302477-773e-4fd9-a9d6-a9df50e45b18
 # ╠═12069de5-8064-437b-b96c-222baa7b4c7d
 # ╠═3ceae442-3a07-4400-933c-a04bdc8ee742
+# ╠═ac488c01-8acb-4b5d-9251-1e6c6574997e
+# ╠═8347726d-721a-46ad-b7af-332764ddae11
 # ╟─ef4702ee-44cc-49d8-85bb-39249c431036
 # ╠═4587b182-80fd-4bd7-87af-17074ea7c9d9
 # ╠═90ad6140-fce2-457f-98fc-aecccab86589
 # ╠═f944cdbe-794c-405e-a215-687cbb12b22b
+# ╠═c756e15a-dab1-4846-b0f3-fb232956ff21
 # ╠═64e052c2-b798-4fb8-80fd-c018df2c8625
 # ╠═ef2ebf49-e7b2-4300-9a5c-3a2e42251e74
 # ╠═6bf029d7-68e2-47a4-87b9-8f66154933d4
@@ -705,9 +726,9 @@ version = "17.4.0+2"
 # ╠═ad9107ee-2abd-4dd7-b821-2e0a4bae4374
 # ╠═17cebd37-73b8-4699-a119-4237ab85d084
 # ╠═a199bc51-275d-44a6-bc48-e97cb533922f
-# ╠═550adbc6-118d-4dab-b13b-5cc2eb59b287
 # ╠═4c803427-419f-42ee-8672-1af245889d33
 # ╠═3c9bf5b9-3a35-46e8-bcad-a9b16b0e731d
+# ╠═550adbc6-118d-4dab-b13b-5cc2eb59b287
 # ╟─60166ed0-dfe1-474a-91df-64c433867489
 # ╠═7a2fb72c-2c5c-4e1a-895a-fb0eb5608876
 # ╠═c7f654da-3ad0-4781-a1b0-f7f31a19bf74
