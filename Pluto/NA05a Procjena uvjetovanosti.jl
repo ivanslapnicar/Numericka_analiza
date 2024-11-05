@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.19.38
+# v0.19.46
 
 using Markdown
 using InteractiveUtils
@@ -59,7 +59,16 @@ Ekvivalentno, možemo računati kondiciju u 1-normi, `cond(A,1)`.
 1/x[2]
 
 # ╔═╡ d611d92b-872e-4cfe-8864-1e706f7c6fd6
-@time cond(A,1)
+@time cond(A,Inf)
+
+# ╔═╡ e573733c-85ca-4478-80ac-a675d914c4d1
+@time F=LAPACK.getrf!(copy(A))
+
+# ╔═╡ cdd00a98-b1df-435c-bcf9-4102fce67b39
+anrm=opnorm(A,1)
+
+# ╔═╡ c694ab13-ed17-430e-baf5-9bd431f6d4b2
+@time 1.0/LAPACK.gecon!('I',F[1],anrm)
 
 # ╔═╡ 00000000-0000-0000-0000-000000000001
 PLUTO_PROJECT_TOML_CONTENTS = """
@@ -72,33 +81,37 @@ Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
 PLUTO_MANIFEST_TOML_CONTENTS = """
 # This file is machine-generated - editing it directly is not advised
 
-julia_version = "1.10.1"
+julia_version = "1.11.1"
 manifest_format = "2.0"
 project_hash = "f479011a250b0799ce99df8978eea5d0a8ab069c"
 
 [[deps.Artifacts]]
 uuid = "56f22d72-fd6d-98f1-02f0-08ddc0907c33"
+version = "1.11.0"
 
 [[deps.CompilerSupportLibraries_jll]]
 deps = ["Artifacts", "Libdl"]
 uuid = "e66e0078-7015-5450-92f7-15fbd957f2ae"
-version = "1.1.0+0"
+version = "1.1.1+0"
 
 [[deps.Libdl]]
 uuid = "8f399da3-3557-5675-b5ff-fb832c97cbdb"
+version = "1.11.0"
 
 [[deps.LinearAlgebra]]
 deps = ["Libdl", "OpenBLAS_jll", "libblastrampoline_jll"]
 uuid = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
+version = "1.11.0"
 
 [[deps.OpenBLAS_jll]]
 deps = ["Artifacts", "CompilerSupportLibraries_jll", "Libdl"]
 uuid = "4536629a-c528-5b80-bd46-f80d51c5b363"
-version = "0.3.23+4"
+version = "0.3.27+1"
 
 [[deps.Random]]
 deps = ["SHA"]
 uuid = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
+version = "1.11.0"
 
 [[deps.SHA]]
 uuid = "ea8e919c-243c-51af-8825-aaa63cd721ce"
@@ -107,7 +120,7 @@ version = "0.7.0"
 [[deps.libblastrampoline_jll]]
 deps = ["Artifacts", "Libdl"]
 uuid = "8e850b90-86db-534c-a0d3-1478176c7d93"
-version = "5.8.0+1"
+version = "5.11.0+0"
 """
 
 # ╔═╡ Cell order:
@@ -127,5 +140,8 @@ version = "5.8.0+1"
 # ╠═c83d84e4-4f4d-4a97-b50f-1a5805e54c32
 # ╠═65be9c7e-c4cc-4c03-8537-651f648c2f44
 # ╠═d611d92b-872e-4cfe-8864-1e706f7c6fd6
+# ╠═e573733c-85ca-4478-80ac-a675d914c4d1
+# ╠═cdd00a98-b1df-435c-bcf9-4102fce67b39
+# ╠═c694ab13-ed17-430e-baf5-9bd431f6d4b2
 # ╟─00000000-0000-0000-0000-000000000001
 # ╟─00000000-0000-0000-0000-000000000002

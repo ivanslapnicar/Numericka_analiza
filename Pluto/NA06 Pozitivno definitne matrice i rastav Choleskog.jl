@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.19.38
+# v0.19.46
 
 using Markdown
 using InteractiveUtils
@@ -161,7 +161,7 @@ end
 Ab[1,1]
 
 # ╔═╡ dcdfcda1-74d5-42a9-bec8-0a09d87a43c5
-Lb=chol(Ab)
+@time Lb=chol(Ab)
 
 # ╔═╡ 9024604d-88f7-4098-a0eb-474161bed4fe
 md"
@@ -177,7 +177,7 @@ norm(Lb'*Lb-Ab)
 
 # ╔═╡ 73f28eab-b214-4477-af72-178016eed643
 md"
-Naša funkcija `mychol()` koja ne koristi blokove je 20-tak puta sporija!
+Naša funkcija `chol()` koja ne koristi blokove je 20-tak puta sporija!
 "
 
 # ╔═╡ 281cdf66-87e4-4cd1-893d-cc9779b1a813
@@ -188,7 +188,7 @@ unblock(A) = mapreduce(identity, hcat, [mapreduce(identity, vcat, A[:,i]) for i 
 Ab₀=unblock(Ab);
 
 # ╔═╡ 54fee016-a27f-4eda-916c-9f51413faf15
-cholesky(Ab₀);
+@time cholesky(Ab₀);
 
 # ╔═╡ 761841cb-536f-4140-9854-d31b51669c2e
 @time chol(Ab₀)
@@ -220,34 +220,37 @@ LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
 PLUTO_MANIFEST_TOML_CONTENTS = """
 # This file is machine-generated - editing it directly is not advised
 
-julia_version = "1.10.1"
+julia_version = "1.11.1"
 manifest_format = "2.0"
 project_hash = "ac1187e548c6ab173ac57d4e72da1620216bce54"
 
 [[deps.Artifacts]]
 uuid = "56f22d72-fd6d-98f1-02f0-08ddc0907c33"
+version = "1.11.0"
 
 [[deps.CompilerSupportLibraries_jll]]
 deps = ["Artifacts", "Libdl"]
 uuid = "e66e0078-7015-5450-92f7-15fbd957f2ae"
-version = "1.1.0+0"
+version = "1.1.1+0"
 
 [[deps.Libdl]]
 uuid = "8f399da3-3557-5675-b5ff-fb832c97cbdb"
+version = "1.11.0"
 
 [[deps.LinearAlgebra]]
 deps = ["Libdl", "OpenBLAS_jll", "libblastrampoline_jll"]
 uuid = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
+version = "1.11.0"
 
 [[deps.OpenBLAS_jll]]
 deps = ["Artifacts", "CompilerSupportLibraries_jll", "Libdl"]
 uuid = "4536629a-c528-5b80-bd46-f80d51c5b363"
-version = "0.3.23+4"
+version = "0.3.27+1"
 
 [[deps.libblastrampoline_jll]]
 deps = ["Artifacts", "Libdl"]
 uuid = "8e850b90-86db-534c-a0d3-1478176c7d93"
-version = "5.8.0+1"
+version = "5.11.0+0"
 """
 
 # ╔═╡ Cell order:
